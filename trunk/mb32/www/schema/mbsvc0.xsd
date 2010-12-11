@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.morphbank.net/mbsvc/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/" xmlns:dwcg="http://rs.tdwg.org/dwc/geospatial/"
+    xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/" xmlns:dcterms="http://purl.org/dc/terms/"
+    targetNamespace="http://www.morphbank.net/mbsvc/" attributeFormDefault="unqualified">
+    <xs:import namespace="http://rs.tdwg.org/dwc/dwcore/"
+        schemaLocation="http://rs.tdwg.org/dwc/tdwg_dw_core.xsd"/>
+    <xs:import namespace="http://rs.tdwg.org/dwc/geospatial/"
+        schemaLocation="http://rs.tdwg.org/dwc/tdwg_dw_geospatial.xsd"/>
+    <xs:import namespace="http://rs.tdwg.org/dwc/curatorial/"
+        schemaLocation="http://rs.tdwg.org/dwc/tdwg_dw_curatorial.xsd"/>
+    <xs:element name="request">
+        <xs:annotation>
+            <xs:documentation>Request for morphbank information</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="submitter" type="credentials" minOccurs="0"/>
+                <xs:element name="query" type="query" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="insert" type="insert" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="update" type="update" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="responses">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:string" minOccurs="0"/>
+                <xs:element name="response" type="response" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="response">
+        <xs:annotation>
+            <xs:documentation>Response for request</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:group ref="xmlObjectSet"/>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="taxon" type="xmlTaxon"/>
+                <xs:element name="specimen" type="xmlSpecimen"/>
+                <xs:element name="view" type="xmlView"/>
+                <xs:element name="image" type="xmlImage"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="credentials">
+        <xs:sequence>
+            <xs:element name="keyString" type="xs:string" minOccurs="0"/>
+            <xs:element name="userId" type="xs:string" minOccurs="0"/>
+            <xs:element name="groupId" type="xs:string" minOccurs="0"/>
+            <xs:element name="password" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="requestSummary">
+        <xs:sequence>
+            <xs:element name="requestType" type="xs:string"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+
+            <xs:element name="submitter" type="credentials" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="query">
+        <xs:annotation>
+            <xs:documentation>Request for Information</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="submitter" type="credentials" minOccurs="0"/>
+            <xs:element name="method" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>select from querystring, id, taxonname,
+                    keyword</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="format" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>select from xml, svc, id, rdf, rss</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="keywords" type="xs:string" minOccurs="0"/>
+            <xs:element name="limit" type="xs:integer" minOccurs="0"/>
+            <xs:element name="firstResult" type="xs:integer" minOccurs="0"/>
+            <xs:element name="objectType" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element name="queryString" type="xs:string" minOccurs="0"/>
+            <xs:element name="taxonName" type="xs:string" minOccurs="0"/>
+            <xs:element name="id" type="xs:integer" minOccurs="0"/>
+            <xs:element name="changeDate" type="xs:dateTime" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="insert">
+        <xs:annotation>
+            <xs:documentation>Request to insert objects into morphbank </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:group ref="xmlObjectSet"/>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="taxon" type="xmlTaxon"/>
+                <xs:element name="specimen" type="xmlSpecimen"/>
+                <xs:element name="view" type="xmlView"/>
+                <xs:element name="image" type="xmlImage"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="update">
+        <xs:annotation>
+            <xs:documentation>Request to update objects</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:group ref="xmlObjectSet"/>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="taxon" type="xmlTaxon"/>
+                <xs:element name="specimen" type="xmlSpecimen"/>
+                <xs:element name="view" type="xmlView"/>
+                <xs:element name="image" type="xmlImage"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:group name="xmlObjectSet">
+        <xs:sequence>
+            <xs:element name="submitter" type="credentials" minOccurs="0"/>
+            <xs:element name="requestSummary" type="requestSummary" minOccurs="0"/>
+            <xs:element name="status" type="xs:string" minOccurs="0"/>
+            <xs:element name="numberAffected" type="xs:long" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+    <xs:group name="xmlBase">
+        <xs:sequence>
+            <xs:element name="sourceId" type="xmlId"/>
+            <xs:element name="status" type="xs:string" minOccurs="0"/>
+            <xs:element name="owner" type="credentials" minOccurs="0"/>
+            <xs:element name="dateCreated" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="dateLastModified" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="dateToPublish" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="objectTypeId" type="xs:string" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+            <xs:element name="submittedBy" type="xs:string" minOccurs="0"/>
+            <xs:element name="objectLogo" type="xs:string" minOccurs="0"/>
+            <xs:element name="thumbUrl" type="xs:string" minOccurs="0"/>
+            <xs:element name="detailPageUrl" type="xs:string" minOccurs="0"/>
+            <xs:element name="relatedObject" type="xmlId" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element name="externalRef" type="extref" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element name="userProperty" type="userprop" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:complexType name="userprop">
+        <xs:attribute name="property" type="xs:string"/>
+        <xs:attribute name="value" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="extref">
+        <xs:sequence>
+            <xs:element name="label" type="xs:string" minOccurs="0"/>
+            <xs:element name="urlData" type="xs:string" minOccurs="0"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+            <xs:element name="externalId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="xs:string"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="xmlSpecimen">
+        <xs:sequence>
+            <xs:group ref="xmlBase"/>
+            <xs:element name="determination" type="xmlId" minOccurs="0"/>
+            <xs:element name="standardImage" type="xmlId" minOccurs="0"/>
+            <xs:element name="imagesCount " type="xs:int" minOccurs="0"/>
+            <xs:any
+                namespace="http://rs.tdwg.org/dwc/dwcore/ http://rs.tdwg.org/dwc/geospatial/ http://rs.tdwg.org/dwc/curatorial/"
+                maxOccurs="unbounded" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Place Darwin Core 2 elements here</xs:documentation>
+                </xs:annotation>
+            </xs:any>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="xmlView">
+        <xs:sequence>
+            <xs:group ref="xmlBase"/>
+            <xs:element name="viewAngle" type="xs:string" minOccurs="0"/>
+            <xs:element name="imagingTechnique" type="xs:string" minOccurs="0"/>
+            <xs:element name="imagingPreparationTechnique" type="xs:string" minOccurs="0"/>
+            <xs:element name="specimenPart" type="xs:string" minOccurs="0"/>
+            <xs:element name="developmentalStage" type="xs:string" minOccurs="0"/>
+            <xs:element name="sex" type="xs:string" minOccurs="0"/>
+            <xs:element name="form" type="xs:string" minOccurs="0"/>
+            <xs:element name="viewTSN" type="xs:int" minOccurs="0"/>
+            <xs:element name="standardImage" type="xmlId" minOccurs="0"/>
+            <xs:element name="imagesCount" type="xs:int" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="xmlImage">
+        <xs:sequence>
+            <xs:group ref="xmlBase"/>
+            <xs:element name="specimen" type="xmlId" minOccurs="0"/>
+            <xs:element name="view" type="xmlId" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="height" type="xs:long" minOccurs="0"/>
+            <xs:element name="width" type="xs:long" minOccurs="0"/>
+            <xs:element name="resolution" type="xs:string" minOccurs="0"/>
+            <xs:element name="magnification" type="xs:string" minOccurs="0"/>
+            <xs:element name="imageType" type="xs:string" minOccurs="0"/>
+            <xs:element name="copyrightText" type="xs:string" minOccurs="0"/>
+            <xs:element name="originalFileName" type="xs:string" minOccurs="0"/>
+            <xs:element name="creativeCommons" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="xmlTaxon">
+        <xs:sequence>
+            <xs:group ref="xmlBase"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="xmlCharacter">
+        <xs:sequence>
+            <xs:group ref="xmlBase"/>
+            <xs:element name="label" type="xs:string" minOccurs="0"/>
+            <xs:element name="characterNumber" type="xs:integer" minOccurs="0"/>
+            <xs:element name="discrete" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="ordered" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="pubComment" type="xs:string" minOccurs="0"/>
+            <xs:element name="publication" type="xmlId" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="xmlMatrix">
+        <xs:sequence>
+            <xs:group ref="xmlBase"/>
+            <xs:element name="numRows" type="xs:integer" minOccurs="0"/>
+            <xs:element name="numCols" type="xs:integer" minOccurs="0"/>
+            <xs:element name="gap" type="xs:string" minOccurs="0"/>
+            <xs:element name="missing" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="xmOtu">
+        <xs:sequence>
+            <xs:group ref="xmlBase"/>
+            <xs:element name="label" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="xmlId">
+        <xs:annotation>
+            <xs:documentation>Type id is used for identification of an object and can be a morphbank
+                id, lsid, local XML document identifier or external GUID</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="identifier" type="xs:string" minOccurs="0"/>
+            <xs:element name="morphbank" type="xs:long" minOccurs="0"/>
+            <xs:element name="URI" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="local" type="xs:string" minOccurs="0"/>
+            <xs:element name="external" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="index" type="xs:integer"/>
+        <xs:attribute name="title" type="xs:string"/>
+        <xs:attribute name="role" type="xs:string"/>
+        <xs:attribute name="objectType" type="xs:string"/>
+        <xs:attribute name="source" type="xs:boolean" default="true"/>
+    </xs:complexType>
+</xs:schema>

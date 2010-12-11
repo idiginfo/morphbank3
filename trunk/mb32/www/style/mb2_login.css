@@ -1,0 +1,9 @@
+.mainLoginContainer {
+position:absolute;
+left:40px;
+top:150px;
+width:488px;
+height:200px;
+z-index:1;
+}
+

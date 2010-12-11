@@ -1,0 +1,127 @@
+@import "layersmenu.css";
+
+/* CSS Document */
+.browseContainer
+{
+position:absolute;
+left:35px;
+top:35px;
+width:720px;
+background-color:#fcd39d;
+border-top:medium solid #fde6c7;
+border-left:medium solid #fde6c7;
+border-bottom:medium solid #a08664;
+border-right:medium solid #a08664;
+padding:15px;
+z-index:1;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:12px;
+}
+
+a.browseNav:link
+{
+text-decoration:none;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:normal;
+font-size:20px;
+color:#17256b;
+
+}
+a.browseNav:visited
+{
+text-decoration:none;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:normal;
+font-size:20px;
+color:#17256b;
+
+}
+a.browseNav:hover
+{
+text-decoration:none;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:normal;
+font-size:20px;
+color:#7e79a2;
+}
+a.browseNav:active
+{
+text-decoration:none;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:normal;
+font-size:20px;
+color:#17256b;
+}
+
+
+.browseFloat
+{
+position:relative;
+float:left;
+clear:left;
+margin-left:20px;
+margin-top:20px;
+z-index:1;
+}
+
+.browseTreeContainer
+{
+position: relative;
+height: 500px; 
+padding: 0 0 0 0;
+overflow: auto; 
+z-index: 3;
+}
+
+.browseTreeView  {
+top: 40px;
+left: 240px;
+z-index: 3;
+}
+
+.browseSortByContainer{
+position: relative;
+height: 500px; 
+width: 140px;
+padding: 0 0 0 0;
+overflow: auto; 
+z-index: 3;
+}
+
+.browseViewContainer{
+top: 40px;
+left: 240px;
+z-index: 3;
+}
+
+.browseFieldsContainer{
+/*position: relative;*/
+width: 210px;
+padding: 0 0 0 0;
+z-index: 3;
+}
+
+table.manageBrowseTable { 
+border-color:#17256b; 
+border-style:solid; 
+border-width:2px 2px 2px 2px; 
+}
+
+table.manageBrowseTable #rightBorder {
+border-color:#17256b; 
+border-style:solid; 
+border-width:0px 2px 0px 0px;
+background-color:#eeeeff;
+height:100%;
+}
+
+table.manageBrowseTable #bottomBorder {
+border-color:#17256b; 
+border-style:solid; 
+border-width:0px 0px 2px 0px;
+background-color:#eeeeff;
+}
+
+.mainBrowseTable { margin-bottom:100px; }
+
+.mainBrowseTable td { padding:10px; }

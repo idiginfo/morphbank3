@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /images/jpeg
+Disallow: /images/tiff
+Disallow: /style
+Disallow: /Submit
+Disallow: /Edit
+Disallow: /Admin
+Disallow: /Annotation
+Disallow: /includes
+Disallow: /Mirror

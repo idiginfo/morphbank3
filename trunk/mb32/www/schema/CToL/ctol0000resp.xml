@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<mb:responses xsi:schemaLocation="http://www.morphbank.net/mbsvc/ http://www.morphbank.net/schema/mbsvc.xsd" xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/" xmlns:mb="http://www.morphbank.net/mbsvc/" xmlns:dwcg="http://rs.tdwg.org/dwc/geospatial/" xmlns:dwce="http://rs.tdwg.org/dwc/dwelement" xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <response>
+        <requestSummary>
+            <requestType>insert</requestType>
+            <description>insert from file</description>
+            <submitter>
+                <userId>ctol</userId>
+                <groupId>Cypriniform Tree of Life</groupId>
+            </submitter>
+        </requestSummary>
+        <status>All objects were saved
+Number of objects: 192
+Number of objects with insert problems: 0</status>
+        <numberAffected>93</numberAffected>
+        <view>
+            <sourceId>
+                <morphbank>459122</morphbank>
+                <local>local:1</local>
+                <external>CToL-V:basihyal-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459122</morphbank>
+                <local>local:4</local>
+                <external>CToL-V:basihyal-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459122</morphbank>
+                <local>local:7</local>
+                <external>CToL-V:basihyal-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459116</morphbank>
+                <local>local:10</local>
+                <external>CToL-V:basibranchial 1-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459117</morphbank>
+                <local>local:13</local>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459117</morphbank>
+                <local>local:16</local>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459117</morphbank>
+                <local>local:19</local>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459117</morphbank>
+                <local>local:22</local>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470971</morphbank>
+                <local>local:25</local>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470971</morphbank>
+                <local>local:28</local>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470971</morphbank>
+                <local>local:31</local>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470971</morphbank>
+                <local>local:34</local>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470971</morphbank>
+                <local>local:37</local>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459769</morphbank>
+                <local>local:40</local>
+                <external>CToL-V:hypobranchial 3-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459161</morphbank>
+                <local>local:43</local>
+                <external>CToL-V:ceratobranchial 1-Ventrolateral-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459154</morphbank>
+                <local>local:46</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459154</morphbank>
+                <local>local:49</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459154</morphbank>
+                <local>local:52</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470972</morphbank>
+                <local>local:55</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Posterior-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470972</morphbank>
+                <local>local:58</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Posterior-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459154</morphbank>
+                <local>local:61</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459154</morphbank>
+                <local>local:64</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459154</morphbank>
+                <local>local:67</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459154</morphbank>
+                <local>local:70</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459154</morphbank>
+                <local>local:73</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459154</morphbank>
+                <local>local:76</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470973</morphbank>
+                <local>local:79</local>
+                <external>CToL-V:ceratobranchial 5 tooth-dorsoposterior-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>460564</morphbank>
+                <local>local:82</local>
+                <external>CToL-V:ceratobranchial 5-Ventral-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470974</morphbank>
+                <local>local:85</local>
+                <external>CToL-V:ceratohyal and hypohyals-Lateral-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470975</morphbank>
+                <local>local:88</local>
+                <external>CToL-V:ceratohyal and hypohyals-Anterolateral-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470974</morphbank>
+                <local>local:91</local>
+                <external>CToL-V:ceratohyal and hypohyals-Lateral-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470974</morphbank>
+                <local>local:94</local>
+                <external>CToL-V:ceratohyal and hypohyals-Lateral-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470976</morphbank>
+                <local>local:97</local>
+                <external>CToL-V:gill filament-Dorsal-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470977</morphbank>
+                <local>local:100</local>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470978</morphbank>
+                <local>local:103</local>
+                <external>CToL-V:branchial arches-Dorsal-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>460817</morphbank>
+                <local>local:106</local>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470977</morphbank>
+                <local>local:109</local>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459113</morphbank>
+                <local>local:112</local>
+                <external>CToL-V:epibranchial 1-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>460817</morphbank>
+                <local>local:115</local>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459766</morphbank>
+                <local>local:118</local>
+                <external>CToL-V:epibranchial 4-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>460817</morphbank>
+                <local>local:121</local>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470977</morphbank>
+                <local>local:124</local>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470977</morphbank>
+                <local>local:127</local>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>460816</morphbank>
+                <local>local:130</local>
+                <external>CToL-V:pharyngobranchial 2-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470977</morphbank>
+                <local>local:133</local>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>460817</morphbank>
+                <local>local:136</local>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470979</morphbank>
+                <local>local:139</local>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470979</morphbank>
+                <local>local:142</local>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470979</morphbank>
+                <local>local:145</local>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470979</morphbank>
+                <local>local:148</local>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459767</morphbank>
+                <local>local:151</local>
+                <external>CToL-V:hypobranchial 1-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459769</morphbank>
+                <local>local:154</local>
+                <external>CToL-V:hypobranchial 3-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>460814</morphbank>
+                <local>local:157</local>
+                <external>CToL-V:hypobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>460814</morphbank>
+                <local>local:160</local>
+                <external>CToL-V:hypobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470980</morphbank>
+                <local>local:163</local>
+                <external>CToL-V:interhyal-Dorsal-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470981</morphbank>
+                <local>local:166</local>
+                <external>CToL-V:interhyal-Lateral-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470982</morphbank>
+                <local>local:169</local>
+                <external>CToL-V:interhyal-Posterolateral-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470983</morphbank>
+                <local>local:172</local>
+                <external>CToL-V:interhyal-Dorsolateral-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470982</morphbank>
+                <local>local:175</local>
+                <external>CToL-V:interhyal-Posterolateral-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470984</morphbank>
+                <local>local:178</local>
+                <external>CToL-V:post ceratobranchial cartilage-Dorsal-D</external>
+            </sourceId>
+            <status>No errors</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>470984</morphbank>
+                <local>local:181</local>
+                <external>CToL-V:post ceratobranchial cartilage-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459756</morphbank>
+                <local>local:184</local>
+                <external>CToL-V:sublingual-Ventral-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459775</morphbank>
+                <local>local:187</local>
+                <external>CToL-V:sublingual-Dorsal-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <view>
+            <sourceId>
+                <morphbank>459121</morphbank>
+                <local>local:190</local>
+                <external>CToL-V:urohyal-Ventral-D</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </view>
+        <specimen>
+            <sourceId>
+                <morphbank>470985</morphbank>
+                <local>local:0</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Crossostoma lacustre tsn: 639791
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>460921</morphbank>
+                <local>local:3</local>
+                <external>CToL-S:0001166</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470986</morphbank>
+                <local>local:6</local>
+                <external>CToL-S:0002684</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Pheacogrammus interruptus tsn: 999008606
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470987</morphbank>
+                <local>local:9</local>
+                <external>CToL-S:0002769</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Vaillantella maassi tsn: 639771
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470988</morphbank>
+                <local>local:12</local>
+                <external>CToL-S:0003494</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Chalceus macrolepidotus tsn: 162909
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470985</morphbank>
+                <local>local:15</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461813</morphbank>
+                <local>local:18</local>
+                <external>CToL-S:0002207</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470989</morphbank>
+                <local>local:21</local>
+                <external>CToL-S:0001225</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Minytrema melanops tsn: 163959
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>460920</morphbank>
+                <local>local:24</local>
+                <external>CToL-S:0001165</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470985</morphbank>
+                <local>local:27</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470985</morphbank>
+                <local>local:30</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470990</morphbank>
+                <local>local:33</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Cyprinus carpio tsn: 163344
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461815</morphbank>
+                <local>local:36</local>
+                <external>CToL-S:0002209</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470991</morphbank>
+                <local>local:39</local>
+                <external>CToL-S:0001112</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Catostomus commersoni tsn: 163895
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>460922</morphbank>
+                <local>local:42</local>
+                <external>CToL-S:0001169</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470988</morphbank>
+                <local>local:45</local>
+                <external>CToL-S:0003494</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470990</morphbank>
+                <local>local:48</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>460923</morphbank>
+                <local>local:51</local>
+                <external>CToL-S:0001171</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>460923</morphbank>
+                <local>local:54</local>
+                <external>CToL-S:0001171</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461812</morphbank>
+                <local>local:57</local>
+                <external>CToL-S:0002206</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>462252</morphbank>
+                <local>local:60</local>
+                <external>CToL-S:0002213</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>460917</morphbank>
+                <local>local:63</local>
+                <external>CToL-S:0001157</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470992</morphbank>
+                <local>local:66</local>
+                <external>CToL-S:0002688</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Hypentelium nigricans tsn: 163949
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>460824</morphbank>
+                <local>local:69</local>
+                <external>CToL-S:0002778</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461812</morphbank>
+                <local>local:72</local>
+                <external>CToL-S:0002206</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461822</morphbank>
+                <local>local:75</local>
+                <external>CToL-S:0002229</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461820</morphbank>
+                <local>local:78</local>
+                <external>CToL-S:0002222</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>460920</morphbank>
+                <local>local:81</local>
+                <external>CToL-S:0001165</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461817</morphbank>
+                <local>local:84</local>
+                <external>CToL-S:0002211</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470990</morphbank>
+                <local>local:87</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470993</morphbank>
+                <local>local:90</local>
+                <external>CToL-S:0002687</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Danio rerio tsn: 163699
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461822</morphbank>
+                <local>local:93</local>
+                <external>CToL-S:0002229</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470985</morphbank>
+                <local>local:96</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470985</morphbank>
+                <local>local:99</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470985</morphbank>
+                <local>local:102</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470985</morphbank>
+                <local>local:105</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470990</morphbank>
+                <local>local:108</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470990</morphbank>
+                <local>local:111</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470990</morphbank>
+                <local>local:114</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470993</morphbank>
+                <local>local:117</local>
+                <external>CToL-S:0002687</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470994</morphbank>
+                <local>local:120</local>
+                <external>CToL-S:0001375</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Gyrinocheilus aymonieri tsn: 163888
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461813</morphbank>
+                <local>local:123</local>
+                <external>CToL-S:0002207</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470989</morphbank>
+                <local>local:126</local>
+                <external>CToL-S:0001225</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470995</morphbank>
+                <local>local:129</local>
+                <external>CToL-S:0002682</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Pseudobagrus tokiensis tsn: 681095
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461814</morphbank>
+                <local>local:132</local>
+                <external>CToL-S:0002208</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470987</morphbank>
+                <local>local:135</local>
+                <external>CToL-S:0002769</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461817</morphbank>
+                <local>local:138</local>
+                <external>CToL-S:0002211</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470996</morphbank>
+                <local>local:141</local>
+                <external>CToL-S:0002794</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Carassius auratus tsn: 163350
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470990</morphbank>
+                <local>local:144</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461809</morphbank>
+                <local>local:147</local>
+                <external>CToL-S:0001413</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470997</morphbank>
+                <local>local:150</local>
+                <external>CToL-S:0002669</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Danio rerio tsn: 163699
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470998</morphbank>
+                <local>local:153</local>
+                <external>CToL-S:0003495</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Catostomus commersoni tsn: 163895
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>460920</morphbank>
+                <local>local:156</local>
+                <external>CToL-S:0001165</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461812</morphbank>
+                <local>local:159</local>
+                <external>CToL-S:0002206</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461817</morphbank>
+                <local>local:162</local>
+                <external>CToL-S:0002211</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470990</morphbank>
+                <local>local:165</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470993</morphbank>
+                <local>local:168</local>
+                <external>CToL-S:0002687</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470986</morphbank>
+                <local>local:171</local>
+                <external>CToL-S:0002684</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461822</morphbank>
+                <local>local:174</local>
+                <external>CToL-S:0002229</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470990</morphbank>
+                <local>local:177</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470999</morphbank>
+                <local>local:180</local>
+                <external>CToL-S:0002766</external>
+            </sourceId>
+            <status>Determination for SCI-NAME:Pangio anguillaris tsn: 640101
+No errors</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>461811</morphbank>
+                <local>local:183</local>
+                <external>CToL-S:0002203</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>470985</morphbank>
+                <local>local:186</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>460920</morphbank>
+                <local>local:189</local>
+                <external>CToL-S:0001165</external>
+            </sourceId>
+            <status>pre-existing object, no new object created</status>
+        </specimen>
+        <image>
+            <sourceId>
+                <morphbank>471000</morphbank>
+                <local>local:2</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471001</morphbank>
+                <local>local:5</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471002</morphbank>
+                <local>local:8</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471003</morphbank>
+                <local>local:11</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471004</morphbank>
+                <local>local:14</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471005</morphbank>
+                <local>local:17</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471006</morphbank>
+                <local>local:20</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471007</morphbank>
+                <local>local:23</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471008</morphbank>
+                <local>local:26</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471009</morphbank>
+                <local>local:29</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471010</morphbank>
+                <local>local:32</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471011</morphbank>
+                <local>local:35</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471012</morphbank>
+                <local>local:38</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471013</morphbank>
+                <local>local:41</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471014</morphbank>
+                <local>local:44</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471015</morphbank>
+                <local>local:47</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471016</morphbank>
+                <local>local:50</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471017</morphbank>
+                <local>local:53</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471018</morphbank>
+                <local>local:56</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471019</morphbank>
+                <local>local:59</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471020</morphbank>
+                <local>local:62</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471021</morphbank>
+                <local>local:65</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471022</morphbank>
+                <local>local:68</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471023</morphbank>
+                <local>local:71</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471024</morphbank>
+                <local>local:74</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471025</morphbank>
+                <local>local:77</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471026</morphbank>
+                <local>local:80</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471027</morphbank>
+                <local>local:83</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471028</morphbank>
+                <local>local:86</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471029</morphbank>
+                <local>local:89</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471030</morphbank>
+                <local>local:92</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471031</morphbank>
+                <local>local:95</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471032</morphbank>
+                <local>local:98</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471033</morphbank>
+                <local>local:101</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471034</morphbank>
+                <local>local:104</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471035</morphbank>
+                <local>local:107</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471036</morphbank>
+                <local>local:110</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471037</morphbank>
+                <local>local:113</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471038</morphbank>
+                <local>local:116</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471039</morphbank>
+                <local>local:119</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471040</morphbank>
+                <local>local:122</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471041</morphbank>
+                <local>local:125</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471042</morphbank>
+                <local>local:128</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471043</morphbank>
+                <local>local:131</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471044</morphbank>
+                <local>local:134</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471045</morphbank>
+                <local>local:137</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471046</morphbank>
+                <local>local:140</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471047</morphbank>
+                <local>local:143</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471048</morphbank>
+                <local>local:146</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471049</morphbank>
+                <local>local:149</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471050</morphbank>
+                <local>local:152</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471051</morphbank>
+                <local>local:155</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471052</morphbank>
+                <local>local:158</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471053</morphbank>
+                <local>local:161</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471054</morphbank>
+                <local>local:164</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471055</morphbank>
+                <local>local:167</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471056</morphbank>
+                <local>local:170</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471057</morphbank>
+                <local>local:173</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471058</morphbank>
+                <local>local:176</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471059</morphbank>
+                <local>local:179</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471060</morphbank>
+                <local>local:182</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471061</morphbank>
+                <local>local:185</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471062</morphbank>
+                <local>local:188</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+        <image>
+            <sourceId>
+                <morphbank>471063</morphbank>
+                <local>local:191</local>
+            </sourceId>
+            <status>No errors</status>
+        </image>
+    </response>
+</mb:responses>

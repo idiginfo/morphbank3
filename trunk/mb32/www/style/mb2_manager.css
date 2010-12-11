@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+#copyCollection {
+position:absolute;
+top:0px;
+left:0px;
+z-index:12;
+display:none;
+border:1px solid #17256b;
+background-color:#eee;
+padding:7px;
+width:160px;
+
+}
+
+#copyCollection a {display:block; font-size:10pt;}
+
+#copyCollection a:link, #copyCollection a:visited, #copyCollection a:active {color:#17256b;}
+#copyCollection a:hover {color:#FFFFFF; background-color:#17256b; text-decoration:none;}

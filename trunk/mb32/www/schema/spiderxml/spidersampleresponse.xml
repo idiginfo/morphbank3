@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<mb:responses xsi:schemaLocation="http://morphbank.net/schema/services http://morphbank.net/schema/services.xsd" xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/" xmlns:mb="http://morphbank.net/schema/services" xmlns:dwcg="http://rs.tdwg.org/dwc/geospatial/" xmlns:dwce="http://rs.tdwg.org/dwc/dwelement" xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <response>
+        <requestSummary>
+            <requestType>insert</requestType>
+            <description>insert from file</description>
+            <submitter>
+                <userId>Ramirez</userId>
+                <groupId>SpiderAToL</groupId>
+            </submitter>
+        </requestSummary>
+        <status>All objects were saved
+Number of objects: 11
+Number of objects with insert problems: 0</status>
+        <numberAffected>11</numberAffected>
+        <xmlObjects>
+            <specimen>
+                <sourceId>
+                    <morphbank>228235</morphbank>
+                    <local>1</local>
+                    <external>SPD-S:CASENT9019370</external>
+                </sourceId>
+                <status>No errors</status>
+            </specimen>
+            <specimen>
+                <sourceId>
+                    <morphbank>228236</morphbank>
+                    <local>2</local>
+                    <external>SPD-S:CASENT9019370 ff</external>
+                </sourceId>
+                <status>No errors</status>
+            </specimen>
+            <specimen>
+                <sourceId>
+                    <morphbank>228237</morphbank>
+                    <local>4</local>
+                    <external>SPD-S:CASENT9019370 mm</external>
+                </sourceId>
+                <status>No errors</status>
+            </specimen>
+            <specimen>
+                <sourceId>
+                    <morphbank>228238</morphbank>
+                    <local>7</local>
+                    <external>SPD-S:CASENT9019370 pe</external>
+                </sourceId>
+                <status>No errors</status>
+            </specimen>
+            <image>
+                <sourceId>
+                    <morphbank>228239</morphbank>
+                    <local>3</local>
+                    <external>SPD-I:104 Stegodyphus_FF 9019370 legI L prolat 20X.jpg</external>
+                </sourceId>
+                <status>No errors</status>
+            </image>
+            <image>
+                <sourceId>
+                    <morphbank>228240</morphbank>
+                    <local>5</local>
+                    <external>SPD-I:307 Stegodyphus_MM 9019370 palp L ventral 100X.jpg</external>
+                </sourceId>
+                <status>No errors</status>
+            </image>
+            <image>
+                <sourceId>
+                    <morphbank>228241</morphbank>
+                    <local>6</local>
+                    <external>SPD-I:33 Stegodyphus_FF 9019370 dorsal 12.5X.jpg</external>
+                </sourceId>
+                <status>No errors</status>
+            </image>
+            <image>
+                <sourceId>
+                    <morphbank>228242</morphbank>
+                    <local>8</local>
+                    <external>SPD-I:333_Stegodyphus_MM_9019370_pro_exp_100XM.jpg</external>
+                </sourceId>
+                <status>No errors</status>
+            </image>
+            <image>
+                <sourceId>
+                    <morphbank>228243</morphbank>
+                    <local>9</local>
+                    <external>SPD-I:336_Stegodyphus_MM_9019370_ret_exp_100XM.jpg</external>
+                </sourceId>
+                <status>No errors</status>
+            </image>
+            <image>
+                <sourceId>
+                    <morphbank>228244</morphbank>
+                    <local>10</local>
+                    <external>SPD-I:34 Stegodyphus_MM 9019370 dorsal 16X.jpg</external>
+                </sourceId>
+                <status>No errors</status>
+            </image>
+            <image>
+                <sourceId>
+                    <morphbank>228245</morphbank>
+                    <local>11</local>
+                    <external>SPD-I:344_Stegodyphus_Myanmar_9019370_R_ExpPalp.jpg</external>
+                </sourceId>
+                <status>No errors</status>
+            </image>
+        </xmlObjects>
+    </response>
+</mb:responses>

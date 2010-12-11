@@ -1,0 +1,124 @@
+/* Intro page classes begin with introXXXXXX */
+/* Intro Class definitions */
+
+a.introNav:link {
+text-decoration: none;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:24px;
+color:#17256b;
+text-align: center; 
+}
+
+a.introNav:visited {
+text-decoration:none;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:24px;
+color:#17256b;
+}
+
+a.introNav:hover {
+text-decoration:none;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:24px;
+color:#7e79a2;
+}
+
+a.introNav:active {
+text-decoration:none;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:24px;
+color:#17256b;
+}
+
+
+
+.introContainer {
+position:absolute;
+top:220px;
+left:380px;
+width:340px;
+height:325px;
+max-width:700px;
+background-color: #FFD296;
+border-top:medium solid #fde6c7;
+border-left:medium solid #fde6c7;
+border-bottom:medium solid #a08664;
+border-right:medium solid #a08664;
+padding:15px;
+z-index:1;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:12px;
+}
+
+.introHeader {
+background-image:url(webImages/introHeaderWrapp.jpg);
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+height:145px;
+z-index:0;
+}
+
+.introBackGround {
+position:absolute;
+top:145px;
+left:0px;
+z-index:0;
+}
+
+.introTextContent {
+color:#000000;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:12px;
+}
+
+.introLogInContainer {
+position:absolute;
+top:155px;
+left:670px;
+z-index:1;
+}
+
+.introNavContainer {
+position:absolute;
+top:220px;
+left:90px;
+width:300px;
+height:300px;
+z-index:1;
+}
+
+
+.introTextOutContainer {
+position:absolute;
+top:220px;
+left:400px;
+width:325px;
+height:325px;
+background-image:url(webImages/introTextBack.jpg);
+z-index:1;
+}
+
+.introTextInContainer {
+position:relative;
+float:left;
+top:20px;
+left:20px;
+width:260px;
+height:280px;
+z-index:1;
+}
+
+.introSponsors {
+position:absolute;
+top:500px;
+left:90px;
+z-index:3;
+width:615px;
+/* background-color: #FFD296; border-top:medium solid #fde6c7; border-left:medium solid #fde6c7; border-bottom:medium solid #a08664; border-right:medium solid #a08664;*/
+padding:0px;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:12px;
+}
+

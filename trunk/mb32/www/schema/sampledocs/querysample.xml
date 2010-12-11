@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<mb:request
+    xsi:schemaLocation="http://www.morphbank.net/mbsvc/ http://www.morphbank.net/schema/mbsvc.xsd"
+    xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/" xmlns:mb="http://www.morphbank.net/mbsvc/"
+    xmlns:dwcg="http://rs.tdwg.org/dwc/geospatial/" xmlns:dwce="http://rs.tdwg.org/dwc/dwelement"
+    xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <query>
+        <method>search</method>
+        <format>svc</format>
+        <keywords>stegodyphus</keywords>
+        <limit>10</limit>
+        <firstResult>0</firstResult>
+        <objectType>Specimen</objectType>
+    </query>
+    <query>
+        <method>search</method>
+        <format>svc</format>
+        <keywords>hymenoptera</keywords>
+        <limit>10</limit>
+        <firstResult>1000</firstResult>
+        <objectType>Specimen</objectType>
+    </query>
+    <query>
+        <method>externalId</method>
+        <format>svc</format>
+        <keywords>SPD-SV:0000437</keywords>
+        <limit>10</limit>
+        <firstResult>0</firstResult>
+     </query>
+</mb:request>

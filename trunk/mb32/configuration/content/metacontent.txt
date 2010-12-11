@@ -1,0 +1,20 @@
+MorphBank is an open web repository of biological images documenting specimen-based research 
+in comparative anatomy, morphological phylogenetics, taxonomy and related fields focused on increasing our 
+knowledge about biodiversity. The project receives its main funding from the Biological Databases and 
+Informatics program of the National Science Foundation. MorphBank is developing cyber infrastructure 
+to support a wide array of biological disciplines such as taxonomy, systematics, evolutionary biology, 
+plant science and animal science. MorphBank serves as a permanent archive allowing storage and sharing 
+of digital images. At the same time, it is a collaborative platform supporting large international groups 
+of scientists. Among other things, MorphBank tools allow scientists to share specimen images, add 
+information to existing images by annotating them, remotely curate natural history collections based 
+on images of their specimens, build phylogenetic character matrices based on images, and create, manage, 
+and share their own collections of digital images. MorphBank uses technologies such as Web Services and 
+LSID to link to other related systems such as GenBank, MorphoBank, DigiMorph, Tolkin, Specify, and 
+BioCorder. Coupling digital images with character state annotations, MorphBank is an excellent source 
+of information for producing digital keys for identification of biological specimens. In taxonomy, 
+description of new species or other nomenclatural acts can be documented by images and image annotations 
+in MorphBank. MorphBank provides stable links to image collections for use in online and traditional print 
+scientific publications. Large biological inventory projects can use MorphBank to share image information 
+about morphological types and allow experts to do remote identification. MorphBank aims to be an essential 
+resource for projects in programs such as NSF's PEET, AToL and PBI and we already collaborate many PEET, 
+PBI and AToL projects.

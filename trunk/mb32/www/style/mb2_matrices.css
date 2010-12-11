@@ -1,0 +1,152 @@
+
+.mainMyMatrixContainer {
+	position:relative;
+	left:0px;
+	width:auto;
+	height:100%;
+	background-color: #ffffff;
+	border:0px;
+	/*overflow:auto;*/
+}
+TABLE.outSideTable
+{
+	BORDER-RIGHT: 0px solid;
+    BORDER-TOP: 0px solid;
+    BORDER-LEFT: 0px solid;
+    BORDER-BOTTOM: 0px solid;
+    width: 100%;
+}
+
+TABLE.outSideTable .arrowCellTop
+{
+	width: 30px;
+    height: 30px;
+    vertical-align:top;
+} 
+
+TABLE.outSideTable .arrowCellBott
+{
+	width: 30px;
+    height: 30px;
+    vertical-align:bottom;
+} 
+
+TABLE.manageMatrixTable
+{
+    border:0px;
+    empty-cells: show
+}
+
+TABLE.manageMatrixTable .first
+{
+    BORDER-LEFT-WIDTH: 0px;
+    BACKGROUND-COLOR: #fff
+}
+
+TABLE.manageMatrixTable .firstCell
+{
+    BORDER:none;
+ 
+    BACKGROUND-COLOR: #fff;  
+	background-image:none;
+}
+
+TABLE.manageMatrixTable .emptyCell
+{
+    BORDER-LEFT-WIDTH: 0px;
+    BACKGROUND-COLOR: #ffbbbb
+}
+
+TABLE.manageMatrixTable .firstColumn
+{
+   /* BORDER-LEFT-WIDTH: 0px;
+    BACKGROUND-COLOR: #08fff0;*/
+    text-align: left
+}
+
+TABLE.manageMatrixTable .last
+{
+    BORDER-RIGHT-WIDTH: 0px
+}
+
+TABLE.manageMatrixTable .selected
+{
+    BACKGROUND-COLOR: #ffff6b
+}
+
+TABLE.manageMatrixTable A
+{
+    FONT-WEIGHT: bold;
+    COLOR: #fff
+}
+TABLE.manageMatrixTable A:active
+{
+    FONT-WEIGHT: bold;
+    COLOR: #fff
+}
+TABLE.manageMatrixTable A:link
+{
+    FONT-WEIGHT: bold;
+    COLOR: #fff
+}
+TABLE.manageMatrixTable A:visited
+{
+    FONT-WEIGHT: bold;
+    COLOR: #fff
+}
+TABLE.manageMatrixTable TD
+{
+    BORDER-RIGHT: #17256b 0px solid;
+    PADDING-RIGHT: 8px;
+    BORDER-TOP: #17256b 0px solid;
+    PADDING-LEFT: 8px;
+    PADDING-BOTTOM: 1px;
+    VERTICAL-ALIGN: bottom;
+    BORDER-LEFT: #17256b 1px solid;
+    PADDING-TOP: 8px;
+    BORDER-BOTTOM: #17256b 0px solid;
+    text-align: center
+}
+TABLE.manageMatrixTable TD A
+{
+    COLOR: #111
+}
+TABLE.manageMatrixTable TD A:active
+{
+    COLOR: #111
+}
+TABLE.manageMatrixTable TD A:link
+{
+    COLOR: #111
+}
+TABLE.manageMatrixTable TD A:visited
+{
+    COLOR: #111
+}
+
+TABLE.manageMatrixTable TH
+{
+	/*
+    BORDER-RIGHT: #fff 1px solid;
+    PADDING-RIGHT: 5px;
+    BORDER-TOP: #fff 0px solid;
+    PADDING-LEFT: 5px;
+    PADDING-BOTTOM: 1px;
+    VERTICAL-ALIGN: bottom;
+    BORDER-LEFT: #fff 1px solid;
+    COLOR: #fff;
+    PADDING-TOP: 5px;
+    BORDER-BOTTOM: #fff 0px solid;
+    BACKGROUND-COLOR: #17256b
+	*/
+	padding:5px 5px 1px 5px;
+	color:#FFFFFF;
+	border:1px solid #17256b;
+	vertical-align: bottom;
+	background:url(webImages/matrixTableHeader.png) no-repeat;
+}
+
+.noBorder { border-width:0px !important; background-color:none !important;}
+
+.borderRight { border-right:1px solid #17256b !important; }
+.borderBottom { border-bottom:1px solid #17256b !important; }
