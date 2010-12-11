@@ -1,0 +1,88 @@
+div.imagethumbspageHeader {
+position: relative;
+margin: 0pt 5pt;
+width: 100%;
+font-family: arial;
+font-size: 12px;
+font-weight: bold;
+}
+
+div.imagethumbspage {
+
+margin: 0pt 0pt;
+width: 100%;
+font-family: arial;
+font-size: 11px;
+}
+
+div.imagethumbspage a:link {
+font-weight: bold;
+text-decoration: none;
+}
+
+div.imagethumbspage a:hover, a:active { 
+text-decoration: underline;
+}
+
+div.imagthumbspage a:visited { 
+font-weight: bold; 
+text-decoration: none;
+}
+
+div.imagethumbnail {
+
+margin: 0px 0px;
+font-size:  10px;
+width:100%;
+border-top: 1px solid #000000;
+padding-bottom:6px;
+}
+
+div.imagethumbnail a:link {
+font-weight: normal;
+text-decoration: none;
+}
+
+div.imagethumbnail a:hover, a:active { 
+text-decoration: underline;
+}
+
+div.imagethumbnail table {
+border-collapse:collapse;
+margin: 0px;
+width:100%;
+font-size: 11px;
+
+}
+div.imagethumbnail img {
+	max-width: 100px;
+
+}
+
+div.logothumbnail img {
+	max-width: 75px;
+	max-height: 75px;
+}
+
+div.imagethumbnail table td {
+padding:3px;
+}
+
+td.greenBottomBorder {
+border-bottom:2px solid #699990;
+}
+
+td.browseImageCell {
+width:95px;
+vertical-align:top;
+}
+
+div.imagethumbnail span {
+font-weight:bold;
+}
+
+.browseRight { text-align:right; }
+
+.date { cursor:pointer; color: #0000FF;}
+
+#num {display:none;}

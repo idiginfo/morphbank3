@@ -1,0 +1,109 @@
+# Set to correct file path for your server
+#php_value auto_prepend_file "/my/root/path/configuration/app.server.php"
+
+# BEGIN Compress text files
+<IfModule mod_deflate.c>
+  <FilesMatch "\.(css|js|x?html?|php)$">
+	SetOutputFilter DEFLATE
+  </FilesMatch>
+</IfModule>
+# END Compress text files
+# BEGIN Expire headers
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 seconds"
+  ExpiresByType image/x-icon "access plus 2592000 seconds"
+  ExpiresByType image/jpeg "access plus 2592000 seconds"
+  ExpiresByType image/png "access plus 2592000 seconds"
+  ExpiresByType image/gif "access plus 2592000 seconds"
+  ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+  ExpiresByType text/css "access plus 604800 seconds"
+  ExpiresByType text/javascript "access plus 216000 seconds"
+  ExpiresByType application/x-javascript "access plus 216000 seconds"
+  ExpiresByType text/html "access plus 600 seconds"
+  ExpiresByType application/xhtml+xml "access plus 600 seconds"
+</IfModule>
+# END Expire headers
+# BEGIN Cache-Control Headers
+<IfModule mod_headers.c>
+  <FilesMatch "\\.(ico|jpe?g|png|gif|swf)$">
+	Header set Cache-Control "max-age=2592000, public"
+  </FilesMatch>
+  <FilesMatch "\\.(css)$">
+	Header set Cache-Control "max-age=604800, public"
+  </FilesMatch>
+  <FilesMatch "\\.(js)$">
+	Header set Cache-Control "max-age=216000, private"
+  </FilesMatch>
+  <FilesMatch "\\.(x?html?|php)$">
+	Header set Cache-Control "max-age=600, private, must-revalidate"
+  </FilesMatch>
+</IfModule>
+# END Cache-Control Headers
+# BEGIN Turn ETags Off
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
+# END Turn ETags Off
+# BEGIN Remove Last-Modified Header
+<IfModule mod_headers.c>
+  Header unset Last-Modified
+</IfModule>
+# END Remove Last-Modified Header
+
+
+order allow,deny
+deny from 62.48.70
+deny from 62.48.71
+deny from 62.48.72
+deny from 62.48.73
+deny from 62.48.74
+deny from 62.48.75
+deny from 62.48.76
+deny from 62.48.77
+deny from 62.48.78
+deny from 62.48.79
+allow from all
+
+<Limit GET POST PUT HEAD>
+order allow,deny
+allow from env=good_pass
+deny from env=bad_pass
+</Limit>
+
+#allow Firefox, MSIE, Opera
+SetEnvIfNoCase User-agent "Mozilla" good_pass
+SetEnvIfNoCase User-agent "Opera" good_pass
+SetEnvIfNoCase User-agent "Msie" good_pass
+SetEnvIfNoCase User-agent "Firefox" good_pass
+SetEnvIfNoCase User-agent "Netscape" good_pass
+SetEnvIfNoCase User-agent "Safari" good_pass
+SetEnvIfNoCase User-agent "Lynx" good_pass
+SetEnvIfNoCase User-agent "Konqueror" good_pass
+SetEnvIfNoCase User-agent "WebTV" good_pass
+SetEnvIfNoCase User-agent "Camino" good_pass
+SetEnvIfNoCase User-agent "K-Meleon" good_pass
+SetEnvIfNoCase User-agent "Galeon" good_pass
+
+# allow Google
+SetEnvIfNoCase User-agent "Google" good_pass
+
+# allow Yahoo
+SetEnvIfNoCase User-agent "Slurp" good_pass
+SetEnvIfNoCase User-agent "Yahoo" good_pass
+SetEnvIfNoCase User-agent "MMCrawler" good_pass
+
+# allow MSN
+SetEnvIfNoCase User-agent "^msnbot" good_pass
+SetEnvIfNoCase User-agent "SandCrawler" good_pass
+SetEnvIfNoCase User-agent "^MSRBOT" good_pass
+
+# allow ASK/Teoma
+SetEnvIfNoCase User-agent "Teoma" good_pass
+SetEnvIfNoCase User-agent "Jeeves" good_pass
+
+# deny spammers
+SetEnvIfNoCase User-agent "Wepbot" bad_pass
+SetEnvIfNoCase User-agent "Jakarta" bad_pass
+

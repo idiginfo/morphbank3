@@ -1,0 +1,57 @@
+﻿<slideshow>
+
+	<slide>
+		<image url='http://www.morphbank.net/images/jpeg/0/0/0/0/0/0/0/9/6/7/96703.jpeg' width='500'  background='000000' />
+		<draw_text>
+			<text x='-5' y='-10' width='400' rotation='0' align='center' size='71' color='000000' alpha='90'>Morphbank</text>
+			<text x='-5' y='230' width='320' rotation='-90' align='left' size='50' color='ffffff' alpha='90'>images</text>
+		</draw_text>
+	</slide>
+
+	<slide>
+		<image url='http://www.morphbank.net/images/jpeg/0/0/0/0/0/0/0/9/6/7/96702.jpeg'  width='500' />
+	</slide>
+
+	<slide>
+		<image url='http://www.morphbank.net/images/jpeg/0/0/0/0/0/0/0/9/6/7/96704.jpeg' width='500' />
+		<motion duration='3' start_xOffset='-75' end_xOffset='50' start_yOffset='-25' end_yOffset='-90' start_zoom='200' end_zoom='200' />
+	</slide>
+
+	<slide>
+		<image url='http://www.morphbank.net/images/jpeg/0/0/0/0/0/0/0/8/6/2/86236.jpeg' width='500' />
+	</slide>
+
+	<slide>
+		<image url='http://www.morphbank.net/images/jpeg/0/0/0/0/0/0/0/9/6/7/96706.jpeg' width='500' />
+		<motion duration='3' start_xOffset='-70' end_xOffset='100' start_yOffset='-50' end_yOffset='30' start_zoom='250' end_zoom='250' />
+	</slide>
+
+	<slide>
+		<image url='http://www.morphbank.net/images/jpeg/0/0/0/0/0/0/0/9/6/7/96707.jpeg' width='500' />
+	</slide>
+
+	<slide>
+		<image url='http://www.morphbank.net/images/jpeg/0/0/0/0/0/0/0/9/6/7/96708.jpeg' width='500' />
+		<motion duration='3' start_xOffset='-30' end_xOffset='-30' start_yOffset='-75' end_yOffset='40' start_zoom='200' end_zoom='200' />
+	</slide>
+
+	<slide>
+		<image url='http://www.morphbank.net//images/jpeg/0/0/0/0/0/0/0/9/5/4/95497.jpeg' width='500' />
+		<motion duration='3' start_xOffset='-200' end_xOffset='0' start_yOffset='150' end_yOffset='150' start_zoom='350' end_zoom='350' />
+	</slide>
+
+	<slide>
+		<image url='http://www.morphbank.net/images/jpeg/0/0/0/0/0/0/0/9/6/7/96710.jpeg' width='500' />
+	</slide>
+
+	<slide>
+		<image url='http://www.morphbank.net/images/jpeg/0/0/0/0/0/0/0/9/6/7/96711.jpeg' width='500' />
+	</slide>
+
+	<slide>
+		<image url='http://www.morphbank.net/images/jpeg/0/0/0/0/0/0/0/9/6/7/96712.jpeg' width='500' />
+		<motion duration='3' start_xOffset='-75' end_xOffset='40' start_yOffset='-75' end_yOffset='60' start_zoom='250' end_zoom='250' />
+		<navigation next='1' />
+	</slide>
+
+</slideshow>

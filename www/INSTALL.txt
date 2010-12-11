@@ -1,0 +1,23 @@
+The below is done after installing the database scripts.
+
+1) Change htaccess.txt to .htaccess and save. Alter the php auto_prepend_file path accordingly for your server.
+
+2) Chmod /configuration so it is writable.
+
+3) Visit the url of your site (e.g. http://your_site.com). You should automatically be directed to the install script.
+
+4) Fill out the install form and click submit. This will create a config.ini file in the /configuration/ folder. 
+	If you wish to edit configurations after installing, use a text editor to make alterations to the config.ini file.
+	The APPLICATION_PATH is automatically defined in the following files:
+	/configuration/app.server.php
+	/configuration/image.server.php
+
+5) Chmod /configuration directory so it is not writable.
+
+6) The folder /configuration/content/ contains site specific files you will need to alter. This includes metakeywords, 
+	metacontent, and various informational pages used on the site. The files contain information related to the Morphbank 
+	installation as examples, and should be changed according to your own installation.
+
+7) Related to number 3 above, the Team url page (http://yourdomain.com/About/Team) requires images of those members on 
+   your team. These images should be uploaded to /www/About/Team/pictures/, and named according to the value used in the 
+   MBTeam database table.

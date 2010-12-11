@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<mb:responses xsi:schemaLocation="http://www.morphbank.net/mbsvc/ http://www.morphbank.net/schema/mbsvc.xsd" xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/" xmlns:mb="http://www.morphbank.net/mbsvc/" xmlns:dwcg="http://rs.tdwg.org/dwc/geospatial/" xmlns:dwce="http://rs.tdwg.org/dwc/dwelement" xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <response>
+        <requestSummary>
+            <requestType>insert</requestType>
+            <description>insert from file</description>
+            <submitter>
+                <userId>Ramirez</userId>
+                <groupId>SpiderAToL</groupId>
+            </submitter>
+        </requestSummary>
+        <status>All objects were saved
+Number of objects: 0
+Number of objects with insert problems: 0</status>
+        <numberAffected>0</numberAffected>
+    </response>
+</mb:responses>

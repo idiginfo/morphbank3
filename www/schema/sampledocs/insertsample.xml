@@ -1,0 +1,2833 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:request xsi:schemaLocation="http://www.morphbank.net/mbsvc/ http://www.morphbank.net/schema/mbsvc.xsd" xmlns:ns2="http://www.morphbank.net/mbsvc/" xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/" xmlns:dwcg="http://rs.tdwg.org/dwc/geospatial/" xmlns:dwce="http://rs.tdwg.org/dwc/dwelement" xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <submitter>
+        <userId>Ramirez</userId>
+        <groupId>SpiderAToL</groupId>
+    </submitter>
+    <insert>
+        <specimen>
+            <sourceId>
+                <local>local:0</local>
+                <external>SPD-S:CASENT9019370</external>
+            </sourceId>
+            <userProperty value="DU17" property="OtherSpecimenCode"/>
+            <userProperty value="Yes" property="VoucherAvailable"/>
+            <userProperty value="San Francisco" property="ImagingLocation"/>
+            <userProperty value="CAS" property="ImagingInstitution"/>
+            <determination>
+                <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+            </determination>
+            <dwc:Sex>female</dwc:Sex>
+            <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+            <dwc:Country>Myanmar</dwc:Country>
+            <dwc:StateProvince>Magway Division</dwc:StateProvince>
+            <dwc:County></dwc:County>
+            <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+            <dwcg:VerbatimLatitude>N20º25’26.8”</dwcg:VerbatimLatitude>
+            <dwcg:VerbatimLongitude> E94º40’11.2”</dwcg:VerbatimLongitude>
+            <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-10-27T14:40:17.821-05:00</dwc:EarliestDateCollected>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+            <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+            <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <local>local:1</local>
+                <external>SPD-S:CASENT9019370 ff</external>
+            </sourceId>
+            <relatedObject source="true" objectType="Specimen" role="child">
+                <external>SPD-S:CASENT9019370</external>
+            </relatedObject>
+            <userProperty value="DU17" property="OtherSpecimenCode"/>
+            <userProperty value="Yes" property="VoucherAvailable"/>
+            <userProperty value="San Francisco" property="ImagingLocation"/>
+            <userProperty value="CAS" property="ImagingInstitution"/>
+            <userProperty value="whole specimen" property="MountedParts"/>
+            <userProperty value="Hannah Wood" property="PreparationAuthor"/>
+            <determination>
+                <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+            </determination>
+            <dwc:Sex>female</dwc:Sex>
+            <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+            <dwc:Country>Myanmar</dwc:Country>
+            <dwc:StateProvince>Magway Division</dwc:StateProvince>
+            <dwc:County></dwc:County>
+            <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+            <dwcg:VerbatimLatitude>N20º25’26.8”</dwcg:VerbatimLatitude>
+            <dwcg:VerbatimLongitude> E94º40’11.2”</dwcg:VerbatimLongitude>
+            <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-10-27T14:40:17.821-05:00</dwc:EarliestDateCollected>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+            <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+            <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+            <dwcc:Preparations>temporary mount, alcohol</dwcc:Preparations>
+        </specimen>
+        <image>
+            <sourceId>
+                <local>local:2</local>
+                <external>SPD-I:104 Stegodyphus_FF 9019370 legI L prolat 20X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 ff</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000104</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>104 Stegodyphus_FF 9019370 legI L prolat 20X.jpg</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:3</local>
+                <external>SPD-S:CASENT9019370 mm</external>
+            </sourceId>
+            <relatedObject source="true" objectType="Specimen" role="child">
+                <external>SPD-S:CASENT9019370</external>
+            </relatedObject>
+            <userProperty value="DU17" property="OtherSpecimenCode"/>
+            <userProperty value="Yes" property="VoucherAvailable"/>
+            <userProperty value="San Francisco" property="ImagingLocation"/>
+            <userProperty value="CAS" property="ImagingInstitution"/>
+            <userProperty value="whole specimen" property="MountedParts"/>
+            <userProperty value="Hannah Wood" property="PreparationAuthor"/>
+            <determination>
+                <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+            </determination>
+            <dwc:Sex>male</dwc:Sex>
+            <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+            <dwc:Country>Myanmar</dwc:Country>
+            <dwc:StateProvince>Magway Division</dwc:StateProvince>
+            <dwc:County></dwc:County>
+            <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+            <dwcg:VerbatimLatitude>N20º25’26.8”</dwcg:VerbatimLatitude>
+            <dwcg:VerbatimLongitude> E94º40’11.2”</dwcg:VerbatimLongitude>
+            <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-10-27T14:40:17.821-05:00</dwc:EarliestDateCollected>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+            <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+            <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+            <dwcc:Preparations>temporary mount, alcohol</dwcc:Preparations>
+        </specimen>
+        <image>
+            <sourceId>
+                <local>local:4</local>
+                <external>SPD-I:307 Stegodyphus_MM 9019370 palp L ventral 100X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 mm</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000307</external>
+            </view>
+            <view>
+                <external>SPD:0000045</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>307 Stegodyphus_MM 9019370 palp L ventral 100X.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:5</local>
+                <external>SPD-I:33 Stegodyphus_FF 9019370 dorsal 12.5X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 ff</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000033</external>
+            </view>
+            <view>
+                <external>SPD:0000001</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>33 Stegodyphus_FF 9019370 dorsal 12.5X.jpg</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:6</local>
+                <external>SPD-S:CASENT9019370 pe</external>
+            </sourceId>
+            <relatedObject source="true" objectType="Specimen" role="child">
+                <external>SPD-S:CASENT9019370</external>
+            </relatedObject>
+            <userProperty value="DU17" property="OtherSpecimenCode"/>
+            <userProperty value="Yes" property="VoucherAvailable"/>
+            <userProperty value="San Francisco" property="ImagingLocation"/>
+            <userProperty value="CAS" property="ImagingInstitution"/>
+            <userProperty value="palp" property="MountedParts"/>
+            <userProperty value="Charles Griswold" property="PreparationAuthor"/>
+            <determination>
+                <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+            </determination>
+            <dwc:Sex>male</dwc:Sex>
+            <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+            <dwc:Country>Myanmar</dwc:Country>
+            <dwc:StateProvince>Magway Division</dwc:StateProvince>
+            <dwc:County></dwc:County>
+            <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+            <dwcg:VerbatimLatitude>N20º25’26.8”</dwcg:VerbatimLatitude>
+            <dwcg:VerbatimLongitude> E94º40’11.2”</dwcg:VerbatimLongitude>
+            <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-10-27T14:40:17.821-05:00</dwc:EarliestDateCollected>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+            <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+            <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+            <dwcc:Preparations>temporary mount, KOH expanded</dwcc:Preparations>
+        </specimen>
+        <image>
+            <sourceId>
+                <local>local:7</local>
+                <external>SPD-I:333_Stegodyphus_MM_9019370_pro_exp_100XM.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Charles Griswold" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 pe</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000333</external>
+            </view>
+            <view>
+                <external>SPD:0000168</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>333_Stegodyphus_MM_9019370_pro_exp_100XM.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:8</local>
+                <external>SPD-I:336_Stegodyphus_MM_9019370_ret_exp_100XM.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Charles Griswold" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 pe</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000336</external>
+            </view>
+            <view>
+                <external>SPD:0000168</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>336_Stegodyphus_MM_9019370_ret_exp_100XM.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:9</local>
+                <external>SPD-I:34 Stegodyphus_MM 9019370 dorsal 16X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 mm</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000034</external>
+            </view>
+            <view>
+                <external>SPD:0000001</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>34 Stegodyphus_MM 9019370 dorsal 16X.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:10</local>
+                <external>SPD-I:344_Stegodyphus_Myanmar_9019370_R_ExpPalp.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Charles Griswold" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 pe</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000344</external>
+            </view>
+            <view>
+                <external>SPD:0000177</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>344_Stegodyphus_Myanmar_9019370_R_ExpPalp.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:11</local>
+                <external>SPD-I:35 Stegodyphus_FF 9019370 lateral 12.5X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 ff</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000035</external>
+            </view>
+            <view>
+                <external>SPD:0000001</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>35 Stegodyphus_FF 9019370 lateral 12.5X.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:12</local>
+                <external>SPD-I:36 Stegodyphus_MM 9019370 lateral 20X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 mm</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000036</external>
+            </view>
+            <view>
+                <external>SPD:0000001</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>36 Stegodyphus_MM 9019370 lateral 20X.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:13</local>
+                <external>SPD-I:365 Stegodyphus_FF 9019370 ventral 20X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 ff</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000365</external>
+            </view>
+            <view>
+                <external>SPD:0000002</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>365 Stegodyphus_FF 9019370 ventral 20X.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:14</local>
+                <external>SPD-I:366 Stegodyphus_MM 9019370 ventral 25X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 mm</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000366</external>
+            </view>
+            <view>
+                <external>SPD:0000002</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>366 Stegodyphus_MM 9019370 ventral 25X.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:15</local>
+                <external>SPD-I:369 Stegodyphus_FF 9019370 trocIV R vent 80X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 ff</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000369</external>
+            </view>
+            <view>
+                <external>SPD:0000107</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>369 Stegodyphus_FF 9019370 trocIV R vent 80X.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:16</local>
+                <external>SPD-I:37 Stegodyphus_FF 9019370 ventral 12.5X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 ff</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000037</external>
+            </view>
+            <view>
+                <external>SPD:0000001</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>37 Stegodyphus_FF 9019370 ventral 12.5X.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:17</local>
+                <external>SPD-I:370 Stegod 9019370 F trocI R vent 63X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 ff</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000370</external>
+            </view>
+            <view>
+                <external>SPD:0000083</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>370 Stegod 9019370 F trocI R vent 63X.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:18</local>
+                <external>SPD-I:372 Stegodyphus_FF 9019370 legIV L retro 20X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 ff</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000372</external>
+            </view>
+            <view>
+                <external>SPD:0000024</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>372 Stegodyphus_FF 9019370 legIV L retro 20X.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:19</local>
+                <external>SPD-I:377 Stegod 9019370 F lateral 10X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 ff</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000377</external>
+            </view>
+            <view>
+                <external>SPD:0000001</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>377 Stegod 9019370 F lateral 10X.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:20</local>
+                <external>SPD-I:38 Stegodyphus_MM 9019370 ventral 16X.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370 mm</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000038</external>
+            </view>
+            <view>
+                <external>SPD:0000001</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>38 Stegodyphus_MM 9019370 ventral 16X.jpg</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:21</local>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </sourceId>
+            <relatedObject source="true" objectType="Specimen" role="child">
+                <external>SPD-S:CASENT9019370</external>
+            </relatedObject>
+            <userProperty value="DU17" property="OtherSpecimenCode"/>
+            <userProperty value="Yes" property="VoucherAvailable"/>
+            <userProperty value="San Francisco" property="ImagingLocation"/>
+            <userProperty value="CAS" property="ImagingInstitution"/>
+            <userProperty value="Leg I" property="MountedParts"/>
+            <userProperty value="Hannah Wood" property="PreparationAuthor"/>
+            <determination>
+                <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+            </determination>
+            <dwc:Sex>female</dwc:Sex>
+            <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+            <dwc:Country>Myanmar</dwc:Country>
+            <dwc:StateProvince>Magway Division</dwc:StateProvince>
+            <dwc:County></dwc:County>
+            <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+            <dwcg:VerbatimLatitude>N20º25’26.8”,</dwcg:VerbatimLatitude>
+            <dwcg:VerbatimLongitude> E94º40’11.2”,</dwcg:VerbatimLongitude>
+            <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-10-27T14:40:17.821-05:00</dwc:EarliestDateCollected>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+            <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+            <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+            <dwcc:Preparations>SEM</dwcc:Preparations>
+        </specimen>
+        <image>
+            <sourceId>
+                <local>local:22</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L tI TO6.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000354</external>
+            </view>
+            <view>
+                <external>SPD:0000310</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L tI TO6.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:23</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L1 L claw apical7.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000130</external>
+            </view>
+            <view>
+                <external>SPD:0000089</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L1 L claw apical7.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:24</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L1 L claw retro2.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000132</external>
+            </view>
+            <view>
+                <external>SPD:0000089</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L1 L claw retro2.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:25</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L1 L mt trichobo7.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000353</external>
+            </view>
+            <view>
+                <external>SPD:0000348</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L1 L mt trichobo7.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:26</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L1 L prolateral4.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000360</external>
+            </view>
+            <view>
+                <external>SPD:0000021</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L1 L prolateral4.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:27</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L1 L seta5.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000217</external>
+            </view>
+            <view>
+                <external>SPD:0000216</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L1 L seta5.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:28</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L1 L t scopular 0.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000221</external>
+            </view>
+            <view>
+                <external>SPD:0000219</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L1 L t scopular 0.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:29</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L1 L t scopular 1.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000222</external>
+            </view>
+            <view>
+                <external>SPD:0000221</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L1 L t scopular 1.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:30</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L1 L t scopular seta9.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000221</external>
+            </view>
+            <view>
+                <external>SPD:0000219</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L1 L t scopular seta9.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:31</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L1 L tar ventral8.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000129</external>
+            </view>
+            <view>
+                <external>SPD:0000088</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L1 L tar ventral8.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:32</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L1 L tars dorsal6.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000126</external>
+            </view>
+            <view>
+                <external>SPD:0000088</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L1 L tars dorsal6.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:33</local>
+                <external>SPD-I:42(2) Stegodyphus_FF L1 L tars retro3.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (2)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000128</external>
+            </view>
+            <view>
+                <external>SPD:0000088</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(2) Stegodyphus_FF L1 L tars retro3.jpg</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:34</local>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </sourceId>
+            <relatedObject source="true" objectType="Specimen" role="child">
+                <external>SPD-S:CASENT9019370</external>
+            </relatedObject>
+            <userProperty value="DU17" property="OtherSpecimenCode"/>
+            <userProperty value="Yes" property="VoucherAvailable"/>
+            <userProperty value="San Francisco" property="ImagingLocation"/>
+            <userProperty value="CAS" property="ImagingInstitution"/>
+            <userProperty value="Leg IV, palp" property="MountedParts"/>
+            <userProperty value="Hannah Wood" property="PreparationAuthor"/>
+            <determination>
+                <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+            </determination>
+            <dwc:Sex>female</dwc:Sex>
+            <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+            <dwc:Country>Myanmar</dwc:Country>
+            <dwc:StateProvince>Magway Division</dwc:StateProvince>
+            <dwc:County></dwc:County>
+            <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+            <dwcg:VerbatimLatitude>N20º25’26.8”,</dwcg:VerbatimLatitude>
+            <dwcg:VerbatimLongitude> E94º40’11.2”,</dwcg:VerbatimLongitude>
+            <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-10-27T14:40:17.821-05:00</dwc:EarliestDateCollected>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+            <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+            <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+            <dwcc:Preparations>SEM</dwcc:Preparations>
+        </specimen>
+        <image>
+            <sourceId>
+                <local>local:35</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L calamistrum7.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000010</external>
+            </view>
+            <view>
+                <external>SPD:0000237</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L calamistrum7.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:36</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L calamistrum8.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000011</external>
+            </view>
+            <view>
+                <external>SPD:0000237</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L calamistrum8.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:37</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L calamistrum9.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000012</external>
+            </view>
+            <view>
+                <external>SPD:0000238</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L calamistrum9.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:38</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L claw apical7.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000214</external>
+            </view>
+            <view>
+                <external>SPD:0000113</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L claw apical7.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:39</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L claw retro5.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000216</external>
+            </view>
+            <view>
+                <external>SPD:0000113</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L claw retro5.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:40</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L claw vent4.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000355</external>
+            </view>
+            <view>
+                <external>SPD:0000113</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L claw vent4.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:41</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L mt dorsal4.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000206</external>
+            </view>
+            <view>
+                <external>SPD:0000111</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L mt dorsal4.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:42</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L mt retro6.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000208</external>
+            </view>
+            <view>
+                <external>SPD:0000111</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L mt retro6.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:43</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L mt vent3.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000014</external>
+            </view>
+            <view>
+                <external>SPD:0000240</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L mt vent3.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:44</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L retro6.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000362</external>
+            </view>
+            <view>
+                <external>SPD:0000024</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L retro6.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:45</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L tar dorsal3.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000210</external>
+            </view>
+            <view>
+                <external>SPD:0000112</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L tar dorsal3.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:46</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L tar retro5.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000212</external>
+            </view>
+            <view>
+                <external>SPD:0000112</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L tar retro5.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:47</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L tar vent close1.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD:0000112</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L tar vent close1.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:48</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L tar vent close2.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD:0000112</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L tar vent close2.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:49</local>
+                <external>SPD-I:42(3) Stegodyphus_FF L4 L tar ventral0.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000213</external>
+            </view>
+            <view>
+                <external>SPD:0000112</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF L4 L tar ventral0.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:50</local>
+                <external>SPD-I:42(3) Stegodyphus_FF palp L apical7.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000101</external>
+            </view>
+            <view>
+                <external>SPD:0000079</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF palp L apical7.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:51</local>
+                <external>SPD-I:42(3) Stegodyphus_FF palp L claw ret9.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000103</external>
+            </view>
+            <view>
+                <external>SPD:0000079</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF palp L claw ret9.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:52</local>
+                <external>SPD-I:42(3) Stegodyphus_FF palp L prolater2.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000361</external>
+            </view>
+            <view>
+                <external>SPD:0000020</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF palp L prolater2.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:53</local>
+                <external>SPD-I:42(3) Stegodyphus_FF palp L tar dors0.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000097</external>
+            </view>
+            <view>
+                <external>SPD:0000078</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF palp L tar dors0.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:54</local>
+                <external>SPD-I:42(3) Stegodyphus_FF palp L tar retro8.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000099</external>
+            </view>
+            <view>
+                <external>SPD:0000078</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF palp L tar retro8.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:55</local>
+                <external>SPD-I:42(3) Stegodyphus_FF palp L tib dors1.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (3)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000093</external>
+            </view>
+            <view>
+                <external>SPD:0000077</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(3) Stegodyphus_FF palp L tib dors1.jpg</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:56</local>
+                <external>SPD-S:CASENT9019370:CG Box 42 (4)</external>
+            </sourceId>
+            <relatedObject source="true" objectType="Specimen" role="child">
+                <external>SPD-S:CASENT9019370</external>
+            </relatedObject>
+            <userProperty value="DU17" property="OtherSpecimenCode"/>
+            <userProperty value="Yes" property="VoucherAvailable"/>
+            <userProperty value="San Francisco" property="ImagingLocation"/>
+            <userProperty value="CAS" property="ImagingInstitution"/>
+            <userProperty value="chelicerae" property="MountedParts"/>
+            <userProperty value="Hannah Wood" property="PreparationAuthor"/>
+            <determination>
+                <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+            </determination>
+            <dwc:Sex>female</dwc:Sex>
+            <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+            <dwc:Country>Myanmar</dwc:Country>
+            <dwc:StateProvince>Magway Division</dwc:StateProvince>
+            <dwc:County></dwc:County>
+            <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+            <dwcg:VerbatimLatitude>N20º25’26.8”,</dwcg:VerbatimLatitude>
+            <dwcg:VerbatimLongitude> E94º40’11.2”,</dwcg:VerbatimLongitude>
+            <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-10-27T14:40:17.821-05:00</dwc:EarliestDateCollected>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+            <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+            <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+            <dwcc:Preparations>SEM</dwcc:Preparations>
+        </specimen>
+        <image>
+            <sourceId>
+                <local>local:57</local>
+                <external>SPD-I:42(4) Stegodyphus_FF chel L anterior6.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (4)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000068</external>
+            </view>
+            <view>
+                <external>SPD:0000019</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(4) Stegodyphus_FF chel L anterior6.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:58</local>
+                <external>SPD-I:42(4) Stegodyphus_FF chel L boss5.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (4)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000007</external>
+            </view>
+            <view>
+                <external>SPD:0000184</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(4) Stegodyphus_FF chel L boss5.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:59</local>
+                <external>SPD-I:42(4) Stegodyphus_FF chel L lateral4.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (4)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000069</external>
+            </view>
+            <view>
+                <external>SPD:0000019</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(4) Stegodyphus_FF chel L lateral4.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:60</local>
+                <external>SPD-I:42(4) Stegodyphus_FF chel L post clos3.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (4)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000070</external>
+            </view>
+            <view>
+                <external>SPD:0000019</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(4) Stegodyphus_FF chel L post clos3.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:61</local>
+                <external>SPD-I:42(4) Stegodyphus_FF chel L post2.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (4)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000070</external>
+            </view>
+            <view>
+                <external>SPD:0000019</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(4) Stegodyphus_FF chel L post2.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:62</local>
+                <external>SPD-I:42(4) Stegodyphus_FF chl (L) gland1.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (4)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000073</external>
+            </view>
+            <view>
+                <external>SPD:0000187</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(4) Stegodyphus_FF chl (L) gland1.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:63</local>
+                <external>SPD-I:42(4) Stegodyphus_FF chl (L) promarg9.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (4)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000071</external>
+            </view>
+            <view>
+                <external>SPD:0000185</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(4) Stegodyphus_FF chl (L) promarg9.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:64</local>
+                <external>SPD-I:42(4) Stegodyphus_FF chl (L) retromar0.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (4)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000072</external>
+            </view>
+            <view>
+                <external>SPD:0000186</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(4) Stegodyphus_FF chl (L) retromar0.jpg</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:65</local>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </sourceId>
+            <relatedObject source="true" objectType="Specimen" role="child">
+                <external>SPD-S:CASENT9019370</external>
+            </relatedObject>
+            <userProperty value="DU17" property="OtherSpecimenCode"/>
+            <userProperty value="Yes" property="VoucherAvailable"/>
+            <userProperty value="San Francisco" property="ImagingLocation"/>
+            <userProperty value="CAS" property="ImagingInstitution"/>
+            <userProperty value="spinnerets" property="MountedParts"/>
+            <userProperty value="Hannah Wood" property="PreparationAuthor"/>
+            <determination>
+                <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+            </determination>
+            <dwc:Sex>female</dwc:Sex>
+            <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+            <dwc:Country>Myanmar</dwc:Country>
+            <dwc:StateProvince>Magway Division</dwc:StateProvince>
+            <dwc:County></dwc:County>
+            <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+            <dwcg:VerbatimLatitude>N20º25’26.8”</dwcg:VerbatimLatitude>
+            <dwcg:VerbatimLongitude> E94º40’11.2”</dwcg:VerbatimLongitude>
+            <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-10-27T14:40:17.821-05:00</dwc:EarliestDateCollected>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+            <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+            <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+            <dwcc:Preparations>SEM</dwcc:Preparations>
+        </specimen>
+        <image>
+            <sourceId>
+                <local>local:66</local>
+                <external>SPD-I:42(5) Stegodyphus_FF ALS R close5.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000256</external>
+            </view>
+            <view>
+                <external>SPD:0000254</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF ALS R close5.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:67</local>
+                <external>SPD-I:42(5) Stegodyphus_FF ALS R close6.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000260</external>
+            </view>
+            <view>
+                <external>SPD:0000257</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF ALS R close6.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:68</local>
+                <external>SPD-I:42(5) Stegodyphus_FF ALS R overview4.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000254</external>
+            </view>
+            <view>
+                <external>SPD:0000125</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF ALS R overview4.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:69</local>
+                <external>SPD-I:42(5) Stegodyphus_FF anal tubercle1.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000288</external>
+            </view>
+            <view>
+                <external>SPD:0000011</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF anal tubercle1.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:70</local>
+                <external>SPD-I:42(5) Stegodyphus_FF cribellar spigot4.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000253</external>
+            </view>
+            <view>
+                <external>SPD:0000276</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF cribellar spigot4.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:71</local>
+                <external>SPD-I:42(5) Stegodyphus_FF cribellum3.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000251</external>
+            </view>
+            <view>
+                <external>SPD:0000035</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF cribellum3.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:72</local>
+                <external>SPD-I:42(5) Stegodyphus_FF PMS L close0.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000272</external>
+            </view>
+            <view>
+                <external>SPD:0000261</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF PMS L close0.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:73</local>
+                <external>SPD-I:42(5) Stegodyphus_FF PMS L overview9.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000266</external>
+            </view>
+            <view>
+                <external>SPD:0000126</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF PMS L overview9.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:74</local>
+                <external>SPD-I:42(5) Stegodyphus_FF PMS overview8.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000266</external>
+            </view>
+            <view>
+                <external>SPD:0000126</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF PMS overview8.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:75</local>
+                <external>SPD-I:42(5) Stegodyphus_FF PMS R 7.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000266</external>
+            </view>
+            <view>
+                <external>SPD:0000126</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF PMS R 7.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:76</local>
+                <external>SPD-I:42(5) Stegodyphus_FF R PLS basal spig0.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000281</external>
+            </view>
+            <view>
+                <external>SPD:0000264</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF R PLS basal spig0.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:77</local>
+                <external>SPD-I:42(5) Stegodyphus_FF R PLS close1.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000278</external>
+            </view>
+            <view>
+                <external>SPD:0000262</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF R PLS close1.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:78</local>
+                <external>SPD-I:42(5) Stegodyphus_FF R PLS close2.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000278</external>
+            </view>
+            <view>
+                <external>SPD:0000262</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF R PLS close2.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:79</local>
+                <external>SPD-I:42(5) Stegodyphus_FF R PLS close3.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000280</external>
+            </view>
+            <view>
+                <external>SPD:0000263</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF R PLS close3.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:80</local>
+                <external>SPD-I:42(5) Stegodyphus_FF R PLS overview8.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000276</external>
+            </view>
+            <view>
+                <external>SPD:0000129</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF R PLS overview8.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:81</local>
+                <external>SPD-I:42(5) Stegodyphus_FF R PLS overview9.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000276</external>
+            </view>
+            <view>
+                <external>SPD:0000129</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF R PLS overview9.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:82</local>
+                <external>SPD-I:42(5) Stegodyphus_FF spinnerets lat5.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000248</external>
+            </view>
+            <view>
+                <external>SPD:0000010</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF spinnerets lat5.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:83</local>
+                <external>SPD-I:42(5) Stegodyphus_FF spinnerets vent-post2.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (5)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000247</external>
+            </view>
+            <view>
+                <external>SPD:0000010</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(5) Stegodyphus_FF spinnerets vent-post2.jpg</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:84</local>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </sourceId>
+            <relatedObject source="true" objectType="Specimen" role="child">
+                <external>SPD-S:CASENT9019370</external>
+            </relatedObject>
+            <userProperty value="DU17" property="OtherSpecimenCode"/>
+            <userProperty value="Yes" property="VoucherAvailable"/>
+            <userProperty value="San Francisco" property="ImagingLocation"/>
+            <userProperty value="CAS" property="ImagingInstitution"/>
+            <userProperty value="carapace" property="MountedParts"/>
+            <userProperty value="Hannah Wood" property="PreparationAuthor"/>
+            <determination>
+                <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+            </determination>
+            <dwc:Sex>female</dwc:Sex>
+            <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+            <dwc:Country>Myanmar</dwc:Country>
+            <dwc:StateProvince>Magway Division</dwc:StateProvince>
+            <dwc:County></dwc:County>
+            <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+            <dwcg:VerbatimLatitude>N20º25’26.8”</dwcg:VerbatimLatitude>
+            <dwcg:VerbatimLongitude> E94º40’11.2”</dwcg:VerbatimLongitude>
+            <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-10-27T14:40:17.821-05:00</dwc:EarliestDateCollected>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+            <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+            <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+            <dwcc:Preparations>SEM</dwcc:Preparations>
+        </specimen>
+        <image>
+            <sourceId>
+                <local>local:85</local>
+                <external>SPD-I:42(6) Stegodyphus_FF carapace dorsal4.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000051</external>
+            </view>
+            <view>
+                <external>SPD:0000005</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF carapace dorsal4.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:86</local>
+                <external>SPD-I:42(6) Stegodyphus_FF carapace hair7.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000359</external>
+            </view>
+            <view>
+                <external>SPD:0000005</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF carapace hair7.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:87</local>
+                <external>SPD-I:42(6) Stegodyphus_FF carapace texture6.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000053</external>
+            </view>
+            <view>
+                <external>SPD:0000005</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF carapace texture6.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:88</local>
+                <external>SPD-I:42(6) Stegodyphus_FF endite dors0.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000077</external>
+            </view>
+            <view>
+                <external>SPD:0000073</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF endite dors0.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:89</local>
+                <external>SPD-I:42(6) Stegodyphus_FF endites vent7.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000078</external>
+            </view>
+            <view>
+                <external>SPD:0000073</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF endites vent7.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:90</local>
+                <external>SPD-I:42(6) Stegodyphus_FF eyes anterior2.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000057</external>
+            </view>
+            <view>
+                <external>SPD:0000015</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF eyes anterior2.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:91</local>
+                <external>SPD-I:42(6) Stegodyphus_FF eyes dorsal3.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000061</external>
+            </view>
+            <view>
+                <external>SPD:0000015</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF eyes dorsal3.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:92</local>
+                <external>SPD-I:42(6) Stegodyphus_FF eyes lateral8.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000065</external>
+            </view>
+            <view>
+                <external>SPD:0000015</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF eyes lateral8.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:93</local>
+                <external>SPD-I:42(6) Stegodyphus_FF labium vent6.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000044</external>
+            </view>
+            <view>
+                <external>SPD:0000289</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF labium vent6.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:94</local>
+                <external>SPD-I:42(6) Stegodyphus_FF labrum dors9.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000043</external>
+            </view>
+            <view>
+                <external>SPD:0000288</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF labrum dors9.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:95</local>
+                <external>SPD-I:42(6) Stegodyphus_FF pedicel dorsal5.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000234</external>
+            </view>
+            <view>
+                <external>SPD:0000006</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF pedicel dorsal5.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:96</local>
+                <external>SPD-I:42(6) Stegodyphus_FF pedicel vent5.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000237</external>
+            </view>
+            <view>
+                <external>SPD:0000006</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF pedicel vent5.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:97</local>
+                <external>SPD-I:42(6) Stegodyphus_FF serrula1.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000079</external>
+            </view>
+            <view>
+                <external>SPD:0000198</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF serrula1.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:98</local>
+                <external>SPD-I:42(6) Stegodyphus_FF sternum4.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (6)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000047</external>
+            </view>
+            <view>
+                <external>SPD:0000291</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(6) Stegodyphus_FF sternum4.jpg</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:99</local>
+                <external>SPD-S:CASENT9019370:CG Box 42 (7)</external>
+            </sourceId>
+            <relatedObject source="true" objectType="Specimen" role="child">
+                <external>SPD-S:CASENT9019370</external>
+            </relatedObject>
+            <userProperty value="DU17" property="OtherSpecimenCode"/>
+            <userProperty value="Yes" property="VoucherAvailable"/>
+            <userProperty value="San Francisco" property="ImagingLocation"/>
+            <userProperty value="CAS" property="ImagingInstitution"/>
+            <userProperty value="epigynum" property="MountedParts"/>
+            <userProperty value="Hannah Wood" property="PreparationAuthor"/>
+            <determination>
+                <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+            </determination>
+            <dwc:Sex>female</dwc:Sex>
+            <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+            <dwc:Country>Myanmar</dwc:Country>
+            <dwc:StateProvince>Magway Division</dwc:StateProvince>
+            <dwc:County></dwc:County>
+            <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+            <dwcg:VerbatimLatitude>N20º25’26.8”</dwcg:VerbatimLatitude>
+            <dwcg:VerbatimLongitude> E94º40’11.2”</dwcg:VerbatimLongitude>
+            <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-10-27T14:40:17.821-05:00</dwc:EarliestDateCollected>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+            <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+            <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+            <dwcc:Preparations>SEM</dwcc:Preparations>
+        </specimen>
+        <image>
+            <sourceId>
+                <local>local:100</local>
+                <external>SPD-I:42(7) Stegodyphus_FF epigyn anterior8.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (7)</external>
+            </specimen>
+            <view>
+                <external>SPD:0000028</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(7) Stegodyphus_FF epigyn anterior8.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:101</local>
+                <external>SPD-I:42(7) Stegodyphus_FF epigyn dors-post7.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (7)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000290</external>
+            </view>
+            <view>
+                <external>SPD:0000028</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(7) Stegodyphus_FF epigyn dors-post7.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:102</local>
+                <external>SPD-I:42(7) Stegodyphus_FF epigyn dorsal2.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="both" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (7)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000296</external>
+            </view>
+            <view>
+                <external>SPD:0000029</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(7) Stegodyphus_FF epigyn dorsal2.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:103</local>
+                <external>SPD-I:42(7) Stegodyphus_FF epigyn L pores0.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (7)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000020</external>
+            </view>
+            <view>
+                <external>SPD:0000143</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(7) Stegodyphus_FF epigyn L pores0.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:104</local>
+                <external>SPD-I:42(7) Stegodyphus_FF epigyn L pores1.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (7)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000297</external>
+            </view>
+            <view>
+                <external>SPD:0000138</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(7) Stegodyphus_FF epigyn L pores1.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:105</local>
+                <external>SPD-I:42(7) Stegodyphus_FF epigyn lat-dors5.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="right" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (7)</external>
+            </specimen>
+            <view>
+                <external>SPD:0000028</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(7) Stegodyphus_FF epigyn lat-dors5.jpg</originalFileName>
+        </image>
+        <image>
+            <sourceId>
+                <local>local:106</local>
+                <external>SPD-I:42(7) Stegodyphus_FF epigyn R dorsal3.jpg</external>
+            </sourceId>
+            <submittedBy>Charles Griswold</submittedBy>
+            <userProperty value="Hannah Wood" property="Author"/>
+            <userProperty value="San Francisco" property="LocationPlace"/>
+            <userProperty value="CAS" property="LocationInstitution"/>
+            <userProperty value="No" property="IsLegacy"/>
+            <userProperty value="LEO1450VP" property="DeviceMakerAndModel"/>
+            <userProperty value="left" property="Side"/>
+            <specimen>
+                <external>SPD-S:CASENT9019370:CG Box 42 (7)</external>
+            </specimen>
+            <view>
+                <external>SPD-SV:0000296</external>
+            </view>
+            <view>
+                <external>SPD:0000029</external>
+            </view>
+            <magnification></magnification>
+            <imageType>jpg</imageType>
+            <copyrightText>Charles Griswold</copyrightText>
+            <originalFileName>42(7) Stegodyphus_FF epigyn R dorsal3.jpg</originalFileName>
+        </image>
+    </insert>
+</ns2:request>

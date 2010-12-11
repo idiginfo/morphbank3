@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<rss version="2.0" xmlns:media="http://tools.search.yahoo.com/mrss" >
+    <channel>
+        <title>Morphbank Images</title>
+        <item>
+            <title>test image</title>
+           <link>http://www.morphbank.net/?id=218849&imgType=jpg</link>
+
+            <media:content url="http://www.morphbank.net/?id=218849&imgType=jpg"/>
+                <media:thumbnail url="http://www.morphbank.net/?id=218849&imgType=thumb"/>
+        </item>
+    </channel>
+</rss>

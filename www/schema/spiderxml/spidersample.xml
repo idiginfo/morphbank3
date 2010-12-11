@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<mb:request xsi:schemaLocation="http://morphbank.net/schema/services http://morphbank.net/schema/services.xsd" xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/" xmlns:mb="http://morphbank.net/schema/services" xmlns:dwcg="http://rs.tdwg.org/dwc/geospatial/" xmlns:dwce="http://rs.tdwg.org/dwc/dwelement" xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <submitter>
+        <userId>Ramirez</userId>
+        <groupId>SpiderAToL</groupId>
+    </submitter>
+    <insert>
+        <xmlObjects>
+            <specimen>
+                <sourceId>
+                    <local>local:0</local>
+                    <external>SPD-S:CASENT9019370</external>
+                </sourceId>
+                <userProperty value="DU17" property="OtherSpecimenCode"/>
+                <userProperty value="Yes" property="VoucherAvailable"/>
+                <userProperty value="San Francisco" property="ImagingLocation"/>
+                <userProperty value="CAS" property="ImagingInstitution"/>
+                <determination>
+                    <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+                </determination>
+                <dwc:Sex>female</dwc:Sex>
+                <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+                <dwc:Country>Myanmar</dwc:Country>
+                <dwc:StateProvince>Magway Division</dwc:StateProvince>
+                <dwc:County></dwc:County>
+                <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+                <dwcg:VerbatimLatitude>N20º25&#8217;26.8&#8221;</dwcg:VerbatimLatitude>
+                <dwcg:VerbatimLongitude> E94º40&#8217;11.2&#8221;</dwcg:VerbatimLongitude>
+                <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+                <dwc:EarliestDateCollected>2003-10-27T15:04:21.054-05:00</dwc:EarliestDateCollected>
+                <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+                <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+                <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+                <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+                <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+            </specimen>
+            <specimen>
+                <sourceId>
+                    <local>local:1</local>
+                    <external>SPD-S:CASENT9019370 ff</external>
+                </sourceId>
+                <relatedObject source="true" objectType="Specimen" role="child">
+                    <external>SPD-S:CASENT9019370</external>
+                </relatedObject>
+                <userProperty value="DU17" property="OtherSpecimenCode"/>
+                <userProperty value="Yes" property="VoucherAvailable"/>
+                <userProperty value="San Francisco" property="ImagingLocation"/>
+                <userProperty value="CAS" property="ImagingInstitution"/>
+                <userProperty value="whole specimen" property="MountedParts"/>
+                <userProperty value="Hannah Wood" property="PreparationAuthor"/>
+                <determination>
+                    <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+                </determination>
+                <dwc:Sex>female</dwc:Sex>
+                <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+                <dwc:Country>Myanmar</dwc:Country>
+                <dwc:StateProvince>Magway Division</dwc:StateProvince>
+                <dwc:County></dwc:County>
+                <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+                <dwcg:VerbatimLatitude>N20º25&#8217;26.8&#8221;</dwcg:VerbatimLatitude>
+                <dwcg:VerbatimLongitude> E94º40&#8217;11.2&#8221;</dwcg:VerbatimLongitude>
+                <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+                <dwc:EarliestDateCollected>2003-10-27T15:04:21.054-05:00</dwc:EarliestDateCollected>
+                <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+                <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+                <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+                <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+                <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+                <dwcc:Preparations>temporary mount, alcohol</dwcc:Preparations>
+            </specimen>
+            <image>
+                <sourceId>
+                    <local>local:2</local>
+                    <external>SPD-I:104 Stegodyphus_FF 9019370 legI L prolat 20X.jpg</external>
+                </sourceId>
+                <submittedBy>Charles Griswold</submittedBy>
+                <userProperty value="Hannah Wood" property="Author"/>
+                <userProperty value="San Francisco" property="LocationPlace"/>
+                <userProperty value="CAS" property="LocationInstitution"/>
+                <userProperty value="No" property="IsLegacy"/>
+                <userProperty value="left" property="Side"/>
+                <specimen>
+                    <external>SPD-S:CASENT9019370 ff</external>
+                </specimen>
+                <view>
+                    <external>SPD-SV:0000104</external>
+                </view>
+                <magnification></magnification>
+                <imageType>jpg</imageType>
+                <copyrightText>Charles Griswold</copyrightText>
+                <originalFileName>104 Stegodyphus_FF 9019370 legI L prolat 20X.jpg</originalFileName>
+            </image>
+            <specimen>
+                <sourceId>
+                    <local>local:3</local>
+                    <external>SPD-S:CASENT9019370 mm</external>
+                </sourceId>
+                <relatedObject source="true" objectType="Specimen" role="child">
+                    <external>SPD-S:CASENT9019370</external>
+                </relatedObject>
+                <userProperty value="DU17" property="OtherSpecimenCode"/>
+                <userProperty value="Yes" property="VoucherAvailable"/>
+                <userProperty value="San Francisco" property="ImagingLocation"/>
+                <userProperty value="CAS" property="ImagingInstitution"/>
+                <userProperty value="whole specimen" property="MountedParts"/>
+                <userProperty value="Hannah Wood" property="PreparationAuthor"/>
+                <determination>
+                    <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+                </determination>
+                <dwc:Sex>male</dwc:Sex>
+                <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+                <dwc:Country>Myanmar</dwc:Country>
+                <dwc:StateProvince>Magway Division</dwc:StateProvince>
+                <dwc:County></dwc:County>
+                <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+                <dwcg:VerbatimLatitude>N20º25&#8217;26.8&#8221;</dwcg:VerbatimLatitude>
+                <dwcg:VerbatimLongitude> E94º40&#8217;11.2&#8221;</dwcg:VerbatimLongitude>
+                <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+                <dwc:EarliestDateCollected>2003-10-27T15:04:21.054-05:00</dwc:EarliestDateCollected>
+                <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+                <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+                <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+                <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+                <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+                <dwcc:Preparations>temporary mount, alcohol</dwcc:Preparations>
+            </specimen>
+            <image>
+                <sourceId>
+                    <local>local:4</local>
+                    <external>SPD-I:307 Stegodyphus_MM 9019370 palp L ventral 100X.jpg</external>
+                </sourceId>
+                <submittedBy>Charles Griswold</submittedBy>
+                <userProperty value="Hannah Wood" property="Author"/>
+                <userProperty value="San Francisco" property="LocationPlace"/>
+                <userProperty value="CAS" property="LocationInstitution"/>
+                <userProperty value="No" property="IsLegacy"/>
+                <userProperty value="left" property="Side"/>
+                <specimen>
+                    <external>SPD-S:CASENT9019370 mm</external>
+                </specimen>
+                <view>
+                    <external>SPD-SV:0000307</external>
+                </view>
+                <view>
+                    <external>SPD:0000045</external>
+                </view>
+                <magnification></magnification>
+                <imageType>jpg</imageType>
+                <copyrightText>Charles Griswold</copyrightText>
+                <originalFileName>307 Stegodyphus_MM 9019370 palp L ventral 100X.jpg</originalFileName>
+            </image>
+            <image>
+                <sourceId>
+                    <local>local:5</local>
+                    <external>SPD-I:33 Stegodyphus_FF 9019370 dorsal 12.5X.jpg</external>
+                </sourceId>
+                <submittedBy>Charles Griswold</submittedBy>
+                <userProperty value="Hannah Wood" property="Author"/>
+                <userProperty value="San Francisco" property="LocationPlace"/>
+                <userProperty value="CAS" property="LocationInstitution"/>
+                <userProperty value="No" property="IsLegacy"/>
+                <userProperty value="both" property="Side"/>
+                <specimen>
+                    <external>SPD-S:CASENT9019370 ff</external>
+                </specimen>
+                <view>
+                    <external>SPD-SV:0000033</external>
+                </view>
+                <view>
+                    <external>SPD:0000001</external>
+                </view>
+                <magnification></magnification>
+                <imageType>jpg</imageType>
+                <copyrightText>Charles Griswold</copyrightText>
+                <originalFileName>33 Stegodyphus_FF 9019370 dorsal 12.5X.jpg</originalFileName>
+            </image>
+            <specimen>
+                <sourceId>
+                    <local>local:6</local>
+                    <external>SPD-S:CASENT9019370 pe</external>
+                </sourceId>
+                <relatedObject source="true" objectType="Specimen" role="child">
+                    <external>SPD-S:CASENT9019370</external>
+                </relatedObject>
+                <userProperty value="DU17" property="OtherSpecimenCode"/>
+                <userProperty value="Yes" property="VoucherAvailable"/>
+                <userProperty value="San Francisco" property="ImagingLocation"/>
+                <userProperty value="CAS" property="ImagingInstitution"/>
+                <userProperty value="palp" property="MountedParts"/>
+                <userProperty value="Charles Griswold" property="PreparationAuthor"/>
+                <determination>
+                    <external>SCI-NAME:Stegodyphus undet PwintPhyu</external>
+                </determination>
+                <dwc:Sex>male</dwc:Sex>
+                <dwc:CollectionCode>CASENT9019370</dwc:CollectionCode>
+                <dwc:Country>Myanmar</dwc:Country>
+                <dwc:StateProvince>Magway Division</dwc:StateProvince>
+                <dwc:County></dwc:County>
+                <dwc:Locality> 7.5 km E PwintPhyu (= Pwinbyu) </dwc:Locality>
+                <dwcg:VerbatimLatitude>N20º25&#8217;26.8&#8221;</dwcg:VerbatimLatitude>
+                <dwcg:VerbatimLongitude> E94º40&#8217;11.2&#8221;</dwcg:VerbatimLongitude>
+                <dwc:Collector> D.Ubick, C. Griswold</dwc:Collector>
+                <dwc:EarliestDateCollected>2003-10-27T15:04:21.054-05:00</dwc:EarliestDateCollected>
+                <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+                <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+                <dwc:CollectingMethod>webs on Acacia trees </dwc:CollectingMethod>
+                <dwcc:IdentifiedBy></dwcc:IdentifiedBy>
+                <dwc:InstitutionCode>CAS</dwc:InstitutionCode>
+                <dwcc:Preparations>temporary mount, KOH expanded</dwcc:Preparations>
+            </specimen>
+            <image>
+                <sourceId>
+                    <local>local:7</local>
+                    <external>SPD-I:333_Stegodyphus_MM_9019370_pro_exp_100XM.jpg</external>
+                </sourceId>
+                <submittedBy>Charles Griswold</submittedBy>
+                <userProperty value="Charles Griswold" property="Author"/>
+                <userProperty value="San Francisco" property="LocationPlace"/>
+                <userProperty value="CAS" property="LocationInstitution"/>
+                <userProperty value="No" property="IsLegacy"/>
+                <userProperty value="right" property="Side"/>
+                <specimen>
+                    <external>SPD-S:CASENT9019370 pe</external>
+                </specimen>
+                <view>
+                    <external>SPD-SV:0000333</external>
+                </view>
+                <view>
+                    <external>SPD:0000168</external>
+                </view>
+                <magnification></magnification>
+                <imageType>jpg</imageType>
+                <copyrightText>Charles Griswold</copyrightText>
+                <originalFileName>333_Stegodyphus_MM_9019370_pro_exp_100XM.jpg</originalFileName>
+            </image>
+            <image>
+                <sourceId>
+                    <local>local:8</local>
+                    <external>SPD-I:336_Stegodyphus_MM_9019370_ret_exp_100XM.jpg</external>
+                </sourceId>
+                <submittedBy>Charles Griswold</submittedBy>
+                <userProperty value="Charles Griswold" property="Author"/>
+                <userProperty value="San Francisco" property="LocationPlace"/>
+                <userProperty value="CAS" property="LocationInstitution"/>
+                <userProperty value="No" property="IsLegacy"/>
+                <userProperty value="right" property="Side"/>
+                <specimen>
+                    <external>SPD-S:CASENT9019370 pe</external>
+                </specimen>
+                <view>
+                    <external>SPD-SV:0000336</external>
+                </view>
+                <view>
+                    <external>SPD:0000168</external>
+                </view>
+                <magnification></magnification>
+                <imageType>jpg</imageType>
+                <copyrightText>Charles Griswold</copyrightText>
+                <originalFileName>336_Stegodyphus_MM_9019370_ret_exp_100XM.jpg</originalFileName>
+            </image>
+            <image>
+                <sourceId>
+                    <local>local:9</local>
+                    <external>SPD-I:34 Stegodyphus_MM 9019370 dorsal 16X.jpg</external>
+                </sourceId>
+                <submittedBy>Charles Griswold</submittedBy>
+                <userProperty value="Hannah Wood" property="Author"/>
+                <userProperty value="San Francisco" property="LocationPlace"/>
+                <userProperty value="CAS" property="LocationInstitution"/>
+                <userProperty value="No" property="IsLegacy"/>
+                <userProperty value="both" property="Side"/>
+                <specimen>
+                    <external>SPD-S:CASENT9019370 mm</external>
+                </specimen>
+                <view>
+                    <external>SPD-SV:0000034</external>
+                </view>
+                <view>
+                    <external>SPD:0000001</external>
+                </view>
+                <magnification></magnification>
+                <imageType>jpg</imageType>
+                <copyrightText>Charles Griswold</copyrightText>
+                <originalFileName>34 Stegodyphus_MM 9019370 dorsal 16X.jpg</originalFileName>
+            </image>
+            <image>
+                <sourceId>
+                    <local>local:10</local>
+                    <external>SPD-I:344_Stegodyphus_Myanmar_9019370_R_ExpPalp.jpg</external>
+                </sourceId>
+                <submittedBy>Charles Griswold</submittedBy>
+                <userProperty value="Charles Griswold" property="Author"/>
+                <userProperty value="San Francisco" property="LocationPlace"/>
+                <userProperty value="CAS" property="LocationInstitution"/>
+                <userProperty value="No" property="IsLegacy"/>
+                <userProperty value="right" property="Side"/>
+                <specimen>
+                    <external>SPD-S:CASENT9019370 pe</external>
+                </specimen>
+                <view>
+                    <external>SPD-SV:0000344</external>
+                </view>
+                <view>
+                    <external>SPD:0000177</external>
+                </view>
+                <magnification></magnification>
+                <imageType>jpg</imageType>
+                <copyrightText>Charles Griswold</copyrightText>
+                <originalFileName>344_Stegodyphus_Myanmar_9019370_R_ExpPalp.jpg</originalFileName>
+            </image>
+        </xmlObjects>
+    </insert>
+</mb:request>

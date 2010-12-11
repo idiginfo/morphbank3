@@ -1,0 +1,36 @@
+form.install {
+	margin-top: 20px;
+	width: 500px;
+}
+form.install fieldset {
+  margin-bottom: 10px;
+}
+form.install legend {
+  padding: 0 2px;
+  font-weight: bold;
+}
+form.install label {
+  display: inline-block;
+  line-height: 1.8;
+  vertical-align: top;
+}
+form.install fieldset ol {
+  margin: 0;
+  padding: 0;
+}
+form.install fieldset li {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+}
+form.install em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+form.install label {
+  width: 140px; /* Width of labels */
+}
+form.install fieldset fieldset label {
+  margin-left: 123px; /* Width plus 3 (html space) */
+}

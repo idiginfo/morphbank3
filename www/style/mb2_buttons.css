@@ -1,0 +1,73 @@
+/* CSS Document */
+
+a.smallButton { background-image: url(webImages/buttons/buttonBackground65.gif) !important; width: 65px !important;  }
+a.mediumButton { background-image: url(webImages/buttons/buttonBackground100new.gif) !important; width: 100px !important;  }
+a.largeButton { background-image: url(webImages/buttons/buttonBackground120new.gif) !important; width: 120px !important;  }
+a.xlButton { background-image: url(webImages/buttons/buttonBackground140new.gif) !important; width: 140px !important;  }
+
+a.button {
+vertical-align:middle !important;
+
+display:-moz-inline-block !important;
+display:-moz-inline-box !important;
+display:inline-block !important;
+
+background-color: transparent !important;
+background-repeat: no-repeat !important;
+height: 21px !important;
+margin-left:5px !important;
+
+padding-left:0px !important;
+font-family:Verdana, Arial, Helvetica, sans-serif !important;
+font-size: 11px !important;
+font-weight: bold !important;
+text-decoration: none !important;
+border:0 ;
+line-height:normal !important;
+}
+
+a.smallButton div { display:block !important; width:65px !important; text-align:center !important; padding-top:3px !important; cursor:pointer !important; } /* pointer: cursor keeps the cursor as a hand (like a link should be) in IE */
+a.mediumButton div { display:block !important; width:100px !important; text-align:center !important; padding-top:3px !important; cursor:pointer !important; }
+a.largeButton div { display:block !important; width:120px !important; text-align:center !important; padding-top:3px !important; cursor:pointer !important; }
+a.xlButton div { display:block !important; width:140px !important; text-align:center !important; padding-top:3px !important; cursor:pointer !important; }
+
+a.smallButton span { color:#00CC33 !important;  } 
+a.mediumButton span { color:#00CC33 !important; }
+a.largeButton span { color:#00CC33 !important; }
+a.xlButton span { color:#00CC33 !important; }
+
+
+a.smallButton:link, a.smallButton:visited, a.mediumButton:link, a.mediumButton:visited, a.largeButton:link, a.largeButton:visited, a.xlButton:link, a.xlButton:visited {
+color: #fff !important;
+font-weight: bold !important;
+}
+
+a.button:hover, a.button:active {
+background-position: 0 -31px !important;
+color: #f00 !important;
+text-decoration:none !important;
+background-color: transparent !important;
+border:0 !important;
+}
+
+.right {float:right; margin-right:5px;}
+.left {float:left;  margin-left:5px;}
+
+label.error{margin-left:5px;}
+
+input.smallButton { background-image: url(webImages/buttons/buttonBackground65.gif) !important; width: 65px !important;  }
+input.mediumButton { background-image: url(webImages/buttons/buttonBackground100.gif) !important; width: 100px !important;  }
+input.button {
+	color:#fff;
+	height: 21px;
+	padding: 0 0 4px 0;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	border:0;
+
+}
+input.button:hover {
+	background-position: 0 -31px;
+	color: #f00;
+}

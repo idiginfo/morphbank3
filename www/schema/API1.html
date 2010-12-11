@@ -1,0 +1,822 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>Morphbank Services API</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:#365F91;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Cambria","serif";
+	color:#4F81BD;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<h1>API for Morphbank Query Services </h1>
+
+<p class=MsoNormal>Contact: Greg Riccardi <a href="mailto://griccardi@fsu.edu">mailto://griccardi@fsu.edu</a></p>
+
+<h2>HTTP Get queries with Key-Value parameters</h2>
+
+<p class=MsoNoSpacing>Get operations URL prefix <a
+href="http://services.morphbank.net/mb/request">http://services.morphbank.net/mb/request</a>?</p>
+
+<h2>HTTP Post queries with XML document </h2>
+
+<p class=MsoNormal>Post queries submitted to URL
+http://services.morphbank.net/mbd/restful</p>
+
+<h3>Parameters </h3>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:-.25in'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>String <span style='color:#0000C0'>method</span>; // value that
+determines action, values described below.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>String <span style='color:#0000C0'>keywords</span>; // search
+terms for method=search (or xml)</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>int <span style='color:#0000C0'>limit</span> = 10; // maximum
+number of results to return</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>int <span style='color:#0000C0'>firstResult</span> = 0; // offset
+of first result</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>String <span style='color:#0000C0'>format</span>; // requested
+format for return value</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>int <span style='color:#000099'>id</span>; // Morphbank local
+identifier for object</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>String <span style='color:#000099'>userId</span>; // uin or
+Morphbank id of a user</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>String <span style='color:#000099'>groupId</span>; // group name
+or Morphbank id of a group</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>String <span style='color:#0000C0'>keyString</span>; // unique
+key assigned to user and/or group</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>String <span style='color:#0000C0'>objectType</span>; // return
+restricted to objects of these types (maxOccurs=<i>unlimited</i>)</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>String <span style='color:#0000C0'>taxonName</span>; //
+scientific name of taxon</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:-.25in'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Date <span style='color:#000099'>changeDate</span>; // specifies
+date of changed objects</p>
+
+<h3>Values of parameter <span style='color:#000099'>method</span></h3>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#000099'>search</span>: search by keyword</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#000099'>taxon</span>: search by taxonomic
+names</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#000099'>id</span>: search for an object by
+its Morphbank id</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#000099'>externalId</span>: search for an
+object by its external identification</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#000099'>changes</span>: find objects changed
+since changeDate</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#000099'>ocr</span>: perform OCR analysis on
+an image</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#000099'>herbis</span>: perform language
+analysis and characterization of text using the Herbis analyzer.</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#000099'>xml</span>: deprecated synonym for <i>search</i></p>
+
+<h3>Values of parameter <span style='color:#000099'>format</span></h3>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>xml</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>rss</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>svc</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>id</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>rdf</p>
+
+<p class=MsoNoSpacing style='margin-left:.5in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>thumb</p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<h3>Parameter/method correspondence</h3>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing>Method</p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>search</span></p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>id</span></p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>taxon</span></p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>externalId</span></p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>changes</span></p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>ocr</span></p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>herbis</span></p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>keywords</span></p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>format</span></p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>id</span></p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>limit</span></p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>firstResult</span></p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>userId</span></p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>group</span></p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>keyString</span></p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>objectTypes</span></p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>taxonName</span></p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=72 valign=top style='width:53.85pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing><span style='color:#000099'>changeDate</span></p>
+  </td>
+  <td width=71 valign=top style='width:52.9pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.4pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.8pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=75 valign=top style='width:56.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=71 valign=top style='width:53.05pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>X</p>
+  </td>
+  <td width=70 valign=top style='width:52.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+  <td width=70 valign=top style='width:52.2pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing>XML Schema mbsvc.xsd at <a
+href="http://www.morphbank.net/schema/mbsvc.xsd">http://www.morphbank.net/schema/mbsvc.xsd</a></p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing>The requests tag is the root of a document that
+represents queries, updates and inserts.</p>
+
+<p class=MsoNoSpacing>&nbsp;</p>
+
+<p class=MsoNoSpacing>To add new content to the metadata repository</p>
+
+</div>
+
+</body>
+
+</html>

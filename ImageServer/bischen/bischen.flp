@@ -1,0 +1,7 @@
+﻿<flash_project name="bischen" version="1">
+    <project_folder name="bischen" expanded="true">
+        <project_file path=".:bischen/ImageViewer.as" filetype="as" />
+        <project_file path=".:bischen/Label.as" filetype="as" />
+    </project_folder>
+    <project_file path=".:bischen.fla" filetype="fla" profile="" def_file="true" />
+</flash_project>

@@ -1,0 +1,74 @@
+# Saved by TopBraid on Tue Jul 20 12:19:03 EDT 2010
+# baseURI: http://www.morphbank.net/rdf-schema
+
+@prefix :        <http://www.morphbank.net/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.morphbank.net/rdf-schema>
+      rdf:type owl:Ontology ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+:Image
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+:Specimen
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+:View
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing .
+
+:imageHeight
+      rdf:type rdf:Property .
+
+:imageWidth
+      rdf:type rdf:Property ;
+      rdfs:range xsd:integer .
+
+:photographer
+      rdf:type rdf:Property ;
+      rdfs:range xsd:string .
+      
+:resolution
+      rdf:type rdf:Property ;
+      rdfs:range xsd:integer .
+
+:userId
+      rdf:type rdf:Property ;
+      rdfs:range xsd:integer .
+
+:groupId
+      rdf:type rdf:Property ;
+      rdfs:range xsd:integer .
+
+:dateCreated
+      rdf:type rdf:Property ;
+      rdfs:range xsd:datetime .
+
+:dateToPublish
+      rdf:type rdf:Property ;
+      rdfs:range xsd:date .
+
+:imageType
+      rdf:type rdf:Property ;
+      rdfs:range xsd:string .
+
+:magnification
+      rdf:type rdf:Property ;
+      rdfs:range xsd:integer .
+
+:specimen
+      rdf:type rdf:Property ;
+      rdfs:range xsd:anyURI .
+
+:view
+      rdf:type rdf:Property ;
+      rdfs:range xsd:anyURI .
+      
+:image
+      rdf:type rdf:Property ;
+      rdfs:range xsd:anyURI .
+      

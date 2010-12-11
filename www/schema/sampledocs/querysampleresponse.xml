@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<mb:responses xsi:schemaLocation="http://www.morphbank.net/mbsvc/ http://www.morphbank.net/schema/mbsvc.xsd" xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/" xmlns:mb="http://www.morphbank.net/mbsvc/" xmlns:dwcg="http://rs.tdwg.org/dwc/geospatial/" xmlns:dwce="http://rs.tdwg.org/dwc/dwelement" xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <response>
+        <requestSummary>
+            <requestType>query</requestType>
+            <description>Web keyword request</description>
+        </requestSummary>
+        <status>query ok</status>
+        <numberAffected>6</numberAffected>
+        <specimen>
+            <sourceId>
+                <morphbank>218860</morphbank>
+            </sourceId>
+            <owner>
+                <userId>JCoddington</userId>
+                <groupId>SpiderAToL</groupId>
+            </owner>
+            <dateCreated>2008-03-03T18:19:53-05:00</dateCreated>
+            <dateLastModified>2008-03-04T11:34:16-05:00</dateLastModified>
+            <dateToPublish>2008-03-03T18:19:53-05:00</dateToPublish>
+            <description>Specimen added</description>
+            <submittedBy>dpaul</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=218862&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=218860</detailPageUrl>
+            <externalRef type="10">
+                <label>Spider AToL</label>
+                <urlData>http://research.amnh.org/atol/files/http://research.amnh.org/atol/files/</urlData>
+                <description></description>
+            </externalRef>
+            <determination>
+                <morphbank>218858</morphbank>
+                <external>ITIS999002785</external>
+            </determination>
+            <standardImage>
+                <morphbank>218862</morphbank>
+            </standardImage>
+            <imagesCount>4</imagesCount>
+            <dwc:Sex>Male</dwc:Sex>
+            <dwc:LifeStage>Mature</dwc:LifeStage>
+            <dwc:Collector>D. Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-09-27T00:00:00-04:00</dwc:EarliestDateCollected>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:Preparations>alcohol</dwcc:Preparations>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Arachnida</dwc:Class>
+            <dwc:Order>Araneae</dwc:Order>
+            <dwc:Family>Eresidae</dwc:Family>
+            <dwc:Genus>Stegodyphus</dwc:Genus>
+            <dwc:SpecificEpithet>undet PwintPhyu</dwc:SpecificEpithet>
+            <dwc:ScientificName>Stegodyphus undet PwintPhyu</dwc:ScientificName>
+            <dwc:Continent>ASIA</dwc:Continent>
+            <dwc:Country>MYANMAR</dwc:Country>
+            <dwcg:DecimalLatitude>20.4241008758545</dwcg:DecimalLatitude>
+            <dwcg:DecimalLongitude>94.6697998046875</dwcg:DecimalLongitude>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:Locality>Magway Division, 7.5 km E PwintPhyu (= Pwinbyu)</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>218864</morphbank>
+            </sourceId>
+            <owner>
+                <userId>JCoddington</userId>
+                <groupId>SpiderAToL</groupId>
+            </owner>
+            <dateCreated>2008-03-03T19:32:05-05:00</dateCreated>
+            <dateLastModified>2008-03-04T11:32:10-05:00</dateLastModified>
+            <dateToPublish>2008-03-03T19:32:05-05:00</dateToPublish>
+            <description>Specimen added</description>
+            <submittedBy>seltmann</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=218866&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=218864</detailPageUrl>
+            <externalRef type="10">
+                <label>Spider AToL</label>
+                <urlData>http://research.amnh.org/atol/files/</urlData>
+                <description></description>
+            </externalRef>
+            <determination>
+                <morphbank>218858</morphbank>
+                <external>ITIS999002785</external>
+            </determination>
+            <standardImage>
+                <morphbank>218866</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Male</dwc:Sex>
+            <dwc:LifeStage>Mature</dwc:LifeStage>
+            <dwc:Collector>D.Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-09-27T00:00:00-04:00</dwc:EarliestDateCollected>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Arachnida</dwc:Class>
+            <dwc:Order>Araneae</dwc:Order>
+            <dwc:Family>Eresidae</dwc:Family>
+            <dwc:Genus>Stegodyphus</dwc:Genus>
+            <dwc:SpecificEpithet>undet PwintPhyu</dwc:SpecificEpithet>
+            <dwc:ScientificName>Stegodyphus undet PwintPhyu</dwc:ScientificName>
+            <dwc:Continent>ASIA</dwc:Continent>
+            <dwc:Country>MYANMAR</dwc:Country>
+            <dwcg:DecimalLatitude>20.4241008758545</dwcg:DecimalLatitude>
+            <dwcg:DecimalLongitude>94.6697998046875</dwcg:DecimalLongitude>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:Locality>Magway Division, 7.5 km E PwintPhyu (= Pwinbyu)</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>218872</morphbank>
+            </sourceId>
+            <owner>
+                <userId>JCoddington</userId>
+                <groupId>SpiderAToL</groupId>
+            </owner>
+            <dateCreated>2008-03-03T21:19:03-05:00</dateCreated>
+            <dateLastModified>2008-03-04T11:31:15-05:00</dateLastModified>
+            <dateToPublish>2008-03-03T21:19:03-05:00</dateToPublish>
+            <description>Specimen added</description>
+            <submittedBy>seltmann</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=218873&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=218872</detailPageUrl>
+            <externalRef type="10">
+                <label>Spider AToL</label>
+                <urlData>http://research.amnh.org/atol/files/</urlData>
+                <description></description>
+            </externalRef>
+            <determination>
+                <morphbank>218858</morphbank>
+                <external>ITIS999002785</external>
+            </determination>
+            <standardImage>
+                <morphbank>218873</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Female</dwc:Sex>
+            <dwc:LifeStage>Mature</dwc:LifeStage>
+            <dwc:Collector>D. Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-09-27T00:00:00-04:00</dwc:EarliestDateCollected>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Arachnida</dwc:Class>
+            <dwc:Order>Araneae</dwc:Order>
+            <dwc:Family>Eresidae</dwc:Family>
+            <dwc:Genus>Stegodyphus</dwc:Genus>
+            <dwc:SpecificEpithet>undet PwintPhyu</dwc:SpecificEpithet>
+            <dwc:ScientificName>Stegodyphus undet PwintPhyu</dwc:ScientificName>
+            <dwc:Continent>ASIA</dwc:Continent>
+            <dwc:Country>MYANMAR</dwc:Country>
+            <dwcg:DecimalLatitude>20.4241008758545</dwcg:DecimalLatitude>
+            <dwcg:DecimalLongitude>94.6697998046875</dwcg:DecimalLongitude>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:Locality>Magway Division, 7.5 km E PwintPhyu (= Pwinbyu)</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>218875</morphbank>
+            </sourceId>
+            <owner>
+                <userId>JCoddington</userId>
+                <groupId>SpiderAToL</groupId>
+            </owner>
+            <dateCreated>2008-03-03T21:36:18-05:00</dateCreated>
+            <dateLastModified>2008-03-04T11:26:51-05:00</dateLastModified>
+            <dateToPublish>2008-03-03T21:36:18-05:00</dateToPublish>
+            <description>Specimen added</description>
+            <submittedBy>dpaul</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=218878&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=218875</detailPageUrl>
+            <externalRef type="10">
+                <label>Spider AToL</label>
+                <urlData>http://research.amnh.org/atol/files/</urlData>
+                <description></description>
+            </externalRef>
+            <determination>
+                <morphbank>218858</morphbank>
+                <external>ITIS999002785</external>
+            </determination>
+            <standardImage>
+                <morphbank>218878</morphbank>
+            </standardImage>
+            <imagesCount>3</imagesCount>
+            <dwc:Sex>Female</dwc:Sex>
+            <dwc:LifeStage>Mature</dwc:LifeStage>
+            <dwc:Collector>D. Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-09-27T00:00:00-04:00</dwc:EarliestDateCollected>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Arachnida</dwc:Class>
+            <dwc:Order>Araneae</dwc:Order>
+            <dwc:Family>Eresidae</dwc:Family>
+            <dwc:Genus>Stegodyphus</dwc:Genus>
+            <dwc:SpecificEpithet>undet PwintPhyu</dwc:SpecificEpithet>
+            <dwc:ScientificName>Stegodyphus undet PwintPhyu</dwc:ScientificName>
+            <dwc:Continent>ASIA</dwc:Continent>
+            <dwc:Country>MYANMAR</dwc:Country>
+            <dwcg:DecimalLatitude>20.4241008758545</dwcg:DecimalLatitude>
+            <dwcg:DecimalLongitude>94.6697998046875</dwcg:DecimalLongitude>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:Locality>Magway Division, 7.5 km E PwintPhyu (= Pwinbyu)</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>218876</morphbank>
+            </sourceId>
+            <owner>
+                <userId>Ramirez</userId>
+                <groupId>SpiderAToL</groupId>
+            </owner>
+            <dateCreated>2008-03-03T21:38:41-05:00</dateCreated>
+            <dateLastModified>2008-03-04T11:24:29-05:00</dateLastModified>
+            <dateToPublish>2008-03-03T21:38:41-05:00</dateToPublish>
+            <description>Specimen added</description>
+            <submittedBy>seltmann</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=218879&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=218876</detailPageUrl>
+            <externalRef type="10">
+                <label>Spider AToL</label>
+                <urlData>http://research.amnh.org/atol/files/</urlData>
+                <description></description>
+            </externalRef>
+            <determination>
+                <morphbank>218858</morphbank>
+                <external>ITIS999002785</external>
+            </determination>
+            <standardImage>
+                <morphbank>218879</morphbank>
+            </standardImage>
+            <imagesCount>2</imagesCount>
+            <dwc:Sex>Male</dwc:Sex>
+            <dwc:LifeStage>Mature</dwc:LifeStage>
+            <dwc:Collector>D. Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-09-27T00:00:00-04:00</dwc:EarliestDateCollected>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Arachnida</dwc:Class>
+            <dwc:Order>Araneae</dwc:Order>
+            <dwc:Family>Eresidae</dwc:Family>
+            <dwc:Genus>Stegodyphus</dwc:Genus>
+            <dwc:SpecificEpithet>undet PwintPhyu</dwc:SpecificEpithet>
+            <dwc:ScientificName>Stegodyphus undet PwintPhyu</dwc:ScientificName>
+            <dwc:Continent>ASIA</dwc:Continent>
+            <dwc:Country>MYANMAR</dwc:Country>
+            <dwcg:DecimalLatitude>20.4241008758545</dwcg:DecimalLatitude>
+            <dwcg:DecimalLongitude>94.6697998046875</dwcg:DecimalLongitude>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:Locality>Magway Division, 7.5 km E PwintPhyu (= Pwinbyu)</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>218886</morphbank>
+            </sourceId>
+            <owner>
+                <userId>Ramirez</userId>
+                <groupId>SpiderAToL</groupId>
+            </owner>
+            <dateCreated>2008-03-03T22:11:39-05:00</dateCreated>
+            <dateLastModified>2008-03-04T11:23:14-05:00</dateLastModified>
+            <dateToPublish>2008-03-03T22:11:39-05:00</dateToPublish>
+            <description>Specimen added</description>
+            <submittedBy>seltmann</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=218888&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=218886</detailPageUrl>
+            <externalRef type="10">
+                <label>Spider AToL</label>
+                <urlData>http://research.amnh.org/atol/files/</urlData>
+                <description></description>
+            </externalRef>
+            <determination>
+                <morphbank>218858</morphbank>
+                <external>ITIS999002785</external>
+            </determination>
+            <standardImage>
+                <morphbank>218888</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Male</dwc:Sex>
+            <dwc:LifeStage>Mature</dwc:LifeStage>
+            <dwc:Collector>D. Ubick, C. Griswold</dwc:Collector>
+            <dwc:EarliestDateCollected>2003-09-27T00:00:00-04:00</dwc:EarliestDateCollected>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Not Provided</dwcc:TypeStatus>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Arachnida</dwc:Class>
+            <dwc:Order>Araneae</dwc:Order>
+            <dwc:Family>Eresidae</dwc:Family>
+            <dwc:Genus>Stegodyphus</dwc:Genus>
+            <dwc:SpecificEpithet>undet PwintPhyu</dwc:SpecificEpithet>
+            <dwc:ScientificName>Stegodyphus undet PwintPhyu</dwc:ScientificName>
+            <dwc:Continent>ASIA</dwc:Continent>
+            <dwc:Country>MYANMAR</dwc:Country>
+            <dwcg:DecimalLatitude>20.4241008758545</dwcg:DecimalLatitude>
+            <dwcg:DecimalLongitude>94.6697998046875</dwcg:DecimalLongitude>
+            <dwc:MaximumElevationInMeters>79.0</dwc:MaximumElevationInMeters>
+            <dwc:MinimumElevationInMeters>79.0</dwc:MinimumElevationInMeters>
+            <dwc:Locality>Magway Division, 7.5 km E PwintPhyu (= Pwinbyu)</dwc:Locality>
+        </specimen>
+    </response>
+    <response>
+        <requestSummary>
+            <requestType>query</requestType>
+            <description>Web keyword request</description>
+        </requestSummary>
+        <status>query ok</status>
+        <numberAffected>6740</numberAffected>
+        <specimen>
+            <sourceId>
+                <morphbank>68796</morphbank>
+            </sourceId>
+            <owner>
+                <userId>johan</userId>
+                <groupId>PCC</groupId>
+            </owner>
+            <dateCreated>2001-09-14T00:00:00-04:00</dateCreated>
+            <dateLastModified>2001-09-14T00:00:00-04:00</dateLastModified>
+            <dateToPublish>2001-09-14T00:00:00-04:00</dateToPublish>
+            <description></description>
+            <submittedBy>johan</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=71022&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=68796</detailPageUrl>
+            <determination>
+                <external>ITIS999000433</external>
+            </determination>
+            <standardImage>
+                <morphbank>71022</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Female</dwc:Sex>
+            <dwc:LifeStage>Adult</dwc:LifeStage>
+            <dwc:Collector>Johan Liljeblad &amp; Fredrik Ronquist</dwc:Collector>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:Preparations></dwcc:Preparations>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:DateIdentified>2001-09-14T00:00:00-04:00</dwcc:DateIdentified>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Insecta</dwc:Class>
+            <dwc:Order>Hymenoptera</dwc:Order>
+            <dwc:Family>Cynipidae</dwc:Family>
+            <dwc:Genus>Callirhytis</dwc:Genus>
+            <dwc:SpecificEpithet>glandium</dwc:SpecificEpithet>
+            <dwc:ScientificName>Callirhytis glandium</dwc:ScientificName>
+            <dwc:Continent>UNKNOWN</dwc:Continent>
+            <dwc:Country>UNKNOWN</dwc:Country>
+            <dwc:Locality>Unknown</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>68797</morphbank>
+            </sourceId>
+            <owner>
+                <userId>johan</userId>
+                <groupId>PCC</groupId>
+            </owner>
+            <dateCreated>2001-09-14T00:00:00-04:00</dateCreated>
+            <dateLastModified>2001-09-14T00:00:00-04:00</dateLastModified>
+            <dateToPublish>2001-09-14T00:00:00-04:00</dateToPublish>
+            <description></description>
+            <submittedBy>johan</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=71023&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=68797</detailPageUrl>
+            <determination>
+                <external>ITIS999000433</external>
+            </determination>
+            <standardImage>
+                <morphbank>71023</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Female</dwc:Sex>
+            <dwc:LifeStage>Adult</dwc:LifeStage>
+            <dwc:Collector>Johan Liljeblad &amp; Fredrik Ronquist</dwc:Collector>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:Preparations></dwcc:Preparations>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:DateIdentified>2001-09-14T00:00:00-04:00</dwcc:DateIdentified>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Insecta</dwc:Class>
+            <dwc:Order>Hymenoptera</dwc:Order>
+            <dwc:Family>Cynipidae</dwc:Family>
+            <dwc:Genus>Callirhytis</dwc:Genus>
+            <dwc:SpecificEpithet>glandium</dwc:SpecificEpithet>
+            <dwc:ScientificName>Callirhytis glandium</dwc:ScientificName>
+            <dwc:Continent>UNKNOWN</dwc:Continent>
+            <dwc:Country>UNKNOWN</dwc:Country>
+            <dwc:Locality>Unknown</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>68798</morphbank>
+            </sourceId>
+            <owner>
+                <userId>johan</userId>
+                <groupId>PCC</groupId>
+            </owner>
+            <dateCreated>2001-09-14T00:00:00-04:00</dateCreated>
+            <dateLastModified>2001-09-14T00:00:00-04:00</dateLastModified>
+            <dateToPublish>2001-09-14T00:00:00-04:00</dateToPublish>
+            <description></description>
+            <submittedBy>johan</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=71024&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=68798</detailPageUrl>
+            <determination>
+                <external>ITIS999000433</external>
+            </determination>
+            <standardImage>
+                <morphbank>71024</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Female</dwc:Sex>
+            <dwc:LifeStage>Adult</dwc:LifeStage>
+            <dwc:Collector>Johan Liljeblad &amp; Fredrik Ronquist</dwc:Collector>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:Preparations></dwcc:Preparations>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:DateIdentified>2001-09-14T00:00:00-04:00</dwcc:DateIdentified>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Insecta</dwc:Class>
+            <dwc:Order>Hymenoptera</dwc:Order>
+            <dwc:Family>Cynipidae</dwc:Family>
+            <dwc:Genus>Callirhytis</dwc:Genus>
+            <dwc:SpecificEpithet>glandium</dwc:SpecificEpithet>
+            <dwc:ScientificName>Callirhytis glandium</dwc:ScientificName>
+            <dwc:Continent>UNKNOWN</dwc:Continent>
+            <dwc:Country>UNKNOWN</dwc:Country>
+            <dwc:Locality>Unknown</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>68799</morphbank>
+            </sourceId>
+            <owner>
+                <userId>johan</userId>
+                <groupId>PCC</groupId>
+            </owner>
+            <dateCreated>2001-09-14T00:00:00-04:00</dateCreated>
+            <dateLastModified>2001-09-14T00:00:00-04:00</dateLastModified>
+            <dateToPublish>2001-09-14T00:00:00-04:00</dateToPublish>
+            <description></description>
+            <submittedBy>johan</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=71025&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=68799</detailPageUrl>
+            <determination>
+                <external>ITIS999000433</external>
+            </determination>
+            <standardImage>
+                <morphbank>71025</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Female</dwc:Sex>
+            <dwc:LifeStage>Adult</dwc:LifeStage>
+            <dwc:Collector>Johan Liljeblad &amp; Fredrik Ronquist</dwc:Collector>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:Preparations></dwcc:Preparations>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:DateIdentified>2001-09-14T00:00:00-04:00</dwcc:DateIdentified>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Insecta</dwc:Class>
+            <dwc:Order>Hymenoptera</dwc:Order>
+            <dwc:Family>Cynipidae</dwc:Family>
+            <dwc:Genus>Callirhytis</dwc:Genus>
+            <dwc:SpecificEpithet>glandium</dwc:SpecificEpithet>
+            <dwc:ScientificName>Callirhytis glandium</dwc:ScientificName>
+            <dwc:Continent>UNKNOWN</dwc:Continent>
+            <dwc:Country>UNKNOWN</dwc:Country>
+            <dwc:Locality>Unknown</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>68800</morphbank>
+            </sourceId>
+            <owner>
+                <userId>johan</userId>
+                <groupId>PCC</groupId>
+            </owner>
+            <dateCreated>2001-09-14T00:00:00-04:00</dateCreated>
+            <dateLastModified>2001-09-14T00:00:00-04:00</dateLastModified>
+            <dateToPublish>2001-09-14T00:00:00-04:00</dateToPublish>
+            <description></description>
+            <submittedBy>johan</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=71026&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=68800</detailPageUrl>
+            <determination>
+                <external>ITIS999000433</external>
+            </determination>
+            <standardImage>
+                <morphbank>71026</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Female</dwc:Sex>
+            <dwc:LifeStage>Adult</dwc:LifeStage>
+            <dwc:Collector>Johan Liljeblad &amp; Fredrik Ronquist</dwc:Collector>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:Preparations></dwcc:Preparations>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:DateIdentified>2001-09-14T00:00:00-04:00</dwcc:DateIdentified>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Insecta</dwc:Class>
+            <dwc:Order>Hymenoptera</dwc:Order>
+            <dwc:Family>Cynipidae</dwc:Family>
+            <dwc:Genus>Callirhytis</dwc:Genus>
+            <dwc:SpecificEpithet>glandium</dwc:SpecificEpithet>
+            <dwc:ScientificName>Callirhytis glandium</dwc:ScientificName>
+            <dwc:Continent>UNKNOWN</dwc:Continent>
+            <dwc:Country>UNKNOWN</dwc:Country>
+            <dwc:Locality>Unknown</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>68801</morphbank>
+            </sourceId>
+            <owner>
+                <userId>johan</userId>
+                <groupId>PCC</groupId>
+            </owner>
+            <dateCreated>2001-09-14T00:00:00-04:00</dateCreated>
+            <dateLastModified>2001-09-14T00:00:00-04:00</dateLastModified>
+            <dateToPublish>2001-09-14T00:00:00-04:00</dateToPublish>
+            <description></description>
+            <submittedBy>johan</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=71027&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=68801</detailPageUrl>
+            <determination>
+                <external>ITIS999000433</external>
+            </determination>
+            <standardImage>
+                <morphbank>71027</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Female</dwc:Sex>
+            <dwc:LifeStage>Adult</dwc:LifeStage>
+            <dwc:Collector>Johan Liljeblad &amp; Fredrik Ronquist</dwc:Collector>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:Preparations></dwcc:Preparations>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:DateIdentified>2001-09-14T00:00:00-04:00</dwcc:DateIdentified>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Insecta</dwc:Class>
+            <dwc:Order>Hymenoptera</dwc:Order>
+            <dwc:Family>Cynipidae</dwc:Family>
+            <dwc:Genus>Callirhytis</dwc:Genus>
+            <dwc:SpecificEpithet>glandium</dwc:SpecificEpithet>
+            <dwc:ScientificName>Callirhytis glandium</dwc:ScientificName>
+            <dwc:Continent>UNKNOWN</dwc:Continent>
+            <dwc:Country>UNKNOWN</dwc:Country>
+            <dwc:Locality>Unknown</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>68802</morphbank>
+            </sourceId>
+            <owner>
+                <userId>johan</userId>
+                <groupId>PCC</groupId>
+            </owner>
+            <dateCreated>2001-09-14T00:00:00-04:00</dateCreated>
+            <dateLastModified>2001-09-14T00:00:00-04:00</dateLastModified>
+            <dateToPublish>2001-09-14T00:00:00-04:00</dateToPublish>
+            <description></description>
+            <submittedBy>johan</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=71028&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=68802</detailPageUrl>
+            <determination>
+                <external>ITIS999000433</external>
+            </determination>
+            <standardImage>
+                <morphbank>71028</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Male</dwc:Sex>
+            <dwc:LifeStage>Adult</dwc:LifeStage>
+            <dwc:Collector>Johan Liljeblad &amp; Fredrik Ronquist</dwc:Collector>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:Preparations></dwcc:Preparations>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:DateIdentified>2001-09-14T00:00:00-04:00</dwcc:DateIdentified>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Insecta</dwc:Class>
+            <dwc:Order>Hymenoptera</dwc:Order>
+            <dwc:Family>Cynipidae</dwc:Family>
+            <dwc:Genus>Callirhytis</dwc:Genus>
+            <dwc:SpecificEpithet>glandium</dwc:SpecificEpithet>
+            <dwc:ScientificName>Callirhytis glandium</dwc:ScientificName>
+            <dwc:Continent>UNKNOWN</dwc:Continent>
+            <dwc:Country>UNKNOWN</dwc:Country>
+            <dwc:Locality>Unknown</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>68803</morphbank>
+            </sourceId>
+            <owner>
+                <userId>johan</userId>
+                <groupId>PCC</groupId>
+            </owner>
+            <dateCreated>2001-09-14T00:00:00-04:00</dateCreated>
+            <dateLastModified>2001-09-14T00:00:00-04:00</dateLastModified>
+            <dateToPublish>2001-09-14T00:00:00-04:00</dateToPublish>
+            <description></description>
+            <submittedBy>johan</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=71029&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=68803</detailPageUrl>
+            <determination>
+                <external>ITIS999000433</external>
+            </determination>
+            <standardImage>
+                <morphbank>71029</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Male</dwc:Sex>
+            <dwc:LifeStage>Adult</dwc:LifeStage>
+            <dwc:Collector>Johan Liljeblad &amp; Fredrik Ronquist</dwc:Collector>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:Preparations></dwcc:Preparations>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:DateIdentified>2001-09-14T00:00:00-04:00</dwcc:DateIdentified>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Insecta</dwc:Class>
+            <dwc:Order>Hymenoptera</dwc:Order>
+            <dwc:Family>Cynipidae</dwc:Family>
+            <dwc:Genus>Callirhytis</dwc:Genus>
+            <dwc:SpecificEpithet>glandium</dwc:SpecificEpithet>
+            <dwc:ScientificName>Callirhytis glandium</dwc:ScientificName>
+            <dwc:Continent>UNKNOWN</dwc:Continent>
+            <dwc:Country>UNKNOWN</dwc:Country>
+            <dwc:Locality>Unknown</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>68804</morphbank>
+            </sourceId>
+            <owner>
+                <userId>johan</userId>
+                <groupId>PCC</groupId>
+            </owner>
+            <dateCreated>2001-09-14T00:00:00-04:00</dateCreated>
+            <dateLastModified>2001-09-14T00:00:00-04:00</dateLastModified>
+            <dateToPublish>2001-09-14T00:00:00-04:00</dateToPublish>
+            <description></description>
+            <submittedBy>johan</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=71030&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=68804</detailPageUrl>
+            <determination>
+                <external>ITIS999000433</external>
+            </determination>
+            <standardImage>
+                <morphbank>71030</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Female</dwc:Sex>
+            <dwc:LifeStage>Adult</dwc:LifeStage>
+            <dwc:Collector>Johan Liljeblad &amp; Fredrik Ronquist</dwc:Collector>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:Preparations></dwcc:Preparations>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:DateIdentified>2001-09-14T00:00:00-04:00</dwcc:DateIdentified>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Insecta</dwc:Class>
+            <dwc:Order>Hymenoptera</dwc:Order>
+            <dwc:Family>Cynipidae</dwc:Family>
+            <dwc:Genus>Callirhytis</dwc:Genus>
+            <dwc:SpecificEpithet>glandium</dwc:SpecificEpithet>
+            <dwc:ScientificName>Callirhytis glandium</dwc:ScientificName>
+            <dwc:Continent>UNKNOWN</dwc:Continent>
+            <dwc:Country>UNKNOWN</dwc:Country>
+            <dwc:Locality>Unknown</dwc:Locality>
+        </specimen>
+        <specimen>
+            <sourceId>
+                <morphbank>68805</morphbank>
+            </sourceId>
+            <owner>
+                <userId>johan</userId>
+                <groupId>PCC</groupId>
+            </owner>
+            <dateCreated>2001-09-14T00:00:00-04:00</dateCreated>
+            <dateLastModified>2001-09-14T00:00:00-04:00</dateLastModified>
+            <dateToPublish>2001-09-14T00:00:00-04:00</dateToPublish>
+            <description></description>
+            <submittedBy>johan</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=71031&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=68805</detailPageUrl>
+            <determination>
+                <external>ITIS999000433</external>
+            </determination>
+            <standardImage>
+                <morphbank>71031</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+            <dwc:Sex>Female</dwc:Sex>
+            <dwc:LifeStage>Adult</dwc:LifeStage>
+            <dwc:Collector>Johan Liljeblad &amp; Fredrik Ronquist</dwc:Collector>
+            <dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+            <dwcc:Preparations></dwcc:Preparations>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:TypeStatus>Nontype</dwcc:TypeStatus>
+            <dwcc:DateIdentified>2001-09-14T00:00:00-04:00</dwcc:DateIdentified>
+            <dwc:Kingdom>Animalia</dwc:Kingdom>
+            <dwc:Phylum>Arthropoda</dwc:Phylum>
+            <dwc:Class>Insecta</dwc:Class>
+            <dwc:Order>Hymenoptera</dwc:Order>
+            <dwc:Family>Cynipidae</dwc:Family>
+            <dwc:Genus>Callirhytis</dwc:Genus>
+            <dwc:SpecificEpithet>glandium</dwc:SpecificEpithet>
+            <dwc:ScientificName>Callirhytis glandium</dwc:ScientificName>
+            <dwc:Continent>UNKNOWN</dwc:Continent>
+            <dwc:Country>UNKNOWN</dwc:Country>
+            <dwc:Locality>Unknown</dwc:Locality>
+        </specimen>
+    </response>
+    <response>
+        <requestSummary>
+            <requestType>id</requestType>
+            <description>Request for id 365636 and related objects</description>
+        </requestSummary>
+        <status>query ok</status>
+        <numberAffected>2</numberAffected>
+        <view>
+            <sourceId>
+                <morphbank>365636</morphbank>
+                <external>SPD-SV:0000437</external>
+            </sourceId>
+            <owner>
+                <userId>Ramirez</userId>
+                <groupId>SpiderAToL</groupId>
+            </owner>
+            <dateCreated>2008-07-15T10:02:40-04:00</dateCreated>
+            <dateLastModified>2008-07-15T10:02:41-04:00</dateLastModified>
+            <dateToPublish>2008-07-14T00:00:00-04:00</dateToPublish>
+            <name>Copulatory bulb basal expand photo MM</name>
+            <submittedBy>Ramirez</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=365743&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=365636</detailPageUrl>
+            <relatedObject objectType="View" role="smallerRegion">
+                <morphbank>365544</morphbank>
+            </relatedObject>
+            <externalRef type="5">
+                <description>External identification</description>
+                <externalId>SPD-SV:0000437</externalId>
+            </externalRef>
+            <viewAngle>basal proper</viewAngle>
+            <imagingTechnique>digital photo</imagingTechnique>
+            <imagingPreparationTechnique>Palp, expanded (male)</imagingPreparationTechnique>
+            <specimenPart>copulatory bulb  &gt; male palp  &gt; appendages cephalothorax  &gt; cephalothorax</specimenPart>
+            <developmentalStage>Unspecified</developmentalStage>
+            <sex>male</sex>
+            <form>Unspecified</form>
+            <viewTSN>82732</viewTSN>
+            <standardImage>
+                <morphbank>365743</morphbank>
+            </standardImage>
+            <imagesCount>1</imagesCount>
+        </view>
+        <image>
+            <sourceId>
+                <morphbank>365743</morphbank>
+            </sourceId>
+            <owner>
+                <userId>adeans</userId>
+                <groupId>Evaniomorpha</groupId>
+            </owner>
+            <dateCreated>2008-07-17T16:06:29-04:00</dateCreated>
+            <dateLastModified>2008-07-17T16:06:29-04:00</dateLastModified>
+            <dateToPublish>2045-01-18T00:00:00-05:00</dateToPublish>
+            <description>Image added to Database</description>
+            <submittedBy>adeans</submittedBy>
+            <thumbUrl>http://www.morphbank.net?id=365743&amp;imgType=thumb</thumbUrl>
+            <detailPageUrl>http://www.morphbank.net?id=365743</detailPageUrl>
+            <specimen>
+                <morphbank>365742</morphbank>
+            </specimen>
+            <view>
+                <morphbank>365636</morphbank>
+            </view>
+            <imageType>TIFF</imageType>
+            <copyrightText>NCSU Insect Museum</copyrightText>
+        </image>
+    </response>
+</mb:responses>

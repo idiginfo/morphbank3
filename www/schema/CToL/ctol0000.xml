@@ -1,0 +1,3575 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<mb:request xsi:schemaLocation="http://www.morphbank.net/mbsvc/ http://www.morphbank.net/schema/mbsvc.xsd" xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/" xmlns:mb="http://www.morphbank.net/mbsvc/" xmlns:dwcg="http://rs.tdwg.org/dwc/geospatial/" xmlns:dwce="http://rs.tdwg.org/dwc/dwelement" xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <submitter>
+        <userId>pmabee</userId>
+        <groupId>Cypriniform Tree of Life</groupId>
+    </submitter>
+    <insert>
+        <submitter>
+            <userId>ctol</userId>
+            <groupId>Cypriniform Tree of Life</groupId>
+        </submitter>
+        <specimen>
+            <sourceId>
+                <local>local:0</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <description>From spreadsheet line 2</description>
+            <userProperty value="48.02" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Crossostoma lacustre</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11425</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:1</local>
+                <external>CToL-V:basihyal-Dorsal-D</external>
+            </sourceId>
+            <name>basihyal-Dorsal-D</name>
+            <description>basihyal-Dorsal-D basihyal-Dorsal-D From spreadsheet line 2</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000316</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000316</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000316" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basihyal</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:2</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 2</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="23-Feb-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002216</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basihyal-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Crossostoma_lacustre_2216_25x_basihyal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:3</local>
+                <external>CToL-S:0001166</external>
+            </sourceId>
+            <description>From spreadsheet line 3</description>
+            <userProperty value="35.03" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Gyrinocheilus aymonieri</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>199874</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:4</local>
+                <external>CToL-V:basihyal-Dorsal-D</external>
+            </sourceId>
+            <name>basihyal-Dorsal-D</name>
+            <description>basihyal-Dorsal-D basihyal-Dorsal-D From spreadsheet line 3</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000316</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000316</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000316" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basihyal</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:5</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 3</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="24-Feb-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001166</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basihyal-Dorsal-D</external>
+            </view>
+            <imageType>jpg</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Gyrinocheilus_aymonieri_1166_USDTemp3_1_25X_PM_basihyal_dorsal.jpg</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:6</local>
+                <external>CToL-S:0002684</external>
+            </sourceId>
+            <description>From spreadsheet line 4</description>
+            <userProperty value="36.41" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Pheacogrammus interruptus</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>199874</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:7</local>
+                <external>CToL-V:basihyal-Dorsal-D</external>
+            </sourceId>
+            <name>basihyal-Dorsal-D</name>
+            <description>basihyal-Dorsal-D basihyal-Dorsal-D From spreadsheet line 4</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000316</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000316</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000316" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basihyal</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:8</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 4</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="25-Feb-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002684</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basihyal-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Phenacogrammus_interruptus_2684_25x_basihyal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:9</local>
+                <external>CToL-S:0002769</external>
+            </sourceId>
+            <description>From spreadsheet line 5</description>
+            <userProperty value="55.74" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Vaillantella maassi</external>
+            </determination>
+            <dwc:CollectionCode>USD</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of South Dakota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>52</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:10</local>
+                <external>CToL-V:basibranchial 1-Dorsal-D</external>
+            </sourceId>
+            <name>basibranchial 1-Dorsal-D</name>
+            <description>basibranchial 1-Dorsal-D basibranchial 1-Dorsal-D From spreadsheet line 5</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001223</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001223</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001223" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basibranchial 1</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:11</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 5</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="26-Feb-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002769</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basibranchial 1-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Vaillantella_maassi_2769_25x_bb2.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:12</local>
+                <external>CToL-S:0003494</external>
+            </sourceId>
+            <description>From spreadsheet line 6</description>
+            <userProperty value="124.65" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Chalceus macrolepidotus</external>
+            </determination>
+            <dwc:CollectionCode>AMNH</dwc:CollectionCode>
+            <dwc:InstitutionCode>American Museum of Natural History</dwc:InstitutionCode>
+            <dwc:CatalogNumber>38183</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:13</local>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </sourceId>
+            <name>basibranchial 2-Dorsal-D</name>
+            <description>basibranchial 2-Dorsal-D basibranchial 2-Dorsal-D From spreadsheet line 6</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001224</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001224</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001224" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basibranchial 2</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:14</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 6</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="27-Feb-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0003494</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Chalceus_macrolepidotus_3494_12x_bb2.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:15</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <description>From spreadsheet line 7</description>
+            <userProperty value="48.02" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Crossostoma lacustre</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11425</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:16</local>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </sourceId>
+            <name>basibranchial 2-Dorsal-D</name>
+            <description>basibranchial 2-Dorsal-D basibranchial 2-Dorsal-D From spreadsheet line 7</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001224</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001224</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001224" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basibranchial 2</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:17</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 7</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="28-Feb-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002216</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Crossostoma_lacustre_2216_25x_basihyal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:18</local>
+                <external>CToL-S:0002207</external>
+            </sourceId>
+            <description>From spreadsheet line 8</description>
+            <userProperty value="61.47" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Lefua echigonia</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11414</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:19</local>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </sourceId>
+            <name>basibranchial 2-Dorsal-D</name>
+            <description>basibranchial 2-Dorsal-D basibranchial 2-Dorsal-D From spreadsheet line 8</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001224</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001224</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001224" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basibranchial 2</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:20</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 8</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="01-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002207</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Lefua_echigonia_2207_12x_bba.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:21</local>
+                <external>CToL-S:0001225</external>
+            </sourceId>
+            <description>From spreadsheet line 9</description>
+            <userProperty value="87.07" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Minytrema melanops</external>
+            </determination>
+            <dwc:CollectionCode>AMNH</dwc:CollectionCode>
+            <dwc:InstitutionCode>American Museum of Natural History</dwc:InstitutionCode>
+            <dwc:CatalogNumber>22208</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:22</local>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </sourceId>
+            <name>basibranchial 2-Dorsal-D</name>
+            <description>basibranchial 2-Dorsal-D basibranchial 2-Dorsal-D From spreadsheet line 9</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001224</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001224</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001224" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basibranchial 2</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:23</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 9</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="02-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001225</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basibranchial 2-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>MInytrema_melanops_1225_6x_EG_bbs_dorsal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:24</local>
+                <external>CToL-S:0001165</external>
+            </sourceId>
+            <description>From spreadsheet line 10</description>
+            <userProperty value="45.33" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Chromobotia macracanthus</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>199848</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:25</local>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </sourceId>
+            <name>basibranchials 4 and 5-Dorsal-D</name>
+            <description>basibranchials 4 and 5-Dorsal-D basibranchials 4 and 5-Dorsal-D From spreadsheet line 10</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001226</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001226</urlData>
+            </externalRef>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001701</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001701</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001226" property="CToLOntologyItem TAO ID"/>
+            <userProperty value="TAO:0001701" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basibranchials 4 and 5</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:26</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 10</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="03-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001165</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Chromobotia_macracanthus_1165_12x_EG_arches.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:27</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <description>From spreadsheet line 11</description>
+            <userProperty value="48.02" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Crossostoma lacustre</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11425</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:28</local>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </sourceId>
+            <name>basibranchials 4 and 5-Dorsal-D</name>
+            <description>basibranchials 4 and 5-Dorsal-D basibranchials 4 and 5-Dorsal-D From spreadsheet line 11</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001226</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001226</urlData>
+            </externalRef>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001701</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001701</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001226" property="CToLOntologyItem TAO ID"/>
+            <userProperty value="TAO:0001701" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basibranchials 4 and 5</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:29</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 11</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="04-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002216</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Crossostoma_lacustre_2216_12x_standard.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:30</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <description>From spreadsheet line 12</description>
+            <userProperty value="48.02" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Crossostoma lacustre</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11425</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:31</local>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </sourceId>
+            <name>basibranchials 4 and 5-Dorsal-D</name>
+            <description>basibranchials 4 and 5-Dorsal-D basibranchials 4 and 5-Dorsal-D From spreadsheet line 12</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001226</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001226</urlData>
+            </externalRef>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001701</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001701</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001226" property="CToLOntologyItem TAO ID"/>
+            <userProperty value="TAO:0001701" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basibranchials 4 and 5</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:32</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 12</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="05-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002216</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Crossostoma_lacustre_2216_25x_bb4_bb5.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:33</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <description>From spreadsheet line 13</description>
+            <userProperty value="44.38" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Cyprinus carpio</external>
+            </determination>
+            <dwc:CollectionCode>JFBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of Minnesota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>41249</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:34</local>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </sourceId>
+            <name>basibranchials 4 and 5-Dorsal-D</name>
+            <description>basibranchials 4 and 5-Dorsal-D basibranchials 4 and 5-Dorsal-D From spreadsheet line 13</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001226</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001226</urlData>
+            </externalRef>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001701</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001701</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001226" property="CToLOntologyItem TAO ID"/>
+            <userProperty value="TAO:0001701" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basibranchials 4 and 5</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:35</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 13</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="06-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001141</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Cyprinus_carpio_1141_6x_EG_standard.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:36</local>
+                <external>CToL-S:0002209</external>
+            </sourceId>
+            <description>From spreadsheet line 14</description>
+            <userProperty value="40.54" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Schistura balteata</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11435</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:37</local>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </sourceId>
+            <name>basibranchials 4 and 5-Dorsal-D</name>
+            <description>basibranchials 4 and 5-Dorsal-D basibranchials 4 and 5-Dorsal-D From spreadsheet line 14</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001226</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001226</urlData>
+            </externalRef>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001701</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001701</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001226" property="CToLOntologyItem TAO ID"/>
+            <userProperty value="TAO:0001701" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>basibranchials 4 and 5</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:38</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 14</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="07-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002209</external>
+            </specimen>
+            <view>
+                <external>CToL-V:basibranchials 4 and 5-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Schistura_balteata_2209_50x_bb4_and bb5.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:39</local>
+                <external>CToL-S:0001112</external>
+            </sourceId>
+            <description>From spreadsheet line 15</description>
+            <userProperty value="79.66" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Catostomus commersoni</external>
+            </determination>
+            <dwc:CollectionCode>JFBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of Minnesota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>31186</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:40</local>
+                <external>CToL-V:hypobranchial 3-Dorsal-D</external>
+            </sourceId>
+            <name>hypobranchial 3-Dorsal-D</name>
+            <description>hypobranchial 3-Dorsal-D hypobranchial 3-Dorsal-D From spreadsheet line 15</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001526</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001526</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001526" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>hypobranchial 3</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:41</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 15</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="08-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001112</external>
+            </specimen>
+            <view>
+                <external>CToL-V:hypobranchial 3-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Catostomus_commersoni_1112_12x_hb3_cart.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:42</local>
+                <external>CToL-S:0001169</external>
+            </sourceId>
+            <description>From spreadsheet line 16</description>
+            <userProperty value="47.40" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Cyprinella lutrensis</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>101090</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:43</local>
+                <external>CToL-V:ceratobranchial 1-Ventrolateral-D</external>
+            </sourceId>
+            <name>ceratobranchial 1-Ventrolateral-D</name>
+            <description>ceratobranchial 1-Ventrolateral-D ceratobranchial 1-Ventrolateral-D From spreadsheet line 16</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001237</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001237</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001237" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Ventrolateral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 1</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:44</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 16</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="09-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001169</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 1-Ventrolateral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Cyprinella_lutrensis_1169_25x_PM_CB1_ventral_process.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:45</local>
+                <external>CToL-S:0003494</external>
+            </sourceId>
+            <description>From spreadsheet line 17</description>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Chalceus macrolepidotus</external>
+            </determination>
+            <dwc:CollectionCode>AMNH</dwc:CollectionCode>
+            <dwc:InstitutionCode>American Museum of Natural History</dwc:InstitutionCode>
+            <dwc:CatalogNumber>38183</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:46</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-Dorsal-D</name>
+            <description>ceratobranchial 5 tooth-Dorsal-D ceratobranchial 5 tooth-Dorsal-D From spreadsheet line 17</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:47</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 17</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="10-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0003494</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Chalceus_macrolepidotus_3494_12x_cb5teeth.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:48</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <description>From spreadsheet line 18</description>
+            <userProperty value="44.38" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Cyprinus carpio</external>
+            </determination>
+            <dwc:CollectionCode>JFBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of Minnesota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>41249</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:49</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-Dorsal-D</name>
+            <description>ceratobranchial 5 tooth-Dorsal-D ceratobranchial 5 tooth-Dorsal-D From spreadsheet line 18</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:50</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 18</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="11-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001141</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Cyprinus_carpio_1141_12x_cb5_teeth.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:51</local>
+                <external>CToL-S:0001171</external>
+            </sourceId>
+            <description>From spreadsheet line 19</description>
+            <userProperty value="77.82" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Moxostoma poecilurum</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>3929</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:52</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-Dorsal-D</name>
+            <description>ceratobranchial 5 tooth-Dorsal-D ceratobranchial 5 tooth-Dorsal-D From spreadsheet line 19</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:53</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 19</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="12-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001171</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Moxostoma_poecilurum_1171_6x_cb5_teeth.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:54</local>
+                <external>CToL-S:0001171</external>
+            </sourceId>
+            <description>From spreadsheet line 20</description>
+            <userProperty value="77.82" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Moxostoma poecilurum</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>3929</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:55</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Posterior-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-Posterior-D</name>
+            <description>ceratobranchial 5 tooth-Posterior-D ceratobranchial 5 tooth-Posterior-D From spreadsheet line 20</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Posterior</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:56</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 20</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="13-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001171</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-Posterior-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Moxostoma_poecilurum_1171_12x_cb5_teeth_ascend_limb.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:57</local>
+                <external>CToL-S:0002206</external>
+            </sourceId>
+            <description>From spreadsheet line 21</description>
+            <userProperty value="57.04" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Sarcocheilichthys variegatus</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11407</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:58</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Posterior-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-Posterior-D</name>
+            <description>ceratobranchial 5 tooth-Posterior-D ceratobranchial 5 tooth-Posterior-D From spreadsheet line 21</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Posterior</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:59</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 21</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="14-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002206</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-Posterior-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Sarcocheilichthys_variegatus_2206_12x_cb5_teeth_ascend_limb.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:60</local>
+                <external>CToL-S:0002213</external>
+            </sourceId>
+            <description>From spreadsheet line 22</description>
+            <userProperty value="61.17" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Acheilognathus typus</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11423</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:61</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-Dorsal-D</name>
+            <description>ceratobranchial 5 tooth-Dorsal-D ceratobranchial 5 tooth-Dorsal-D From spreadsheet line 22</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:62</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 22</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="15-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002213</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Acheilognathus_typus_2213_12x_cb5_teeth.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:63</local>
+                <external>CToL-S:0001157</external>
+            </sourceId>
+            <description>From spreadsheet line 23</description>
+            <userProperty value="50.00" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Cobitis taenia</external>
+            </determination>
+            <dwc:CollectionCode>ROM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Royal Ontario Museum</dwc:InstitutionCode>
+            <dwc:CatalogNumber>67684</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:64</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-Dorsal-D</name>
+            <description>ceratobranchial 5 tooth-Dorsal-D ceratobranchial 5 tooth-Dorsal-D From spreadsheet line 23</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:65</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 23</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="16-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001157</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Cobitis_taenia_1157_25x_EG_Cb5_teeth_dorsal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:66</local>
+                <external>CToL-S:0002688</external>
+            </sourceId>
+            <description>From spreadsheet line 24</description>
+            <userProperty value="71.08" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Hypentelium nigricans</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>200480</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:67</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-Dorsal-D</name>
+            <description>ceratobranchial 5 tooth-Dorsal-D ceratobranchial 5 tooth-Dorsal-D From spreadsheet line 24</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:68</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 24</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="17-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002688</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Hypentelium_nigricans_2688_25x_EG_Cb5_teeth_dorsal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:69</local>
+                <external>CToL-S:0002778</external>
+            </sourceId>
+            <description>From spreadsheet line 25</description>
+            <userProperty value="150.00" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Misgurnus nikolskyi</external>
+            </determination>
+            <dwc:CollectionCode>ZIN</dwc:CollectionCode>
+            <dwc:InstitutionCode>Academy of Sciences, Zoological Institute, Leningrad </dwc:InstitutionCode>
+            <dwc:CatalogNumber>14987</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:70</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-Dorsal-D</name>
+            <description>ceratobranchial 5 tooth-Dorsal-D ceratobranchial 5 tooth-Dorsal-D From spreadsheet line 25</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:71</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 25</description>
+            <userProperty value="Nina Bogutskaya" property="CToLSubmittedBy"/>
+            <userProperty value="18-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002778</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </view>
+            <imageType>jpg</imageType>
+            <copyrightText>Nina Bogutskaya</copyrightText>
+            <originalFileName>Misgurnus_nikolskyi_2778_small_Cb5_dorsal.jpg</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:72</local>
+                <external>CToL-S:0002206</external>
+            </sourceId>
+            <description>From spreadsheet line 26</description>
+            <userProperty value="57.04" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Sarcocheilichthys variegatus</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11407</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:73</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-Dorsal-D</name>
+            <description>ceratobranchial 5 tooth-Dorsal-D ceratobranchial 5 tooth-Dorsal-D From spreadsheet line 26</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:74</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 26</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="19-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002206</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Sarcocheilichthys_variegatus_2206_25x_EG_Cb5_teeth_dorsal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:75</local>
+                <external>CToL-S:0002229</external>
+            </sourceId>
+            <description>From spreadsheet line 27</description>
+            <userProperty value="60.82" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Tinca tinca</external>
+            </determination>
+            <dwc:CollectionCode>CAS</dwc:CollectionCode>
+            <dwc:InstitutionCode>California Academy of Sciences</dwc:InstitutionCode>
+            <dwc:CatalogNumber>65043</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:76</local>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-Dorsal-D</name>
+            <description>ceratobranchial 5 tooth-Dorsal-D ceratobranchial 5 tooth-Dorsal-D From spreadsheet line 27</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:77</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 27</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="20-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002229</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Tinca_tinca_2229_12x_EG_Cb5_teeth_dorsal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:78</local>
+                <external>CToL-S:0002222</external>
+            </sourceId>
+            <description>From spreadsheet line 28</description>
+            <userProperty value="97.36" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Xenocypris argentea</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>11410</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:79</local>
+                <external>CToL-V:ceratobranchial 5 tooth-dorsoposterior-D</external>
+            </sourceId>
+            <name>ceratobranchial 5 tooth-dorsoposterior-D</name>
+            <description>ceratobranchial 5 tooth-dorsoposterior-D ceratobranchial 5 tooth-dorsoposterior-D From spreadsheet line 28</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000694</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000694</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000694" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>dorsoposterior</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5 tooth</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:80</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 28</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="21-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002222</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5 tooth-dorsoposterior-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Xenocypris_argentea_2222_12x_EG_Cb5_teeth_posterodorsal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:81</local>
+                <external>CToL-S:0001165</external>
+            </sourceId>
+            <description>From spreadsheet line 29</description>
+            <userProperty value="45.33" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Chromobotia macracanthus</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>199848</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:82</local>
+                <external>CToL-V:ceratobranchial 5-Ventral-D</external>
+            </sourceId>
+            <name>ceratobranchial 5-Ventral-D</name>
+            <description>ceratobranchial 5-Ventral-D ceratobranchial 5-Ventral-D From spreadsheet line 29</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001239</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001239</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001239" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Ventral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratobranchial 5</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:83</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 29</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="22-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001165</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratobranchial 5-Ventral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Botia_macracanthus_1165_25x_EG_Cb5_ventralis_v_process.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:84</local>
+                <external>CToL-S:0002211</external>
+            </sourceId>
+            <description>From spreadsheet line 30</description>
+            <userProperty value="62.20" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Acantopsis choirorhynchus</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>11422</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:85</local>
+                <external>CToL-V:ceratohyal and hypohyals-Lateral-D</external>
+            </sourceId>
+            <name>ceratohyal and hypohyals-Lateral-D</name>
+            <description>ceratohyal and hypohyals-Lateral-D ceratohyal and hypohyals-Lateral-D From spreadsheet line 30</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001843</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001843</urlData>
+            </externalRef>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001844</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001844</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001843" property="CToLOntologyItem TAO ID"/>
+            <userProperty value="TAO:0001844" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Lateral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratohyal and hypohyals</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:86</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 30</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="23-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002211</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratohyal and hypohyals-Lateral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Acantopsis_choirorhynchos_2211_25X_Ch_Hh_foramen.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:87</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <description>From spreadsheet line 31</description>
+            <userProperty value="44.38" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Cyprinus carpio</external>
+            </determination>
+            <dwc:CollectionCode>JFBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of Minnesota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>41249</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:88</local>
+                <external>CToL-V:ceratohyal and hypohyals-Anterolateral-D</external>
+            </sourceId>
+            <name>ceratohyal and hypohyals-Anterolateral-D</name>
+            <description>ceratohyal and hypohyals-Anterolateral-D ceratohyal and hypohyals-Anterolateral-D From spreadsheet line 31</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001843</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001843</urlData>
+            </externalRef>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001844</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001844</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001843" property="CToLOntologyItem TAO ID"/>
+            <userProperty value="TAO:0001844" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Anterolateral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratohyal and hypohyals</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:89</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 31</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="24-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001141</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratohyal and hypohyals-Anterolateral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Cyprinus_carpio_1141_25X_ch_hh_foramen.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:90</local>
+                <external>CToL-S:0002687</external>
+            </sourceId>
+            <description>From spreadsheet line 32</description>
+            <userProperty value="29.70" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Danio rerio</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>200479</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:91</local>
+                <external>CToL-V:ceratohyal and hypohyals-Lateral-D</external>
+            </sourceId>
+            <name>ceratohyal and hypohyals-Lateral-D</name>
+            <description>ceratohyal and hypohyals-Lateral-D ceratohyal and hypohyals-Lateral-D From spreadsheet line 32</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001843</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001843</urlData>
+            </externalRef>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001844</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001844</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001843" property="CToLOntologyItem TAO ID"/>
+            <userProperty value="TAO:0001844" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Lateral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratohyal and hypohyals</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:92</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 32</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="25-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002687</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratohyal and hypohyals-Lateral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Danio_rerio_2687_50X_ch_hh_foramen.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:93</local>
+                <external>CToL-S:0002229</external>
+            </sourceId>
+            <description>From spreadsheet line 33</description>
+            <userProperty value="60.82" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Tinca tinca</external>
+            </determination>
+            <dwc:CollectionCode>CAS</dwc:CollectionCode>
+            <dwc:InstitutionCode>California Academy of Sciences</dwc:InstitutionCode>
+            <dwc:CatalogNumber>65043</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:94</local>
+                <external>CToL-V:ceratohyal and hypohyals-Lateral-D</external>
+            </sourceId>
+            <name>ceratohyal and hypohyals-Lateral-D</name>
+            <description>ceratohyal and hypohyals-Lateral-D ceratohyal and hypohyals-Lateral-D From spreadsheet line 33</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001843</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001843</urlData>
+            </externalRef>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001844</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001844</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001843" property="CToLOntologyItem TAO ID"/>
+            <userProperty value="TAO:0001844" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Lateral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>ceratohyal and hypohyals</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:95</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 33</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="26-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002229</external>
+            </specimen>
+            <view>
+                <external>CToL-V:ceratohyal and hypohyals-Lateral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Tinca_tinca_2229_25X_ch_hh_foramen.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:96</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <description>From spreadsheet line 34</description>
+            <userProperty value="48.02" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Crossostoma lacustre</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11425</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:97</local>
+                <external>CToL-V:gill filament-Dorsal-D</external>
+            </sourceId>
+            <name>gill filament-Dorsal-D</name>
+            <description>gill filament-Dorsal-D gill filament-Dorsal-D From spreadsheet line 34</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000667</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000667</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000667" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>gill filament</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:98</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 34</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="27-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002216</external>
+            </specimen>
+            <view>
+                <external>CToL-V:gill filament-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Crossostoma_lacustre_2216_25x_gill_filament_ossifications.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:99</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <description>From spreadsheet line 35</description>
+            <userProperty value="48.02" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Crossostoma lacustre</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11425</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:100</local>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </sourceId>
+            <name>epibranchials-Dorsal-D</name>
+            <description>epibranchials-Dorsal-D epibranchials-Dorsal-D From spreadsheet line 35</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000658</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000658</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000658" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>epibranchials</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:101</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 35</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="28-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002216</external>
+            </specimen>
+            <view>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Crossostoma_lacustre_2216_12x_epi_orientation.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:102</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <description>From spreadsheet line 36</description>
+            <userProperty value="48.02" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Crossostoma lacustre</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11425</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:103</local>
+                <external>CToL-V:branchial arches-Dorsal-D</external>
+            </sourceId>
+            <name>branchial arches-Dorsal-D</name>
+            <description>branchial arches-Dorsal-D branchial arches-Dorsal-D From spreadsheet line 36</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000095</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000095</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000095" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>branchial arches</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:104</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 36</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="29-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002216</external>
+            </specimen>
+            <view>
+                <external>CToL-V:branchial arches-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Crossostoma_lacustre_2216_12x_standard.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:105</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <description>From spreadsheet line 37</description>
+            <userProperty value="48.02" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Crossostoma lacustre</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11425</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:106</local>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <name>pharyngobranchial 4-Dorsal-D</name>
+            <description>pharyngobranchial 4-Dorsal-D pharyngobranchial 4-Dorsal-D From spreadsheet line 37</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001636</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001636</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001636" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>pharyngobranchial 4</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:107</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 37</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="30-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002216</external>
+            </specimen>
+            <view>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Crossostoma_lacustre_2216_50x_pb4_absent.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:108</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <description>From spreadsheet line 38</description>
+            <userProperty value="44.38" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Cyprinus carpio</external>
+            </determination>
+            <dwc:CollectionCode>JFBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of Minnesota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>41249</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:109</local>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </sourceId>
+            <name>epibranchials-Dorsal-D</name>
+            <description>epibranchials-Dorsal-D epibranchials-Dorsal-D From spreadsheet line 38</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000658</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000658</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000658" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>epibranchials</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:110</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 38</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="31-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001141</external>
+            </specimen>
+            <view>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Cyprinus_carpio_1141_6x_epi_orientation.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:111</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <description>From spreadsheet line 39</description>
+            <userProperty value="44.38" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Cyprinus carpio</external>
+            </determination>
+            <dwc:CollectionCode>JFBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of Minnesota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>41249</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:112</local>
+                <external>CToL-V:epibranchial 1-Dorsal-D</external>
+            </sourceId>
+            <name>epibranchial 1-Dorsal-D</name>
+            <description>epibranchial 1-Dorsal-D epibranchial 1-Dorsal-D From spreadsheet line 39</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001243</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001243</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001243" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>epibranchial 1</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:113</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 39</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="01-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001141</external>
+            </specimen>
+            <view>
+                <external>CToL-V:epibranchial 1-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Cyprinus_carpio_1141_12x_eb1_ant_flange.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:114</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <description>From spreadsheet line 40</description>
+            <userProperty value="44.38" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Cyprinus carpio</external>
+            </determination>
+            <dwc:CollectionCode>JFBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of Minnesota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>41249</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:115</local>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <name>pharyngobranchial 4-Dorsal-D</name>
+            <description>pharyngobranchial 4-Dorsal-D pharyngobranchial 4-Dorsal-D From spreadsheet line 40</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001636</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001636</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001636" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>pharyngobranchial 4</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:116</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 40</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="02-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001141</external>
+            </specimen>
+            <view>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Cyprinus_carpio_1141_25x_pb4_present.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:117</local>
+                <external>CToL-S:0002687</external>
+            </sourceId>
+            <description>From spreadsheet line 41</description>
+            <userProperty value="29.70" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Danio rerio</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>200479</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:118</local>
+                <external>CToL-V:epibranchial 4-Dorsal-D</external>
+            </sourceId>
+            <name>epibranchial 4-Dorsal-D</name>
+            <description>epibranchial 4-Dorsal-D epibranchial 4-Dorsal-D From spreadsheet line 41</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001245</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001245</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001245" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>epibranchial 4</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:119</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 41</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="03-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002687</external>
+            </specimen>
+            <view>
+                <external>CToL-V:epibranchial 4-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Danio_rerio_2687_25x_eb4_uncinate.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:120</local>
+                <external>CToL-S:0001375</external>
+            </sourceId>
+            <description>From spreadsheet line 42</description>
+            <userProperty value="36.03" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Gyrinocheilus aymonieri</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>199874</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:121</local>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <name>pharyngobranchial 4-Dorsal-D</name>
+            <description>pharyngobranchial 4-Dorsal-D pharyngobranchial 4-Dorsal-D From spreadsheet line 42</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001636</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001636</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001636" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>pharyngobranchial 4</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:122</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 42</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="04-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001375</external>
+            </specimen>
+            <view>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Gyrinocheilus_aymonieri_1375_25x_pb4_absent.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:123</local>
+                <external>CToL-S:0002207</external>
+            </sourceId>
+            <description>From spreadsheet line 43</description>
+            <userProperty value="61.47" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Lefua echigonia</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11414</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:124</local>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </sourceId>
+            <name>epibranchials-Dorsal-D</name>
+            <description>epibranchials-Dorsal-D epibranchials-Dorsal-D From spreadsheet line 43</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000658</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000658</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000658" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>epibranchials</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:125</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 43</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="05-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002207</external>
+            </specimen>
+            <view>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Lefua_echigonia_2207_25x_eb_medial_tips.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:126</local>
+                <external>CToL-S:0001225</external>
+            </sourceId>
+            <description>From spreadsheet line 44</description>
+            <userProperty value="87.07" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Minytrema melanops</external>
+            </determination>
+            <dwc:CollectionCode>AMNH</dwc:CollectionCode>
+            <dwc:InstitutionCode>American Museum of Natural History</dwc:InstitutionCode>
+            <dwc:CatalogNumber>22208</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:127</local>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </sourceId>
+            <name>epibranchials-Dorsal-D</name>
+            <description>epibranchials-Dorsal-D epibranchials-Dorsal-D From spreadsheet line 44</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000658</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000658</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000658" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>epibranchials</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:128</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 44</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="06-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001225</external>
+            </specimen>
+            <view>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Minytrema_melanops_1225_12x_epi.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:129</local>
+                <external>CToL-S:0002682</external>
+            </sourceId>
+            <description>From spreadsheet line 45</description>
+            <userProperty value="73.51" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Pseudobagrus tokiensis</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-10945</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:130</local>
+                <external>CToL-V:pharyngobranchial 2-Dorsal-D</external>
+            </sourceId>
+            <name>pharyngobranchial 2-Dorsal-D</name>
+            <description>pharyngobranchial 2-Dorsal-D pharyngobranchial 2-Dorsal-D From spreadsheet line 45</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001536</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001536</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001536" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>pharyngobranchial 2</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:131</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 45</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="07-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002682</external>
+            </specimen>
+            <view>
+                <external>CToL-V:pharyngobranchial 2-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Pseudobagrus_tokiensis_2682_12x_PM_pb2.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:132</local>
+                <external>CToL-S:0002208</external>
+            </sourceId>
+            <description>From spreadsheet line 46</description>
+            <userProperty value="37.64" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Pungtungia herzi</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11439</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:133</local>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </sourceId>
+            <name>epibranchials-Dorsal-D</name>
+            <description>epibranchials-Dorsal-D epibranchials-Dorsal-D From spreadsheet line 46</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000658</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000658</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000658" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>epibranchials</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:134</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 46</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="08-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002208</external>
+            </specimen>
+            <view>
+                <external>CToL-V:epibranchials-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Pungtungia_herzi_2208_25x_EG_Ebs_dorsal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:135</local>
+                <external>CToL-S:0002769</external>
+            </sourceId>
+            <description>From spreadsheet line 47</description>
+            <userProperty value="55.74" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Vaillantella maassi</external>
+            </determination>
+            <dwc:CollectionCode>USD</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of South Dakota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>52</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:136</local>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <name>pharyngobranchial 4-Dorsal-D</name>
+            <description>pharyngobranchial 4-Dorsal-D pharyngobranchial 4-Dorsal-D From spreadsheet line 47</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001636</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001636</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001636" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>pharyngobranchial 4</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:137</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 47</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="09-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002769</external>
+            </specimen>
+            <view>
+                <external>CToL-V:pharyngobranchial 4-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Vaillantella_maassi_2769_50x_pb4_absent.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:138</local>
+                <external>CToL-S:0002211</external>
+            </sourceId>
+            <description>From spreadsheet line 48</description>
+            <userProperty value="62.20" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Acantopsis choirorhynchus</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>11422</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:139</local>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </sourceId>
+            <name>gill rakers-Dorsal-D</name>
+            <description>gill rakers-Dorsal-D gill rakers-Dorsal-D From spreadsheet line 48</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000356</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000356</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000356" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>gill rakers</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:140</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 48</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="10-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002211</external>
+            </specimen>
+            <view>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Acantopsis_choirorhynchos_2211_25x_gill_rakers.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:141</local>
+                <external>CToL-S:0002794</external>
+            </sourceId>
+            <description>From spreadsheet line 49</description>
+            <userProperty value="47.87" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Carassius auratus</external>
+            </determination>
+            <dwc:CollectionCode>USD</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of South Dakota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>55</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:142</local>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </sourceId>
+            <name>gill rakers-Dorsal-D</name>
+            <description>gill rakers-Dorsal-D gill rakers-Dorsal-D From spreadsheet line 49</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000356</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000356</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000356" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>gill rakers</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:143</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 49</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="11-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002794</external>
+            </specimen>
+            <view>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Carassius_auratus_2794_12x_gill_rakers.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:144</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <description>From spreadsheet line 50</description>
+            <userProperty value="44.38" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Cyprinus carpio</external>
+            </determination>
+            <dwc:CollectionCode>JFBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of Minnesota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>41249</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:145</local>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </sourceId>
+            <name>gill rakers-Dorsal-D</name>
+            <description>gill rakers-Dorsal-D gill rakers-Dorsal-D From spreadsheet line 50</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000356</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000356</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000356" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>gill rakers</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:146</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 50</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="12-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001141</external>
+            </specimen>
+            <view>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Cyprinus_carpio_1141_12x_gill_rakers.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:147</local>
+                <external>CToL-S:0001413</external>
+            </sourceId>
+            <description>From spreadsheet line 51</description>
+            <userProperty value="54.00" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Myxocyprinus asiaticus</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>199853</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:148</local>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </sourceId>
+            <name>gill rakers-Dorsal-D</name>
+            <description>gill rakers-Dorsal-D gill rakers-Dorsal-D From spreadsheet line 51</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000356</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000356</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000356" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>gill rakers</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:149</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 51</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="13-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001413</external>
+            </specimen>
+            <view>
+                <external>CToL-V:gill rakers-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Myxocyprinus_asiaticus_1413_25x_gill_rakers.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:150</local>
+                <external>CToL-S:0002669</external>
+            </sourceId>
+            <description>From spreadsheet line 52</description>
+            <userProperty value="28.15" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Danio rerio</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>200479</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:151</local>
+                <external>CToL-V:hypobranchial 1-Dorsal-D</external>
+            </sourceId>
+            <name>hypobranchial 1-Dorsal-D</name>
+            <description>hypobranchial 1-Dorsal-D hypobranchial 1-Dorsal-D From spreadsheet line 52</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001524</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001524</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001524" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>hypobranchial 1</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:152</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 52</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="14-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002669</external>
+            </specimen>
+            <view>
+                <external>CToL-V:hypobranchial 1-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Danio_rerio_2669_25x_EG_bb2_dorsal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:153</local>
+                <external>CToL-S:0003495</external>
+            </sourceId>
+            <description>From spreadsheet line 53</description>
+            <userProperty value="29.90" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Catostomus commersoni</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>200477</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:154</local>
+                <external>CToL-V:hypobranchial 3-Dorsal-D</external>
+            </sourceId>
+            <name>hypobranchial 3-Dorsal-D</name>
+            <description>hypobranchial 3-Dorsal-D hypobranchial 3-Dorsal-D From spreadsheet line 53</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001526</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001526</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001526" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>hypobranchial 3</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:155</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 53</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="15-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0003495</external>
+            </specimen>
+            <view>
+                <external>CToL-V:hypobranchial 3-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Catostomus_commersoni_3495_12x_EG_standard.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:156</local>
+                <external>CToL-S:0001165</external>
+            </sourceId>
+            <description>From spreadsheet line 54</description>
+            <userProperty value="45.33" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Chromobotia macracanthus</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>199848</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:157</local>
+                <external>CToL-V:hypobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <name>hypobranchial 4-Dorsal-D</name>
+            <description>hypobranchial 4-Dorsal-D hypobranchial 4-Dorsal-D From spreadsheet line 54</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001523</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001523</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001523" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>hypobranchial 4</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:158</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 54</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="16-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001165</external>
+            </specimen>
+            <view>
+                <external>CToL-V:hypobranchial 4-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Botia_macracanthus_1165_25x_EG_Hb4_present.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:159</local>
+                <external>CToL-S:0002206</external>
+            </sourceId>
+            <description>From spreadsheet line 55</description>
+            <userProperty value="57.04" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Sarcocheilichthys variegatus</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11407</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:160</local>
+                <external>CToL-V:hypobranchial 4-Dorsal-D</external>
+            </sourceId>
+            <name>hypobranchial 4-Dorsal-D</name>
+            <description>hypobranchial 4-Dorsal-D hypobranchial 4-Dorsal-D From spreadsheet line 55</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001523</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001523</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001523" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>hypobranchial 4</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:161</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 55</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="17-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002206</external>
+            </specimen>
+            <view>
+                <external>CToL-V:hypobranchial 4-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Sarcocheilichthys_variegatus_2206_25x_hb4_absent.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:162</local>
+                <external>CToL-S:0002211</external>
+            </sourceId>
+            <description>From spreadsheet line 56</description>
+            <userProperty value="62.20" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Acantopsis choirorhynchus</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>11422</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:163</local>
+                <external>CToL-V:interhyal-Dorsal-D</external>
+            </sourceId>
+            <name>interhyal-Dorsal-D</name>
+            <description>interhyal-Dorsal-D interhyal-Dorsal-D From spreadsheet line 56</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000171</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000171</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000171" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>interhyal</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:164</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 56</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="18-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002211</external>
+            </specimen>
+            <view>
+                <external>CToL-V:interhyal-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Acantopsis_choirorhynchos_2211_25X_interhyal_medial.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:165</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <description>From spreadsheet line 57</description>
+            <userProperty value="44.38" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Cyprinus carpio</external>
+            </determination>
+            <dwc:CollectionCode>JFBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of Minnesota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>41249</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:166</local>
+                <external>CToL-V:interhyal-Lateral-D</external>
+            </sourceId>
+            <name>interhyal-Lateral-D</name>
+            <description>interhyal-Lateral-D interhyal-Lateral-D From spreadsheet line 57</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000171</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000171</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000171" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Lateral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>interhyal</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:167</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 57</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="19-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001141</external>
+            </specimen>
+            <view>
+                <external>CToL-V:interhyal-Lateral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Cyprinus_carpio_1141_12X_ih_size.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:168</local>
+                <external>CToL-S:0002687</external>
+            </sourceId>
+            <description>From spreadsheet line 58</description>
+            <userProperty value="29.70" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Danio rerio</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>200479</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:169</local>
+                <external>CToL-V:interhyal-Posterolateral-D</external>
+            </sourceId>
+            <name>interhyal-Posterolateral-D</name>
+            <description>interhyal-Posterolateral-D interhyal-Posterolateral-D From spreadsheet line 58</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001511</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001511</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001511" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Posterolateral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>interhyal</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:170</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 58</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="20-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002687</external>
+            </specimen>
+            <view>
+                <external>CToL-V:interhyal-Posterolateral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Danio_rerio_2687_50X_ih_cartilage.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:171</local>
+                <external>CToL-S:0002684</external>
+            </sourceId>
+            <description>From spreadsheet line 59</description>
+            <userProperty value="36.41" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Pheacogrammus interruptus</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>200482</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:172</local>
+                <external>CToL-V:interhyal-Dorsolateral-D</external>
+            </sourceId>
+            <name>interhyal-Dorsolateral-D</name>
+            <description>interhyal-Dorsolateral-D interhyal-Dorsolateral-D From spreadsheet line 59</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000171</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000171</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000171" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsolateral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>interhyal</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:173</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 59</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="21-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002684</external>
+            </specimen>
+            <view>
+                <external>CToL-V:interhyal-Dorsolateral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Phenacogrammus_interruptus_2684_25X_ih_orientation.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:174</local>
+                <external>CToL-S:0002229</external>
+            </sourceId>
+            <description>From spreadsheet line 60</description>
+            <userProperty value="60.82" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Tinca tinca</external>
+            </determination>
+            <dwc:CollectionCode>CAS</dwc:CollectionCode>
+            <dwc:InstitutionCode>California Academy of Sciences</dwc:InstitutionCode>
+            <dwc:CatalogNumber>65043</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:175</local>
+                <external>CToL-V:interhyal-Posterolateral-D</external>
+            </sourceId>
+            <name>interhyal-Posterolateral-D</name>
+            <description>interhyal-Posterolateral-D interhyal-Posterolateral-D From spreadsheet line 60</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000171</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000171</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000171" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Posterolateral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>interhyal</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:176</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 60</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="22-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002229</external>
+            </specimen>
+            <view>
+                <external>CToL-V:interhyal-Posterolateral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Tinca_tinca_2229_25X_ih_dorsal_normal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:177</local>
+                <external>CToL-S:0001141</external>
+            </sourceId>
+            <description>From spreadsheet line 61</description>
+            <userProperty value="44.38" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Cyprinus carpio</external>
+            </determination>
+            <dwc:CollectionCode>JFBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>University of Minnesota</dwc:InstitutionCode>
+            <dwc:CatalogNumber>41249</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:178</local>
+                <external>CToL-V:post ceratobranchial cartilage-Dorsal-D</external>
+            </sourceId>
+            <name>post ceratobranchial cartilage-Dorsal-D</name>
+            <description>post ceratobranchial cartilage-Dorsal-D post ceratobranchial cartilage-Dorsal-D From spreadsheet line 61</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology </label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/</urlData>
+            </externalRef>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>post ceratobranchial cartilage</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:179</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 61</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="23-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001141</external>
+            </specimen>
+            <view>
+                <external>CToL-V:post ceratobranchial cartilage-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Cyprinus_carpio_1141_6x_EG_standard.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:180</local>
+                <external>CToL-S:0002766</external>
+            </sourceId>
+            <description>From spreadsheet line 62</description>
+            <userProperty value="52.19" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Pangio anguillaris</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>200481</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:181</local>
+                <external>CToL-V:post ceratobranchial cartilage-Dorsal-D</external>
+            </sourceId>
+            <name>post ceratobranchial cartilage-Dorsal-D</name>
+            <description>post ceratobranchial cartilage-Dorsal-D post ceratobranchial cartilage-Dorsal-D From spreadsheet line 62</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology </label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/</urlData>
+            </externalRef>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>post ceratobranchial cartilage</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:182</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 62</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="24-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002766</external>
+            </specimen>
+            <view>
+                <external>CToL-V:post ceratobranchial cartilage-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Pangio_anguillaris_2766_12x_EG_standard.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:183</local>
+                <external>CToL-S:0002203</external>
+            </sourceId>
+            <description>From spreadsheet line 63</description>
+            <userProperty value="52.31" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Aphyocypris chinensis</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11424</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:184</local>
+                <external>CToL-V:sublingual-Ventral-D</external>
+            </sourceId>
+            <name>sublingual-Ventral-D</name>
+            <description>sublingual-Ventral-D sublingual-Ventral-D From spreadsheet line 63</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001275</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001275</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001275" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Ventral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>sublingual</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:185</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 63</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="25-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002203</external>
+            </specimen>
+            <view>
+                <external>CToL-V:sublingual-Ventral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Aphyocypris_chinensis_2203_25X_PM_sublingual_ventral.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:186</local>
+                <external>CToL-S:0002216</external>
+            </sourceId>
+            <description>From spreadsheet line 64</description>
+            <userProperty value="48.02" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Crossostoma lacustre</external>
+            </determination>
+            <dwc:CollectionCode>CBM</dwc:CollectionCode>
+            <dwc:InstitutionCode>Natural History Museum and Institute, Chiba, Japan</dwc:InstitutionCode>
+            <dwc:CatalogNumber>ZF-11425</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:187</local>
+                <external>CToL-V:sublingual-Dorsal-D</external>
+            </sourceId>
+            <name>sublingual-Dorsal-D</name>
+            <description>sublingual-Dorsal-D sublingual-Dorsal-D From spreadsheet line 64</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0001275</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0001275</urlData>
+            </externalRef>
+            <userProperty value="TAO:0001275" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Dorsal</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>sublingual</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:188</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 64</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="26-Apr-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0002216</external>
+            </specimen>
+            <view>
+                <external>CToL-V:sublingual-Dorsal-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Crossostoma_lacustre_2216_25x_basihyal.tif</originalFileName>
+        </image>
+        <specimen>
+            <sourceId>
+                <local>local:189</local>
+                <external>CToL-S:0001165</external>
+            </sourceId>
+            <description>From spreadsheet line 65</description>
+            <userProperty value="45.33" property="CToLSpmSize"/>
+            <userProperty value="mm SL" property="CToLSpmSizeUnit"/>
+            <determination>
+                <external>SCI-NAME:Chromobotia macracanthus</external>
+            </determination>
+            <dwc:CollectionCode>TU</dwc:CollectionCode>
+            <dwc:InstitutionCode>Tulane University</dwc:InstitutionCode>
+            <dwc:CatalogNumber>199848</dwc:CatalogNumber>
+            <dwc:Sex>unknown</dwc:Sex>
+            <dwc:LifeStage>Juvenile/Adult</dwc:LifeStage>
+        </specimen>
+        <view>
+            <sourceId>
+                <local>local:190</local>
+                <external>CToL-V:urohyal-Ventral-D</external>
+            </sourceId>
+            <name>urohyal-Ventral-D</name>
+            <description>urohyal-Ventral-D urohyal-Ventral-D From spreadsheet line 65</description>
+            <externalRef type="Ontology">
+                <label>Teleost Anatomy Ontology TAO:0000452</label>
+                <urlData>http://bioportal.bioontology.org/virtual/1110/TAO:0000452</urlData>
+            </externalRef>
+            <userProperty value="TAO:0000452" property="CToLOntologyItem TAO ID"/>
+            <viewAngle>Ventral</viewAngle>
+            <imagingTechnique>Digital Camera</imagingTechnique>
+            <imagingPreparationTechnique>Cleared and counterstained for bone (Alizarin red) and cartilage (Alcian blue)</imagingPreparationTechnique>
+            <specimenPart>urohyal</specimenPart>
+            <developmentalStage>Juvenile/Adult</developmentalStage>
+            <sex>unknown</sex>
+            <viewTSN>161030</viewTSN>
+        </view>
+        <image>
+            <sourceId>
+                <local>local:191</local>
+                <external>CToL-I:null</external>
+            </sourceId>
+            <description> From spreadsheet line 65</description>
+            <userProperty value="Ericka Grey" property="CToLSubmittedBy"/>
+            <userProperty value="19-Mar-11" property="CToLDateSubmitted"/>
+            <specimen>
+                <external>CToL-S:0001165</external>
+            </specimen>
+            <view>
+                <external>CToL-V:urohyal-Ventral-D</external>
+            </view>
+            <imageType>tif</imageType>
+            <copyrightText>Ericka Grey and Paula Mabee</copyrightText>
+            <originalFileName>Botia_macracanthus_1165_12x_EG_urohyal.tif</originalFileName>
+        </image>
+    </insert>
+</mb:request>

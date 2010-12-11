@@ -1,0 +1,103 @@
+CREATE TABLE IF NOT EXISTS `Matrix` (
+  `id` int(11) NOT NULL,
+  `numRows` int(11) default NULL,
+  `numChars` int(11) default NULL,
+  PRIMARY KEY  (`id`),
+  CONSTRAINT `Matrix_ibfk_1` FOREIGN KEY (`id`) REFERENCES `BaseObject` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE IF NOT EXISTS `MatrixCell` (
+  `id` int(11) NOT NULL,
+  `rowNum` int(5) default NULL,
+  `columnNum` int(5) default NULL,
+  `charStateList` text,
+  `value` varchar(45) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `MatrixCellValue` (
+  `id` int(11) NOT NULL auto_increment,
+  `matrixId` int(11) default NULL,
+  `row` int(11) NOT NULL,
+  `col` int(11) NOT NULL,
+  `value` varchar(12) NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `Index_3` (`matrixId`,`row`,`col`),
+  CONSTRAINT `FK_MatrixCellValue_1` FOREIGN KEY (`matrixId`) REFERENCES `Matrix` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9153 DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `CharacterState` (
+  `id` int(11) NOT NULL,
+  `charStateValue` varchar(32) NOT NULL,
+  PRIMARY KEY  (`id`),
+  CONSTRAINT `PhyloCharState_ibfk_1` FOREIGN KEY (`id`) REFERENCES `BaseObject` (`id`) ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `MbCharacter` (
+  `id` int(11) NOT NULL,
+  `label` varchar(32) character set utf8 default NULL,
+  `characterNumber` varchar(32) character set utf8 default NULL,
+  `discrete` tinyint(1) NOT NULL,
+  `ordered` tinyint(1) default NULL,
+  `publicationId` int(11) default NULL,
+  `pubComment` text,
+  PRIMARY KEY  (`id`),
+  KEY `characterpubfk` (`publicationId`),
+  CONSTRAINT `PhyloCharacter_ibfk_6` FOREIGN KEY (`id`) REFERENCES `BaseObject` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `PhyloCharacter_ibfk_5` FOREIGN KEY (`publicationId`) REFERENCES `Publication` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `Otu` (
+  `id` int(11) NOT NULL,
+  `label` varchar(32) character set utf8 NOT NULL,
+  PRIMARY KEY  (`id`),
+  CONSTRAINT `Otu_ibfk_1` FOREIGN KEY (`id`) REFERENCES `BaseObject` (`id`) ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `Keywords` (
+  `id` int(11) NOT NULL,
+  `userId` int(11) default NULL,
+  `groupId` int(11) default NULL,
+  `dateToPublish` datetime default NULL,
+  `objectTypeId` varchar(50) default NULL,
+  `keywords` text character set utf8,
+  FULLTEXT KEY `keywords` (`keywords`),
+  FULLTEXT KEY `objectTypeId` (`objectTypeId`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `BrowseIndex` (
+  `id` int(11) NOT NULL,
+  `dateToPublish` datetime NOT NULL default '0000-00-00 00:00:00',
+  `objectTypeId` varchar(50) NOT NULL default '',
+  `description` varchar(255) default NULL,
+  `keywords` text,
+  `summaryHTML` text,
+  `thumbURL` varchar(255) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`riccardi`@`%` 
+SQL SECURITY DEFINER VIEW `Taxon` AS select `p`.`tsn` AS `tsn`,
+`p`.`unit_name1` AS `unitName1`,`p`.`unit_name2` AS `unitName2`,`p`.
+`unit_name3` AS `unitName3`,`p`.`unit_name4` AS `unitName4`,`k`.
+`kingdom_name` AS `kingdom`,`t`.`rank_name` AS `rank` 
+from ((`Tree` `p` left join `TaxonUnitTypes` `t` 
+on(((`p`.`rank_id` = `t`.`rank_id`) and (`p`.`kingdom_id` = `t`.`kingdom_id`)))) 
+left join `Kingdoms` `k` on((`t`.`kingdom_id` = `k`.`kingdom_id`)));
+
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`riccardi`@`%` 
+SQL SECURITY DEFINER VIEW `TaxonBranch` AS select `c`.`tsn` AS `child`,
+`p`.`tsn` AS `tsn`,`p`.`rank_id` AS `rankId`,`p`.`kingdom_id` AS `kingdomId` 
+from (`Tree` `c` join `Tree` `p`) where ((`p`.`lft` <= `c`.`lft`) and 
+(`p`.`rgt` >= `c`.`rgt`) and (`p`.`tsn` <> 0));
+
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`riccardi`@`%` 
+SQL SECURITY DEFINER VIEW `TaxonBranchNode` AS select `b`.`child` AS `child`,
+`t`.`tsn` AS `tsn`,`t`.`unitName1` AS `unitName1`,`t`.`unitName2` AS `unitName2`,
+`t`.`unitName3` AS `unitName3`,`t`.`unitName4` AS `unitName4`,`t`.`kingdom` AS 
+`kingdom`,`t`.`rank` AS `rank` from (`TaxonBranch` `b` join `Taxon` `t` 
+on((`b`.`tsn` = `t`.`tsn`))) limit 30;
+

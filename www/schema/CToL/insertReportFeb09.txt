@@ -1,0 +1,324 @@
+customizer(objectTypeId,objectTypeId)
+[TopLink Info]: 2009.03.05 10:50:21.590--ServerSession(14780827)--TopLink, version: Oracle TopLink Essentials - 2.0 (Build b58g-fcs (09/07/2007))
+[TopLink Info]: 2009.03.05 10:50:22.059--ServerSession(14780827)--file:/C:/dev/java2008/MorphbankServices/bin/-morphbank11 login successful
+View Object: net.morphbank.mbservices.XmlView@38fff7 external id: CToL-V:basihyal-Dorsal-D
+Pre-existing View for external Id: CToL-V:basihyal-Dorsal-D morphbankId: 459122
+View Object: net.morphbank.mbservices.XmlView@8beff2 external id: CToL-V:basihyal-Dorsal-D
+Pre-existing View for external Id: CToL-V:basihyal-Dorsal-D morphbankId: 459122
+View Object: net.morphbank.mbservices.XmlView@d647d8 external id: CToL-V:basihyal-Dorsal-D
+Pre-existing View for external Id: CToL-V:basihyal-Dorsal-D morphbankId: 459122
+View Object: net.morphbank.mbservices.XmlView@12d8ecd external id: CToL-V:basibranchial 1-Dorsal-D
+Pre-existing View for external Id: CToL-V:basibranchial 1-Dorsal-D morphbankId: 459116
+View Object: net.morphbank.mbservices.XmlView@153b2cb external id: CToL-V:basibranchial 2-Dorsal-D
+Pre-existing View for external Id: CToL-V:basibranchial 2-Dorsal-D morphbankId: 459117
+View Object: net.morphbank.mbservices.XmlView@e555bd external id: CToL-V:basibranchial 2-Dorsal-D
+Pre-existing View for external Id: CToL-V:basibranchial 2-Dorsal-D morphbankId: 459117
+View Object: net.morphbank.mbservices.XmlView@1c21ece external id: CToL-V:basibranchial 2-Dorsal-D
+Pre-existing View for external Id: CToL-V:basibranchial 2-Dorsal-D morphbankId: 459117
+View Object: net.morphbank.mbservices.XmlView@6d3b92 external id: CToL-V:basibranchial 2-Dorsal-D
+Pre-existing View for external Id: CToL-V:basibranchial 2-Dorsal-D morphbankId: 459117
+View Object: net.morphbank.mbservices.XmlView@3aef16 external id: CToL-V:basibranchials 4 and 5-Dorsal-D
+View Object: net.morphbank.mbservices.XmlView@1a73d30 external id: CToL-V:basibranchials 4 and 5-Dorsal-D
+Pre-existing View for external Id: CToL-V:basibranchials 4 and 5-Dorsal-D morphbankId: 470953
+View Object: net.morphbank.mbservices.XmlView@b5ad68 external id: CToL-V:basibranchials 4 and 5-Dorsal-D
+Pre-existing View for external Id: CToL-V:basibranchials 4 and 5-Dorsal-D morphbankId: 470953
+View Object: net.morphbank.mbservices.XmlView@19214b1 external id: CToL-V:basibranchials 4 and 5-Dorsal-D
+Pre-existing View for external Id: CToL-V:basibranchials 4 and 5-Dorsal-D morphbankId: 470953
+View Object: net.morphbank.mbservices.XmlView@130998 external id: CToL-V:basibranchials 4 and 5-Dorsal-D
+Pre-existing View for external Id: CToL-V:basibranchials 4 and 5-Dorsal-D morphbankId: 470953
+View Object: net.morphbank.mbservices.XmlView@95f290 external id: CToL-V:hypobranchial 3-Dorsal-D
+Pre-existing View for external Id: CToL-V:hypobranchial 3-Dorsal-D morphbankId: 459769
+View Object: net.morphbank.mbservices.XmlView@a33ce2 external id: CToL-V:ceratobranchial 1-Ventrolateral-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 1-Ventrolateral-D morphbankId: 459161
+View Object: net.morphbank.mbservices.XmlView@1458dcb external id: CToL-V:ceratobranchial 5 tooth-Dorsal-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 5 tooth-Dorsal-D morphbankId: 459154
+View Object: net.morphbank.mbservices.XmlView@a2a38 external id: CToL-V:ceratobranchial 5 tooth-Dorsal-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 5 tooth-Dorsal-D morphbankId: 459154
+View Object: net.morphbank.mbservices.XmlView@122d9c external id: CToL-V:ceratobranchial 5 tooth-Dorsal-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 5 tooth-Dorsal-D morphbankId: 459154
+View Object: net.morphbank.mbservices.XmlView@9bc984 external id: CToL-V:ceratobranchial 5 tooth-Posterior-D
+View Object: net.morphbank.mbservices.XmlView@1f7896f external id: CToL-V:ceratobranchial 5 tooth-Posterior-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 5 tooth-Posterior-D morphbankId: 470954
+View Object: net.morphbank.mbservices.XmlView@bbbd0e external id: CToL-V:ceratobranchial 5 tooth-Dorsal-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 5 tooth-Dorsal-D morphbankId: 459154
+View Object: net.morphbank.mbservices.XmlView@14af9f7 external id: CToL-V:ceratobranchial 5 tooth-Dorsal-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 5 tooth-Dorsal-D morphbankId: 459154
+View Object: net.morphbank.mbservices.XmlView@174cb21 external id: CToL-V:ceratobranchial 5 tooth-Dorsal-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 5 tooth-Dorsal-D morphbankId: 459154
+View Object: net.morphbank.mbservices.XmlView@f77511 external id: CToL-V:ceratobranchial 5 tooth-Dorsal-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 5 tooth-Dorsal-D morphbankId: 459154
+View Object: net.morphbank.mbservices.XmlView@ea3932 external id: CToL-V:ceratobranchial 5 tooth-Dorsal-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 5 tooth-Dorsal-D morphbankId: 459154
+View Object: net.morphbank.mbservices.XmlView@c5d9c1 external id: CToL-V:ceratobranchial 5 tooth-Dorsal-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 5 tooth-Dorsal-D morphbankId: 459154
+View Object: net.morphbank.mbservices.XmlView@1a40247 external id: CToL-V:ceratobranchial 5 tooth-dorsoposterior-D
+View Object: net.morphbank.mbservices.XmlView@1f4cdd2 external id: CToL-V:ceratobranchial 5-Ventral-D
+Pre-existing View for external Id: CToL-V:ceratobranchial 5-Ventral-D morphbankId: 460564
+View Object: net.morphbank.mbservices.XmlView@1bab2c3 external id: CToL-V:ceratohyal and hypohyals-Lateral-D
+View Object: net.morphbank.mbservices.XmlView@16fcc4 external id: CToL-V:ceratohyal and hypohyals-Anterolateral-D
+View Object: net.morphbank.mbservices.XmlView@908faf external id: CToL-V:ceratohyal and hypohyals-Lateral-D
+Pre-existing View for external Id: CToL-V:ceratohyal and hypohyals-Lateral-D morphbankId: 470956
+View Object: net.morphbank.mbservices.XmlView@b2175 external id: CToL-V:ceratohyal and hypohyals-Lateral-D
+Pre-existing View for external Id: CToL-V:ceratohyal and hypohyals-Lateral-D morphbankId: 470956
+View Object: net.morphbank.mbservices.XmlView@7cc9c9 external id: CToL-V:gill filament-Dorsal-D
+View Object: net.morphbank.mbservices.XmlView@74ece8 external id: CToL-V:epibranchials-Dorsal-D
+View Object: net.morphbank.mbservices.XmlView@250cce external id: CToL-V:branchial arches-Dorsal-D
+View Object: net.morphbank.mbservices.XmlView@c510e3 external id: CToL-V:pharyngobranchial 4-Dorsal-D
+Pre-existing View for external Id: CToL-V:pharyngobranchial 4-Dorsal-D morphbankId: 460817
+View Object: net.morphbank.mbservices.XmlView@76ec2d external id: CToL-V:epibranchials-Dorsal-D
+Pre-existing View for external Id: CToL-V:epibranchials-Dorsal-D morphbankId: 470959
+View Object: net.morphbank.mbservices.XmlView@1430296 external id: CToL-V:epibranchial 1-Dorsal-D
+Pre-existing View for external Id: CToL-V:epibranchial 1-Dorsal-D morphbankId: 459113
+View Object: net.morphbank.mbservices.XmlView@10bfe2c external id: CToL-V:pharyngobranchial 4-Dorsal-D
+Pre-existing View for external Id: CToL-V:pharyngobranchial 4-Dorsal-D morphbankId: 460817
+View Object: net.morphbank.mbservices.XmlView@1f68d7c external id: CToL-V:epibranchial 4-Dorsal-D
+Pre-existing View for external Id: CToL-V:epibranchial 4-Dorsal-D morphbankId: 459766
+View Object: net.morphbank.mbservices.XmlView@db81f3 external id: CToL-V:pharyngobranchial 4-Dorsal-D
+Pre-existing View for external Id: CToL-V:pharyngobranchial 4-Dorsal-D morphbankId: 460817
+View Object: net.morphbank.mbservices.XmlView@67e92a external id: CToL-V:epibranchials-Dorsal-D
+Pre-existing View for external Id: CToL-V:epibranchials-Dorsal-D morphbankId: 470959
+View Object: net.morphbank.mbservices.XmlView@1171e30 external id: CToL-V:epibranchials-Dorsal-D
+Pre-existing View for external Id: CToL-V:epibranchials-Dorsal-D morphbankId: 470959
+View Object: net.morphbank.mbservices.XmlView@9e4dc0 external id: CToL-V:pharyngobranchial 2-Dorsal-D
+Pre-existing View for external Id: CToL-V:pharyngobranchial 2-Dorsal-D morphbankId: 460816
+View Object: net.morphbank.mbservices.XmlView@ed3bff external id: CToL-V:epibranchials-Dorsal-D
+Pre-existing View for external Id: CToL-V:epibranchials-Dorsal-D morphbankId: 470959
+View Object: net.morphbank.mbservices.XmlView@16b7f83 external id: CToL-V:pharyngobranchial 4-Dorsal-D
+Pre-existing View for external Id: CToL-V:pharyngobranchial 4-Dorsal-D morphbankId: 460817
+View Object: net.morphbank.mbservices.XmlView@184be29 external id: CToL-V:gill rakers-Dorsal-D
+View Object: net.morphbank.mbservices.XmlView@1556aec external id: CToL-V:gill rakers-Dorsal-D
+Pre-existing View for external Id: CToL-V:gill rakers-Dorsal-D morphbankId: 470961
+View Object: net.morphbank.mbservices.XmlView@9b04ac external id: CToL-V:gill rakers-Dorsal-D
+Pre-existing View for external Id: CToL-V:gill rakers-Dorsal-D morphbankId: 470961
+View Object: net.morphbank.mbservices.XmlView@1feb2ea external id: CToL-V:gill rakers-Dorsal-D
+Pre-existing View for external Id: CToL-V:gill rakers-Dorsal-D morphbankId: 470961
+View Object: net.morphbank.mbservices.XmlView@780515 external id: CToL-V:hypobranchial 1-Dorsal-D
+Pre-existing View for external Id: CToL-V:hypobranchial 1-Dorsal-D morphbankId: 459767
+View Object: net.morphbank.mbservices.XmlView@1fac7cf external id: CToL-V:hypobranchial 3-Dorsal-D
+Pre-existing View for external Id: CToL-V:hypobranchial 3-Dorsal-D morphbankId: 459769
+View Object: net.morphbank.mbservices.XmlView@1daa877 external id: CToL-V:hypobranchial 4-Dorsal-D
+Pre-existing View for external Id: CToL-V:hypobranchial 4-Dorsal-D morphbankId: 460814
+View Object: net.morphbank.mbservices.XmlView@122fe15 external id: CToL-V:hypobranchial 4-Dorsal-D
+Pre-existing View for external Id: CToL-V:hypobranchial 4-Dorsal-D morphbankId: 460814
+View Object: net.morphbank.mbservices.XmlView@5bc8c9 external id: CToL-V:interhyal-Dorsal-D
+View Object: net.morphbank.mbservices.XmlView@1f323bd external id: CToL-V:interhyal-Lateral-D
+View Object: net.morphbank.mbservices.XmlView@de1f47 external id: CToL-V:interhyal-Posterolateral-D
+View Object: net.morphbank.mbservices.XmlView@19c472 external id: CToL-V:interhyal-Dorsolateral-D
+View Object: net.morphbank.mbservices.XmlView@161eccb external id: CToL-V:interhyal-Posterolateral-D
+Pre-existing View for external Id: CToL-V:interhyal-Posterolateral-D morphbankId: 470964
+View Object: net.morphbank.mbservices.XmlView@3ec403 external id: CToL-V:post ceratobranchial cartilage-Dorsal-D
+View Object: net.morphbank.mbservices.XmlView@ca9a76 external id: CToL-V:post ceratobranchial cartilage-Dorsal-D
+Pre-existing View for external Id: CToL-V:post ceratobranchial cartilage-Dorsal-D morphbankId: 470966
+View Object: net.morphbank.mbservices.XmlView@d47c99 external id: CToL-V:sublingual-Ventral-D
+Pre-existing View for external Id: CToL-V:sublingual-Ventral-D morphbankId: 459756
+View Object: net.morphbank.mbservices.XmlView@1a4f8a6 external id: CToL-V:sublingual-Dorsal-D
+Pre-existing View for external Id: CToL-V:sublingual-Dorsal-D morphbankId: 459775
+View Object: net.morphbank.mbservices.XmlView@188689a external id: CToL-V:urohyal-Ventral-D
+Pre-existing View for external Id: CToL-V:urohyal-Ventral-D morphbankId: 459121
+New Specimen object for external Id: CToL-S:0002216
+	Morphbank id: 470967
+Pre-existing Specimen for external Id: CToL-S:0001166 morphbankId: 460921
+New Specimen object for external Id: CToL-S:0002684
+	Morphbank id: 470968
+New Specimen object for external Id: CToL-S:0002769
+	Morphbank id: 470969
+New Specimen object for external Id: CToL-S:0003494
+	Morphbank id: 470970
+Pre-existing Specimen for external Id: CToL-S:0002216 morphbankId: 470967
+Pre-existing Specimen for external Id: CToL-S:0002207 morphbankId: 461813
+New Specimen object for external Id: CToL-S:0001225
+	Morphbank id: 470971
+Pre-existing Specimen for external Id: CToL-S:0001165 morphbankId: 460920
+Pre-existing Specimen for external Id: CToL-S:0002216 morphbankId: 470967
+Pre-existing Specimen for external Id: CToL-S:0002216 morphbankId: 470967
+New Specimen object for external Id: CToL-S:0001141
+	Morphbank id: 470972
+Pre-existing Specimen for external Id: CToL-S:0002209 morphbankId: 461815
+New Specimen object for external Id: CToL-S:0001112
+	Morphbank id: 470973
+Pre-existing Specimen for external Id: CToL-S:0001169 morphbankId: 460922
+Pre-existing Specimen for external Id: CToL-S:0003494 morphbankId: 470970
+Pre-existing Specimen for external Id: CToL-S:0001141 morphbankId: 470972
+Pre-existing Specimen for external Id: CToL-S:0001171 morphbankId: 460923
+Pre-existing Specimen for external Id: CToL-S:0001171 morphbankId: 460923
+Pre-existing Specimen for external Id: CToL-S:0002206 morphbankId: 461812
+Pre-existing Specimen for external Id: CToL-S:0002213 morphbankId: 462252
+Pre-existing Specimen for external Id: CToL-S:0001157 morphbankId: 460917
+New Specimen object for external Id: CToL-S:0002688
+	Morphbank id: 470974
+Pre-existing Specimen for external Id: CToL-S:0002778 morphbankId: 460824
+Pre-existing Specimen for external Id: CToL-S:0002206 morphbankId: 461812
+Pre-existing Specimen for external Id: CToL-S:0002229 morphbankId: 461822
+Pre-existing Specimen for external Id: CToL-S:0002222 morphbankId: 461820
+Pre-existing Specimen for external Id: CToL-S:0001165 morphbankId: 460920
+Pre-existing Specimen for external Id: CToL-S:0002211 morphbankId: 461817
+Pre-existing Specimen for external Id: CToL-S:0001141 morphbankId: 470972
+New Specimen object for external Id: CToL-S:0002687
+	Morphbank id: 470975
+Pre-existing Specimen for external Id: CToL-S:0002229 morphbankId: 461822
+Pre-existing Specimen for external Id: CToL-S:0002216 morphbankId: 470967
+Pre-existing Specimen for external Id: CToL-S:0002216 morphbankId: 470967
+Pre-existing Specimen for external Id: CToL-S:0002216 morphbankId: 470967
+Pre-existing Specimen for external Id: CToL-S:0002216 morphbankId: 470967
+Pre-existing Specimen for external Id: CToL-S:0001141 morphbankId: 470972
+Pre-existing Specimen for external Id: CToL-S:0001141 morphbankId: 470972
+Pre-existing Specimen for external Id: CToL-S:0001141 morphbankId: 470972
+Pre-existing Specimen for external Id: CToL-S:0002687 morphbankId: 470975
+New Specimen object for external Id: CToL-S:0001375
+	Morphbank id: 470976
+Pre-existing Specimen for external Id: CToL-S:0002207 morphbankId: 461813
+Pre-existing Specimen for external Id: CToL-S:0001225 morphbankId: 470971
+New Specimen object for external Id: CToL-S:0002682
+	Morphbank id: 470977
+Pre-existing Specimen for external Id: CToL-S:0002208 morphbankId: 461814
+Pre-existing Specimen for external Id: CToL-S:0002769 morphbankId: 470969
+Pre-existing Specimen for external Id: CToL-S:0002211 morphbankId: 461817
+New Specimen object for external Id: CToL-S:0002794
+	Morphbank id: 470978
+Pre-existing Specimen for external Id: CToL-S:0001141 morphbankId: 470972
+Pre-existing Specimen for external Id: CToL-S:0001413 morphbankId: 461809
+New Specimen object for external Id: CToL-S:0002669
+	Morphbank id: 470979
+New Specimen object for external Id: CToL-S:0003495
+	Morphbank id: 470980
+Pre-existing Specimen for external Id: CToL-S:0001165 morphbankId: 460920
+Pre-existing Specimen for external Id: CToL-S:0002206 morphbankId: 461812
+Pre-existing Specimen for external Id: CToL-S:0002211 morphbankId: 461817
+Pre-existing Specimen for external Id: CToL-S:0001141 morphbankId: 470972
+Pre-existing Specimen for external Id: CToL-S:0002687 morphbankId: 470975
+Pre-existing Specimen for external Id: CToL-S:0002684 morphbankId: 470968
+Pre-existing Specimen for external Id: CToL-S:0002229 morphbankId: 461822
+Pre-existing Specimen for external Id: CToL-S:0001141 morphbankId: 470972
+New Specimen object for external Id: CToL-S:0002766
+	Morphbank id: 470981
+Pre-existing Specimen for external Id: CToL-S:0002203 morphbankId: 461811
+Pre-existing Specimen for external Id: CToL-S:0002216 morphbankId: 470967
+Pre-existing Specimen for external Id: CToL-S:0001165 morphbankId: 460920
+New Image object for external Id: CToL-I:null
+	Morphbank id: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+No new views for image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Added view(s) to image 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982
+Pre-existing Image for external Id: CToL-I:null morphbankId: 470982Added view(s) to image 470982
+

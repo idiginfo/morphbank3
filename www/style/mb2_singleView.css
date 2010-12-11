@@ -1,0 +1,99 @@
+/* CSS Document */
+
+@import url(mb2_singleView2.css);
+@import url(mb2_singleView3.css);
+@import url(mb2_singleView4.css);
+@import url(mb2_singleView5.css);
+@import url(mb2_singleView6.css);
+@import url(mb2_singleView7.css);
+@import url(mb2_singleView8.css);
+
+.nav {
+float:left;
+margin-left:35px;
+margin-top:35px;
+clear:left;
+}
+
+.bg {
+position:absolute;
+top:0px;
+left:0px;
+background-image:url(webImages/mainBackGround100.jpg);
+background-repeat:no-repeat;
+}
+
+.popContainer {
+float:left;
+clear:both;
+margin-left:5px;
+margin-right:5px;
+margin-top:35px;
+width:770px;
+background-color: #fcd39d;
+border-top:medium solid #fde6c7;
+border-left:medium solid #fde6c7;
+border-bottom:medium solid #a08664;
+border-right:medium solid #a08664;
+padding:10px 5px 10px 5px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+
+table.blueBorder {
+border:2px solid #17256b;
+}
+
+.popContainer th, .popContainer strong {
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+font-size:14px;
+letter-spacing:0.02em;
+}
+
+
+.popContainer td {
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:normal;
+font-size:11px;
+letter-spacing:0.02em;
+}
+
+.popViewTopContainer {
+float:left;
+width:750px;
+border: 2px solid #17256b;
+}
+
+.popViewBottomContainer {
+float:left;
+clear:both;
+width:750px;
+border-top-width: 0px;
+border-left:2px solid #17256b;
+border-bottom:2px solid #17256b;
+border-right:2px solid #17256b;
+}
+
+.popViewImageContainer {
+border-left:2px solid #17256b;
+border-right:2px solid #17256b;
+border-bottom-width:0px;
+border-top-width:0px;
+}
+
+.leftTD { border-right:1px solid #17256b; }
+
+.rightTD { border-left:1px solid #17256b; }
+
+.infoBox {
+/*border:1px solid red;*/
+/*background-color:#eeeeee;*/
+position:relative;
+/*margin: 15px 10px 10px 10px;*/
+padding:15px 10px 10px 10px;
+}
+
+.leftPadding {
+padding-left:20px;
+}
