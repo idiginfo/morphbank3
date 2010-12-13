@@ -1,12 +1,4 @@
 <?php
-/************************************************************************************************
- *  Author: Karolina Maneva-Jakimoska                                                            *
- *  Date:  04/12/2006                                                                            *
- *  Description:  Ths file provides new user request online application. After the application   *
- *  is complete an e-mail is sent to the morphbankadmin team with the user information           *
- *                                                                                               *
- ************************************************************************************************/
-
 include_once('head.inc.php');;
 include_once('spam.php');
 include_once('admin.functions.php');
