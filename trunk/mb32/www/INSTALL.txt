@@ -2,7 +2,7 @@ The below is done after installing the database scripts.
 
 1) Change htaccess.txt to .htaccess and save. Alter the php auto_prepend_file path accordingly for your server.
 
-2) Chmod /configuration so it is writable.
+2) Chmod /configuration and /log directories so they are writable.
 
 3) Visit the url of your site (e.g. http://your_site.com). You should automatically be directed to the install script.
 
