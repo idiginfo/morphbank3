@@ -1,13 +1,4 @@
 <?php
-/************************************************************************************************
- *  Author: David A. Gaitros                                                                     *
- *  Date:  9/16/2005                                                                             *
- *  Description:  PhP script to display the User add screen. The form will automatically call    *
- *                the adduserscript.php upon pressing of the submit button.                      *
- *                                                                                               *
- *  Modified: 1/24/2006 to include .php header files and static path names.                      *
- ************************************************************************************************/
-
 
 include_once('head.inc.php');
 include_once('imageFunctions.php');

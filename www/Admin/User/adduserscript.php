@@ -9,15 +9,6 @@ initHtml($title, null, null);
 echoHead(false, $title);
 checkIfLogged();
 
-
-/**********************************************************************************************
- *  Author: David A. Gaitros                                                                   *
- *  Date:  September 10, 2005                                                                  *
- *  This routine relies on the 'returntouser' value being set from the previous form.          *
- *  In the future we plan to add security to this routine that checks session variables        *
- *  to insure that a the proper user has been logged in.                                       *
- *  Modified: 1/26/2006 Added .php include files and static path names.
- **********************************************************************************************/
 if ($_PUT['returntouser'] != null)
 exit;
 
