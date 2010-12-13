@@ -1,6 +1,13 @@
 <?php
 require_once('install_functions.php');
-$msg = installApp();
+
+if (!is_writable('../../log')) {
+	$msg = "Application log directory must be writable";
+} else if (!is_writable('../../configuration')) {
+	$msg = "Application configuration directory must be writable";
+} else {
+	$msg = installApp();
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -31,8 +38,9 @@ $msg = installApp();
 			<?php 
 			if (isset($_POST['submit']) && empty($msg)) { ?>
 			<div>
-			Configuration and database install completed. For security reasons, you should 
-			delete the install folder.
+			Configuration and database install completed.<br />
+			For security reasons, the install folder should be deleted.<br />
+			Chmod /configuration/ directory so it is not writable.
 			</div>
 			<?php } else { ?>
 			<div class="searchError"><?php echo $msg; ?></div>
