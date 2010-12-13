@@ -1,12 +1,4 @@
 <?php
-/////////////////////////////////////////////////////////////////////////////
-// This file is used to create mail form for sending mail to mbadmin.       /
-//                                                                          /
-// created by: Karolina Maneva-Jakimoska                                    /
-// date created: Feb 22 2007                                                /
-//                                                                          /
-/////////////////////////////////////////////////////////////////////////////
-
 
 include_once('pop.inc.php');
 
