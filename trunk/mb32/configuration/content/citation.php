@@ -1,3 +1,5 @@
+<?php 
+?>
 <h1>Morphbank Copyright Policy</h1>
 <img src="/style/webImages/blueHR-trans.png" width="525" height="5" class="blueHR" alt="" />
 <p>
