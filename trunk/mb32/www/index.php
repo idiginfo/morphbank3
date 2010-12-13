@@ -2,7 +2,7 @@
 /**
  * Check for config.ini. Redirect to install if it does not exist
  */
-if (!file_exists('../../configuration/config.ini')) {
+if (!file_exists('../configuration/config.ini')) {
 	header ("location: /install/install.php");
 	exit;
 }
