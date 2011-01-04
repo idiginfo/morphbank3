@@ -340,7 +340,7 @@ create table leech_list (
   `timestamp` int not null default '0',
   index ip (ip asc),
   index `timestamp` (`timestamp` asc)
-) engine=InnoDB
+) engine=InnoDB;
 
 create table leech_quotas (
   ip int primary key not null,
@@ -350,7 +350,7 @@ create table leech_quotas (
   isProxy int not null,
   challenge varchar not null,
   index lastFlush (lastFlush asc)
-) engine=InnoDB
+) engine=InnoDB;
 
 create table Locality (
     id int primary key not null, 
