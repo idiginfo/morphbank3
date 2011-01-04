@@ -629,7 +629,7 @@ create table Taxa (
     id int primary key not null auto_increment, 
     boId int, 
     tsn bigint, 
-    scientificName text not null, 
+    scientificName varchar(2000) not null, 
     taxon_author_id int, 
     taxon_author_name varchar(255), 
     `status` varchar(255), 
@@ -652,7 +652,8 @@ create table Taxa (
     unique key (tsn), 
     unique key (boId), 
     fulltext key (keywords),
-    fulltext key (scientificName)
+    key sciname (scientificName)
+    key authorId (taxon_author_id)
 ) engine=MyISAM;
 
 
