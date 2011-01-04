@@ -348,7 +348,7 @@ create table leech_quotas (
   total int not null,
   hostname varchar(255) not null,
   isProxy int not null,
-  challenge varchar not null,
+  challenge varchar(255) not null,
   index lastFlush (lastFlush asc)
 ) engine=InnoDB;
 
