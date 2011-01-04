@@ -335,6 +335,23 @@ create table Kingdoms (
     update_date date
 ) engine=InnoDB;
 
+create table leech_list (
+  ip int not,
+  `timestamp` int not null,
+  index ip (ip asc),
+  index `timestamp` (`timestamp` asc)
+) engine=InnoDB
+
+create table leech_quotas (
+  ip int primary key not null,
+  lastFlush int not null,
+  total int not null,
+  hostname varchar(255) not null,
+  isProxy int not null,
+  challenge varchar not null,
+  index lastFlush (lastFlush asc)
+) engine=InnoDB
+
 create table Locality (
     id int primary key not null, 
     continentOcean varchar(255), 
