@@ -337,7 +337,7 @@ create table Kingdoms (
 
 create table leech_list (
   ip int not,
-  `timestamp` timestamp not null,
+  `timestamp` timestamp null,
   index ip (ip asc),
   index `timestamp` (`timestamp` asc)
 ) engine=InnoDB
