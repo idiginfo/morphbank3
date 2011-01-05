@@ -191,8 +191,6 @@ class MyManager
 	public function getCollectionArray()
 	{
 		if (!isset($this->userId)) {
-			echo "test";
-			exit;
 			return null;
 		}
 		//TODO fix this so that list is shorter and more useful.suggest popup for selecting collection
