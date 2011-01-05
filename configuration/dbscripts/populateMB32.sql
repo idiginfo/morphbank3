@@ -63,7 +63,7 @@ delete from ViewAngle;
 
 insert into Annotation select * from  MB30.Annotation;
 insert into AnnotationType select * from  MB30.AnnotationType;
-insert into BaseObject select *,'www.morphbank.net',null from  MB30.BaseObject;
+insert into BaseObject select *,null from  MB30.BaseObject;
 insert into BasisOfRecord select * from  MB30.BasisOfRecord;
 insert into CharacterState select * from  MB30.CharacterState;
 insert into Collection select * from  MB30.Collection;
