@@ -26,6 +26,8 @@ create table Annotation (
     key annotObjfk (objectId)
 ) engine=InnoDB ;
 
+show warnings;
+
 -- --------------------------------------------------------
 --
 -- Table structure for table 'AnnotationType'
@@ -36,6 +38,7 @@ create table AnnotationType (
     annotationSchema text
 ) engine=InnoDB ;
 
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -69,6 +72,7 @@ create table BaseObject (
     key dateLastModified (dateLastModified)
 ) engine=InnoDB ;
 
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -80,6 +84,7 @@ create table BasisOfRecord (
     `name` char(2) primary key not null
 ) engine=InnoDB;
 
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -91,6 +96,7 @@ create table CharacterState (
     charStateValue varchar(255) not null
 ) engine=InnoDB;
 
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -106,7 +112,7 @@ create table Collection (
     key collgroupfk (groupId)
 ) engine=InnoDB;
 
-
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -129,6 +135,7 @@ create table CollectionObjects (
     key collObjCollfk (collectionId)
 ) engine=InnoDB;
 
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -140,6 +147,7 @@ create table ContinentOcean (
     `name` char(2) primary key not null
 ) engine=InnoDB;
 
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -153,6 +161,7 @@ create table Country (
     key continentId (continentOcean)
 ) engine=InnoDB;
 
+show warnings;
 -- --------------------------------------------------------
 
 create table CurrentIds (
@@ -161,6 +170,7 @@ create table CurrentIds (
  `type` varchar(255) primary key not null
 ) engine=InnoDB;
 
+show warnings;
 --
 -- Table structure for table 'DeterminationAnnotation'
 --
@@ -186,6 +196,7 @@ create table DeterminationAnnotation (
     key DetAnnkingdomIdfk (kingdomId)
 ) engine=InnoDB;
 
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -197,6 +208,7 @@ create table DevelopmentalStage (
     description varchar(255) default 'Not provided'
 ) engine=InnoDB;
 
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -216,7 +228,7 @@ create table ExternalLinkObject (
     key extTypeFk (extLinkTypeId)
 ) engine=InnoDB;
 
-
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -229,6 +241,7 @@ create table ExternalLinkType (
     description varchar(255)
 ) engine=InnoDB;
 
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -240,9 +253,13 @@ create table Form (
     description varchar(255)
 ) engine=InnoDB;
 
+show warnings;
+
 create table Geolocated (
     id int not null primary key
 ) engine=InnoDB;
+
+show warnings;
 
 create table Groups (
     id int primary key not null, 
@@ -256,6 +273,8 @@ create table Groups (
     key groupsGrpMngIdfk (groupManagerId)
 ) engine=InnoDB;
 
+show warnings;
+
 create table History (
     id int not null, 
     userId int not null, 
@@ -265,6 +284,8 @@ create table History (
     modifiedTo text not null, 
     tableName varchar(255) not null 
 ) engine=InnoDB;
+
+show warnings;
 
 create table Image (
     id int primary key not null, 
@@ -291,19 +312,27 @@ create table Image (
     key imggroupfk (groupId)
 ) engine=InnoDB;
 
+show warnings;
+
 create table ImagingPreparationTechnique (
     `name` varchar(255) primary key not null, 
     description varchar(255)
 ) engine=InnoDB;
+
+show warnings;
 
 create table ImagingTechnique (
     `name` varchar(255) primary key not null, 
     description varchar(255)
 ) engine=InnoDB;
 
+show warnings;
+
 create table ITISCounter (
     counter int not null primary key
 ) engine=InnoDB;
+
+show warnings;
 
 create table Keywords (
     id int primary key not null, 
@@ -322,6 +351,8 @@ create table Keywords (
     key dateToPublish(dateToPublish)
     ) engine=MyISAM;
 
+show warnings;
+    
 create table  KeywordsTemp (
   id int not null primary key,
   keywords text,
@@ -329,11 +360,15 @@ create table  KeywordsTemp (
   imageAltText text
 ) engine=InnoDB;
 
+show warnings;
+
 create table Kingdoms (
     kingdom_id int primary key not null, 
     kingdom_name char(10) not null default '', 
     update_date date
 ) engine=InnoDB;
+
+show warnings;
 
 create table leech_list (
   ip int not null,
@@ -341,6 +376,8 @@ create table leech_list (
   index ip (ip asc),
   index `timestamp` (`timestamp` asc)
 ) engine=InnoDB;
+
+show warnings;
 
 create table leech_quotas (
   ip int primary key not null,
@@ -351,6 +388,8 @@ create table leech_quotas (
   challenge varchar(255) not null,
   index lastFlush (lastFlush asc)
 ) engine=InnoDB;
+
+show warnings;
 
 create table Locality (
     id int primary key not null, 
@@ -378,6 +417,8 @@ create table Locality (
     key locationoceanfk (continentOcean)
 ) engine=InnoDB;
 
+show warnings;
+
 create table Matrix (
     id int primary key not null, 
     numRows int, 
@@ -385,6 +426,8 @@ create table Matrix (
     gap char(5) default '-', 
     missing char(5) default '?'
 ) engine=InnoDB;
+
+show warnings;
 
 create table MatrixCell (
     id int primary key not null, 
@@ -396,6 +439,8 @@ create table MatrixCell (
     key MatrixCell_ibfk_1 (matrixId)
 ) engine=InnoDB;
 
+show warnings;
+
 create table MatrixCellValue (
     id int primary key not null auto_increment, 
     matrixId int, 
@@ -404,6 +449,8 @@ create table MatrixCellValue (
     `value` varchar(255) not null, 
     key Index_3 (matrixId, `row`, col)
 ) engine=InnoDB;
+
+show warnings;
 
 create table MbCharacter (
     id int primary key not null, 
@@ -415,6 +462,8 @@ create table MbCharacter (
     pubComment text, 
     key characterpubfk (publicationId)
 ) engine=InnoDB;
+
+show warnings;
 
 create table MBTeam (
     id int not null default 0, 
@@ -432,11 +481,15 @@ create table MBTeam (
     notes longtext
 ) engine=InnoDB;
 
+show warnings;
+
 create table MirrorInfo (
     serverId int not null default 1, 
     imageId int not null default 1, 
     primary key (serverId, imageId)
 ) engine=InnoDB;
+
+show warnings;
 
 create table MissingImages (
     id int not null, 
@@ -444,6 +497,8 @@ create table MissingImages (
     problems text,
     primary key (id)
 ) engine=InnoDB;
+
+show warnings;
 
 create table  MissingLinks (
   id int not null auto_increment primary key,
@@ -457,6 +512,8 @@ create table  MissingLinks (
   remoteDetailUrl varchar(512)
 ) engine=InnoDB;
 
+show warnings;
+
 create table News (
     id int primary key not null, 
     title varchar(255), 
@@ -467,10 +524,14 @@ create table News (
     `status` tinyint
 ) engine=InnoDB;
 
+show warnings;
+
 create table Otu (
     id int primary key not null, 
     label varchar(255)
 ) engine=InnoDB;
+
+show warnings;
 
 create table Publication (
     id int primary key not null,
@@ -502,11 +563,15 @@ create table Publication (
     issn varchar(255)
 ) engine=InnoDB;
 
+show warnings;
+
 create table RecentlyModified (
     id int primary key not null, 
     dateLastModified datetime, 
     objectTypeId varchar(255)
 ) engine=InnoDB;
+
+show warnings;
 
 create table RecentlyModifiedTemp (
     id int, 
@@ -515,10 +580,14 @@ create table RecentlyModifiedTemp (
     dependentTypeId varchar(255) 
 ) engine=InnoDB;
 
+show warnings;
+
 create table sequence (
     SEQ_NAME varchar(255), 
     SEQ_COUNT decimal(15, 0) 
 ) engine=InnoDB;
+
+show warnings;
 
 create table ServerInfo (
     serverId int not null auto_increment, 
@@ -541,6 +610,7 @@ create table ServerInfo (
     key ServerUser (admin)
 ) engine=InnoDB;
 
+show warnings;
 -- --------------------------------------------------------
 
 --
@@ -551,6 +621,8 @@ create table Sex (
     `name` varchar(255) primary key not null, 
     description varchar(255) not null default 'Not provided'
 ) engine=InnoDB;
+
+show warnings;
 
 -- --------------------------------------------------------
 
@@ -563,6 +635,8 @@ create table Spam (
     `code` varchar(255), 
     graphic varchar(255)
 ) engine=InnoDB;
+
+show warnings;
 
 -- --------------------------------------------------------
 
@@ -611,6 +685,8 @@ create table Specimen (
     key specbofrfk (basisOfRecordId)
 ) engine=InnoDB;
 
+show warnings;
+
 -- --------------------------------------------------------
 
 --
@@ -621,6 +697,8 @@ create table SpecimenPart (
     `name` varchar(255) primary key not null, 
     description varchar(255) not null default 'Not provided'
 ) engine=InnoDB;
+
+show warnings;
 
 -- --------------------------------------------------------
 
@@ -635,6 +713,8 @@ create table synonym_links (
     key syntsnfk (tsn), 
     key syntsnacceptedfk (tsn_accepted)
 ) engine=InnoDB;
+
+show warnings;
 
 -- --------------------------------------------------------
 
@@ -673,7 +753,7 @@ create table Taxa (
     key (taxon_author_id)
 ) engine=MyISAM;
 
-
+show warnings;
 
 CREATE TABLE TaxaTemp (
   tsn int(11) not null,
@@ -681,6 +761,7 @@ CREATE TABLE TaxaTemp (
   PRIMARY KEY  (tsn)
 ) ENGINE=MyISAM ;
 
+show warnings;
 
 -- --------------------------------------------------------
 
@@ -695,6 +776,8 @@ create table TaxonAuthors (
     kingdom_id smallint not null
 ) engine=InnoDB;
 
+show warnings;
+
 -- --------------------------------------------------------
 
 --
@@ -708,6 +791,8 @@ create table TaxonConcept (
     `status` varchar(255), 
     key (tsn)
 ) engine=InnoDB;
+
+show warnings;
 
 -- --------------------------------------------------------
 
@@ -745,6 +830,8 @@ create table TaxonomicUnits (
     key rankidfk (rank_id)
 ) engine=InnoDB;
 
+show warnings;
+
 -- --------------------------------------------------------
 
 --
@@ -761,6 +848,8 @@ create table TaxonUnitTypes (
     primary key (kingdom_id,rank_id),
     key rankIdKey (rank_id)
 ) engine=InnoDB;
+
+show warnings;
 
 -- --------------------------------------------------------
 
@@ -807,6 +896,8 @@ create table Tree (
     key sciname (scientificName)
 ) engine=InnoDB;
 
+show warnings;
+
 -- --------------------------------------------------------
 
 --
@@ -817,6 +908,8 @@ create table TypeStatus (
     `name` varchar(255) primary key not null, 
     description varchar(255)
 ) engine=InnoDB;
+
+show warnings;
 
 -- --------------------------------------------------------
 
@@ -858,6 +951,8 @@ create table `User` (
     key secondarytsn (secondaryTSN)
 ) engine=InnoDB;
 
+show warnings;
+
 -- --------------------------------------------------------
 
 --
@@ -877,6 +972,8 @@ create table UserGroup (
     key userId (userId)
 ) engine=InnoDB;
 
+show warnings;
+
 -- --------------------------------------------------------
 
 --
@@ -891,6 +988,8 @@ create table UserGroupKey (
     unique key Index_user_group using btree (userId, groupId), 
     key Index_group using btree (groupId)
 ) engine=InnoDB;
+
+show warnings;
 
 -- --------------------------------------------------------
 
@@ -908,6 +1007,8 @@ create table UserProperty (
     key Index_obj_name (objectId, `name`)
 ) engine=InnoDB;
 
+show warnings;
+
 -- --------------------------------------------------------
 
 --
@@ -922,6 +1023,8 @@ create table Vernacular (
     update_date date not null, 
     vern_id bigint not null default 0
 ) engine=InnoDB;
+
+show warnings;
 
 -- --------------------------------------------------------
 
@@ -953,6 +1056,9 @@ create table `View` (
     key viewTSN (viewTSN), 
     key formIdkey (form)
 ) engine=InnoDB;
+
+show warnings;
+
 -- --------------------------------------------------------
 
 --
@@ -964,6 +1070,8 @@ create table ViewAngle (
     description varchar(255), 
     primary key (`name`)
 ) engine=InnoDB;
+
+show warnings;
 
 -- --------------------------------------------------------
 
@@ -981,6 +1089,8 @@ create view Taxon as
             on((p.rank_id = t.rank_id) and (p.kingdom_id = t.kingdom_id)) 
         left join Kingdoms k on(t.kingdom_id = k.kingdom_id));
 
+show warnings;
+
 -- --------------------------------------------------------
 
 --
@@ -994,6 +1104,8 @@ create view TaxonBranch as
     from (Tree c join Tree p) 
     where (p.lft <= c.lft) and (p.rgt >= c.rgt) and (p.tsn <> 0);
 
+show warnings;
+    
 -- --------------------------------------------------------
 
 --
@@ -1005,6 +1117,8 @@ create view TaxonBranchNode as
         t.scientificName as scientificName,
         t.kingdom as kingdom, t.rank as rank, b.rankId as rankId
     from (TaxonBranch b join Taxon t on(b.tsn = t.tsn));
+
+show warnings;
 
 -- --------------------------------------------------------
 
