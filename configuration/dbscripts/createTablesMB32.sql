@@ -726,7 +726,7 @@ create table Taxa (
     id int primary key not null auto_increment, 
     boId int, 
     tsn bigint, 
-    scientificName varchar(2000) not null, 
+    scientificName varchar(255) not null, 
     taxon_author_id int, 
     taxon_author_name varchar(255), 
     `status` varchar(255), 
@@ -749,7 +749,7 @@ create table Taxa (
     unique key (tsn), 
     unique key (boId), 
     fulltext key (keywords),
-    
+    key (scientificName),
     key (taxon_author_id)
 ) engine=MyISAM;
 
@@ -867,7 +867,7 @@ create table Tree (
     unit_name3 varchar(255) default '', 
     unit_ind4 varchar(255) default '', 
     unit_name4 varchar(255) default '', 
-    scientificName varchar(2000), 
+    scientificName varchar(255), 
     taxon_author_id int, 
     letter char(1) default '', 
     `usage` varchar(255) not null default '', 
@@ -892,7 +892,8 @@ create table Tree (
     key letter (letter), 
     key lft (lft), 
     key rgt (rgt), 
-    key authorId (taxon_author_id)
+    key authorId (taxon_author_id),
+    key sciname (scientificName)
 ) engine=InnoDB;
 
 show warnings;
