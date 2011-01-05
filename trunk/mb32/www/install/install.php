@@ -54,6 +54,8 @@ if (!is_writable('../../log')) {
 						<li><label for="db_pass">Database Pass </label> <input type="password" id="db_pass" name="db_pass" value="<?php echo $_POST['db_pass'] ?>" /></li>
 						<li><label for="db_host">Database Host <em>*</em></label> <input type="text" id="db_host" name="db_host" value="<?php echo empty($_POST['db_host']) ? 'localhost' : $_POST['db_host'] ?>" /></li>
 						<li><label for="db_port">Database Port <em>*</em></label> <input type="text" id="db_port" name="db_port" value="<?php echo empty($_POST['db_port']) ? '3306' : $_POST['db_port'] ?>" /></li>
+						<li><label for="db_port">Object Min Id <em>*</em></label> <input type="text" id="db_object_min_id" name="db_object_min_id" value="<?php echo $_POST['db_object_min_id'] ?>" /> (Provided by Morphbank)</li>
+						<li><label for="db_port">Tsn Min Id <em>*</em></label> <input type="text" id="db_tsn_min_id" name="db_tsn_min_id" value="<?php echo $_POST['db_tsn_min_id'] ?>" /> (Provided by Morphbank)</li>
 					</ol>
 				</fieldset>
 				<fieldset><legend>Application Server Details</legend>

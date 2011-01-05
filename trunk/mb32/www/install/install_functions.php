@@ -236,6 +236,39 @@ function installApp() {
 	if (PEAR::isError($result)) {
 		return $result->getUserInfo();
 	}
+	
+	// Set min and max ids for object and tsn
+	$obj_min_id = $_POST['db_object_min_id'];
+	$obj_max_id = $obj_min_id + 499999;
+	$tsn_min_id = $_POST['db_tsn_min_id'];
+	$tsn_max_id = $tsn_min_id + 499999;
+	
+	// Update min and max id for object
+	$data = array($obj_min_id, $obj_max_id);
+	$sql = "update CurrentIds set minId = ?, maxId = ? where type = 'object'";
+	$stmt = $db->prepare($sql);
+	if (PEAR::isError($stmt)) {
+		return $stmt->getUserInfo();
+	}
+	$result = $statement->execute($data);
+	if (PEAR::isError($result)) {
+		return $result->getUserInfo();
+	}
+	$stmt->free();
+	
+	// Update min and max id for tsn
+	$data = array($tsn_min_id, $tsn_max_id);
+	$sql = "update CurrentIds set minId = ?, maxId = ? where type = 'tsn'";
+	$stmt = $db->prepare($sql);
+	if (PEAR::isError($stmt)) {
+		return $stmt->getUserInfo();
+	}
+	$result = $statement->execute($data);
+	if (PEAR::isError($result)) {
+		return $result->getUserInfo();
+	}
+	$stmt->free();
+	
 	return;
 }
 
