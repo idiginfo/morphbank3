@@ -30,7 +30,7 @@ if (!empty($id) && (!empty($imgType) || !empty($imgSize))  ) {
 	}
 
 	// redirect to imageserver with sessionId
-	if (isLoggedIn()) $sessionId = $_REQUEST['sessionId'];
+	if (isLoggedIn()) $sessionId = session_id();
 	$tag = getImageServerUrl($id,$imgType,$sessionId,$imgSize);
 	header("Status: 302 Temporary redirect");
 	header("Location: $tag");
