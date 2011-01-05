@@ -5,6 +5,9 @@ if (!is_writable('../../log')) {
 	$msg = "Application log directory must be writable";
 } else if (!is_writable('../../configuration')) {
 	$msg = "Application configuration directory must be writable";
+} else if (file_exists('../../configuration/config.ini')) {
+	die("/configuration/config.ini file already exists. Application is installed.");
+	exit;
 } else {
 	$msg = installApp();
 }
