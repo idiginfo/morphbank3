@@ -28,9 +28,8 @@ function searchUser() {
 	echo '<b>Name</b><input type="radio" name="type" value="name" '.$nameChecked.' />'."\n";
 	echo '<b>Email</b><input type="radio" name="type" value="email" '.$emailChecked.' />&nbsp;&nbsp;'."\n";
 	echo '<br /><br />';
-	echo '<input type="button" class="button smallButton" onClick="parent.location=\'/Admin/User/cv\'" style="float:right" value="View CVs" />';
-	echo '<input type="button" class="button smallButton" onClick="parent.location=\'/Admin/User/add\'" style="float:right; margin-right:20px;" value="Add User" />';
-	echo '<input type="submit" class="button smallButton" value="Search" style="float:right; margin-right:20px;" />'."\n";
+	echo '<input type="button" class="button smallButton" onClick="parent.location=\'/Admin/User/add\'" style="float:right" value="Add User" />';
+	echo '<input type="submit" class="button smallButton" value="Search" style="float:right; margin-right:20px;" />&nbsp;&nbsp;'."\n";
 	echo '</form>'."\n";
 	echo '<br />';
 	echo '<hr style="clear:both; margin-top:20px;" />';
@@ -149,7 +148,7 @@ function showForm($action, $row) {
 	if ($action == 'edit'){
 		$edit = true;
 		$formId = 'frmEditUser';
-		$userInfo = '<br /><br /><h2>'.$row['first_name'].' '.$row['last_name'].' with user id: '.$row['uin'].'</h2><br /><br />';
+		$userInfo = '<br /><br /><h2>'.$row['first_name'].' '.$row['last_name'].' with user id: '.$row['uin'].'</h2><br/<br/>';
 		$action = '/Admin/User/modifyUser.php';
 		$buttonText = 'Update';
 		$title = '<br /><h1>Update User</h1>';
