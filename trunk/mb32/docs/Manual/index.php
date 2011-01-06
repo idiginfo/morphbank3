@@ -12,10 +12,19 @@
 		<!--change the header below -->
 		<h1>Welcome to the Morphbank Users Manual</h1>
 		<div id=footerRibbon></div>
-<p>This online manual focuses on detailed directions for navigating and populating the Morphbank online database. 
-Last update of this documentation was made 
-  <!-- #BeginDate format:Am1 -->October 20, 2010<!-- #EndDate -->
-reflecting the latest software release of Morphbank v 3. There are links to instructions for uploading images via a Morphbank Excel Workbook or via XML at the  <a href="<?echo $domainName;?>About/Manual/submit.php">Preparing to Submit</a> manual page.</p>
+<p>This online manual focuses on:</p> 
+<ul>
+<li>detailed directions for navigating and populating the Morphbank online database via the web.</li> 
+<li>considerations and instructions for options to <em>bulk / mass upload data and images.</em></li>
+	<ul>
+    <li>There are links to instructions for uploading images via Excel, XML or Specify (in alpha-testing) at the  <a href="<?echo $domainName;?>About/Manual/submit.php">Preparing to Submit</a> manual page.</li>
+	</ul>
+<li>morphbank general topics, like copyright, image philosophy and system requirements.</li>
+</ul>
+
+<p>Last update of this documentation was made 
+  <!-- #BeginDate format:Am1 -->November 10, 2010<!-- #EndDate -->
+reflecting the latest software release of Morphbank v 3.</p>
 <!-- <div class="specialtext2">
 		<b>Quick videos:</b>
 		These videos (AVI) are being updated to reflect the latest changes to Morphbank software. New videos are added as they are made.
@@ -48,7 +57,7 @@ reflecting the latest software release of Morphbank v 3. There are links to inst
 </div>
 -->
 
-</p>
+
 <div class="specialtext3"><strong>Contributors to the Morphbank User Manual</strong>:
 Wilfredo Blanco, Robert Bruhn, Christopher Cprek, Andy Deans, Chantelle Dorsey, Cynthia Gaitros, David Gaitros, Neelima Jammigumpula, Karolina Maneva-Jakimoska, Austin Mast, Debbie Paul,
 Greg Riccardi, Fredrik Ronquist, Katja Seltmann, Steve Winner

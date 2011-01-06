@@ -30,7 +30,7 @@ or after the image data is deposited in Morphbank.
  Locality record, View record, etc.
 </li>
 <li>Published Morphbank images may be linked to any Web site or database for educational and non-profit purposes (see
-Morphbank copyright information <a href="<?echo $domainName;?>About/Copyright/" target="_blank">http://morphbank.net/About/Copyright/</a>).</li>
+Morphbank copyright information <a href="<?echo $domainName;?>About/Copyright/" target="_blank">http://www.morphbank.net/About/Copyright/</a>).</li>
 </ul>
 <hr align="left" width="650" height="5" color="#AAB0D0" />
 <h2>External Links - Adding to any Morphbank record</h2>
@@ -90,6 +90,7 @@ exactly as described above once the edit icon is clicked. Also links can be edit
 </div>
 
 <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image Record Show - sample External Links</h3>
+<br />
 <a href="<?echo $domainName;?>134312"><img src="ManualImages/external_link_sample.png" vspace="20" hspace="30"  /></a>
 <br />
 <hr align="left" width="650" height="5" color="#AAB0D0" />
@@ -120,21 +121,21 @@ should be linked back to the Morphbank record.
 <div class="specialtext2">
 <table cellpadding="2" cellspacing="2" border="1" hspace="30">
 <tr><th align="left">Base URL</th><th align="left">Morphbank Object Id</th><th align="left">Actual Internal Link to Morphbank</th><th align="left">What the Link Returns</th></tr>
-<tr><td>http://morphbank.net</td><td align="center">478760</td><td><a href="<?echo $domainName;?>?id=478760">http://morphbank.net/?id=478760</a></td><td>Morphbank Image Metadata + 400px image</td></tr>
-<tr><td>http://morphbank.net</td><td align="center">228716</td><td><a href="<?echo $domainName;?>?id=228716">http://morphbank.net/?id=228716</a></td><td>Morphbank Specimen Metadata + 400px image</td></tr>
-<tr><td>http://morphbank.net</td><td align="center">575098</td><td><a href="<?echo $domainName;?>?id=575098">http://morphbank.net/?id=575098</a></td><td>Morphbank Collection</td></tr>
-<tr><td>http://morphbank.net</td><td align="center">464413</td><td><a href="<?echo $domainName;?>?id=464413">http://morphbank.net/?id=464413</a></td><td>Morphbank Annotation</td></tr>
-<tr><td>http://morphbank.net</td><td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435">http://morphbank.net/?id=579435</a></td><td>Morphbank Image Metadata + 400px image</td></tr>
-<tr><td>http://morphbank.net</td><td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435&amp;imgType=jpeg">http://morphbank.net/?id=579435&amp;imgType=jpeg</a></td><td>Morphbank Image jpeg</td></tr>
-<tr><td>http://morphbank.net</td><td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435&amp;imgType=thumb">http://morphbank.net/?id=579435&amp;imgType=thumb</a></td><td>Morphbank thumbnail</td></tr>
-<tr><td height="32">http://morphbank.net</td>
-<td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435&amp;imgType=jpeg&amp;imgSize=500">http://morphbank.net/?id=579435&amp;imgType=jpeg&amp;imgSize=500</a></td><td>Morphbank Image with user-specified width</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">478760</td><td><a href="<?echo $domainName;?>?id=478760">http://www.morphbank.net/?id=478760</a></td><td>Morphbank Image Metadata + 400px image</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">228716</td><td><a href="<?echo $domainName;?>?id=228716">http://www.morphbank.net/?id=228716</a></td><td>Morphbank Specimen Metadata + 400px image</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">575098</td><td><a href="<?echo $domainName;?>?id=575098">http://www.morphbank.net/?id=575098</a></td><td>Morphbank Collection</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">464413</td><td><a href="<?echo $domainName;?>?id=464413">http://www.morphbank.net/?id=464413</a></td><td>Morphbank Annotation</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435">http://www.morphbank.net/?id=579435</a></td><td>Morphbank Image Metadata + 400px image</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435&amp;imgType=jpeg">http://www.morphbank.net/?id=579435&amp;imgType=jpeg</a></td><td>Morphbank Image jpeg</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435&amp;imgType=thumb">http://www.morphbank.net/?id=579435&amp;imgType=thumb</a></td><td>Morphbank thumbnail</td></tr>
+<tr><td height="32">http://www.morphbank.net</td>
+<td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435&amp;imgType=jpeg&amp;imgSize=500">http://www.morphbank.net/?id=579435&amp;imgType=jpeg&amp;imgSize=500</a></td><td>Morphbank Image with user-specified width</td></tr>
 </table>
 </div>
 
 <h2>Sample Internal Link</h2>
 <p>If the Contributor wishes to show the Image and Metadata for the Image, this is the Morphbank "Show" page for the Image Record.<br />
-The URL looks like: <a href="<?echo $domainName;?>?id=65847" target="_blank">http://morphbank.net/?id=65847</a><br />
+The URL looks like: <a href="<?echo $domainName;?>?id=65847" target="_blank">http://www.morphbank.net/?id=65847</a><br />
 and when clicked, opens the following page in Morphbank.</p>
 <img src="ManualImages/image_record_link_back.png" hspace="30"/>
 <br />

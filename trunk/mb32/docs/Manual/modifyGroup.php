@@ -21,42 +21,61 @@ Groups are usually formed by a set of individuals for the purpose of collaborati
 </div>
 
 <h3>Open Group Settings</h3>
-<p>To modify roles of existing group members or add / remove members to / from your Morphbank Group:
+<p>To modify roles of existing group members or add / remove members to / from your Morphbank Group:</p>
 <ul>
 <li>Login</li>
-<li>If you belong to more than one Morphbank Group, select Group from drop-down (see below), Or from <strong>Tools > Select Group</strong>, 
-</li>
+<li>If you belong to more than one Morphbank Group, select Group from drop-down (see below), Or from <strong>Tools > Select Group</strong>,</li>
 <li>If you are Coordinator of the Group selected you will now be able to go to: <strong>Tools > Group Settings</strong>.
+  <ul>
+    <li>If you are Coordinator of more than one Morphbank Group, you'll see a list of Groups here (instead of just one).</li>
+  </ul>
 </li>
-<li>Note after Group selection, your role in the group is displayed in the top left of the header, just under your name.
-</li>
+<li>Note after Group selection, your role in the group is displayed in the top left of the header, just under your name.</li>
 </ul>
 </p>
-<p>
 <strong>Tools > Group Settings</strong> opens the following screen:
 </p>
-<img src="ManualImages/group_settings.png" hspace="20"/>
+<br />
+<img src="ManualImages/tools_groupsettings.png" alt="show group information" hspace="40" vspace="5"/>
 
-<br />
-<br />
+<div class="specialtext3">
+<strong>Edit group</strong> allows one to change the name of an existing group and change the group status from active to inactive.
+<strong>Create Reviewer</strong> gives a Group Coordinator the ability to add a Group member that only has permissions to view the objects in the group.
+No editing or upload privileges are granted to a Reviewer.
+</div>
+
 <h3>Modify Group Membership</h3>
 <p>To add / remove group members OR to change the role of an existing member:
 <ul>
-<li>Click <strong>Modify members</strong> to open <strong>Select Group Membership</strong> page (see next screen shot).
-<li>All Morphbank members that can be added to the group are listed. Those already in your group have a check mark by their name.</li>
-<li>To add a member, click in the box next to their name, select their role in the group from the drop-down and click Update.
+<li>Click <strong>Modify members</strong> to open <strong>Modify Group Members</strong> page (see next screen shot).</li>
+
+<img src="ManualImages/modify_groupmembers.png" alt="show group members" hspace="20" vspace="10" />
+<li>All current members and their roles are listed.
+  <ul>
+    <li>Uncheck a box for a user and click Update to remove them from the group.</li>
+    <li>Change the  <a href="<?echo $domainName;?>About/Manual/userPrivileges.php">User Role</a> (coordinator, leadscientist, scientist, guest) for a group member using the drop-down menu, click Update.</li>
+    	<ul>
+        <li><strong>Only 1 Coordinator</strong> for each group.</li>
+        </ul>
+  </ul>
 </li>
-<li>To change the role of an existing member, choose the new role from the drop-down next to their name and click Update.
-</li>
-<li>To remove a group member, uncheck the box next to their name and click Update.
-</li>
+
+<li>To add new members, search for them. Search via radio buttons to select search method.</li>
+	<ul>
+    <li>Partial entries work. For example, Search=tom (via email) finds persons with 'tom' anywhere in their email address.</li>
+    <li>User Ids can be found via Morphbank Keyword Search by name. If they've contributed Images, you can click on the link showing their name to see their Morphbank User Id.</li>
+    <li>First Name and Last Name choices accept partial entries as well.</li>
+    <li>To see everyone whose last name begins with A, just put an A in the Search (by last name).</li>
+    </ul>
+<img src="ManualImages/group_addmembers.png" alt="add group members" hspace="40" vspace="10"/>
+
+<li>To add a member, click in the box next to their name, select their role in the group from the drop-down and click Add.</li>
 </ul>
-</p>
-<img src="ManualImages/select_group_membership.png" alt="select group membership" />
-<p>
+
+<img src="ManualImages/group_memberadded.png" alt="group member added" hspace="40" vspace="10"/>
+ 
 <div class="specialtext3"> Before uploading any objects to Morphbank, it is important to <em><strong>choose the Group</strong></em> with which you would like the object to be associated. In other words, if you the Morphbank Contributor belong to more than one group, select the appropriate group after login, <strong>before upload</strong>. If the object is to remain private, you will need to be in this group to see/edit/annotate the object. Other members of your group will also need to select this group after login to see these images.
 </div>
-
 <br />
 
 			<div id=footerRibbon></div>

@@ -30,7 +30,7 @@ work analogously throughout Morphbank to enhance the learning curve for users.
   </tr>
   <tr>
     <td align="center"><img src="../../style/webImages/magnifyShadow-trans.png" alt="FSIviewer icon"></td>
-	<td>This icon appears next to images in Morphbank. It is a link to the <a href="<?echo $domainName;?>About/Manual/bischen.php" target="_blank"><strong>Bischen image viewer</strong></a> which offers users the ability to zoom in / out and move around any image in Morphbank. Via <strong>Bischen image viewer</strong>, functionality to allow labels to be associated with images is under development.</td>
+	<td>This icon appears next to images in Morphbank. It is a link to the <a href="<?echo $domainName;?>About/Manual/zoomingViewer.php" target="_blank"><strong>Bischen image viewer</strong></a> which offers users the ability to zoom in / out and move around any image in Morphbank. Via the zooming viewer, functionality to allow labels to be associated with images is under development.</td>
     </tr>
   <tr>
   <td align="center"><img src="../../style/webImages/infoIcon.png" alt="information icon" /></td>

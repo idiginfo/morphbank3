@@ -13,34 +13,37 @@
 <div id=footerRibbon></div>
 			<!--<table class="manualContainer" cellspacing="0" width="100%">
 			<tr>-->
-<p>Publications added to the Morphbank database can be edited. A user may edit any publication
-they have entered into the system. Any group coordinator or lead scientist may also edit publications
-entered by anyone in their group. Publications may be related to any object
-in Morphbank including specimens, images, collections, annotations, views, and localities. 
-</p>
+<ul>
+<li>Publications added to the Morphbank database can be edited.</li>
+<li>A user may edit data for any publication they have entered into the system or submitted for some other contributor.</li>
+<li>Any group coordinator or lead scientist may also edit publications entered by anyone in their group.</li>
+<li>Publications may be related to any object in Morphbank including specimens, images, collections, annotations, views, and localities.</li>
+</ul>
 
 <div class="specialtext3">
 Paths to <strong>Edit Publication</strong>
-<br />
-<br />
-After <em>login</em> <strong>Header Menu > Tools > My Manager > Publications</strong>
+<ul>
+<li>After <em>login</em> <strong>Header Menu > Tools > My Manager > Publications</strong>
 <br />This path gives the user access to all publications they have entered. Use the <strong>Keyword Search</strong> and/or the <strong>Limit Search by</strong> feature to find specific
 publications.
-<br />
-After l<em>ogin</em> <strong>Header Menu > Browse > Publication > Find Publication</strong> and Click</strong> <img src="../../style/webImages/edit-trans.png" height="16" width="16" alt="edit icon">
+</li>
+<li>
+After l<em>ogin</em> <strong>Header Menu > Browse > Publication > keyword search for publication</strong> and Click</strong> <img src="../../style/webImages/edit-trans.png" height="16" width="16" alt="edit icon">
 <br />From this path, the user can see all the publications in the Morphbank database and will search to find the specific one to edit.
+</li>
+</ul>
 </div>
+
 Sample <strong>Edit Publication</strong> Screen
 <br /> 
-After <em>login</em>, then <strong>Header Menu > Tools > My Manager > Publications </strong> path:
+After <em>login</em>, then <strong>Header Menu > Tools > My Manager > Publications > keyword search > click Edit Icon</strong> path:
 <br />
 <br />
-<img src="ManualImages/edit_publication.png" alt="Edit Publication Screen">
+<img src="ManualImages/edit_publication.png" alt="Edit Publication Screen" hspace="20">
 
 <p>
 Data that must be entered on the <strong>Edit Publication</strong> screen varies 
-with the type of publication selected. Note the required fields are indicated by a <font color="red">*</font>.
-Fields that do not apply to a given publication type are grayed-out.</p>
+with the type of publication selected. Note the required fields are indicated by a <font color="red">*</font>.</p>
 
 <p>If a user is logged-in, they may <strong>Browse - Publications</strong> to find the publication they wish to edit. Once
 found, click on the <img src="../../style/webImages/edit-trans.png" height="16" width="16" alt="edit icon"> to open
@@ -48,7 +51,7 @@ the Edit Publication screen for this publication only.</p>
 Sample <strong>Edit Publication</strong> Screen
 <br /> from <strong>If logged-in> Browse> Publication> Find Publication and Click</strong> <img src="../../style/webImages/edit-trans.png" height="16" width="16" alt="edit icon">
 <br />
-<img src="ManualImages/browse_publication_to_edit.png" alt="Browse Publication Edit">
+<img src="ManualImages/browse_publication_to_edit.png" alt="Browse Publication Edit" hspace="20">
 
 <div class="specialtext3">Note: The person logged-in will be the name of the person that displays
 in the "Contributor" field above. If a Submitter is entering data on behalf of a Contributor, select the 
@@ -89,7 +92,7 @@ new entries to this list, please contact <strong>mbadmin <font color="blue">at</
 scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</strong>.
 </li>
 </ul>
-<p>Morphbank provides an option to add <strong>External Links</strong> to this record. For complete
+<p>Morphbank provides an option to add <strong>External Links</strong> and / or External Unique Identifiers to this record. For complete
 instructions on providing links refer to <a href="<?echo $domainName;?>About/Manual/externalLink.php">External Linking</a>
  in the <strong>Information Linking</strong> section of this manual.
 </p>
