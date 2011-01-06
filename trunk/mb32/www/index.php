@@ -24,7 +24,7 @@ if (!empty($id) && (!empty($imgType) || !empty($imgSize))  ) {
 	// request is for an image file
 
 	// get bots out of our images
-	if ($imgType!='jpg' && requesterIsBot()){
+	if ($imgType!='jpg' && $imgType!='thumbs' && requesterIsBot()){
 		header('HTTP/1.1 403 Forbidden');
 		die();
 	}
