@@ -39,7 +39,7 @@ if ($action == 'add' && $groupId != $config->adminGroup) {
 // If New user, check spam code
 if ($action == 'new') {
 	$codeArray = getSpamCode($_POST['spamid']);
-	if ($_POST['spamcode'] != strtolower($codeArray['code'])) {
+	if (strtolower($_POST['spamcode']) != strtolower($codeArray['code'])) {
 		header("location: $indexUrl&code=8&$queryString");
 	}	
 }
