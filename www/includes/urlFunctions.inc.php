@@ -256,7 +256,7 @@ function getImageServerUrl($objectId, $imageType, $sessionId = null, $imgSize = 
 		$url .= "&sessionId=".$sessionId;
 	}
 	if (!empty($imgSize)){
-		$url .= "&accessNum=".$accessNum;
+		$url .= "&imgSize=".$imgSize;
 	}
 	return $url;
 }
