@@ -59,12 +59,15 @@ function buildGroupTable($rows, $search = false) {
 	$html .= '<br /><br />'."\n";
 	$html .= '<table width="100%" border="1" cellpadding="5">'."\n";
 	if ($rows) {
-		$html .= '<tr><th>Group ID</th><th>Group Name</th><th>Group Role</th>';
-		$html .= '<th>Group Status</th><th></th><tr>'."\n";
+		$html .= '<tr><th>Group ID</th><th>Group Name</th><th>Group Role</th><th>Group Status</th><th></th><tr>'."\n";
 		foreach ($rows as $row) {
 			$html .= '<tr>'."\n";
 			$html .= '<td>'.$row['gid'].'</td>';
 			$html .= '<td>'.$row['groupname'].'</td>';
+			/*
+			 * $groupRole = empty($row['usergrouprole']) ? '' : $row['usergrouprole'];
+			$html .= '<td>'.$groupRole.'</td>';
+			 */
 			$html .= '<td>'.$row['usergrouprole'].'</td>';
 			$html .= '<td>' . ($row['status'] == 1 ? 'Public' : 'Private') . '</td>';
 			$html .= '<td>';
