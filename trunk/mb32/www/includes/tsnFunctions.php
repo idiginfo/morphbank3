@@ -229,7 +229,13 @@ function getTaxonBranchFromParent($tsn){
 			'rank'=>$rank);
 		$tsn = $parentTsn;
 	}
-	return $taxonBranch;
+        $rows = count($taxonBranch);
+        $branch = array();
+        // reverse the list
+        for ($i = 0; $i < $rows; $i++) {
+                $branch[$rows-1-$i]=$taxonBranch[$i];
+        }
+        return $branch;
 }
 
 
