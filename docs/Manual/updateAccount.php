@@ -21,7 +21,7 @@
 <li><strong>Header Menu > Tools > Account Settings</strong></li>
 <br />
 <li>Edit as needed, click <img src="ManualImages/update_button.png" align="middle"  alt="Update button" /></li>
-<li>Grayed-out fields need changing? Contact 
+<li>Grayed-out field need changing? Contact 
 <strong>mbadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</strong></li>
 </ul>
 </p>
