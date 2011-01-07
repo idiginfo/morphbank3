@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -19,7 +19,7 @@
 <ul>
 <li>Those with a Morphbank account, enter current User Name and Password > click <strong>Login.</strong></li>
 <li>For a new user account, from 
-<a href="<?echo $domainName;?>About/Introduction/" target="_blank">http://www.morphbank.net/About/Introduction/</a>,
+<a href="<?echo $config->domain;?>About/Introduction/" target="_blank">http://www.morphbank.net/About/Introduction/</a>,
 go to: 
 <br />
 <strong> Header Menu > Tools > Login > click the <font color="blue">user account</font> link</strong> to access
@@ -66,12 +66,12 @@ automatically direct the user back to the add specimen screen and the appropriat
 
 <!--<div class="specialtext3">
 If a new taxon name needs to be added select the <img src="ManualImages/add_new_taxon_button.gif" /> button that is
-visible from the family level. The <a href="<?echo $domainName;?>About/Manual/addTaxonName.php">Add Taxon Name</a> screen will popup. (This option is
+visible from the family level. The <a href="<?echo $config->domain;?>About/Manual/addTaxonName.php">Add Taxon Name</a> screen will popup. (This option is
 only available for authorized users.) New applicants will need to interrupt the
 application process and contact 
 <strong>mbadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</strong> if they need a particular
 Taxon added before choosing their Privilege/Primary/Secondary TSN. For
-complete instructions on this process see the <a href="<?echo $domainName;?>About/Manual/addTaxonName.php">Add Taxon Name</a> section of
+complete instructions on this process see the <a href="<?echo $config->domain;?>About/Manual/addTaxonName.php">Add Taxon Name</a> section of
 this manual.
 </div>
 -->
@@ -98,8 +98,8 @@ the email you entered on this form.
 
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/updateAccount.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/updateAccount.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

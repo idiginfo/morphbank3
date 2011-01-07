@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -51,8 +51,8 @@ Sort criteria for images are listed next.
 <p>Use the <img src="ManualImages/reset.gif" alt="reset button" /> to clear the Keyword Search and Sort By boxes of all criteria.</p>
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/myManagerAll.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/myManagerAll.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 	<?php

@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -61,11 +61,11 @@ There is no limit on the number of annotations a user may have. Use the <strong>
 	
 	</li>
 	<li><strong>Icons</strong>: Click to jump to the 
-	<a href="<?echo $domainName;?>About/Manual/graphicGuide.php" target="_blank" >guide to Morphbank graphics</a> for a thorough
+	<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" target="_blank" >guide to Morphbank graphics</a> for a thorough
 	overview.
 		<ul>
 	
-	<li>In Morphbank, the <img src="<?echo $domainName;?>/style/webImages/infoIcon-trans.png" />
+	<li>In Morphbank, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" />
 	 <strong>information</strong> icon opens a feature called <strong>Single Show</strong> that varies with
 	 the object. In general, one sees metadata about the object; in this case, the Annotation Record Show opens. Note once
 	 the Annotation Record is open, a user can click on <strong>Add Annotation</strong> to add another comment to the
@@ -74,34 +74,34 @@ There is no limit on the number of annotations a user may have. Use the <strong>
 	 <img src="../../style/webImages/edit-trans.png" /> <strong>edit icon</strong> opens the original screen where the user
 	 entered the Annotation information. If the Annotation is not yet published, the annotator may make changes here.
 	 Complete instructions on this area can be found in the 
-	 <a href="<?echo $domainName;?>About/Manual/annotationEdit.php">Edit Annotation</a> section.</li>
+	 <a href="<?echo $config->domain;?>About/Manual/annotationEdit.php">Edit Annotation</a> section.</li>
 	
-	<li>Use the  <img src="<?echo $domainName;?>/style/webImages/calendar.gif" /> <strong>calendar</strong>
+	<li>Use the  <img src="<?echo $config->domain;?>/style/webImages/calendar.gif" /> <strong>calendar</strong>
 	icon  to easily change the
 	date to make an object visible to all who use Morphbank or extend the time the object remains private.</li>
 	<p>Users may change the date-to-publish to <strong>today</strong> by clicking on the "Publish now" 
 	link for any of their own objects or click on the date and change the date on a calendar pop-up.</p>
 	
-	<li>With <img src="<?echo $domainName;?>/style/webImages/delete-trans.png" />, the user may <strong>delete
+	<li>With <img src="<?echo $config->domain;?>/style/webImages/delete-trans.png" />, the user may <strong>delete
 	</strong> an object in Morphbank (only available if the object is not published).</li>
 		</ul>
 	<li><strong>Annotation type</strong>: Note the types of Annotations seen in the above screen shot (Determination,
 	General and Taxon Name). There are currently five types of annotations possible:
 <strong>Determination</strong>, <strong>General</strong>, <strong>Legacy</strong>, 
-<strong>.XML </strong> and <strong>Taxon Name</strong> (see <a href="<?echo $domainName;?>About/Manual/annotation.php">Types of Annotations</a>).</li>
+<strong>.XML </strong> and <strong>Taxon Name</strong> (see <a href="<?echo $config->domain;?>About/Manual/annotation.php">Types of Annotations</a>).</li>
 	</li>
 </ul>
 
 <h3>More Annotation Topics</h3><br />
-<p><a href="<?echo $domainName;?>About/Manual/annotation.php" target="_blank"><strong>What is an Annotation?/ Types of Annotations</strong></a>
+<p><a href="<?echo $config->domain;?>About/Manual/annotation.php" target="_blank"><strong>What is an Annotation?/ Types of Annotations</strong></a>
 <br />
-<a href="<?echo $domainName;?>About/Manual/annotationAdd.php" target="_blank"><strong>How and Where to Add an Annotation</strong></a>
+<a href="<?echo $config->domain;?>About/Manual/annotationAdd.php" target="_blank"><strong>How and Where to Add an Annotation</strong></a>
 <br />
-<a href="<?echo $domainName;?>About/Manual/annotationEdit.php" target="_blank"><strong>Editing an Annotation</strong></a>
+<a href="<?echo $config->domain;?>About/Manual/annotationEdit.php" target="_blank"><strong>Editing an Annotation</strong></a>
 <br />
-<a href="<?echo $domainName;?>About/Manual/annotationShow.php" target="_blank"><strong>What does an Annotation Single Show look like?</strong></a>
+<a href="<?echo $config->domain;?>About/Manual/annotationShow.php" target="_blank"><strong>What does an Annotation Single Show look like?</strong></a>
 <br />
-<a href="<?echo $domainName;?>About/Manual/annotate_taxon_name.php" target="_blank"><strong>How to Annotate a taxon name</strong></a>
+<a href="<?echo $config->domain;?>About/Manual/annotate_taxon_name.php" target="_blank"><strong>How to Annotate a taxon name</strong></a>
 </p>
 
 <h3>Creating Collections of Annotations</h3>
@@ -117,7 +117,7 @@ tabs so that more objects can be added to the same collection.
 </div>
 
 
-<h3>Clicking the <img src="<?echo $domainName;?>/style/webImages/infoIcon-trans.png" />
+<h3>Clicking the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" />
  <strong>info icon</strong>
 opens the <strong>Annotation Record (Single) Show</strong> </h3>
 <br />
@@ -148,8 +148,8 @@ additional annotation of any type to the selected object. Directions for this pr
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/annotation.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/annotation.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

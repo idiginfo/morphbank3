@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -61,7 +61,7 @@ other sort criteria that was selected.
 <br />
 <br />
 The Sort feature of Morphbank is explained in detail in
- <a href="<?echo $domainName;?>About/Manual/browseSort.php">Browse - Sort Search Results</a>
+ <a href="<?echo $config->domain;?>About/Manual/browseSort.php">Browse - Sort Search Results</a>
 <br />
 <br />
 Sort criteria options for Browse-Collections include:
@@ -82,8 +82,8 @@ Sort criteria options for Browse-Collections include:
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/browseP.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/browseP.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 		<?php

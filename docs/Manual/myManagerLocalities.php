@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -32,13 +32,13 @@
 	
 	<ul>
 	
-	<li><a href="<?echo $domainName;?>About/Manual/manualHints.php" ><img src="ManualImages/feedback.png" alt="feedback link" align="middle" /></a>: please use this link to our automated feedback system. 
+	<li><a href="<?echo $config->domain;?>About/Manual/manualHints.php" ><img src="ManualImages/feedback.png" alt="feedback link" align="middle" /></a>: please use this link to our automated feedback system. 
 	We appreciate your comments so that we can continue to improve and enhance Morphbank. Clicking on <strong><font color="red">(Help)</font></strong> opens this Manual.</li>
 	
-	<li><a href="<?echo $domainName;?>/About/Manual/myManagerFeatures.php" ><strong>Keywords: </strong></a> To use this powerful search feature, hold the mouse over the Keywords box to see a list of fields the Keywords queries. Enter a term or terms. Note that searches are <em>boolean <strong>and</strong></em>. Partial words can also be entered as all terms entered are <strong>wild-carded.</strong> Hover over to see a list of
+	<li><a href="<?echo $config->domain;?>/About/Manual/myManagerFeatures.php" ><strong>Keywords: </strong></a> To use this powerful search feature, hold the mouse over the Keywords box to see a list of fields the Keywords queries. Enter a term or terms. Note that searches are <em>boolean <strong>and</strong></em>. Partial words can also be entered as all terms entered are <strong>wild-carded.</strong> Hover over to see a list of
 	fields the Keywords accesses. See the yellow note above.</li>
 	
-	<li><a href="<?echo $domainName;?>/About/Manual/myManagerFeatures.php" ><strong>Limit Search by:</strong></a> allows a user to view	only the objects personally contributed/submitted AND/OR those from a particular group. Use the 
+	<li><a href="<?echo $config->domain;?>/About/Manual/myManagerFeatures.php" ><strong>Limit Search by:</strong></a> allows a user to view	only the objects personally contributed/submitted AND/OR those from a particular group. Use the 
 	Header Menu <strong>Tools > Select Group > Choose group from sub-menu</strong> feature to change groups OR use the 
 	<strong>Group</strong> link in the Header on the left side of the Main Screen under User name.</li>
 	
@@ -48,7 +48,7 @@
 	 user wishes to collect all the Localities on a given page into a collection, use the <strong>Check All</strong> button,
 	 then <strong>Select Mass Operation > Create new collection > click Submit button.</strong></li>
 	
-	<li><a href="<?echo $domainName;?>About/Manual/myManagerFeatures.php" ><strong>Select Mass Operation:</strong></a> 
+	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Select Mass Operation:</strong></a> 
 	After checking one or more Localities with the <strong>check
 	box</strong> feature, options in the drop-down of <strong>Select Mass Operation</strong> can be applied to all
 	the Localities checked. An example would be: gathering all the checked Localities into a new or existing collecion.</li>
@@ -56,18 +56,18 @@
 	<li><strong>Submit</strong>: Click this button to carry out the <strong>Mass Operation</strong> selected.</li>
 	
 	<li><strong>Icons</strong>: The <strong>icons</strong> and their functions are explained fully in Morphbank 
-	<a href="<?echo $domainName;?>About/Manual/graphicGuide.php" >Guide to Graphic Buttons</a>. An abbreviated 
-	explanation can be found on the <a href="<?echo $domainName;?>About/Manual/myManagerAll.php" >All</a> page
+	<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" >Guide to Graphic Buttons</a>. An abbreviated 
+	explanation can be found on the <a href="<?echo $config->domain;?>About/Manual/myManagerAll.php" >All</a> page
 	for My Manager. 
 	
 		<ul>
-		<li>The <img src="<?echo $domainName;?>/style/webImages/infoIcon-trans.png" /> icon	shows metadata for the object, 
-		in this case the Locality in a format that Morphbank refers to as the <a href="<?echo $domainName;?>About/Manual/show.php" >Show.</a>
+		<li>The <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon	shows metadata for the object, 
+		in this case the Locality in a format that Morphbank refers to as the <a href="<?echo $config->domain;?>About/Manual/show.php" >Show.</a>
 		</li>
-		<li>Using the <img src="<?echo $domainName;?>/style/webImages/edit-trans.png" /> <strong>Edit</strong> icon gives users access to 
+		<li>Using the <img src="<?echo $config->domain;?>/style/webImages/edit-trans.png" /> <strong>Edit</strong> icon gives users access to 
 		change/update data for any <strong>Localities</strong> they've contributed/submitted.
 		</li>
-		<li>Note the <img src="<?echo $domainName;?>style/webImages/camera-min.gif" width="16" height="16"> is a link to all 
+		<li>Note the <img src="<?echo $config->domain;?>style/webImages/camera-min.gif" width="16" height="16"> is a link to all 
 		images in Morphbank linked to this particular Locality.
 		</li>
 		</ul>
@@ -86,30 +86,30 @@ together creating a collection, follow the steps in the box next:
 	<li>Click the <img src="ManualImages/submit_button.gif"> to perform the <strong>Mass Operation</strong> selected.
 	</li>
     <li>Any <strong>Collections</strong> created can be seen in the 
-	 <a href="<?echo $domainName;?>About/Manual/myManagerCollections.php" >Collections</a> tab.</li>
+	 <a href="<?echo $config->domain;?>About/Manual/myManagerCollections.php" >Collections</a> tab.</li>
 	</ul>
 	
 	</div>
 </li>		
 </ul>
 
-<a href="<?echo $domainName;?>About/Manual/uploadSubmitLocality.php" ><h3>Add a Locality to Morphbank</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/uploadSubmitLocality.php" ><h3>Add a Locality to Morphbank</h3></a>
 <br />
 <br />
-<a href="<?echo $domainName;?>About/Manual/edit.php" ><h3>Edit a Locality in Morphbank</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/edit.php" ><h3>Edit a Locality in Morphbank</h3></a>
 <br />
 <br />
-<a href="<?echo $domainName;?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
 <br />
 <br />
-<a href="<?echo $domainName;?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
 <br />
 <br />
 				
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/myManagerTaxa.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/myManagerTaxa.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</tr>
 				</div>

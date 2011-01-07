@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -19,7 +19,7 @@
 <strong>User Login</strong>: Morphbank users who wish to access, add and modify data will
 be required to login into the system with a valid username and password
 issued by Morphbank. To obtain a username and password go to the <strong>Header Menu > Tools > Login</strong> and then click on
-<a href="<?echo $domainName;?>About/Manual/loginUsername.php#newAccount">Request a Morphbank User Account</a> in the Login Box.
+<a href="<?echo $config->domain;?>About/Manual/loginUsername.php#newAccount">Request a Morphbank User Account</a> in the Login Box.
 Alternatively, contact the Morphbank admin. group at <strong>mbadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font>  edu</strong>. 
 After login, members see a list of the groups to which they belong. 
 Without login, only published (public) information that can be browsed or searched by the casual user (specimen,
@@ -107,15 +107,15 @@ to make, edit, or annotate a personal collection or view, edit or annotate
 collections from other members of the same group.
 
 <div class="specialtext3">
-<strong><a href="<?echo $domainName;?>About/Manual/myManager.php" target="_blank">My Manager</a></strong> is Morphbank's user-interface. All users have access to this updated interface. Those with Morphbank accounts login to access additional features and functions. With My Manager, all objects in Morphbank are searchable via an <em>enhanced Keyword
+<strong><a href="<?echo $config->domain;?>About/Manual/myManager.php" target="_blank">My Manager</a></strong> is Morphbank's user-interface. All users have access to this updated interface. Those with Morphbank accounts login to access additional features and functions. With My Manager, all objects in Morphbank are searchable via an <em>enhanced Keyword
 Search</em> and logged-in users can easily sort and <em>limit</em> searches to create, display, collect, edit, and annotate particular sets of objects.
 </div>
 			<br />
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/graphicGuide.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 		

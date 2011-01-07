@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -93,7 +93,7 @@ scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</strong>
 </li>
 </ul>
 <p>Morphbank provides an option to add <strong>External Links</strong> and / or External Unique Identifiers to this record. For complete
-instructions on providing links refer to <a href="<?echo $domainName;?>About/Manual/externalLink.php">External Linking</a>
+instructions on providing links refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a>
  in the <strong>Information Linking</strong> section of this manual.
 </p>
 <p>
@@ -106,8 +106,8 @@ publications or return to the <strong>Edit Publication</strong> screen.
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/customWorkbook.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/customWorkbook.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

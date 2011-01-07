@@ -1,6 +1,6 @@
 <?php 
 	global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -14,7 +14,7 @@
 <div id=footerRibbon></div>
 
 <!--<div class="specialtext2">
-<a href="<?echo $domainName;?>About/Manual/Movies/Edit_Specimen_Determination.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Edit Specimen Determination</strong> in Morphbank:<a href="<?echo $domainName;?>About/Manual/Movies/Edit_Specimen_Determination.avi" target='_blank'>video</a>
+<a href="<?echo $config->domain;?>About/Manual/Movies/Edit_Specimen_Determination.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Edit Specimen Determination</strong> in Morphbank:<a href="<?echo $config->domain;?>About/Manual/Movies/Edit_Specimen_Determination.avi" target='_blank'>video</a>
 </div>
 -->
 <div class="specialtext2">
@@ -108,16 +108,16 @@ Morphbank with Type of Name being 'regular scientific name' Then add an annotati
 </div>
 
 <p>Jump to 
-<a href="<?echo $domainName;?>About/Manual/addTaxonName.php">Add New Taxon Name</a> for more information about the fields for Add/Edit
+<a href="<?echo $config->domain;?>About/Manual/addTaxonName.php">Add New Taxon Name</a> for more information about the fields for Add/Edit
  Taxon Name.  However, if you find other Taxon Name errors or wish to comment on 
-names you cannot directly edit you may <a href="<?echo $domainName;?>About/Manual/annotate_taxon_name.php">Annotate Taxon Names</a>.
+names you cannot directly edit you may <a href="<?echo $config->domain;?>About/Manual/annotate_taxon_name.php">Annotate Taxon Names</a>.
 </p>
 			<br />
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/edit_publications.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/edit_publications.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 				</div>
 		

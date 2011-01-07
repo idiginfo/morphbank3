@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -19,7 +19,7 @@
 <dl>
 <dt><strong>ABCD</strong></dt> 
 <dd>Stands for <a href="http://www.bgbm.org/TDWG/CODATA/Schema/" title="ABCD Schema">Access to Biological 
-Collection Data</a>. A naming schema. Morphbank schema most closely matches Darwin Core. Follow this link to an <a href="http://rs.tdwg.org/dwc/terms/history/dwctoabcd/index.htm" title="ABCD - Darwin Core Map">ABCD - Darwin Core Map.</a> Here is a schema for <a href="<?echo $domainName;?>About/Manual/dwcabcdmb.php">Morphbank - Darwin Core - ABCD</a></dd>
+Collection Data</a>. A naming schema. Morphbank schema most closely matches Darwin Core. Follow this link to an <a href="http://rs.tdwg.org/dwc/terms/history/dwctoabcd/index.htm" title="ABCD - Darwin Core Map">ABCD - Darwin Core Map.</a> Here is a schema for <a href="<?echo $config->domain;?>About/Manual/dwcabcdmb.php">Morphbank - Darwin Core - ABCD</a></dd>
 <dt><strong>Administrator</strong></dt>
 <dd>There are very few individuals given administrator privileges. An administrator has complete access to all 
 data and in addition can add/modify and/delete news, base or master tables. Only someone with administrative privileges can 
@@ -27,7 +27,7 @@ add new users and create groups for which there is no associated taxon. Those wi
 in all groups and are responsible for managing the entire Morphbank system.
 </dd>
 <dt><strong>Angle</strong></dt>
-<dd>In <a href="<?echo $domainName;?>About/Manual/uploadSubmitView.php" title="What is a Morphbank View &amp; How to Submit one to Morphbank">Views</a> section, the location of the camera with respect to the specimen for photographing
+<dd>In <a href="<?echo $config->domain;?>About/Manual/uploadSubmitView.php" title="What is a Morphbank View &amp; How to Submit one to Morphbank">Views</a> section, the location of the camera with respect to the specimen for photographing
 </dd>
 <dt><strong>API</strong></dt>
 <dd>The <a href="http://morphbank.net/schema/API1.html" title="Current API for Morphbank web services">application programming interface (API)</a> for <a href="http://services.morphbank.net/mb3/" title="Morphbank Web Services">services.morphbank.net/mb3/</a> describes how the query is put together and reveals what search combinations are possible. Currently contributors to Morphbank may use <a href="http://services.morphbank.net/mb3/">services.morphbank.net/mb3/</a> to perform searches on the Morphbank database. In the future, it will be possible to Insert (Put) data into Morphbank as well as Update (Push) data into Morphbank via <em>web services</em>. For those wondering just what <em>restful services</em> are, try the humorous introduction at <a href="http://tomayko.com/writings/rest-to-my-wife" title="RESTful services explained">How I Explained REST to My Wife.</a>
@@ -40,11 +40,11 @@ options is based on the Darwin Core standard <a href="http://rs.tdwg.org/dwc/ter
 <dt><strong>Collection Name</strong></dt>
 <dd>Name given to a Morphbank Collection by the collection's creator
 </dd>
-<dt><strong><a href="<?echo $domainName;?>About/Manual/myManagerCollectionsDefined.php" title="What is a Morphbank Collection?">Collections</a></strong></dt>
+<dt><strong><a href="<?echo $config->domain;?>About/Manual/myManagerCollectionsDefined.php" title="What is a Morphbank Collection?">Collections</a></strong></dt>
 <dd>Groups of specimen images or any objects in Morphbank assembled from the Morphbank database by Morphbank members for the purpose 
 of manipulating, viewing, or storing for future use.
 </dd>
-<dt><strong><a href="<?echo $domainName;?>About/Manual/characterCollections.php" title="What is a Morpbhbank Character Collection?" >Character Collection</a></strong></dt>
+<dt><strong><a href="<?echo $config->domain;?>About/Manual/characterCollections.php" title="What is a Morpbhbank Character Collection?" >Character Collection</a></strong></dt>
 <dd>A kind of Morphbank collection that contains tools to define a character and its states.
 </dd>
 <dt><strong>Collector Name</strong></dt>
@@ -54,7 +54,7 @@ of manipulating, viewing, or storing for future use.
 <dd>Person having the authority to release the images for publication into Morphbank.
 </dd>
 <dt><strong>Coordinator</strong></dt>
-<dd>Associated with <a href="<?echo $domainName;?>About/Manual/userPrivileges.php" title="More about Morphbank Roles, Groups, Coordinators, ...">roles</a> within a <a href="<?echo $domainName;?>About/Manual/selectGroup.php" title="How to Select a Group">Morphbank Group</a>, a Coordinator has the same privileges as Lead Scientist 
+<dd>Associated with <a href="<?echo $config->domain;?>About/Manual/userPrivileges.php" title="More about Morphbank Roles, Groups, Coordinators, ...">roles</a> within a <a href="<?echo $config->domain;?>About/Manual/selectGroup.php" title="How to Select a Group">Morphbank Group</a>, a Coordinator has the same privileges as Lead Scientist 
 and each group may only have one Coordinator. In order to be assigned as a Group Coordinator, you 
 must have lead scientist privileges for that group or have been assigned by the Morphbank administration. 
 A Coordinator can add / remove group members, change a user's role in the group, as well as request spin-off 
@@ -72,7 +72,7 @@ Morphbank uses many of the Darwin Core-defined fields from Darwin Core 1.2 (Clas
 <dt><strong>Date collected</strong></dt>
 <dd> The date the specimen (or sample) was collected.
 </dd>
-<dt><strong><a href="<?echo $domainName;?>About/HowToContribute/" title="More information about this process">Delivered uploading</a></strong></dt>
+<dt><strong><a href="<?echo $config->domain;?>About/HowToContribute/" title="More information about this process">Delivered uploading</a></strong></dt>
 <dd> Morphbank offers a service called delivered uploading. We provide an already prepared 
 Excel Data Entry Workbook and the corresponding user's manual. The contributors can deliver to Morphbank 
 a CD or DVD containing images and an Excel<sup>&copy;</sup> Data Entry Workbook populated with information ready for upload.
@@ -86,7 +86,7 @@ a CD or DVD containing images and an Excel<sup>&copy;</sup> Data Entry Workbook 
 <dt><strong>Download</strong></dt>
 <dd>The user receives data from a remote computer. 	 
 </dd>
-<dt><strong><a href="<?echo $domainName;?>About/Manual/externalLink.php" title="How to guide for URLs to &amp; from Morphbank Objects">External Links</a></strong></dt>
+<dt><strong><a href="<?echo $config->domain;?>About/Manual/externalLink.php" title="How to guide for URLs to &amp; from Morphbank Objects">External Links</a></strong></dt>
 <dd>References the ability of the Morphbank database to store URL website links associated 
 Morphbank objects. 	 
 </dd>
@@ -193,7 +193,7 @@ data.
 <dd>Gender of specimen
 </dd>
 <dt><strong><a href="http://services.morphbank.net/mb3/" title="Go to the Morphbank Services website">services.morphbank.net</a></strong></dt>
-<dd>Web services are currently available for Morphbank contributors to query Morphbank and return output in a variety of formats (XML, Thumbnails, RDF) as well as set up RSS feeds. Go to the Morphbank User Manual section <a href="<?echo $domainName;?>About/Manual/services.php">Morphbank Web Services</a> for details.</dd>
+<dd>Web services are currently available for Morphbank contributors to query Morphbank and return output in a variety of formats (XML, Thumbnails, RDF) as well as set up RSS feeds. Go to the Morphbank User Manual section <a href="<?echo $config->domain;?>About/Manual/services.php">Morphbank Web Services</a> for details.</dd>
 <dt><strong>sftp, smtp</strong></dt>
 <dd>Secure File Transfer Protocol (used for transferring files over the internet), Simple Mail Transfer Protocol 
 (used for transferring email from one server to another) 	 
@@ -259,8 +259,8 @@ specimen in the image.
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/screenTips.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/screenTips.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 		

@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -118,7 +118,7 @@ the ITIS database.
 Displayed from the information icon <img src="../../style/webImages/infoIcon.png" /> on the 
 <strong>Browse Images</strong> page. This page displays information unique to this image. 
 Morphbank Single Show is an efficient way to display large amounts of information. For complete
-documentation on single show refer to <a href="<?echo $domainName;?>About/Manual/show.php">Morphbank Show</a> in the Information
+documentation on single show refer to <a href="<?echo $config->domain;?>About/Manual/show.php">Morphbank Show</a> in the Information
 Linking section of this manual.
 <br />
 <br />
@@ -128,8 +128,8 @@ Linking section of this manual.
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/browseTaxonN.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/browseTaxonN.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 			<?php

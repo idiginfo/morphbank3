@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -21,7 +21,7 @@ an <font color="red">*</font> is a required field and must be completed before s
 </p>
 <!--
 <div class="specialtext2">
-<a href="<?echo $domainName;?>About/Manual/Movies/SubmitSpecimen.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a Specimen</strong>: <a href="<?echo $domainName;?>About/Manual/Movies/SubmitSpecimen.avi" target='_blank'> video</a>
+<a href="<?echo $config->domain;?>About/Manual/Movies/SubmitSpecimen.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a Specimen</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/SubmitSpecimen.avi" target='_blank'> video</a>
 </div>
 -->
 <p>Path to <strong>Add Specimen</strong>: <em>header menu</em><strong> > Tools > Submit > Specimen</strong>
@@ -98,7 +98,7 @@ in.
 If a new taxon name needs to be added select the <strong>Add New Taxon</strong> button that is
 visible from the family level. The <strong>Add Taxonomic Name</strong> screen will popup. (This option is
 only available for authorized users.) For complete instructions on this process
-see the <a href="<?echo $domainName;?>About/Manual/addTaxonName.php">ITIS, Add Taxon Name</a> section of this manual.
+see the <a href="<?echo $config->domain;?>About/Manual/addTaxonName.php">ITIS, Add Taxon Name</a> section of this manual.
 </li>
 <br />
 <li><strong>Determined By</strong><br />
@@ -211,7 +211,7 @@ scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</strong>
 </li>
 <br />
 <li><strong>Add External Links</strong> to this record. For complete
-instructions on providing external links refer to <a href="<?echo $domainName;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External Links</font> to open this feature. See next: <br/>
+instructions on providing external links refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External Links</font> to open this feature. See next: <br/>
 </li>
 <img src="ManualImages/add_externalLinksRef.png" alt="external link options" hspace="20" vspace="10"/>
 	<ul>
@@ -224,7 +224,7 @@ instructions on providing external links refer to <a href="<?echo $domainName;?>
    <br />
 	</ul> 
 <li><strong>Add External References</strong> to this record. For complete
-instructions on providing external references refer to <a href="<?echo $domainName;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External References</font> to open this feature. See next:<br/>
+instructions on providing external references refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External References</font> to open this feature. See next:<br/>
 <img src="ManualImages/add_externalRefs.png" alt="external identifiers" hspace="20" vspace="10"/>
 <ul>
     <li>Enter the <strong>Description</strong> for the External Reference. This will appear to the Morphbank user as a label in front of the unique id.
@@ -261,8 +261,8 @@ form.
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/uploadSubmitView.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/uploadSubmitView.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

@@ -1,6 +1,6 @@
 <?php 
 	global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -31,7 +31,7 @@ Morphbank is open to any biologist interested in storing and
 sharing digital images of organisms. A major advantage of Morphbank is that images
 and data associated with them are maintained in a system based on open standards
 and free software, facilitating the development of tools for image uploading, retrieval,
-annotation, and related tasks. The <a href="<?echo $domainName;?>About/Team" target="_blank">Morphbank team</a> is currently working on a range
+annotation, and related tasks. The <a href="<?echo $config->domain;?>About/Team" target="_blank">Morphbank team</a> is currently working on a range
 of such tools. The Morphbank team is also working together with other developers
 on connecting their software to the Morphbank system.<br />
 <br />
@@ -53,7 +53,7 @@ repositories of biological images.<br />
 <a href="javascript:window.close();">Close Window</a>
 <br />
 <br />
-<a href="<?echo $domainName;?>About/Manual/index.php">Back to Manual Table of Contents</a>
+<a href="<?echo $config->domain;?>About/Manual/index.php">Back to Manual Table of Contents</a>
 			</td>
 			</tr>
 			</tbody></table>

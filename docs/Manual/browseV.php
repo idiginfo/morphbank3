@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -31,7 +31,7 @@ user is presented with a list of all the registered views within the database.
 <h3>Browse - Views by Keywords</h3>
 <br />
 <br />
-As explained in <a href="<?echo $domainName;?>About/Manual/browseImages.php">Browse - Images</a>,
+As explained in <a href="<?echo $config->domain;?>About/Manual/browseImages.php">Browse - Images</a>,
 use <strong>Keywords</strong> to display a list of views based on imaging technique, imaging
 preparation technique, part, angle, developmental stage, sex and/or form. To
 display a list of views based on a keyword(s) search, type the keyword(s) in the
@@ -46,7 +46,7 @@ type keywords <strong>wings reflected light female</strong> and select <strong>S
 <h3>Sort the Results</h3>
 <br />
 <br />
-Outlined in detail in <a href="<?echo $domainName;?>About/Manual/browseSort.php">Browse - Sort Search Results</a>, 
+Outlined in detail in <a href="<?echo $config->domain;?>About/Manual/browseSort.php">Browse - Sort Search Results</a>, 
 to sort the list of views, select the <strong>Sort By</strong> criteria from the drop down list(s).
 The more criteria selected, (up to 3 levels) the more refined the browse will be. 
 The resulting page will display the view list with the
@@ -112,15 +112,15 @@ Click the information Icon <img src="../../style/webImages/infoIcon.png" /> on t
 <img src="ManualImages/browse_view_to_single_show.png" />
 <br /><br />
 Morphbank Single Show is an efficient way to display large amounts of
-information. For complete documentation on single show refer to <a href="<?echo $domainName;?>About/Manual/show.php">Morphbank
+information. For complete documentation on single show refer to <a href="<?echo $config->domain;?>About/Manual/show.php">Morphbank
 Show</a> in the Information Linking section of this manual.
 			<br />
 			<br />
 						<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/browseS.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/browseS.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 			</table>
 			</div>
 			<?php

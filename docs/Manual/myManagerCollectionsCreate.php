@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -14,7 +14,7 @@
 			<!--<table class="manualContainer" cellspacing="0" width="100%">
 			<tr>-->
 <div class="specialtext2">
-<a href="<?echo $domainName;?>About/Manual/Movies/Makecollection.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Create a Collection</strong> from My Manager: <a href="<?echo $domainName;?>About/Manual/Movies/Makecollection.avi" target='_blank'>video</a>
+<a href="<?echo $config->domain;?>About/Manual/Movies/Makecollection.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Create a Collection</strong> from My Manager: <a href="<?echo $config->domain;?>About/Manual/Movies/Makecollection.avi" target='_blank'>video</a>
 </div>
 <p>From any tab in the <strong>My Manager</strong> interface, users can select Objects to include in a
  collection. The collection can be kept private or made public with the <em>date-to-publish</em> feature. This
@@ -71,23 +71,23 @@ from <strong>Tools</strong>. In this way, a user can do a <strong>Mass Annotatio
 
 <p>From the <strong>My Manager > Collections tab</strong> each collection is represented by an image chosen by the collection's creator.
  The user creates the collection, uses the check box to pick the representative image, and clicks from Tools -- <strong>Set Collection Thumbnail</strong>.</p>
-	<a href="<?echo $domainName;?>About/Manual/FSI.php"><h3>FSI Viewer</h3></a>: Morphbank utilizes
+	<a href="<?echo $config->domain;?>About/Manual/FSI.php"><h3>FSI Viewer</h3></a>: Morphbank utilizes
 		 a proprietary viewer with its unique capabilities to increase the value
 	of the photograph for the user. Clicking on any image thumbnail in a collection will
 	open the image in the FSI Viewer. 
 	    <br />
 		<br />
-		<a href="<?echo $domainName;?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
+		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
 		<br />
 		<br />
-		<a href="<?echo $domainName;?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
+		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
 		<br />
 			<br />
 
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/myManagerCollectionsSample.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/myManagerCollectionsSample.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</tr>
 				</div>

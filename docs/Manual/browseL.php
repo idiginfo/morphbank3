@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -23,7 +23,7 @@ all localities registered on the morphbank database.
 <h3>Browse - Localities by Keywords</h3>
 <br />
 <br />
-As explained in <a href="<?echo $domainName;?>About/Manual/browseImages.php">Browse - Images</a>,
+As explained in <a href="<?echo $config->domain;?>About/Manual/browseImages.php">Browse - Images</a>,
 use the <strong>Keywords</strong> field to display a list of localities based on its locality field,
 continent/ocean and/or country. To display a list of localities based on a
 keyword(s) search, type the keyword(s) in the box and select Search. For
@@ -44,7 +44,7 @@ Tag descriptions
 Select the Sort By criteria from the drop down list(s). The more criteria selected, (up to 3 levels) 
 the more refined the browse will be. The resulting page will display the locality list with the initial Sort By option grouped together 
 first, followed by groups of any of the other sort criteria that was selected. 
-The Sort feature of morphbank is explained in detail in <a href="<?echo $domainName;?>About/Manual/browseSort.php">Browse - Sort Search Results</a>
+The Sort feature of morphbank is explained in detail in <a href="<?echo $config->domain;?>About/Manual/browseSort.php">Browse - Sort Search Results</a>
 <br />
 <br />
 Sort criteria options include:
@@ -64,7 +64,7 @@ Sort criteria options include:
 <li><h3>Browse - Locality: Single Show</h3> is displayed from any information 
 Icon <img src="../../style/webImages/infoIcon.png" /> on any <strong>Browse - Locality</strong> page.
 This page displays Information unique to a locality record. For complete
-documentation on single show refer to <a href="<?echo $domainName;?>About/Manual/show.php">Morphbank Show</a> in the Information
+documentation on single show refer to <a href="<?echo $config->domain;?>About/Manual/show.php">Morphbank Show</a> in the Information
 Linking section of this manual.</li>
 <li><h3>Viewing Images for a Given Locality:</h3> Any given Locality may have 1 or more
  images associated with it; for the example above, locality id 111689 has 5 images. To see the images for a particular
@@ -76,15 +76,15 @@ Left click on any thumbnail to display the Single Show details for any image.</l
 <li>Morphbank-issued Locality id number and Selection <img src="../../style/webImages/selectIcon.png" />: The locality
 id number can be used to search in the <strong>Browse - Images</strong> or <strong>Browse - Locality</strong> modules. To search for
 and select a Locality use the <img src="../../style/webImages/selectIcon.png" /> feature further explained in the 
-<a href="<?echo $domainName;?>About/Manual/browseImages.php">Browse - Images</a>
+<a href="<?echo $config->domain;?>About/Manual/browseImages.php">Browse - Images</a>
 section of this manual.</li>
 </ol>
 <br />
 <br />
 <div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/browseC.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/browseC.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			<!--</tr>-->
 			<!--</table>-->

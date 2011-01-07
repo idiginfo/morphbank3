@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName, $imgThumbsDirectory, $imgJpgDirectory, $imgJpegDirectory, $imgTiffDirectory;
+	global $config, $imgThumbsDirectory, $imgJpgDirectory, $imgJpegDirectory, $imgTiffDirectory;
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -30,11 +30,11 @@ or after the image data is deposited in Morphbank.
  Locality record, View record, etc.
 </li>
 <li>Published Morphbank images may be linked to any Web site or database for educational and non-profit purposes (see
-Morphbank copyright information <a href="<?echo $domainName;?>About/Copyright/" target="_blank">http://www.morphbank.net/About/Copyright/</a>).</li>
+Morphbank copyright information <a href="<?echo $config->domain;?>About/Copyright/" target="_blank">http://www.morphbank.net/About/Copyright/</a>).</li>
 </ul>
 <hr align="left" width="650" height="5" color="#AAB0D0" />
 <h2>External Links - Adding to any Morphbank record</h2>
-<p> Morphbank Contributors using <a href="<?echo $domainName;?>About/Manual/submit.php"><em>mass upload</em></a> methods may add these external links during upload. Information needed includes the:</p>
+<p> Morphbank Contributors using <a href="<?echo $config->domain;?>About/Manual/submit.php"><em>mass upload</em></a> methods may add these external links during upload. Information needed includes the:</p>
 <ul>
 <li><strong>URL</strong> itself in http:// format</li>
 <li><strong>Label</strong> the Morphbank User clicks on to go the URL</li>
@@ -85,13 +85,13 @@ minus sign will remove any link not needed.</li>
 </ol>
 
 <div class="specialtext3">
-Note: A Morphbank Contributor or Submitter can add external links from anywhere the <img src="../../style/webImages/edit-trans.png" /> icon appears in any <a href="<?echo $domainName;?>About/Manual/myManager.php" target="_blank">My Manager</a> tab. It's done
+Note: A Morphbank Contributor or Submitter can add external links from anywhere the <img src="../../style/webImages/edit-trans.png" /> icon appears in any <a href="<?echo $config->domain;?>About/Manual/myManager.php" target="_blank">My Manager</a> tab. It's done
 exactly as described above once the edit icon is clicked. Also links can be edited or deleted as needed after a record is published.
 </div>
 
 <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image Record Show - sample External Links</h3>
 <br />
-<a href="<?echo $domainName;?>134312"><img src="ManualImages/external_link_sample.png" vspace="20" hspace="30"  /></a>
+<a href="<?echo $config->domain;?>134312"><img src="ManualImages/external_link_sample.png" vspace="20" hspace="30"  /></a>
 <br />
 <hr align="left" width="650" height="5" color="#AAB0D0" />
 <h2>Internal Links - Link Back to Morphbank From an Outside Source</h2>
@@ -104,7 +104,7 @@ annotations, publications, character collections and OTUs.  Thus unique links ca
 </li>
 <li>Put these links in web sites, journal articles, online documents, emails, tweets, etc.</li>
 <li>An entire link to one specific specimen record may look like this: 
-<a href="<?echo $domainName;?>Show/?id=64122" target="_blank">http://www.morphbank.net/Show/?id=64122</a>.
+<a href="<?echo $config->domain;?>Show/?id=64122" target="_blank">http://www.morphbank.net/Show/?id=64122</a>.
 </li>
 </ul>
 
@@ -121,21 +121,21 @@ should be linked back to the Morphbank record.
 <div class="specialtext2">
 <table cellpadding="2" cellspacing="2" border="1" hspace="30">
 <tr><th align="left">Base URL</th><th align="left">Morphbank Object Id</th><th align="left">Actual Internal Link to Morphbank</th><th align="left">What the Link Returns</th></tr>
-<tr><td>http://www.morphbank.net</td><td align="center">478760</td><td><a href="<?echo $domainName;?>?id=478760">http://www.morphbank.net/?id=478760</a></td><td>Morphbank Image Metadata + 400px image</td></tr>
-<tr><td>http://www.morphbank.net</td><td align="center">228716</td><td><a href="<?echo $domainName;?>?id=228716">http://www.morphbank.net/?id=228716</a></td><td>Morphbank Specimen Metadata + 400px image</td></tr>
-<tr><td>http://www.morphbank.net</td><td align="center">575098</td><td><a href="<?echo $domainName;?>?id=575098">http://www.morphbank.net/?id=575098</a></td><td>Morphbank Collection</td></tr>
-<tr><td>http://www.morphbank.net</td><td align="center">464413</td><td><a href="<?echo $domainName;?>?id=464413">http://www.morphbank.net/?id=464413</a></td><td>Morphbank Annotation</td></tr>
-<tr><td>http://www.morphbank.net</td><td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435">http://www.morphbank.net/?id=579435</a></td><td>Morphbank Image Metadata + 400px image</td></tr>
-<tr><td>http://www.morphbank.net</td><td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435&amp;imgType=jpeg">http://www.morphbank.net/?id=579435&amp;imgType=jpeg</a></td><td>Morphbank Image jpeg</td></tr>
-<tr><td>http://www.morphbank.net</td><td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435&amp;imgType=thumb">http://www.morphbank.net/?id=579435&amp;imgType=thumb</a></td><td>Morphbank thumbnail</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">478760</td><td><a href="<?echo $config->domain;?>?id=478760">http://www.morphbank.net/?id=478760</a></td><td>Morphbank Image Metadata + 400px image</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">228716</td><td><a href="<?echo $config->domain;?>?id=228716">http://www.morphbank.net/?id=228716</a></td><td>Morphbank Specimen Metadata + 400px image</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">575098</td><td><a href="<?echo $config->domain;?>?id=575098">http://www.morphbank.net/?id=575098</a></td><td>Morphbank Collection</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">464413</td><td><a href="<?echo $config->domain;?>?id=464413">http://www.morphbank.net/?id=464413</a></td><td>Morphbank Annotation</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">579435</td><td><a href="<?echo $config->domain;?>?id=579435">http://www.morphbank.net/?id=579435</a></td><td>Morphbank Image Metadata + 400px image</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">579435</td><td><a href="<?echo $config->domain;?>?id=579435&amp;imgType=jpeg">http://www.morphbank.net/?id=579435&amp;imgType=jpeg</a></td><td>Morphbank Image jpeg</td></tr>
+<tr><td>http://www.morphbank.net</td><td align="center">579435</td><td><a href="<?echo $config->domain;?>?id=579435&amp;imgType=thumb">http://www.morphbank.net/?id=579435&amp;imgType=thumb</a></td><td>Morphbank thumbnail</td></tr>
 <tr><td height="32">http://www.morphbank.net</td>
-<td align="center">579435</td><td><a href="<?echo $domainName;?>?id=579435&amp;imgType=jpeg&amp;imgSize=500">http://www.morphbank.net/?id=579435&amp;imgType=jpeg&amp;imgSize=500</a></td><td>Morphbank Image with user-specified width</td></tr>
+<td align="center">579435</td><td><a href="<?echo $config->domain;?>?id=579435&amp;imgType=jpeg&amp;imgSize=500">http://www.morphbank.net/?id=579435&amp;imgType=jpeg&amp;imgSize=500</a></td><td>Morphbank Image with user-specified width</td></tr>
 </table>
 </div>
 
 <h2>Sample Internal Link</h2>
 <p>If the Contributor wishes to show the Image and Metadata for the Image, this is the Morphbank "Show" page for the Image Record.<br />
-The URL looks like: <a href="<?echo $domainName;?>?id=65847" target="_blank">http://www.morphbank.net/?id=65847</a><br />
+The URL looks like: <a href="<?echo $config->domain;?>?id=65847" target="_blank">http://www.morphbank.net/?id=65847</a><br />
 and when clicked, opens the following page in Morphbank.</p>
 <img src="ManualImages/image_record_link_back.png" hspace="30"/>
 <br />
@@ -201,14 +201,14 @@ using an img src tag:<br /><b> &lt;img src="http://www.morphbank.net/?id=133776&
 </p>
 <hr align="left" width="650" height="5" color="#AAB0D0" />
 <h3>Getting Morphbank Ids to Build URLs</h3>
-<p>Via <a href="http://services.morphbank.net/mb3/">Services</a>, users retrieve Morphbank Ids for various objects. Using these ids, Contributors create urls and may also build other websites that utilize web services, pulling images via their ids. See <a href="<?echo $domainName;?>About/Manual/services.php">Morphbank Web Services</a> in this online user manual for more details.</p>
+<p>Via <a href="http://services.morphbank.net/mb3/">Services</a>, users retrieve Morphbank Ids for various objects. Using these ids, Contributors create urls and may also build other websites that utilize web services, pulling images via their ids. See <a href="<?echo $config->domain;?>About/Manual/services.php">Morphbank Web Services</a> in this online user manual for more details.</p>
 
 <br />
 <br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/show.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/show.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 			</table>
 			</div>
 		

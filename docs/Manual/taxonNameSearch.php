@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -38,7 +38,7 @@ Enter a taxon name, or part of a taxon name and click <strong>Search</strong>.
 </li>
 <li>Enter a taxon name or part of a taxon name and click <strong>Search</strong> to see if the name or some variations of the name are in Morphbank.
 </li>
-<li>Once any Morphbank account holder reaches the taxonomic rank of <strong>sub-order</strong> or lower, they may <strong>Add a New Taxon Name</strong> to the database from this interface. Go to <a href="<?echo $domainName;?>About/Manual/addTaxonName.php" >Add New Taxon Name</a> for instructions.
+<li>Once any Morphbank account holder reaches the taxonomic rank of <strong>sub-order</strong> or lower, they may <strong>Add a New Taxon Name</strong> to the database from this interface. Go to <a href="<?echo $config->domain;?>About/Manual/addTaxonName.php" >Add New Taxon Name</a> for instructions.
 </li>
 <li>At any taxomic rank, a Morphbank User may click the <img src="ManualImages/annotate_taxon_name_button.jpg" alt="annnotate" /> button to leave a comment about a particular Taxon Name.
 </li>
@@ -49,8 +49,8 @@ Enter a taxon name, or part of a taxon name and click <strong>Search</strong>.
 
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/submit.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/submit.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

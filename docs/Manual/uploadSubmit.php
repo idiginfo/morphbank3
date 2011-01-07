@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -13,15 +13,15 @@
 <div id=footerRibbon></div>
 			<!--<table class="manualContainer" cellspacing="0" width="100%">
 			<tr>-->
-<p>The next seven manual pages explain <em>how to add data and images to Morphbank via the web-interface</em>. A Morphbank Contributor may submit data and images via: 1) the web interface, 2) one of 2 different <a  href="<?echo $domainName?>Help/Documents/">Excel spreadsheets</a>, or 3) via XML. Contact <strong>mbadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</strong> for more information on the XML option.
+<p>The next seven manual pages explain <em>how to add data and images to Morphbank via the web-interface</em>. A Morphbank Contributor may submit data and images via: 1) the web interface, 2) one of 2 different <a  href="<?echo $config->domain?>Help/Documents/">Excel spreadsheets</a>, or 3) via XML. Contact <strong>mbadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</strong> for more information on the XML option.
 </p>            
 
 <!--<div class="specialtext2">
-<a href="<?echo $domainName;?>About/Manual/Movies/submitlocality.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a Locality</strong>: <a href="<?echo $domainName;?>About/Manual/Movies/submitlocality.avi" target='_blank'>video</a>
-<br /><a href="<?echo $domainName;?>About/Manual/Movies/SubmitSpecimen.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a Specimen</strong>: <a href="<?echo $domainName;?>About/Manual/Movies/SubmitSpecimen.avi" target='_blank'> video</a>
-<br /><a href="<?echo $domainName;?>About/Manual/Movies/submitview.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a View</strong>: <a href="<?echo $domainName;?>About/Manual/Movies/submitview.avi" target='_blank'>video</a>
-<br /><a href="<?echo $domainName;?>About/Manual/Movies/submitimage.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit an Image</strong>: <a href="<?echo $domainName;?>About/Manual/Movies/submitimage.avi" target='_blank'>video</a>
-<br /><a href="<?echo $domainName;?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Add a Taxon Name</strong>: <a href="<?echo $domainName;?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'>video</a>
+<a href="<?echo $config->domain;?>About/Manual/Movies/submitlocality.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a Locality</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/submitlocality.avi" target='_blank'>video</a>
+<br /><a href="<?echo $config->domain;?>About/Manual/Movies/SubmitSpecimen.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a Specimen</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/SubmitSpecimen.avi" target='_blank'> video</a>
+<br /><a href="<?echo $config->domain;?>About/Manual/Movies/submitview.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a View</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/submitview.avi" target='_blank'>video</a>
+<br /><a href="<?echo $config->domain;?>About/Manual/Movies/submitimage.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit an Image</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/submitimage.avi" target='_blank'>video</a>
+<br /><a href="<?echo $config->domain;?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Add a Taxon Name</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'>video</a>
 </div>
 -->
 <p>
@@ -31,7 +31,7 @@ After selecting <strong>Submit</strong>, the screen displays a sub-menu with cho
 
 <img src="ManualImages/submit_object.png" hspace="20" />
 
-<div class="specialtext2">N.B. For all Morphbank objects, the <strong>Contributor</strong> and <strong>Submitter</strong> fields default to the person logged-in &amp; submitting via the web. If a Submitter is entering data on behalf of a Contributor, select the Contributor's name from the drop-down for each object. Go to <a href="<?echo $domainName;?>About/Manual/userPrivileges.php">Users and their Privileges</a> for more about Morphbank Group Roles &amp; Contributor / Submitter status. See example next.
+<div class="specialtext2">N.B. For all Morphbank objects, the <strong>Contributor</strong> and <strong>Submitter</strong> fields default to the person logged-in &amp; submitting via the web. If a Submitter is entering data on behalf of a Contributor, select the Contributor's name from the drop-down for each object. Go to <a href="<?echo $config->domain;?>About/Manual/userPrivileges.php">Users and their Privileges</a> for more about Morphbank Group Roles &amp; Contributor / Submitter status. See example next.
 </div>
 <img src="ManualImages/submitterSample.jpg" hspace="20" />
 <br />
@@ -39,13 +39,13 @@ After selecting <strong>Submit</strong>, the screen displays a sub-menu with cho
 <h3>Best Practices for Submit</h3>
 <p>
 <ul>
-<li>If there are many <a href="<?echo $domainName;?>About/Manual/addTaxonName.php" >Taxon Names to add</a> to Morphbank, add them before any other data associated with these taxon names.
+<li>If there are many <a href="<?echo $config->domain;?>About/Manual/addTaxonName.php" >Taxon Names to add</a> to Morphbank, add them before any other data associated with these taxon names.
 </li>
 <li>Preferred order for submitting data is: Taxon Names, Locality, Specimen, View, Image.
 </li>
 <li>Before an Image is uploaded, both a Specimen and View should exist.
 </li>
-<li>If person (A) is submitting objects to Morphbank for a different Morphbank account holder, person (B): for each object submitted, be sure to select person (B) for the <strong>Contributor</strong>. The submitter is automatically the person logged-in to Morphbank uploading the data and images. Go to <a href="<?echo $domainName;?>About/Manual/userPrivileges.php">Users and their Privileges</a> for more about Morphbank Group Roles &amp; Contributor / Submitter status.
+<li>If person (A) is submitting objects to Morphbank for a different Morphbank account holder, person (B): for each object submitted, be sure to select person (B) for the <strong>Contributor</strong>. The submitter is automatically the person logged-in to Morphbank uploading the data and images. Go to <a href="<?echo $config->domain;?>About/Manual/userPrivileges.php">Users and their Privileges</a> for more about Morphbank Group Roles &amp; Contributor / Submitter status.
 </li>
 </ul>
 </p>
@@ -53,8 +53,8 @@ After selecting <strong>Submit</strong>, the screen displays a sub-menu with cho
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/uploadSubmitLocality.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/uploadSubmitLocality.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		
