@@ -336,7 +336,7 @@ function mainpresentationText() {
 	include('../../data/mbMenu_data.php');
 	
 	global $presentationText;
-	global $domainName;
+	
 	echo '<div id="main">';
 	echo '<div class="mainGenericContainer">
 			<h1 align="center"></h1>'
