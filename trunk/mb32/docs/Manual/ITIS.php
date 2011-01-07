@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -43,13 +43,13 @@ that contained all of the recognized names. ITIS was chosen because it
 </li>
 </ol>
 Because the addition of new names to the ITIS system does take some time, the Morphbank team
-established a method to <a href="<?echo $domainName;?>About/Manual/addTaxonName.php" target="_blank">add names</a> to Morphbank. 
+established a method to <a href="<?echo $config->domain;?>About/Manual/addTaxonName.php" target="_blank">add names</a> to Morphbank. 
 This allows scientists use the taxonomic name of their choice to identify a specimen in Morphbank. Names added to Morphbank have 9-digit Morphbank <em>taxonomic serial numbers</em> beginning with 999. <br />
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/addTaxonName.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/addTaxonName.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 		

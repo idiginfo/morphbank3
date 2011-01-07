@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -14,7 +14,7 @@
 
 <!--
 <div class="specialtext2">
-<a href="<?echo $domainName;?>About/Manual/Movies/submitimage.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit an Image</strong>: <a href="<?echo $domainName;?>About/Manual/Movies/submitimage.avi" target='_blank'>video</a>
+<a href="<?echo $config->domain;?>About/Manual/Movies/submitimage.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit an Image</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/submitimage.avi" target='_blank'>video</a>
 </div>
 -->
 <p>
@@ -38,7 +38,7 @@ experts group [.jpeg, .jpg], and tag information file format [.tiff]).
 
 <p>Path to <strong>Add Image</strong>: <em>header menu</em> <strong>> Tools > Submit > Image</strong>
 </p>
-<p>N.B. If a user belongs to more than one <a href="<?echo $domainName;?>About/Manual/selectGroup.php">Morphbank Group</a> - be sure to <a href="<?echo $domainName;?>About/Manual/selectGroup.php">select the group</a> for this Image before upload.
+<p>N.B. If a user belongs to more than one <a href="<?echo $config->domain;?>About/Manual/selectGroup.php">Morphbank Group</a> - be sure to <a href="<?echo $config->domain;?>About/Manual/selectGroup.php">select the group</a> for this Image before upload.
 </p>
 
 <img src="ManualImages/add_image.png" hspace="20" />
@@ -78,7 +78,7 @@ the sort will be.
 <br />
 To add a new specimen that is not in the <strong>Specimens</strong> selection screen,
 select the <img src="ManualImages/add_new_button.jpg" /> icon. This will open the 
-<strong>Add Specimen</strong> screen. (See the <a href="<?echo $domainName;?>About/Manual/uploadSubmitSpecimen.php">Add Specimen</a>
+<strong>Add Specimen</strong> screen. (See the <a href="<?echo $config->domain;?>About/Manual/uploadSubmitSpecimen.php">Add Specimen</a>
 section of this manual for help in completing this form). When the new specimen is submitted, the screen will redirect back
 to the <strong>Add Image</strong> page where the new specimen will automatically be
 entered and the process of adding an image can continue where the user
@@ -100,7 +100,7 @@ sort will be.
 <p>
 To add a new view that is not in the Views selection screen, select the
 <img src="ManualImages/add_new_button.jpg" /> icon; This will direct the user to the Add View screen.
-(See the <a href="<?echo $domainName;?>About/Manual/uploadSubmitView.php">Add View</a> section of this manual for help in completing this form.)
+(See the <a href="<?echo $config->domain;?>About/Manual/uploadSubmitView.php">Add View</a> section of this manual for help in completing this form.)
 When the new view is submitted, the screen will redirect back to the Add
 Image page where the view will be automatically entered and the process
 of adding an image can continue where the user left off.
@@ -141,7 +141,7 @@ new entries to this list, please contact <strong>mdadmin <font color="blue">at</
 </li>
 <br />
 <li><strong>Add External Links</strong> to this record. For complete
-instructions on providing external links refer to <a href="<?echo $domainName;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External Links</font> to open this feature. See next: 
+instructions on providing external links refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External Links</font> to open this feature. See next: 
 <br/>
 </li>
 <img src="ManualImages/add_externalLinksRef.png" alt="external link options" hspace="20" vspace="10"/>
@@ -162,7 +162,7 @@ instructions on providing external links refer to <a href="<?echo $domainName;?>
 	</ul> 
 
     <li><strong>Add External References</strong> to this record. For complete
-    instructions on providing external references refer to <a href="<?echo $domainName;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External References</font> to open this feature. See next:<br/>
+    instructions on providing external references refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External References</font> to open this feature. See next:<br/>
     <img src="ManualImages/add_externalRefs.png" alt="external identifiers" hspace="20" vspace="10"/>
 		<ul>
     	<li>Enter the <strong>Description</strong> for the External Reference. This will appear to the Morphbank user as a label in front of the unique id.
@@ -195,8 +195,8 @@ images or click return (goes to the front page of Morphbank) or click on the des
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/uploadSubmitPublication.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/uploadSubmitPublication.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

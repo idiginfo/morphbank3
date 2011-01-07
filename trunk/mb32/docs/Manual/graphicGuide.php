@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -30,7 +30,7 @@ work analogously throughout Morphbank to enhance the learning curve for users.
   </tr>
   <tr>
     <td align="center"><img src="../../style/webImages/magnifyShadow-trans.png" alt="FSIviewer icon"></td>
-	<td>This icon appears next to images in Morphbank. It is a link to the <a href="<?echo $domainName;?>About/Manual/zoomingViewer.php" target="_blank"><strong>Bischen image viewer</strong></a> which offers users the ability to zoom in / out and move around any image in Morphbank. Via the zooming viewer, functionality to allow labels to be associated with images is under development.</td>
+	<td>This icon appears next to images in Morphbank. It is a link to the <a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php" target="_blank"><strong>Bischen image viewer</strong></a> which offers users the ability to zoom in / out and move around any image in Morphbank. Via the zooming viewer, functionality to allow labels to be associated with images is under development.</td>
     </tr>
   <tr>
   <td align="center"><img src="../../style/webImages/infoIcon.png" alt="information icon" /></td>
@@ -41,7 +41,7 @@ work analogously throughout Morphbank to enhance the learning curve for users.
   <td>A powerful Morphbank feature. Some tasks on many objects can be done at one time. Use the <em>check box</em>
   to choose items to be changed. From the <strong><em>Select Mass Operation</em></strong> choose the task. An example would be
   to change the date-to-publish to "now" on many images at one time. For more on this, jump to
-   <a href="<?echo $domainName;?>About/Manual/myManagerNewFeatures.php" target="_blank">My Manager Features</a>.
+   <a href="<?echo $config->domain;?>About/Manual/myManagerNewFeatures.php" target="_blank">My Manager Features</a>.
    </td>
   </tr>
   <tr>
@@ -146,8 +146,8 @@ can be copied.</td>
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/terms.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/terms.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 		

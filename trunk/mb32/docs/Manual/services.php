@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -14,7 +14,7 @@
 			<!--<table class="manualContainer" cellspacing="0" width="100%">
 			<tr>-->
 		<!--<div class="specialtext2">
-<p><a href="<?echo $domainName;?>About/Manual/Movies/submitview.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a View</strong>: <a href="<?echo $domainName;?>About/Manual/Movies/submitview.avi" target='_blank'>video</a>
+<p><a href="<?echo $config->domain;?>About/Manual/Movies/submitview.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a View</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/submitview.avi" target='_blank'>video</a>
 </p>
 </div>
 -->
@@ -136,8 +136,8 @@ In the above example, a user wants to find out if Morphbank has any images of <e
 		<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/dwcabcdmb.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/dwcabcdmb.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

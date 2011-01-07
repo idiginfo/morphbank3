@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -59,10 +59,10 @@
 		</ul>
 	
 	<li><strong>Icons</strong>: Click to jump to the 
-	<a href="<?echo $domainName;?>About/Manual/graphicGuide.php" target="_blank" >guide to Morphbank graphics</a> for a thorough
+	<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" target="_blank" >guide to Morphbank graphics</a> for a thorough
 	overview.</li>
 		<ul>
-		<li>In Morphbank, the <img src="<?echo $domainName;?>/style/webImages/infoIcon-trans.png" />
+		<li>In Morphbank, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" />
 	 	<strong>information</strong> icon opens a feature called <strong>Single Show</strong> that varies with
 	 	the object. In general, one sees data about the object; in this case, the Publication Record Show opens.
 	 	</li>
@@ -71,7 +71,7 @@
 	 	<img src="../../style/webImages/edit-trans.png" /> <strong>edit icon</strong> opens the original screen where the user
 	 	entered the Publication information. The user who contributed the Publication data may edit the data here if needed.
 	 	Complete instructions on this area can be found in the 
-	 	<a href="<?echo $domainName;?>About/Manual/edit_publications.php">Edit Publication</a> section.</li>
+	 	<a href="<?echo $config->domain;?>About/Manual/edit_publications.php">Edit Publication</a> section.</li>
 		</ul>
 		</ul>
 
@@ -87,24 +87,24 @@ Submit</strong>. The created collection will appear in the <strong>Select Mass O
 tabs so that more objects can be added to the same collection, if desired.
 </div>
 
-<h3>Clicking the <img src="<?echo $domainName;?>/style/webImages/infoIcon-trans.png" />
+<h3>Clicking the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" />
  <strong>info icon</strong>
 opens the <strong>Publication Record (Single) Show</strong> </h3>
-<br /> In this case, the <img src="<?echo $domainName;?>/style/webImages/infoIcon-trans.png" />
+<br /> In this case, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" />
 associated with <strong>Publication Id 197041</strong>
 <img src="ManualImages/publication_record_show.png" hspace="20" vspace="15" />
 <p>
 <h3>Add a new Publication</h3>: Header Menu > <strong>Tools > Submit > Publication </strong>
 will take the user to the <strong>Add Publication</strong> screen where the user can add more
-Publications to Morphbank. Directions for this process are located in <a href="<?echo $domainName;?>About/Manual/uploadSubmitPublication.php">
+Publications to Morphbank. Directions for this process are located in <a href="<?echo $config->domain;?>About/Manual/uploadSubmitPublication.php">
 Submit Publication.</a>
 </p>
 			<br />
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/browseTaxonH.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/browseTaxonH.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</tr>
 				</div>

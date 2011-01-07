@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -90,7 +90,7 @@ All required fields are followed by an <font color="red">*</font>. Fields change
 <li><strong>Type of annotation<font color="red">*</font></strong>: The default is <strong>Determination</strong> Annotation. The other options of <strong>General</strong>, <strong>Legacy</strong>, 
 <strong>XML</strong>, and <strong>Taxon Name</strong> are
 selected from the drop-down list. For a description of these annotations, jump to 
-<a href="<?echo $domainName;?>About/Manual/annotationTypes.php">Types of Annotations.</a></li><br />
+<a href="<?echo $config->domain;?>About/Manual/annotationTypes.php">Types of Annotations.</a></li><br />
 
 <li><strong>Related annotations</strong>: (field with <strong>Determination </strong>Annotation) The user can select from a list of previously
 submitted, related determination annotations for that image.<!-- (or related
@@ -148,7 +148,7 @@ filled in.
 <p>If a new taxon name needs to be added select the <strong>Add New Taxon</strong> button
 that is visible from the family level. The<strong> Add Taxon Name</strong> screen will popup. (This 
 option is only available for authorized users.) For complete instructions on
-this process see the ITIS, <a href="<?echo $domainName;?>About/Manual/addTaxonName.php">Add New Taxon</a> section of this manual.</p>
+this process see the ITIS, <a href="<?echo $config->domain;?>About/Manual/addTaxonName.php">Add New Taxon</a> section of this manual.</p>
 </li>
 <div class="specialtext2">Note: Great care must be taken when adding new taxon names to the local
 copy of the database. New taxon names are submitted to the Department of Agriculture 
@@ -298,8 +298,8 @@ page are not available for mass annotations.</div>
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/annotationEdit.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/annotationEdit.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

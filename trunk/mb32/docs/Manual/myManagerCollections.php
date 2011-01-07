@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -14,9 +14,9 @@
 			<!--<table class="manualContainer" cellspacing="0" width="100%">
 			<tr>-->
 <div class="specialtext2">
-<a href="<?echo $domainName;?>About/Manual/Movies/Makecollection.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Create a Collection</strong> from the MyManager: <a href="<?echo $domainName;?>About/Manual/Movies/Makecollection.avi" target='_blank' >video</a>
-<br /><a href="<?echo $domainName;?>About/Manual/Movies/Publishcollection.avi" target='_blank'> <img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Publish multiple collections</strong> from the MyManager: <a href="<?echo $domainName;?>About/Manual/Movies/Publishcollection.avi" target='_blank'>video</a> 
-<br /><a href="<?echo $domainName;?>About/Manual/Movies/collectionbyspecimenpart.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Create a Collection of Images and Label by Specimen Part</strong>:<a href="<?echo $domainName;?>About/Manual/Movies/collectionbyspecimenpart.avi" target='_blank'> video</a>
+<a href="<?echo $config->domain;?>About/Manual/Movies/Makecollection.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Create a Collection</strong> from the MyManager: <a href="<?echo $config->domain;?>About/Manual/Movies/Makecollection.avi" target='_blank' >video</a>
+<br /><a href="<?echo $config->domain;?>About/Manual/Movies/Publishcollection.avi" target='_blank'> <img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Publish multiple collections</strong> from the MyManager: <a href="<?echo $config->domain;?>About/Manual/Movies/Publishcollection.avi" target='_blank'>video</a> 
+<br /><a href="<?echo $config->domain;?>About/Manual/Movies/collectionbyspecimenpart.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Create a Collection of Images and Label by Specimen Part</strong>:<a href="<?echo $config->domain;?>About/Manual/Movies/collectionbyspecimenpart.avi" target='_blank'> video</a>
 </div>
 
 <p>From the <strong>Collections tab</strong> in My Manager, users can see any collection they've created
@@ -48,14 +48,14 @@ One can also create a collection of collections, which is very useful when putti
 </div>
 
 <h3>Features and Functions of the Collections tab</h3>
-	<p> Note the highlighted areas of the above image briefly explained next. Image / Mixed Collections &amp; Character Collections are found in this tab. OTU collections are found in the <a href="<?echo $domainName;?>About/Manual/myManagerTaxa.php"><strong>Taxa</strong></a> tab.</p>
+	<p> Note the highlighted areas of the above image briefly explained next. Image / Mixed Collections &amp; Character Collections are found in this tab. OTU collections are found in the <a href="<?echo $config->domain;?>About/Manual/myManagerTaxa.php"><strong>Taxa</strong></a> tab.</p>
 	
 	<ul>
 	
-	<li><a href="<?echo $domainName;?>About/Manual/manualHints.php" ><img src="ManualImages/feedback.png" align="middle"></a>: please use this link to our automated feedback system. We appreciate your comments so that 
+	<li><a href="<?echo $config->domain;?>About/Manual/manualHints.php" ><img src="ManualImages/feedback.png" align="middle"></a>: please use this link to our automated feedback system. We appreciate your comments so that 
 	we can continue to improve and enhance Morphbank. Clicking on <strong><font color="red">(Help)</font></strong> opens this Manual.</li>
 	
-	<li><a href="<?echo $domainName;?>About/Manual/myManagerFeatures.php" target="_blank"><strong>Keywords: </strong></a> Use the new <strong>enhanced</strong> search feature. Hold the mouse over the
+	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" target="_blank"><strong>Keywords: </strong></a> Use the new <strong>enhanced</strong> search feature. Hold the mouse over the
 	Keywords box to see an updated expanded list of fields the Keywords field searches.</li>
 	
 	<li><strong>Toggle Collection/Character:</strong> In this version of Morphbank, the My Manager
@@ -63,7 +63,7 @@ One can also create a collection of collections, which is very useful when putti
 	allowing any object in Morphbank to be placed in a collection. Use the radio buttons of this feature to view either
 	or both types of Collections.</li>
 	
-	<li><a href="<?echo $domainName;?>About/Manual/myManagerFeatures.php" target="_blank"><strong>Limit Search by:</strong></a> 	allows a user to view only the objects personally contributed/submitted AND/OR those from a particular group. Use the 
+	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" target="_blank"><strong>Limit Search by:</strong></a> 	allows a user to view only the objects personally contributed/submitted AND/OR those from a particular group. Use the 
 	<strong>Header Menu > Tools > Select Group > Choose group from sub-menu</strong> feature to change groups OR use the 
 	<strong>Group</strong> link in the <strong>Header</strong> on the left side of the Main Screen.</li>
 	
@@ -83,7 +83,7 @@ One can also create a collection of collections, which is very useful when putti
 	 
 	 </ul>
 	
-	<li><a href="<?echo $domainName;?>About/Manual/myManagerFeatures.php" target="_blank"><strong>Select Mass Operation</strong></a>:
+	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" target="_blank"><strong>Select Mass Operation</strong></a>:
 	 After checking one or more Collections with the <img src="ManualImages/check_box.png"> feature, options in the drop-down of
 	  <strong>Select Mass Operation</strong> can be applied to all
 	checked objects. Examples include: gathering all the checked objects into a new/existing collecion,
@@ -95,12 +95,12 @@ One can also create a collection of collections, which is very useful when putti
 	<li><img src="ManualImages/submit_button.gif" alt="Submit button">: Click this button to carry out the <strong>Mass Operation</strong> selected.</li>
 	
 	<li><strong>Icons</strong>: The <strong>icons</strong> and their functions are explained fully in Morphbank 
-	<a href="<?echo $domainName;?>About/Manual/graphicGuide.php" target="_blank">Guide to Graphic Buttons</a>. An abbreviated 
-	explanation can be found on the <a href="<?echo $domainName;?>About/Manual/myManagerAll.php" target="_blank">All</a> page
+	<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" target="_blank">Guide to Graphic Buttons</a>. An abbreviated 
+	explanation can be found on the <a href="<?echo $config->domain;?>About/Manual/myManagerAll.php" target="_blank">All</a> page
 	for My Manager.</li> 
 	
 		<ul>
-		<li>Briefly, the <img src="<?echo $domainName;?>/style/webImages/infoIcon-trans.png" /> icon
+		<li>Briefly, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon
 		opens the collection. 
 		</li>
 		<li>Clicking on the 
@@ -126,7 +126,7 @@ One can also create a collection of collections, which is very useful when putti
 		
 	
 	
-	<li><a href="<?echo $domainName;?>About/Manual/FSI.php" target="_blank"><strong>FSI Viewer</strong></a>: Morphbank utilizes
+	<li><a href="<?echo $config->domain;?>About/Manual/FSI.php" target="_blank"><strong>FSI Viewer</strong></a>: Morphbank utilizes
 		 a proprietary viewer with its unique capabilities to increase the value
 	of the photograph for the user. Clicking on any thumbnail in the <strong>Collections tab</strong> will
 	open the Collection, double-click on any image in the Collection to 
@@ -135,10 +135,10 @@ One can also create a collection of collections, which is very useful when putti
   </ul>  
     
 
-<a href="<?echo $domainName;?>About/Manual/myManagerCollectionsCreate.php" target="_blank"><h3>Create a Collection</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/myManagerCollectionsCreate.php" target="_blank"><h3>Create a Collection</h3></a>
 <br />
 <br />
-<a href="<?echo $domainName;?>About/Manual/myManagerCollectionsSample.php" target="_blank"><h3>A Sample Collection</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/myManagerCollectionsSample.php" target="_blank"><h3>A Sample Collection</h3></a>
 <br />
 <br />
 <h3>Edit a Collection</h3>: A collection must be <em>unpublished</em> or a user will not be able to <strong>Edit</strong> the contents. To Edit 
@@ -147,23 +147,23 @@ Alter the contents as desired. A user might delete some objects, change the titl
 collection and save the order.
 <br />
 <br />
-<a href="<?echo $domainName;?>About/Manual/myManagerCollectionsDefined.php" target="_blank"><h3>What exactly is a Collection?</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/myManagerCollectionsDefined.php" target="_blank"><h3>What exactly is a Collection?</h3></a>
 <br />
 <br />
-<a href="<?echo $domainName;?>About/Manual/characterCollections.php" target="_blank"><h3>Character Collections</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/characterCollections.php" target="_blank"><h3>Character Collections</h3></a>
 		<br />
 		<br />
-		<a href="<?echo $domainName;?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
+		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
 		<br />
 		<br />
-		<a href="<?echo $domainName;?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
+		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
 <br />
 <br />
 				
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/myManagerCollectionsDefined.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/myManagerCollectionsDefined.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</tr>
 				</div>

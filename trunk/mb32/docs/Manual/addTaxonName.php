@@ -1,7 +1,6 @@
 <?php 
-	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
-	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
+	
+	include_once('head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
 	echoHead( false, $title);
@@ -53,7 +52,7 @@ Unpublished names can be edited by the Morphbank Contributor and Submitter and a
 
 <h3><a name="changeTemp">What if the newly added taxon name needs changing?</a></h3>
 <p>What follows is a brief entry on how to <strong>Edit</strong> a taxon name. For a more detailed entry on how to 
-<strong>Edit</strong> a taxon name, jump to <a href="<?echo $domainName;?>About/Manual/edit_taxon_name.php" target="_blank">Edit Taxon Name</a>.</p>
+<strong>Edit</strong> a taxon name, jump to <a href="<?echo $config->domain;?>About/Manual/edit_taxon_name.php" target="_blank">Edit Taxon Name</a>.</p>
 <ul>
 <li>If the Contributor/Submitter chooses <strong>do not publish</strong>, the new taxon names are viewable/usable only by them and
 unpublished names <em>may be edited</em>.</li>
@@ -85,7 +84,7 @@ open the <strong>Edit Taxon Name</strong> screen.</li>
 level that is appropriate. For example, if adding a new name starting at the
 family rank, you can only add subfamily, tribe, subtribe or genus. All
 subordinate taxonomic names, if needed, are added one at a time.</li>
-<li>If many names need to be added, the current <a href="<?echo $domainName;?>Help/Documents/">
+<li>If many names need to be added, the current <a href="<?echo $config->domain;?>Help/Documents/">
 Excel workbook v 3 (Animalia or Plantae)</a> <em>SpecimenTaxonData sheet</em> can be used to add taxon names from <strong>Genus</strong> and below.</li>
 <li>Morphbank developers have introduced a new spreadsheet for adding taxon names along with the associated
 metadata (taxon author, name source, external link and external id for a name). Using this method, names can be added 
@@ -101,7 +100,7 @@ if this fits your user case scenario.</li>
 
 <!--
 <div class="specialtext2">
-<a href="<?echo $domainName;?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>add a Taxon Name</strong>: <a href="<?echo $domainName;?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'>video</a>
+<a href="<?echo $config->domain;?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>add a Taxon Name</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'>video</a>
 </div>
 --->
 
@@ -122,18 +121,18 @@ Name Search.
 <li>Select the <strong>Group</strong> desired, before adding a Taxon Name. You will need to be in this group to edit the name, should it need editing.</li>
 <li>From the <strong><em>Taxon Name Search</em></strong>, enter the taxon name desired to see if it's arleady in Morphbank, click Search.  </li>
 <ul>
-  <li>Use <a href="<?echo $domainName;?>Help/nameMatch/"><strong>Name Query</strong></a> to search for a whole list of names at one time.</li>
+  <li>Use <a href="<?echo $config->domain;?>Help/nameMatch/"><strong>Name Query</strong></a> to search for a whole list of names at one time.</li>
   <li>For names that need adding then...</li>
 </ul>
 <li>Go to<strong><em>Taxon Name Search</em></strong>, enter the taxon name for the rank just above the rank of the taxon name to be added and click Search.</li>
 <li>
   Once there, click on the Add button on the right, to add a child with that row's name as the parent. See the example below for how this works.</li>
 <li>
-  In the My Manager interface, click the <a href="<?echo $domainName;?>About/Manual/myManagerTaxa.php" target="_blank">Taxa</a> tab to see how a name looks once it's entered.</li>
+  In the My Manager interface, click the <a href="<?echo $config->domain;?>About/Manual/myManagerTaxa.php" target="_blank">Taxa</a> tab to see how a name looks once it's entered.</li>
 <li>There are several different ways to add names to Morphbank.
   <ol>
     <li>Web - good for adding names at rank of Suborder or lower. Well-suited for intermittent upload and less than 30 - 50 names.</li>
-    <li><a href="<?echo $domainName;?>Help/Documents/" target="_blank">Excel Workbook v 3</a> <strong>SpecimenTaxonData</strong> sheet - many  names can be added with this feature, from rank Genus and lower.</li>
+    <li><a href="<?echo $config->domain;?>Help/Documents/" target="_blank">Excel Workbook v 3</a> <strong>SpecimenTaxonData</strong> sheet - many  names can be added with this feature, from rank Genus and lower.</li>
     <li>In beta-testing, a taxon upload workbook is available to upload names at any rank. Contact <strong>mbadmin <font color=blue>at</font> scs <font color=blue>dot</font> fsu <font color=blue>dot</font> edu</strong> for more about this option.</li>
     </ol>
   <br />
@@ -214,7 +213,7 @@ Filling out the <h3><a name="addTaxonFields">Add Taxon Name</a></h3> form:
     <br />
     
     <li><strong>Add External Links</strong> to this record. For complete
-instructions on providing external links refer to <a href="<?echo $domainName;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External Links</font> to open this feature. See next: <br/>
+instructions on providing external links refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External Links</font> to open this feature. See next: <br/>
 </li>
 <img src="ManualImages/add_externalLinksRef.png" alt="external link options" hspace="20" vspace="10"/>
 	<ul>
@@ -227,7 +226,7 @@ instructions on providing external links refer to <a href="<?echo $domainName;?>
    </ul>
    <br />
 <li><strong>Add External References</strong> to this record. For complete
-instructions on providing external references refer to <a href="<?echo $domainName;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External References</font> to open this feature. See next:<br/>
+instructions on providing external references refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External References</font> to open this feature. See next:<br/>
 <img src="ManualImages/add_externalRefs.png" alt="external identifiers" hspace="20" vspace="10"/>
 	<ul>
     <li>Enter the <strong>Description</strong> for the External Reference. This will appear to the Morphbank user as a label in front of the unique id.
@@ -257,14 +256,14 @@ to add the New Taxon Name with its Morphbank 999 TSN.
 </ul>
 
 For a given contributor, submitted names will be usable in the Morphbank system immediately from Taxon Name Search. 
-If published, it will take 24 hours before the name appears in the Taxon Hierarchy. From the <strong>Taxa tab</strong> of My Manager, logged-in users may peruse / edit the Taxon Names they have contributed to Morphbank. For more information on this, jump to the <a href="<?echo $domainName;?>About/Manual/myManager.php" target="_blank">My Manager</a> section of 
-this manual or go to the Header Menu: <strong>click Browse to open My Manager > click the </strong><a href="<?echo $domainName;?>About/Manual/myManagerTaxa.php" target="_blank"> Taxa tab</a>.
+If published, it will take 24 hours before the name appears in the Taxon Hierarchy. From the <strong>Taxa tab</strong> of My Manager, logged-in users may peruse / edit the Taxon Names they have contributed to Morphbank. For more information on this, jump to the <a href="<?echo $config->domain;?>About/Manual/myManager.php" target="_blank">My Manager</a> section of 
+this manual or go to the Header Menu: <strong>click Browse to open My Manager > click the </strong><a href="<?echo $config->domain;?>About/Manual/myManagerTaxa.php" target="_blank"> Taxa tab</a>.
 <br /><br />
 
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/InfoLinking.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/InfoLinking.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table></div>
 		
 <?php

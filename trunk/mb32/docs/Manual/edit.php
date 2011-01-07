@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -15,9 +15,9 @@
 		<td width="100%">
 			
 <!--	<div class="specialtext2">
-<p><a href="<?echo $domainName;?>About/Manual/Movies/EditImage.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Edit images</strong> replacing one image with another: <a href="<?echo $domainName;?>About/Manual/Movies/EditImage.avi" target='_blank'> video</a>
-<br /><a href="<?echo $domainName;?>About/Manual/Movies/Changepublishdate.avi" target='_blank'> <img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Edit</strong> date to publish for <strong>lots of images: </strong><a href="<?echo $domainName;?>About/Manual/Movies/Changepublishdate.avi" target='_blank'>video</a> 
-<br /><a href="<?echo $domainName;?>About/Manual/Movies/Edit_Specimen_Determination.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Edit Specimen Determination</strong> in Morphbank:<a href="<?echo $domainName;?>About/Manual/Movies/Edit_Specimen_Determination.avi" target='_blank'>video</a></p>
+<p><a href="<?echo $config->domain;?>About/Manual/Movies/EditImage.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Edit images</strong> replacing one image with another: <a href="<?echo $config->domain;?>About/Manual/Movies/EditImage.avi" target='_blank'> video</a>
+<br /><a href="<?echo $config->domain;?>About/Manual/Movies/Changepublishdate.avi" target='_blank'> <img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Edit</strong> date to publish for <strong>lots of images: </strong><a href="<?echo $config->domain;?>About/Manual/Movies/Changepublishdate.avi" target='_blank'>video</a> 
+<br /><a href="<?echo $config->domain;?>About/Manual/Movies/Edit_Specimen_Determination.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Edit Specimen Determination</strong> in Morphbank:<a href="<?echo $config->domain;?>About/Manual/Movies/Edit_Specimen_Determination.avi" target='_blank'>video</a></p>
 </div>
 -->
 
@@ -34,7 +34,7 @@
 <li>Click the <img src="../../style/webImages/edit-trans.png" /> icon to open the <strong>Edit screen</strong> for a particular object <em>in a new tab</em>.</li>
 
 <!--<li>With the exception of the standard image field, the instructions for completing the other fields on this page can be found in 
-<a href="<?echo $domainName;?>About/Manual/uploadSubmitSpecimen.php">Add Specimen</a></li>.-->
+<a href="<?echo $config->domain;?>About/Manual/uploadSubmitSpecimen.php">Add Specimen</a></li>.-->
 </ul>
 
 <p>This Edit manual page contains general instructions for how to edit most Morphbank Objects including:</p>
@@ -59,10 +59,10 @@ associated with that group.</li>
 <li>If a Morphbank Contributor opens a single show using the <img src="../../style/webImages/infoIcon-trans.png" alt="info icon" /> for any of their objects (published or not), the <img src="../../style/webImages/edit-trans.png" /> icon is available inside the single show.</li>
 	<ul>
 	<li>For an <em>unpublished</em> Collection a user has created, they may <strong>Edit</strong> this Collection by finding and opening it in My Manager
-	Collections from the <img src="<?echo $domainName;?>/style/webImages/infoIcon-trans.png" /> icon.	</li>
+	Collections from the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon.	</li>
 	<li>From My Manager > Annotations, a user finds their <em>unpublished</em> Annotations and clicks on the 
 	<img src="../../style/webImages/edit-trans.png" /> icon to open the Edit Annotation Screen. Go to 
-	<a href="<?echo $domainName;?>About/Manual/edit_annotations.php" target="_blank"><h3>Edit Annotations</h3></a> for details.	</li>
+	<a href="<?echo $config->domain;?>About/Manual/edit_annotations.php" target="_blank"><h3>Edit Annotations</h3></a> for details.	</li>
 	</ul>
 </ul>
 
@@ -87,7 +87,7 @@ At the moment, you may edit your Locality, Specimen, View, Image, Publication, A
 For example: if you know a specific location record is incorrect, go to Browse > Locality, search for that record and click the edit icon. This icon will take you to the <strong>Edit Locality</strong> screen (<em>in a new tab</em>) where you can modify information about that specific location record.
 <br />
 <img src="ManualImages/edit_locality.jpg" vspace="5" /><br />
-Also you can add or edit <a href="<?echo $domainName;?>About/Manual/externalLink.php#addLink">External Links</a> from this window.  Once you have finished changing the form click the
+Also you can add or edit <a href="<?echo $config->domain;?>About/Manual/externalLink.php#addLink">External Links</a> from this window.  Once you have finished changing the form click the
 <img src="ManualImages/update_button.png" /> button.  A small window will popup that requires a response.  
 This window tells you how many records will be affected by the change you are about to make.  <em>Not to 
 worry, you will not be able to change records for which you do not have permission</em>.
@@ -136,7 +136,7 @@ click on the <img src="../../style/webImages/selectIcon.png" /> and choose it fr
 
 <strong>Adding and Editing Links:</strong>
 <p>Links can be added to Specimen, Location and Image records. External Links and External Identifiers can be added to any object contributed. Click on the
- blue text <a href="<?echo $domainName;?>About/Manual/externalLink.php#addLink">Add Links</a>
+ blue text <a href="<?echo $config->domain;?>About/Manual/externalLink.php#addLink">Add Links</a>
 to open this feature. These links will appear on the single show for that record.  
 Links also can be added to other objects in Morphbank!</p>
 
@@ -158,21 +158,21 @@ Links also can be added to other objects in Morphbank!</p>
 
 
 <br />
-<a href="<?echo $domainName;?>About/Manual/edit_taxon_name.php" target="_blank"><h3>Edit Taxon Names</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/edit_taxon_name.php" target="_blank"><h3>Edit Taxon Names</h3></a>
 <br />
 <br />
-<a href="<?echo $domainName;?>About/Manual/edit_annotations.php" target="_blank"><h3>Edit Annotations</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/edit_annotations.php" target="_blank"><h3>Edit Annotations</h3></a>
 <br />
 <br />
-<a href="<?echo $domainName;?>About/Manual/edit_collections.php" target="_blank"><h3>Edit Collections</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/edit_collections.php" target="_blank"><h3>Edit Collections</h3></a>
 
 			
 			<br />
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/edit_annotations.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/edit_annotations.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 </tr>				</div>
 		

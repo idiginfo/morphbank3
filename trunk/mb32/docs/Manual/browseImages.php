@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -15,9 +15,9 @@
 <p>
 By selecting the <strong>Browse - Images</strong> option, the user will be presented with a list of
 all images registered in the Morphbank database. Data about the images is available here and these images 
-can be searched, <a href="<?echo $domainName;?>About/Manual/browseSort.php">sorted</a>, <a href="<?echo $domainName;?>About/Manual/browseC.php">collected</a> and 
-<a href="<?echo $domainName;?>About/Manual/annotation.php">annotated</a>. If logged-in and using the 
-<a href="<?echo $domainName;?>About/Manual/MyManagerImagesTab.php"><strong>My Manager - Images tab</strong></a>, 
+can be searched, <a href="<?echo $config->domain;?>About/Manual/browseSort.php">sorted</a>, <a href="<?echo $config->domain;?>About/Manual/browseC.php">collected</a> and 
+<a href="<?echo $config->domain;?>About/Manual/annotation.php">annotated</a>. If logged-in and using the 
+<a href="<?echo $config->domain;?>About/Manual/MyManagerImagesTab.php"><strong>My Manager - Images tab</strong></a>, 
 the The <strong>Select Mass Operation</strong> feature will allow
  users to change the date-to-publish on one or many images at once, as well as create a new character or collection.
 </p>
@@ -29,7 +29,7 @@ to limit the display to a desired set of images. General keyword searching is al
 Browse - View/Specimen/Locality/Collection/Publication.
    <div class="specialtext2">In this latest (beta) version of Morphbank, the Keyword Search feature is being
    enhanced. Note there are some unexpected search results as we work out the items to be included in the database
-   Keywords Table. Please give us <a href="<?echo $domainName;?>/Help/feedback/">feedback</a> on this feature.</div>
+   Keywords Table. Please give us <a href="<?echo $config->domain;?>/Help/feedback/">feedback</a> on this feature.</div>
 <ul>
 <li><strong>General keyword search</strong> - performs a search based on a username,
 taxonomic name, catalog number, form, sex, developmental stage, type
@@ -145,7 +145,7 @@ the screen will redirect back to the <strong>Browse - Images</strong> page and t
 appropriate identifier will be filled in. Click on Search to run query with selected id's.
 <br />
 <br />
-The user may now <a href="<?echo $domainName;?>About/Manual/browseSort.php">sort</a> the results or, if logged in, select various images to add to a collection.
+The user may now <a href="<?echo $config->domain;?>About/Manual/browseSort.php">sort</a> the results or, if logged in, select various images to add to a collection.
 <br />
 <br />
 <a name="createCollection"></a>
@@ -161,7 +161,7 @@ future use.
 Note: In this (beta) version of Morphbank a collection can now include images and other
 objects such as: annotations, localities, publications, specimens, or views.
  The collections are created the same way as described here from any page 
-in the <strong><a href="<?echo $domainName;?>About/Manual/myManager.php" >My Manager</a></strong> interface.
+in the <strong><a href="<?echo $config->domain;?>About/Manual/myManager.php" >My Manager</a></strong> interface.
 </div>
 <ul>
 <li> Collections must have at least one image/object. Deleting the last image will
@@ -197,20 +197,20 @@ button.
 From the drop down list, choose the desired operation. If adding an image to an already existing Collection, the
 <strong>Collection Manager</strong> will display a confirmation message before performing the
 operation.
-<strong>Collections</strong> can be viewed, edited, copied and annotated. See the <a href="<?echo $domainName;?>About/Manual/collections.php"><strong>Collections</strong></a> section of
+<strong>Collections</strong> can be viewed, edited, copied and annotated. See the <a href="<?echo $config->domain;?>About/Manual/collections.php"><strong>Collections</strong></a> section of
 this manual for detailed instructions and permission guidelines for using these
 features.
 <br />
 <br />
 <h3>Browse - Information Icon and Taxon Hierarchy</h3>
 Additional data about the image can be viewed using the <img src="../../style/webImages/infoIcon-trans.png" alt="i icon" />
- icon. Additional data about the taxonomic name can be viewed using the <a href="<?echo $domainName;?>About/Manual/browseTaxonH.php">Taxon Hierarchy </a><img src="../../style/webImages/hierarchryIcon.png" alt="hierarchy button"/> icon<br />
+ icon. Additional data about the taxonomic name can be viewed using the <a href="<?echo $config->domain;?>About/Manual/browseTaxonH.php">Taxon Hierarchy </a><img src="../../style/webImages/hierarchryIcon.png" alt="hierarchy button"/> icon<br />
 <br />
 Example: <strong>Single Show - Image Record Page</strong>
 <div class="specialtext2">
 This is an example of an image record page displayed from the <img src="../../style/webImages/infoIcon-trans.png" alt="i icon" /> information
 Icon. Morphbank Single Show is an efficient way to display large amounts of
-information. For complete documentation on single show refer to <a href="<?echo $domainName;?>About/Manual/show.php">Morphbank Show</a> in the <a href="<?echo $domainName;?>About/Manual/InfoLinking.php">Information Linking</a> section of this manual.
+information. For complete documentation on single show refer to <a href="<?echo $config->domain;?>About/Manual/show.php">Morphbank Show</a> in the <a href="<?echo $config->domain;?>About/Manual/InfoLinking.php">Information Linking</a> section of this manual.
 </div>
 <img src="ManualImages/image_record_single_show.png" alt="image single show" hspace="20" />
 <br />
@@ -225,8 +225,8 @@ icon.
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/browseTaxonH.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/browseTaxonH.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 			<?php

@@ -1,6 +1,6 @@
 <?php 
 	global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -33,7 +33,7 @@ copyright holder. Contributors to morphbank agree to these terms.
 <a href="javascript:window.close();">Close Window</a>
 <br />
 <br />
-<a href="<?echo $domainName;?>About/Manual/index.php">Back to Manual Table of Contents</a>
+<a href="<?echo $config->domain;?>About/Manual/index.php">Back to Manual Table of Contents</a>
 			</td>
 			</tr>
 			</tbody></table>

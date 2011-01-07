@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -60,7 +60,7 @@ areas within Morphbank including: Account Settings, Group Settings and the Submi
 <li>No fields in Add Locality are required. Any required field is marked with a red "<font color="red">*</font>"
 </li>
 <br />
-<li>Click on buttons to perform various tasks in Morphbank (see <a href="<?echo $domainName;?>About/Manual/graphicGuide.php" target="_blank">"Guide to Graphic Buttons"</a>section in this manual).
+<li>Click on buttons to perform various tasks in Morphbank (see <a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" target="_blank">"Guide to Graphic Buttons"</a>section in this manual).
 </li>
 <br />
 <li>Redirect to the corresponding area within Morphbank.
@@ -93,8 +93,8 @@ Taxon name. <strong>(O)</strong> indicates a unique feature of the <strong>My Ma
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/ITIS.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/ITIS.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 		

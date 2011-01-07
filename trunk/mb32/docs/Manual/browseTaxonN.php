@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -20,11 +20,11 @@ starting with the letter <strong>A</strong>. To jump to another letter in the li
 <img src="ManualImages/browse_taxon_names_sample.png" />
 <p>
 Users may select the camera <img src="../../style/webImages/camera-min16x12.gif" /> beside a taxon name to display a
-list of associated images in <a href="<?echo $domainName;?>About/Manual/browseImages.php">
+list of associated images in <a href="<?echo $config->domain;?>About/Manual/browseImages.php">
 <strong>Browse - Images</strong></a>. Clicking the annotate <img src="../../style/webImages/annotate-trans.png" height="16" width="16" alt="annotate icon"/>
  icon gives users the ability to comment about a taxon name in the database if they have user privileges for that taxon.
 Selecting the tree of life symbol <img src="../../style/webImages/hierarchryIcon.png" /> will list
-the <a href="<?echo $domainName;?>About/Manual/browseTaxonH.php">Taxonomic hierarchy</a> of the Taxon name.
+the <a href="<?echo $config->domain;?>About/Manual/browseTaxonH.php">Taxonomic hierarchy</a> of the Taxon name.
 The <img src="../../style/webImages/infoIcon.png" /> icon, where present, links to the ITIS database entry for that taxon name.
 </p>
 <div class="specialtext3">Notes:
@@ -51,8 +51,8 @@ immediately viewable but may be listed in the count.
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/taxonNameSearch.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/taxonNameSearch.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 			</table>
 			</div>
 		<?php

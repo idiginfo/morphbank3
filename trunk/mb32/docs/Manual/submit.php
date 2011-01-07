@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -16,7 +16,7 @@
 <br />
 Before submitting data into Morphbank, users must have available each of the following:
 <ul>
-	<li>Valid Morphbank username and password (obtained through the <a href="<?echo $domainName;?>About/Manual/login.php">login
+	<li>Valid Morphbank username and password (obtained through the <a href="<?echo $config->domain;?>About/Manual/login.php">login
 	screen</a> or by contacting <strong>mbadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font>  edu</strong>).
 	</li>
 	
@@ -39,7 +39,7 @@ Before submitting data into Morphbank, users must have available each of the fol
 	[.jpeg, .jpg], tag information file format [.tiff]), Specimen to which the
 	image belongs, its Morphbank View and the contributor's name.</li>
 	
-    <li>Have ready any URL information so that any object contributed to Morphbank can be linked to a page/s outside Morphbank. <a href="<?echo $domainName;?>				About/Manual/externalLink.php" >External Links</a> can be added to any Morphbank object (Locality, Specimen, View, Image, Publication).
+    <li>Have ready any URL information so that any object contributed to Morphbank can be linked to a page/s outside Morphbank. <a href="<?echo $config->domain;?>				About/Manual/externalLink.php" >External Links</a> can be added to any Morphbank object (Locality, Specimen, View, Image, Publication).
 	</li>
 </ul>			
 
@@ -52,18 +52,18 @@ Morphbank.</div>
 <p>In addition to specimens, images, views, and localities, Morphbank users are encouraged to submit:</p>
 
 <ul>
-	<li><a href="<?echo $domainName;?>About/Manual/uploadSubmitPublication.php" >Publications</a> that reference Morphbank objects.</li>
-	<li><a href="<?echo $domainName;?>About/Manual/addTaxonName.php" >Taxon Names</a> needed before submitting specimens and their associated images.
+	<li><a href="<?echo $config->domain;?>About/Manual/uploadSubmitPublication.php" >Publications</a> that reference Morphbank objects.</li>
+	<li><a href="<?echo $config->domain;?>About/Manual/addTaxonName.php" >Taxon Names</a> needed before submitting specimens and their associated images.
   		<ul>
     		<li>Two methods to check for presence or absence of taxon names in Morphbank:</li>
       			<ol>
-        			<li><a href="<?echo $domainName;?>/Help/nameMatch/">Name Query</a>: use this to check long lists of names.</li>
-        			<li> or login to use <a href="<?echo $domainName;?>Admin/TaxonSearch/">Taxon Search</a> for short lists.</li>
+        			<li><a href="<?echo $config->domain;?>/Help/nameMatch/">Name Query</a>: use this to check long lists of names.</li>
+        			<li> or login to use <a href="<?echo $config->domain;?>Admin/TaxonSearch/">Taxon Search</a> for short lists.</li>
         		</ol>
     		<li>If <strong>determinations</strong> for a Contributor's specimens are at rank higher than Genus, the Morphbank Excel Workbook (option 2 below) cannot be used for 				             upload.</li>  
     	</ul>
     
-	<li>A <a href="<?echo $domainName;?>About/Manual/updateAccount.php" >Contributor Logo</a> and any associated URL for that Logo to be displayed with every object submitted by 		    this Morpbbank user.</li>
+	<li>A <a href="<?echo $config->domain;?>About/Manual/updateAccount.php" >Contributor Logo</a> and any associated URL for that Logo to be displayed with every object submitted by 		    this Morpbbank user.</li>
 </ul>
 	
 
@@ -75,9 +75,9 @@ Morphbank.</div>
 
 <li><strong>Morphbank Excel Workbook:</strong> Users wishing to contribute 100 - 250 images at a time, may find this method useful. A multi-page Excel Workbook is populated by the Contributor. Morphbank staff uploads the completed workbook. If users need assistance to complete the workbook, Morphbank staff steps in to assist. This workbook and an accompanying manual are found at:
 	<ul>
-    <li><a href="<?echo $domainName;?>docs/mb3p.xls">Morphbank Excel Workbook</a> - tailored with views for <strong>Plantae</strong> &amp; 
-    <a href="<?echo $domainName;?>docs/mb3wbmanual.pdf">Manual</a>    </li>
-    <li><a href="<?echo $domainName;?>docs/mb3a.xls">Morphbank Excel Workbook</a> - tailored with views for <strong>Animalia</strong> &amp; <a href="<?echo $domainName;?>docs/mb3wbmanual.pdf">Manual</a>	</li>
+    <li><a href="<?echo $config->domain;?>docs/mb3p.xls">Morphbank Excel Workbook</a> - tailored with views for <strong>Plantae</strong> &amp; 
+    <a href="<?echo $config->domain;?>docs/mb3wbmanual.pdf">Manual</a>    </li>
+    <li><a href="<?echo $config->domain;?>docs/mb3a.xls">Morphbank Excel Workbook</a> - tailored with views for <strong>Animalia</strong> &amp; <a href="<?echo $config->domain;?>docs/mb3wbmanual.pdf">Manual</a>	</li>
     </ul>
  </li>
 <br />
@@ -122,8 +122,8 @@ Morphbank.</div>
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/uploadSubmit.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/uploadSubmit.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

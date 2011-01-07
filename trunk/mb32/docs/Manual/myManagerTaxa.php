@@ -1,6 +1,6 @@
 <?php 
 	//global $includeDirectory, $dataDirectory, $imgDirectory;
-	global $domainName;
+	
 	include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/head.inc.php');
 	$title =  'About - Manual';
 	initHtml( $title, NULL, NULL);
@@ -32,7 +32,7 @@ In the My Manager <strong>Taxa </strong>tab users can access all the taxon names
     
     <p><strong>OTUs</strong> express a concept of a possible new classification, or grouping 
 	of taxa. These can then be shared with other users.  Functionality to export these may be added in the future.
-    Here's a <a href="<?echo $domainName;?>myCollection/?id=221291" >Sample OTU in Morphbank</a> using Specimen records and 4 taxon names to express the concept of <strong>Apidae</strong>.</p>
+    Here's a <a href="<?echo $config->domain;?>myCollection/?id=221291" >Sample OTU in Morphbank</a> using Specimen records and 4 taxon names to express the concept of <strong>Apidae</strong>.</p>
     
 	</li>
     <li>Note the <strong>Toggle Taxa/OTU</strong> radio buttons allowing the viewer to limit the data being
@@ -59,13 +59,13 @@ In the My Manager <strong>Taxa </strong>tab users can access all the taxon names
 	
 	<ul>
 	
-	<li><a href="<?echo $domainName;?>About/Manual/manualHints.php" ><img src="ManualImages/feedback.png" alt="feedback link" align="middle" /></a>: please use this link to our automated feedback system.
+	<li><a href="<?echo $config->domain;?>About/Manual/manualHints.php" ><img src="ManualImages/feedback.png" alt="feedback link" align="middle" /></a>: please use this link to our automated feedback system.
 	 We appreciate your comments so that we can continue to improve and enhance Morphbank. Clicking on <strong><font color="red">(Help)</font></strong> opens this Manual.</li>
 	
-	<li><a href="<?echo $domainName;?>About/Manual/myManagerFeatures.php" ><strong>Keywords: </strong></a> Use the new <strong>enhanced</strong> search feature. Hold the mouse over the
+	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Keywords: </strong></a> Use the new <strong>enhanced</strong> search feature. Hold the mouse over the
 	Keywords box to see an updated expanded list of fields the Keywords field searches.</li>
 	
-	<li><a href="<?echo $domainName;?>About/Manual/myManagerFeatures.php" ><strong>Limit Search by:</strong></a> allows a user to view only the objects personally contributed/submitted AND/OR those from a particular group. Use the 
+	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Limit Search by:</strong></a> allows a user to view only the objects personally contributed/submitted AND/OR those from a particular group. Use the 
 	<strong>Header Menu > Tools > Select Group > Choose group from sub-menu</strong> feature to change groups OR use the 
 	<strong>Group</strong> link in the <strong>Header</strong> on the left side of the Main Screen.</li>
 	
@@ -77,7 +77,7 @@ In the My Manager <strong>Taxa </strong>tab users can access all the taxon names
 	feature to <strong>Select</strong> one or more Taxa which will then be <em>highlighted in green</em>. A particular action can now 
 	be applied to all the Taxa selected at one time using the <strong>Select Mass Operation</strong> feature.</li>
 	
-	<li><a href="<?echo $domainName;?>About/Manual/myManagerFeatures.php" ><strong>Select Mass Operation</strong></a>: After checking one or more Taxa with the <strong>check
+	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Select Mass Operation</strong></a>: After checking one or more Taxa with the <strong>check
 	box</strong> feature, options in the drop-down of <strong>Select Mass Operation</strong> can be applied to all
 	the Taxa checked. Examples include: <strong>Create new OTU</strong> or <strong>Copy to Existing OTU</strong>.
 	<em>Specimens can also be used in the creation of an OTU or copied into an existing OTU</em>.</li>
@@ -85,25 +85,25 @@ In the My Manager <strong>Taxa </strong>tab users can access all the taxon names
 	<li><strong>Submit</strong>: Click this button to carry out the <strong>Mass Operation</strong> selected.</li>
 	
 	<li><strong>Icons</strong>: The <strong>icons</strong> and their functions are explained fully in Morphbank 
-	<a href="<?echo $domainName;?>About/Manual/graphicGuide.php" >Guide to Graphic Buttons</a>. An abbreviated 
-	explanation can be found on the <a href="<?echo $domainName;?>About/Manual/myManagerAll.php" >All</a> page
+	<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" >Guide to Graphic Buttons</a>. An abbreviated 
+	explanation can be found on the <a href="<?echo $config->domain;?>About/Manual/myManagerAll.php" >All</a> page
 	for My Manager. 
 	
 	<ul>
 	<li>
-	The <img src="<?echo $domainName;?>/style/webImages/infoIcon-trans.png" /> icon
+	The <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon
 	shows data details for a given object, in this case, a taxon Or an OTU.
 	</li>
 	
-	<li><img src="<?echo $domainName;?>/style/webImages/edit-trans.png" />, the	<strong>Edit</strong> icon gives the contributor/submitter of a given
-	taxon name, a link to the <a href="<?echo $domainName;?>About/Manual/edit_taxon_name.php" ><strong>Edit Taxon Name</strong></a>
+	<li><img src="<?echo $config->domain;?>/style/webImages/edit-trans.png" />, the	<strong>Edit</strong> icon gives the contributor/submitter of a given
+	taxon name, a link to the <a href="<?echo $config->domain;?>About/Manual/edit_taxon_name.php" ><strong>Edit Taxon Name</strong></a>
 	 window to make any necessary changes. Users may Edit Taxon data only for any Taxa they've contributed/submitted if it's not yet published. <em>The name <strong>cannot</strong> be edited
 	if it has been submitted to ITIS or has been used by others in the Morphbank system.</em>
 	</li>
 	
-	<li>Morphbank's <img src="<?echo $domainName;?>/style/webImages/annotate-trans.png" /> Annotate icon gives any user the opportunity to leave a
+	<li>Morphbank's <img src="<?echo $config->domain;?>/style/webImages/annotate-trans.png" /> Annotate icon gives any user the opportunity to leave a
 	permanent comment about an object in Morphbank. In this case, a user may 
-	<a href="<?echo $domainName;?>About/Manual/annotate_taxon_name.php" ><strong>Annotate a taxon name</strong></a> by clicking on this
+	<a href="<?echo $config->domain;?>About/Manual/annotate_taxon_name.php" ><strong>Annotate a taxon name</strong></a> by clicking on this
 	icon for a given taxon name.
 	</li>
 	</ul>
@@ -114,7 +114,7 @@ In the My Manager <strong>Taxa </strong>tab users can access all the taxon names
 	</li>
 	<br />
 	<li>A user may also <img src="ManualImages/add_new_taxa_button.png"> from this My Manager page. Click on the button to open the Taxon Name Search.
-	Click <a href="<?echo $domainName;?>About/Manual/addTaxonName.php" >Add Taxon Name</a> for more detailed instructions.
+	Click <a href="<?echo $config->domain;?>About/Manual/addTaxonName.php" >Add Taxon Name</a> for more detailed instructions.
 	</li>
 	</ul>
 	
@@ -131,31 +131,31 @@ In the My Manager <strong>Taxa </strong>tab users can access all the taxon names
 	</li>
 	<li>Click <img src="ManualImages/submit_button.gif"> to finish this task.</li>
 	<li> Any <strong>OTUs</strong> created can be seen in this
-	 <a href="<?echo $domainName;?>About/Manual/myManagerTaxa.php" >Taxa</a> tab. Use the <strong>Toggle Taxa/OTU</strong>
+	 <a href="<?echo $config->domain;?>About/Manual/myManagerTaxa.php" >Taxa</a> tab. Use the <strong>Toggle Taxa/OTU</strong>
 	 radio buttons to limit the display to OTUs only, if desired.</li>
      <li>For any OTU, click the
-	 <img src="<?echo $domainName;?>/style/webImages/infoIcon-trans.png" /> icon to see the objects in a particular
+	 <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon to see the objects in a particular
 	 OTU.
      </li>
 	</ul>
     Currently, there are 3 types of Morphbank Collections: a Collection of Images (and / or other objects), a Character Collection created to illustrate Character States for a defined Character, and an OTU Collection consisting of Specimens and Taxon Names -- designed to help a user describe operational taxonomic units (OTU)s.
 </div>	
 
-<a href="<?echo $domainName;?>About/Manual/addTaxonName.php" ><h3>Add a Taxon Name to Morphbank</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/addTaxonName.php" ><h3>Add a Taxon Name to Morphbank</h3></a>
 <br /><br />
-<a href="<?echo $domainName;?>About/Manual/edit_taxon_name.php" ><h3>Edit a Taxon Name in Morphbank</h3></a>
+<a href="<?echo $config->domain;?>About/Manual/edit_taxon_name.php" ><h3>Edit a Taxon Name in Morphbank</h3></a>
 <br /><br />
-		<a href="<?echo $domainName;?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
+		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
 		<br />
 		<br />
-		<a href="<?echo $domainName;?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
+		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
 			<br />
 			<br />
 			
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $domainName;?>About/Manual/myManagerCollections.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $domainName;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/myManagerCollections.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</tr>
 				</div>
