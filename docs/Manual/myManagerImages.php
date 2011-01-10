@@ -26,16 +26,6 @@
 	initHtml( $title, NULL, NULL);
 	echoHead( false, $title);
 	?>
-<script src="/js/spry/SpryEffects.js" type="text/javascript"></script>
-<script type="text/javascript">
-<!--
-function MM_effectGrowShrink(targetElement, duration, from, to, toggle, referHeight, growFromCenter)
-{
-	Spry.Effect.DoGrow(targetElement, {duration: duration, from: from, to: to, toggle: toggle, referHeight: referHeight, growCenter: growFromCenter});
-}
-//-->
-</script>
-
 
 	<div class="mainGenericContainer" width="100%">
 		<!--change the header below -->
