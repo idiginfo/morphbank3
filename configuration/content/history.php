@@ -1,4 +1,4 @@
-<h1>Morphbank History</h1>
+<h1><?php echo $config->appName; ?> History</h1>
 <img src="/style/webImages/blueHR-trans.png" width="525" height="5" class="blueHR" alt="" />
 <p>
 	The morphbank concept was originally outlined as part of a collaborative effort to elucidate higher-level 
