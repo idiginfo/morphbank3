@@ -600,7 +600,10 @@ function getNonAuthMessage($code) {
 		case 6: // no object for the id
 			$msg = 'There is no object with this id';
 			break;
-		case 7:
+		case 7: // Site disabled. Only viewing allowed
+		    $msg = 'The site has been temporarily disbled for additions or edits. Only viewing is enabled.';
+		    break;
+		case 8:
 		default: // Unexpected result
 			$msg = 'An Unexpected system error occured';
 	}
