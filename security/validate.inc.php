@@ -62,6 +62,12 @@ function checkAuthorization($objectId, $userId = null, $groupId = null, $functio
 
 	// allow administrator access
 	if ($groupId == $config->adminGroup) return true;
+	
+	// Disable everything but viewing if config->disableSite value set
+	if ($function == 'view' && $config->disableSite == 1) {
+	  $nonAuthCode = 7;
+	  return false;
+	}
 
 	// Handle add
 	if($function == 'add' || $function == 'annotate'){
@@ -129,7 +135,7 @@ function checkAuthorization($objectId, $userId = null, $groupId = null, $functio
 		$nonAuthCode = 5;
 		return false;
 	}
-	$nonAuthCode = 7;
+	$nonAuthCode = 8;
 	return false;
 }
 
@@ -140,7 +146,9 @@ function checkAuthorization($objectId, $userId = null, $groupId = null, $functio
  * 3 = Group role is guest or reviewer and is add
  * 4 = Not user's object and not a member of the group
  * 5 = Not user's object and user's role in group does not allow edit/delete
- * 6 = Unexpected result
+ * 6 = No object with this id
+ * 7 = Site updates and additions disabled. Viewing only.
+ * 8 = Unexpected result
  */
 function getNonAuthCode() {
 	global $nonAuthCode;
