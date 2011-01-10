@@ -1,4 +1,4 @@
-/**
+<!-- 
 * Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the GNU Public License v2.0
@@ -17,7 +17,7 @@
 *   Karolina Maneva-Jakimoska - initial API and implementation
 *   Katja Seltmann - initial API and implementation
 *   Stephen Winner - initial API and implementation
-*/
+-->
 
 <form name="login" id="frmLogin" action="login.php" method="post">
 <table border="0" cellpadding="5">
