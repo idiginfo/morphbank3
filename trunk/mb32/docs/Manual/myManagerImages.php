@@ -26,7 +26,7 @@
 	initHtml( $title, NULL, NULL);
 	echoHead( false, $title);
 	?>
-<script src="SpryAssets/SpryEffects.js" type="text/javascript"></script>
+<script src="/js/spry/SpryEffects.js" type="text/javascript"></script>
 <script type="text/javascript">
 <!--
 function MM_effectGrowShrink(targetElement, duration, from, to, toggle, referHeight, growFromCenter)
