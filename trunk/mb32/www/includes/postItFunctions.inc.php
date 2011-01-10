@@ -1,17 +1,23 @@
 <?php
 /**
-*	Functions and javascript that is used for mouseover post it.
-*
-*	
-*	Outputs the necessary javascript and and html for use of the post it hover not.
-*	--Note-- Must be outputed before or after the <div id="main"> i.e. right
-*	after the <body> tag or before the </body> tag.  This is so the post it will be positioned 
-* 	absolutley within the whole html page.
-
-*	File: postItFunctions.inc.php
-*   @package Morphbank2
-*   @subpackage includes
-*	
+* Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
+* All rights reserved. This program and the accompanying materials
+* are made available under the terms of the GNU Public License v2.0
+* which accompanies this distribution, and is available at
+* http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+* 
+* Contributors:
+*   Fredrik Ronquist - conceptual modeling and interaction design
+*   Austin Mast - conceptual modeling and interaction design
+*   Greg Riccardi - initial API and implementation
+*   Wilfredo Blanco - initial API and implementation
+*   Robert Bruhn - initial API and implementation
+*   Christopher Cprek - initial API and implementation
+*   David Gaitros - initial API and implementation
+*   Neelima Jammigumpula - initial API and implementation
+*   Karolina Maneva-Jakimoska - initial API and implementation
+*   Katja Seltmann - initial API and implementation
+*   Stephen Winner - initial API and implementation
 */
 
 function setupPostIt() {	
