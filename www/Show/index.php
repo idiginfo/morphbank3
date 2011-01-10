@@ -1,17 +1,24 @@
 <?php
 /**
- *	Script that decides what type of object is requested, and shows it.
- *
- *	This script checks for GET variable (id) and imgType.  If imgType and (id) are given, script check to
- *	see if the object type is an image.  If TRUE, then displays just the image according to the type given, (either jpg, jpeg, or tiff)
- *	If there is just an id and no imgType, then object type is checked and calls the appropriate module to display that MB object.
- *
- *	If the query has no results an error message is outputted.
- *
- *	File: index.php
- *	@package Show
- *
- */
+* Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
+* All rights reserved. This program and the accompanying materials
+* are made available under the terms of the GNU Public License v2.0
+* which accompanies this distribution, and is available at
+* http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+* 
+* Contributors:
+*   Fredrik Ronquist - conceptual modeling and interaction design
+*   Austin Mast - conceptual modeling and interaction design
+*   Greg Riccardi - initial API and implementation
+*   Wilfredo Blanco - initial API and implementation
+*   Robert Bruhn - initial API and implementation
+*   Christopher Cprek - initial API and implementation
+*   David Gaitros - initial API and implementation
+*   Neelima Jammigumpula - initial API and implementation
+*   Karolina Maneva-Jakimoska - initial API and implementation
+*   Katja Seltmann - initial API and implementation
+*   Stephen Winner - initial API and implementation
+*/
 
 if ( isset($_GET['imgType']) && isset($_GET['id']) ) {
 	$url = '/?id='.$_GET['id'].'&imgType='.$_GET['imgType'];
