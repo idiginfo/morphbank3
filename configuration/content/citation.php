@@ -16,5 +16,5 @@ a <em>less restrictive</em> license or Public Domain. Choosing the appropriate l
 </p>
 <br/>
 <h1>How to cite <? echo $config->appName; ?></h1>
-<p><strong><? echo $config->appName; ?> (http://<?php echo $config->appServerBaseUrl; ?>, <?php echo date('d F Y') ?>).
+<p><strong><? echo $config->appName; ?> (<?php echo $config->appServerBaseUrl; ?>, <?php echo date('d F Y') ?>).
 Florida State University, Department of Scientific Computing, Tallahassee, FL 32306-4026 USA.<br /></strong></p>
