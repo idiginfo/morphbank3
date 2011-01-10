@@ -102,7 +102,7 @@ Morphbank.</div>
  </li>
 <br />
 
-<li><strong>Morphbank Custom Workbook</strong> [<a href="/About/customWorkbook.xls">xls</a>]
+<li><strong>Morphbank Custom Workbook</strong> [<a href="/docs/customWorkbook.xls">xls</a>]
 		<p> This newest upload method utilizes a modifiable Excel file. It is meant to be a more efficient upload strategy (for everyone). The Worksheets are easily tailored to the those desiring to use only a few Morphbank fields or to those wishing to use many of the Morphbank Fields and add <em>user-defined fields</em> for their data / images. This option <strong>requires unique identifiers</strong> for the contributor's images and specimens. It is most suitable for those whose data is already <em>in a database.</em> If a contributor's data is not in a database, they must create these unique identifiers in order to use this upload option.</p>
 
 <p>Suggestion: download and open this Workbook to look at while reading this documentation in the Online User Manual at <a href="/About/Manual/customWorkbook.php" target="_blank">Custom Workbook Help</a></p>
@@ -114,7 +114,7 @@ Morphbank.</div>
     <li>Contributor-provided <strong>unique identifiers</strong>
     for images and specimens in the dataset.<li><strong>Mapping </strong>Contributor's database fields to Morphbank fields.</li>
     	<ul>
-        <li>See Morphbank <a href="/About/mbTablesDescription.pdf">Table descriptions pdf</a> and</li> 
+        <li>See Morphbank <a href="/docs/mbTablesDescription.pdf">Table descriptions pdf</a> and</li> 
         <li><a href="/schema/mbsvc3.xsd">Morphbank XML Schema</a> to map Contribuor database fields to Morphank fields.</li>
         </ul>
     <li><strong>Checking &amp; Adding Taxon Names</strong> where necessary, to Morphbank, before upload of data &amp; images.</li>
@@ -122,7 +122,7 @@ Morphbank.</div>
     	<ul>
         <li><strong>Login and </strong>use <a href="/Admin/TaxonSearch/index.php?">Taxon Search</a> if checking, let's say, fewer than 20 names.</li>
         <li>Use <a href="/Help/nameMatch/">Name Query</a> to check a long list of taxon names and get a CSV file report of matches / non-matches.</li>
-        <li>Names added to Morphbank via 1) web site, 2) <a href="/About/mb3a.xls">Excel Workbook</a>, 3) Taxon Upload form (contact <strong>mbadmin <font color="blue">at</font> scs 						         <font color="blue">dot</font> fsu <font color="blue">dot</font>  edu</strong>)</li>
+        <li>Names added to Morphbank via 1) web site, 2) <a href="/docs/mb3a.xls">Excel Workbook</a>, 3) Taxon Upload form (contact <strong>mbadmin <font color="blue">at</font> scs 						         <font color="blue">dot</font> fsu <font color="blue">dot</font>  edu</strong>)</li>
         </ul>
     
     

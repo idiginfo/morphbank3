@@ -160,7 +160,7 @@ Preparing to <a href="<?echo $config->domain;?>About/Manual/submit.php">Submit</
 <br />
 <h3>Mass Upload Options</h3><br />
 <a href="<?echo $config->domain;?>About/Manual/submit.php">Which Option Fits Best?</a> - Options and Considerations<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?echo $config->domain;?>About/mb3wbmanual.pdf">Excel Workbook v3 Manual (pdf)</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?echo $config->domain;?>docs/mb3wbmanual.pdf">Excel Workbook v3 Manual (pdf)</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?echo $config->domain;?>docs/mb3a.xls">Excel Workbook v3 - Animalia views</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?echo $config->domain;?>docs/mb3p.xls">Excel Workbook v3 - Plantae views</a><br />
 <!-- TODO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?echo $config->domain;?>docs/mb3psample.xls">Sample Excel Workbook v3 - Plantae views</a><br />-->
