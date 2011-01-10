@@ -28,10 +28,9 @@ initHtml($title, null, null);
 
 // Add the standard head section to all the HTML output.
 echoHead(false, $title);
-
-$aboutHtml = file_get_contents('content/about.html', true);
-echo '<div class="mainGenericContainer">'. $aboutHtml . '</div>';
+echo '<div class="mainGenericContainer">';
+include('content/about.php');
+echo '</div>';
 
 // Finish with end of HTML
 finishHtml();
-?>
