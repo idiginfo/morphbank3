@@ -29,10 +29,12 @@ initHtml( $title, NULL, NULL);
 // Add the standard head section to all the HTML output.
 echoHead( false, $title);
 
-$contributeHtml = file_get_contents('content/contribute.html', true);
 // Output the content of the main frame
-echo '<div class="mainGenericContainer" style="width:700px">'.$contributeHtml.'</div>';
+echo '<div class="mainGenericContainer" style="width:700px">';
+echo '<h1 align="center">How To Contribute Data</h1>';
+echo '<img src="/style/webImages/blueHR-trans.png" width="525" height="5" class="blueHR" alt="" />';
+include('content/contribute.php');
+echo '</div>';
 
 // Finish with end of HTML
 finishHtml();
-?>
