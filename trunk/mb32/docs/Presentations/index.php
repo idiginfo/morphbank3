@@ -31,6 +31,17 @@ initHtml( $title, NULL, NULL);
 // Add the standard head section to all the HTML output.
 echoHead( false, $title);
 
+include('../../data/mbMenu_data.php');
+
+echo '<div id="main">';
+echo '<div class="mainGenericContainer">
+		<h1 align="center"></h1>';
+include('Presentations.php');
+echo '</div>';
+echo ' <div id="footerRibbon">';
+echo '</div>';
+ 
+			
 // Output the content of the main frame
 mainpresentationText();
 
