@@ -17,13 +17,13 @@
 3) Change to database:
    mysql> use MB32;
 
-4) Run below SQL scripts:
-   mysql> source /configuration/dbscripts/createTablesMB32.sql
-   mysql> source /configuration/dbscripts/createObjectProcs.sql
-   mysql> source /configuration/dbscripts/createProcs.sql
-   mysql> source /configuration/dbscripts/populateMB32.sql (*note: A sample database named MB30 is required)
+4) Run below SQL scripts from inside project folder:
+   mysql> source configuration/dbscripts/createTablesMB32.sql
+   mysql> source configuration/dbscripts/createObjectProcs.sql
+   mysql> source configuration/dbscripts/createProcs.sql
+   mysql> source configuration/dbscripts/populateMB32.sql (*note: A sample database named MB30 is required)
    
-5) Alter my.cnf and set "innodb_lock_wait_timeout = 50" and restart mysql server.
+5) Alter my.cnf and set "innodb_lock_wait_timeout = 5000" and restart mysql server.
 
 6) Change /www/htaccess.txt to .htaccess and save. 
    Alter the php auto_prepend_file path inside .htaccess accordingly for your server.
