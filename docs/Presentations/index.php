@@ -21,7 +21,7 @@
 */
 
 // Config script
-include_once('../../includes/head.inc.php');
+include_once('head.inc.php');
 include_once('Presentations.php');
 
 // The beginnig of HTML
