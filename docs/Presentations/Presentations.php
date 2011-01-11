@@ -1,26 +1,3 @@
-<?php
-/**
-* Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the GNU Public License v2.0
-* which accompanies this distribution, and is available at
-* http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-* 
-* Contributors:
-*   Fredrik Ronquist - conceptual modeling and interaction design
-*   Austin Mast - conceptual modeling and interaction design
-*   Greg Riccardi - initial API and implementation
-*   Wilfredo Blanco - initial API and implementation
-*   Robert Bruhn - initial API and implementation
-*   Christopher Cprek - initial API and implementation
-*   David Gaitros - initial API and implementation
-*   Neelima Jammigumpula - initial API and implementation
-*   Karolina Maneva-Jakimoska - initial API and implementation
-*   Katja Seltmann - initial API and implementation
-*   Stephen Winner - initial API and implementation
-*/
-
-$presentationText = '
 <table>
 <tr>
 <td>
@@ -114,7 +91,7 @@ Botanical gardens keep extensive records of their specimens, with taxonomy and l
 <br/><br/>
 
 The major challenges for PC were to provide infrastructure to aggregate and publish the databases and the photographic collections of the gardens, and to provide for information update from garden to portal and back. The PC project began with a survey of the database fields in the garden databases, the development of a common metadata schema, the deployment of that schema using Google Base, and the transfer of many images to the Morphbank image and metadata repository. 
-<br/<br/>
+<br/><br/>
 
 The typical information flow to publish garden data is: 
 <br/><br/>
@@ -347,23 +324,3 @@ The TDWG talk for this abstract will include illustrations of the use of both de
 </td>
 </tr>
 </table>
-';
-
-// simply echos the following contents to the web browser.
-// This helps keep the main scripts simpler to read.
-function mainpresentationText() {
-	include('../../includes/config.inc.php');
-	include('../../data/mbMenu_data.php');
-	
-	global $presentationText;
-	
-	echo '<div id="main">';
-	echo '<div class="mainGenericContainer">
-			<h1 align="center"></h1>'
-			.$presentationText.'
-		 </div>';
-	echo ' <div id="footerRibbon">';
-	echo '</div>';
-}
-
-?>
