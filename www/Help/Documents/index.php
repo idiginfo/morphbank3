@@ -35,6 +35,7 @@ echo '<div class="mainGenericContainer" style="width:700px">';
 echo '<h1>Morphbank Documents</h1>';
 echo '<img src="/style/webImages/blueHR-trans.png" width="525" height="5" style="margin-top:5px;" />';
 include('mainHelpDocuments.php');
+echo $mainHelpDocuments;
 echo '</div>';
 
 // Finish with end of HTML
