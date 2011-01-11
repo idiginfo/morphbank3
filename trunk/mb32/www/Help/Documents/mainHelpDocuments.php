@@ -84,6 +84,6 @@ $mainHelpDocuments = '<br/>
 			services of (<a href="http://circa.gbif.net/" target="blank">GBIF</a>).
 			</li>
 		</ul>
-		<li>Posters and Presentations about morphbank for download.  [<a href="../Presentations/">browse</a>]</li>
+		<li>Posters and Presentations about morphbank for download.  [<a href="/docs/Presentations/">browse</a>]</li>
 		</ul>';
 ?>
