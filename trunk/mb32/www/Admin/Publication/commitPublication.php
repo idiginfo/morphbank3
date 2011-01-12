@@ -1,3 +1,4 @@
+<?php 
 /**
 * Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
 * All rights reserved. This program and the accompanying materials
@@ -20,7 +21,6 @@
 *   Stephen Winner - initial API and implementation
 */
 
-<?php 
 /**
  * File commitPublication
  * Process submitted Publication form
