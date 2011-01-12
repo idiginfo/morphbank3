@@ -146,6 +146,20 @@ function getTaxonomicNamesFromBranch ($tsn, $separatorString=" ", $quote=true){
 	return $taxNames;
 }
 
+function getTaxonBranchNames($tsn){
+	$sql = "select scientificName from TaxonBranchNode where child = $tsn order by rankId ";
+	$db = connect();
+	$branchNames = array();
+	$branch = $db->query($sql);
+	isMdb2Error($branch,$sql);
+	while ($node = $branch->fetchRow()) {
+		$branchNames[] = $node[0];
+	}
+
+	return $branchNames;
+}
+
+
 function getTaxonomicNames($tsn){
 	if (empty($tsn)) return null;
 	$db = connect();
@@ -202,34 +216,6 @@ function getTaxonomicNamesByType($id, $objectType){
 
 function getVernacularNamesByType($id, $objectType){
 	return getVernacularNames(getTsnByType($id, $objectType));
-}
-
-/*
-function getTaxonBranchNames($tsn){
-	$sql = "select scientificName from TaxonBranchNode where child = $tsn order by rankId ";
-	$db = connect();
-	$branchNames = array();
-	$branch = $db->query($sql);
-	isMdb2Error($branch,$sql);
-	while ($node = $branch->fetchRow()) {
-		$branchNames[] = $node[0];
-	}
-
-	return $branchNames;
-}
-*/
-/**
-* Above function altered by Greg
-*/
-function getTaxonBranchNames($tsn){
-	$taxonBranch = getTaxonBranchArray($tsn);
-	$rows = count($taxonBranch);
-	$branchNames = array();
-	// make an array of names
-	for ($i = 0; i<$rows; $i++){
-		$branchNames[$i]=$taxonBranch[$i]['name'];
-	}	
-	return $branchNames;
 }
 
 function getTaxonBranchArray($tsn) {
@@ -1119,4 +1105,3 @@ function getRowByScientificName($scientific_name, $rank_id, $parent_tsn = 0) {
 	isMdb2Error($row, "Error selecting scientificName information");
 	return $row;
 }
-
