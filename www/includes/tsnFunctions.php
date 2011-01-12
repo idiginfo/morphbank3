@@ -132,33 +132,19 @@ function printTsnNameLinks($tsnName) {
 }
 
 function getTaxonomicNamesFromBranch ($tsn, $separatorString=" ", $quote=true){
-	$branchNames = getTaxonBranchNames($tsn);
-
-	$separator = "";
-	foreach ($branchNames as $name){
-		$taxNames .= $separator . $name;
-		$separator = $separatorString;
-	}
-	if ($quote){
-		$db = connect();
-		$taxNames = $db->quote($taxNames,'text',true);
-	}
-	return $taxNames;
+  $branches = getTaxonBranchFromParent($tsn);
+  
+  $separator = "";
+  foreach ($branches as $branch){
+  	$taxNames .= $separator . $branch['name'];
+  	$separator = $separatorString;
+  }
+  if ($quote){
+  	$db = connect();
+  	$taxNames = $db->quote($taxNames,'text',true);
+  }
+  return $taxNames;
 }
-
-function getTaxonBranchNames($tsn){
-	$sql = "select scientificName from TaxonBranchNode where child = $tsn order by rankId ";
-	$db = connect();
-	$branchNames = array();
-	$branch = $db->query($sql);
-	isMdb2Error($branch,$sql);
-	while ($node = $branch->fetchRow()) {
-		$branchNames[] = $node[0];
-	}
-
-	return $branchNames;
-}
-
 
 function getTaxonomicNames($tsn){
 	if (empty($tsn)) return null;
@@ -220,43 +206,42 @@ function getVernacularNamesByType($id, $objectType){
 
 function getTaxonBranchArray($tsn) {
 	if (empty($tsn)) return null;
+	
 	$requestTsn = $tsn;
+	
 	$db = connect();
 	$query = "SELECT tsn, rankid, scientificName, rank  FROM TaxonBranchNode t where child=$tsn order by rankid";
 	$rows = $db->query($query);
 	isMdb2Error($rows,$query);
+	
 	$taxonBranch = array();
 	while (list($tsn, $rankId, $scientificName, $rank) = $rows->fetchRow()){
 		$taxonBranch[]=array('tsn'=>$tsn, 'rank_id'=>$rankId, 'name'=>$scientificName, 'rank'=>$rank);
 	}
 	if (count($taxonBranch)>0) return $taxonBranch;
 	return getTaxonBranchFromParent($requestTsn);
-
 }
 
 function getTaxonBranchFromParent($tsn){
+    if (empty($tsn)) return null;
+    
 	$db = connect();
 	$taxonBranch = array();
 
 	$sql = "select t.parent_tsn, t.rank_id, t.scientificName, n.rank_name from Tree t join TaxonUnitTypes n"
 	." on t.rank_id=n.rank_id and t.kingdom_id=n.kingdom_id where t.tsn=?";
+	
 	$stmt = $db->prepare($sql);
 	isMDB2Error($stmt);
 	while ($tsn != 0){
-		$result = $stmt->execute(array($tsn));
-		isMDB2Error($result);
-		list($parentTsn,$rankId,$scientificName,$rank) = $result->fetchRow();
-		$taxonBranch[]=array('tsn'=>$tsn, 'rank_id'=>$rankId, 'name'=>$scientificName,
-			'rank'=>$rank);
-		$tsn = $parentTsn;
+    	$result = $stmt->execute(array($tsn));
+    	isMDB2Error($result);
+    	list($parentTsn,$rankId,$scientificName,$rank) = $result->fetchRow();
+    	$taxonBranch[]=array('tsn'=>$tsn, 'rank_id'=>$rankId, 'name'=>$scientificName, 'rank'=>$rank);
+    	$tsn = $parentTsn;
 	}
-        $rows = count($taxonBranch);
-        $branch = array();
-        // reverse the list
-        for ($i = 0; $i < $rows; $i++) {
-                $branch[$rows-1-$i]=$taxonBranch[$i];
-        }
-        return $branch;
+    $rows = count($taxonBranch);
+    return array_reverse($taxonBranch);
 }
 
 
@@ -577,6 +562,7 @@ function updateChildrenName ($tsn, $newName, $oldName) {
 //function that prints the top line with all the parent names
 function printTaxonNames($tsn) {
 	if (empty($tsn)) return null;
+	
 	$db = connect();
 	$query = "SELECT * FROM Tree WHERE tsn=" . $tsn;
 	$row = $db->getRow($query,null,null,null,MDB2_FETCHMODE_ASSOC);
