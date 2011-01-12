@@ -1,3 +1,4 @@
+<?php 
 /**
 * Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
 * All rights reserved. This program and the accompanying materials
@@ -19,7 +20,7 @@
 *   Katja Seltmann - initial API and implementation
 *   Stephen Winner - initial API and implementation
 */
-
+?>
 <form name="main" class="frmValidate" id="<?php echo $frmId ?>" action="<?php echo $frmAction ?>" method="post">
 <input type="hidden" name="pop" value="<?php echo $_GET['pop'] ?>" />
 <input type="hidden" name="maintsn" value="<?php echo $main_tsn ?>" />
