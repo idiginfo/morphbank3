@@ -127,8 +127,8 @@ if this fits your user case scenario.</li>
 <div class="specialtext2">
 	<h3><a name="taxonSearch">Where to Find <em>Taxon Name Search</em></a></h3>
 	<ul>
-    <li>Header Menu: <strong>Browse > Taxon Search</strong>.    </li>
-	<li>Header Menu: <strong>Tools > Submit > Taxon Name</strong>.	</li>
+    <li>Header Menu: <strong>Browse > Taxon Search</strong>.</li>
+	<li>Header Menu: <strong>Tools > Submit > Taxon Name</strong>.</li>
 	<li>Header Menu: <strong>Tools > Submit Specimen</strong> (click on the <img src="../../style/webImages/selectIcon.png" alt="select check"/> next to Determination Id/Name field).	</li>
 	</ul>
 </div>
@@ -237,13 +237,14 @@ instructions on providing external links refer to <a href="<?echo $config->domai
 </li>
 <img src="ManualImages/add_externalLinksRef.png" alt="external link options" hspace="20" vspace="10"/>
 	<ul>
-    <li>Choose the <strong>Type</strong> of External Link (some examples are: GenBank, Project, Institution, ...)    </li>
+    <li>Choose the <strong>Type</strong> of External Link (some examples are: GenBank, Project, Institution, ...)</li>
     <li>Enter the text for the <strong>Label</strong> the user in Morphbank will click to go to this URL.    </li>
     <li>Enter the complete <strong>URL</strong> here.    </li>
     <li>The <strong>Description</strong> field is optional.    </li>
     <li>Click the <strong>+</strong> icon to add additional external links.    </li>
     <li>Click the <strong>-</strong> icon to remove any outdated links.</li>
    </ul>
+   
    <br />
 <li><strong>Add External References</strong> to this record. For complete
 instructions on providing external references refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External References</font> to open this feature. See next:<br/>
@@ -260,11 +261,12 @@ instructions on providing external references refer to <a href="<?echo $config->
         <ul>
         <li><strong>Unique Reference ID</strong> <em>best practice</em> is to combine an <strong>acronym prefix</strong> + an <strong>identifier</strong>.</li>
         <li>The database table storing this identifier requires the values be unique. If the identifier string entered is already in this table, the user will have to figure out a different prefix.</li>
-        <li>For example, a user, Fred S Unstead, has a Locality with ID=123456 and puts his initials as the prefix for: <strong>FSU:123456</strong></li>
+        <li>For example, a user, Fred S Unstead, has a Locality with ID=123456 and puts his initials as the prefix for: <strong>FSU:123456</strong>
         	<ul>
             <li>Florida State University (FSU) entered Locality IDs as prefix: FSU + an identifier (123456).</li>
             <li>Fred S Unstead needs to change his prefix in some way, for example: <strong>FSU-L:123456</strong> (where the L is for Locality) and the identifier will upload into Morphbank.</li>
             </ul>
+            </li>
         <li>The external unique reference ID can be used in future uploads and for updates of current records in Morphbank.    
         </ul>
         </div>  
