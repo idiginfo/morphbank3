@@ -36,10 +36,12 @@
 <p>This online manual focuses on:</p> 
 <ul>
 <li>detailed directions for navigating and populating the Morphbank online database via the web.</li> 
-<li>considerations and instructions for options to <em>bulk / mass upload data and images.</em></li>
+<li>considerations and instructions for options to <em>bulk / mass upload data and images.</em>
 	<ul>
-    <li>There are links to instructions for uploading images via Excel, XML or Specify (in alpha-testing) at the  <a href="<?echo $config->domain;?>About/Manual/submit.php">Preparing to Submit</a> manual page.</li>
+    <li>There are links to instructions for uploading images via Excel, XML or Specify (in alpha-testing)
+     at the <a href="<?echo $config->domain;?>About/Manual/submit.php">Preparing to Submit</a> manual page.</li>
 	</ul>
+</li>	
 <li>morphbank general topics, like copyright, image philosophy and system requirements.</li>
 </ul>
 
