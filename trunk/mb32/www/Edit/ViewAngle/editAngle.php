@@ -21,6 +21,10 @@
 *   Stephen Winner - initial API and implementation
 */
 
+function editAngle() {
+	//These are declared global so that they can be used anywhere in the function. These are defined in config.php
+	global $imgDirectory, $buttonsDirectory, $includeDirectory;
+	
 	if ($result) {
 		echo '<input type="hidden" name="rows" value="' . $numRows . '" />
       <input type="hidden" name="flag" value = "false"/>
