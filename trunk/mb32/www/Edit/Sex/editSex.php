@@ -21,6 +21,22 @@
 *   Stephen Winner - initial API and implementation
 */
 
+/**
+ File name: editSex.php
+ @author Neelima Jammigumpula <jammigum@scs.fsu.edu>
+ @package Morphbank2
+ @subpackage Submit
+ @subpackage Edit
+ @subpackage Sex
+ Included Files: editjavascripts.php
+ This has a simple function javascript($numRows) that creates the javascript function based on
+ the number of rows returned from the query which is passed to it.
+
+ This script has only one function editSex that displays the GUI and form data from the database.
+ **/
+
+function editSex()
+{
 	if ($result) {
 		echo '<input type="hidden" name="rows" value="' . $numRows . '" />
           <input type="hidden" name="flag" value="false" />

@@ -21,6 +21,22 @@
 *   Stephen Winner - initial API and implementation
 */
 
+/**
+ File name: editLinkType.php
+ @author Neelima Jammigumpula <jammigum@scs.fsu.edu>
+ @package Morphbank2
+ @subpackage Submit
+ @subpackage Edit
+ @subpackage LinkType
+ Included Files: editjavascripts.php
+ This has a simple function javascript($numRows) that creates the javascript function based on
+ the number of rows returned from the query which is passed to it.
+
+ This script has only one function editLinkType that displays the GUI and form data from the database.
+ **/
+
+function editLinkType()
+{
 	if ($result) {
 		echo '<input type="hidden" name="rows" value="' . $numRows . '" />
 		 <input type="hidden" name="flag" value="false" />
