@@ -87,6 +87,7 @@ function getTimezoneOptions($tz = '') {
 	    'Antarctica' => DateTimeZone::ANTARCTICA,
 	    'Aisa' => DateTimeZone::ASIA,
 	    'Atlantic' => DateTimeZone::ATLANTIC,
+	    'Australia' => DateTimeZone::AUSTRALIA,
 	    'Europe' => DateTimeZone::EUROPE,
 	    'Indian' => DateTimeZone::INDIAN,
 	    'Pacific' => DateTimeZone::PACIFIC
