@@ -80,7 +80,7 @@ associated with that group.</li>
 <li>If a Morphbank Contributor opens a single show using the <img src="../../style/webImages/infoIcon-trans.png" alt="info icon" /> for any of their objects (published or not), the <img src="../../style/webImages/edit-trans.png" /> icon is available inside the single show.</li>
 	<ul>
 	<li>For an <em>unpublished</em> Collection a user has created, they may <strong>Edit</strong> this Collection by finding and opening it in My Manager
-	Collections from the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon.	</li>
+	Collections from the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> icon.	</li>
 	<li>From My Manager > Annotations, a user finds their <em>unpublished</em> Annotations and clicks on the 
 	<img src="../../style/webImages/edit-trans.png" /> icon to open the Edit Annotation Screen. Go to 
 	<a href="<?echo $config->domain;?>About/Manual/edit_annotations.php" target="_blank"><h3>Edit Annotations</h3></a> for details.	</li>
