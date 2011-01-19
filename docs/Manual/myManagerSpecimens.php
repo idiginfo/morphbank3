@@ -80,12 +80,12 @@
 	<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php">Guide to Graphic Buttons</a>. An abbreviated 
 	explanation can be found on the <a href="<?echo $config->domain;?>About/Manual/myManagerAll.php">All</a> page
 	for My Manager.
-	<p>Briefly, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon
+	<p>Briefly, the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> icon
 	shows metadata for the image.
 	<br />
-	The <img src="<?echo $config->domain;?>/style/webImages/edit-trans.png" /> icon
+	The <img src="<?echo $config->domain;?>style/webImages/edit-trans.png" /> icon
 	 gives users access to <strong>change/update/edit</strong> data for any Specimens they've contributed/submitted.
-	 <br /> The <img src="../../style/webImages/camera-min16x12.gif" alt="camera icon" /> <strong>camera icon</strong> is
+	 <br /> The <img src="<?echo $config->domain;?>style/webImages/camera-min16x12.gif" alt="camera icon" /> <strong>camera icon</strong> is
 	 the user's link to see existing images of a particular specimen in Morphbank.
 	 </p>
 	 </li>
