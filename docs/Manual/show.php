@@ -144,9 +144,9 @@ To submit a Logo for your objects go to: <strong>Header Menu > Tools > Account S
  would like the same logo for a large set of objects, contact mbadmin at <strong>mbadmin 
  <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font>  edu</strong>
  </li>
-<li>Left click on image to bring up the FSI viewer by Neptune Labs. For
-complete information on this process refer to the <a href="<?echo $config->domain;?>About/Manual/FSI.php">FSI Viewer</a> section of this
-manual. Or click on the FSI Viewer link seen just below the image.
+<li>Left click on image to bring up the open source Zooming Viewer. For
+complete information on this process refer to the <a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php">Zooming Viewer</a>
+ section of this manual. Or click on the Zooming Viewer link seen just below the image.
 </li>
 <li>Click once on any of the areas in blue type will lead the user to
 additional information. In this case, information associated with the view of this image appears. By clicking on
@@ -157,7 +157,7 @@ display additional information. See next:
 <img src="ManualImages/view_single_show2.png" />
 </li><br />
 <br />
-<li>Click on the FSI Viewer link seen just below the image. This will bring up the FSI viewer by Neptune Labs. For
+<li>Click on the Zooming Viewer link seen just below the image. This will bring up the open source Zooming Viewer. For
 complete information on this process refer to the <a href="<?echo $config->domain;?>About/Manual/FSI.php">FSI Viewer</a> section of this
 manual.
 </li>
