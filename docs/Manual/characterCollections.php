@@ -35,11 +35,12 @@
 <div id=footerRibbon></div>
 		<td width="100%">
 		<br />
-Starting with Morphbank 2.8 you can use Morphbank images and other objects to define a character.  In this version of the software continuous and ordered characters are not supported.  Please use the <a href="<?echo $config->domain;?>Help/feedback/" target="_blank">feedback form</a> and send us email
- regarding questions and suggestions.  It is highly suggested to take the short video tour.
+Starting with Morphbank 2.8 you can use Morphbank images and other objects to define a character.  
+In this version of the software continuous and ordered characters are not supported.  Please use the <a href="<?echo $config->domain;?>Help/feedback/" target="_blank">feedback form</a> and send us email
+ regarding questions and suggestions. This software is not yet fully developed.
 		<div class="specialtext2">
 		<b>Quick note on this version of the manual:</b>
-		<br /><br />Please feel free to email <b>mbadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</b> us or call (850-644-6366) if you have specific questions about the software that the manual presently does not cover.  We are in the process of updating it.
+		<br /><br />Please feel free to email <b>mbadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</b> us if you have specific questions about the software that the manual presently does not cover.
 </div>	
 
 	<h3>How it Works</h3>
@@ -57,7 +58,7 @@ For "Check All" > Create Character > Submit > the following screen pops up.
 A new Character Collection starts with only the "undesignated state tile" appearing in the workspace with all of the selected images behind it.
   These would effectively be coded with a <b>?</b> or unknown.  Coding the character can be done in two ways:
 <br /><br />
-1. Click the check boxes (highlight) the OTUs (represented as image tiles) you wish to code for a new character state> click Add State.  All of the 
+1. Click the check boxes (highlight) the OTUs (represented as image tiles) you wish to code for a new character state > click Add State.  All of the 
 images will appear behind the character state tile.  A image behind a character state tile represents the Operational Taxonomic Unit or OTU that
 the taxon or specimen pictured in the image belongs to.
 
@@ -76,7 +77,7 @@ Operational Taxonomic Units or OTUs may be created by creating collections of ta
             <br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/myManagerAnnotations.php" class="button smallButton"><div>Next</DIV></a></td>
+<td><a href="<?echo $config->domain;?>About/Manual/myManagerAnnotations.php" class="button smallButton"><div>Next</div></a></td>
 <td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</tr>
