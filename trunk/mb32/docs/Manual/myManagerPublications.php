@@ -83,7 +83,7 @@
 	<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" target="_blank" >guide to Morphbank graphics</a> for a thorough
 	overview.</li>
 		<ul>
-		<li>In Morphbank, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" />
+		<li>In Morphbank, the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" />
 	 	<strong>information</strong> icon opens a feature called <strong>Single Show</strong> that varies with
 	 	the object. In general, one sees data about the object; in this case, the Publication Record Show opens.
 	 	</li>
@@ -108,10 +108,10 @@ Submit</strong>. The created collection will appear in the <strong>Select Mass O
 tabs so that more objects can be added to the same collection, if desired.
 </div>
 
-<h3>Clicking the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" />
+<h3>Clicking the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" />
  <strong>info icon</strong>
 opens the <strong>Publication Record (Single) Show</strong> </h3>
-<br /> In this case, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" />
+<br /> In this case, the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" />
 associated with <strong>Publication Id 197041</strong>
 <img src="ManualImages/publication_record_show.png" hspace="20" vspace="15" />
 <p>
