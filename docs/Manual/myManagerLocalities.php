@@ -36,14 +36,14 @@
 	<p>All the features and tools found here are used the same way in other tabs of My Manager. All Localities contributed/submitted to Morphbank will be seen in this tab. A Locality record contain details for a Specimen's given locale when it was observed and/or collected. More than one Specimen may be associated with a given locality. Clicking on the camera icon for a given Locality jumps to all images associated with that locality.
 </p>
 	
-    <p>Paths to My Manager Localities tab:
+    <p>Paths to My Manager Localities tab:</p>
     <ul>
     <li>Header:<strong> hover over Browse</strong> to open drop-down > select <strong>Locality</strong> from drop-down OR
     </li>
     <li>Header: <strong>click Browse</strong> to open My Manager interface > click <strong>Localities tab</strong>
     </li>
     </ul>
-    </p>
+   
        
 	<img src="ManualImages/my_manager_localities.png" alt="Localities tab" hspace="20"/>
 	<br />
@@ -56,10 +56,10 @@
 	<li><a href="<?echo $config->domain;?>About/Manual/manualHints.php" ><img src="ManualImages/feedback.png" alt="feedback link" align="middle" /></a>: please use this link to our automated feedback system. 
 	We appreciate your comments so that we can continue to improve and enhance Morphbank. Clicking on <strong><font color="red">(Help)</font></strong> opens this Manual.</li>
 	
-	<li><a href="<?echo $config->domain;?>/About/Manual/myManagerFeatures.php" ><strong>Keywords: </strong></a> To use this powerful search feature, hold the mouse over the Keywords box to see a list of fields the Keywords queries. Enter a term or terms. Note that searches are <em>boolean <strong>and</strong></em>. Partial words can also be entered as all terms entered are <strong>wild-carded.</strong> Hover over to see a list of
+	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Keywords: </strong></a> To use this powerful search feature, hold the mouse over the Keywords box to see a list of fields the Keywords queries. Enter a term or terms. Note that searches are <em>boolean <strong>and</strong></em>. Partial words can also be entered as all terms entered are <strong>wild-carded.</strong> Hover over to see a list of
 	fields the Keywords accesses. See the yellow note above.</li>
 	
-	<li><a href="<?echo $config->domain;?>/About/Manual/myManagerFeatures.php" ><strong>Limit Search by:</strong></a> allows a user to view	only the objects personally contributed/submitted AND/OR those from a particular group. Use the 
+	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Limit Search by:</strong></a> allows a user to view	only the objects personally contributed/submitted AND/OR those from a particular group. Use the 
 	Header Menu <strong>Tools > Select Group > Choose group from sub-menu</strong> feature to change groups OR use the 
 	<strong>Group</strong> link in the Header on the left side of the Main Screen under User name.</li>
 	
@@ -82,17 +82,17 @@
 	for My Manager. 
 	
 		<ul>
-		<li>The <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon	shows metadata for the object, 
+		<li>The <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> icon	shows metadata for the object, 
 		in this case the Locality in a format that Morphbank refers to as the <a href="<?echo $config->domain;?>About/Manual/show.php" >Show.</a>
 		</li>
-		<li>Using the <img src="<?echo $config->domain;?>/style/webImages/edit-trans.png" /> <strong>Edit</strong> icon gives users access to 
+		<li>Using the <img src="<?echo $config->domain;?>style/webImages/edit-trans.png" /> <strong>Edit</strong> icon gives users access to 
 		change/update data for any <strong>Localities</strong> they've contributed/submitted.
 		</li>
 		<li>Note the <img src="<?echo $config->domain;?>style/webImages/camera-min.gif" width="16" height="16"> is a link to all 
 		images in Morphbank linked to this particular Locality.
 		</li>
 		</ul>
-	
+		</li>
 		
 <li><strong>Creating Collections with My Manager</strong>: To group objects (in this case, Localities) 
 together creating a collection, follow the steps in the box next:		
