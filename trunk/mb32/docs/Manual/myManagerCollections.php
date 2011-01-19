@@ -115,7 +115,7 @@ One can also create a collection of collections, which is very useful when putti
 	for My Manager.
 	
 		<ul>
-		<li>Briefly, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon
+		<li>Briefly, the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> icon
 		opens the collection. 
 		</li>
 		<li>Clicking on the 
