@@ -34,9 +34,7 @@
 <div id=footerRibbon></div>
 			<!--<table class="manualContainer" cellspacing="0" width="100%">
 			<tr>-->
-<div class="specialtext2">
-<a href="<?echo $config->domain;?>About/Manual/Movies/Makecollection.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Create a Collection</strong> from My Manager: <a href="<?echo $config->domain;?>About/Manual/Movies/Makecollection.avi" target='_blank'>video</a>
-</div>
+
 <p>From any tab in the <strong>My Manager</strong> interface, users can select Objects to include in a
  collection. The collection can be kept private or made public with the <em>date-to-publish</em> feature. This
  section of the manual illustrates how to gather several objects into a collection.</p>
@@ -79,14 +77,15 @@ etc,) to the same collection to make a Mixed Collection. The Collection Title <s
 To View the Collection, go to the <strong>Collection tab</strong> in My Manager. Find the collection using the <strong>Keyword Search</strong>. Putting in the Contributor name finds all collections by that Contributor. Searching by the Collection Title also finds the desired collection/s. Click the <img src="../../style/webImages/infoIcon.png" alt="information icon" /> next to the collection created to open it. For this collection, a user would see:
 </p>
 <img src="ManualImages/sample_collection.png" alt="sample collection" hspace="30" />
+
 <p>In the image above, note the modularity again. Within a collection, a user can carry out actions on the objects by using 
 the <img src="ManualImages/check_box.png"> with each image. The actions are listed in the left sidebar as <strong>Tools</strong>. Two examples,
-
-<ul>
-<li>click a check box for an image, then select <strong>Delete Checked Objects</strong> to remove the image from the collection.
-<li>use the <img src="ManualImages/check_all.png"> button to select all the images, choose <strong>Annotate Checked Objects</strong>
-from <strong>Tools</strong>. In this way, a user can do a <strong>Mass Annotation</strong> that applies to all the checked images.</li>
-</ul></p>
+</p>
+	<ul>
+	<li>click a check box for an image, then select <strong>Delete Checked Objects</strong> to remove the image from the collection.</li>
+	<li>use the <img src="ManualImages/check_all.png"> button to select all the images, choose <strong>Annotate Checked Objects</strong>
+	from <strong>Tools</strong>. In this way, a user can do a <strong>Mass Annotation</strong> that applies to all the checked images.</li>
+	</ul>
 
 <p>Note that a user can modify a given collection as long as it is not <strong>published.</strong></p>
 
