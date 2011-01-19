@@ -38,18 +38,13 @@ been created under the current user name as well as all other published annotati
 There is no limit on the number of annotations a user may have. Use the <strong>Limit Search by:</strong>
  or <strong>Keywords</strong> search features to display a select group of annotations.
 </p>
-<p>Paths to <strong>Annotations tab</strong>:
+<p>Paths to <strong>Annotations tab</strong>:</p>
 <ul>
 <li>Header Menu: <strong>Browse</strong> to reveal drop-down > click <strong>Annotation</strong>
 </li>
 <li>Header Menu: click <strong>Browse</strong> to open My Manager > click <strong>Annotation tab</strong>
 </li>
 </ul>
-</p>
-
-<!--<img src="ManualImages/my_manager_annotation_tab_closeup.png" />-->
-
-
 
 <img src="ManualImages/my_manager_annotation_tab.png" hspace="20" vspace="10" />
 <br />
@@ -86,7 +81,7 @@ There is no limit on the number of annotations a user may have. Use the <strong>
 	overview.
 		<ul>
 	
-	<li>In Morphbank, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" />
+	<li>In Morphbank, the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" />
 	 <strong>information</strong> icon opens a feature called <strong>Single Show</strong> that varies with
 	 the object. In general, one sees metadata about the object; in this case, the Annotation Record Show opens. Note once
 	 the Annotation Record is open, a user can click on <strong>Add Annotation</strong> to add another comment to the
@@ -97,13 +92,13 @@ There is no limit on the number of annotations a user may have. Use the <strong>
 	 Complete instructions on this area can be found in the 
 	 <a href="<?echo $config->domain;?>About/Manual/annotationEdit.php">Edit Annotation</a> section.</li>
 	
-	<li>Use the  <img src="<?echo $config->domain;?>/style/webImages/calendar.gif" /> <strong>calendar</strong>
+	<li>Use the  <img src="<?echo $config->domain;?>style/webImages/calendar.gif" /> <strong>calendar</strong>
 	icon  to easily change the
 	date to make an object visible to all who use Morphbank or extend the time the object remains private.</li>
 	<p>Users may change the date-to-publish to <strong>today</strong> by clicking on the "Publish now" 
 	link for any of their own objects or click on the date and change the date on a calendar pop-up.</p>
 	
-	<li>With <img src="<?echo $config->domain;?>/style/webImages/delete-trans.png" />, the user may <strong>delete
+	<li>With <img src="<?echo $config->domain;?>style/webImages/delete-trans.png" />, the user may <strong>delete
 	</strong> an object in Morphbank (only available if the object is not published).</li>
 		</ul>
 	<li><strong>Annotation type</strong>: Note the types of Annotations seen in the above screen shot (Determination,
@@ -138,7 +133,7 @@ tabs so that more objects can be added to the same collection.
 </div>
 
 
-<h3>Clicking the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" />
+<h3>Clicking the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" />
  <strong>info icon</strong>
 opens the <strong>Annotation Record (Single) Show</strong> </h3>
 <br />
@@ -164,7 +159,7 @@ additional annotation of any type to the selected object. Directions for this pr
 <img src="ManualImages/annotation_manager_add_annotation.jpg" vspace="5"/>
 </li>
 </ul>
-</p>
+
 			<br />
 			<br />
 			<div id=footerRibbon></div>
