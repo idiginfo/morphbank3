@@ -91,15 +91,14 @@
 		object they've contributed or submitted.If an Image is <em>not yet published</em> the user can replace that image.		</li>
 		<li>With a click on the <img src="<?echo $config->domain;?>style/webImages/annotate-trans.png" /><a href="<?echo $config->domain;?>About/Manual/"><strong>Annotate</strong></a>
 		icon, any user may leave a permanent comment about a given object.</li>
-		<li>The <img src="../../style/webImages/magnifyShadow-trans.png" alt="FSIviewer icon"> magnifying glass icon will open an image in the
-		<a href="<?echo $config->domain;?>About/Manual/FSI.php">FSI Viewer</a> which allows zooming, rotation and color adjust to help reveal/illuminate
-		image features. Morphbank utilizes this	proprietary viewer with its unique capabilities to increase the value
+		<li>The <img src="../../style/webImages/magnifyShadow-trans.png" alt="zooming viewer icon"> magnifying glass icon will open an image in the
+		open source <a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php">Zooming Viewer</a> which allows zooming to help reveal/illuminate
+		image features. Morphbank utilizes this	open source viewer to allow additional functionality to be added in order to increase the value
 	of the photograph for the user. Click on any thumbnail, click on the resulting image in the <strong>Image Record Show</strong> to 
-	open the image in the FSI Viewer. Or, use the <img src="../../style/webImages/magnifyShadow-trans.png" alt="FSIviewer icon"> 
-	magnifying glass icon.</li>
+	open the image in the Zooming Viewer.</li>
 		</ul>
 	<li><strong>Annotations</strong>: If annotations exist for an Image, this will be a blue link (as
-	in the above first image) to the annotations.	</li>
+	in the above first image) to the annotations.</li>
 
 	<li><strong>Creating Collections with My Manager</strong>: To group objects (in this case, images) follow the steps in the box.
 	
