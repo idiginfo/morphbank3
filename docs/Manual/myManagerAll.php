@@ -125,12 +125,12 @@ find there. </p>
 		Annotations,</strong> allow users to select a date-to-publish the comment/s. Other annotations, like <strong>Taxon
 		Name Annotations</strong> are made public immediately. If <strong>Annotations</strong> are present, the
 		link will indicate how many there are and the user can view them by clicking on the link.</li>
-		<li>Use the <img src="../../style/webImages/magnifyShadow-trans.png" alt="FSIviewer icon"> magnifying glass
-		to open an image in Morphbank with the <a href="<?echo $config->domain;?>About/Manual/FSI.php">FSI Viewer</a> to zoom, rotate and adjust 
-        the colors of an image to help reveal more image features. Morphbank utilizes this proprietary viewer with its unique capabilities to 
-        increase the value of the photograph for the user. Click on any thumbnail or click on the resulting image in the <strong>Image Record Show</strong> to 
-	open the image in the FSI Viewer. Alternatively, click the <img src="../../style/webImages/magnifyShadow-trans.png" alt="FSIviewer icon">
-	to open the image in the FSI Viewer.</li>
+		<li>Use the <img src="../../style/webImages/magnifyShadow-trans.png" alt="zooming viewer icon"> magnifying glass
+		to open an image in Morphbank with the <a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php">Zooming Viewer</a> to zoom in
+		on an image to help reveal more image features. Morphbank utilizes this open source viewer in order to be able to add
+        more functionality to increase the value of the photograph for the user. Click on any thumbnail or click on the resulting image in the <strong>Image Record Show</strong> to 
+	open the image in the Zooming Viewer. Alternatively, click the <img src="../../style/webImages/magnifyShadow-trans.png" alt="zooming viewer icon">
+	to open the image in the Zooming Viewer.</li>
 		</ul>
 	</li>
 	
