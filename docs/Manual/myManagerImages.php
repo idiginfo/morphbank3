@@ -82,14 +82,14 @@
 	for My Manager.
 
 		<ul>
-		<li>The <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon	shows data for the image. 
-		In general, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> opens a window that Morphbank 
+		<li>The <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> icon	shows data for the image. 
+		In general, the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> opens a window that Morphbank 
 		calls a <a href="<?echo $config->domain;?>About/Manual/show.php" ><strong>Show</strong></a> and it displays 
 		the metadata for a given object in Morphbank.		</li>
-		<li><img src="<?echo $config->domain;?>/style/webImages/edit-trans.png" /> 
+		<li><img src="<?echo $config->domain;?>style/webImages/edit-trans.png" /> 
 		, the <strong>Edit</strong> icon, allows a user to <strong>update/change/edit</strong> data associated with an <em>unpublished</em> 
 		object they've contributed or submitted.If an Image is <em>not yet published</em> the user can replace that image.		</li>
-		<li>With a click on the <img src="<?echo $config->domain;?>/style/webImages/annotate-trans.png" /><a href="<?echo $config->domain;?>About/Manual/"><strong>Annotate</strong></a>
+		<li>With a click on the <img src="<?echo $config->domain;?>style/webImages/annotate-trans.png" /><a href="<?echo $config->domain;?>About/Manual/"><strong>Annotate</strong></a>
 		icon, any user may leave a permanent comment about a given object.</li>
 		<li>The <img src="../../style/webImages/magnifyShadow-trans.png" alt="FSIviewer icon"> magnifying glass icon will open an image in the
 		<a href="<?echo $config->domain;?>About/Manual/FSI.php">FSI Viewer</a> which allows zooming, rotation and color adjust to help reveal/illuminate
