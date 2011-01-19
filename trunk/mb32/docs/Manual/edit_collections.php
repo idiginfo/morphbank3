@@ -47,7 +47,7 @@ The old Collection Manager has been replaced with the My Manager Collections tab
 </li>
 <li>Find your collections with <strong>Keyword search</strong> and/or <strong>Limit Search by</strong> Contributor.
 </li>
-<li>Click the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon to open the Collection.
+<li>Click the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> icon to open the Collection.
 </li>
 <li>You may wish to: Change the order of the objects and save the order, change the titles of some of the objects in the collection,
 or perhaps delete objects from the collection.
