@@ -37,7 +37,7 @@
 	publications in Morphbank. The logged-in user can limit search results to show any publications in Morphbank
 	or some subset of publications they've personally contributed to the database.
 </p>
-<p>Paths to Publication tab:
+<p>Paths to Publication tab:</p>
 <ul>
 <li>From <a href="http://www.morphbank.net">www.morphbank.net</a>
 </li>
@@ -48,7 +48,7 @@
 <li>To add or edit Publications, Morphbank users will need to login.
 </li>
 </ul>	
-</p>    
+   
  	
 		<img src="ManualImages/my_manager_publications.png" />
 		<br />
