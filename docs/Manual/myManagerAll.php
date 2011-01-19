@@ -34,7 +34,7 @@
 <div id=footerRibbon></div>
 		<td width="100%">		
 	<p>With the <strong>All</strong> tab in My Manager, users can see almost every object in Morphbank.
-	An individual user will see:
+	An individual user will see:</p>
 
 <ol>
 <li>any objects they've contributed/submitted, regardless of group
@@ -46,7 +46,7 @@
 </ol>
 Unpublished Objects contributed/submitted by members of other groups will not be seen.
 
-</p>
+
 
 <p>Use the modular features (<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" >icons</a> and tools) of
 My Manager to browse, search, sort, collect, edit, and annotate any objects found here. The icons and modular tools (like Edit and Submit) work the same or analogously throughout Morphbank. Once introduced to a My Manager page, the user will be able to jump to the other My Manager pages understanding the features they'll
@@ -91,15 +91,15 @@ find there. </p>
 	overview.
 		<ul>
 	
-	<img src="ManualImages/icon_sample1.png" alt="icons" vspace="10"  />
+	<img src="ManualImages/icon_sample1.png" alt="icons" vspace="10" />
 	
-	<li>Use the <img src="<?echo $config->domain;?>/style/webImages/copy-trans.png" /> icon to <strong>copy a collection</strong>.</li>
-	<li>In Morphbank, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" />
+	<li>Use the <img src="<?echo $config->domain;?>style/webImages/copy-trans.png" /> icon to <strong>copy a collection</strong>.</li>
+	<li>In Morphbank, the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" />
 	 <strong>information</strong> icon opens a feature called <strong><a href="<?echo $config->domain;?>About/Manual/show.php" >Single Show</a></strong> that varies with
 	 the object. In general, one sees data about the object.</li>
-	<li>Use the <img src="<?echo $config->domain;?>/style/webImages/calendar.gif" /> <strong>calendar</strong>
+	<li>Use the <img src="<?echo $config->domain;?>style/webImages/calendar.gif" /> <strong>calendar</strong>
 	icon to easily change the date to make an image visible to all who use Morphbank or extend the time the object remains private.</li>
-	<li>With <img src="<?echo $config->domain;?>/style/webImages/delete-trans.png" />, the user may <strong>delete
+	<li>With <img src="<?echo $config->domain;?>style/webImages/delete-trans.png" />, the user may <strong>delete
 	</strong> an object in Morphbank. Note the delete icon will only appear for objects you have permission to delete.</li>
 		</ul>
 	<br />
@@ -113,14 +113,14 @@ find there. </p>
 		<ul>
 	<img src="ManualImages/icon_sample2.png" alt="icons" vspace="10"  />
 		
-		<li>Anywhere the <img src="<?echo $config->domain;?>/style/webImages/edit-trans.png" /> <strong>Edit</strong> icon appears, a user
+		<li>Anywhere the <img src="<?echo $config->domain;?>style/webImages/edit-trans.png" /> <strong>Edit</strong> icon appears, a user
 		can access the metadata for an object to add-to, update or correct information associated with that object. Note
 		this is applies to objects the user has contributed/submitted. If data needs to be added/changed on other
 		objects not owned by the user, they can contact 
 		<b>mbadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu 
 		<font color="blue">dot</font> edu</b></li>	
 		<li>Users may <strong>Annotate</strong> any object in Morphbank where the 
-		<img src="<?echo $config->domain;?>/style/webImages/annotate-trans.png" /> icon appears. These annotations
+		<img src="<?echo $config->domain;?>style/webImages/annotate-trans.png" /> icon appears. These annotations
 		are permanently associated with a given Morphbank Object. Note some annotations, like <strong>Determination
 		Annotations,</strong> allow users to select a date-to-publish the comment/s. Other annotations, like <strong>Taxon
 		Name Annotations</strong> are made public immediately. If <strong>Annotations</strong> are present, the
