@@ -56,7 +56,7 @@ function getImageUrl($id, $imgType){
 
 function getImageSizeUrl($id, $imgType){
 	global $config;
-	return $config->imgServerUrl."imageSizes.php/?id=$id&imgType=$imgType";
+	return $config->imgServerUrl."imageSizes.php?id=$id&imgType=$imgType";
 }
 
 /**
