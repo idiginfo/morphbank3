@@ -48,7 +48,7 @@ In the My Manager <strong>Taxa </strong>tab users can access all the taxon names
     </li>
     <li>In addition, users may <strong>Annotate</strong> any taxon name in Morphbank from the <img src="../../style/webImages/annotate-trans.png" alt="annotate icon" /> icon.
     </li>
-    <li></em><strong>Operational Taxonomic Units (OTUs)</strong> can be defined 
+    <li><strong>Operational Taxonomic Units (OTUs)</strong> can be defined 
 	and added to Morphbank. 
     
     <p><strong>OTUs</strong> express a concept of a possible new classification, or grouping 
@@ -62,15 +62,12 @@ In the My Manager <strong>Taxa </strong>tab users can access all the taxon names
     </ul>
   </div>
   
-    <p>Path to My Manager Taxa tab:
+    <p>Path to My Manager Taxa tab:</p>
     <ul>
     <li>Header: <strong>click Browse</strong> to open My Manager interface > click the <strong>Taxa tab</strong>
     </li>
-    <!--<li>Header: <em>hover over <strong>Browse</strong></em> to open drop-down > <strong>click Taxa</strong>
-    </li>
-    -->
     </ul>
-    </p>
+    
         
 	<img src="ManualImages/my_manager_taxa.png" alt="My Manager Taxa Tab" hspace="25"/>	
 	<br /><br />
@@ -112,17 +109,17 @@ In the My Manager <strong>Taxa </strong>tab users can access all the taxon names
 	
 	<ul>
 	<li>
-	The <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon
+	The <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> icon
 	shows data details for a given object, in this case, a taxon Or an OTU.
 	</li>
 	
-	<li><img src="<?echo $config->domain;?>/style/webImages/edit-trans.png" />, the	<strong>Edit</strong> icon gives the contributor/submitter of a given
+	<li><img src="<?echo $config->domain;?>style/webImages/edit-trans.png" />, the	<strong>Edit</strong> icon gives the contributor/submitter of a given
 	taxon name, a link to the <a href="<?echo $config->domain;?>About/Manual/edit_taxon_name.php" ><strong>Edit Taxon Name</strong></a>
 	 window to make any necessary changes. Users may Edit Taxon data only for any Taxa they've contributed/submitted if it's not yet published. <em>The name <strong>cannot</strong> be edited
 	if it has been submitted to ITIS or has been used by others in the Morphbank system.</em>
 	</li>
 	
-	<li>Morphbank's <img src="<?echo $config->domain;?>/style/webImages/annotate-trans.png" /> Annotate icon gives any user the opportunity to leave a
+	<li>Morphbank's <img src="<?echo $config->domain;?>style/webImages/annotate-trans.png" /> Annotate icon gives any user the opportunity to leave a
 	permanent comment about an object in Morphbank. In this case, a user may 
 	<a href="<?echo $config->domain;?>About/Manual/annotate_taxon_name.php" ><strong>Annotate a taxon name</strong></a> by clicking on this
 	icon for a given taxon name.
@@ -155,7 +152,7 @@ In the My Manager <strong>Taxa </strong>tab users can access all the taxon names
 	 <a href="<?echo $config->domain;?>About/Manual/myManagerTaxa.php" >Taxa</a> tab. Use the <strong>Toggle Taxa/OTU</strong>
 	 radio buttons to limit the display to OTUs only, if desired.</li>
      <li>For any OTU, click the
-	 <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon to see the objects in a particular
+	 <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> icon to see the objects in a particular
 	 OTU.
      </li>
 	</ul>

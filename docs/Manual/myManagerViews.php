@@ -86,9 +86,9 @@
 	for My Manager.
 	
 		<ul>
-		<li>The <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon
+		<li>The <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> icon
 		shows metadata for any given object in Morphbank, in this case, the details of a given view.</li>
-		<li><img src="<?echo $config->domain;?>/style/webImages/edit-trans.png" />, the <strong>Edit</strong> icon gives users access to 
+		<li><img src="<?echo $config->domain;?>style/webImages/edit-trans.png" />, the <strong>Edit</strong> icon gives users access to 
 		change/update metadata for any <strong>Views</strong> they've contributed/submitted.</li>
 		<li>Note the <img src="<?echo $config->domain;?>style/webImages/camera-min.gif" width="16" height="16"> is a link to all 
 		images in Morphbank using a particular view.
