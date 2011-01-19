@@ -94,7 +94,7 @@ $annotationCount = updateThumbUrl($sql);
 echo "\nTotal Annotations: $annotationCount\n";
 unset($annotationArray);
 
-$sql = "select min(b.id), u.id from BaseObject b join BaseObject u on (b.userId=u.id or b.submittedBy = u.id"
+$sql = "select min(b.id), u.id from BaseObject b join BaseObject u on (b.userId=u.id or b.submittedBy = u.id)"
 ." where b.objecttypeid='Image' and u.objecttypeid='User' and u.thumburl is null";
 $userCount = updateThumbUrl($sql);
 echo "\nTotal Users: $userCount\n\n";
