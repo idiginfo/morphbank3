@@ -142,11 +142,11 @@ One can also create a collection of collections, which is very useful when putti
 		
 	
 	
-	<li><a href="<?echo $config->domain;?>About/Manual/FSI.php" target="_blank"><strong>FSI Viewer</strong></a>: Morphbank utilizes
-		 a proprietary viewer with its unique capabilities to increase the value
+	<li><a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php" target="_blank"><strong>Zooming Viewer</strong></a>: Morphbank utilizes
+		 an open source viewer so that new funtionality may be added to increase the value
 	of the photograph for the user. Clicking on any thumbnail in the <strong>Collections tab</strong> will
 	open the Collection, double-click on any image in the Collection to 
-	open the image in the FSI Viewer. 
+	open the image in the Zooming Viewer. 
     </li>
   </ul>  
     
