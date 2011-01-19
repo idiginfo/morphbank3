@@ -34,11 +34,6 @@
 <div id=footerRibbon></div>
 			<!--<table class="manualContainer" cellspacing="0" width="100%">
 			<tr>-->
-<div class="specialtext2">
-<a href="<?echo $config->domain;?>About/Manual/Movies/Makecollection.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Create a Collection</strong> from the MyManager: <a href="<?echo $config->domain;?>About/Manual/Movies/Makecollection.avi" target='_blank' >video</a>
-<br /><a href="<?echo $config->domain;?>About/Manual/Movies/Publishcollection.avi" target='_blank'> <img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Publish multiple collections</strong> from the MyManager: <a href="<?echo $config->domain;?>About/Manual/Movies/Publishcollection.avi" target='_blank'>video</a> 
-<br /><a href="<?echo $config->domain;?>About/Manual/Movies/collectionbyspecimenpart.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Create a Collection of Images and Label by Specimen Part</strong>:<a href="<?echo $config->domain;?>About/Manual/Movies/collectionbyspecimenpart.avi" target='_blank'> video</a>
-</div>
 
 <p>From the <strong>Collections tab</strong> in My Manager, users can see any collection they've created
 in Morphbank as well as any other user's published collections. Morpbhank users will catch on quickly due to the modular nature of the tools and icons.
@@ -92,7 +87,7 @@ One can also create a collection of collections, which is very useful when putti
 	<img src="ManualImages/check_box.png" alt="Check box" /> 
 	<strong>check box</strong> to the left of each Collection/Character ID
 	and Title. Use this feature to <strong>Select</strong> one or more Collections which will then be <em>highlighted green</em>.
-	A particular action (like changing a date-to-publish) can now be applied to all the Collections at one time using the <strong>Select Mass Operation</strong> feature.</li>
+	A particular action (like changing a date-to-publish) can now be applied to all the Collections at one time using the <strong>Select Mass Operation</strong> feature.
 	 
 	 <ul>
 	 <li>To see the contents of any Collection, click on the <strong>Collection Title</strong> or the 
@@ -101,9 +96,8 @@ One can also create a collection of collections, which is very useful when putti
 	 <li>A user can <strong>Edit</strong> the title of any unpublished Collection they've created simply by clicking 
 	 on the <strong>(edit...)</strong> link next to a modifiable title.
 	 </li>
-	 
-	 </ul>
-	
+	  </ul>
+	</li>
 	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" target="_blank"><strong>Select Mass Operation</strong></a>:
 	 After checking one or more Collections with the <img src="ManualImages/check_box.png"> feature, options in the drop-down of
 	  <strong>Select Mass Operation</strong> can be applied to all
@@ -118,7 +112,7 @@ One can also create a collection of collections, which is very useful when putti
 	<li><strong>Icons</strong>: The <strong>icons</strong> and their functions are explained fully in Morphbank 
 	<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" target="_blank">Guide to Graphic Buttons</a>. An abbreviated 
 	explanation can be found on the <a href="<?echo $config->domain;?>About/Manual/myManagerAll.php" target="_blank">All</a> page
-	for My Manager.</li> 
+	for My Manager.
 	
 		<ul>
 		<li>Briefly, the <img src="<?echo $config->domain;?>/style/webImages/infoIcon-trans.png" /> icon
@@ -137,6 +131,7 @@ One can also create a collection of collections, which is very useful when putti
 	 	<strong>Copy</strong> icon allows a user to make two kinds of Collections, a regular or Characater
 		Collection from any Collection (of either type).</li>
 		</ul>
+		</li>
 	<li><strong>Annotations</strong>: If annotations exist for an object inside a collection, 
 	this will be indicated by the
 	<img src="../../style/webImages/annotateIcon.png" alt="alternate annotate icon" /> icon seen in the open collection
