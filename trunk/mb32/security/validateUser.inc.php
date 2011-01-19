@@ -37,17 +37,21 @@ $SESSION_STYLE = 'nocache';
 if ($SESSION_LIMITER){
 	$SESSION_STYLE = $SESSION_LIMITER;
 }
-session_cache_limiter($SESSION_STYLE);
-session_start();
 
-$objInfo = new sessionHandler();
 
-if($_SESSION['userInfo']){
-	$objInfo = unserialize($_SESSION['userInfo']);
+if (empty($_REQUEST['sessionId'])) {
+	session_cache_limiter($SESSION_STYLE);
+	session_start();
+	
+	$objInfo = new sessionHandler();
+	
+	if($_SESSION['userInfo']){
+		$objInfo = unserialize($_SESSION['userInfo']);
+	}
+	
+	$objInfo->setDomainName($config->domain);
+	$objInfo->setLink($link);
 }
-
-$objInfo->setDomainName($config->domain);
-$objInfo->setLink($link);
 
 function isLoggedIn(){
 	global $objInfo;
