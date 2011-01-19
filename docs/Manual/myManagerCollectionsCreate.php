@@ -48,9 +48,7 @@ other objects</strong></em> such as: annotations, localities, publications, spec
 in this version of Morphbank. A Character Collection allows a user to define a character/entity
 and select objects in Morphbank to illustrate the defined States for that character. This type of Collection is made up of
 Images and defined Character states.
-<!--In the next version of
-Morphbank (v 2.8), users will be able to access <em>My Matrices</em> to create matrices with the Character information.
--->
+
 </li>
 <li><strong>OTU Collections</strong> are created by placing Specimen records &amp; Taxon records in Morphbank into a Collection for the purpose of illustrating <em>the concept of a possible new classification</em>, or I <em>describing a new taxonomic grouping</em>. OTU collections are found in the Taxa tab.
 </ul>
@@ -91,10 +89,10 @@ the <img src="ManualImages/check_box.png"> with each image. The actions are list
 
 <p>From the <strong>My Manager > Collections tab</strong> each collection is represented by an image chosen by the collection's creator.
  The user creates the collection, uses the check box to pick the representative image, and clicks from Tools -- <strong>Set Collection Thumbnail</strong>.</p>
-	<a href="<?echo $config->domain;?>About/Manual/FSI.php"><h3>FSI Viewer</h3></a>: Morphbank utilizes
-		 a proprietary viewer with its unique capabilities to increase the value
+	<a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php"><h3>Zooming Viewer</h3></a>: Morphbank utilizes
+		 an open source viewer so that new funtionality may be added to increase the value
 	of the photograph for the user. Clicking on any image thumbnail in a collection will
-	open the image in the FSI Viewer. 
+	open the image in the Zooming Viewer. 
 	    <br />
 		<br />
 		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
