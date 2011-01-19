@@ -127,10 +127,10 @@
 	</li>
  	
 		
-    <li><a href="<?echo $config->domain;?>About/Manual/FSI.php" ><strong>FSI Viewer</strong></a>: Morphbank utilizes a 
-	proprietary viewer with its unique capabilities to increase the value
-	of the photograph for the user. Click on any thumbnail, click on the resulting image in the <strong>Image Record Show</strong> to 
-	open the image in the FSI Viewer. 
+    <li><a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php" ><strong>Zooming Viewer</strong></a>: Morphbank utilizes this 
+    open source viewer in order to be able to add more functionality to increase the value of the photograph for the user. 
+    Click on any thumbnail or click on the resulting image in the <strong>Image Record Show</strong> to 
+	open the image in the Zooming Viewer.
     </li>
     </ul>
 
