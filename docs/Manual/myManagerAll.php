@@ -129,8 +129,7 @@ find there. </p>
 		to open an image in Morphbank with the <a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php">Zooming Viewer</a> to zoom in
 		on an image to help reveal more image features. Morphbank utilizes this open source viewer in order to be able to add
         more functionality to increase the value of the photograph for the user. Click on any thumbnail or click on the resulting image in the <strong>Image Record Show</strong> to 
-	open the image in the Zooming Viewer. Alternatively, click the <img src="../../style/webImages/magnifyShadow-trans.png" alt="zooming viewer icon">
-	to open the image in the Zooming Viewer.</li>
+	open the image in the Zooming Viewer.</li>
 		</ul>
 	</li>
 	
