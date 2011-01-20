@@ -24,11 +24,10 @@
 require_once('../configuration/app.server.php');
 
 // Separate file for the keywords fields.  Separate so other modules can use one copy.
-include_once('newKeywordsData.php');
+include_once('newKeywordsData.php'); // Located in /adminProcesses
 $link = Adminlogin();
 /* Initialize Variables */
 
-include_once("keywordLogin.php");
 include_once("updateObjectKeywords.php");
 
 $STATUS_FILE = "/data/scratch/keywordStatus.txt";

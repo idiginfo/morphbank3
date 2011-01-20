@@ -26,6 +26,8 @@
 // thumbURL is just an image id at this point.  Could be a url in future.
 
 require_once ('../configuration/app.server.php');
+
+// Located in www folder
 include_once('Phylogenetics/phylo.inc.php');
 //TODO get a subspecimen image if not direct image
 

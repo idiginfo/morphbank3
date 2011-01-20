@@ -1,9 +1,0 @@
-Alter table CollectionObjects drop Foreign Key `CollectionObjects_ibfk_1`;
-
-ALTER TABLE `CollectionObjects` DROP PRIMARY KEY ;
-
-ALTER TABLE CollectionObjects ADD CONSTRAINT `CollectionObjects_ibfk_1` FOREIGN KEY (`collectionId`) REFERENCES `BaseObject` (`id`) ON UPDATE CASCADE;
-
-Alter table MatrixCell add CONSTRAINT `MatrixCell_ibfk_1` FOREIGN KEY (`matrixId`) REFERENCES `Matrix` (`id`) ON UPDATE CASCADE;
-
-ALTER TABLE `CollectionObjects` ADD `identifier` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ;
