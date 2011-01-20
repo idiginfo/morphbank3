@@ -75,7 +75,7 @@ function checkUpdateAuthorization($id, $sessionId, $function){
 		return false;
 	}
 	$response = $request->getResponseBody();
-	if ($response == "true") return true;
+	
 	return $response;
 }
 
