@@ -48,33 +48,6 @@ function checkAuthorization($id, $sessionId = null, $function = 'view'){
 		return false;
 	}
 	$response = $request->getResponseBody();
-	if ($response == "true") return true;
-	return $response;
-}
-
-function checkUpdateAuthorization($id, $sessionId, $function){
-
-	global $UPDATE_AUTH_URL;
-	include_once ("HTTP/Request.php");
-
-	$request = new HTTP_Request($UPDATE_AUTH_URL);
-	$request->setMethod(HTTP_REQUEST_METHOD_POST);
-
-	// add parameters
-	if (!empty($id)){
-		$request->addPostData('id', $id);
-	}
-	if (empty($sessionId)){// no update if no session
-		return false;
-	}
-	$request->addPostData('sessionId', $sessionId);
-	$request->addPostData('function', $function);
-
-	// for sending image file $request->addPostFile('image', 'profile.jpg', 'image/jpeg');
-	if (PEAR::isError($request->sendRequest())) {
-		return false;
-	}
-	$response = $request->getResponseBody();
 	
 	return $response;
 }
