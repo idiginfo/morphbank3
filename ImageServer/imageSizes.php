@@ -20,7 +20,7 @@
 *   Katja Seltmann - initial API and implementation
 *   Stephen Winner - initial API and implementation
 */
-
+require_once('../configuration/image.server.php');
 define('PHP_ENTRY',0);// valid Web app entry point
 include_once('imageFunctions.php');
 // Get object id from parameters, if available
