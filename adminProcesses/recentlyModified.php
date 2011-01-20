@@ -26,8 +26,6 @@
 // TODO extend the model to include modifications that affect the XML metadata document
 // GR 3/27/06
 
-include_once "keywordLogin.php";
-
 //get all recently modified
 $numDays = 5;
 echo("Finding objects changed in last $numDays days \n");

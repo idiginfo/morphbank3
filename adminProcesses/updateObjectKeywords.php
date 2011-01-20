@@ -22,8 +22,8 @@
 */
 
 require_once('../configuration/app.server.php');
-include_once('newKeywordsData.php');
-include_once('tsnFunctions.php');
+include_once('newKeywordsData.php'); // Located in /adminProcesses 
+include_once('tsnFunctions.php'); // Located in /www/includes
 
 //TODO move this out of the admin directory
 // Define functions that perform keyword update on a single object

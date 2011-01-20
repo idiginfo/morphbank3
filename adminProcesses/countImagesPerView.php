@@ -25,7 +25,6 @@
  * This script counts the number of images by views
  */
 
-
 $startTime = time();
 
 require_once ('../configuration/app.server.php');

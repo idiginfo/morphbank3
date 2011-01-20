@@ -24,7 +24,7 @@
 define('PHP_ENTRY',0);
 
 require_once('../configuration/image.server.php');
-include_once("imageFunctions.php");
+include_once("imageFunctions.php"); // Located in /ImageServer/Image
 
 $STATUS_FILE = "/data/scratch/copystatus.txt";
 $BACKUP_IMAGE_PATH_ROOT = "/data/images/originals/";

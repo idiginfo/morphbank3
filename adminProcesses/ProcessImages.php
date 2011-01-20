@@ -21,10 +21,10 @@
 *   Stephen Winner - initial API and implementation
 */
 
-require_once('../configuration/app.server.php');
-include_once("imageFunctions.php");
-include_once ('imageProcessing.php');
-include_once "keywordLogin.php";// global $db opened
+// TODO Need database configuration and image server
+require_once('../configuration/image.server.php');
+include_once("imageFunctions.php"); // Located in /ImageServer/Image
+include_once ('imageProcessing.php'); // Located in ImageServer/Image
 
 // OPTIONAL fields
 $SELECT_LIMIT = " and i.id>=480000 ";

@@ -27,9 +27,9 @@ echo("Updating keywords for modified objects\n");
 // Pear class for handling database connection
 echo "Time at start of updateModifiedKeywords: ".date("H:i:s")."\n";
 
-include_once("updateObjectKeywords.php");
+include_once("updateObjectKeywords.php"); // Located /adminProcesses/
 // update the list of modified ids
-include_once('recentlyModified.php');
+include_once('recentlyModified.php'); // Located /adminProcesses/
 echo "Time at end of recentlyModified ".date("H:i:s")."\n";
 // include the methods for object update
 
