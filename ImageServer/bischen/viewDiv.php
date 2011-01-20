@@ -66,7 +66,7 @@ function tilePicTag ($image, $width, $height){
 	$initMag = (int)($width/$properties['width']);
 
 	$flashVars = 'tpViewerUrl='.$config->imgServerUrl."bischen/tileserver/getTile.php"
-	.'&tpLabelProcessorURL='.$config->imgServerUrl.'bischen/labels.php'
+	//.'&tpLabelProcessorURL='.$config->imgServerUrl.'bischen/labels.php'
 	.'&tpImageUrl='.$p
 	.'&tpWidth='.$properties['width']
 	.'&tpHeight='.$properties['height']
@@ -75,8 +75,8 @@ function tilePicTag ($image, $width, $height){
 	.'&tpRatio='.$properties['ratio']
 	.'&tpTileWidth='.$properties['tile_width']
 	.'&tpTileHeight='.$properties['tile_height']
-	.'&tpUseLabels=1'
-	.'&tpEditLabels=1'
+	.'&tpUseLabels=0'
+	.'&tpEditLabels=0'
 	.'&tpParameterList=representation_id;user_id;objectId;sessionId'
 	.'$representation_id='.$p
 	.'$objectId='.$id
