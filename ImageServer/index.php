@@ -21,7 +21,6 @@
 *   Stephen Winner - initial API and implementation
 */
 
-require_once('../configuration/image.server.php');
 define('PHP_ENTRY',0);// valid Web app entry point
 
 $requestServer = $_SERVER['REMOTE_ADDR'];
