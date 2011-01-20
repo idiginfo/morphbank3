@@ -57,7 +57,7 @@ $autoloader = Zend_Loader_Autoloader::getInstance();
  * require Zend config and load config.ini file
  * APPLICATION_ENV defines what section of config.ini is going to be used
  */
-$config = new Zend_Config_Ini('config.ini', APPLICATION_ENV);
+$config = new Zend_Config_Ini(APPLICATION_PATH . '/configuration/config.ini');
 
 /**
  * Set up error logger if logging turned on
