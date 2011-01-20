@@ -1,0 +1,2 @@
+# Set to correct file path for your server
+php_value auto_prepend_file "/data/mb32/configuration/image.server.php"
