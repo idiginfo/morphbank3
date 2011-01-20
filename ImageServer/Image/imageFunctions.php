@@ -144,7 +144,7 @@ function getFileSize($id, $imgType){
 
 function getTpcProperties($tpcFilePath){
 	global $config;
-	include_once ($config->webPath."/bischen/tileserver/TilepicParser.inc");
+	include_once ("bischen/tileserver/TilepicParser.inc");
 	if (!file_exists($tpcFilePath)) return false;
 	$tilePicParser = new TilePicParser($tpcFilePath);
 	if ($tilePicParser->error) return false;
