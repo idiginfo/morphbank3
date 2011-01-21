@@ -132,7 +132,7 @@
           $newsOutput .= '...' . '</td>';
           
           if ($newsArray['image'] != '') {
-              $newsOutput .= '<td><img src="/images/newsImages/' . $newsArray['image'] . '" border="0" width="100px" alt="news" />';
+              $newsOutput .= '<td><img src="' . $newsArray['image'] . '" border="0" width="100px" alt="news" />';
           }
           $newsOutput .= '<br /><i>(Posted:' . $newsArray['date'] . ')</i></td></tr></table><hr />';
 
