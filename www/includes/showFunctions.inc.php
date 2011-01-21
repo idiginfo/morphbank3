@@ -143,12 +143,10 @@ function showUserLogo($userId){
 	global $id, $popUrl, $objInfo, $config;
 
 	$userLogoArray = getUserLogo($userId);
-	if ( $userLogoArray && file_exists($config->userLogoPath . $userLogoArray['userLogo']) ) {
-		//var_dump($userLogoArray);
-		$userLogo = $config->domain . 'images/userLogos/'.str_replace(' ', '%20', $userLogoArray['userLogo']);
-		$logoUrl = $userLogoArray['logoURL'];
-		echo '<div class="logothumbnail"><a href="'.$logoUrl.'"><img src="'
-		.$userLogo.'" alt="logo" /></a></div>';
+	if (!empty($userLogoArray['userLogo'])) {
+		echo '<div class="logothumbnail">';
+		echo '<a href="'.$userLogoArray['logoURL'].'">';
+		echo '<img src="'.$userLogoArray['userLogo'].'" alt="logo" /></a></div>';
 	} else {
 		echo '&nbsp;';
 	}
