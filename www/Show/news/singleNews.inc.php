@@ -26,7 +26,7 @@ $baseObjectArray = getBaseObjectData($id);
 $popUrl = (isset($_GET['pop'])) ? "/Show/?pop=Yes&amp;id=" : "/?id=";
 
 if (!empty($newsArray['image'])) {
-	$img = '/images/newsImages/' . $newsArray['image'];
+	$img = $newsArray['image'];
 	$imgTitle = $newsArray['imageText'];
 } else {
 	$img = '/style/webImages/defaultNews.png';
