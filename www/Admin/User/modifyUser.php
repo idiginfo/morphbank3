@@ -106,12 +106,13 @@ if (isset($_FILES['userlogo']) && ($_FILES['userlogo']['name'] > "")) {
 	$simple_name = substr($new_image, 0, strpos($new_image, "."));
 	$simple_name .= $id;
 	$image_new = $simple_name . substr($new_image, strpos($new_image, "."), strlen($new_image) - 1);
+	$userLogo = $config->appServerBaseUrl . '/images/userLogos/' . trim($image_new);
 
 	$tmpFile = $_FILES['userlogo']['tmp_name'];
 	move_uploaded_file($tmpFile, $config->userLogoPath . $image_new);
 	exec("chmod 755 " . $config->userLogoPath . $image_new);
 
-	$updater->addField("userLogo", $image_new, $row['userlogo']);
+	$updater->addField("userLogo", $userLogo, $row['userlogo']);
 	@unlink('Admin/User/cv/'.$row['userlogo']);
 }
 
