@@ -119,7 +119,7 @@ if (isset($_FILES['userlogo']) && ($_FILES['userlogo']['name'] > "")) {
 	}
 	exec("chmod 755 " . $config->userLogoPath . $image_new);
 
-	$userLogo = trim($image_new);
+	$userLogo = $config->appServerBaseUrl . '/images/userLogos/' . trim($image_new);
 }
 
 // Insert BaseObject for Groups
