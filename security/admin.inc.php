@@ -33,18 +33,18 @@ function Adminlogin() {
 	global $link, $config;
 	if (!$link || mysqli_connect_error()){
 		$link = mysqli_connect(
-			$config->dsn->param->hostname,
-			$config->dsn->param->username,
-			$config->dsn->param->password,
-			$config->dsn->param->dbname,
-			$config->dsn->param->port
+			$config->dbHostname,
+			$config->dbUsername,
+			$config->dbPassword,
+			$config->dbName,
+			$config->dbPort
 		);
 		if (mysqli_connect_error()){
 			printf("Can not connect to MySQL server. Errorcode: %s\n",mysqli_connect_error());
 			exit;
 		}
 	}
-	mysqli_set_charset($link, $config->dsn->param->charset);
+	mysqli_set_charset($link, $config->dbCharset);
 	return $link;
 }  //end function
 
@@ -95,12 +95,12 @@ function connect(){
 	}
 
 	$dsn = array(
-		'phptype'  => $config->dsn->param->driver,
-		'username' => $config->dsn->param->username,
-		'password' => $config->dsn->param->password,
-		'hostspec' => $config->dsn->param->hostname,
-		'port'     => $config->dsn->param->port,
-		'database' => $config->dsn->param->dbname
+		'phptype'  => $config->dbDriver,
+		'username' => $config->dbUsername,
+		'password' => $config->dbPassword,
+		'hostspec' => $config->dbHostname,
+		'port'     => $config->dbPort,
+		'database' => $config->dbName
 	);
 	
 	$db = MDB2::connect($dsn);
@@ -110,9 +110,9 @@ function connect(){
 	$db->loadModule('Function');
 	$db->loadModule('Extended');
 	$db->loadModule('Date');
-	$db->setCharset($config->dsn->param->charset);
+	$db->setCharset($config->dbCharset);
     
-	if ($config->dsn->param->debug) {
+	if ($config->dbDebug) {
 		require_once ("explainQueryClass.php");
 		$my_debug_handler = new Explain_Queries($db);
 		$db->setOption('debug', 1);
@@ -160,23 +160,25 @@ function isMdb2Error($dbObject, $label=null, $priority = 4){
 }
 
 /**
- * Error logging using Zend_Log and Firebug
- * 
- * Priority codes
- * EMERG(0)
- * ALERT(1)
- * CRIT(2)
- * ERR(3)
- * WARN(4)
- * NOTICE(5)
- * INFO(6)
- * DEBUG(7)
+ * Error logging
  * 
  * @param $message
  * @param $priority
  */
 function errorLog($label, $message = null, $priority = 4) {
 	global $config, $logger, $objInfo;
+	
+	$priorities = array(
+      0 => PEAR_LOG_EMERG,
+      1 => PEAR_LOG_ALERT,
+      2 => PEAR_LOG_CRIT,
+      3 => PEAR_LOG_ERR,
+      4 => PEAR_LOG_WARNING,
+      5 => PEAR_LOG_NOTICE,
+      6 => PEAR_LOG_INFO,
+      7 => PEAR_LOG_DEBUG
+    );
+	
 	$errorMsg = '';
 	
 	if (is_object($objInfo)){
@@ -192,11 +194,11 @@ function errorLog($label, $message = null, $priority = 4) {
 	$errorMsg .= 'Message: ' . $message . "\n";
 	$errorMsg .= 'Backtrace: ' . $backtrace . "\n";
 	
-	if ($config->error->logging == 1) {
-	    $logger->log($errorMsg, $priority);
+	if ($config->errorLogging == 1) {
+	  $logger->log($errorMsg, $priorities[$priority]);
 	}
-	if ($priority > $config->error->response) return;
-	if ($config->error->redirect) {
+	if ($priority > $config->errorResponse) return;
+	if ($config->errorRedirect) {
 		$_SESSION['errMsg'] = $label;
 		header("location: /error.php");
 		exit;
