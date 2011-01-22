@@ -51,33 +51,25 @@ if (!file_exists(APPLICATION_PATH . '/configuration/config.ini')) {
 }
 
 /**
- * Set Zend autoloader istance to load classes automatically
- * Classes must be in include path or need to add namespace to getInstance()
+ * Load config INI file
  */
-require_once 'Zend/Loader/Autoloader.php';
-$autoloader = Zend_Loader_Autoloader::getInstance();
-
-/**
- * Load default and config INI files then merge
- */
-$config = new Zend_Config_Ini(APPLICATION_PATH . '/configuration/config.ini');
+require('Config.php');
+$c = new Config();
+$root =& $c->parseConfig(APPLICATION_PATH . '/configuration/config.ini', "IniFile")->toArray();
+$config = (object) $root['root'];
 
 /**
  * Set up error logger if logging turned on
  */
-if ($config->error->logging == 1) {
-	$writer = new Zend_Log_Writer_Stream($config->error->logFile);
-	$logger = new Zend_Log($writer);
-	$filter = new Zend_Log_Filter_Priority((int) $config->error->priority);
-	$logger->addFilter($filter);
-}
+require('Log.php');
+// create Log object
+$logger = &Log::singleton("file", $config->errorLogFile);
 
 /**
- * Normally, php settings in config.ini are handled by Zend_Application automatically
  * Any php settings added to config.ini will need to be added here
  */
-ini_set('display_errors', $config->phpsettings->display_errors);
-ini_set('date.timezone', $config->phpsettings->date->timezone);
+ini_set('display_errors', $config->display_errors);
+ini_set('date.timezone', $config->timezone);
 
 /**
  * Include admin and database functions
