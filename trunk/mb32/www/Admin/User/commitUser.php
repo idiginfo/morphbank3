@@ -224,17 +224,21 @@ if ($_POST['subscription'] == 1 && $config->mailList) {
 		$html .= "<b>Name:</b> $first_name $last_name<br />";
 		$html .= "<b>Email:</b> $email<br />";
 		
-		try {
-			$mail = new Zend_Mail();
-			$mail->setBodyText($text);
-			$mail->setBodyHtml($html);
-			$mail->setFrom($config->email, $config->appName);
-			$mail->addTo($config->email, $config->appName);
-			$mail->setSubject($config->appName . ' - Add To Mail List Failure');
-			$mail->send();
-		} catch (Zend_Exception $e) {
-			errorLog("Error sending email: Failure to add user to mailist.", $e->getMessage());
-		}
+        require('Mail.php');
+        require('Mail\mime.php');
+    
+        $message = new Mail_mime();
+        $message->setTXTBody($text);
+        $message->setHTMLBody($html);
+        $body = $message->get();
+        $extraheaders = array("From" => $config->email, "Subject" => $config->appName . " - Add To Mail List Failure");
+        $headers = $message->headers($extraheaders);
+    
+        $mail = Mail::factory("mail");
+        $result = $mail->send($config->email, $headers, $body);
+        if (PEAR::isError($result)) {
+          errorLog("Error sending email: Failure to add user to mailist.", $result->getDebugInfo());
+        }
 	}
 }
 
@@ -263,17 +267,21 @@ if ($action == 'new') {
 	$html .= "<b>Resume\CV</b>: ".$config->appServerBaseUrl."Admin/User/getCV.php?cv=".$file."<br />";
 	$html .= "<b>Mail List Subscribe</b>: ".(isset($_POST['subscription']) ? 'Yes' : 'No')."<br /><br />";
 	
-	try {
-		$mail = new Zend_Mail();
-		$mail->setBodyText($text);
-		$mail->setBodyHtml($html);
-		$mail->setFrom($config->email, $config->appName);
-		$mail->addTo($config->email, $config->appName);
-		$mail->setSubject($config->appName . ' - New User Account');
-		$mail->send();
-	} catch (Zend_Exception $e) {
-		errorLog("Error sending email: New user account.", $e->getMessage());
-	}
+    require('Mail.php');
+    require('Mail\mime.php');
+
+    $message = new Mail_mime();
+    $message->setTXTBody($text);
+    $message->setHTMLBody($html);
+    $body = $message->get();
+    $extraheaders = array("From" => $config->email, "Subject" => $config->appName . " - New User Account");
+    $headers = $message->headers($extraheaders);
+
+    $mail = Mail::factory("mail");
+    $result = $mail->send($config->email, $headers, $body);
+    if (PEAR::isError($result)) {
+      errorLog("Error sending email: New user account.", $result->getDebugInfo());
+    }
 	
 	header ("location: $indexUrl&code=14");
 	exit;
