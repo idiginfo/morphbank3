@@ -61,17 +61,22 @@ if ($_POST['email'] != null) {
 			$html .= "This new password was created for your first login. Please reset it to a more convenient one after logging in.<br /><br />username: " . $uin . "<br /><br />password: " . $new_password . "<br /><br /><br />".$config->appName." Admin team";
 			
 			$subject  = 'Your ' . $config->appName . ' account information';
-			try {
-				$mail = new Zend_Mail();
-				$mail->setBodyText($text);
-				$mail->setBodyHtml($html);
-				$mail->setFrom($config->email, $config->appName);
-				$mail->addTo($email, $name);
-				$mail->setSubject($subject);
-				$mail->send();
-			} catch (Zend_Exception $e) {
-				errorLog("Error sending email for reset password.", $e->getMessage());
-			}			
+			
+    		require('Mail.php');
+            require('Mail\mime.php');
+        
+            $message = new Mail_mime();
+            $message->setTXTBody($text);
+            $message->setHTMLBody($html);
+            $body = $message->get();
+            $extraheaders = array("From" => $config->email, "Subject" => $subject);
+            $headers = $message->headers($extraheaders);
+        
+            $mail = Mail::factory("mail");
+            $result = $mail->send($email, $headers, $body);
+            if (PEAR::isError($result)) {
+              errorLog("Error sending email for reset password.", $result->getDebugInfo());
+            }
 			$message = "<h3>You have successfully reset your password. Your account information has been mailed to $email</h3><br /><br />";
 		}
 	}
