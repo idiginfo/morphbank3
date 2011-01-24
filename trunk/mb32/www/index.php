@@ -82,7 +82,7 @@ if (stripos($_SERVER['REQUEST_METHOD'], 'HEAD') !== FALSE){
 	initHtml( $title, NULL, NULL);
 
 	// Add the standard head section to all the HTML output.
-	echoHead( false, $title.$config->appName, false);
+	echoHead( false, $title, false);
 
 	// Output the content of the main frame
 	mainindexPage();
