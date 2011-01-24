@@ -248,9 +248,12 @@ begin
 	insert into Geolocated select id from Specimen where localityid in (select id from Geolocated);
 	insert into Geolocated select id from Image where specimenid in (select id from Geolocated);
 	update BaseObject set geolocated = false;
-	update BaseObject set geolocated = true where id in (select id from Geolocated);
+	update BaseObject b join Geolocated g on b.id=g.id
+    set b.geolocated = true;
 	update Keywords set geolocated = false;
-	update Keywords set geolocated = true where id in (select id from Geolocated);
+	update Keywords k join Geolocated g on k.id=g.id 
+    set k.geolocated = true where id in (select id from Geolocated);
+    select row_count();
 end ;;
 
 DROP PROCEDURE IF EXISTS SexInsert ;;
