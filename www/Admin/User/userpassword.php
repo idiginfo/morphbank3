@@ -56,10 +56,10 @@ if ($_POST['email'] != null) {
 		} else {
 			$text = "Below is your ".$config->appName." username and new password.\nYou may use the password by copying and pasting it into the password field on the login form.\n";
 			$text .= "This new password was created for your first login. Please reset it to a more convenient one after logging in.\n\nusername: " . $uin . " \n\npassword: " . $new_password . " \n\n\n".$config->appName." Admin team";
-			$subject  = 'Your ' . $config->appName . ' account information';
-			$headers['From']    = $config->email;
-            $headers['To']      = 'joe@example.com';
-            $headers['Subject'] = $subject;
+			$subject                 = 'Your ' . $config->appName . ' account information';
+			$headers['From']         = $config->email;
+            $headers['To']           = 'joe@example.com';
+            $headers['Subject']      = $subject;
             $params['sendmail_path'] = '/usr/sbin/sendmail';
             
             // Create the mail object using the Mail::factory method
