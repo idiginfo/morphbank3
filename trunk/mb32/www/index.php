@@ -77,7 +77,7 @@ if (stripos($_SERVER['REQUEST_METHOD'], 'HEAD') !== FALSE){
 } else { // request for home page
 	include_once('mainIndexPage.php');
 	
-	$title = "Welcome to ";
+	$title = $config->welcomeMsg;
 	// The beginnig of HTML
 	initHtml( $title, NULL, NULL);
 
