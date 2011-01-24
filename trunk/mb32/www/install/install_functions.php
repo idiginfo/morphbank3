@@ -239,6 +239,7 @@ function installApp() {
 				$postArray = array (
 					'email'                 => '"'.$_POST['app_email'].'"',
 					'appName'               => '"'.$_POST['app_name'].'"',
+				    'welcomeMsg'            => '"'.$_POST['app_welcome'].'"',
 					'mailList'              => $_POST['mail_enabled'],
 					'mailListUrl'           => '"'.$_POST['mail_url'].'"',
 					'mailListPasswordInput' => '"'.$_POST['mail_password_input'].'"',

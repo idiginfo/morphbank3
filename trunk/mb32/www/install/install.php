@@ -101,6 +101,7 @@ if (!is_writable('../../log')) {
 					<ol>
 						<li><label for="app_email">Administration Email <em>*</em></label> <input type="text" id="app_email" name="app_email" value="<?php echo $_POST['app_email'] ?>" /> (e.g. admin@morphbank.net)</li>
 						<li><label for="app_name">Application Name <em>*</em></label> <input type="text" id="app_name" name="app_name" value="<?php echo $_POST['app_name'] ?>" /> (e.g. Morphbank)</li>
+						<li><label for="app_welcome">Welcome Message <em>*</em></label> <input type="text" id="app_welcom" name="app_welcome" value="<?php echo $_POST['app_welcome'] ?>" /> (e.g. Welcome to Morphbank)</li>
 						<li><label for="app_timezone">Application Timezone <em>*</em></label> <select id="app_timeszone" name="app_timezone"><?php echo getTimezoneOptions($_POST['app_timezone']) ?></select> </li>
 					</ol>
 				</fieldset>
