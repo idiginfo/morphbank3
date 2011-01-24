@@ -56,24 +56,16 @@ if ($_POST['email'] != null) {
 		} else {
 			$text = "Below is your ".$config->appName." username and new password.\nYou may use the password by copying and pasting it into the password field on the login form.\n";
 			$text .= "This new password was created for your first login. Please reset it to a more convenient one after logging in.\n\nusername: " . $uin . " \n\npassword: " . $new_password . " \n\n\n".$config->appName." Admin team";
-			
-			$html = "Below is your ".$config->appName." username and new password.<br />You may use the password by copying and pasting it into the password field on the login form.<br />";
-			$html .= "This new password was created for your first login. Please reset it to a more convenient one after logging in.<br /><br />username: " . $uin . "<br /><br />password: " . $new_password . "<br /><br /><br />".$config->appName." Admin team";
-			
 			$subject  = 'Your ' . $config->appName . ' account information';
-			
-    		require('Mail.php');
-            require('Mail\mime.php');
-        
-            $message = new Mail_mime();
-            $message->setTXTBody($text);
-            $message->setHTMLBody($html);
-            $body = $message->get();
-            $extraheaders = array("From" => $config->email, "Subject" => $subject);
-            $headers = $message->headers($extraheaders);
-        
-            $mail = Mail::factory("mail");
-            $result = $mail->send($email, $headers, $body);
+			$headers['From']    = $config->email;
+            $headers['To']      = 'joe@example.com';
+            $headers['Subject'] = $subject;
+            $params['sendmail_path'] = '/usr/sbin/sendmail';
+            
+            // Create the mail object using the Mail::factory method
+            require('Mail.php');
+            $mail_object =& Mail::factory('sendmail', $params);
+            $result = $mail_object->send($email, $headers, $text);
             if (PEAR::isError($result)) {
               errorLog("Error sending email for reset password.", $result->getDebugInfo());
             }
