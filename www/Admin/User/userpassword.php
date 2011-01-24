@@ -58,7 +58,7 @@ if ($_POST['email'] != null) {
 			$text .= "This new password was created for your first login. Please reset it to a more convenient one after logging in.\n\nusername: " . $uin . " \n\npassword: " . $new_password . " \n\n\n".$config->appName." Admin team";
 			$subject                 = 'Your ' . $config->appName . ' account information';
 			$headers['From']         = $config->email;
-            $headers['To']           = 'joe@example.com';
+            $headers['To']           = $email;
             $headers['Subject']      = $subject;
             $params['sendmail_path'] = '/usr/sbin/sendmail';
             

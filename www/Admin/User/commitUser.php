@@ -219,23 +219,16 @@ if ($_POST['subscription'] == 1 && $config->mailList) {
 		$text = "A FAILURE OCCURED ADDING NEW USER TO MAILING LIST:\n\n";
 		$text .= "Name: $first_name $last_name \n";
 		$text .= "Email: $email\n";
-		
-		$html = "A FAILURE OCCURED ADDING NEW USER TO MAILING LIST:<br /><br />";
-		$html .= "<b>Name:</b> $first_name $last_name<br />";
-		$html .= "<b>Email:</b> $email<br />";
-		
+		$subject = $config->appName . " - Add To Mail List Failure";
+	    $headers['From']         = $config->email;
+        $headers['To']           = $config->email;
+        $headers['Subject']      = $config->appName . " - Add To Mail List Failure";
+        $params['sendmail_path'] = '/usr/sbin/sendmail';
+        
+        // Create the mail object using the Mail::factory method
         require('Mail.php');
-        require('Mail\mime.php');
-    
-        $message = new Mail_mime();
-        $message->setTXTBody($text);
-        $message->setHTMLBody($html);
-        $body = $message->get();
-        $extraheaders = array("From" => $config->email, "Subject" => $config->appName . " - Add To Mail List Failure");
-        $headers = $message->headers($extraheaders);
-    
-        $mail = Mail::factory("mail");
-        $result = $mail->send($config->email, $headers, $body);
+        $mail_object =& Mail::factory('sendmail', $params);
+        $result = $mail_object->send($config->email, $headers, $text);
         if (PEAR::isError($result)) {
           errorLog("Error sending email: Failure to add user to mailist.", $result->getDebugInfo());
         }
@@ -260,25 +253,16 @@ if ($action == 'new') {
 	$text .= "Email: $email\n";
 	$text .= "Resume\CV: ".$config->appServerBaseUrl."Admin/User/getCV.php?cv=".$file."\n";
 	$text .= "Mail List Subscribe: ".(isset($_POST['subscription']) ? 'Yes' : 'No')."\n\n";
-	
-	$html = "A REQUEST FOR NEW USER ACCOUNT ON MORPHBANK FROM:<br /><br />";
-	$html .= "<b>Name:</b> $first_name $last_name<br />";
-	$html .= "<b>Email:</b> $email<br />";
-	$html .= "<b>Resume\CV</b>: ".$config->appServerBaseUrl."Admin/User/getCV.php?cv=".$file."<br />";
-	$html .= "<b>Mail List Subscribe</b>: ".(isset($_POST['subscription']) ? 'Yes' : 'No')."<br /><br />";
-	
+	$subject = $config->appName . " - Add To Mail List Failure";
+    $headers['From']         = $config->email;
+    $headers['To']           = $config->email;
+    $headers['Subject']      = $config->appName . " - New User Account";
+    $params['sendmail_path'] = '/usr/sbin/sendmail';
+        
+    // Create the mail object using the Mail::factory method
     require('Mail.php');
-    require('Mail\mime.php');
-
-    $message = new Mail_mime();
-    $message->setTXTBody($text);
-    $message->setHTMLBody($html);
-    $body = $message->get();
-    $extraheaders = array("From" => $config->email, "Subject" => $config->appName . " - New User Account");
-    $headers = $message->headers($extraheaders);
-
-    $mail = Mail::factory("mail");
-    $result = $mail->send($config->email, $headers, $body);
+    $mail_object =& Mail::factory('sendmail', $params);
+    $result = $mail_object->send($config->email, $headers, $text);
     if (PEAR::isError($result)) {
       errorLog("Error sending email: New user account.", $result->getDebugInfo());
     }
