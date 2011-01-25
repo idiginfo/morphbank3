@@ -90,7 +90,7 @@ while (true){
  */
 function moveImageFiles($id, $accessNum, $imageType, $problems){
 	global $config;
-	$problemArray = split(" ",$string);
+	$problemArray = explode(" ",$string);
 	//echo "\nFixing files  for id: $id accessNum: $accessNum \n";
 	$message = '';
 	if ($imageType=="jpg") $imageType = "jpeg"; // jpg original stored in jpeg

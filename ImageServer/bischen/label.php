@@ -41,7 +41,7 @@ define('PHP_ENTRY',0);// valid Web app entry point
  */
 //TODO check for POST request?
 
-list($id,$sessionId) = split('[ +]',$_REQUEST["representation_id"]);
+list($id,$sessionId) = preg_split('[ +]',$_REQUEST["representation_id"]);
 $method = $_REQUEST["service"];
 
 //$pn_user_id = $_REQUEST("user_id", pString);
