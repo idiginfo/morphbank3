@@ -7,7 +7,7 @@ if (is_writable($config->userLogoPath)) {
 }
 */
 
-if (is_writable('/images/userLogos')) {
+if (is_writable('/data/www/images/userLogos')) {
   echo "writable";
 } else {
   echo "not writable";
