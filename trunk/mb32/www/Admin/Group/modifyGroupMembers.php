@@ -23,7 +23,6 @@
 
 include_once('showFunctions.inc.php');
 include_once('updater.class.php');
-include_once('Admin/admin.functions.php');
 
 $userId    = $objInfo->getUserId();
 $groupId   = $objInfo->getUserGroupId();

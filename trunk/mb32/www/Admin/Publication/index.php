@@ -26,7 +26,6 @@ if ($_GET['pop']) {
 } else {
 	include_once('head.inc.php');
 }
-include_once('Admin/admin.functions.php');
 include_once('tsnFunctions.php');
 include_once('editPublication.php');
 

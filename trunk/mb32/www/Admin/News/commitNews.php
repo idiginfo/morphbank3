@@ -23,7 +23,6 @@
 
 /*
 include_once('imageFunctions.php');
-include_once('Admin/admin.functions.php');
 */
 
 checkIfLogged();

@@ -23,6 +23,22 @@
 
 include_once('imageFunctions.php');
 
+/**
+ * Shows list of news items
+ * Displays only title, author, and edit/view link
+ */
+function listNews() {
+	
+}
+
+/**
+ * View single news item
+ * @param $id
+ */
+function viewNews($id) {
+	
+}
+
 function mainNews() {
 	global $objInfo;
 	global $config;
@@ -312,22 +328,3 @@ function updateFields($field, $oldVal, $newVal){
 	return true;
 }
 
-function echoJavaScript()
-{
-	echo '<script type ="text/javascript">
-  function openImage(){
-       var location = "selectimage.php";
-          NEWS = window.open(location,"NEWS", "location = 1, directories=0,dependent=1,menubar=0,top=20,left=20,width=800,height=800,scrollbars=1,resizable=1");
-           if (window.focus){                        
-                 NEWS.focus();
-            }
-        }
-
-
-  function updateimage(value){
-                document.forms[0].image.value=value;                
-        }
-
-</script>';
-}
-?>

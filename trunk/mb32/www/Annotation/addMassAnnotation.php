@@ -21,7 +21,6 @@
 *   Stephen Winner - initial API and implementation
 */
 
-include_once('Admin/admin.functions.php');
 include_once('imageFunctions.php');
 include_once('showFunctions.inc.php');
 include_once('updateObjectKeywords.php');
