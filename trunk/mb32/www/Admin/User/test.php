@@ -6,7 +6,7 @@ if (is_writable($config->userLogoPath)) {
   echo "not writable";
 }
 */
-
+echo $_SERVER['DOCUMENT_ROOT'] . "<br />";
 if (is_dir('/data/mb32test/www/images/userLogos')) {
   echo "directory exists<br />";
 } else {
