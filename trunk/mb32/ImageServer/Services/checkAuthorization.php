@@ -53,7 +53,7 @@ function checkAuthorization($id, $sessionId = null, $function = 'view'){
 }
 
 function approveRequestor(){
-	$requestor = split('.',$_SERVER['REMOTE_HOST']);
+	$requestor = explode('.',$_SERVER['REMOTE_HOST']);
 	if ($requestor[1]=='morphbank' && $requestor[2]=='net'
 	&& $requestor[0]!='isample'){
 		return true;
