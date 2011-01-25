@@ -45,11 +45,13 @@ function processImageRemote($id, $imageFilePath, $imageFileName){
 	$request->addPostData('id', $id);
 	$request->addPostData('fileName', $imageFileName);
 	$request->addFile('image', $imageFilePath, $imageMimeType);
-	$response = $request->sendRequest();
-	if (PEAR::isError($response)) {
-		return $response->getUserInfo();
+	$request->sendRequest();
+	$code = $request->getResponseCode();
+	$response = $request->getResponseBody();
+    if ($code == 400) {
+		return array($response);
 	}
 	$response = $request->getResponseBody();
-	return split('\^',$response) ;
+	return explode('^',$response) ;
 }
-?>
+
