@@ -248,8 +248,7 @@ function searchUser($id, $gmId, $users) {
  * @param $current
  */
 function showUsers($id, $gmId, $rows, $current = true) {
-	
-	
+
 	$returnUrl = getReturnUrl();
 	
 	if ($current) {
@@ -275,7 +274,7 @@ function showUsers($id, $gmId, $rows, $current = true) {
 				</tr>';
 		$count = 0;
 		foreach ($rows as $row) {
-			$role = UserinGroup($id, $row['id']);
+			$role = empty($row['usergrouprole']) ? '' : $row['usergrouprole'];
 			$checked = !empty($role) ? 'checked="checked"' : '';
 			echo '<tr><td valign="middle">'."\n";
 			echo 	'<input type="checkbox" name="user['.$count.'][user]" '.$checked.' value="'.$row['id'].'" />';
