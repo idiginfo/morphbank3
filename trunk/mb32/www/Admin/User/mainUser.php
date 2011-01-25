@@ -276,7 +276,7 @@ function getMessage($code) {
 	} elseif ($code == 6) {
 		return '<br /><br /><div class="searchError">You do not have permissions to add users</div>'."\n";
 	} elseif ($code == 7) {
-		return '<br /><br /><div class="searchError">Error uploading image</div>'."\n";
+		return '<br /><br /><div class="searchError">Error uploading file</div>'."\n";
 	} elseif ($code == 8) {
 		return '<br /><br /><div class="searchError">Spam code does not match image</div>'."\n";
 	} elseif ($code == 9) {
