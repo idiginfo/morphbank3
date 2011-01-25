@@ -27,8 +27,7 @@ function processImageRemote($id, $imageFilePath, $imageFileName){
 	if (empty($id)) return "BaseObject ID passed to processImageRemote() is empty";
 	
 	include_once ("HTTP/Request.php");
-	// get the file type from the extension
-	$parts = split('.',$imageFileName);
+	
 	// get the mimetype
 	$imageSizes = @getimagesize($imageFilePath);
 	if (!$imageSizes) {
