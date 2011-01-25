@@ -24,6 +24,7 @@
 //if (!defined('PHP_ENTRY')){ die('Cannot be run directly');}
 
 include_once ('imagepath.inc.php');
+include_once ('bischen/makeTpc.php');
 
 /**
  * Fix problems with image files including fetching original and moving to correct location
@@ -260,8 +261,6 @@ function convertDng($source){
 	$message .= date("H:i:s")." Finished\n";
 	return $rawFile;
 }
-
-include_once ($config->webPath.'/bischen/makeTpc.php');
 
 function convertTpc($id, $imgSrc = null){
 	$success = makeTilePic($id, $imgSrc);
