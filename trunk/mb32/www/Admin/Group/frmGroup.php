@@ -1,3 +1,4 @@
+<?php
 /**
 * Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
 * All rights reserved. This program and the accompanying materials
@@ -19,6 +20,7 @@
 *   Katja Seltmann - initial API and implementation
 *   Stephen Winner - initial API and implementation
 */
+?>
 
 <form id="frmGroup" class="frmValidate" name="group" method="post" action="modifyGroup.php">
 <input type="hidden" name="id" id="id" value="<?php echo $id; ?>">
