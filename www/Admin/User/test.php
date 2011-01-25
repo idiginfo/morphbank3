@@ -7,7 +7,7 @@ if (is_writable($config->userLogoPath)) {
 }
 */
 
-if (is_dir('/images/userLogos')) {
+if (is_dir('/data/mb32test/www/images/userLogos')) {
   echo "directory exists<br />";
 } else {
   echo "directory missing<br />";
