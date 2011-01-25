@@ -22,9 +22,10 @@
 */
 
 include_once('head.inc.php');
-include_once('Admin/admin.functions.php');
 include_once('mainNews.php');
 
+require_once 'Pager/Pager_Wrapper.php';
+exit;
 // Check authorization
 if (!isAdministrator()) {
 	header("location: /Admin/User/edit");
@@ -40,8 +41,18 @@ initHtml($title, null, $includeJavaScript);
 echoHead(false, $title);
 
 echo '<div class="mainGenericContainer" style="width:700px">';
-// Output the content of the main frame
-mainNews();
+
+// Action determines what is displayed
+if ($action == 'edit') {
+	echo getMessage($code);
+	editNews($id);
+} elseif ($action == 'add') {
+	echo getMessage($code);
+	addNews($_REQUEST);
+} else {
+	echo getMessage($code);
+	listNews($_REQUEST);
+}
 
 echo '</div>';
 

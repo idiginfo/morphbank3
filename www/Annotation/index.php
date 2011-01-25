@@ -29,7 +29,6 @@ if (isset($_GET['pop']) || isset($_POST['pop'])) {
 
 include_once('annotateFunctions.php');
 include_once('mainAnnotation.php');
-include_once('Admin/admin.functions.php');
 
 include_once('gettables.inc.php');
 include_once('thumbs.inc.php');

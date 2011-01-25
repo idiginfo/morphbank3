@@ -28,8 +28,7 @@ if (isset($_GET['pop'])){
 } 
 
   include_once('gettables.inc.php');
-  include_once('Admin/admin.functions.php');
-  include_once('mainAnnotation.php');
+    include_once('mainAnnotation.php');
   include_once('postItFunctions.inc.php');
   include_once('CanAnnotate.inc.php');
   

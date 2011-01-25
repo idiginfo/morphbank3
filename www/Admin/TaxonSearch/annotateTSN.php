@@ -35,7 +35,6 @@ if ($_REQUEST['pop']) {
 }
 include_once('gettables.inc.php');
 include_once('tsnFunctions.php');
-include_once('Admin/admin.functions.php');
 include_once('postItFunctions.inc.php');
 include_once('updateObjectKeywords.php');
 

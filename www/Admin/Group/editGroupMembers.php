@@ -31,7 +31,6 @@
 include_once('head.inc.php');
 include_once('showFunctions.inc.php');
 include_once('urlFunctions.inc.php');
-include_once('Admin/admin.functions.php');
 include_once('groupFunctions.php');
 
 $includeJavaScript = array('jquery.1-4-2.min.js', 'jquery-ui-1.8.min.js', 'jquery.validate.min.js', 'formMethods.js');

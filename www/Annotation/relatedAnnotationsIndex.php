@@ -22,7 +22,6 @@
 */
 
 include_once('head.inc.php');
-include_once('Admin/admin.functions.php');
 include_once('relatedAnnotations.php');
 include_once('postItFunctions.inc.php');
 

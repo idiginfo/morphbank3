@@ -26,7 +26,6 @@
 // Date created: Jan 19 2007
 
 include_once('head.inc.php');
-include_once('Admin/admin.functions.php');
 
 checkIfLogged();
 $userid = $objInfo->getUserId();

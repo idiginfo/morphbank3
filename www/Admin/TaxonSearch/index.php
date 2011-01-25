@@ -28,7 +28,6 @@ if ($_REQUEST['pop']) {
 }
 
 include_once('tsnFunctions.php');
-include_once('Admin/admin.functions.php');
 include_once('mainTaxon.php');
 
 

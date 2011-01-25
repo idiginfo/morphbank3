@@ -30,7 +30,6 @@
 
 
 include_once('head.inc.php');
-include_once('Admin/admin.functions.php');
 
 checkIfLogged();
 
