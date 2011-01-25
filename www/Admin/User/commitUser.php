@@ -106,20 +106,13 @@ clear_multi_query($result);
 
 // If user created, handle file upload if existing
 if (isset($_FILES['userlogo']) && ($_FILES['userlogo']['name'] > "")) {
-	$new_image = $_FILES['userlogo']['name'];
-
-	$simple_name = substr($new_image, 0, strpos($new_image, "."));
-	$simple_name .= $_POST['id'];
-	$image_new = $simple_name . substr($new_image, strpos($new_image, "."), strlen($new_image) - 1);
-
-	$tmpFile = $_FILES['userlogo']['tmp_name'];
-
-	if (!move_uploaded_file($tmpFile, $config->userLogoPath . $image_new)) {
-		header("location: $indexUrl&code=7&$queryString");
-	}
-	exec("chmod 755 " . $config->userLogoPath . $image_new);
-
-	$userLogo = $config->appServerBaseUrl . '/images/userLogos/' . trim($image_new);
+  // Allow only letters, numbers, underscores, and period in file name
+  $file_name = trim(preg_replace("/[^a-zA-Z0-9_.]/","", $_FILES['userlogo']['name']));
+  if (!move_uploaded_file($_FILES['userlogo']['tmp_name'], $config->userLogoPath . $file_name)) {
+  	header("location: $indexUrl&code=7&$queryString");
+  	exit;
+  }
+  $userLogo = $config->appServerBaseUrl . '/images/userLogos/' . $file_name;
 }
 
 // Insert BaseObject for Groups
@@ -246,6 +239,7 @@ if ($action == 'new') {
 
 	if (!move_uploaded_file($fileTmp, $filePath)) {
 		header("location: $indexUrl&code=7&$queryString");
+		exit;
 	}
 
 	$text = "A REQUEST FOR NEW USER ACCOUNT ON MORPHBANK FROM:\n\n";
