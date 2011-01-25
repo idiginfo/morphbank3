@@ -16,6 +16,11 @@ if (is_dir($config->userLogoPath)) {
 if (is_writable($config->userLogoPath)) {
   echo "writable";
 } else {
-  echo "not writable";
+  chmod($config->userLogoPath, 0777);
+  if (is_writable($config->userLogoPath)) {
+    echo "now writable";
+  } else {
+    echo "still not writable";
+  }
 }
 ?>
