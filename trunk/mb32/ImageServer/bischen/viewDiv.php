@@ -25,7 +25,7 @@ define('PHP_ENTRY',0);// valid Web app entry point
 
 
 include_once ("image.class.php");
-include_once ($config->webPath."/bischen/tileserver/TilepicParser.inc");
+include_once ("bischen/tileserver/TilepicParser.inc");
 
 $id = $_REQUEST['id'];
 // session Id from server for use in accessing private images
