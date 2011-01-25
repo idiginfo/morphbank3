@@ -21,7 +21,7 @@
 *   Stephen Winner - initial API and implementation
 */
 
-include_once ("/bischen/tileserver/TilepicParser.inc");
+include_once ("bischen/tileserver/TilepicParser.inc");
 include_once ('imagepath.inc.php');
 
 $tilepicParser = new TilepicParser();
