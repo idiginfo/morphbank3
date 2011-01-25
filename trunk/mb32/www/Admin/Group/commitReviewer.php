@@ -56,7 +56,7 @@ $userUpdater->addField('privilegeTSN', 0, null); // TODO Default 0. Eventually r
 $userUpdater->addField('primaryTSN', 0, null);   // TODO Default 0. Eventually remove
 $userUpdater->addField('secondaryTSN', 0, null); // TODO Default 0. Eventually remove
 $userUpdater->addField('name', $name, null);
-$userUpdater->addField("preferredGroup", $id, null);
+$userUpdater->addField("preferredGroup", $gid, null);
 $numRows = $userUpdater->executeUpdate();
 
 // Insert in UserGroup table
