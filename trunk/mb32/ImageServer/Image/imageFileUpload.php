@@ -62,12 +62,11 @@ if(empty($fileName)){
 } 
 	
 $imageType = replaceOriginal ($id, $tmpName, $fileName, null);
-$origMessage = $message;
 list($message,$width,$height) = fixImageFiles($id, $tmpName, $imageType);
 if (empty($width)){
 	header("HTTP/1.0: 400 Bad Request");
-	header("cannot process image file: message is $message");
-	user_error("image processing failed $message");
+	echo "cannot process image file: message is $message";
+	die();
 }
-echo "$origMessage:$message^$width^$height^$imageType";
+echo "$message^$width^$height^$imageType";
 
