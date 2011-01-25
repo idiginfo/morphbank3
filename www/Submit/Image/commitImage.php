@@ -67,11 +67,6 @@ if (isMdb2Error($localityId, "Error selecting locality id for specimen", 5)) {
 	header("location: $indexUrl&code=3");
 	exit;
 }
-if (empty($localityId)) {
-	errorLog("Locality Id is empty");
-	header("location: $indexUrl&code=3");
-	exit;
-}
 
 if(!$publishDate) {
 	$dateToPublish = date('Y-m-d', (mktime(0, 0, 0, date("m") +6, date("d") - 1, date("Y"))));
