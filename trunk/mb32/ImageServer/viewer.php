@@ -30,7 +30,7 @@ $id = $_REQUEST['id'];
 $title = "Bischen Viewer for $id";
 echo "<html><head><title>$title</title></head><body>";
 
-include_once(PATH_ROOT.'bischen/viewDiv.php');
+include_once('bischen/viewDiv.php');
 
 echo '</body></html>';
 ?>
