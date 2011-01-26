@@ -54,6 +54,8 @@ list($id, $sessionId) = preg_split('[+ ]', $p);
 
 $tileNumber = $_REQUEST['t'];
 $filePath = getImageFilePath($id, 'tpc');
+echo $filePath;
+exit;
 $fileExists = file_exists($filePath);
 
 if (!$fileExists){
