@@ -50,9 +50,8 @@ $tilePicParser = new TilepicParser();
 
 // parameter 'p' is of the form id+sessionId
 $p = $_REQUEST['p'];
-echo $p;
-exit;
-list($id, $sessionId) = preg_split('[+ ]', $p);
+
+list($id, $sessionId) = explode('+', $p);
 
 $tileNumber = $_REQUEST['t'];
 $filePath = getImageFilePath($id, 'tpc');
