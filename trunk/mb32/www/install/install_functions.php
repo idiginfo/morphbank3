@@ -164,13 +164,24 @@ function dbConnect() {
 }
 
 /**
+ * Adds function to errors from updater class
+ * @param $dbObject
+ * @param $label Label for error
+ * @param $priority
+ */
+function isMdb2Error($dbObject, $label=null, $priority = 4){
+	if (!PEAR::isError($dbObject)) return false;
+	return $dbObject->getDebugInfo();
+}
+
+/**
  * Checks if CurrentIds table already holds information
  * @param $type
  */
 function checkCurrentIds($type) {
   $db = dbConnect();
   $sql = "select type from CurrentIds where type = '$type'";
-  $result = $db->query($query);
+  $result = $db->query($sql);
   return $result->numRows();
 }
 
@@ -189,7 +200,7 @@ function setCurrentIds($count, $min, $max, $type) {
                           : "update CurrentIds set minId = ?, maxId = ? where type = ?";
   $stmt = $db->prepare($sql);
   if (PEAR::isError($stmt)) return $stmt->getUserInfo();
-  $result = $statement->execute($data);
+  $result = $stmt->execute($data);
   if (PEAR::isError($result)) return $result->getUserInfo();
   $stmt->free();
   return;
@@ -203,11 +214,12 @@ function installApp() {
 	
 	// Check if directories are writable
 	$writable = '';
-	if (!is_writable('/../configuration')) $writable .= "/configuration directory is not writable.<br />";
-	if (!is_writable('/../log')) $writable .= "/log directory is not writable.<br />";
-	if (!is_writable('/../www/images/userLogos')) $writable .= "/www/images/userLogos directory is not writable.<br />";
-    if (!is_writable('/../www/newsImages')) $writable .= "/www/images/newsImages directory is not writable.<br />";
-	if (!is_writable('/../www/images/mirrorLogos')) $writable .= "/www/images/mirrorLogos directory is not writable.<br />";
+	
+	if (!is_writable('../../configuration')) $writable .= "/configuration directory is not writable.<br />";
+	if (!is_writable('../../log')) $writable .= "/log directory is not writable.<br />";
+	if (!is_writable('../../www/images/userLogos')) $writable .= "/www/images/userLogos directory is not writable.<br />";
+    if (!is_writable('../../www/images/newsImages')) $writable .= "/www/images/newsImages directory is not writable.<br />";
+	if (!is_writable('../../www/images/mirrorLogos')) $writable .= "/www/images/mirrorLogos directory is not writable.<br />";
 	if (!empty($writable)) return $writable;
 	
 	if (!isset($_POST['submit'])) return;
@@ -361,6 +373,7 @@ function installApp() {
 	
     // prepare user update to insert into User Table
     $userUpdater = new Updater($db, $id, $userId , $groupId, 'User');
+    $userUpdater->addField('first_Name', $first_name, null);
     $userUpdater->addField('last_Name', $last_name, null);
     $userUpdater->addField('uin', $uin, null);
     $userUpdater->addPasswordField('pin', $pin, null);
@@ -387,8 +400,15 @@ function installApp() {
     $numRows = $userUpdater->executeUpdate();
     if (is_string($numRows)) return $numRows;
     
-    // Insert in UserGroup table
+    // Insert user's group into UserGroup
     $data = array($id, $group_id, $userId, $db->mdbNow(), $db->mdbToday(), 'coordinator');
+    $sql = "insert into UserGroup (user, groups, userId, dateCreated, dateToPublish, userGroupRole) values (?,?,?,?,?,?)";
+    $stmt = $db->prepare($sql);
+    $affRows = $stmt->execute($data);
+    if (PEAR::isError($affRows)) return 'Create user group error:' . $affRows->getUserInfo();
+    
+    // Insert user as administrator into UserGroup
+    $data = array($id, $groupId, $userId, $db->mdbNow(), $db->mdbToday(), 'administrator');
     $sql = "insert into UserGroup (user, groups, userId, dateCreated, dateToPublish, userGroupRole) values (?,?,?,?,?,?)";
     $stmt = $db->prepare($sql);
     $affRows = $stmt->execute($data);
