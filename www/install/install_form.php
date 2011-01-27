@@ -28,8 +28,7 @@
 			if (isset($_POST['submit']) && empty($msg)) { ?>
 			<div>
 			Configuration and database install completed.<br />
-			For security reasons, the install folder should be deleted.<br />
-			Chmod /configuration/ directory so it is not writable.
+			Chmod /configuration directory so it is not writable.<br />
 			</div>
 			<?php } else { ?>
 			<div class="searchError"><?php echo $msg; ?></div>
