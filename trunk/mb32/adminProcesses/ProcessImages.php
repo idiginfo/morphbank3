@@ -21,10 +21,13 @@
 *   Stephen Winner - initial API and implementation
 */
 
+define('PHP_ENTRY',0);// valid Web app entry point
+ 
 // TODO Need database configuration and image server
 require_once('../configuration/image.server.php');
 include_once("imageFunctions.php"); // Located in /ImageServer/Image
-include_once ('imageProcessing.php'); // Located in ImageServer/Image
+include_once('imageProcessing.php'); // Located in ImageServer/Image
+require_once('admin.inc.php');
 
 // OPTIONAL fields
 $SELECT_LIMIT = " and i.id>=480000 ";
