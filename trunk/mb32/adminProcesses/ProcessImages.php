@@ -29,6 +29,8 @@ include_once("imageFunctions.php"); // Located in /ImageServer/Image
 include_once('imageProcessing.php'); // Located in ImageServer/Image
 require_once('admin.inc.php');
 
+$db = connect();
+
 // OPTIONAL fields
 $SELECT_LIMIT = " and i.id>=480000 ";
 $OUTPUT_DIR = null;
