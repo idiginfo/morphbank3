@@ -605,7 +605,7 @@ function getNonAuthMessage($code) {
 			$msg = 'The requested object is private';
 			break;
 		case 2: // Not logged in and trying to update
-			$msg = 'You must be logged in to submit or edit';
+			$msg = 'You must be logged in to submit, edit, or annotate';
 			break;
 		case 3: // Group role is guest or reviewer and is insert
 			$msg = 'Guests and reviewers are not authorized to submit';
