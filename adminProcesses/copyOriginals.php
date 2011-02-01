@@ -25,6 +25,9 @@ define('PHP_ENTRY',0);
 
 require_once('../configuration/image.server.php');
 include_once("imageFunctions.php"); // Located in /ImageServer/Image
+include_once("admin.inc.php"); 
+
+$db = connect();
 
 $STATUS_FILE = "/data/scratch/copystatus.txt";
 $BACKUP_IMAGE_PATH_ROOT = "/data/images/originals/";
@@ -32,7 +35,7 @@ $BACKUP_IMAGE_PATH_ROOT = "/data/images/originals/";
 
 // OPTIONAL fields
 
-$SELECT_LIMIT = " order by i.id limit 20 ";
+$SELECT_LIMIT = " order by i.id limit 200 ";
 $SLEEP_AFTER_MKDIR = 1;
 $rows = true;
 while ($rows){
@@ -44,7 +47,7 @@ while ($rows){
 	if (empty($lastId)) $lastId = 0;
 
 	$imageSql = "select  i.id,  i.imageType "
-	." from Image i where i.accessNum > 0  and i.id > $lastId $SELECT_LIMIT ";
+	." from Image i where i.id > $lastId $SELECT_LIMIT ";
 
 	echo "SQL: $imageSql\n";
 	$db = connect();
@@ -80,7 +83,7 @@ echo date("H:i:s\n");
 
 function copyOriginalFile($id, $imageType){
 
-	$message = 'File $id ';
+	//$message = 'File $id ';
 
 	if ($imageType=="jpg") $imageType = "jpeg"; // jpg original stored in jpeg
 	$originalImgPath = getImageFilePath($id, $imageType);
@@ -97,9 +100,10 @@ function copyOriginalFile($id, $imageType){
 
 function copyFile($oldPath, $newPath){
 
-	if (file_exists($newPath) && filemtime($oldPath) == filemtime($newPath)) {
+	if (file_exists($newPath) && filemtime($oldPath) >= filemtime($newPath)) {
 		$message = "no copy required";
-		return $message;
+		return null;
+		//return $message;
 	}
 	$copy = "cp -p $oldPath $newPath";
 	$res = shell_exec ($copy);
