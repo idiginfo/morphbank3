@@ -75,7 +75,7 @@ function updateImagesPerView ( $viewId = 0, $imagesCount = 0) {
 	$sql = 'UPDATE View SET imagesCount='.$imagesCount.' WHERE id='.$viewId;
 	$result = mysqli_query($link, $sql);
 	if (!$result) die("Invalid query: \n".$sql."\n". mysqli_error($link));
-	echo $sql."\n";
+	//echo $sql."\n";
 }
 
 echo "This process took: ".time()-$startTime." seconds";
