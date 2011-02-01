@@ -37,6 +37,7 @@ include_once('gettables.inc.php');
 include_once('tsnFunctions.php');
 include_once('postItFunctions.inc.php');
 include_once('updateObjectKeywords.php');
+include_once('showFunctions.inc.php');
 
 global $objInfo;
 
@@ -59,10 +60,20 @@ $browse = $_GET['browse'];
 if (isset($_GET['view']))
 $view = $_GET['view'];
 
-if ((isset($_GET['POP']) && $_GET['POP'] == "YES") || (isset($_POST['pop']) && $_POST['pop'] == "YES"))
-echo '<div class="popContainer" style="width:760px">';
-else
-echo '<div class="mainGenericContainer" style="width:760px">';
+if ((isset($_GET['POP']) && $_GET['POP'] == "YES") || (isset($_POST['pop']) && $_POST['pop'] == "YES")) {
+  echo '<div class="popContainer" style="width:760px">';
+} else {
+  echo '<div class="mainGenericContainer" style="width:760px">';
+}
+
+
+if(!checkAuthorization(null, $objInfo->getUserId(), $objInfo->getUserGroupId(), 'annotate')){
+  echo getNonAuthMessage(getNonAuthCode()) . "<br /><br />";
+  echo '</div>';
+  finishHtml();
+  exit;
+}
+
 if (isset($_GET['tsn']) && $_GET['tsn'] != "")
 $tsn = $_GET['tsn'];
 if (isset($_GET['tsn']) && $_GET['tsn'] == "") {
