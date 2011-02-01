@@ -285,7 +285,8 @@ function getImageServerUrl($objectId, $imageType, $sessionId = null, $imgSize = 
 
 function bischenPageUrl ($id, $sessionId = null){
 	global $config;
-	$url = $config->appServerBaseUrl.'bischen/?id='.$id;
+	$imgId = getObjectImageId($id);
+	$url = $config->appServerBaseUrl.'bischen/?id='.$imgId;
 	if (!empty($sessionId)){
 		$url .= '&sessionId='.$sessionId;
 	}
