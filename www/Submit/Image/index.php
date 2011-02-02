@@ -62,7 +62,7 @@ function checkImageMessage($id, $code){
 	} elseif ($code == 2) {
 		echo '<div class="searchError">Error verifying View Id</div><br /><br />'."\n";
 	} elseif ($code == 3) {
-		echo '<div class="searchError">Error retrieving locality id for Specimen</div><br /><br />'."\n";
+		echo '<div class="searchError">Error retrieving Specimen</div><br /><br />'."\n";
 	} elseif ($code == 4) {
 		echo '<div class="searchError">Error in CreateObject procedure</div><br /><br />'."\n";
 	} elseif ($code == 5) {
