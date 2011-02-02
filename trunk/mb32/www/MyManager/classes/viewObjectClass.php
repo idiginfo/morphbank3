@@ -74,7 +74,7 @@ class viewObject extends mbObjectClass {
 		$array = $this->cleanArrayOfSpecialCharacters($array);
 
 		$colorIndex = $i%2;
-		$url = $this->config->domain . 'Browse/ByImage/?viewId_Kw=id&amp;viewKeywords='.$viewId;
+		$url = $this->config->domain . 'Browse/ByImage/?viewId_Kw=id&amp;viewKeywords='.$resultArray['id'];
 		$opener = ($_GET['opener'] == "true")? "opener.opener":"opener";
 		$showCameraHtml = "";
 		if ($array[$this->sortByFields[12]['field']]) { // not pop and imagesCount > 0
