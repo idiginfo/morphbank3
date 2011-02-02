@@ -61,9 +61,9 @@ if (empty($vid)) {
 }
 
 // Check for valid specimen id and get locality id for image update
-$sql = "select localityId from Specimen where id = ?";
-$localityId = $db->getOne($sql, array('integer'), array($specimenId));
-if (isMdb2Error($localityId, "Error selecting locality id for specimen", 5)) {
+$sql = "select count(*) as count from Specimen where id = ?";
+$count = $db->getOne($sql, array('integer'), array($specimenId));
+if (isMdb2Error($localityId, "Specimen does not exists.", 5)) {
 	header("location: $indexUrl&code=3");
 	exit;
 }
