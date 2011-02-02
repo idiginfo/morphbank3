@@ -67,7 +67,7 @@
 	<tr>
 		<td width="30%px"><b>Publication Id / Name:</b></td>
 		<td>
-			<input type="text" name="reference_id" size="8" value="<?php echo $reference_id ?>"
+			<input type="text" name="reference_id" size="8" value="<?php echo $reference_id == 0 ? '' : $reference_id; ?>"
 					title="Select Publication Id/ Name, add one if it does not exist in MorphBank" /><b> / </b>
 			<input type="text" name="reference" size="50" readonly
 					title="Select Literature Reference Id/Name, add one if it does not exist in MorphBank"
