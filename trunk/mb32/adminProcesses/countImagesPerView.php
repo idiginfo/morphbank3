@@ -27,7 +27,7 @@
 
 $startTime = time();
 
-require_once ('../configuration/app.server.php');
+require_once(dirname(dirname(__FILE__)) . '/configuration/app.server.php');
 
 $link = Adminlogin();
 if (!$link)

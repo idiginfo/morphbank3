@@ -25,7 +25,7 @@
 // Need to run standardImageIds.php first
 // thumbURL is just an image id at this point.  Could be a url in future.
 
-require_once ('../configuration/app.server.php');
+require_once(dirname(dirname(__FILE__)) . '/configuration/app.server.php');
 
 // Located in www folder
 include_once('Phylogenetics/phylo.inc.php');
