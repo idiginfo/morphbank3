@@ -225,7 +225,7 @@ class resultControls {
 	}
 
 	function createFromWhereSql($objInfo = NULL) {
-		global $objInfo;
+		global $objInfo, $config;
 		$userId = $objInfo->getUserId() ? $objInfo->getUserId() : 0;
 		$groupId = $objInfo->getUserGroupId() ? $objInfo->getUserGroupId() : 0;
 
@@ -238,25 +238,40 @@ class resultControls {
 			LEFT JOIN ContinentOcean ON Locality.continentOcean = ContinentOcean.name
 			LEFT JOIN Country ON Locality.country = Country.name
 			LEFT JOIN Tree ON Specimen.tsnId = Tree.tsn ';
+		$where = 'WHERE ';
+		
+		if ($groupId != $config->adminGroup) $dateToPublish = 'Image.dateToPublish <= CURDATE() ';
 
-		if ($objInfo) {
-			if ($objInfo->getUserId() != null)
-			$orSql .= ' OR Image.userId=\'' . $objInfo->getUserId() . '\'';
-			if ($objInfo->getUserGroupId() != null)
-			$orSql .= ' OR Image.groupId=\'' . $objInfo->getUserGroupId() . '\'';
+		if ($objInfo && $groupId != $config->adminGroup) {
+			if ($objInfo->getUserId() != null) {
+			  $orSql .= 'Image.userId=\'' . $objInfo->getUserId() . '\' ';
+			}
+			if ($objInfo->getUserGroupId() != null) {
+			  $orSql .= !empty($orSql) ? 'OR ' : '';
+			  $orSql .= 'Image.groupId=\'' . $objInfo->getUserGroupId() . '\' ';
+			}
 		}
-		if ($orSql != null) {
-			$sql .= 'WHERE (Image.dateToPublish <= CURDATE()' . $orSql . ') ';
-		} else {
-			$sql .= 'WHERE Image.dateToPublish <= CURDATE() ';
+	    
+		if ($dateToPublish != null && $orSql != null) {
+		  $addWhere = '(' . $dateToPublish . ' OR ' . $orSql . ') ';
+		} elseif ($dateToPublish == null && $orSql != null) {
+		  $addWhere = $orSql;
+		} elseif ($dateToPublish != null && $orSql == null) {
+		  $addWhere = $dateToPublish;
 		}
+		
 		// Where
 		if ((isset($_GET['submit1'])) || ($_GET['activeSubmit'] == 1)) {
-			$sql .= $this->createWhereContribGeneralKws();
+		  $genContrib = $this->createWhereContribGeneralKws();
+		  $genContrib = empty($addWhere) ? ltrim($genContrib, 'AND') : $genContrib;
 		}
 		if ((isset($_GET['submit2'])) || ($_GET['activeSubmit'] == 2)) {
-			$sql .= $this->createWhereContribSpecificKws();
+		  $genSpec = $this->createWhereContribSpecificKws();
+		  $genSpec = (empty($genContrib) && empty($addWhere)) ? ltrim($genSpec, 'AND') : $genSpec;
 		}
+		
+		$sql .= $where . $addWhere . $genContrib . $genSpec;
+
 		return $sql;
 	}
 
