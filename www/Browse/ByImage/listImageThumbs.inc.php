@@ -92,6 +92,7 @@ function outputArrayImages($array, $total, $callingPage = "")
 		$img = getObjectImageUrl($imageId, 'thumbs');
 
 		$jpg = getObjectImageUrl($imageId, 'jpeg');
+
 		$originalUrl = getOriginalUrl($imageId, $row['imageType']);
 
 		$tsnName = getTsnName($row['tsn']);
@@ -117,7 +118,7 @@ function outputArrayImages($array, $total, $callingPage = "")
 		echo $row['imageHeight'] . '</td></tr>';
 		echo '<tr><td>Specimen: ' . $row['sexName'] . '/' . $row['specimenDevelStageName'];
 		echo '/' . $row['specimenFormName'] . '</td>';
-		echo '<td class="browseRight">[<a href="' . $jpeg . '">jpg</a>] &nbsp; [<a href="';
+		echo '<td class="browseRight">[<a href="' . $jpg . '">jpg</a>] &nbsp; [<a href="';
 		echo $originalUrl . '">Original</a>]</td></tr>';
 		echo '<tr><td>Technique: ' . $row['imagingTechniqueName'] . '/';
 		echo $row['imagingPreparationTechniqueName'] . '</td>';
