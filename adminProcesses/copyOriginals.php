@@ -23,7 +23,7 @@
 
 define('PHP_ENTRY',0);
 
-require_once('../configuration/image.server.php');
+require_once(dirname(dirname(__FILE__)) . '/configuration/image.server.php');
 include_once("imageFunctions.php"); // Located in /ImageServer/Image
 include_once("admin.inc.php"); 
 

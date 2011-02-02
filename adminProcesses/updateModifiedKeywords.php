@@ -21,7 +21,7 @@
 *   Stephen Winner - initial API and implementation
 */
 
-require_once('../configuration/app.server.php');
+require_once(dirname(dirname(__FILE__)) . '/configuration/app.server.php');
 echo("Updating keywords for modified objects\n");
 //echo phpinfo();
 // Pear class for handling database connection

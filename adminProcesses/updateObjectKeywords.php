@@ -21,7 +21,7 @@
 *   Stephen Winner - initial API and implementation
 */
 
-require_once('../configuration/app.server.php');
+require_once(dirname(dirname(__FILE__)) . '/configuration/app.server.php');
 include_once('newKeywordsData.php'); // Located in /adminProcesses 
 include_once('tsnFunctions.php'); // Located in /www/includes
 

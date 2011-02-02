@@ -21,7 +21,7 @@
 *   Stephen Winner - initial API and implementation
 */
 
-require_once('../configuration/app.server.php');
+require_once(dirname(dirname(__FILE__)) . '/configuration/app.server.php');
 
 // Separate file for the keywords fields.  Separate so other modules can use one copy.
 include_once('newKeywordsData.php'); // Located in /adminProcesses
