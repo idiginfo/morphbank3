@@ -238,7 +238,6 @@ class resultControls {
 			LEFT JOIN ContinentOcean ON Locality.continentOcean = ContinentOcean.name
 			LEFT JOIN Country ON Locality.country = Country.name
 			LEFT JOIN Tree ON Specimen.tsnId = Tree.tsn ';
-		$where = 'WHERE ';
 		
 		if ($groupId != $config->adminGroup) $dateToPublish = 'Image.dateToPublish <= CURDATE() ';
 
@@ -269,8 +268,8 @@ class resultControls {
 		  $genSpec = $this->createWhereContribSpecificKws();
 		  $genSpec = (empty($genContrib) && empty($addWhere)) ? ltrim($genSpec, 'AND') : $genSpec;
 		}
-		
-		$sql .= $where . $addWhere . $genContrib . $genSpec;
+		$combined = $addWhere . $genContrib . $genSpec;
+		$sql .= empty($combined) ? $combined : 'WHERE ' . $combined;
 
 		return $sql;
 	}
