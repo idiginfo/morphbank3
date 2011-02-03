@@ -59,6 +59,7 @@ $defaultConfigValues = array(
 	'Application Settings' => array (
 			'adminGroup'                 => 2,
 		    'disableSite'                => 0,
+		    'isBot'                      => 0,
 			'domain'                     => '"/"',
 			'webPath'                    => 'APPLICATION_PATH "/www"',
 			'cvFolder'                   => 'APPLICATION_PATH "/www/Admin/User/cv/"',
