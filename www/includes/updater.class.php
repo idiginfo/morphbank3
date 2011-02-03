@@ -47,6 +47,7 @@ class Updater {
 		$this->userId=$userId;
 		$this->groupId=$groupId;
 		$this->tableName=$tableName;
+		$this->setDateModified=$setDateModified;
 	}
 
 	/**
@@ -97,14 +98,14 @@ class Updater {
 		$this->updateParams[] = $this->id;
 
 		// prepare the update
-		$updateStmt = $this->db->prepare($this->updateQuery, null);
+		$updateStmt = $this->db->prepare($this->updateQuery, null, MDB2_PREPARE_MANIP);
 		isMdb2Error($updateStmt, $this->updateQuery);
 
 		// execute the update
 		$numUpdated = $updateStmt->execute($this->updateParams);
 		isMdb2Error($numUpdated, $this->updateQuery);
 		
-		if ($numUpdated == 1 && $setDateModified) {
+		if ($this->setDateModified) {
 			//update date modified
 			$setModified = "update BaseObject set datelastmodified=now() where id=".$this->id;
 			$result = $this->db->exec($setModified);
