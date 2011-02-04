@@ -98,7 +98,8 @@ class Updater {
 		$this->updateParams[] = $this->id;
 
 		// prepare the update
-		$updateStmt = $this->db->prepare($this->updateQuery, null, MDB2_PREPARE_MANIP);
+		$updateStmt = $this->db->prepare($this->updateQuery, null);
+
 		isMdb2Error($updateStmt, $this->updateQuery);
 
 		// execute the update
