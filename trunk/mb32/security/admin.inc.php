@@ -427,21 +427,3 @@ function setThumb($id, $thumbId) {
 	if (isMdb2Error($result,$updateSql,6)) return false;
 	return true;
 }
-
-/**
- * Check if requester is Bot
- * @return boolean
- */
-function requesterIsBot(){
-	// TODO Read bot list from file
-	$interestingCrawlers = array("Googlebot","Mediapartners","Slurp","MSNbot","Ask","Teoma","Yahoo");
-	$pattern = '/(' . implode('|', $interestingCrawlers) .')/';
-	$matches = array();
-	$numMatches = preg_match(strtolower($pattern), strtolower($_SERVER['HTTP_USER_AGENT']), $matches, 'i');
-	if($numMatches > 0) // Found a match
-	{
-		// $matches[1] contains an array of all text matches to either 'google' or 'yahoo'
-		return true;
-	}
-	return false;
-}
