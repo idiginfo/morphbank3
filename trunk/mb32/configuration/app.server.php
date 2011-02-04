@@ -78,8 +78,4 @@ require_once('admin.inc.php');
 require_once('validate.inc.php');
 require_once('sessionHandler.class.php');
 require_once('validateUser.inc.php');
-
-/**
- * Add Anticrawl
- */
-//require_once('anticrawl/crawl.php');
+require_once('botDetect.php');
