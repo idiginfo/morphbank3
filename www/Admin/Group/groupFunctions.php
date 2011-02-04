@@ -168,7 +168,7 @@ function searchGroup() {
 		. "left join User u on u.id = ug.user "
 		. "where $col ? group by g.id order by g.groupName";
 		$rows = $db->getAll($sql, null, $param, null, MDB2_FETCHMODE_ASSOC);
-		isMdb2Error($results, "Search Group Query");
+		isMdb2Error($rows, "Search Group Query");
 		return $rows;
 	}
 }
