@@ -98,6 +98,8 @@ if (!empty($_FILES['ImageFile']['tmp_name'])) {
 	$tmpName = $_FILES['ImageFile']['tmp_name'];
 	list($message, $width, $height, $type) = processImageRemote($id, $tmpName, $newFileName);
 	if (!$width){
+	    echo $message;
+	    exit;
 		header("location: $indexUrl&code=8&id=$id");
 		exit;
 	}
