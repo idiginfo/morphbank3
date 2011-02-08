@@ -226,7 +226,7 @@ function prepareKeywordQueries(){
 	$keywordsInsertSql = "INSERT INTO Keywords(id, userId, groupId, dateToPublish, objectTypeId,"
 	." keywords, xmlKeywords, submittedBy, dateCreated)"
 	." SELECT b.id, userId, groupId, dateToPublish, objectTypeId,"
-	." b.keywords, xmlKeywords, submittedBy, dateCreated"
+	." b.keywords, b.xmlKeywords, submittedBy, dateCreated"
 	." FROM BaseObject b join KeywordsTemp t on t.id=b.id";
 
 	$updateTaxaSql = "UPDATE Taxa SET keywords = ? WHERE tsn = ?";
