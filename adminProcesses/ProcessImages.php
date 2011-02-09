@@ -47,7 +47,7 @@ if($OPTIONAL){
 	OPTIONAL_INIT();
 }
 
-$missingSql = "select  b.id, u.uin, i.accessNum, i.originalFileName, i.imageType, "
+$missingSql = "select  b.id, u.uin, i.originalFileName, i.imageType, "
 ." '', imageWidth, imageHeight, up.value "
 ." from ((BaseObject b join Image i on b.id = i.id) join User u on b.userId = u.id) "
 ." left join UserProperty up on b.id = up.objectId where up.name='imageurl' "
@@ -64,8 +64,8 @@ if(PEAR::isError($result)){
 $imageCount = 0;
 while($row = $result->fetchRow()){
 	$imageCount++;
-	// get fields b.id, u.uin, i.accessNum, i.originalFileName, i.imageType, m.problems
-	list($id, $uin, $accessNum, $fileName, $imageType, $problems, $width, $height, $url) = $row;
+	// get fields b.id, u.uin, i.originalFileName, i.imageType, m.problems
+	list($id, $uin,  $fileName, $imageType, $problems, $width, $height, $url) = $row;
 	$imageType = strtolower($imageType);
 	if (!empty($url)) $fileName = $url;
 	list($message, $w, $h) = fixImageFiles($id, $fileName, $imageType, $problems,
