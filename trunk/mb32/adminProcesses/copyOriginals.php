@@ -26,7 +26,7 @@ define('PHP_ENTRY',0);
 require_once(dirname(dirname(__FILE__)) . '/configuration/image.server.php');
 include_once("imageFunctions.php"); // Located in /ImageServer/Image
 include_once("admin.inc.php"); 
-
+$config->errorRedirect = 0;
 $db = connect();
 
 $STATUS_FILE = "/data/scratch/copystatus.txt";

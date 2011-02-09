@@ -23,6 +23,7 @@
 
 
 require_once(dirname(dirname(__FILE__)) . '/configuration/app.server.php');
+$config->errorRedirect = 0;
 
 echo date("H:i:s\n");
 $startTime = time();

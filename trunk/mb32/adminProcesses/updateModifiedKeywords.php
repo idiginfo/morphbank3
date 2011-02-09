@@ -22,6 +22,7 @@
 */
 
 require_once(dirname(dirname(__FILE__)) . '/configuration/app.server.php');
+$config->errorRedirect = 0;
 echo("Updating keywords for modified objects\n");
 //echo phpinfo();
 // Pear class for handling database connection

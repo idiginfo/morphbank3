@@ -28,6 +28,7 @@ require_once(dirname(dirname(__FILE__)) . '/configuration/image.server.php');
 include_once("imageFunctions.php"); // Located in /ImageServer/Image
 include_once('imageProcessing.php'); // Located in ImageServer/Image
 require_once('admin.inc.php');
+$config->errorRedirect = 0;
 
 $db = connect();
 
