@@ -26,6 +26,7 @@
 // thumbURL is just an image id at this point.  Could be a url in future.
 
 require_once(dirname(dirname(__FILE__)) . '/configuration/app.server.php');
+$config->errorRedirect = 0;
 
 // Located in www folder
 include_once('Phylogenetics/phylo.inc.php');

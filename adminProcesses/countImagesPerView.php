@@ -28,6 +28,7 @@
 $startTime = time();
 
 require_once(dirname(dirname(__FILE__)) . '/configuration/app.server.php');
+$config->errorRedirect = 0;
 
 $link = Adminlogin();
 if (!$link)
