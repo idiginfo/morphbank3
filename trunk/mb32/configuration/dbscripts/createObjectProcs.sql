@@ -25,13 +25,13 @@ DROP FUNCTION IF EXISTS GetNewTsn;//
 
 CREATE FUNCTION GetNewTsn () returns int
 begin
-    DECLARE oId, iMinId, iMaxId int;
-    SELECT minId, maxId into iMinId, iMaxId from CurrentIds where type='tsn';
-    SELECT max(tsn+1) INTO oId FROM Tree where tsn >= iMinId and tsn < iMaxId;
-    IF (oId > 0) THEN 
-        return oId;
+    DECLARE oTsn, iMinTsn, iMaxTsn int;
+    SELECT minId, maxId into iMinTsn, iMaxTsn from CurrentIds where type='tsn';
+    SELECT max(tsn+1) INTO oTsn FROM Tree where tsn >= iMinTsn and tsn < iMaxTsn;
+    IF (oTsn > 0) THEN
+        return oTsn;
     END IF;
-    return iMinId;
+    return iMinTsn;
 end//
 
 DROP PROCEDURE IF EXISTS CreateObject;//
@@ -302,7 +302,7 @@ DECLARE iRankName VARCHAR(15);
 SET iTsn=0; SET bId=0;
 SET iKingdomName=""; 
 SET iRankName="";
-SELECT (MAX(tsn) +1) INTO iTsn FROM Tree;
+SELECT GetNewTsn() INTO iTsn;
 
 INSERT INTO Tree(tsn, `usage`, unaccept_reason, parent_tsn, kingdom_id, rank_id, letter,
 scientificName, taxon_author_id, publicationId, pages, nameType, nameSource, comments) 
