@@ -219,7 +219,7 @@ function getTaxonBranchArray($tsn) {
 		$taxonBranch[]=array('tsn'=>$tsn, 'rank_id'=>$rankId, 'name'=>$scientificName, 'rank'=>$rank);
 	}
 	if (count($taxonBranch)>0) return $taxonBranch;
-	return getTaxonBranchFromParent($requestTsn);
+  return getTaxonBranchFromParent($requestTsn);
 }
 
 function getTaxonBranchFromParent($tsn){
