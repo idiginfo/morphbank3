@@ -43,11 +43,11 @@ if (empty($argv[1])) {
     if (isMdb2Error($result, "Error in min id SQL query", 5)) {
         die("Error in min id SQL query".$result->getUserInfo()." $sql\n");
     }
+    $SELECT_LIMIT = "and i.id >= $id";
 } else {
-    $id = $argv[1];
+    $SELECT_LIMIT = $argv[1];
 }
 
-$SELECT_LIMIT = "and i.id >= $id";
 $OUTPUT_DIR = null;
 
 /*
