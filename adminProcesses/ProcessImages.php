@@ -40,16 +40,15 @@ $db = connect();
 if (empty($argv[1])) {
     $sql = "select min(id) as id from BaseObject where dateCreated > date_sub(NOW(), interval 1 day) and objectTypeId = 'Image'";
     $id = $db->queryOne($sql);
-    if (isMdb2Error($id, 'Error select min id from BaseObject', 5)) {
-        echo("Error select min id from BaseObject".$result->getUserInfo()." $sql\n");
-	die();
+    if (isMdb2Error($result, "Error in min id SQL query", 5)) {
+        die("Error in min id SQL query".$result->getUserInfo()." $sql\n");
     }
 } else {
     $id = $argv[1];
 }
 
 // OPTIONAL fields
-$SELECT_LIMIT = " and i.id > $id ";
+$SELECT_LIMIT = "and i.id >= $id";
 $OUTPUT_DIR = null;
 
 // optional parameter
@@ -59,27 +58,22 @@ $FILE_SOURCE_DIR = $config->fileSource;
  * Optional fuile source if passed via argv[2]
  */
 if (!empty($argv[2])){
-	$FILE_SOURCE_DIR = $argv[2]."/";
+    $FILE_SOURCE_DIR = $argv[2]."/";
 }
-
 echo "Looking for files in directory $FILE_SOURCE_DIR\n";
-if($OPTIONAL){
-	OPTIONAL_INIT();
-}
 
-$missingSql = "select  b.id, u.uin, i.originalFileName, i.imageType, "
-." '', imageWidth, imageHeight, up.value "
-." from ((BaseObject b join Image i on b.id = i.id) join User u on b.userId = u.id) "
-." left join UserProperty up on b.id = up.objectId where up.name='imageurl' "
-." and originalfilename is not null $SELECT_LIMIT ";
 
-//." and  b.dateLastModified > now() - interval 5 day ";
+$missingSql = "select b.id, u.uin, i.originalFileName, i.imageType, '', i.imageWidth,
+    i.imageHeight, up.value from BaseObject b
+    join Image i on b.id = i.id
+    join User u on b.userId = u.id
+    left join UserProperty up on b.id = up.objectId 
+    where i.originalFileName is not null $SELECT_LIMIT";
 
 echo "SQL: $missingSql\n";
-$result = $db->query($missingSql) or die($db->getUserInfo());
-if(PEAR::isError($result)){
-	echo("Error in Missing SQL query".$result->getUserInfo()." $sql\n");
-	die();
+$result = $db->query($missingSql);
+if (isMdb2Error($result, "Error in Missing SQL query", 5)) {
+    die("Error in Missing SQL query".$result->getUserInfo()." $sql\n");
 }
 
 // set up size update statement
@@ -90,29 +84,28 @@ isMdb2Error($updateSizeStmt, $updateSizeSql);
 
 $imageCount = 0;
 while($row = $result->fetchRow()){
-	$imageCount++;
-	// get fields b.id, u.uin, i.originalFileName, i.imageType, m.problems
-	list($id, $uin,  $fileName, $imageType, $problems, $width, $height, $url) = $row;
-	$imageType = strtolower($imageType);
-	if (!empty($url)) $fileName = $url;
-	list($message, $w, $h) = fixImageFiles($id, $fileName, $imageType, $problems,
-	$FILE_SOURCE_DIR, $width, $height);
-	if($message[0]=='N'){// error in processing
-		echo $message."\n";
-	} else if (empty($width) || $width != $w || $height!=$h){
-		// update width height
-		$params = array($w, $h, $id);
-		$count = $updateSizeStmt->execute($params);
-		isMdb2Error($count,"update HW id $id width $width height $height sql: $updateSizeSql");
-		$message .= ": width height updated ";
-		echo $message."\n";
-	} else {
-		$message .= ":width/height unchanged ";
-	}
+    $imageCount++;
+    // get fields b.id, u.uin, i.originalFileName, i.imageType, m.problems
+    list($id, $uin,  $fileName, $imageType, $problems, $width, $height, $url) = $row;
+    $imageType = strtolower($imageType);
+    if (!empty($url)) $fileName = $url;
+    list($message, $w, $h) = fixImageFiles($id, $fileName, $imageType, $problems, $FILE_SOURCE_DIR, $width, $height);
+    if($message[0]=='N'){// error in processing
+        echo $message."\n";
+    } else if (empty($width) || $width != $w || $height!=$h){
+        // update width height
+        $params = array($w, $h, $id);
+        $count = $updateSizeStmt->execute($params);
+        isMdb2Error($count,"update HW id $id width $width height $height sql: $updateSizeSql");
+        $message .= ": width height updated ";
+        echo $message."\n";
+    } else {
+        $message .= ":width/height unchanged ";
+    }
 
-	if ($imageCount % 1000 == 0){
-		echo "No. images: $imageCount\tlast id: $id\tlast message: $message\t last width $w height $h layers $l\n";
-	}
+    if ($imageCount % 1000 == 0){
+        echo "No. images: $imageCount\tlast id: $id\tlast message: $message\t last width $w height $h layers $l\n";
+    }
 }
 echo "\n\nNumber of image objects checked: ".$imageCount."\n";
 echo "\n\nNumber of image files fixed: ".$numFixed."\n";
