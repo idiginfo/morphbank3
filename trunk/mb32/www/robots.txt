@@ -8,3 +8,4 @@ Disallow: /Admin
 Disallow: /Annotation
 Disallow: /includes
 Disallow: /Mirror
+Disallow: /Browse
