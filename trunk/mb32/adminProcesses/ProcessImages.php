@@ -47,22 +47,18 @@ if (empty($argv[1])) {
     $id = $argv[1];
 }
 
-// OPTIONAL fields
 $SELECT_LIMIT = "and i.id >= $id";
 $OUTPUT_DIR = null;
-
-// optional parameter
-$FILE_SOURCE_DIR = $config->fileSource;
 
 /*
  * Optional fuile source if passed via argv[2]
  */
-if (!empty($argv[2])){
-    $FILE_SOURCE_DIR = $argv[2]."/";
-}
+$FILE_SOURCE_DIR = !empty($argv[2]) ? $argv[2]."/" : $config->fileSource;
 echo "Looking for files in directory $FILE_SOURCE_DIR\n";
 
-
+/*
+ * query for records
+ */
 $missingSql = "select b.id, u.uin, i.originalFileName, i.imageType, '', i.imageWidth,
     i.imageHeight, up.value from BaseObject b
     join Image i on b.id = i.id
@@ -70,7 +66,7 @@ $missingSql = "select b.id, u.uin, i.originalFileName, i.imageType, '', i.imageW
     left join UserProperty up on b.id = up.objectId 
     where i.originalFileName is not null $SELECT_LIMIT";
 
-echo "SQL: $missingSql\n";
+echo "SQL: $missingSql\n\n";
 $result = $db->query($missingSql);
 if (isMdb2Error($result, "Error in Missing SQL query", 5)) {
     die("Error in Missing SQL query".$result->getUserInfo()." $sql\n");
