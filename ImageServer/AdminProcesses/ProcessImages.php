@@ -71,7 +71,7 @@ while($row = $result->fetchRow()){
 	$problems = $row[5];
 	$width = $row[6];
 	$height = $row[7];
-	list($message, $w, $h) = fixImageFiles($id, $fileName, $imageType, $problems, $uin,
+	list($message, $w, $h) = fixImageFiles($id, $fileName, $imageType, $problems, 
 	$FILE_SOURCE_DIR, $width, $height);
 	if($message[0]=='F') echo $message."\n";
 	if ($imageCount % 1000 == 0){
