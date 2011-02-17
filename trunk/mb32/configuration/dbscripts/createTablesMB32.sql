@@ -69,7 +69,8 @@ create table BaseObject (
     key userId (userId), 
     key groupId (groupId), 
     key baseSubmittedByfk (submittedBy), 
-    key dateLastModified (dateLastModified)
+    key dateLastModified (dateLastModified),
+    key dateCreated (dateCreated)
 ) engine=InnoDB ;
 
 
