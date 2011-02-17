@@ -38,8 +38,7 @@ include_once ('bischen/makeTpc.php');
  * @param $height
  * @return array(message, width, height)
  */
-function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $uin = null,  $fileSourceDir = null,
-$width = null, $height = null){
+function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $uin = null,  $fileSourceDir = null, $width = null, $height = null){
 	global $config, $message;
 
 	//$returnArray = array('message'=> null, 'width'=>null, 'height'=>null);
