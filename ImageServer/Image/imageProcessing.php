@@ -186,7 +186,7 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 
 function getFileFromFileSystem($fileAccessPath, $fileSourceDir){
 	global $message;
-        $message .= ": searching $fileSourceDir for id";
+        $message .= ": searching $fileSourceDir for image";
 	// try to find file in ftp site
 	$escFileName = str_replace(" ", "\ ", $fileAccessPath);
 	$escFileName = str_replace("[", "\[", $escFileName);
