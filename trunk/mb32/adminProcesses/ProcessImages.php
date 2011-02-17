@@ -32,15 +32,34 @@ $config->errorRedirect = 0;
 
 $db = connect();
 
+/*
+ * argv[1] is id to start process from.
+ * If empty, get min id from BaseObject where dateCreated > than 1 day ago.
+ * Else, use passed in value as id.
+ */
+if (empty($argv[1])) {
+    $sql = "select min(id) as id from BaseObject where dateCreated > date_sub(NOW(), interval 1 day) and objectTypeId = 'Image'";
+    $id = $db->queryOne($sql);
+    if (isMdb2Error($id, 'Error select min id from BaseObject', 5)) {
+        echo("Error select min id from BaseObject".$result->getUserInfo()." $sql\n");
+	die();
+    }
+} else {
+    $id = $argv[1];
+}
+
 // OPTIONAL fields
-$SELECT_LIMIT = " and i.id>=584000 ";
+$SELECT_LIMIT = " and i.id > $id ";
 $OUTPUT_DIR = null;
 
 // optional parameter
 $FILE_SOURCE_DIR = $config->fileSource;
 
-if ($argc>1){
-	$FILE_SOURCE_DIR = $argv[1]."/";
+/*
+ * Optional fuile source if passed via argv[2]
+ */
+if (!empty($argv[2])){
+	$FILE_SOURCE_DIR = $argv[2]."/";
 }
 
 echo "Looking for files in directory $FILE_SOURCE_DIR\n";
