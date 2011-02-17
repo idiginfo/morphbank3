@@ -33,7 +33,7 @@ $config->errorRedirect = 0;
 $db = connect();
 
 // OPTIONAL fields
-$SELECT_LIMIT = " and i.id>=480000 ";
+$SELECT_LIMIT = " and i.id>=584000 ";
 $OUTPUT_DIR = null;
 
 // optional parameter
@@ -52,7 +52,7 @@ $missingSql = "select  b.id, u.uin, i.originalFileName, i.imageType, "
 ." '', imageWidth, imageHeight, up.value "
 ." from ((BaseObject b join Image i on b.id = i.id) join User u on b.userId = u.id) "
 ." left join UserProperty up on b.id = up.objectId where up.name='imageurl' "
-." and i.accessNum > 0 and originalfilename is not null $SELECT_LIMIT ";
+." and originalfilename is not null $SELECT_LIMIT ";
 
 //." and  b.dateLastModified > now() - interval 5 day ";
 
@@ -62,6 +62,13 @@ if(PEAR::isError($result)){
 	echo("Error in Missing SQL query".$result->getUserInfo()." $sql\n");
 	die();
 }
+
+// set up size update statement
+$updateSizeSql = "update Image set imagewidth=?, imageheight=? where id=?";
+$param_types = array('integer','integer', 'integer');
+$updateSizeStmt = $db->prepare($updateSizeSql,$param_types);
+isMdb2Error($updateSizeStmt, $updateSizeSql);
+
 $imageCount = 0;
 while($row = $result->fetchRow()){
 	$imageCount++;
@@ -71,7 +78,19 @@ while($row = $result->fetchRow()){
 	if (!empty($url)) $fileName = $url;
 	list($message, $w, $h) = fixImageFiles($id, $fileName, $imageType, $problems,
 	$FILE_SOURCE_DIR, $width, $height);
-	if($message[0]=='N') echo $message."\n";
+	if($message[0]=='N'){// error in processing
+		echo $message."\n";
+	} else if (empty($width) || $width != $w || $height!=$h){
+		// update width height
+		$params = array($w, $h, $id);
+		$count = $updateSizeStmt->execute($params);
+		isMdb2Error($count,"update HW id $id width $width height $height sql: $updateSizeSql");
+		$message .= ": width height updated ";
+		echo $message."\n";
+	} else {
+		$message .= ":width/height unchanged ";
+	}
+
 	if ($imageCount % 1000 == 0){
 		echo "No. images: $imageCount\tlast id: $id\tlast message: $message\t last width $w height $h layers $l\n";
 	}
