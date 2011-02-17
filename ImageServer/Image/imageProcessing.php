@@ -161,6 +161,7 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 		$fileAccessPath = $tmpPath;
 	} else if (!@file_exists($fileAccessPath) && !empty($fileSourceDir)){
 		// try to find file in file system
+            $message .= ": searching in file system for id: $id";
 		$fileAccessPath = getFileFromFileSystem($fileAccessPath, $fileSourceDir);
 	}
 
