@@ -370,28 +370,6 @@ create table Kingdoms (
 ) engine=InnoDB;
 
 
-
-create table leech_list (
-  ip int not null,
-  `timestamp` int not null default '0',
-  index ip (ip asc),
-  index `timestamp` (`timestamp` asc)
-) engine=InnoDB;
-
-
-
-create table leech_quotas (
-  ip int primary key not null,
-  lastFlush int not null,
-  total int not null,
-  hostname varchar(255) not null,
-  isProxy int not null,
-  challenge varchar(255) not null,
-  index lastFlush (lastFlush asc)
-) engine=InnoDB;
-
-
-
 create table Locality (
     id int primary key not null, 
     continentOcean varchar(255), 
