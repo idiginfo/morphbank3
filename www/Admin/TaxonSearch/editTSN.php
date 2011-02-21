@@ -50,7 +50,8 @@ if (!checkAuthorization($boId, null, null, 'edit')) {
 } else {
 	echo "<h1><b>Edit Taxon</b></h1><br /><br />";
 	checkEditMsg($_REQUEST['id'], $_REQUEST['code']);
-	if ($row = getTaxonInfo($_REQUEST['id'])) {
+	$row = getTaxonInfo($_REQUEST['id']);
+  if ($row) {
 		$parentRankId = getParentRank($parent_tsn);
 		showTaxonForm($row, $row['tsn'], $row['parent_tsn'], $row['rank_id'], $parentRankId, $boId);
 	} else {

@@ -115,6 +115,8 @@ $taxonConceptUpdater->addField('status', $status, $rowTaxa['status']);
 // Update BaseObject
 $baseObjUpdater = new Updater($db, $id, $userId , $groupId, 'BaseObject');
 $baseObjUpdater->addField('userId', $contributor, $rowBObj['userid']);
+$baseObjUpdater->addField('name', $scientificName, $rowBObj['name']);
+$baseObjUpdater->addField('dateLastModified', $db->mdbNow(), $rowBObj['datelastmodified']);
 
 // Run basic checks based on data submittted
 // TODO update specimen table if the tsn was used for some specimens (for now run the script separatly)
