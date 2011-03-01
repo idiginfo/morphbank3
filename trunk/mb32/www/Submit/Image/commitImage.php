@@ -76,6 +76,8 @@ if(!$publishDate) {
 
 
 if (!empty($_FILES['ImageFile']['tmp_name'])) {
+  $image_error = FALSE;
+  
 	// Insert Object and Locality returning id
 	$params = array($db->quote("Image"), $contributor, $groupId, $userId, $db->quote($dateToPublish,'date'), $db->quote("Image added"), $db->quote(NULL));
 	$result = $db->executeStoredProc('CreateObject', $params);
@@ -101,17 +103,8 @@ if (!empty($_FILES['ImageFile']['tmp_name'])) {
 	$tmpName = $_FILES['ImageFile']['tmp_name'];
 	list($message, $width, $height, $type) = processImageRemote($id, $tmpName, $newFileName);
 	if (!$width){
-		errorLog("Image processing failed: ".$message);
-		// Remove Image record
-		$sql = "delete from Image where id = $id limit 1";
-		$affRows = $db->exec($sql);
-		isMdb2Error($affRows, 'Deleting Image record after Image process failure');
-		// Remove BaseObject record
-		$sql = "delete from BaseObject where id = $id limit 1";
-		$affRows = $db->exec($sql);
-		isMdb2Error($affRows, 'Deleting BaseObject record after Image process failure');
-		header("location: $indexUrl&code=7&id=$id");
-		exit;
+    $image_error = TRUE;
+		errorLog("Image processing failed: ".$message, null, 6);
 	}
 	
 	$sql = "select max(accessNum) as accessNum from Image";
@@ -166,10 +159,16 @@ if (!empty($_FILES['ImageFile']['tmp_name'])) {
 	$insertLinkRes = insertLinks($id, $_REQUEST);
 	$insertRefRes  = insertReferences($id, $_REQUEST);
 	if(!$insertLinkRes || !$insertRefRes) {
-		header("location: /Edit/Image/?code=15");
+		header("location: /Edit/Image/?code=15&id=$id");
 		exit;
 	}
-	
+
+  // Error if image process failed
+  if ($image_error) {
+    header("location: /Edit/Image/?code=8&id=$id");
+    exit;
+  }
+
 	header ("location: $indexUrl&code=1&id=$id");
 	exit;
 }
