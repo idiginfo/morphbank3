@@ -94,12 +94,13 @@ $imgUpdater->addField('dateToPublish', $publishDate, $imgObj['datetopublish']);
 $imgUpdater->addField('userId', $contributor, $imgObj['userid']);
 	
 if (!empty($_FILES['ImageFile']['tmp_name'])) {
+  $image_error = FALSE;
 	$newFileName = $_FILES['ImageFile']['name'];
 	$tmpName = $_FILES['ImageFile']['tmp_name'];
 	list($message, $width, $height, $type) = processImageRemote($id, $tmpName, $newFileName);
 	if (!$width){
-		header("location: $indexUrl&code=8&id=$id");
-		exit;
+    $image_error = TRUE;
+    errorLog("Image processing failed: ".$message, null, 6);
 	}
 	$imgUpdater->addField('originalfilename', $newFileName, $imgObj['originalfilename']);
 	$imgUpdater->addField('imageWidth', $width, $imgObj['imagewidth']);
@@ -149,6 +150,10 @@ if(!$updateLinkRes || !$updateRefRes) {
 	exit;
 }
 
+if ($image_error) {
+  header("location: /Edit/Image/?code=8&id=$id");
+  exit;
+}
 header("location: $indexUrl&code=1");
 exit;
 ?>
