@@ -43,7 +43,7 @@ if (empty($argv[1])) {
     if (isMdb2Error($result, "Error in min id SQL query", 5)) {
         die("Error in min id SQL query".$result->getUserInfo()." $sql\n");
     }
-    $SELECT_LIMIT = "and i.id >= $id";
+    $SELECT_LIMIT = " i.id >= $id";
 } else {
     $SELECT_LIMIT = $argv[1];
 }
@@ -63,8 +63,8 @@ $missingSql = "select b.id, u.uin, i.originalFileName, i.imageType, '', i.imageW
     i.imageHeight, up.value from BaseObject b
     join Image i on b.id = i.id
     join User u on b.userId = u.id
-    left join UserProperty up on b.id = up.objectId 
-    where i.originalFileName is not null $SELECT_LIMIT";
+    left join UserProperty up on (b.id = up.objectId and up.name='imageurl')
+    where  $SELECT_LIMIT";
 
 echo "SQL: $missingSql\n\n";
 $result = $db->query($missingSql);
@@ -98,6 +98,7 @@ while($row = $result->fetchRow()){
     } else {
         $message .= ":width/height unchanged ";
     }
+echo "$message\n";
 
     if ($imageCount % 1000 == 0){
         echo "No. images: $imageCount\tlast id: $id\tlast message: $message\t last width $w height $h layers $l\n";
