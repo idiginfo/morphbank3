@@ -45,7 +45,7 @@ $publishDate     = trim($_POST['DateToPublish']);
 $contributor     = $_POST['Contributor'];
 $copyright       = trim($_POST['Copyright']);
 $photographer    = trim($_POST['photographer']);
-$eol             = isset($_POST['eol']) ? 1 : 0;
+$eol             = isset($_POST['eol']) ? 1 : NULL;
 
 $db = connect();
 

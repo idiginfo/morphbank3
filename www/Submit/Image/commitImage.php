@@ -44,7 +44,7 @@ $publishDate     = trim($_REQUEST['DateToPublish']);
 $contributor     = trim($_REQUEST['Contributor']);
 $copyright       = trim($_REQUEST['Copyright']);
 $photographer    = trim($_REQUEST['photographer']);
-$eol             = isset($_REQUEST['eol']) ? 1 : 0;
+$eol             = isset($_REQUEST['eol']) ? 1 : NULL;
 
 $db = connect();
 
