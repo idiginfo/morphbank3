@@ -44,6 +44,7 @@ $publishDate     = trim($_REQUEST['DateToPublish']);
 $contributor     = trim($_REQUEST['Contributor']);
 $copyright       = trim($_REQUEST['Copyright']);
 $photographer    = trim($_REQUEST['photographer']);
+$eol             = isset($_REQUEST['eol']) ? 1 : 0;
 
 $db = connect();
 
@@ -131,6 +132,7 @@ if (!empty($_FILES['ImageFile']['tmp_name'])) {
 	$imageUpdater->addField('imageHeight', $height, null);
 	$imageUpdater->addField('imageType', $type, null);
 	$imageUpdater->addField('accessNum', $accessNum, null);
+    $imageUpdater->addField('eol', $eol, null);
 	$numRows = $imageUpdater->executeUpdate();
 	if (is_string($numRows)) { // Error returned
 		header("location: /Edit/Image/?code=13&id=$id");
