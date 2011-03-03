@@ -45,6 +45,7 @@ $publishDate     = trim($_POST['DateToPublish']);
 $contributor     = $_POST['Contributor'];
 $copyright       = trim($_POST['Copyright']);
 $photographer    = trim($_POST['photographer']);
+$eol             = isset($_POST['eol']) ? 1 : 0;
 
 $db = connect();
 
@@ -92,6 +93,7 @@ $imgUpdater->addField('photographer', $photographer, $imgObj['photographer']);
 $imgUpdater->addField('copyrightText', $copyright, $imgObj['copyrighttext']);
 $imgUpdater->addField('dateToPublish', $publishDate, $imgObj['datetopublish']);
 $imgUpdater->addField('userId', $contributor, $imgObj['userid']);
+$imgUpdater->addField('eol', $eol, $imgObj['eol']);
 	
 if (!empty($_FILES['ImageFile']['tmp_name'])) {
   $image_error = FALSE;

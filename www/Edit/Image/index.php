@@ -131,6 +131,7 @@ function displayImageForm($row) {
 	
 	$id = $row['id'];
 	$ref = '/Edit/Image/?id=' . $id;
+    $eolChecked = $row['eol'] == 1 ? 'checked' : '';
 	
 	echo '<form id="editImage" class="frmValidate" name="editImage" method="post" action="modifyImage.php" enctype="multipart/form-data">';
 	echo '<table width="720">';
@@ -180,6 +181,10 @@ function displayImageForm($row) {
 				<td><input type="text" name="DateToPublish" value="' . $row['datetopublish'] . '" size="30" /></td>
 			</tr>';
 		echo getContributorSelectTag($row['userid'], $row['groupid']);
+        echo '<tr>
+              <td><b>Add to <a href="http://www.eol.org/" target="_blank"><b>EOL</b></a>: </b></td>
+              <td align="left"><input type="checkbox" name="eol" value="1" '.$eolChecked.' /></td>
+            </tr>';
 	echo '</table>';
 	echo extLinksRefs($id, $ref);
 	echo frmSubmitButton('Update');
