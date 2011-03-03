@@ -181,7 +181,7 @@ function displayImageForm($row) {
 				<td><input type="text" name="DateToPublish" value="' . $row['datetopublish'] . '" size="30" /></td>
 			</tr>';
 		echo getContributorSelectTag($row['userid'], $row['groupid']);
-        echo '<tr>
+        echo '<tr title="If selected, image goes to eol after date-to-publish is passed.">
               <td><b>Add to <a href="http://www.eol.org/" target="_blank"><b>EOL</b></a>: </b></td>
               <td align="left"><input type="checkbox" name="eol" value="1" '.$eolChecked.' /></td>
             </tr>';

@@ -129,7 +129,7 @@ function displayImageForm() {
         <td align="left"><input type="text" name="Copyright" value="<?php echo $_REQUEST['Copyright'] ?>" size="30" /></td>
       </tr>
       <?php echo getContributorSelectTag($_REQUEST['Contributor']); ?>
-      <tr>
+      <tr title="If selected, image goes to eol after date-to-publish is passed.">
         <td><b>Add to <a href="http://www.eol.org/" target="_blank"><b>EOL</b></a>: </b></td>
         <td align="left"><input type="checkbox" name="eol" value="1" <?php echo  $_REQUEST['eol'] == 1 ? 'checked' : ''; ?> /></td>
       </tr>
