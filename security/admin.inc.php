@@ -182,13 +182,19 @@ function errorLog($label, $message = null, $priority = 4) {
 	$errorMsg = '';
 	
 	if (is_object($objInfo)){
-		$errorMsg .= 'UserId: ' . $objInfo->getUserId() . "\n";
-        $errorMsg .= 'GroupId: ' . $objInfo->getUserGroupId() . "\n";
+		$errorMsg .= "\n" . 'UserId: ' . $objInfo->getUserId() . "\n";
+    $errorMsg .= 'GroupId: ' . $objInfo->getUserGroupId() . "\n";
 	}
 	
 	$message = '<pre>' . print_r($message, true) . '</pre>';
-	$backtrace = '<pre>' . print_r(debug_backtrace(), true) . '</pre>';
-	
+  if ($config->dbDebug) {
+  	$backtrace = '<pre>' . print_r(debug_backtrace(), true) . '</pre>';
+  } else {
+    $deBug = debug_backtrace();
+    $backtrace = 'File: ' . $deBug[1]['file'] . "\n";
+    $backtrace .= 'Line: ' . $deBug[1]['line'] . "\n";
+  }
+
 	$errorMsg .= 'Page URL: ' . getPageURL() . "\n";
 	$errorMsg .= 'IP: ' . getIP() . "\n";
 	$errorMsg .= 'Message: ' . $message . "\n";
