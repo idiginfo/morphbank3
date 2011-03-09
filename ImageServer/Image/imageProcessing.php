@@ -178,8 +178,6 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 
 	// get the target location for the new file
 	$origPath = getImageFilePath($id, $origType);
-  // Removed fileName for copying to directory
-  $origPath = str_replace($fileName, "", $origPath);
 	// copy the new file to the location of the original
 	$copy = "cp $fileAccessPath $origPath; chmod 644 $origPath";
 	$resp = shell_exec($copy);
@@ -187,6 +185,7 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 		$message .= "Could not copy $fileAccessPath to $origPath\n";
 		return false;
 	}
+  $message .= "Copied $fileAccessPath to $origPath\n";
 	if (!empty($tmpPath)) unlink($tmpPath); // get rid of temporary file
 	return $imageType;
 }
