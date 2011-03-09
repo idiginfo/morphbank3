@@ -21,7 +21,7 @@
 *   Stephen Winner - initial API and implementation
 */
 
-define('PHP_ENTRY',0);// valid Web app entry point
+define('PHP_ENTRY',0);// valid Web app entry point 592155
  
 // TODO Need database configuration and image server
 require_once(dirname(dirname(__FILE__)) . '/configuration/image.server.php');

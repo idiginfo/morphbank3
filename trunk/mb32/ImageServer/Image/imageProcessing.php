@@ -49,7 +49,7 @@ function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $fileS
 	if($imageType=="jpg") $imageType = "jpeg"; // jpg original stored in jpeg
 
 	$originalImgPath = getImageFilePath($id, $imageType);
-	$message .= ":original type $imageType path $originalImgPath:";
+	$message .= "original type $imageType path $originalImgPath\n";
 	$fileImageType = getImageFileType($originalImgPath, $fileName);
 	if (!file_exists($originalImgPath) || empty($fileImageType)){
 		// missing or corrupted original file
@@ -61,7 +61,7 @@ function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $fileS
 			$message .= "original ";
 			$numFixed++;
 		} else {
-			$message.=": corrupted original";
+			$message.="corrupted original\n";
 		}
 	}
 	if (!empty($fileImageType)) {
@@ -149,26 +149,28 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 	global $config, $message;
 	$fileAccessPath = trim($fileAccessPath);
 
-        $message .= ": fileAccessPath - $fileAccessPath, fileName - $fileName, fileSourceDir - $fileSourceDir";
+  $message .= "fileAccessPath - $fileAccessPath\n";
+  $message .= "fileName - $fileName\n";
+  $message .= "fileSourceDir - $fileSourceDir\n";
 
 	// find the new file to be used as original
 
 	if (stripos($fileAccessPath,"http:")===0){// fileName is a URL
-            // URL: copy the file to temporary location
-            $message .= "URL ";
-            $tmpPath = $config->imgTmpDir.mktime();
-            copy($fileAccessPath, $tmpPath);
-            $fileAccessPath = $tmpPath;
+    // URL: copy the file to temporary location
+    $message .= "URL ";
+    $tmpPath = $config->imgTmpDir.mktime();
+    copy($fileAccessPath, $tmpPath);
+    $fileAccessPath = $tmpPath;
 	} else if (!@file_exists($fileAccessPath) && !empty($fileSourceDir)){
-            // try to find file in file system
-            $fileAccessPath = getFileFromFileSystem($fileAccessPath, $fileSourceDir);
+    // try to find file in file system
+    $fileAccessPath = getFileFromFileSystem($fileAccessPath, $fileSourceDir);
 	}
 
 	// get imageType from the file
 	$imageType = getImageFileType($fileAccessPath, $fileName);
 	if (empty($imageType)){
-            $message .= ": corrupted or missing original";
-            return false;
+    $message .= "corrupted or missing original\n";
+    return false;
 	}
 
 	$origType = $imageType;
@@ -178,15 +180,19 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 	$origPath = getImageFilePath($id, $origType);
 
 	// copy the new file to the location of the original
-	$copy = " cp $fileAccessPath $origPath; chmod 644 $origPath";
+	$copy = "cp $fileAccessPath $origPath; chmod 644 $origPath";
 	$resp = shell_exec($copy);
+  if (strlen($resp)==0) {
+		$message .= "Could not copy $fileAccessPath to $origPath\n";
+		return false;
+	}
 	if (!empty($tmpPath)) unlink($tmpPath); // get rid of temporary file
 	return $imageType;
 }
 
 function getFileFromFileSystem($fileAccessPath, $fileSourceDir){
 	global $message;
-        $message .= ": searching $fileSourceDir for image";
+        $message .= "searching $fileSourceDir for image\n";
 	// try to find file in ftp site
 	$escFileName = str_replace(" ", "\ ", $fileAccessPath);
 	$escFileName = str_replace("[", "\[", $escFileName);
