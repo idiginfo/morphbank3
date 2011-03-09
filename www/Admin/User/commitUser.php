@@ -1,26 +1,26 @@
 <?php
-/**
-* Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the GNU Public License v2.0
-* which accompanies this distribution, and is available at
-* http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-* 
-* Contributors:
-*   Fredrik Ronquist - conceptual modeling and interaction design
-*   Austin Mast - conceptual modeling and interaction design
-*   Greg Riccardi - initial API and implementation
-*   Wilfredo Blanco - initial API and implementation
-*   Robert Bruhn - initial API and implementation
-*   Christopher Cprek - initial API and implementation
-*   David Gaitros - initial API and implementation
-*   Neelima Jammigumpula - initial API and implementation
-*   Karolina Maneva-Jakimoska - initial API and implementation
-*   Deborah Paul - initial API and implementation implementation
-*   Katja Seltmann - initial API and implementation
-*   Stephen Winner - initial API and implementation
-*/
 
+/**
+ * Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the GNU Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * 
+ * Contributors:
+ *   Fredrik Ronquist - conceptual modeling and interaction design
+ *   Austin Mast - conceptual modeling and interaction design
+ *   Greg Riccardi - initial API and implementation
+ *   Wilfredo Blanco - initial API and implementation
+ *   Robert Bruhn - initial API and implementation
+ *   Christopher Cprek - initial API and implementation
+ *   David Gaitros - initial API and implementation
+ *   Neelima Jammigumpula - initial API and implementation
+ *   Karolina Maneva-Jakimoska - initial API and implementation
+ *   Deborah Paul - initial API and implementation implementation
+ *   Katja Seltmann - initial API and implementation
+ *   Stephen Winner - initial API and implementation
+ */
 include_once('updater.class.php');
 include_once('objectFunctions.php');
 include_once('updateObjectKeywords.php');
@@ -47,59 +47,59 @@ $editUrl = "/Admin/User/edit";
 $queryString = getParamString($postArray);
 
 if ($action == 'add' && $groupId != $config->adminGroup) {
-	header ("location: $indexUrl&code=6&$queryString");
-	exit;
+  header("location: $indexUrl&code=6&$queryString");
+  exit;
 }
 
 // If New user, check spam code
 if ($action == 'new') {
-	$codeArray = getSpamCode($_POST['spamid']);
-	if (strtolower($_POST['spamcode']) != strtolower($codeArray['code'])) {
-		header("location: $indexUrl&code=8&$queryString");
-	}	
+  $codeArray = getSpamCode($_POST['spamid']);
+  if (strtolower($_POST['spamcode']) != strtolower($codeArray['code'])) {
+    header("location: $indexUrl&code=8&$queryString");
+  }
 }
 
 // If new user, resume file required
 if ($action == 'new' && empty($_FILES['userresume'])) {
-	header ("location: $indexUrl&code=16&$queryString");
-	exit;
+  header("location: $indexUrl&code=16&$queryString");
+  exit;
 }
 
 // Get post variables
-$first_name   = $_POST['first_name'];
-$last_name    = $_POST['last_name'];
-$middle_init  = $_POST['middle_init'];
-$suffix       = $_POST['suffix'];
-$uin          = $_POST['uin'];
-$pin          = $_POST['pin'];
-$email        = $_POST['email'];
-$affiliation  = $_POST['affiliation'];
-$street1      = $_POST['street1'];
-$street2      = $_POST['street2'];
-$city         = $_POST['city'];
-$country      = $_POST['country'];
-$state        = $_POST['state'];
-$zipcode      = $_POST['zipcode'];
-$logoURL      = $_POST['link'];
-$name         = trim($first_name) . " " . trim($last_name);
-$address      = trim($street1) . " " . trim($street2) . " " . trim($city) . " " . trim($state) . " " . trim($country) . " " . trim($zipcode);
-$status       = $_POST['accountstatus'] == 1 ? 1 : 0;
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$middle_init = $_POST['middle_init'];
+$suffix = $_POST['suffix'];
+$uin = $_POST['uin'];
+$pin = $_POST['pin'];
+$email = $_POST['email'];
+$affiliation = $_POST['affiliation'];
+$street1 = $_POST['street1'];
+$street2 = $_POST['street2'];
+$city = $_POST['city'];
+$country = $_POST['country'];
+$state = $_POST['state'];
+$zipcode = $_POST['zipcode'];
+$logoURL = $_POST['link'];
+$name = trim($first_name) . " " . trim($last_name);
+$address = trim($street1) . " " . trim($street2) . " " . trim($city) . " " . trim($state) . " " . trim($country) . " " . trim($zipcode);
+$status = $_POST['accountstatus'] == 1 ? 1 : 0;
 
 $db = connect();
 
 if (empty($userId) || empty($groupId)) {
-	$groupId = $config->adminGroup;
-	$sql = "SELECT min(userId) as userId FROM `BaseObject` WHERE groupId = $groupId";
-	$userId = $db->getOne($sql);
-	isMdb2Error($userId, "Get default Admin", $errorPriority);
+  $groupId = $config->adminGroup;
+  $sql = "SELECT min(userId) as userId FROM `BaseObject` WHERE groupId = $groupId";
+  $userId = $db->getOne($sql);
+  isMdb2Error($userId, "Get default Admin", $errorPriority);
 }
 
 // Insert BaseObject for User
 $params = array($db->quote("User"), $userId, $groupId, $userId, "NOW()", $db->quote("User added"), $db->quote(NULL));
 $result = $db->executeStoredProc('CreateObject', $params);
-if(isMdb2Error($result, 'Create Object procedure', $errorPriority)) {
-	header("location: $indexUrl&code=9&$queryString");
-	exit;
+if (isMdb2Error($result, 'Create Object procedure', $errorPriority)) {
+  header("location: $indexUrl&code=9&$queryString");
+  exit;
 }
 $id = $result->fetchOne();
 clear_multi_query($result);
@@ -107,10 +107,10 @@ clear_multi_query($result);
 // If user created, handle file upload if existing
 if (isset($_FILES['userlogo']) && ($_FILES['userlogo']['name'] > "")) {
   // Allow only letters, numbers, underscores, and period in file name
-  $file_name = trim(preg_replace("/[^a-zA-Z0-9_.]/","", $_FILES['userlogo']['name']));
+  $file_name = trim(preg_replace("/[^a-zA-Z0-9_.]/", "", $_FILES['userlogo']['name']));
   if (!move_uploaded_file($_FILES['userlogo']['tmp_name'], $config->userLogoPath . $file_name)) {
-  	header("location: $indexUrl&code=7&$queryString");
-  	exit;
+    header("location: $indexUrl&code=7&$queryString");
+    exit;
   }
   $userLogo = $config->appServerBaseUrl . '/images/userLogos/' . $file_name;
 }
@@ -118,17 +118,17 @@ if (isset($_FILES['userlogo']) && ($_FILES['userlogo']['name'] > "")) {
 // Insert BaseObject for Groups
 $params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL));
 $result = $db->executeStoredProc('CreateObject', $params);
-if(isMdb2Error($result, 'Create Object procedure', $errorPriority)) {
-	header("location: $editUrl/$id&code=11");
-	exit;
+if (isMdb2Error($result, 'Create Object procedure', $errorPriority)) {
+  header("location: $editUrl/$id&code=11");
+  exit;
 }
 $group_id = $result->fetchOne();
 clear_multi_query($result);
 
 // prepare user update
-$userUpdater = new Updater($db, $id, $userId , $groupId, 'User');
+$userUpdater = new Updater($db, $id, $userId, $groupId, 'User');
 $userUpdater->addField('last_Name', $last_name, null);
-$userUpdater->addField('first_Name', $first_name,null);
+$userUpdater->addField('first_Name', $first_name, null);
 $userUpdater->addField('middle_init', $middle_init, null);
 $userUpdater->addField('suffix', $suffix, null);
 $userUpdater->addField('uin', $uin, null);
@@ -152,21 +152,21 @@ $userUpdater->addField('logoURL', $logoURL, null);
 $userUpdater->addField('userLogo', $userLogo, null);
 $numRows = $userUpdater->executeUpdate();
 if (is_string($numRows)) { // Error returned
-	header("location: $editUrl/$id&code=10");
-	exit;
+  header("location: $editUrl/$id&code=10");
+  exit;
 }
 
 // prepare Groups update
-$userUpdater = new Updater($db, $group_id, $userId , $groupId, 'Groups');
+$userUpdater = new Updater($db, $group_id, $userId, $groupId, 'Groups');
 $userUpdater->addField('groupName', "$uin's group", null);
-$userUpdater->addField('tsn', 0,null);
+$userUpdater->addField('tsn', 0, null);
 $userUpdater->addField('groupManagerId', $id, null);
 $userUpdater->addField('status', 1, null);
 $userUpdater->addField('dateCreated', $db->mdbNow(), null);
 $numRows = $userUpdater->executeUpdate();
 if (is_string($numRows)) { // Error returned
-	header("location: $editUrl/$id&code=12");
-	exit;
+  header("location: $editUrl/$id&code=12");
+  exit;
 }
 
 // Insert in UserGroup table
@@ -174,9 +174,9 @@ $data = array($id, $group_id, $userId, $db->mdbNow(), $db->mdbToday(), 'coordina
 $sql = "insert into UserGroup (user, groups, userId, dateCreated, dateToPublish, userGroupRole) values (?,?,?,?,?,?)";
 $stmt = $db->prepare($sql);
 $affRows = $stmt->execute($data);
-if(isMdb2Error($affRows, 'Create user group', $errorPriority)) {
-	header("location: $editUrl/$id&code=13");
-	exit;
+if (isMdb2Error($affRows, 'Create user group', $errorPriority)) {
+  header("location: $editUrl/$id&code=13");
+  exit;
 }
 
 
@@ -190,80 +190,82 @@ if(isMdb2Error($affRows, 'Create user group', $errorPriority)) {
  * 
  */
 if ($_POST['subscription'] == 1 && $config->mailList) {
-	$postData['subscribees'] = $email;  // New user email
-	$postData['subscribe_or_invite'] = 0;
-	$postData['send_welcome_msg_to_this_batch'] = 1;
-	$postData['send_notifications_to_list_owner'] = 1;
-	
-	$base_url = $config->mailListUrl;
-	$postData[$config->mailListPasswordInput] = $config->mailListPassword;
-	
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $base_url);
-	curl_setopt($ch, CURLOPT_POST, 1);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
-	curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	$data = curl_exec($ch);
-	curl_close($ch);
-	
-	if (!preg_match('/Successfully subscribed/', $data)) {
-		$text = "A FAILURE OCCURED ADDING NEW USER TO MAILING LIST:\n\n";
-		$text .= "Name: $first_name $last_name \n";
-		$text .= "Email: $email\n";
-		$subject = $config->appName . " - Add To Mail List Failure";
-	    $headers['From']         = $config->email;
-        $headers['To']           = $config->email;
-        $headers['Subject']      = $config->appName . " - Add To Mail List Failure";
-        $params['sendmail_path'] = '/usr/sbin/sendmail';
-        
-        // Create the mail object using the Mail::factory method
-        require('Mail.php');
-        $mail_object =& Mail::factory('sendmail', $params);
-        $result = $mail_object->send($config->email, $headers, $text);
-        if (PEAR::isError($result)) {
-          errorLog("Error sending email: Failure to add user to mailist.", $result->getDebugInfo());
-        }
-	}
-}
+  $postData['subscribees'] = $email;  // New user email
+  $postData['subscribe_or_invite'] = 0;
+  $postData['send_welcome_msg_to_this_batch'] = 1;
+  $postData['send_notifications_to_list_owner'] = 1;
 
+  $base_url = $config->mailListUrl;
+  $postData[$config->mailListPasswordInput] = $config->mailListPassword;
+
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $base_url);
+  curl_setopt($ch, CURLOPT_POST, 1);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+  curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  $data = curl_exec($ch);
+  curl_close($ch);
+
+  if (!preg_match('/Successfully subscribed/', $data)) {
+    if (!preg_match('/Already a member/', $data)) {
+      $text = "A FAILURE OCCURED ADDING NEW USER TO MAILING LIST:\n\n";
+      $text .= "Name: $first_name $last_name \n";
+      $text .= "Email: $email\n";
+      $subject = $config->appName . " - Add To Mail List Failure";
+      $headers['From'] = $config->email;
+      $headers['To'] = $config->email;
+      $headers['Subject'] = $config->appName . " - Add To Mail List Failure";
+      $params['sendmail_path'] = '/usr/sbin/sendmail';
+
+      // Create the mail object using the Mail::factory method
+      require('Mail.php');
+      $mail_object = & Mail::factory('sendmail', $params);
+      $result = $mail_object->send($config->email, $headers, $text);
+      if (PEAR::isError($result)) {
+        errorLog("Error sending email: Failure to add user to mailist.", $result->getDebugInfo(), 5);
+      }
+    }
+  }
+}
 
 if ($action == 'new') {
-	$fileTmp  = $_FILES['userresume']['tmp_name'];
-	$fileType = $_FILES['userresume']['type'];
-	$fileName = $_FILES['userresume']['name'];
-	$fileExt  = strrchr($fileName, '.');
-	$file     = $uin.$fileExt;
-	$filePath = $config->cvFolder.$file;
+  $fileTmp = $_FILES['userresume']['tmp_name'];
+  $fileType = $_FILES['userresume']['type'];
+  $fileName = $_FILES['userresume']['name'];
+  $fileExt = strrchr($fileName, '.');
+  $file = $uin . $fileExt;
+  $filePath = $config->cvFolder . $file;
 
-	if (!move_uploaded_file($fileTmp, $filePath)) {
-		header("location: $indexUrl&code=7&$queryString");
-		exit;
-	}
+  if (!move_uploaded_file($fileTmp, $filePath)) {
+    header("location: $indexUrl&code=7&$queryString");
+    exit;
+  }
 
-	$text = "A REQUEST FOR NEW USER ACCOUNT ON MORPHBANK FROM:\n\n";
-	$text .= "Name: $first_name $last_name \n";
-	$text .= "Email: $email\n";
-	$text .= "Resume\CV: ".$config->appServerBaseUrl."Admin/User/getCV.php?cv=".$file."\n";
-	$text .= "Mail List Subscribe: ".(isset($_POST['subscription']) ? 'Yes' : 'No')."\n\n";
-	$subject = $config->appName . " - Add To Mail List Failure";
-    $headers['From']         = $config->email;
-    $headers['To']           = $config->email;
-    $headers['Subject']      = $config->appName . " - New User Account";
-    $params['sendmail_path'] = '/usr/sbin/sendmail';
-        
-    // Create the mail object using the Mail::factory method
-    require('Mail.php');
-    $mail_object =& Mail::factory('sendmail', $params);
-    $result = $mail_object->send($config->email, $headers, $text);
-    if (PEAR::isError($result)) {
-      errorLog("Error sending email: New user account.", $result->getDebugInfo());
-    }
-	
-	header ("location: $indexUrl&code=14");
-	exit;
+  $text = "A REQUEST FOR NEW USER ACCOUNT ON MORPHBANK FROM:\n\n";
+  $text .= "Name: $first_name $last_name \n";
+  $text .= "Email: $email\n";
+  $text .= "Resume\CV: " . $config->appServerBaseUrl . "Admin/User/getCV.php?cv=" . $file . "\n";
+  $text .= "Mail List Subscribe: " . (isset($_POST['subscription']) ? 'Yes' : 'No') . "\n\n";
+  $subject = $config->appName . " - Add To Mail List Failure";
+  $headers['From'] = $config->email;
+  $headers['To'] = $config->email;
+  $headers['Subject'] = $config->appName . " - New User Account";
+  $params['sendmail_path'] = '/usr/sbin/sendmail';
+
+  // Create the mail object using the Mail::factory method
+  require('Mail.php');
+  $mail_object = & Mail::factory('sendmail', $params);
+  $result = $mail_object->send($config->email, $headers, $text);
+  if (PEAR::isError($result)) {
+    errorLog("Error sending email: New user account.", $result->getDebugInfo(), 5);
+  }
+
+  header("location: $indexUrl&code=14");
+  exit;
 }
 
-header ("location: $indexUrl&code=15");
+header("location: $indexUrl&code=15");
 exit;
+
