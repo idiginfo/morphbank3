@@ -43,6 +43,7 @@ if (empty($argv[1])) {
     if (isMdb2Error($result, "Error in min id SQL query", 5)) {
         die("Error in min id SQL query".$result->getUserInfo()." $sql\n");
     }
+    if (empty($id)) die("No new BaseObjects created in the last day. Exiting process.");
     $SELECT_LIMIT = " i.id >= $id";
 } else {
     $SELECT_LIMIT = $argv[1];
