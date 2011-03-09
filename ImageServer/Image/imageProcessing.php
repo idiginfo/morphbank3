@@ -184,6 +184,7 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 	$resp = shell_exec($copy);
   if (strlen($resp)==0) {
 		$message .= "Could not copy $fileAccessPath to $origPath\n";
+    $message .= "$resp\n";
 		return false;
 	}
 	if (!empty($tmpPath)) unlink($tmpPath); // get rid of temporary file
