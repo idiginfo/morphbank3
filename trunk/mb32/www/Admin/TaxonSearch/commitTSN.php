@@ -82,7 +82,7 @@ $query = "SELECT count(*) as count FROM Tree WHERE scientificName=" . $db->quote
 if (!empty($taxon_author_id)){
 	$query.= " AND taxon_author_id= $taxon_author_id ";
 }
-$query .=  " AND unaccept_reason not in ('not accepted', 'invalid) AND rank_id=$rank_id AND parent_tsn=$parent_tsn";
+$query .=  " AND unaccept_reason not in ('not accepted', 'invalid') AND rank_id=$rank_id AND parent_tsn=$parent_tsn";
 if ($nameType == 'Regular scientific name') {
 	if ($referenceId != null) {
 		$query .= " AND publicationId=" . $referenceId;
