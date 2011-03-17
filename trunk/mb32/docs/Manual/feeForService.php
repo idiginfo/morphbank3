@@ -62,7 +62,7 @@ to get an estimate of how long the mapping might take.
 <li>Upload via Morphbank Excel Workbook - 250 records per workbook	RATE:  $30.00 / hour</br>
 Suitable for smaller datasets - where the contributor's data is not already databased. 
 Upload of one workbook of this size will take 1 - 2 hours and assumes the contributor does the following:
-</li>
+
 	<ul>
 	<li>Checks all Taxon Names in the dataset with Taxon Names in Morphbank. 
 	Note there is an automated way to do this. Contact mbadmin@scs.fsu.edu to learn how to do this.
@@ -74,9 +74,8 @@ Upload of one workbook of this size will take 1 - 2 hours and assumes the contri
 	<li>Sends images via ftp, DVD or harddrive.
 	</li>
 	</ul>
-</br>
-</br>
-</br>
+	
+
 	<ul>
 	<li>The Morphbank Staff member will:</li>
 	<li>Check the Excel Workbook, especially Taxon Names &amp; Image file names and return a time / cost 
@@ -85,6 +84,7 @@ Upload of one workbook of this size will take 1 - 2 hours and assumes the contri
 	<li>Upload the data and images from the completed Morphbank Excel Workbook.</li>
 	<li>Return a report to the Contributor and / or point the contributor to http://services.morphbank.net/mb3/</li> 
 	</ul>
+	</li>
 
 <li>Morphbank Helpdesk &amp; User Feedback Response. RATE:  $30.00 / hour</br>
 Time will be accrued &amp; billing will take place on a to-be-agreed-upon schedule (quarterly, perhaps).
