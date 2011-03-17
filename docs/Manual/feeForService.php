@@ -76,7 +76,7 @@ Upload of one workbook of this size will take 1 - 2 hours and assumes the contri
 	</ul>
 
 	<ul>
-	<li>The Morphbank Staff member will:</li>
+	<li type='0'>The Morphbank Staff member will:</li>
 	<li>Check the Excel Workbook, especially Taxon Names &amp; Image file names and return a time / cost 
 	estimate and/or a list of errors found that need correction before upload.
 	</li>
