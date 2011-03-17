@@ -25,7 +25,15 @@
         $title =  'About - Manual';
 		initHtml( $title, NULL, NULL);
 		echoHead( false, $title);
-?>
+		?>
+		
+	<div class="mainGenericContainer" width="100%">
+	<!--change the header below -->
+	<h1>Fee For Service</h1>
+	<div id=footerRibbon></div>
+			<!--<table class="manualContainer" cellspacing="0" width="100%">
+			<tr>-->
+			<td width="100%">		
 
 <h1>Fee For Service</h1>
 <p>For ongoing sustainability after the end of initial grant funding, Morphbank charges
@@ -53,7 +61,7 @@ to get an estimate of how long the mapping might take.
 </li>
 
 <li>Upload via Morphbank Excel Workbook - 250 records per workbook	RATE:  $30.00 / hour</br>
-Suitable for smaller datasets – where the contributor's data is not already databased. 
+Suitable for smaller datasets - where the contributor's data is not already databased. 
 Upload of one workbook of this size will take 1 - 2 hours and assumes the contributor does the following:
 </li>
 	<ul>
@@ -99,7 +107,7 @@ We can do this at 20%. Contact riccardi@ci.fsu.edu for an estimate.
 </table>
 			</div>
 		
-			<?php
+<?php
 //Finish with end of HTML	
 finishHtml();
 ?>	
