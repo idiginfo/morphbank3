@@ -42,44 +42,12 @@
      at the <a href="<?echo $config->domain;?>About/Manual/submit.php">Preparing to Submit</a> manual page.</li>
 	</ul>
 </li>	
-<li>morphbank general topics, like copyright, image philosophy and system requirements.</li>
+<li>Morphbank general topics, like copyright, image philosophy and system requirements.</li>
 </ul>
 
 <p>Last update of this documentation was made 
   <!-- #BeginDate format:Am1 -->November 10, 2010<!-- #EndDate -->
 reflecting the latest software release of Morphbank v 3.</p>
-<!-- <div class="specialtext2">
-		<b>Quick videos:</b>
-		These videos (AVI) are being updated to reflect the latest changes to Morphbank software. New videos are added as they are made.
-		<ul>
-<li>How to <strong>Publish multiple collections</strong> from the MyManager: <a href="<?echo $config->domain;?>About/Manual/Movies/Publishcollection.avi" target='_blank'>video</a>
-</li>
-<li>How to <strong>Create a Collection</strong> from the MyManager: <a href="<?echo $config->domain;?>About/Manual/Movies/Makecollection.avi" target='_blank'>video</a>
-</li>		
-<li>How to <strong>Submit a Specimen: </strong><a href="<?echo $config->domain;?>About/Manual/Movies/SubmitSpecimen.avi" target='_blank'>video</a>
-</li>
-<li>How to <strong>Submit a View: </strong><a href="<?echo $config->domain;?>About/Manual/Movies/submitview.avi" target='_blank'>video</a>
-</li>
-<li>How to <strong>Submit a Locality: </strong><a href="<?echo $config->domain;?>About/Manual/Movies/submitlocality.avi" target='_blank'>video</a>
-</li>
-<li>How to <strong>Submit an Image: </strong><a href="<?echo $config->domain;?>About/Manual/Movies/submitimage.avi" target='_blank'>video</a>
-</li>
-<li>How to <strong>Edit</strong> date to publish for <strong>lots of images: </strong><a href="<?echo $config->domain;?>About/Manual/Movies/Changepublishdate.avi" target='_blank'>video</a>
-</li>
-<li>How to <strong>Annotate a taxon name</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/AnnotateTaxonName.avi" target='_blank'>video</a>
-</li>
-<li>How to <strong>Edit an image</strong>, replacing one image with another: <a href="<?echo $config->domain;?>About/Manual/Movies/EditImage.avi" target='_blank'>video</a>
-</li>
-<li>How to <strong>Add a Taxon Name</strong> to Morphbank: <a href="<?echo $config->domain;?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'>video</a>
-</li>
-<li>How to <strong>Edit Specimen Determination</strong> in Morphbank: <a href="<?echo $config->domain;?>About/Manual/Movies/Edit_Specimen_Determination.avi" target='_blank'>video</a>
-</li>
-<li>How to <strong>Create a Collection of Images and Label by Specimen Part</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/collectionbyspecimenpart.avi" target='_blank'>video</a>
-</li>
-		</ul>
-</div>
--->
-
 
 <div class="specialtext3"><strong>Contributors to the Morphbank User Manual</strong>:
 Wilfredo Blanco, Robert Bruhn, Christopher Cprek, Andy Deans, Chantelle Dorsey, Cynthia Gaitros, David Gaitros, Neelima Jammigumpula, Karolina Maneva-Jakimoska, Austin Mast, Debbie Paul,
@@ -173,6 +141,7 @@ Preparing to <a href="<?echo $config->domain;?>About/Manual/submit.php">Submit</
 <!-- TODO <a href="<?echo $config->domain;?>About/Manual/xmlUpload.php>XML Upload</a><br />-->
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?echo $config->domain;?>About/HowToContribute/">XML Upload</a> - Contributors convert their data into Morphbank XML Schema format.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?echo $config->domain;?>About/HowToContribute/">Specify plugin</a> - (in alpha-testing): Users with data in Specify database utilize a plug-in to upload directly to Morphbank.<br />
+<a href="<?echo $config->domain?>About/Manual/feeForService.php">Fee For Mapping and Bulk Upload Service</a> - Details about costs for bulk upload to Morphbank.
 <!-- TODO <a href="<?echo $config->domain;?>About/Manual/specify.php">Specify (in alpha-testing)</a><br />-->
 <br />
 <br />
