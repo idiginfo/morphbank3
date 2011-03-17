@@ -46,20 +46,20 @@ Note, each use-case is unique and someone on the Morphbank Staff will evaluate e
 and give the contributor a quote up-front.</p>
 
 
-<p>1. Upload via Morphbank XML. RATE:  $30.00 / hour</br>
+<p>1. Upload via Morphbank XML. RATE:  $40.00 / hour</br>
 This assumes the contributor's existing database has been mapped to Morphbank. 
 See # 2 below.Use this option if the contributor's data is already in a database. 
 NB. Morphbank is building a piece of software to automate data export from Specify6 into Morphbank.
 </p>
 
-<p>2. Mapping to Morphbank. One-Time Fee @ RATE:  $30.00 /  hour</br>
-For users with existing databases, mapping is provided at $30.00 / hour and is a one-time fee. 
+<p>2. Mapping to Morphbank. One-Time Fee @ RATE:  $40.00 /  hour</br>
+For users with existing databases, mapping is provided at $40.00 / hour and is a one-time fee. 
 The contributor receives a map of the Schema. Hint here to users: the more familiar a would-be 
 contributor is with Morphbank, the faster this process will be. Users may send a sample dataset 
 to get an estimate of how long the mapping might take.
 </p>
 
-<p>3. Upload via Morphbank Excel Workbook - 250 records per workbook	RATE:  $30.00 / hour</br>
+<p>3. Upload via Morphbank Excel Workbook - 250 records per workbook	RATE:  $40.00 / hour</br>
 Suitable for smaller datasets - where the contributor's data is not already databased. 
 Upload of one workbook of this size will take 1 - 2 hours and assumes the contributor does the following:
 </p>
@@ -76,7 +76,7 @@ Upload of one workbook of this size will take 1 - 2 hours and assumes the contri
 	</ul>
 
 	<ul>
-	<li type='0'>The Morphbank Staff member will:</li>
+	<li>The Morphbank Staff member will:</li>
 	<li>Check the Excel Workbook, especially Taxon Names &amp; Image file names and return a time / cost 
 	estimate and/or a list of errors found that need correction before upload.
 	</li>
@@ -85,7 +85,7 @@ Upload of one workbook of this size will take 1 - 2 hours and assumes the contri
 	</ul>
 
 
-<p>4. Morphbank Helpdesk &amp; User Feedback Response. RATE:  $30.00 / hour</br>
+<p>4. Morphbank Helpdesk &amp; User Feedback Response. RATE:  $40.00 / hour</br>
 Time will be accrued &amp; billing will take place on a to-be-agreed-upon schedule (quarterly, perhaps).
 </p>
 
@@ -94,7 +94,7 @@ To defray the costs of equipment, a one-time fee based on the GB total for the i
 </p>
 
 <p>6. Overhead - Subcontract or Consultant</br>
-Subcontract with FSU for &amp; Morphbank has to pay overhead of 46%. 
+Subcontract with FSU for upload &amp; Morphbank has to pay overhead of 46%. 
 One may pay our support person directly for support with lower overhead on our side. 
 We can do this at 20%. Contact riccardi@ci.fsu.edu for an estimate.
 </p>
