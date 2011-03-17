@@ -23,9 +23,9 @@
 
 		include_once('head.inc.php');
         $title =  'About - Manual';
-	initHtml( $title, NULL, NULL);
-	echoHead( false, $title);
-	?>
+		initHtml( $title, NULL, NULL);
+		echoHead( false, $title);
+?>
 
 <h1>Fee For Service</h1>
 <p>For ongoing sustainability after the end of initial grant funding, Morphbank charges
@@ -40,8 +40,8 @@ and give the contributor a quote up-front.</p>
 
 <ol>
 <li>Upload via Morphbank XML. RATE:  $30.00 / hour</br>
-This assumes the contributor’s existing database has been mapped to Morphbank. 
-See # 2 below.Use this option if the contributor’s data is already in a database. 
+This assumes the contributor's existing database has been mapped to Morphbank. 
+See # 2 below.Use this option if the contributor's data is already in a database. 
 NB. Morphbank is building a piece of software to automate data export from Specify6 into Morphbank.
 </li>
 
@@ -52,9 +52,9 @@ contributor is with Morphbank, the faster this process will be. Users may send a
 to get an estimate of how long the mapping might take.
 </li>
 
-<li>Upload via Morphbank Excel Workbook – 250 records per workbook	RATE:  $30.00 / hour</br>
-Suitable for smaller datasets – where the contributor’s data is not already databased. 
-Upload of one workbook of this size will take 1 -2 hours and assumes the contributor does the following:
+<li>Upload via Morphbank Excel Workbook - 250 records per workbook	RATE:  $30.00 / hour</br>
+Suitable for smaller datasets – where the contributor's data is not already databased. 
+Upload of one workbook of this size will take 1 - 2 hours and assumes the contributor does the following:
 </li>
 	<ul>
 	<li>Checks all Taxon Names in the dataset with Taxon Names in Morphbank. 
@@ -70,7 +70,7 @@ Upload of one workbook of this size will take 1 -2 hours and assumes the contrib
 
 	<ul>
 	<li>The Morphbank Staff member will:</li>
-	<li>Check the Excel Workbook, especially Taxon Names & Image file names and return a time / cost 
+	<li>Check the Excel Workbook, especially Taxon Names &amp; Image file names and return a time / cost 
 	estimate and/or a list of errors found that need correction before upload.
 	</li>
 	<li>Upload the data and images from the completed Morphbank Excel Workbook.</li>
