@@ -35,7 +35,6 @@
 			<tr>-->
 			<td width="100%">		
 
-<h1>Fee For Service</h1>
 <p>For ongoing sustainability after the end of initial grant funding, Morphbank charges
 a relatively small <em>fee-for-service</em> to just cover the cost of a help desk
 person and one-time storage fee based on total space (file size) of all images to be uploaded.
