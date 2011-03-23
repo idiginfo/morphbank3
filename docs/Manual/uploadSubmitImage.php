@@ -43,6 +43,14 @@ The data entered on the <strong>Add Image</strong> screen provides information a
 the image to upload, the specimen to which the image belongs, and its view. Both a specimen and a view should exist before uploading an image. If not previously added, provisions have been made on this screen to add a specimen and a view.
 </p>
 
+<div class="specialtext2">
+<p>Are you uploading more than 1 image of the same specimen? Note that the Specimen record in Morphbank displays the first image
+uploaded for a given specimen. Morphbank suggests using the image that best represents the overall specimen - this is referred to
+in Morphbank as the <em>standard image</em>. After uploading all images for a given Specimen, a user can <em>edit</em> the Specimen
+record to change the <em>standard image</em> for the Specimen.
+</p>
+</div>
+
 <div class="specialtext3">
 <h3>Image Issues</h3>
 <ul>
@@ -160,6 +168,14 @@ release the images) from the dropdown list. The contributor can be
 different from the submitter (person entering the data). If you need to add
 new entries to this list, please contact <strong>mdadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</strong>
 </li>
+
+<li><strong>Add to EoL</strong><br />
+<strong>Encyclopedia of Life (EoL)</strong> collaborates with Morphbank and desires images that exemplify a given taxa.
+Morphbank users contribute images to EoL unless the images are already being supplied from another source, or the images
+are not exemplar. Morphbank images have a <em>date-to-publish</em> and only go to EoL <em>after that date</em>.
+Please tick the box to share the image with EoL. Users may edit this field at any time. 
+</li>
+
 <br />
 <li><strong>Add External Links</strong> to this record. For complete
 instructions on providing external links refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External Links</font> to open this feature. See next: 
