@@ -162,12 +162,14 @@ five years from the date of inclusion of the images in Morphbank. If you
 leave this field unchanged, the default date is 6 months from inclusion of
 the images in Morphbank.
 </li><br />
+
 <li><strong>Contributor</strong> (Required)<br />
 Select the name of the contributor (person having the authorization to
 release the images) from the dropdown list. The contributor can be
 different from the submitter (person entering the data). If you need to add
 new entries to this list, please contact <strong>mdadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</strong>
 </li>
+<br />
 
 <li><strong>Add to EoL</strong><br />
 <strong>Encyclopedia of Life (EoL)</strong> collaborates with Morphbank and desires images that exemplify a given taxa.
