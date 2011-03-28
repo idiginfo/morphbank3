@@ -30,6 +30,15 @@ $id = $_POST['id'];
 $gmId = $_POST['gmId']; // group manager id
 $origGmId = $_POST['gmId']; // group manager id
 $rowIds = $_POST['rowid']; // id array of users on page
+
+// Loop through rowIds and remove coordinator if this group is the one created when joining site
+foreach ($rowIds as $key => $uid) {
+  if ($uid + 1 == $id) {
+    unset($rowIds[$key]);
+  }
+}
+
+// create uid string for use in query
 $rowIdList = implode(',', $rowIds);
 
 // Check authorization
@@ -44,24 +53,25 @@ $defaultRole = ($id == $config->adminGroup) ? 'administrator' : 'guest';
 /**
  * Loop through post user array to remove empty values
  * Create new array for checked users
+ * If the group being edited is a members own group created on joining,
+ * the disabled checkbox is not passed via POST
  */
 $userArray = $_POST['user'];
 foreach ($userArray as $key => $value) {
   if (is_null($userArray[$key]['user']) || $userArray[$key]['user'] == "") {
     unset($userArray[$key]);
   } else {
-    $role = empty($userArray[$key]['usergrouprole']) ?
-            $defaultRole : $userArray[$key]['usergrouprole'];
+    $role = empty($userArray[$key]['usergrouprole']) ? $defaultRole : $userArray[$key]['usergrouprole'];
     $checkedUsers[$userArray[$key]['user']] = $role;
   }
 }
 
 /**
- * Select all current users of group in existing rowids except group manager
+ * Select all current users of group in existing rowids except group coordinator
  * Result is returned with user id as array key
  */
 $db = connect();
-$sql = "select * from UserGroup where user in($rowIdList) and groups = ?";
+$sql = "select * from UserGroup where user in ($rowIdList) and groups = ?";
 $rows = $db->getAll($sql, null, array($id), null, MDB2_FETCHMODE_ASSOC, true);
 isMdb2Error($rows, "Select information for UserGroup $id");
 
@@ -91,8 +101,8 @@ foreach ($rowIds as $rowId) {
 
     /* update history */
     $modification = "'userRole: " . $rows[$rowId]['usergrouprole'] . "',' userRole: " . $checkedUsers[$rowId] . "'";
-  }
-  /* delete existing members */ else if (!isset($checkedUsers[$rowId]) && isset($rows[$rowId])) {
+  }  else if (!isset($checkedUsers[$rowId]) && isset($rows[$rowId])) {
+    /* delete existing members */
     $sql = "delete from UserGroup where user = ? and groups = ? limit 1";
     $stmt = $db->prepare($sql);
     isMdb2Error($stmt, "Error preparing query to delete group member");
