@@ -507,6 +507,8 @@ function showLocality($localityId){
 		'width' => 10, 'display' => true), 
 	array('field' => 'countryCode', 'relatedTable' => true, 'label' => 'Country: ', 'width' => 10,
 		'display' => true), 
+  array('field' => 'state', 'label' => 'State/Province: ', 'width' => 10, 'display' => true),
+  array('field' => 'county', 'label' => 'County: ', 'width' => 10, 'display' => true),
 	array('field' => 'locality', 'label' => 'Locality: ', 'width' => 10, 'display' => true),
 	array('field3' => 'latitude', 'field4' => 'Latitude: ', 'width' => 10, 'display' => true),
 	array('field3' => 'longitude', 'field4' => 'Longitude: ', 'width' => 10, 'display' => true),
