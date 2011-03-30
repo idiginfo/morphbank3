@@ -57,11 +57,11 @@ function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $fileS
 		//get new original file and put it in place
 		// Note that if original is jpg or jpeg, this will move the file to jpeg path
 		$fileImageType = replaceOriginal ($id, $fileName, $fileName, $fileSourceDir);
-		if (getImageFileType($fileName)){
+		if (getImageFileType($originalImgPath)){
 			$message .= "original ";
 			$numFixed++;
 		} else {
-			$message.="corrupted original\n";
+			$message.="corrupted original $originalImgPath\n";
 		}
 	}
 	if (!empty($fileImageType)) {
@@ -149,15 +149,10 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 	global $config, $message;
 	$fileAccessPath = trim($fileAccessPath);
 
-  $message .= "fileAccessPath - $fileAccessPath\n";
-  $message .= "fileName - $fileName\n";
-  $message .= "fileSourceDir - $fileSourceDir\n";
-
 	// find the new file to be used as original
 
 	if (stripos($fileAccessPath,"http:")===0){// fileName is a URL
     // URL: copy the file to temporary location
-    $message .= "URL ";
     $tmpPath = $config->imgTmpDir.mktime();
     copy($fileAccessPath, $tmpPath);
     $fileAccessPath = $tmpPath;
@@ -181,10 +176,6 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 	// copy the new file to the location of the original
 	$copy = "cp $fileAccessPath $origPath; chmod 644 $origPath";
 	$resp = shell_exec($copy);
-  if (strlen($resp)==0) {
-		$message .= "Could not copy $fileAccessPath to $origPath\n";
-		return false;
-	}
   $message .= "Copied $fileAccessPath to $origPath\n";
 	if (!empty($tmpPath)) unlink($tmpPath); // get rid of temporary file
 	return $imageType;
