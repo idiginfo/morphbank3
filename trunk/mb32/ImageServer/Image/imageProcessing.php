@@ -241,7 +241,7 @@ function fixFile($sourceImgPath, $targetImgPath, $imgType, $size = null){
 
 function convertOriginal($source, $target, $size){
 	global $config;
-	$convert = $config->imagemagik."convert -compress LZW $size $source $target";
+	$convert = $config->imagemagik."convert -compress LZW $size $source"."[0] $target";
 	$message .= date("H:i:s")." Executing: $convert\n";
 	$reply = shell_exec($convert);
 	if (strlen($reply)>0){

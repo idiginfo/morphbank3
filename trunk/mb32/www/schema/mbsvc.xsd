@@ -241,6 +241,7 @@
             <xs:element name="originalFileName" type="xs:string" minOccurs="0"/>
             <xs:element name="creativeCommons" type="xs:string" minOccurs="0"/>
             <xs:element name="photographer" type="xs:string" minOccurs="0"/>
+	    <xs:element name="eol" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="xmlAnnotation">

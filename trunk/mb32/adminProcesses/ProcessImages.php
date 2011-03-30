@@ -38,7 +38,7 @@ $db = connect();
  * Else, use passed in value as id.
  */
 if (empty($argv[1])) {
-    $sql = "select min(id) as id from BaseObject where dateCreated > date_sub(NOW(), interval 1 day) and objectTypeId = 'Image'";
+    $sql = "select min(id) as id from BaseObject where dateCreated > date_sub(NOW(), interval 3 day) and objectTypeId = 'Image'";
     $id = $db->queryOne($sql);
     if (isMdb2Error($result, "Error in min id SQL query", 5)) {
         die("Error in min id SQL query".$result->getUserInfo()." $sql\n");
