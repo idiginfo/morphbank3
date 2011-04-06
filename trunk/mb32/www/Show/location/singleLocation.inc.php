@@ -54,8 +54,13 @@ $popUrl = (isset($_GET['pop'])) ? "/Show/?pop=Yes&amp;id=" : "/?id=";
 						<tr>
 							<th>Country:</th><td>'.$locationArray['country'].'</td>
 						</tr>
-						
 						<tr>
+						       <th>State/Province:</th><td>'.$locationArray['state'].'</td>
+						 </tr>
+						 <tr>
+						       <th>County:</th><td>'.$locationArray['county'].'</td>
+						 </tr>
+						 <tr>
 							<th>Latitude:</th><td>'. truncateValue($locationArray['latitude']). '</td>
 						</tr>
 						<tr>
