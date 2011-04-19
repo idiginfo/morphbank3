@@ -23,7 +23,7 @@
 
 $mainHelpDocuments = '<br/> 
 <ul class="helpDocumentList">
-	<li>User Manual [<a href="'.$config->domain.'/About/Manual/" target="blank">full online reference</a>]</li> 
+	<li>User Manual [<a href="'.$config->domain.'About/Manual/" target="blank">full online reference</a>]</li> 
 	<li>UML database schema [<a href="'.$config->domain.'docs/mbUML.pdf">pdf</a>]</li>
 	<li>Tables description [<a href="'.$config->domain.'docs/mbTablesDescription.pdf">pdf</a>]</li>
 	<li type="0"> Bulk upload options - [<a href="'.$config->domain.'About/HowToContribute/">Considerations for Choosing an Option</a>]</li>
