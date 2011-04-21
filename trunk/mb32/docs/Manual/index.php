@@ -46,7 +46,7 @@
 </ul>
 
 <p>Last update of this documentation was made 
-  <!-- #BeginDate format:Am1 -->November 10, 2010<!-- #EndDate -->
+  <!-- #BeginDate format:Am1 -->April 21, 2011<!-- #EndDate -->
 reflecting the latest software release of Morphbank v 3.</p>
 
 <div class="specialtext3"><strong>Contributors to the Morphbank User Manual</strong>:
@@ -141,7 +141,7 @@ Preparing to <a href="<?echo $config->domain;?>About/Manual/submit.php">Submit</
 <!-- TODO <a href="<?echo $config->domain;?>About/Manual/xmlUpload.php>XML Upload</a><br />-->
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?echo $config->domain;?>About/HowToContribute/">XML Upload</a> - Contributors convert their data into Morphbank XML Schema format.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?echo $config->domain;?>About/HowToContribute/">Specify plugin</a> - (in alpha-testing): Users with data in Specify database utilize a plug-in to upload directly to Morphbank.<br />
-<a href="<?echo $config->domain?>About/Manual/feeForService.php">Fee For Mapping and Bulk Upload Service</a> - Details about costs for bulk upload to Morphbank.
+<a href="<?echo $config->domain?>About/Manual/UploadService.php">Help with Mapping, Bulk Upload and Web Services</a> - Details for help and costs for bulk upload to Morphbank.
 <!-- TODO <a href="<?echo $config->domain;?>About/Manual/specify.php">Specify (in alpha-testing)</a><br />-->
 <br />
 <br />
