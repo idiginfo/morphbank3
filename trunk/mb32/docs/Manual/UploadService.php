@@ -43,21 +43,21 @@ Note, each use-case is unique and these contractors will evaluate each request
 and give the contributor a quote up-front.</p>
 
 
-<p>1. Upload via Morphbank Custom Workbook and XML. RATE:  $40.00 / hour</br>
+<p>1. Upload via Morphbank Custom Workbook and XML. RATE:  $40.00 / hour<br />
 This assumes the contributor's existing database has been mapped to Morphbank. 
 See # 2 below.Use this option if the contributor's data is already in a database. 
 NB. The Specify team is building a piece of software to automate data export from Specify6 into Morphbank.
 It is currently in the beta testing phase.
 </p>
 
-<p>2. Mapping to Morphbank. One-Time Fee @ RATE:  $40.00 /  hour</br>
+<p>2. Mapping to Morphbank. One-Time Fee @ RATE:  $40.00 /  hour<br />
 For users with existing databases, mapping is provided at $40.00 / hour and is a one-time fee. 
 The contributor receives a map of the Schema. Hint here to users: the more familiar a would-be 
 contributor is with Morphbank, the faster this process will be. Users may send a sample dataset 
 to get an estimate of how long the mapping might take.
 </p>
 
-<p>3. Upload via Morphbank Excel Workbook - 250 records per workbook	RATE:  $40.00 / hour</br>
+<p>3. Upload via Morphbank Excel Workbook - 250 records per workbook	RATE:  $40.00 / hour<br />
 Suitable for smaller datasets - where the contributor's data is not already databased. 
 Upload of one workbook of this size will take 1 - 2 hours and assumes the contributor does the following:
 </p>
@@ -84,11 +84,11 @@ Upload of one workbook of this size will take 1 - 2 hours and assumes the contri
 	</ul>
 
 
-<p>4. Helpdesk &amp; User Feedback Response. RATE:  $40.00 / hour</br>
+<p>4. Helpdesk &amp; User Feedback Response. RATE:  $40.00 / hour<br />
 Time will be accrued &amp; billing will take place on a to-be-agreed-upon schedule (quarterly, perhaps).
 </p>
 
-<p>5. Subcontract or Consultant</br>
+<p>5. Subcontract or Consultant<br />
 One may pay our support person/s directly for support with lower overhead on our side. 
 Contact mbadmin@sc.fsu.edu for an estimate.
 </p>
