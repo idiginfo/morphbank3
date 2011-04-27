@@ -227,6 +227,7 @@ function echoHead( $isIntroPage = true, $headerTitle = ' ', $hasform0 = true) {
 	} else { //it has to change for different users
 		makeHorMenu('guest', $headerTitle, $hasform0);
 	}
+  echo '<p style="color: red; font-weight:bold;">Morphbank image server is experiencing difficulties. Please check back tomorrow.</p>';
 }
 
 /**
