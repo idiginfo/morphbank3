@@ -75,8 +75,15 @@ the name of the field, the value for that field, and the object in Morphbank whe
   <br />
   <li><strong>UserProperties</strong> (optional): This sheet used only if the contributor submits data to Morphbank that does not fit into any existing Morphbank fields. If &lt;userProperty&gt; fields are not needed, this entire sheet can be deleted from the workbook.</li>
     <br />
-  <li><strong>ContributorInfo (required</strong>): Enter information about the Morphbank User (aka Contributor), Submitter, Group and the Date-to-publish the objects in the workbook.</li>
-    <br />
+  <li><strong>ContributorInfo (required</strong>): Enter information about the:</li>
+    <ol>
+    <li>Morphbank User (aka Contributor) Name and Id</li>
+    <li>Morphbank Submitter Name and Id</li>
+    <li>Morphbank Group Name and Id</li>
+    <li>Date-to-publish the objects</li>
+    <li>Creative Commons Copyright for the Images</li>
+    </ol>
+       <br />
   <li><strong>Field Help</strong>: On this sheet, each field, its data type and field length are defined. Example data is provided along with some hints on how to simplify the process for some fields.</li>
     <br />
   <li><strong>Drop Downs:</strong> This sheet makes the drop-downs that appear on the<strong> Data sheet</strong>. Users can add needed values to most columns. Some columns use a fixed vocabulary and so cannot be altered (without contacting Morphbank).</li>
