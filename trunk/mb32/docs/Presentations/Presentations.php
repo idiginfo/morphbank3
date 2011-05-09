@@ -25,7 +25,7 @@ The workshop was hands-on.
 The Morphbank lecture presented here acts as an overview of what Morphbank is and later in the afternoon, 
 the students focused on how they might get data into the system. Some students uploaded data and images 
 to Morphbank as part of their participation requirement in the workshop. 
-Each student was expected to complete a project using some of the software they’d been introduced to during the 2 week period.
+Each student was expected to complete a project using some of the software they'd been introduced to during the 2 week period.
  
 <br /><br />
 </td>
