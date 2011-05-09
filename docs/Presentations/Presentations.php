@@ -1,11 +1,50 @@
 <table>
 <tr>
 <td>
+Presentations created by Deborah Paul for the <a href="http://www.nrm.se/en/frontpage.16_en.html"target="blank">
+Naturhistoriska Riksmuseet Biodiversity Informatics Course</a>, 18 September 2009 in Stockholm, Sweden.
+<br /><br />
+<b>Title:</b> Morphbank Current Topics: Using Images and Metadata
+<br /><br />
+<b>Authors:</b> Deborah Paul &amp; Greg Riccardi, Florida State University 
+<br /><br />
+<b>Abstract:</b>
+<br />
+Morphbank as an Image Repository &amp; Bioinformatics Research Tool
+
+<br /><br />
+About 25 graduate students and a few other scientists participated in a 2-week Biodiversity Informatics course 
+held in September 2009 at the Swedish Museum of Natural History in Stockholm, Sweden.
+Students came from various universities in Europe and South America. 
+<br /><br />
+This course consisted of teaching the students
+how to create and access a simple database (using their own data on their own computers) and then various
+lecturers introduced the students to different software they might find useful for their research. 
+The workshop was hands-on. 
+<br /><br />
+The Morphbank lecture presented here acts as an overview of what Morphbank is and later in the afternoon, 
+the students focused on how they might get data into the system. Some students uploaded data and images 
+to Morphbank as part of their participation requirement in the workshop. 
+Each student was expected to complete a project using some of the software they’d been introduced to during the 2 week period.
+ 
+<br /><br />
+</td>
+<td>
+<img src="archive/Stockholm092009.jpg" />
+<br />download presentation: <a href="archive/Stockholm092009.pptx">ppt Sep 2009</a>
+</td>
+</tr>
+</table>
+<br /><div id=footerRibbon></div><br />
+
+<table>
+<tr>
+<td>
 Presentations created by Deborah Paul for the <a href="http://www.scamit.org/index.htm"target="blank">November 2008 SCAMIT meeting</a> in San Diego, California.
 <br /><br />
 <b>Title:</b> SCAMIT and Morphbank
 <br /><br />
-<b>Authors:</b> Deborah Paul, Katja Seltmann & Greg Riccardi, Florida State University 
+<b>Authors:</b> Deborah Paul, Katja Seltmann &amp; Greg Riccardi, Florida State University 
 <br /><br />
 <b>Abstract:</b>
 <br />
