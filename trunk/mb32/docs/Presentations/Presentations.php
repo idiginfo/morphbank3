@@ -25,7 +25,7 @@ The workshop was hands-on.
 The Morphbank lecture presented here acts as an overview of what Morphbank is and later in the afternoon, 
 the students focused on how they might get data into the system. Some students uploaded data and images 
 to Morphbank as part of their participation requirement in the workshop. 
-Each student was expected to complete a project using some of the software they'd been introduced to during the 2 week period.
+Each student was expected to complete a project using some of the software they had been introduced to during the 2 week period.
  
 <br /><br />
 </td>
@@ -207,17 +207,17 @@ Poster created by Katja Seltmann et al. for the <a href="http://www.tdwg.org/con
 <br /><br />
 <b>Abstract:</b>
 <br />
-The Morphbank research project (http://morphbank.net) has created a repository for images that are useful to biodiversity researchers. The project adds significant value to stored images by managing complex metadata, by organizing images for searching, and by allowing users' comments and annotations to be directly linked to images and metadata. Its sophisticated user interfaces allow users to identify new taxa, characters and matrices, and ad hoc collections of images and other objects. The productive and dedicated R&D team has helped researchers organize and use their images productively on the Web.
+The Morphbank research project (http://morphbank.net) has created a repository for images that are useful to biodiversity researchers. The project adds significant value to stored images by managing complex metadata, by organizing images for searching, and by allowing users\' comments and annotations to be directly linked to images and metadata. Its sophisticated user interfaces allow users to identify new taxa, characters and matrices, and ad hoc collections of images and other objects. The productive and dedicated R&D team has helped researchers organize and use their images productively on the Web.
 Morphbank has more than one terabyte of images covering a broad spectrum of life. It has users and images from diverse collections, taxonomic groups and research projects. This broad user base has stressed the need for flexibility in the Morphbank system. To succeed in attracting users, recognition of the effort it takes for scientists to participate in Web dissemination activities must be acknowledged in biology research circles. Some examples of helpful strategies are:
 <br /><br />
 <i>Credit for service.</i> Each user logo, a list of contributors, and links to major projects are prominently displayed. All are useful in helping to promote the biologists work and to provide evidence of scholarly activity.
 <br /><br />
 <i>Big results with little effort.</i> Many of the new users to the system are attracted by the ability to link collections to publications. It is these big results with little effort that will persuade users to participate.
 <br /><br />
-<i>Helping users learn.</i> Straightforward user manuals, workshops, and a contact phone number help users learn the system. Many need someone to consult and it is important for users to feel welcome. Workshops may also include discussions of the value of data beyond the scope of the researchers' individual projects, and provide important feedback for the Morphbank R&D team. 
+<i>Helping users learn.</i> Straightforward user manuals, workshops, and a contact phone number help users learn the system. Many need someone to consult and it is important for users to feel welcome. Workshops may also include discussions of the value of data beyond the scope of the researchers\' individual projects, and provide important feedback for the Morphbank R&D team. 
 <br /><br />
 <i>Need for control.</i> Biologists who are not skilled in programming often feel controlled by programmers or left out of the process. The differences in the way programmers and biologists approach issues may lead to difficulties. For example, biologists wish to freely edit data in the system, but developers worry that data structure and the ability to modify and augment data needs to be protected and controlled. Biologists agree with this but believe they are the ones best suited to make these decisions, not the creators of the database.
-This poster will illustrate how Morphbank influences the user's of the data they are importing into the system. There is a correlation between the level of difficulty in getting the data into the system and the perceived value of the data by the biologist. This manifests itself on many levels: 1. desire to keep data hidden, 2. wanting to be sure only the best image is used (unwillingness to have imperfect data), and 3. a feeling of being overwhelmed by the technology. Generally by making access, upload and maintenance easier, users will feel they have control over the data and will be more apt to share. Thus, effective user interface design crucial to encouraging participation.
+This poster will illustrate how Morphbank influences the user\'s of the data they are importing into the system. There is a correlation between the level of difficulty in getting the data into the system and the perceived value of the data by the biologist. This manifests itself on many levels: 1. desire to keep data hidden, 2. wanting to be sure only the best image is used (unwillingness to have imperfect data), and 3. a feeling of being overwhelmed by the technology. Generally by making access, upload and maintenance easier, users will feel they have control over the data and will be more apt to share. Thus, effective user interface design crucial to encouraging participation.
 
 </td>
 <br /><br />
