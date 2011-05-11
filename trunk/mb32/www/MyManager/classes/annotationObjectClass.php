@@ -97,6 +97,7 @@ class annotationObject extends mbObjectClass {
 				</a>';
 		}
 		echo'&nbsp;</td>';
+		echo '<td class="browseRight browseImageCell" rowspan="5">';
 		echo thumbnailTag($id);
 		echo '</td>';
 		echo '</tr><tr><td>Date Created: '.$array['dateCreated'].'</td>
