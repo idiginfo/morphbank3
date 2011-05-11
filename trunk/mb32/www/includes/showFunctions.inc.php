@@ -558,17 +558,17 @@ function showLocality($localityId){
 	}
 	//lat/long
 	echo '<tr><th><strong> Latitude:</strong></th>
-		<td align="left" width="65%">'.truncateValue($localityRecord[$localityTableFields[4]['field3']]);
+		<td align="left" width="65%">'.truncateValue($localityRecord[$localityTableFields[6]['field3']]);
 	echo "</td></tr>\n";
 	echo '<tr><th><strong> Longitude:</strong></th>
-		<td align="left" width="65%">'.truncateValue($localityRecord[$localityTableFields[5]['field3']]);
+		<td align="left" width="65%">'.truncateValue($localityRecord[$localityTableFields[7]['field3']]);
 	echo "</td></tr>\n";
 	// Elevation
 	echo '<tr><th><strong> Elevation (m):</strong></th>
-		<td align="left" width="65%">'.$localityRecord[$localityTableFields[7]['field']];
-	if (($localityRecord[$localityTableFields[8]['field']] != $localityRecord[$localityTableFields[7]['field']])
-	&& ($localityRecord[$localityTableFields[8]['field']] != null))
-	echo '-'.$localityRecord[$localityTableFields[8]['field']];
+		<td align="left" width="65%">'.$localityRecord[$localityTableFields[9]['field']];
+	if (($localityRecord[$localityTableFields[10]['field']] != $localityRecord[$localityTableFields[9]['field']])
+	&& ($localityRecord[$localityTableFields[10]['field']] != null))
+	echo '-'.$localityRecord[$localityTableFields[10]['field']];
 	echo "</td></tr>\n</table>";
 }
 
