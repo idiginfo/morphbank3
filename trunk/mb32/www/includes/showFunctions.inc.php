@@ -456,7 +456,7 @@ function showRelatedObjects($id) {
 	if ($relatedObjectArray) {
 		$objectCount = count($relatedObjectArray);
 		$thumbLimit = ($objectCount < 25) ? $objectCount : 25;
-		echo '<table class="bottomBlueBorder" width="100%" cellspacing="0" cellpadding="0">
+		echo '<table class="bottomBlueBorder" width="100%">
 			<tr><td valign="bottom">
 			<h3>Related Objects for object: '.$id.'</h3><br/><br/>';
 		echo 'Showing '.$thumbLimit.' of '.$objectCount.' Objects: ';
@@ -466,11 +466,13 @@ function showRelatedObjects($id) {
 		for ($i = 0; $i < $thumbLimit; $i++) {
 			$imgId = getObjectImageId($relatedObjectArray[$i]['objectId']);
 			$thumbUrl[$i] = getImageUrl($imgId, 'thumbs');
-			$size = getSafeImageSize('/style/webImages/defaultSpecimenThumb.png');
-			$largestHeight = ($size[1] > $largestHeight) ? $size[1] : $largestHeight;
+			$thumbSizeUrl = getImageSizeUrl($imgId, 'thumbs');
+			$size = getSizeFromUrl($thumbSizeUrl);
+			/*$size = getSafeImageSize('/style/webImages/defaultSpecimenThumb.png');*/
+			$largestHeight = ($size[2] > $largestHeight) ? $size[2] : $largestHeight;
 		}
 
-		$styleHeight = 'height:'.($largestHeight+30).'px;';
+		$styleHeight = 'height:'.($largestHeight+20).'px;';	
 		for ($i = 0; $i < $thumbLimit; $i++) {
 			echo '<li style="'.$styleHeight.' padding:5px;">
 										<a href="'.$popUrl.$relatedObjectArray[$i]['objectId'].'" >';
