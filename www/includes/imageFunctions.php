@@ -246,8 +246,10 @@ function getImageAlt($id, $defaultText = 'image'){
  * @return unknown_type
  */
 function getSafeImageSize($filePath){
-	if (file_exists($filePath)){
-		return getimagesize($filePath);
+	echo 'file path: '.$filePath;
+	if (file_exists($_SERVER[DOCUMENT_ROOT].$filePath)){
+		echo 'ok';
+		return getimagesize($_SERVER[DOCUMENT_ROOT].$filePath);
 	}
 
 	return array(0,0,0);
@@ -258,6 +260,19 @@ function getDBImageSize($imageId){
 	$row = $db->queryRow("select imageWidth,imageHeight from Image where id=$imageId");
 	//if (empty($row)) return null;
 	return $row;
+}
+
+
+function getSizeFromUrl($imageUrl) {
+	$handle = fopen($imageUrl,'r');
+        if (!handle) return false;
+        $contents = '';
+        while (!feof($handle)) {
+                $contents .= fread($handle, 100);
+        }
+        fclose($handle);
+        $sizes = explode('+',$contents);
+        return $sizes;
 }
 
 function getRemoteImageSize($id, $imageType){

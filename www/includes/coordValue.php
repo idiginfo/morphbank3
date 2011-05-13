@@ -26,6 +26,10 @@
 //k. seltmann july 2008
 //************************************************************************************
 
+function truncateValueTest($locationCord) {
+return sprintf('%F', $locationCord);
+}
+
 function truncateValue($locationCord) {
 
 		 $num = explode( '.', $locationCord );
