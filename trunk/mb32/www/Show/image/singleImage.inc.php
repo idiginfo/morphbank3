@@ -138,6 +138,7 @@ global $imageType;
 //}
 
 echo showMediumImage($id);
+echo showMorphsterFrame($id);
 
 echo '</td></tr></table><table class="blueBorder" width="100%">
 	<tr valign="top"><td class="firstColumn" width="50%">';
@@ -383,4 +384,10 @@ function showDeterminationData() {
 	global $tsnId;
 	echo '<h3>Determination</h3><br/>';
 	showTsnData($tsnId);
+}
+
+function  showMorphsterFrame($id) {
+	$tag = "<p><h3>Morphster Annotation</h3><br/><p>";
+	$tag .= "<iframe src='http://services.morphbank.net/mbd/request?id=$id&method=morphster' width='100%'/></iframe></p>";
+	return $tag;
 }
