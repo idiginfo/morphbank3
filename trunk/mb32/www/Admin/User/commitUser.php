@@ -56,9 +56,10 @@ if ($action == 'new') {
   $codeArray = getSpamCode($_POST['spamid']);
   if (strtolower($_POST['spamcode']) != strtolower($codeArray['code'])) {
     header("location: $indexUrl&code=8&$queryString");
+    exit;
   }
 }
-
+die("here");
 // If new user, resume file required
 if ($action == 'new' && empty($_FILES['userresume'])) {
   header("location: $indexUrl&code=16&$queryString");
