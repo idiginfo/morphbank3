@@ -59,7 +59,7 @@ if ($action == 'new') {
     exit;
   }
 }
-die("here");
+
 // If new user, resume file required
 if ($action == 'new' && empty($_FILES['userresume'])) {
   header("location: $indexUrl&code=16&$queryString");
