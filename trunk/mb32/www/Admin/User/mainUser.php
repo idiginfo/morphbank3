@@ -295,7 +295,9 @@ function getMessage($code) {
 		return "<br /><br /><h3>You have added user successfully</h3><br /><br />";
 	} elseif ($code == 16) {
 		return '<br /><br /><div class="searchError">A resmue upload is required</div>'."\n";
-	} 
+	} elseif ($code == 17) {
+		return '<br /><br /><div class="searchError">Please fill in all required fields</div>'."\n";
+	}
 	return;
 }
 

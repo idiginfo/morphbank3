@@ -32,10 +32,11 @@ include_once('spam.php');
  * Period in email causes problems on redirect
  * Do not want to send password info via get on redirect
  */
-$postArray = $_POST;
-unset($postArray['pin']);
-unset($postArray['confirm_pin']);
-unset($postArray['email']);
+
+unset($_POST['pin']);
+unset($_POST['confirm_pin']);
+unset($_POST['email']);
+$queryString = getParamString($_POST);
 
 $errorPriority = 5;
 
@@ -44,14 +45,25 @@ $userId = $objInfo->getUserId();
 $groupId = $objInfo->getUserGroupId();
 $indexUrl = "/Admin/User/$action";
 $editUrl = "/Admin/User/edit";
-$queryString = getParamString($postArray);
 
 if ($action == 'add' && $groupId != $config->adminGroup) {
   header("location: $indexUrl&code=6&$queryString");
   exit;
 }
 
-// If New user, check spam code
+$required = array('first_name', 'last_name', 'email', 'affiliation', 'country');
+if ($action == 'new') {
+  $required = array_merge($required, array('uin', 'pin'));
+}
+
+foreach ($required as $field) {
+  if (empty($_POST[$field])) {
+    header("location: $indexUrl&code=17&$queryString");
+    exit;
+  }
+}
+
+// Check spam code
 if ($action == 'new') {
   $codeArray = getSpamCode($_POST['spamid']);
   if (strtolower($_POST['spamcode']) != strtolower($codeArray['code'])) {
