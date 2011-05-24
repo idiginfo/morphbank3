@@ -52,7 +52,7 @@ if (empty($argv[1])) {
 $OUTPUT_DIR = null;
 
 /*
- * Optional fuile source if passed via argv[2]
+ * Optional file source if passed via argv[2]
  */
 $FILE_SOURCE_DIR = !empty($argv[2]) ? $argv[2]."/" : $config->fileSource;
 echo "Looking for files in directory $FILE_SOURCE_DIR\n";
