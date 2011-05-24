@@ -52,3 +52,4 @@ function mainAboutContributors() {
 		echo '</table></div>';
 	}
 }
+?>
