@@ -138,7 +138,7 @@ global $imageType;
 //}
 
 echo showMediumImage($id);
-echo showMorphsterFrame($id);
+//echo showMorphsterFrame($id);
 
 echo '</td></tr></table><table class="blueBorder" width="100%">
 	<tr valign="top"><td class="firstColumn" width="50%">';
