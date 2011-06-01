@@ -125,6 +125,7 @@ function getRelatedUsers($groupId, $name) {
 		for ($i = 0; $i < $objectCount; $i++) {
 			echo '<li style="'.$styleHeight.' padding:2px;">';
 			echo thumbnailTag($userId[$i], $thumbUrl[$i]);
+			echo '<br />'.$row['name'];
 		}
 	}
 	echo '</ul></td></tr></table></div>';
