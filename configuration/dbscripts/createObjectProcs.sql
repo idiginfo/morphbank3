@@ -299,6 +299,8 @@ DECLARE iTsn INT;
 DECLARE bId INT; 
 DECLARE iKingdomName VARCHAR(10);
 DECLARE iRankName VARCHAR(15);
+DECLARE iTaxonAuthorName VARCHAR(100);
+DECLARE iParentName VARCHAR(100);
 SET iTsn=0; SET bId=0;
 SET iKingdomName=""; 
 SET iRankName="";
@@ -315,12 +317,14 @@ IF bId > 0 THEN
 INSERT INTO TaxonConcept (id, tsn, nameSpace, status) VALUES (bId, iTsn, iNameSpace, iStatus);
 SELECT kingdom_name INTO iKingdomName From Kingdoms WHERE kingdom_id=iKingdomId;
 SELECT rank_name INTO iRankName From TaxonUnitTypes WHERE rank_id=iRankId and kingdom_id=iKingdomId;
-CALL TaxaInsert(bId, iTsn, iScientificName, iTaxonAuthorId, NULL , iStatus, iParentTsn, NULL, 
+SELECT taxon_author into iTaxonAuthorName FROM TaxonAuthors WHERE taxon_author_id=iTaxonAuthorId;
+SELECT scientificName into iParentName FROM Tree where tsn=iParentTsn;
+CALL TaxaInsert(bId, iTsn, iScientificName, iTaxonAuthorId, iTaxonAuthorName , iStatus, iParentTsn, iParentName, 
 iKingdomId, iKingdomName, iRankId, iRankName, 0, iNameType , iNameSource, iPublicationId,
 iGroupId, iUserId, iDateToPublish, NULL, 'TaxonConcept');
 END IF;
 select iTsn;
-END;//
+END//
 
 
 DROP PROCEDURE IF EXISTS UserInsert;//
