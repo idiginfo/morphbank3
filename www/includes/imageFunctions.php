@@ -246,10 +246,8 @@ function getImageAlt($id, $defaultText = 'image'){
  * @return unknown_type
  */
 function getSafeImageSize($filePath){
-	echo 'file path: '.$filePath;
-	if (file_exists($_SERVER[DOCUMENT_ROOT].$filePath)){
-		echo 'ok';
-		return getimagesize($_SERVER[DOCUMENT_ROOT].$filePath);
+	if (file_exists($filePath)){
+		return getimagesize($filePath);
 	}
 
 	return array(0,0,0);
