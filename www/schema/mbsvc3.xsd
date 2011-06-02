@@ -186,7 +186,8 @@
             <xs:element name="creativeCommons" type="xs:string" minOccurs="0"/>
             <xs:element name="photographer" type="xs:string" minOccurs="0"/>
             <xs:element name="specimen" type="xmlId" minOccurs="0"/>
-            <!-- Locality -->
+            <xs:element name="eol" type="xs:string" minOccurs="0"/>
+	    <!-- Locality -->
             <!-- Publication -->
             <xs:element name="publicationType" minOccurs="0"/>
             <!-- <xs:element name="address" minOccurs="0"/> -->
@@ -271,6 +272,7 @@
     </xs:complexType>
 
     <xs:complexType name="userprop">
+	<xs:attribute name="namespaceURI" type="xs:string"/>
         <xs:attribute name="property" type="xs:string"/>
         <xs:attribute name="value" type="xs:string"/>
     </xs:complexType>
