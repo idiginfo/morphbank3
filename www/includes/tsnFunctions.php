@@ -472,7 +472,7 @@ function createNewScientificName($newName, $parentName, $rank_id, $parentTSN){
 		$scientificName = trim($newName);
 	} elseif ($rank_id > 180 && $rank_id <= 220) { // rank is subgenus to species
 		$scientificName = trim($parentName);
-		if ($rank_id == 190) {// user parenthesis or not
+		if ($rank_id == 190) {// use parenthesis if subgenus and they do not exist
 			$preg = '#\([^\)]+\)#';
 			if (preg_match($preg, $newName)) {
 				$scientificName .= " " . trim($newName);
@@ -1082,12 +1082,44 @@ function getRankByColumn ($col) {
 	return $rank;
 }
 
+/**
+ * Get a Taxa row using the scientific name
+ *
+ * Used during taxon upload using Excel
+ * @param $value
+ * @param
+ */
+/**
+ * Return a Taxa row based upon scientific name
+ *
+ * @param $scientific_name
+ *   String representation of a scientific name
+ * @param $rank_id
+ *   Taxonomic rank id
+ * @param $parent_tsn
+ *   Parent tsn of the scientific name
+ * @return
+ *   Taxa row as array
+ */
 function getRowByScientificName($scientific_name, $rank_id, $parent_tsn = 0) {
 	$db = connect();
-	//$params = array($scientificName, $rank_id, $parent_tsn);
-	$sql = "select * from Taxa where match(scientificName) against('$scientific_name') and rank_id = $rank_id and parent_tsn = $parent_tsn";
-	//$row = $db->getRow($sql, null, $params, null, MDB2_FETCHMODE_ASSOC);
-	$row = $db->queryRow($sql, null, MDB2_FETCHMODE_ASSOC);
+	$params = array($scientific_name, $rank_id, $parent_tsn);
+  $sql = "select * from Taxa where scientificName = ? and rank_id = ? and parent_tsn = ?";
+  $row = $db->getRow($sql, null, $params, null, MDB2_FETCHMODE_OBJECT);
 	isMdb2Error($row, "Error selecting scientificName information");
 	return $row;
+}
+
+/**
+ * Retrieve kingdom id given kindom name
+ * @param type $scientific_name
+ * @return type 
+ */
+function getKingdomId($kingdom_name) {
+  $db = connect();
+	$params = array($kingdom_name);
+  $sql = "select kingdom_id from Kingdoms where kingdom_name = ?";
+  $id = $db->getOne($sql, null, $params);
+	isMdb2Error($id, "Error selecting kingdom id");
+	return $id;
 }
