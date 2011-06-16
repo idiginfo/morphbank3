@@ -80,6 +80,20 @@ if ($action == 'new' && empty($_FILES['userresume'])) {
   exit;
 }
 
+if ($action == 'new') {
+  $fileTmp = $_FILES['userresume']['tmp_name'];
+  $fileType = $_FILES['userresume']['type'];
+  $fileName = $_FILES['userresume']['name'];
+  $fileExt = strrchr($fileName, '.');
+  $file = $uin . $fileExt;
+  $filePath = $config->cvFolder . $file;
+
+  if (!move_uploaded_file($fileTmp, $filePath)) {
+    header("location: $indexUrl&code=7&$queryString");
+    exit;
+  }
+}
+
 // Get post variables
 $first_name = trim($_POST['first_name']);
 $last_name = trim($_POST['last_name']);
@@ -246,17 +260,6 @@ if ($_POST['subscription'] == 1 && $config->mailList) {
 }
 
 if ($action == 'new') {
-  $fileTmp = $_FILES['userresume']['tmp_name'];
-  $fileType = $_FILES['userresume']['type'];
-  $fileName = $_FILES['userresume']['name'];
-  $fileExt = strrchr($fileName, '.');
-  $file = $uin . $fileExt;
-  $filePath = $config->cvFolder . $file;
-
-  if (!move_uploaded_file($fileTmp, $filePath)) {
-    header("location: $indexUrl&code=7&$queryString");
-    exit;
-  }
 
   $text = "A REQUEST FOR NEW USER ACCOUNT ON MORPHBANK FROM:\n\n";
   $text .= "Name: $first_name $last_name \n";
