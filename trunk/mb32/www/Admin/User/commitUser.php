@@ -33,10 +33,11 @@ include_once('spam.php');
  * Do not want to send password info via get on redirect
  */
 
-unset($_POST['pin']);
-unset($_POST['confirm_pin']);
-unset($_POST['email']);
-$queryString = getParamString($_POST);
+$post_array = $_POST;
+unset($post_array['pin']);
+unset($post_array['confirm_pin']);
+unset($post_array['email']);
+$queryString = getParamString($post_array);
 
 $errorPriority = 5;
 
@@ -57,7 +58,8 @@ if ($action == 'new') {
 }
 
 foreach ($required as $field) {
-  if (empty($_POST[$field])) {
+  $req_field = trim($_POST[$field]);
+  if (empty($req_field)) {
     header("location: $indexUrl&code=17&$queryString");
     exit;
   }
@@ -79,23 +81,23 @@ if ($action == 'new' && empty($_FILES['userresume'])) {
 }
 
 // Get post variables
-$first_name = $_POST['first_name'];
-$last_name = $_POST['last_name'];
-$middle_init = $_POST['middle_init'];
-$suffix = $_POST['suffix'];
-$uin = $_POST['uin'];
-$pin = $_POST['pin'];
-$email = $_POST['email'];
-$affiliation = $_POST['affiliation'];
-$street1 = $_POST['street1'];
-$street2 = $_POST['street2'];
-$city = $_POST['city'];
-$country = $_POST['country'];
-$state = $_POST['state'];
-$zipcode = $_POST['zipcode'];
-$logoURL = $_POST['link'];
-$name = trim($first_name) . " " . trim($last_name);
-$address = trim($street1) . " " . trim($street2) . " " . trim($city) . " " . trim($state) . " " . trim($country) . " " . trim($zipcode);
+$first_name = trim($_POST['first_name']);
+$last_name = trim($_POST['last_name']);
+$middle_init = trim($_POST['middle_init']);
+$suffix = trim($_POST['suffix']);
+$uin = trim($_POST['uin']);
+$pin = trim($_POST['pin']);
+$email = trim($_POST['email']);
+$affiliation = trim($_POST['affiliation']);
+$street1 = trim($_POST['street1']);
+$street2 = trim($_POST['street2']);
+$city = trim($_POST['city']);
+$country = trim($_POST['country']);
+$state = trim($_POST['state']);
+$zipcode = trim($_POST['zipcode']);
+$logoURL = trim($_POST['link']);
+$name = $first_name . " " . $last_name;
+$address = $street1 . " " . $street2 . " " . $city . " " . $state . " " . $country . " " . $zipcode;
 $status = $_POST['accountstatus'] == 1 ? 1 : 0;
 
 $db = connect();
