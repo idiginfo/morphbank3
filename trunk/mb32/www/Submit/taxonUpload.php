@@ -51,13 +51,20 @@ $rowIterator = $objPHPExcel->getActiveSheet()->getRowIterator();
 /**
  * Required fields
  * 
- * ScientificName => 30
+ * ScientificName => 28
+ * Rank => 29
+ * TaxonAuthorDate => 30
+ * NameType => 31
+ * DateToPublish => 32
  * Usage => 33
- * Group => 36
- * User => 37
- * Submitter => 38
+ * NameSource => 34
+ * URL => 35
+ * Comment => 36
+ * Group => 37
+ * User => 38
+ * Submitter => 39
  */
-$reqFields = array(30, 33, 36, 37, 38);
+$reqFields = array(28, 29, 31, 32, 33, 37, 38, 39);
 
 // Loop through sheet, collect data, filter, find rank
 $array_data = array();
@@ -71,7 +78,7 @@ foreach ($rowIterator as $row) {
 		$cellValue  = $cell->getCalculatedValue();
     
     // if columns missing, report error
-    if (in_array($colIndex, $reqFields) && empty($cellValue)) die("Missing required value for cell $cellColumn $rowIndex.$lb");
+    //if (in_array($colIndex, $reqFields) && empty($cellValue)) die("Missing required value for cell $colIndex $rowIndex.$lb");
     
     // If this is row one, save the values to reference later
     if ($rowIndex == 1) {
@@ -85,14 +92,15 @@ foreach ($rowIterator as $row) {
       }
     }
 	}
+
   if ($rowIndex == 1) continue;
-	$tree_data[$rowIndex] = array_filter(array_slice($array_data[$rowIndex], 0, 28, true));
+	$tree_data[$rowIndex] = array_filter(array_slice($array_data[$rowIndex], 0, 27, true));
 	end($tree_data[$rowIndex]);
 	$rank = getRankByColumn(key($tree_data[$rowIndex]));
-	$taxon_data[$rowIndex] = $tree_data[$rowIndex] + array_slice($array_data[$rowIndex], 27, 10, true);
+	$taxon_data[$rowIndex] = $tree_data[$rowIndex] + array_slice($array_data[$rowIndex], 27, 15, true);
   $taxon_data[$rowIndex]['rankid'] = $rank;
+  $taxon_data[$rowIndex]['datetopublish'] = gmdate('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($taxon_data[$rowIndex]['datetopublish']));
 }
-
 
 /**
  * Loop through compiled taxon data
@@ -137,23 +145,28 @@ foreach ($taxon_data as $taxon) {
       echo "Scientific name $scientific_name does not exist. Preparing data.$lb";
       if ($taxon['rankid'] == $rank_id) {
         $kingdom_id = getKingdomId($taxon[1]);
-        $taxon_author_id = $db->quote(FindAuthor($taxon['taxonauthordate'], $kingdom_id));
-        $authorName = $db->quote(FindAuthorName($taxon_author_id));
+        $dateToPublish = $db->quote($taxon['datetopublish']);
         $letter = $db->quote($taxon['scientificname'][0]);
         $scientificName = $db->quote($taxon['scientificname']);
+        $taxon_author_id = $db->quote(FindAuthor($taxon['taxonauthordate'], $kingdom_id));
+        $authorName = FindAuthorName($taxon_author_id);
         $comment = empty($taxon['comment']) ? $db->quote(NULL): $db->quote($taxon['comment']);
+        $nameSource = $db->quote($taxon['namesource']);
       } else {
-        // If rank ids do not match, prepare to insert new scientific name
-        $taxon_author_id = $db->quote(NULL);
-        $authorName = $db->quote(NULL);
+        // If rank ids do not match, prepare to insert new parent scientific name
+        $kingdom_id = getKingdomId($taxon[1]);
+        $dateToPublish = $db->quote($taxon['datetopublish']);
         $letter = $db->quote($scientific_name[0]);
         $scientificName = $db->quote($scientific_name);
+        $taxon_author_id = $db->quote(NULL);
+        $authorName = NULL;
         $comment = $db->quote(NULL);
+        $nameSource = $db->quote(NULL);
       }
       
       // Begin transaction
       $db->beginTransaction();
-      echo "Starting TreeInsert transaction for $scientificName.$lb";
+      echo "Starting DB transaction for inserting $scientificName.$lb";
       
       //Call Tree Insert procedure to insert new taxa
       $params = array();
@@ -162,7 +175,7 @@ foreach ($taxon_data as $taxon) {
       $params[] = $db->quote($taxon['submitter'], 'integer');
       $params[] = $db->quote($taxon['group'], 'integer');
       $params[] = $db->quote($taxon['user'], 'integer');
-      $params[] = "NOW()";
+      $params[] = $dateToPublish;
       $params[] = $db->quote('mtsn');
       $params[] = $db->quote($parent_tsn, 'integer');
       $params[] = $db->quote($kingdom_id, 'integer');
@@ -173,26 +186,19 @@ foreach ($taxon_data as $taxon) {
       $params[] = $db->quote(NULL);
       $params[] = $db->quote(NULL);
       $params[] = $db->quote($taxon['nametype']);
-      $params[] = $db->quote($taxon['namesource']);
+      $params[] = $nameSource;
       $params[] = $comment;
 
       $result = $db->executeStoredProc('TreeInsert', $params);
-      if (isMdb2Error($result, 'TreeInsert Stored Procedure', 6)) {
+      if (PEAR::isError($result)) {
         $db->rollback();
-        die("Error: TreeInsert transaction failed. Rolled back for $scientificName.$lb");
-      } else {
-        $db->commit();
-        echo "TreeInsert transaction committed for $scientificName.$lb";
-        echo $lb;
+        echo "Error: TreeInsert transaction failed. Rolled back for $scientificName.$lb";
+        die(__LINE__.$result->getUserInfo());
       }
-      
       $tsn = $result->fetchOne();
       clear_multi_query($result);
       
-      $db->beginTransaction();
-      echo "Starting transaction for Taxa update.$lb";
-      
-      // Update Taxa
+      // Update Taxa - put last because transaction 
       $parentName = getScientificName($parent_tsn);
       $sciNames = getTaxonomicNamesFromBranch($parent_tsn, " ", false);
       $taxonomicNames = $sciNames . ' ' . $scientificName;
@@ -205,10 +211,51 @@ foreach ($taxon_data as $taxon) {
         $db->rollback();
         die("Error: Transaction rolled back for Taxa update on $scientificName.$lb");
         
-      } else {
-        $db->commit();
-        echo "Transaction committed for Taxa update on $scientificName.$lb";
       }
+      
+      // If external links given, insert into ExternalLinkObject
+      if (!empty($taxon['externallinktype']) && !empty($taxon['externallinklabel']) && !empty($taxon['externallinkurl'])) {
+        $params = array($tsn);
+        $boid = $db->getOne("select id from TaxonConcept where tsn = ?", null, $params);
+        if (PEAR::isError($boid)) {
+          $db->rollback();
+          echo "Error: Selecting BaseObject id from TaxonConcept using tsn for $scientificName.$lb";
+          die(__LINE__.$boid->getUserInfo());
+        }
+        
+        $params = array($taxon['externallinktype']);
+        $type_id = $db->getOne("select linkTypeId from ExternalLinkType where name = ?", null, $params);
+        if (PEAR::isError($type_id)) {
+          $db->rollback();
+          echo "Error: Selecting linkTypeId for $taxon[externallinktype].$lb";
+          die(__LINE__.$type_id->getUserInfo());
+        }
+      
+        $label = trim($taxon['externallinklabel']);
+        $url = trim($taxon['externallinkurl']);
+        $description = trim($taxon['externallinkdescription']);
+        if ($boid) {
+          $params = array($boid, $type_id, $db->quote($label), $db->quote($url), $db->quote($description), $db->quote(null));
+          $sql = "insert into ExternalLinkObject set mbId = ?, extLinkTypeId = ?, Label = ?, urlData = ?, description = ?, externalId = ?";
+          $stmt = $db->prepare($sql);
+          if (PEAR::isError($stmt)) {
+            $db->rollback();
+            echo "Error preparing query for external links.$lb";
+            die(__LINE__.$stmt->getUserInfo());
+          } 
+          $stmt->execute($params);
+          if (PEAR::isError($stmt)) {
+            $db->rollback();
+            echo "Error executing query for external links.$lb";
+            die(__LINE__.$stmt->getUserInfo());
+          } 
+          $stmt->free();
+        }
+      }
+      
+      $db->commit();
+      echo "Processing of $scientificName completed.$lb";
+      
       $taxonCache[$taxonBranch] = $tsn;
       $parent_tsn = $tsn;
 		}
