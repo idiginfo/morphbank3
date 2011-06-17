@@ -235,7 +235,7 @@ foreach ($taxon_data as $taxon) {
         $url = trim($taxon['externallinkurl']);
         $description = trim($taxon['externallinkdescription']);
         if ($boid) {
-          $params = array($boid, $type_id, $db->quote($label), $db->quote($url), $db->quote($description), $db->quote(null));
+          $params = array($boid, $type_id, $label, $url, $description, NULL);
           $sql = "insert into ExternalLinkObject set mbId = ?, extLinkTypeId = ?, Label = ?, urlData = ?, description = ?, externalId = ?";
           $stmt = $db->prepare($sql);
           if (PEAR::isError($stmt)) {
