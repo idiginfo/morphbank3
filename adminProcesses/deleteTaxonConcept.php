@@ -57,6 +57,13 @@ foreach ($results as $row) {
     echo (__LINE__.$result->getUserInfo());
   }
   
+  $result = $db->query("delete from ExternalLinkObject where mbid = $row->id");
+  if (PEAR::isError($result)) {
+    $error = TRUE;
+    echo "Error while deleting mbid $row->id from ExternalLinkObject.\n";
+    echo (__LINE__.$result->getUserInfo());
+  }
+  
   if ($error) {
     $db->rollback();
     die("Transaction rolled back.\n");
