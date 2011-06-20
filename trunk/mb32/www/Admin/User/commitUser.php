@@ -80,20 +80,6 @@ if ($action == 'new' && empty($_FILES['userresume'])) {
   exit;
 }
 
-if ($action == 'new') {
-  $fileTmp = $_FILES['userresume']['tmp_name'];
-  $fileType = $_FILES['userresume']['type'];
-  $fileName = $_FILES['userresume']['name'];
-  $fileExt = strrchr($fileName, '.');
-  $file = $uin . $fileExt;
-  $filePath = $config->cvFolder . $file;
-
-  if (!move_uploaded_file($fileTmp, $filePath)) {
-    header("location: $indexUrl&code=7&$queryString");
-    exit;
-  }
-}
-
 // Get post variables
 $first_name = trim($_POST['first_name']);
 $last_name = trim($_POST['last_name']);
@@ -113,6 +99,20 @@ $logoURL = trim($_POST['link']);
 $name = $first_name . " " . $last_name;
 $address = $street1 . " " . $street2 . " " . $city . " " . $state . " " . $country . " " . $zipcode;
 $status = $_POST['accountstatus'] == 1 ? 1 : 0;
+
+if ($action == 'new') {
+  $fileTmp = $_FILES['userresume']['tmp_name'];
+  $fileType = $_FILES['userresume']['type'];
+  $fileName = $_FILES['userresume']['name'];
+  $fileExt = strrchr($fileName, '.');
+  $file = $uin . $fileExt;
+  $filePath = $config->cvFolder . $file;
+
+  if (!move_uploaded_file($fileTmp, $filePath)) {
+    header("location: $indexUrl&code=7&$queryString");
+    exit;
+  }
+}
 
 $db = connect();
 
