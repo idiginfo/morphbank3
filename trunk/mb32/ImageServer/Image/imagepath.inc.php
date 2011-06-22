@@ -120,6 +120,7 @@ function setTypeExtDir($imgPath, $id, $imgType = 'thumbs', $originalImgType = ""
 	// imgType: jpg         dir: jpg  ext: jpg
 	// imgType: jpeg        dir: jpeg ext: jpeg
 	// imgType: thumbs       dir: thumbs ext: jpg
+	// imgType: iip	         dir: iip ext: tif
 
 	// make original properties consistent
 	$originalImageType = strtolower($originalImgType);
@@ -142,6 +143,9 @@ function setTypeExtDir($imgPath, $id, $imgType = 'thumbs', $originalImgType = ""
 	} else if ($imageType == "tpc") { //tilepic
 		$imageDir = 'tpc';
 		$imageExt = 'tpc';
+	} else if ($imageType == "iip"){
+		$imageDir = 'iip';
+		$imageExt = 'tif';
 	} else if ($imageType != 'thumbs' && $imageType != 'jpg' && $imageType != 'jpeg'
 	&& $imageType != 'tif' && $imageType != 'tiff') {
 		// case of unknown type, return thumbnail
