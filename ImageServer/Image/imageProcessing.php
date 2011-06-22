@@ -1,25 +1,25 @@
 <?php
 /**
-* Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the GNU Public License v2.0
-* which accompanies this distribution, and is available at
-* http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-* 
-* Contributors:
-*   Fredrik Ronquist - conceptual modeling and interaction design
-*   Austin Mast - conceptual modeling and interaction design
-*   Greg Riccardi - initial API and implementation
-*   Wilfredo Blanco - initial API and implementation
-*   Robert Bruhn - initial API and implementation
-*   Christopher Cprek - initial API and implementation
-*   David Gaitros - initial API and implementation
-*   Neelima Jammigumpula - initial API and implementation
-*   Karolina Maneva-Jakimoska - initial API and implementation
-*   Deborah Paul - initial API and implementation implementation
-*   Katja Seltmann - initial API and implementation
-*   Stephen Winner - initial API and implementation
-*/
+ * Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the GNU Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * Contributors:
+ *   Fredrik Ronquist - conceptual modeling and interaction design
+ *   Austin Mast - conceptual modeling and interaction design
+ *   Greg Riccardi - initial API and implementation
+ *   Wilfredo Blanco - initial API and implementation
+ *   Robert Bruhn - initial API and implementation
+ *   Christopher Cprek - initial API and implementation
+ *   David Gaitros - initial API and implementation
+ *   Neelima Jammigumpula - initial API and implementation
+ *   Karolina Maneva-Jakimoska - initial API and implementation
+ *   Deborah Paul - initial API and implementation implementation
+ *   Katja Seltmann - initial API and implementation
+ *   Stephen Winner - initial API and implementation
+ */
 
 //if (!defined('PHP_ENTRY')){ die('Cannot be run directly');}
 
@@ -71,6 +71,7 @@ function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $fileS
 		$thumbImgPath = getImageFilePath($id, "thumb");
 		$tifImgPath = getImageFilePath($id, "tif");
 		$tpcImgPath = getImageFilePath($id, "tpc");
+		$iipImgPath = getImageFilePath($id, "iip");
 
 		// create full resolution jpeg
 		if ($imageType != 'jpeg' && !checkFileDate($jpegImgPath, $originalImgPath)){
@@ -114,6 +115,15 @@ function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $fileS
 				$numFixed ++;
 			}
 		}
+		// create openzoom (iip)
+		if (!checkFileDate($iipImgPath, $originalImgPath)){
+			//$message .= "No file for path '$tpcImgPath'\n";
+			$converted = convertIip($jpegImgPath, $iipImgPath);
+			if ($converted){
+				$message .= "iip";
+				$numFixed ++;
+			}
+		}
 		// create tif, if required by TIF_PROCESS
 		if ($config->processTiff && $imgType != "tif" && !checkFileDate($tifImgPath, $originalImgPath)) { // make tif from original
 			$message .= "Creating tif file for id: $id original type: $imageType \n";
@@ -152,20 +162,20 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 	// find the new file to be used as original
 
 	if (stripos($fileAccessPath,"http:")===0){// fileName is a URL
-    // URL: copy the file to temporary location
-    $tmpPath = $config->imgTmpDir.mktime();
-    copy($fileAccessPath, $tmpPath);
-    $fileAccessPath = $tmpPath;
+		// URL: copy the file to temporary location
+		$tmpPath = $config->imgTmpDir.mktime();
+		copy($fileAccessPath, $tmpPath);
+		$fileAccessPath = $tmpPath;
 	} else if (!@file_exists($fileAccessPath) && !empty($fileSourceDir)){
-    // try to find file in file system
-    $fileAccessPath = getFileFromFileSystem($fileAccessPath, $fileSourceDir);
+		// try to find file in file system
+		$fileAccessPath = getFileFromFileSystem($fileAccessPath, $fileSourceDir);
 	}
 
 	// get imageType from the file
 	$imageType = getImageFileType($fileAccessPath, $fileName);
 	if (empty($imageType)){
-    $message .= "corrupted or missing original\n";
-    return false;
+		$message .= "corrupted or missing original\n";
+		return false;
 	}
 
 	$origType = $imageType;
@@ -176,14 +186,14 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 	// copy the new file to the location of the original
 	$copy = "cp $fileAccessPath $origPath; chmod 644 $origPath";
 	$resp = shell_exec($copy);
-  $message .= "Copied $fileAccessPath to $origPath\n";
+	$message .= "Copied $fileAccessPath to $origPath\n";
 	if (!empty($tmpPath)) unlink($tmpPath); // get rid of temporary file
 	return $imageType;
 }
 
 function getFileFromFileSystem($fileAccessPath, $fileSourceDir){
 	global $message;
-        $message .= "searching $fileSourceDir for image\n";
+	$message .= "searching $fileSourceDir for image\n";
 	// try to find file in ftp site
 	$escFileName = str_replace(" ", "\ ", $fileAccessPath);
 	$escFileName = str_replace("[", "\[", $escFileName);
@@ -263,6 +273,21 @@ function convertDng($source){
 function convertTpc($id, $imgSrc = null){
 	$success = makeTilePic($id, $imgSrc);
 }
+
+function convertIip($source, $target){
+	global $config;
+	$convert = $config->vips." im_vips2tiff $source $target:deflate,tile:256x256,pyramid";
+	
+	$message .= date("H:i:s")." Executing: $convert\n";
+	$reply = shell_exec($convert);
+	if (strlen($reply)>0){
+		$message .=  "conversion failed with message: '$reply'<br/>\n)";
+	}
+	$message .=  date("H:i:s")." Finished\n";
+	return $message;
+
+}
+
 
 // list of file types recognized by getimagesize
 $exts = array('tif','jpg','bmp','jpeg','png','gif','tiff');
