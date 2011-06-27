@@ -21,7 +21,7 @@
 *   Stephen Winner - initial API and implementation
 */
 
-include_once('../../../../includes/pop.inc.php');
+include_once('pop.inc.php');
 
 include_once('addImgTech.php');
 
