@@ -120,7 +120,7 @@ foreach ($taxon_data as $taxon) {
     // If column empty, continue
 		if (empty($taxon[$col])) continue;
     
-		$taxonBranch .= ($col == 1) ? $taxon[$col] : ' ' . $taxon[$col];
+    $taxonBranch .= ($col == 1) ? $taxon[$col] : ' ' . $taxon[$col];
 		
     // If taxon branch is cached, set as parent tsn and continue to next column
     if (array_key_exists($taxonBranch, $taxonCache)) {
@@ -128,10 +128,9 @@ foreach ($taxon_data as $taxon) {
       continue;
     }
     
-    // Get rank according to column
-		$rank_id = getRankByColumn($col);
+    $rank_id = getRankByColumn($col);
 		$parent_name = trim(getScientificName($parent_tsn));
-		$scientific_name = trim(createNewScientificName($taxon[$col], $parent_name, $rank_id, $parent_tsn));
+		$scientific_name = trim(createNewScientificName($taxon[$col], $parent_name, $rank_id, $parent_tsn, TRUE));
     echo "Check scientific name: $scientific_name.$lb";
     $row = getRowByScientificName($scientific_name, $rank_id, $parent_tsn);
     
