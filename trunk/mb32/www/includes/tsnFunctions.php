@@ -467,12 +467,12 @@ function setScientificName($tsn, $sciName, $parentName){
  * @param $rank
  * @param $parentTSN
  */
-function createNewScientificName($newName, $parentName, $rank_id, $parentTSN){
+function createNewScientificName($newName, $parentName, $rank_id, $parentTSN, $skip = FALSE){
 	if ($rank_id <= 180) { // rank is genus or above
 		$scientificName = trim($newName);
 	} elseif ($rank_id > 180 && $rank_id <= 220) { // rank is subgenus to species
 		$scientificName = trim($parentName);
-		if ($rank_id == 190) {// use parenthesis if subgenus and they do not exist
+		if ($rank_id == 190 && !$skip) {// use parenthesis if subgenus and they do not exist
 			$preg = '#\([^\)]+\)#';
 			if (preg_match($preg, $newName)) {
 				$scientificName .= " " . trim($newName);
