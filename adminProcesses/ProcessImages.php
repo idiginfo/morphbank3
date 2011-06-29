@@ -95,7 +95,7 @@ while($row = $result->fetchRow()){
         $count = $updateSizeStmt->execute($params);
         isMdb2Error($count,"update HW id $id width $width height $height sql: $updateSizeSql");
         $message .= ": width height updated ";
-        echo $message."\n";
+        //echo $message."\n";
     } else {
         $message .= ":width/height unchanged ";
     }
