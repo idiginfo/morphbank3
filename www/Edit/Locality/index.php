@@ -95,7 +95,7 @@ function getLocalityMsg($id, $code) {
  */
 function getLocality($id){
 	$db = connect();
-	$sql = "SELECT l.id, l.country, l.locality as Locality, 
+	$sql = "SELECT l.id, l.country, l.state, l.country, l.locality as Locality, 
 			l.latitude as Latitude, l.longitude as Longitude, 
 			l.coordinatePrecision as CoordinatePrecision, 
 			l.minimumElevation as MinimumElevation, l.maximumElevation as MaximumElevation, 
