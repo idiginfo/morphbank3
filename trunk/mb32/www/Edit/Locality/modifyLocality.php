@@ -83,6 +83,8 @@ $locUpdater = new Updater($db, $id, $userId, $groupId, 'Locality');
 $locUpdater->addField("continentOcean", $continent, $row['continentocean']);
 $locUpdater->addField("continent", $continent, $row['continent']);
 $locUpdater->addField("country", $country, $row['country']);
+$localityUpdater->addField("state", $_POST['state'], $row['state']);
+$localityUpdater->addField("county", $_POST['county'], $row['county']);
 $locUpdater->addField("locality", $_POST['Locality'], $row['locality']);
 $locUpdater->addField("latitude", $latitude, $row['latitude']);
 $locUpdater->addField("longitude", $longitude, $row['longitude']);

@@ -147,8 +147,9 @@ function displayLocalityForm($row){
 		echo	'<img src="/style/webImages/delete-trans.png" name="Delete" alt="Delete" /> </a></td>';
 		echo '</tr>';
 
-		echo '<tr><td><b>Country: </b></td><td><input type="text" size="55" id="Country" class="autocomplete country" name="Country" title="Enter Country" value=\'' . $row['country'] . '\' /></td></tr>';
-		
+		echo '<tr><td><b>Country: </b></td><td><input type="text" size="55" id="Country" class="autocomplete country" name="Country" title="Enter Country" value="' . $row['country'] . '" /></td></tr>';
+		echo '<tr><td><b>State/Province:</b></td><td align="left"><input name="state" id="state" size="40" title="Enter a state or province." value="'. $row['state'] . '" /></td></tr>';
+    echo '<tr><td><b>County:</b></td><td align="left"><input name="county" id="county" size="40" title="Enter a county." value="' . $row['county'] . '" /></td></tr>';
 		echo '<tr><td><b>Locality: </b></td><td><input type="text" size ="55" name="Locality" title = "Enter locality" value=\'' . $row['locality'] . '\' /></td></tr>';
 		
 		echo '<tr><td><b>Latitude: </b></td><td><input type="text"  name="Latitude" value="' . ($row['latitude'] < 0 ? abs($row['latitude']) : $row['latitude']) . '" title = "Enter the latitude in decimal degrees (0.0000 - 90.0000) and select North or South." size="11" />
