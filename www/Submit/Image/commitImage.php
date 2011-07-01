@@ -48,27 +48,6 @@ $eol             = isset($_REQUEST['eol']) ? 1 : NULL;
 
 $db = connect();
 
-// Check for valid view id
-$sql = "select id from View where id = ?";
-$vid = $db->getOne($sql, array('integer'), array($viewId));
-if (isMdb2Error($vid, "Error verifying view id", 5)) {
-	header("location: $indexUrl&code=2");
-	exit;
-}
-if (empty($vid)) {
-	errorLog("View Id is empty");
-	header("location: $indexUrl&code=2");
-	exit;
-}
-
-// Check for valid specimen id and get locality id for image update
-$sql = "select count(*) as count from Specimen where id = ?";
-$count = $db->getOne($sql, array('integer'), array($specimenId));
-if ($count == 0 || isMdb2Error($count, "Specimen does not exists.", 5)) {
-	header("location: $indexUrl&code=3");
-	exit;
-}
-
 if(!$publishDate) {
 	$dateToPublish = date('Y-m-d', (mktime(0, 0, 0, date("m") +6, date("d") - 1, date("Y"))));
 } else {
@@ -79,7 +58,7 @@ if(!$publishDate) {
 if (!empty($_FILES['ImageFile']['tmp_name'])) {
   $image_error = FALSE;
   
-	// Insert Object and Locality returning id
+	// Insert Image Object returning id
 	$params = array($db->quote("Image"), $contributor, $groupId, $userId, $db->quote($dateToPublish,'date'), $db->quote("Image added"), $db->quote(NULL));
 	$result = $db->executeStoredProc('CreateObject', $params);
 	if(isMdb2Error($result, 'Create Object procedure')) {
@@ -148,11 +127,8 @@ if (!empty($_FILES['ImageFile']['tmp_name'])) {
 		exit;
 	}
 	
-	if (!empty($localityId)) {
-		addImageToObject('Locality', $id, $localityId);
-	}
-	addImageToObject('Specimen', $id, $specimenId);
-	addImageToObject('View', $id, $viewId);
+  if (!empty($specimenId)) addImageToObject('Specimen', $id, $specimenId);
+	if (!empty($viewId)) addImageToObject('View', $id, $viewId);
 
 	if ($numRows == 1) {
 		updateKeywordsTable($id, 'insert');

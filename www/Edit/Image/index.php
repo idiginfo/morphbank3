@@ -154,14 +154,14 @@ function displayImageForm($row) {
 				<td id="imageThumb">' . thumbnailTag($id) . '</td>
 			</tr>';
 		echo '<tr>
-				<td><b>Specimen Id:<span class="req">*</span></b></td>
+				<td><b>Specimen Id: </b></td>
 				<td><input type="text" name="SpecimenId" value="' . $row['specimenid'] . '" title="" size="11" />
 					&nbsp;&nbsp; <a href= "javascript: pop(\'Specimen\', \'/Browse/BySpecimen/index.php?pop=yes&referer=Submit\');">
 					<img src="/style/webImages/selectIcon.png" alt="Select Specimen "  title="Click to select a Specimen" />(Select New)</a>
 				</td>
 			</tr>';
 		echo '<tr>
-				<td><b>View Id:<span class="req">*</span> </b></td>
+				<td><b>View Id: </b></td>
 				<td><input type="text" name="ViewId" value="' . $row['viewid'] . '" title="" size="11" />
 					&nbsp;&nbsp; <a href= "javascript: pop(\'View\', \'/Browse/ByView/index.php?pop=yes&referer=Submit\');"> 
 					<img src="/style/webImages/selectIcon.png" alt="Select View "  title="Click to select a View" />(Select New)</a>
