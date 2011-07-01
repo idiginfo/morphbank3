@@ -67,6 +67,8 @@ $localityUpdater = new Updater($db, $id, $userId, $groupId, 'Locality');
 $localityUpdater->addField("continentOcean", $continent, null);
 $localityUpdater->addField("continent", $continent, null);
 $localityUpdater->addField("country", $country, null);
+$localityUpdater->addField("state", $_POST['state'], null);
+$localityUpdater->addField("county", $_POST['county'], null);
 $localityUpdater->addField("locality", $_POST['Locality'], null);
 $localityUpdater->addField("latitude", $latitude, null);
 $localityUpdater->addField("longitude", $longitude, null);
