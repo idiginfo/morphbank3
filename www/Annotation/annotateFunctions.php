@@ -221,15 +221,13 @@ function displayImageTitle($objArray) {
  */
 function displayRelatedAnnotations($objArray, $singleShow = false) {
 	
-
-  echo '<pre>';
-  print_r($objArray);
-  echo '</pre>';
-  exit;
 	$size = sizeof($objArray);
 	if ($size < 1) return;
 	echo '<h3>Related Annotations</h3>';
 	$OldResults = getRelated($objArray);
+  echo '<pre>';
+  print_r($OldResults);
+  echo '</pre>';
   
 	// ADDED THIS CODE SO THAT THE SPECIMEN RECORD SHOWS UP AS ONE OF THE DETERMINATION RECORDS.
 	$OldResults = AddSpecimenDetermination($OldResults, $objArray);
