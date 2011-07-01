@@ -319,7 +319,7 @@ function showTsnData ($tsnId) {
 	//echo '<h3>Taxonomy</h3><br/>';
 	$arrayOfParents = getTaxonBranchArray($tsnId);
 	if (!$arrayOfParents) {
-		echo '<div class="error">Taxonomic Id not found, please contact the administration group</div>';
+		echo '<div>No determination associated with this image</div>';
 		return;
 	}
 	$arraySize = count($arrayOfParents);

@@ -211,8 +211,8 @@ function getViewData($viewId) {
 function showViewData($viewId, $imgId) {
 	$viewRecord = getViewData($viewId);
 	if (!$viewRecord) {
-		echo '<div class="error">No view found for this image';
-		echo "<br/>Image id: $imgId and view id: $viewId</div>";
+		echo '<div>No view associated with this image';
+		echo "<br/>Image id: $imgId</div>";
 		return;
 	}
 	// print out the labels
@@ -343,8 +343,7 @@ function getSpecimenData($specimenId) {
 function showSpecimenData($specimenId, $imgId) {
 	global $specimenRecord;
 	if (!$specimenRecord) {
-		echo "<div class=\"error\">No specimen for image $imgId. Specimen id is $specimenId</div>";
-		echo "<div>Soon we'll be able to find the specimen for you!</div>";
+		echo "<div>No specimen associated with this image</div>";
 		return;
 	}
 	echo '<h3>Specimen</h3><br/>';
