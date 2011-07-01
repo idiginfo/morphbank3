@@ -226,6 +226,7 @@ function displayRelatedAnnotations($objArray, $singleShow = false) {
 	if ($size < 1) return;
 	echo '<h3>Related Annotations</h3>';
 	$OldResults = getRelated($objArray);
+  
 	// ADDED THIS CODE SO THAT THE SPECIMEN RECORD SHOWS UP AS ONE OF THE DETERMINATION RECORDS.
 	$OldResults = AddSpecimenDetermination($OldResults, $objArray);
 	
@@ -277,31 +278,32 @@ function getRelated($objArray)
 		$rows = $db->getAll($sql, null, array($object['objectid']), null, MDB2_FETCHMODE_ASSOC);
 		isMdb2Error($rows, "Selecting related annotations");
 		$counter = 0;
-		if ($rows) {
-			foreach($rows as $row) {
-				$DetResults['id'][$counter] = $row['id'];
-				$DetResults['objectId'][$counter] = $row['objectid'];
-				$DetResults['specimenId'][$counter] = $row['specimenid'];
-				$DetResults['TsnId'][$counter] = $row['tsnid'];
-				$DetResults['TaxonName'][$counter] = getScientificName($row['tsnid']);
-				if ($row['tsnid'] > "999000000") {
-					$DetResults['TaxonAuthor'][$counter] = "Temporary TSN Name";
-				} else {
-					$DetResults['TaxonAuthor'][$counter] = getTaxonAuthor($row['tsnid']);
-				}
-				$DetResults['typeDetAnnotation'][$counter] = $row['typedetannotation'];
-				$DetResults['prefix'][$counter] = $row['prefix'];
-				$DetResults['suffix'][$counter] = $row['suffix'];
-				if ($row['typedetannotation'] == 'disagree') {
-					$DetResults['numAgree'][$counter] = 0;
-					$DetResults['numDisagree'][$counter] = 1;
-				} else {
-					$DetResults['numAgree'][$counter] = 1;
-					$DetResults['numDisagree'][$counter] = 0;
-				}
-				$counter++;
-			}
-		}
+    
+    if (!$rows) return;
+		
+    foreach($rows as $row) {
+      $DetResults['id'][$counter] = $row['id'];
+      $DetResults['objectId'][$counter] = $row['objectid'];
+      $DetResults['specimenId'][$counter] = $row['specimenid'];
+      $DetResults['TsnId'][$counter] = $row['tsnid'];
+      $DetResults['TaxonName'][$counter] = getScientificName($row['tsnid']);
+      if ($row['tsnid'] > "999000000") {
+        $DetResults['TaxonAuthor'][$counter] = "Temporary TSN Name";
+      } else {
+        $DetResults['TaxonAuthor'][$counter] = getTaxonAuthor($row['tsnid']);
+      }
+      $DetResults['typeDetAnnotation'][$counter] = $row['typedetannotation'];
+      $DetResults['prefix'][$counter] = $row['prefix'];
+      $DetResults['suffix'][$counter] = $row['suffix'];
+      if ($row['typedetannotation'] == 'disagree') {
+        $DetResults['numAgree'][$counter] = 0;
+        $DetResults['numDisagree'][$counter] = 1;
+      } else {
+        $DetResults['numAgree'][$counter] = 1;
+        $DetResults['numDisagree'][$counter] = 0;
+      }
+      $counter++;
+    }
 	}
 	return $DetResults;
 }
@@ -315,6 +317,7 @@ function AddSpecimenDetermination($OldResults, $objArray) {
 	
 	foreach ($objArray as $object) {
 		$specimenData = getSpecimenDeterminationData(getSpecimenId($object['objectid']));
+    if (empty($specimenData)) return;
 		$OldResults['id'][$size] = $specimenData['specimenid'];
 		$OldResults['objectId'][$size] = $object['objectid'];
 		$OldResults['specimenId'][$size] = $specimenData['specimenid'];
