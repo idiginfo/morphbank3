@@ -85,7 +85,6 @@ function displayLocationForm(){
 	<h1><b>Add Locality</b></h1>
 	<br /><br />
 	<table border="0">
-    <?php echo getContinentSelectTag($_REQUEST['continentOcean']); ?>
 		<tr>
 			<td><b>Country:</b></td>
 			<td align="left"><input name="Country" id="Country" class="autocomplete country" size="40" title="Enter a Country." value="<?php echo $_REQUEST['Country'] ?>" /></td>
