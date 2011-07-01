@@ -698,6 +698,31 @@ function getContributorSelectTag($selectedUser = null, $groupId = null){
 }
 
 /**
+ * Get select options for continent ocean
+ * @return
+ *
+ * @param $selected [optional]
+ * @return string
+ */
+function getContinentSelectTag($selected = null){
+	global $objInfo;
+
+  $db = connect();
+
+	$sql = "select description from ContinentOcean";
+	$result = $db->queryCol($sql);
+	$html = '<tr><td><b>Continent/Ocean: </b></td><td>';
+	$html .= '<select id="continentOcean" name="contientOcean" title="Please select Continent/Ocean.">';
+  $html .= '<option value=""></option>';
+  foreach ($result as $value) {
+    $selected = $selected == $value ? 'selected="selected"' : '';
+		$html .= '<option '.$selected.' value="'.$value.'">'.$value.'</option>';
+	}
+  $html .= '</select></td></tr>';
+	return $html;
+}
+
+/**
  * Return Basis of Record select
  * @param $selectedRecord [optional]
  * @return string $records
