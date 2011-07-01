@@ -49,26 +49,6 @@ $eol             = isset($_POST['eol']) ? 1 : NULL;
 
 $db = connect();
 
-// Check for valid view id
-$countView = getObjectCount('View', $viewId);
-if (is_string($countView)) { // Error returned
-	header("location: $indexUrl&code=2");
-	exit;
-} elseif ($countView == 0) {
-	header("location: $indexUrl&code=3");
-	exit;
-}
-
-// Check for valid specimen id
-$countSpecimen = getObjectCount('Specimen', $specimenId);
-if (is_string($countSpecimen)) { // Error returned
-	header("location: $indexUrl&code=4");
-	exit;
-} elseif ($countSpecimen == 0) {
-	header("location: $indexUrl&code=5");
-	exit;
-}
-
 // Get BaseObject data
 $baseObj = getObjectData('BaseObject', $id);
 if (is_string($baseObj)) { // Error returned
@@ -125,12 +105,8 @@ if (is_string($numRowsImg)) { // Error returned
 }
 
 // Update image associations and counts
-replaceImage("Specimen", $id, $specimenId, $imgObj['specimenid']);
-replaceImage("View", $id, $viewId, $imgObj['viewid']);
-
-/**
- * TODO Add function for TSN Tree count
- */
+if (!empty($specimenId)) replaceImage("Specimen", $id, $specimenId, $imgObj['specimenid']);
+if (!empty($viewId)) replaceImage("View", $id, $viewId, $imgObj['viewid']);
 
 
 // Update keywords
@@ -158,4 +134,3 @@ if ($image_error) {
 }
 header("location: $indexUrl&code=1");
 exit;
-?>

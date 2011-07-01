@@ -94,7 +94,7 @@ function displayImageForm() {
         <td><input type="file" name="ImageFile" size="40"/></td>
       </tr>
       <tr>
-        <td><strong>Specimen Id / Specimen: <span class="req">*</span></strong></td>
+        <td><strong>Specimen Id / Specimen: </strong></td>
         <td align="left">
           <input type="text" name="SpecimenId" value="<?php echo $_REQUEST['SpecimenId'] ?>" size="10" />
           <h3>/</h3>
@@ -104,7 +104,7 @@ function displayImageForm() {
         </td>
       </tr>
       <tr>
-        <td><strong>View Id / View: <span class="req">*</span></strong></td>
+        <td><strong>View Id / View: </strong></td>
         <td align="left">
           <input type="text" name="ViewId" value="<?php echo $_REQUEST['ViewId'] ?>" size="10" />
           <h3>/</h3>

@@ -350,8 +350,6 @@ $(document).ready(function(){
 			
 			/* Image */
 			ImageFile: { required: function(element) { return $("#imageThumb").length == 0; } },
-			SpecimenId: { required: true, digits: true, remote: "/ajax/checkFormValues.php?action=check_specimen" },
-			ViewId: { required: true, digits: true, remote: "/ajax/checkFormValues.php?action=check_view" },
 			Magnification: { number: true },
 			
 			/* Locality */
