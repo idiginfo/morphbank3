@@ -225,18 +225,12 @@ function displayRelatedAnnotations($objArray, $singleShow = false) {
 	if ($size < 1) return;
 	echo '<h3>Related Annotations</h3>';
 	$OldResults = getRelated($objArray);
-  echo '<pre>';
-  print_r($OldResults);
-  echo '</pre>';
   
 	// ADDED THIS CODE SO THAT THE SPECIMEN RECORD SHOWS UP AS ONE OF THE DETERMINATION RECORDS.
 	$OldResults = AddSpecimenDetermination($OldResults, $objArray);
-	echo '<pre>';
-  print_r($OldResults);
-  echo '</pre>';
-  exit;
+
 	$class = !$singleShow ? 'topBlueBorder' : '';
-	if (sizeof($OldResults) < 1) {
+	if (empty($OldResults)) {
 		echo '<table class="'.$class.'" width="660px"><tr><td><h3>No related Annotations</h3></td></td></table>';
 		return;
 	}
