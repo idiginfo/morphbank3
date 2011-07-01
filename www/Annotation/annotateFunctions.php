@@ -222,6 +222,10 @@ function displayImageTitle($objArray) {
 function displayRelatedAnnotations($objArray, $singleShow = false) {
 	
 
+  echo '<pre>';
+  print_r($objArray);
+  echo '</pre>';
+  exit;
 	$size = sizeof($objArray);
 	if ($size < 1) return;
 	echo '<h3>Related Annotations</h3>';
