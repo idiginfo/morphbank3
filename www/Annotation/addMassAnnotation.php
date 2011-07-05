@@ -92,7 +92,6 @@ if ($annotationType == "Determination") {
 	}
 }
 
-$detInsertSql = "insert into DeterminationAnnotation (annotationId) values (?)";
 
 /**********************************************************************************
  *  for Each image id in the array,                                                            *
@@ -143,7 +142,14 @@ foreach ($objArray as $object) {
 
 	if ($annotationType=="Determination"){
 		// create DA object
-		$numRows = $db->execParam($detInsertSql,array($id));
+    $data = array($id);
+    $sql = "insert into DeterminationAnnotation (annotationId) values (?)";
+    $stmt = $db->prepare($sql);
+    $numRows = $stmt->execute($data);
+    if (isMdb2Error($numRows, 'Inserting DeterminationAnnotation', 5)) {
+      header("location: $returnUrl/?id=$id&code=5");
+      exit;
+    }
 		
 		// update DA object
 		$determinationUpdater = new Updater($db, $id, $userId , $groupId, 'DeterminationAnnotation', 'annotationId');

@@ -40,6 +40,8 @@ function getAnnotateMsg($code) {
 		echo '<div class="searchError">Conflict detected in selecting either a new taxon or agree, disagree, or qualify rank with a previous determination</div><br /><br />'."\n";
 	} elseif ($code == 4) {
 		echo '<div class="searchError">Error creating annotation object</div><br /><br />'."\n";
+	} elseif ($code == 5) {
+		echo '<div class="searchError">Error inserting determination annotation</div><br /><br />'."\n";
 	}
 	return;
 }
