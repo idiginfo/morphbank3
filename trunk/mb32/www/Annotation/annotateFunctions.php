@@ -212,7 +212,9 @@ function getScientificNameFromImage($imageId) {
 function displayImageTitle($objArray) {
 	foreach ($objArray as $object) {
 		if ($object['objecttypeid'] == 'Image') {
-			echo "<h1>Image Record[" . getScientificNameFromImage($object['objectid']) . "]</h1>";
+      $name = getScientificNameFromImage($object['objectid']);
+      $title = !empty($name) ? $name : "no determination found for image id " . $object['objectid'];
+			echo "<h1>Image Record[" . $title . "]</h1>";
 		}
 	}
 }
