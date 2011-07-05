@@ -65,6 +65,7 @@ $materialsUsedInId = $_POST['materialsUsedInId'];
 $resourcesused     = $_POST['resourcesused'];
 $annotationLabel   = $_POST['annotationLabel'];
 
+
 $xLocation = 0;
 if (isset($_POST['xLocation'])) $xLocation = $_POST['xLocation'];
 $yLocation = 0;
@@ -87,7 +88,7 @@ if ($annotationType == "Determination") {
 			$detAnnotationType = 'agree';
 		}
 	} else {
-		header("location: $returnUrl&code=3&id".$objectArray[0]['objectid']);
+		header("location: $returnUrl&code=3&id=".$objArray[0]['objectid']);
 		exit;
 	}
 }
@@ -169,10 +170,13 @@ foreach ($objArray as $object) {
 
 		$numRows = $determinationUpdater->executeUpdate();
 	}
-
+  
 	createAnnotationThumb($id, $object['objectid']);
 	updateKeywordsTable($id, 'insert');
 }
 
+
+
 // show annotation
-header("location: " . $config->domain . "/?id=$id");
+header("location: /?id=$id");
+exit;
