@@ -354,6 +354,7 @@ function getSpecimenId($imageId) {
  * @param integer $specimenId
  */
 function getSpecimenDeterminationData($specimenId) {
+  if (empty($specimenId)) return;
 	$db = connect();
 	$sql = "select * from Specimen where id = $specimenId";
 	$row = $db->queryRow($sql, null, MDB2_FETCHMODE_ASSOC);
