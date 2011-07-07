@@ -112,6 +112,7 @@ foreach ($objArray as $object) {
 	$specimenId = $db->getOne($query);
 	isMdb2Error($specimenId,$query);
 	// if (empty($specimenId)) continue;// no annotation for non-image?
+  
 	
 	//TODO change this into new strategy for create and update
 	$params = array($db->quote("Annotation"), $userId, $groupId, $userId, $db->quote($dateToPublish,'date'), $db->quote("Annotation added"), $db->quote(NULL));
@@ -122,7 +123,7 @@ foreach ($objArray as $object) {
 	}
 	$id = $result->fetchOne();
 	clear_multi_query($result);
-
+ 
 	$annotationUpdater = new Updater($db, $id, $userId , $groupId, 'Annotation');
 
 	$annotationUpdater->addField('objectId', $object['objectid'], null);
