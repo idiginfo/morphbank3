@@ -523,6 +523,9 @@ function getAnnotationData ($id) {
 
 function getSpecimenData ($id) {
 	global $link;
+  
+  if (empty($id)) return;
+  
 	$sql = 'SELECT Specimen.*, Specimen.id AS specimenId, Locality.*, Image.id AS imageid, '
 	.'ContinentOcean.description AS continentOcean, Country.description AS country, '
 	.'Specimen.sex AS sex, Specimen.form AS form, Specimen.DevelopmentalStage AS developmentalStage '
