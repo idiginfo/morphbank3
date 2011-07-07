@@ -20,7 +20,7 @@
 *   Katja Seltmann - initial API and implementation
 *   Stephen Winner - initial API and implementation
 */
-echo "test";
+
 function addImgTech(){
 ?>
 
