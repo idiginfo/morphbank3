@@ -25,26 +25,8 @@ include_once('thumbs.inc.php');
 
 include_once('gettables.inc.php');
 
-
-//***********************************************************************************
-//* @author:  David A. Gaitros                                                       *
-//* Date: June 22, 2006                                                              *
-//* @package: Edit Annotation                                                        *
-//* Description:  This is the MorphBank Annotation Tool.  The basic                  *
-//*     idea is to allow authorized users to view images and then enter comments     *
-//*     about those images.  There is not restriction as to the number of comments   *
-//*     that can be made. Associated with the comments is a title, keywords, type    *
-//*     annotation, and a d 256 block of characters for comments.                    *
-//***********************************************************************************/
-//***********************************************************************************
-//* Display the standard MorphBank Header with the Annotation title.                 *
-//***********************************************************************************/
 function editAnnotation($AnnotationId, $PrevURL)
 {
-	
-	
-	
-	
 	global $annotationMenuOptions;
 	global $objInfo;
 	global $annotationMenu;
@@ -88,13 +70,19 @@ function editAnnotation($AnnotationId, $PrevURL)
 	$date = mktime(0, 0, 0, $month, $day, $year);
 	$today = date('Y-m-d H:j:s');
 
-
+  if (!checkAuthorization($AnnotationId, $userId, $groupId, 'edit')) {
+    echo getNonAuthMessage(getNonAuthCode()) . "<br /><br />";
+    die();
+  }
+  /*
 	if ($baseObjectData['dateToPublish'] <= $today || $baseObjectData['userId'] != $userId) {
 		echo '<table width="720"> <td align = "right"> <h3>This annotation cannot be edited because it is published or was created by another user.</h3><br /><br />
          <a href = "javascript: window.close();"class="button smallButton"><div>Cancel</div> </a></td></table>';
 		die;
 	}
-	displayTitle($AnnotationData['objectId']);
+  */
+	
+  displayTitle($AnnotationData['objectId']);
 	echo '<table class="topBlueBorder" style="z-index=1;"><tr><td><b>Type of Annotation</b></tr><td>';
 	displayTypeofAnnotations($AnnotationData['typeAnnotation']);
 	echo '</TD></TR></TABLE width="740px">';
