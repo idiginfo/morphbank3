@@ -1126,9 +1126,6 @@ alter table CollectionObjects
     add foreign key (collectionId) references BaseObject(id), 
     add foreign key (objectId) references BaseObject(id);
 
-alter table Country
-    add foreign key (continentOcean) references ContinentOcean(name);
-
 alter table DeterminationAnnotation
     add foreign key (annotationId) references Annotation(id), 
     add foreign key (specimenId) references Specimen(id), 
