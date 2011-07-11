@@ -124,9 +124,12 @@ function updateBaseKeywords ($id, $massUpdate = false){
 		$imageAltText .= $keywords['form'].' ';
 		$imageAltText .= $keywords['collectorname'].' ';
 		$imageAltText .= $keywords['developmentalstage'].' ';
-		$imageAltText .= $keywords['continentocean'].' ';
+		$imageAltText .= $keywords['continent'].' ';
+    $imageAltText .= $keywords['ocean'].' ';
+    $imageAltText .= $keywords['country'].' ';
+    $imageAltText .= $keywords['state'].' ';
+    $imageAltText .= $keywords['county'].' ';
 		$imageAltText .= $keywords['locality'].' ';
-		$imageAltText .= $keywords['country'].' ';
 		$imageAltText .= $keywords['affiliation'].' ';
 		$imageAltText .= $taxonNames . $vernacularNames;
 		//add vernacular names from ITIS table 'Vernacular'
@@ -455,7 +458,7 @@ function CharacterKeywords($link, $id, $operation){
 
 							if($single_keywords['objectTypeId']=="Image"){
 								$image = $state -> appendChild($dom->createElement("image"));
-								$query = "SELECT Image.id, Image.originalFileName, Image.resolution, Image.magnification, Image.imageType, Image.accessNum, Image.copyrightText, Image.viewId, View.viewName, View.imagingTechnique, View.imagingPreparationTechnique, View.specimenPart, View.viewAngle, View.developmentalStage, View.sex, View.form, View.viewTSN, View.isStandardView, Specimen.sex, Specimen.form, Specimen.developmentalStage, Specimen.preparationType, Specimen.typeStatus, Specimen.name, Specimen.comment, Specimen.institutionCode, Specimen.collectionCode, Specimen.catalogNumber, Specimen.previousCatalogNumber, Specimen.relatedCatalogItem, Specimen.collectionNumber, Specimen.collectorName, Specimen.dateCollected, Specimen.notes, Specimen.taxonomicNames, Specimen.localityId, Locality.country, Locality.locality, Locality.latitude, Locality.longitude, Locality.minimumElevation, Locality.maximumElevation, Country.description AS Country, ContinentOcean.description, ContinentOcean.name, Specimen.tsnId, Groups.groupName, Image.specimenId, User.name FROM Image LEFT JOIN View ON Image.viewId = View.id LEFT JOIN Specimen ON Image.specimenId = Specimen.id LEFT JOIN Locality ON Specimen.localityId = Locality.id LEFT JOIN Country ON Locality.country = Country.name LEFT JOIN ContinentOcean ON Locality.continentOcean = ContinentOcean.name LEFT JOIN BaseObject ON Image.id = BaseObject.id LEFT JOIN Groups ON BaseObject.groupId = Groups.id LEFT JOIN User ON BaseObject.userId = User.id WHERE Image.id = ".$single_keywords['objectid'];
+								$query = "SELECT Image.id, Image.originalFileName, Image.resolution, Image.magnification, Image.imageType, Image.accessNum, Image.copyrightText, Image.viewId, View.viewName, View.imagingTechnique, View.imagingPreparationTechnique, View.specimenPart, View.viewAngle, View.developmentalStage, View.sex, View.form, View.viewTSN, View.isStandardView, Specimen.sex, Specimen.form, Specimen.developmentalStage, Specimen.preparationType, Specimen.typeStatus, Specimen.name, Specimen.comment, Specimen.institutionCode, Specimen.collectionCode, Specimen.catalogNumber, Specimen.previousCatalogNumber, Specimen.relatedCatalogItem, Specimen.collectionNumber, Specimen.collectorName, Specimen.dateCollected, Specimen.notes, Specimen.taxonomicNames, Specimen.localityId, Locality.continent, Locality.ocean, Locality.country, Locality.state, Locality.county, Locality.locality, Locality.latitude, Locality.longitude, Locality.minimumElevation, Locality.maximumElevation, Specimen.tsnId, Groups.groupName, Image.specimenId, User.name FROM Image LEFT JOIN View ON Image.viewId = View.id LEFT JOIN Specimen ON Image.specimenId = Specimen.id LEFT JOIN Locality ON Specimen.localityId = Locality.id LEFT JOIN BaseObject ON Image.id = BaseObject.id LEFT JOIN Groups ON BaseObject.groupId = Groups.id LEFT JOIN User ON BaseObject.userId = User.id WHERE Image.id = ".$single_keywords['objectid'];
 								$result = $db->query($query);
 								if(PEAR::isError($result)){
 									echo($result->getUserInfo()." $sql\n");
