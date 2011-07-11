@@ -235,8 +235,6 @@ class resultControls {
 			LEFT JOIN User ON Image.userId = User.id
 			LEFT JOIN BasisOfRecord ON Specimen.basisOfRecordId = BasisOfRecord.name
 			LEFT JOIN Locality ON Specimen.localityId = Locality.id
-			LEFT JOIN ContinentOcean ON Locality.continentOcean = ContinentOcean.name
-			LEFT JOIN Country ON Locality.country = Country.name
 			LEFT JOIN Tree ON Specimen.tsnId = Tree.tsn ';
 		
 		if ($groupId != $config->adminGroup) $dateToPublish = 'Image.dateToPublish <= CURDATE() ';
