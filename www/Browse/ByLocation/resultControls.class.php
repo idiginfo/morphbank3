@@ -25,7 +25,128 @@ include_once('filters/localityFilter.class.php');
 include_once('filters/sort.class.php');
 
 // Array that store the fields of the browseView table from the DB
-$sortByFields = array(array('field' => 'id', 'label' => 'Location Id', 'width' => 40, 'toSort' => true, 'inGet' => 0, 'order' => 'DESC'), array('field' => 'ContinentOcean', 'label' => 'Continent Ocean', 'width' => 40, 'toSort' => true, 'inGet' => 0, 'order' => 'ASC'), array('field' => 'Country', 'label' => 'Country', 'width' => 60, 'toSort' => true, 'inGet' => 0, 'order' => 'ASC'), array('field' => 'locality', 'label' => 'Locality', 'width' => 50, 'toSort' => true, 'inGet' => 0, 'order' => 'ASC'), array('field' => 'latitude', 'label' => 'Latitude', 'width' => 30, 'toSort' => false, 'inGet' => 0, 'order' => 'ASC'), array('field' => 'longitude', 'label' => 'Longitude', 'width' => 30, 'toSort' => false, 'inGet' => 0, 'order' => 'ASC'), array('field' => 'coordinatePrecision', 'label' => 'Coordinate Precision', 'width' => 30, 'toSort' => false, 'inGet' => 0, 'order' => 'ASC'), array('field' => 'minimumElevation', 'label' => 'Minimum Elevation', 'width' => 30, 'toSort' => false, 'inGet' => 0, 'order' => 'ASC'), array('field' => 'maximumElevation', 'label' => 'Maximum Elevation', 'width' => 30, 'toSort' => false, 'inGet' => 0, 'order' => 'ASC'), array('field' => 'minimumDepth', 'label' => 'Minimum Depth', 'width' => 30, 'toSort' => false, 'inGet' => 0, 'order' => 'ASC'), array('field' => 'maximumDepth', 'label' => 'Maximum Depth', 'width' => 30, 'toSort' => false, 'inGet' => 0, 'order' => 'ASC'), array('field' => 'imagesCount', 'label' => 'No. Images', 'width' => 50, 'toSort' => true, 'inGet' => 0, 'order' => 'ASC'));
+$sortByFields = array(
+    array(
+      'field' => 'id', 
+      'label' => 'Location Id', 
+      'width' => 40, 
+      'toSort' => true, 
+      'inGet' => 0, 
+      'order' => 'DESC'
+    ), 
+    array(
+      'field' => 'continent', 
+      'label' => 'Continent',
+      'width' => 40,
+      'toSort' => true,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'ocean', 
+      'label' => 'Ocean',
+      'width' => 40,
+      'toSort' => true,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'country',
+      'label' => 'Country',
+      'width' => 60,
+      'toSort' => true,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'state',
+      'label' => 'State',
+      'width' => 60,
+      'toSort' => true,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'county',
+      'label' => 'County',
+      'width' => 60,
+      'toSort' => true,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'locality',
+      'label' => 'Locality',
+      'width' => 50,
+      'toSort' => true,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'latitude',
+      'label' => 'Latitude',
+      'width' => 30,
+      'toSort' => false,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'longitude',
+      'label' => 'Longitude',
+      'width' => 30,
+      'toSort' => false,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'coordinatePrecision',
+      'label' => 'Coordinate Precision',
+      'width' => 30,
+      'toSort' => false,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'minimumElevation',
+      'label' => 'Minimum Elevation',
+      'width' => 30,
+      'toSort' => false,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'maximumElevation',
+      'label' => 'Maximum Elevation',
+      'width' => 30,
+      'toSort' => false,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'minimumDepth',
+      'label' => 'Minimum Depth',
+      'width' => 30,
+      'toSort' => false,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'maximumDepth',
+      'label' => 'Maximum Depth',
+      'width' => 30,
+      'toSort' => false,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+    array(
+      'field' => 'imagesCount',
+      'label' => 'No. Images',
+      'width' => 50,
+      'toSort' => true,
+      'inGet' => 0,
+      'order' => 'ASC'
+    ),
+  );
 
 class resultControls {
 	var $filterList = array();
@@ -137,12 +258,10 @@ class resultControls {
 	}
 
 	function createSQL($objInfo = null) {
-		$sql = 'SELECT K.id as id, continentOcean as ContinentOcean, country as Country,
+		$sql = 'SELECT K.id as id, continent, ocean, country, state, county,
         locality, longitude, latitude, coordinatePrecision, minimumElevation, maximumElevation, 
         minimumDepth, maximumDepth, imagesCount 
 			FROM Keywords K join Locality L on K.id = L.id ';
-		//LEFT JOIN ContinentOcean CO ON L.continentOcean = CO.name ';
-		//LEFT JOIN Country C ON L.country = C.name ';
 
 		// Where
 		if (isset($_GET['submit2'])) {
