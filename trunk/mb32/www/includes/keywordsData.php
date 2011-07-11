@@ -40,7 +40,7 @@ $annotationAttrs = ", A.objectId, A.typeAnnotation, A.title, A.comment, A.xmlDat
 $collectionAttrs = "";
 $groupsAttrs = ", G.groupName";
 $imageAttrs = ", I.originalFileName, I.resolution, I.magnification, I.imageType";
-$localityAttrs = ", L.country, L.continentOcean, L.locality, L.latitude, L.longitude"
+$localityAttrs = ", L.country, L.continent, L.ocean, L.state, L.county, L.locality, L.latitude, L.longitude"
 .", L.minimumElevation, L.maximumElevation";
 $specimenAttrs = ", S.sex, S.form, S.developmentalStage"
 .", S.preparationType, S.typeStatus, S.name, S.comment, S.institutionCode, S.collectionCode"
