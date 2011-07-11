@@ -70,6 +70,8 @@ function checkLocationMessage($id, $code){
 		echo '<div class="searchError">Error updating Locality</div><br /><br />';
 	} elseif ($code == 5) {
 		echo '<div class="searchError">Error inserting external link or reference.</div><br /><br />';
+	} elseif ($code == 6) {
+		echo '<div class="searchError">Error inserting country.</div><br /><br />';
 	}
 	return;
 }
@@ -85,6 +87,14 @@ function displayLocationForm(){
 	<h1><b>Add Locality</b></h1>
 	<br /><br />
 	<table border="0">
+    <tr>
+			<td><b>Continent:</b></td>
+			<td align="left"><?php echo getContinentSelect($_REQUEST['continent']); ?></td>
+		</tr>
+    <tr>
+			<td><b>Ocean:</b></td>
+			<td align="left"><input name="ocean" id="ocean" size="40" title="Enter an ocean." value="<?php echo $_REQUEST['ocean'] ?>" /></td>
+		</tr>
 		<tr>
 			<td><b>Country:</b></td>
 			<td align="left"><input name="Country" id="Country" class="autocomplete country" size="40" title="Enter a Country." value="<?php echo $_REQUEST['Country'] ?>" /></td>

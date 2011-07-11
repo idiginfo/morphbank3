@@ -36,17 +36,35 @@ if(!checkAuthorization(null, $userId, $groupId, 'add')){
 
 $db = connect();
 
-// Get continent
-$sql = "select co.description as continent from ContinentOcean co 
-		left join Country c on c.continentOcean = co.name 
-		where c.description = ?";
-$continent = $db->getOne($sql, null, array($_POST['Country']));
-if(isMdb2Error($continent, "Select Continent data", 5)){
-	header("location: $indexUrl&code=2");
-	exit;
+// Check country
+// ALTER TABLE `Country` DROP FOREIGN KEY country_ibfk_1
+// ALTER TABLE `Country` DROP PRIMARY KEY 
+// ALTER TABLE `Country` ADD INDEX ( `name` )
+// ALTER TABLE `Country` ADD INDEX ( `description` ) 
+
+if (empty($_POST['Country'])) {
+  $country  = 'UNSPECIFIED';
+} else {
+  $sql = "select description from Country where description = ?";
+  $country = $db->getOne($sql, null, array($_POST['Country']));
+  if (isMdb2Error($country, "Selecting country", 5)) {
+    header("location: $indexUrl&code=2");
+    exit;
+  }
+  if (empty($country)) {
+    $country = strtoupper($_POST['Country']);
+    $db->beginTransaction();
+    $sql = "insert into Country set description = ?";
+    $stmt = $db->prepare($sql);
+    $num_rows = $stmt->execute(array($country));
+    if (isMdb2Error($num_rows, "Insert value into Country", 5)) {
+      $db->rollback();
+      header("location: $indexUrl&code=6");
+      exit;
+    }
+    $db->commit();
+  }
 }
-$continent = empty($continent) ? 'UNSPECIFIED' : $continent;
-$country = empty($_POST['Country']) ? 'UNSPECIFIED' : $_POST['Country'];
 
 $latitude = trim($_POST['Latitude']);
 $longitude = trim($_POST['Longitude']);
@@ -64,8 +82,8 @@ $id = $result->fetchOne();
 clear_multi_query($result);
 
 $localityUpdater = new Updater($db, $id, $userId, $groupId, 'Locality');
-$localityUpdater->addField("continentOcean", $continent, null);
-$localityUpdater->addField("continent", $continent, null);
+$localityUpdater->addField("continent", $_POST['continent'], null);
+$localityUpdater->addField("ocean", $_POST['ocean'], null);
 $localityUpdater->addField("country", $country, null);
 $localityUpdater->addField("state", $_POST['state'], null);
 $localityUpdater->addField("county", $_POST['county'], null);
