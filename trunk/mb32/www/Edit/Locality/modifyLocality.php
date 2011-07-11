@@ -42,17 +42,29 @@ if($_POST['EW'] == '2') {$longitude = !empty($longitude) ? '-' . $longitude : $l
 
 $db = connect();
 
-// Get continent
-$sql = "select co.description as continent from ContinentOcean co 
-		left join Country c on c.continentOcean = co.name 
-		where c.description = ?";
-$continent = $db->getOne($sql, null, array($_POST['Country']));
-if(isMdb2Error($continent, "Select Continent data", 5)){
-	header("location: $indexUrl&code=2");
-	exit;
+if (empty($_POST['Country'])) {
+  $country  = 'UNSPECIFIED';
+} else {
+  $sql = "select description from Country where description = ?";
+  $country = $db->getOne($sql, null, array($_POST['Country']));
+  if (isMdb2Error($country, "Selecting country", 5)) {
+    header("location: $indexUrl&code=2");
+    exit;
+  }
+  if (empty($country)) {
+    $country = strtoupper($_POST['Country']);
+    $db->beginTransaction();
+    $sql = "insert into Country set description = ?";
+    $stmt = $db->prepare($sql);
+    $num_rows = $stmt->execute(array($country));
+    if (isMdb2Error($num_rows, "Insert value into Country", 5)) {
+      $db->rollback();
+      header("location: $indexUrl&code=33");
+      exit;
+    }
+    $db->commit();
+  }
 }
-$continent = empty($continent) ? 'UNSPECIFIED' : $continent;
-$country = empty($_POST['Country']) ? 'UNSPECIFIED' : $_POST['Country'];
 
 // Get base object contributor
 $result = getObjectData('BaseObject', $id, 'userId');
@@ -80,11 +92,11 @@ if (is_string($numRowsBO)) { // Error returned
 
 // Locality updater
 $locUpdater = new Updater($db, $id, $userId, $groupId, 'Locality');
-$locUpdater->addField("continentOcean", $continent, $row['continentocean']);
-$locUpdater->addField("continent", $continent, $row['continent']);
+$locUpdater->addField("continent", $_POST['continent'], $row['continent']);
+$locUpdater->addField("ocean", $_POST['ocean'], $row['ocean']);
 $locUpdater->addField("country", $country, $row['country']);
-$localityUpdater->addField("state", $_POST['state'], $row['state']);
-$localityUpdater->addField("county", $_POST['county'], $row['county']);
+$locUpdater->addField("state", $_POST['state'], $row['state']);
+$locUpdater->addField("county", $_POST['county'], $row['county']);
 $locUpdater->addField("locality", $_POST['Locality'], $row['locality']);
 $locUpdater->addField("latitude", $latitude, $row['latitude']);
 $locUpdater->addField("longitude", $longitude, $row['longitude']);
@@ -93,6 +105,7 @@ $locUpdater->addField("minimumElevation", $_POST['MinimumElevation'], $row['mini
 $locUpdater->addField("maximumElevation", $_POST['MaximumElevation'], $row['maximumelevation']);
 $locUpdater->addField("minimumDepth", $_POST['MinimumDepth'], $row['minimumdepth']);
 $locUpdater->addField("maximumDepth", $_POST['MaximumDepth'], $row['maximumdepth']);
+
 $numRowsLoc = $locUpdater->executeUpdate();
 if (is_string($numRowsLoc)) { // Error returned
 	header("location: $indexUrl&code=6");
