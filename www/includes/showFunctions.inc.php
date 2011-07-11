@@ -486,10 +486,7 @@ function showRelatedObjects($id) {
 
 function getLocalityData($localityId) {
 	$link = adminLogin();
-	$sql = 'select Locality.*, '.'Locality.country as countryCode, '
-	.'Locality.continentOcean as continentOceanCode '.'from Locality '
-	.'where Locality.id = '.$localityId;
-	//echo $sql;
+	$sql = 'select Locality.* from Locality where Locality.id = '.$localityId;
 	$result = mysqli_query($link, $sql);
 	if (!$result) return false;
 	$localityRecord = mysqli_fetch_array($result);
@@ -503,17 +500,15 @@ function showLocality($localityId){
 	echo '<h3>Locality</h3>&nbsp;';
 	$localityTableFields = array(
 	array('field' => 'id', 'label' => 'Locality Id: ', 'width' => 10, 'display' => true),
-	array('field' => 'continentOceanCode', 'relatedTable' => true, 'label' => 'Continent ocean: ',
-		'width' => 10, 'display' => true), 
-	array('field' => 'countryCode', 'relatedTable' => true, 'label' => 'Country: ', 'width' => 10,
-		'display' => true), 
-    array('field' => 'state', 'label' => 'State/Province: ', 'width' => 10, 'display' => true),
-    array('field' => 'county', 'label' => 'County: ', 'width' => 10, 'display' => true),
+	array('field' => 'continent', 'label' => 'Continent: ', 'width' => 10, 'display' => true),
+  array('field' => 'ocean', 'label' => 'Ocean: ', 'width' => 10, 'display' => true),
+	array('field' => 'country', 'label' => 'Country: ', 'width' => 10, 'display' => true), 
+  array('field' => 'state', 'label' => 'State/Province: ', 'width' => 10, 'display' => true),
+  array('field' => 'county', 'label' => 'County: ', 'width' => 10, 'display' => true),
 	array('field' => 'locality', 'label' => 'Locality: ', 'width' => 10, 'display' => true),
 	array('field3' => 'latitude', 'field4' => 'Latitude: ', 'width' => 10, 'display' => true),
 	array('field3' => 'longitude', 'field4' => 'Longitude: ', 'width' => 10, 'display' => true),
-	array('field' => 'coordinatePrecision', 'label' => 'Coordinate precision: ', 'width' => 30,
-		'display' => false), 
+	array('field' => 'coordinatePrecision', 'label' => 'Coordinate precision: ', 'width' => 30, 'display' => false), 
 	array('field' => 'minimumElevation', 'label' => 'Min. elevation: ', 'width' => 20, 'display' => false),
 	array('field' => 'maximumElevation', 'label' => 'Max. elevation: ', 'width' => 20, 'display' => false),
 	array('field' => 'minimumDepth', 'label' => 'Minimum depth: ', 'width' => 30, 'display' => false),
@@ -1047,4 +1042,29 @@ function showArrayItem($fieldRow, $dataArray){
 		$tag .= "</td></tr>\n";
 	}
 	return $tag;
+}
+
+/**
+ * Returns select element for Locality form
+ * 
+ * @param 
+ *   $value string representing value if already exitsts
+ * @return 
+ *   $html string representing form element 
+ */
+function getContinentSelect($value) {
+  $db = connect();
+  
+  $sql = "select description from ContinentOcean order by description desc";
+  $results = $db->queryAll($sql, null, MDB2_FETCHMODE_ASSOC);
+  
+  $html = '<select name="continent" id="contient">';
+  foreach ($results as $result) {
+    $selected = $value == $result['description'] ? ' selected="selected"' : '';
+    if (!preg_match("/ocean/i", $result['description'])) {
+      $html .= '<option value="' . $result['description'] . '"' . $selected . '>' . $result['description'] . '</option>';
+    }
+  }
+  $html .= '</select>';
+  return $html;
 }
