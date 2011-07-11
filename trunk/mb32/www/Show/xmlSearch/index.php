@@ -55,13 +55,7 @@ echo'
 			  .'LEFT JOIN ImagingTechnique ON View.imagingTechniqueId = ImagingTechnique.id '
 			  .'LEFT JOIN SpecimenPart ON View.specimenPartId = SpecimenPart.id '
 			  .'LEFT JOIN Form ON Specimen.formId = Form.id '
-			  .'LEFT JOIN TypeStatus ON Specimen.typeStatusId = TypeStatus.id ';
-			  //.'LEFT JOIN Location ON specimen.locationId = Location.id '
-			  //.'LEFT JOIN Country ON Location.countryId = Country.id '
-			 // .'LEFT JOIN ContinentOcean ON Location.continentOceanId = ContinentOcean.id '
-			  //.'LEFT JOIN TaxonomicUnits ON TaxonomicUnits.tsn = specimen.tsnId '
-			  //.'LEFT JOIN Vernacular ON Vernacular.tsn = specimen.tsnId '
-			 
+			  .'LEFT JOIN TypeStatus ON Specimen.typeStatusId = TypeStatus.id ';			 
 			  
 		for ($i = 0; $i < $numberOfWords; $i++)	{
 			if ($i == 0){
@@ -70,14 +64,7 @@ echo'
 			else {
 				$sql .= 'AND ';
 			}
-		/*'(Vernacular_name LIKE \'%'.$searchString[$i].'%\' OR '
-			  .'(unit_name1 LIKE \'%'.$searchString[$i].'%\' OR unit_name2 LIKE \'%'.$searchString[$i].'%\' '
-			  .' OR unit_name3 LIKE \'%'.$searchString[$i].'%\' OR unit_name4 LIKE \'%'.$searchString[$i].'%\') OR '		  
-			  .'Country.name LIKE \'%'.$searchString[$i].'%\' OR '
-			  .'ContinentOcean.name LIKE \'%'.$searchString[$i].'%\' OR '	  
-			  .'TaxonomicUnits.tsn = \''.$searchString[$i].'\' OR '
-			  .'image.id = \''.$searchString[$i].'\' OR '
-			  .'Vernacular.vernacular_name LIKE \'%'.$searchString[$i].'%\' OR '*/
+		
 			  $sql .= '(ViewAngle.name LIKE \'%'.$searchString[$i].'%\' OR '
 					  .'DevelopmentalStage.name LIKE \'%'.$searchString[$i].'%\' OR '
 					  .'Sex.name LIKE \''.$searchString[$i].'\' OR '
