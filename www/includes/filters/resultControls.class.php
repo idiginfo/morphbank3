@@ -154,25 +154,22 @@ class resultControls {
 		  	Form.name as form, 
 			ViewAngle.name as viewAngle */
 
-		$sql = 'SELECT image.id as imageId, 
-			CONCAT(unit_name1, \' \', unit_name2 ,\' \', unit_name3, \' \', unit_name4) as TaxonName  
-		  	FROM image 
+		$sql = 'SELECT image.id as imageId, CONCAT(unit_name1, \' \', unit_name2 ,\' \', unit_name3, \' \', unit_name4) as TaxonName  
+		  FROM image 
 			LEFT JOIN User ON image.userId = User.id 
-		  	LEFT JOIN Specimen ON image.specimenId = Specimen.id 
+		  LEFT JOIN Specimen ON image.specimenId = Specimen.id 
 			LEFT JOIN Tree ON Specimen.tsnId = Tree.tsn 
 			LEFT JOIN Form ON Specimen.formId = Form.id 
-		  	LEFT JOIN Sex ON Specimen.sexId = Sex.id 
+		  LEFT JOIN Sex ON Specimen.sexId = Sex.id 
 			LEFT JOIN DevelopmentalStage ON Specimen.developmentalStageId = DevelopmentalStage.id 
 			LEFT JOIN BasisOfRecord ON Specimen.basisOfRecordId = BasisOfRecord.id
 			LEFT JOIN Location ON Specimen.locationId = Location.id 
-			LEFT JOIN ContinentOcean ON Location.continentOceanId = ContinentOcean.id 
-			LEFT JOIN Country ON Location.countryId = Country.id 
 			LEFT JOIN TypeStatus ON Specimen.typeStatusId = TypeStatus.id 
-		  	LEFT JOIN View ON image.viewId = View.id 
-		  	LEFT JOIN ImagingTechnique ON ImagingTechnique.id = View.imagingTechniqueId 
-		  	LEFT JOIN ImagingPreparationTechnique ON ImagingPreparationTechnique.id = View.imagingPreparationTechniqueId 
-		  	LEFT JOIN SpecimenPart ON View.specimenPartId = SpecimenPart.id 
-		  	LEFT JOIN ViewAngle ON View.viewAngleId = ViewAngle.id ';
+		  LEFT JOIN View ON image.viewId = View.id 
+		  LEFT JOIN ImagingTechnique ON ImagingTechnique.id = View.imagingTechniqueId 
+		  LEFT JOIN ImagingPreparationTechnique ON ImagingPreparationTechnique.id = View.imagingPreparationTechniqueId 
+		  LEFT JOIN SpecimenPart ON View.specimenPartId = SpecimenPart.id 
+		  LEFT JOIN ViewAngle ON View.viewAngleId = ViewAngle.id ';
 		  	
 		$sql .= 'WHERE (image.dateToPublish <= CURDATE()';
 		if ($objInfo) {
