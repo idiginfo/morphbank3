@@ -118,12 +118,6 @@ class keywordFilter extends filter {
 		.'LEFT JOIN TypeStatus ON Specimen.typeStatusId = TypeStatus.id '
 		.'LEFT JOIN View ON image.viewId = View.id ';
 
-		//.'LEFT JOIN Location ON specimen.locationId = Location.id '
-		//.'LEFT JOIN Country ON Location.countryId = Country.id '
-		// .'LEFT JOIN ContinentOcean ON Location.continentOceanId = ContinentOcean.id '
-		//.'LEFT JOIN TaxonomicUnits ON TaxonomicUnits.tsn = specimen.tsnId '
-		//.'LEFT JOIN Vernacular ON Vernacular.tsn = specimen.tsnId '
-
 		return $sql;
 	}
 
@@ -153,8 +147,11 @@ class keywordFilter extends filter {
 			.'View.imagingPreparationTechnique LIKE \'%'.$arrayOfWords[$i].'%\' OR '
 			.'View.viewAngle LIKE \'%'.$arrayOfWords[$i].'%\' OR '
 			.'Locality.locality LIKE \'%'.$arrayOfWords[$i].'%\' OR '
-			.'ContinentOcean.description LIKE \'%'.$arrayOfWords[$i].'%\' OR '
-			.'Country.description LIKE \'%'.$arrayOfWords[$i].'%\' ) ';
+			.'Locality.continent LIKE \'%'.$arrayOfWords[$i].'%\' OR '
+      .'Locality.ocean LIKE \'%'.$arrayOfWords[$i].'%\' ) OR '
+			.'Locality.country LIKE \'%'.$arrayOfWords[$i].'%\' ) OR '
+      .'Locality.state LIKE \'%'.$arrayOfWords[$i].'%\' ) OR '
+      .'Locality.county LIKE \'%'.$arrayOfWords[$i].'%\' )';
 			//.'View.viewName LIKE \'%'.$arrayOfWords[$i].'%\' OR '\
 
 				
