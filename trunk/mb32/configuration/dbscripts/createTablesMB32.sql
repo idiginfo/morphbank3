@@ -158,8 +158,10 @@ create table ContinentOcean (
 create table Country (
     continentOcean char(2) not null, 
     description varchar(255) not null default 'Not provided', 
-    `name` char(2) primary key not null, 
-    key continentId (continentOcean)
+    `name` char(2) not null,
+    key `name` (`name`),
+    key continentId (continentOcean),
+    key `description` (`description`),
 ) engine=InnoDB;
 
 
