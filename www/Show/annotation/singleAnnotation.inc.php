@@ -527,13 +527,10 @@ function getSpecimenData ($id) {
   if (empty($id)) return;
   
 	$sql = 'SELECT Specimen.*, Specimen.id AS specimenId, Locality.*, Image.id AS imageid, '
-	.'ContinentOcean.description AS continentOcean, Country.description AS country, '
 	.'Specimen.sex AS sex, Specimen.form AS form, Specimen.DevelopmentalStage AS developmentalStage '
 	.'FROM Specimen '
 	.'LEFT JOIN Image ON Specimen.id = Image.specimenId '
-	.'LEFT JOIN Locality ON Locality.id = Specimen.localityId '
-	.'LEFT JOIN Country ON Country.name = Locality.country '
-	.'LEFT JOIN ContinentOcean ON ContinentOcean.name = Locality.continentOcean ';
+	.'LEFT JOIN Locality ON Locality.id = Specimen.localityId ';
 	$sql .= 'WHERE Specimen.id = '.$id.'';
 	$result = mysqli_query($link, $sql) or die(mysqli_error($link));
 	if ($result) {
