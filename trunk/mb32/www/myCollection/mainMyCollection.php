@@ -533,9 +533,7 @@ function sortCollection($collectionId, $sortBy, $order) {
 	}
 
 	if ($sortBy == 'locality') {
-		$sql .= 'INNER JOIN Locality ON Specimen.localityId = Locality.id '
-		.'INNER JOIN Country ON Locality.country = Country.name '
-		.'INNER JOIN ContinentOcean ON Locality.continentOcean = ContinentOcean.name ';
+		$sql .= 'INNER JOIN Locality ON Specimen.localityId = Locality.id ';
 	}
 	$sql .= 'WHERE ';
 	for ($i = 0; $i < $numRows; $i++) {
@@ -545,7 +543,7 @@ function sortCollection($collectionId, $sortBy, $order) {
 	}
 
 	if ($sortBy == "locality"){
-		$sql .= "ORDER BY ContinentOcean.description $order, Country.description "
+		$sql .= "ORDER BY Locality.continent $order, Locality.country "
 		."$order., Locality.locality .$order";
 	} else {
 		if ($sortBy == "taxon"){
