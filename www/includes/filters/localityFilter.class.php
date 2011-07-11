@@ -124,9 +124,7 @@ class localityFilter extends filter {
 		}
 
 		if (($this->whatSearch == 'keywords') && ($this->searchString != '')) {
-			$sql = 'LEFT JOIN Location ON Specimen.localityId = Locality.id
-					LEFT JOIN ContinentOcean ON Locality.continentOcean = ContinentOcean.name 
-					LEFT JOIN Country ON Locality.country = Country.name ';
+			$sql = 'LEFT JOIN Location ON Specimen.localityId = Locality.id ';
 			return $sql;
 		}
 		return '';
@@ -152,8 +150,11 @@ class localityFilter extends filter {
 			for ($i = 0; $i < $num; $i++) {
 				$sql .= $this->isTheFirst?'WHERE ':'AND ';
 				$sql .= '(Locality.locality LIKE \'%'.$arrayOfWords[$i].'%\' OR '
-				.'ContinentOcean.description LIKE \'%'.$arrayOfWords[$i].'%\' OR '
-				.'Country.description LIKE \'%'.$arrayOfWords[$i].'%\' ) ';
+				.'Locality.continent LIKE \'%'.$arrayOfWords[$i].'%\' OR '
+        .'Locality.ocean LIKE \'%'.$arrayOfWords[$i].'%\' OR '
+        .'Locality.country LIKE \'%'.$arrayOfWords[$i].'%\' OR '
+        .'Locality.state LIKE \'%'.$arrayOfWords[$i].'%\' OR '
+        .'Locality.county LIKE \'%'.$arrayOfWords[$i].'%\' ';
 				$this->isTheFirst = FALSE;
 			}
 			return $sql;
