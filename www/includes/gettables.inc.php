@@ -75,10 +75,8 @@ function getallimagedata($id) {
 
 	$sql = 'SELECT Specimen.id AS specimenId, DATE_FORMAT(Specimen.dateCollected, "%Y-%m-%d") AS dateCollected, Specimen.collectorName AS collectorName, '
 	.'Specimen.comment AS comment, Specimen.tsnId AS tsnId, Specimen.collectionNumber AS collectionNumber, Specimen.institutionCode AS institutionCode, '
-	.'Locality.locality AS locality, ContinentOcean.description AS continentOcean, Country.description AS country '
+	.'Locality.locality AS locality, Locality.continent, Locality.ocean, Locality.country, Locality.state, Locality.county '
 	.'FROM Specimen LEFT JOIN Locality ON Specimen.localityId = Locality.id '
-	.'LEFT JOIN Country ON Locality.country = Country.name '
-	.'LEFT JOIN ContinentOcean ON Locality.continentOcean = ContinentOcean.name '
 	.'WHERE Specimen.id = '.$imageArray['specimenId'].' ';
 
 	$result = mysqli_query($link, $sql);
@@ -98,7 +96,12 @@ function getallimagedata($id) {
 	$imagedescription .= "<div>Form: ".$imageArray['formName']."<br /></div>";
 	$imagedescription .= "<div>Sex: ".$imageArray['sex']."<br /></div>";
 
-	$locality = $specimenArray['continentOcean']." ".$specimenArray['country']." ".$specimenArray['locality'];
+  $locality = empty($specimenArray['continent']) ? "" : $specimenArray['continent']." ";
+  $locality .= empty($specimenArray['ocean']) ? "" : $specimenArray['ocean']." ";
+  $locality .= empty($specimenArray['country']) ? "" : $specimenArray['country']." ";
+  $locality .= empty($specimenArray['state']) ? "" : $specimenArray['state']." ";
+  $locality .= empty($specimenArray['county']) ? "" : $specimenArray['county']." ";
+  $locality .= empty($specimenArray['locality']) ? "" : $specimenArray['locality']." ";
 	$len = strlen($locality);
 	if ($len > 35)
 	$locality = wordwrap($locality, 35, "<br />&nbsp;&nbsp;");
@@ -256,8 +259,7 @@ function getViewPostit($id) {
 function getLocalityPostit($id) {
 	global $link;
 
-	$sql = 'SELECT Locality.*, ContinentOcean.description as continent, Country.description as country FROM Locality INNER JOIN ContinentOcean ON Locality.continentOcean = ContinentOcean.name '
-	.' INNER JOIN Country ON Locality.country = Country.name WHERE Locality.id = '.$id;
+	$sql = 'SELECT Locality.* FROM Locality WHERE Locality.id = '.$id;
 
 	$result = mysqli_query($link, $sql);
 
@@ -269,7 +271,10 @@ function getLocalityPostit($id) {
 	$localityDescription = '<div>LocalityId:['.$id.']<br /></div>';
 	$localityDescription .= '<div>Locality:['.$localityArray['locality'].']<br /></div>';
 	$localityDescription .= '<div>Continent:['.$localityArray['continent'].']<br /></div>';
+  $localityDescription .= '<div>Continent:['.$localityArray['ocean'].']<br /></div>';
 	$localityDescription .= '<div>Country:['.$localityArray['country'].']<br /></div>';
+  $localityDescription .= '<div>Country:['.$localityArray['state'].']<br /></div>';
+  $localityDescription .= '<div>Country:['.$localityArray['county'].']<br /></div>';
 	$localityDescription .= '<div>Latitude:['.$localityArray['latitude'].']<br /></div>';
 	$localityDescription .= '<div>Longitude:['.$localityArray['longitude'].']<br /></div>';
 	$localityDescription .= '<div>Min. Elevation(m):['.$localityArray['minimumElevation'].']<br /></div>';
