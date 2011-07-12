@@ -49,6 +49,24 @@ $eol             = isset($_POST['eol']) ? 1 : NULL;
 
 $db = connect();
 
+// Check view id if entered
+if (!empty($viewId)) {
+  $count = $db->getOne("select count(*) as count from View where id = ?", null, array($viewId));
+  if (isMdb2Error($count, "View id does not exist", 6)) {
+    header("location: $indexUrl&code=3");
+    exit;
+  }
+}
+
+// Check specimen id if entered
+if (!empty($specimenId)) {
+  $count = $db->getOne("select count(*) as count from Specimen where id = ?", null, array($specimenId));
+  if (isMdb2Error($count, "Specimen id does not exist", 6)) {
+    header("location: $indexUrl&code=5");
+    exit;
+  }
+}
+
 // Get BaseObject data
 $baseObj = getObjectData('BaseObject', $id);
 if (is_string($baseObj)) { // Error returned
