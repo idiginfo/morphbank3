@@ -50,7 +50,7 @@ echo'</div>
           <th>Continent:</th><td>' . $locationArray['continent'] . '</td>
         </tr>
         <tr>
-          <th>Ocean:</th><td>' . $locationArray['ocean'] . '</td>
+          <th>Water Body:</th><td>' . $locationArray['ocean'] . '</td>
         </tr>
         <tr>
           <th>Country:</th><td>' . $locationArray['country'] . '</td>

@@ -501,7 +501,7 @@ function showLocality($localityId){
 	$localityTableFields = array(
 	array('field' => 'id', 'label' => 'Locality Id: ', 'width' => 10, 'display' => true),
 	array('field' => 'continent', 'label' => 'Continent: ', 'width' => 10, 'display' => true),
-  array('field' => 'ocean', 'label' => 'Ocean: ', 'width' => 10, 'display' => true),
+  array('field' => 'ocean', 'label' => 'Water Body: ', 'width' => 10, 'display' => true),
 	array('field' => 'country', 'label' => 'Country: ', 'width' => 10, 'display' => true), 
   array('field' => 'state', 'label' => 'State/Province: ', 'width' => 10, 'display' => true),
   array('field' => 'county', 'label' => 'County: ', 'width' => 10, 'display' => true),

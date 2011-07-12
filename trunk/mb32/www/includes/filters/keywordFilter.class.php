@@ -61,7 +61,7 @@ class keywordFilter extends filter {
 		.'- Part<br />'
 		.'- Image id<br />'
 		.'- Locality<br />'
-		.'- Continent/Ocean<br />'
+		.'- Continent/Water Body<br />'
 		.'- Country<br />';
 		$postItContent = htmlentities($bigTitle, ENT_QUOTES, "UTF-8");
 

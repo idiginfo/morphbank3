@@ -336,7 +336,7 @@ function returnLocalityArray () {
 									  'width' => 10,
 									  'display' => false),
   3=>		array('field' => 'ocean',
-									  'label' => 'Ocean: ',
+									  'label' => 'Water Body: ',
 									  'width' => 10,
 									  'display' => false),
 	4=>		array('field' => 'country',

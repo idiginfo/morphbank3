@@ -44,7 +44,7 @@ $sortByFields = array(
     ),
     array(
       'field' => 'ocean', 
-      'label' => 'Ocean',
+      'label' => 'Water Body',
       'width' => 40,
       'toSort' => true,
       'inGet' => 0,
