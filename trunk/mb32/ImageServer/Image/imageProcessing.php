@@ -276,7 +276,8 @@ function convertTpc($id, $imgSrc = null){
 
 function convertIip($source, $target){
 	global $config;
-	$convert = $config->vips." im_vips2tiff $source $target:deflate,tile:256x256,pyramid";
+
+	$convert = $config->vips." im_vips2tiff $source $target:75,deflate,tile:256x256,pyramid";
 	
 	$message .= date("H:i:s")." Executing: $convert\n";
 	$reply = shell_exec($convert);
