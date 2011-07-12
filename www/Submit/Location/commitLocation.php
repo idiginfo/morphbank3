@@ -37,11 +37,6 @@ if(!checkAuthorization(null, $userId, $groupId, 'add')){
 $db = connect();
 
 // Check country
-// ALTER TABLE `Country` DROP FOREIGN KEY country_ibfk_1
-// ALTER TABLE `Country` DROP PRIMARY KEY 
-// ALTER TABLE `Country` ADD INDEX ( `name` )
-// ALTER TABLE `Country` ADD INDEX ( `description` ) 
-
 if (empty($_POST['Country'])) {
   $country  = 'UNSPECIFIED';
 } else {
