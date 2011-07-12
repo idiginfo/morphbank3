@@ -29,14 +29,14 @@ include_once ("bischen/tileserver/TilepicParser.inc");
 
 $id = $_REQUEST['id'];
 
-$iipOK = viewIipFrame();
+$iipOK = viewIipFrame($id);
 if (!$iipOK) {
 	// could not show iip frame, use bischen instead
 	header("Status: 302 Temporary redirect");
 	header("Location: /bischen/viewFrame.php?id=$id");
 }
 
-function ViewIipFrame() {
+function ViewIipFrame($id) {
 	// session Id from server for use in accessing private images
 	$sessionId = $_REQUEST['sessionId'];
 	$width = $_REQUEST['width'];
@@ -59,30 +59,27 @@ function iipTag ($image, $width, $height){
 	global $config;
 	$imageId = $image->getImageId();
 	$sessionId = $image->getSessionId();
-	$p = $imageId;// parameter "p" of getTile.php holds both image and session ids
-	if (!empty($sessionId)){
-		$p.= '+'.$sessionId;
-	}
-	//get properties from the tile pic file
+	$imageFilePath = $image->getImageFilePath();
+	$iipDir = $config->iipDir;
 
-	$tag ='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'
-	.'<html xmlns="http://www.w3.org/1999/xhtml">'
-	.'<head>'
-	.'<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>'
-	.'<script type="text/javascript">'
-	.'var server = "/iipzoom/iipsrv.fcgi";'
-	.'var image = "'.$image->getImageFilePath().'"'
-	.'var credit = "Trying tif file";'
-	.'var flashvars = {server: server,image: image,navigation: true,credit: credit}'
-	.'var params = {scale: "noscale",bgcolor: "#000000",allowfullscreen: "true",allowscriptaccess: "always"}'
-	.'swfobject.embedSWF("IIPZoom.swf", "container", "100%", "100%", "9.0.0","expressInstall.swf", flashvars, params);'
-	.'</script>'
-	.'<style type="text/css">'
-	.'html, body { background-color: #000; height: 100%; overflow: hidden; margin: 0; padding: 0; }'
-	.'body { font-family: Helvetica, Arial, sans-serif; font-weight: bold; color: #ccc; }'
-	.'#container { width: 100%; height: 100%; text-align: center; }'
-	.'</style></head>'
-	.'<body><div id="container"></div></body></html>';
+	$tag ="<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n"
+	."<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
+	."<head>\n"
+	."<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js\"></script>\n"^M
+	."<script type=\"text/javascript\">\n"
+	."      var server = \"$iipDir/iipsrv.fcgi\"; \n"
+	."      var image = \"$imageFilePath\"; \n"
+	."      var credit = \"Trying tif file\"; \n"
+	."      var flashvars = {server: server,image: image,navigation: true,credit: credit} \n"
+	."      var params = {scale: \"noscale\",bgcolor: \"#000000\",allowfullscreen: \"true\",allowscriptaccess: \"always\"} \n"
+	."      swfobject.embedSWF(\"$iipDir/IIPZoom.swf\", \"container\", \"100%\", \"100%\", \"9.0.0\",\"$iipDir/expressInstall.swf\", flashvars, params); \n"
+	."</script>\n"
+	."<style type=\"text/css\">\n"
+	."      html, body { background-color: #000; height: 100%; overflow: hidden; margin: 0; padding: 0; }\n"
+	."      body { font-family: Helvetica, Arial, sans-serif; font-weight: bold; color: #ccc; }\n"
+	."      #container { width: 100%; height: 100%; text-align: center; }\n"
+	."</style></head>\n"
+	."<body><div id=\"container\"></div></body></html>\n";
 
 	return $tag;
 }
