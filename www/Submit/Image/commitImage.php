@@ -48,6 +48,24 @@ $eol             = isset($_REQUEST['eol']) ? 1 : NULL;
 
 $db = connect();
 
+// Check view id if entered
+if (!empty($viewId)) {
+  $count = $db->getOne("select count(*) as count from View where id = ?", null, array($viewId));
+  if (isMdb2Error($count, "View id does not exist", 6)) {
+    header("location: $indexUrl&code=2");
+    exit;
+  }
+}
+
+// Check specimen id if entered
+if (!empty($specimenId)) {
+  $count = $db->getOne("select count(*) as count from Specimen where id = ?", null, array($specimenId));
+  if (isMdb2Error($count, "Specimen id does not exist", 6)) {
+    header("location: $indexUrl&code=3");
+    exit;
+  }
+}
+
 if(!$publishDate) {
 	$dateToPublish = date('Y-m-d', (mktime(0, 0, 0, date("m") +6, date("d") - 1, date("Y"))));
 } else {

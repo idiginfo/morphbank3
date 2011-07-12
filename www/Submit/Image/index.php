@@ -59,9 +59,9 @@ function checkImageMessage($id, $code) {
     echo "<br/>The form has been filled in to make it easy to submit a similar image\n";
     echo "<br/><a href=\"index.php\">Click here to clear the form</a></h3><br/><br/>\n";
   } elseif ($code == 2) {
-    echo '<div class="searchError">Error verifying View Id</div><br /><br />' . "\n";
+    echo '<div class="searchError">Error verifying View Id. Does not exist.</div><br /><br />' . "\n";
   } elseif ($code == 3) {
-    echo '<div class="searchError">Error retrieving Specimen</div><br /><br />' . "\n";
+    echo '<div class="searchError">Error verifying Specimen Id. Does not exist.</div><br /><br />' . "\n";
   } elseif ($code == 4) {
     echo '<div class="searchError">Error in CreateObject procedure</div><br /><br />' . "\n";
   } elseif ($code == 5) {
