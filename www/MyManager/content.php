@@ -215,7 +215,7 @@ elseif($id == "specimenTab") {
 		.'- Longitude<br />'
 		.'- Minimum and Maximum Elevation<br />'
 		.'- Description<br />'
-		.'- Continent / Ocean id<br />';
+		.'- Continent / Water Body id<br />';
 
 	
 	echo '

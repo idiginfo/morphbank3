@@ -148,7 +148,7 @@ class localityObject extends mbObjectClass {
 												'inGet' => 0,
 												'order' => 'ASC'),
     array(	'field' => 'ocean',
-												'label' => 'Ocean',
+												'label' => 'Water Body',
 												'width' => 40,
 												'toSort' => true,
 												'inGet' => 0,

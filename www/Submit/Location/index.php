@@ -92,8 +92,8 @@ function displayLocationForm(){
 			<td align="left"><?php echo getContinentSelect($_REQUEST['continent']); ?></td>
 		</tr>
     <tr>
-			<td><b>Ocean:</b></td>
-			<td align="left"><input name="ocean" id="ocean" size="40" title="Enter an ocean." value="<?php echo $_REQUEST['ocean'] ?>" /></td>
+			<td><b>Water Body:</b></td>
+			<td align="left"><input name="ocean" id="ocean" size="40" title="Enter water body." value="<?php echo $_REQUEST['ocean'] ?>" /></td>
 		</tr>
 		<tr>
 			<td><b>Country:</b></td>

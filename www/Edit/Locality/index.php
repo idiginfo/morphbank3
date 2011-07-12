@@ -145,8 +145,8 @@ function displayLocalityForm($row){
 			<td align="left"><?php echo getContinentSelect($row['continent']); ?></td>
     </tr>
     <tr>
-        <td><b>Ocean: </b></td>
-        <td><input type="text" size="55" id="ocean" name="ocean" title="Enter Ocean" value="<?php echo $row['ocean']; ?>" /></td>
+        <td><b>Water Body: </b></td>
+        <td><input type="text" size="55" id="ocean" name="ocean" title="Enter water body" value="<?php echo $row['ocean']; ?>" /></td>
     </tr>
     <tr>
         <td><b>Country: </b></td>

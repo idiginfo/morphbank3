@@ -69,7 +69,7 @@ class localityFilter extends filter {
 		$bigTitle = 'Locality keywords field queries:<br />'
 		.'- Locality id<br />'
 		.'- Locality<br />'
-		.'- Continent/Ocean<br />'
+		.'- Continent/Water Body<br />'
 		.'- Country<br />';
 		$postItContent = htmlentities($bigTitle, ENT_QUOTES, "UTF-8");
 
