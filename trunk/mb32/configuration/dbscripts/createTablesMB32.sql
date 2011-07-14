@@ -161,7 +161,7 @@ create table Country (
     `name` char(2) not null,
     key `name` (`name`),
     key continentId (continentOcean),
-    key `description` (`description`),
+    key `description` (`description`)
 ) engine=InnoDB;
 
 
