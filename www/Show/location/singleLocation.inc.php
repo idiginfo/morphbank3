@@ -38,14 +38,11 @@ echo'
   <tr>
     <td class="firstColumn"  width="40%" valign="top">
       <div class="popCellPadding">';
-        showBaseObjectData($baseObjectArray);
+showBaseObjectData($baseObjectArray);
 echo'</div>
     </td>
     <td width="60%" valign="top">
       <table align="left" border="0">
-        <tr>
-          <th>Locality :</th><td>' . $locationArray['locality'] . '</td>
-        </tr>
         <tr>
           <th>Continent:</th><td>' . $locationArray['continent'] . '</td>
         </tr>
@@ -60,6 +57,9 @@ echo'</div>
         </tr>
         <tr>
           <th>County:</th><td>' . $locationArray['county'] . '</td>
+        </tr>
+        <tr>
+          <th>Locality :</th><td>' . $locationArray['locality'] . '</td>
         </tr>
         <tr>
           <th>Latitude:</th><td>' . truncateValue($locationArray['latitude']) . '</td>
@@ -103,8 +103,8 @@ if (checkForExtLinks($id)) {
       <table width="100%" border="0" cellspacing="0" cellpadding="2">
         <tr>
           <td>';
-            showExternalLinks($id);
-     echo'</td>
+  showExternalLinks($id);
+  echo'</td>
         </tr>
       </table>
     </td>
