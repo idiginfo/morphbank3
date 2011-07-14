@@ -451,7 +451,7 @@ function setScientificName($tsn, $sciName, $parentName){
 	isMdb2Error($affRows, "Update Tree scientifc name");
 	
 	// Update Taxa table
-	$data = array('scientificName' => $sciName, 'taxonomicNames' => $sciName, 'parent_name' => $parentName);
+	$data = array($sciName, $sciName, $parentName, $tsn);
 	$sql = "update Taxa set scientificName = ?, taxonomicNames = ?, parent_name = ? where tsn = ?";
 	$stmt = $db->prepare($sql);
 	$affRows = $stmt->execute($data);
