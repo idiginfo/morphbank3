@@ -843,14 +843,17 @@ function getTypeStatusSelectTag($selectedType = null) {
  */
 function getImageTechniqueSelectTag($selectedImage = null) {
 
+  $db = connect();
 
+  $sql = "select name from ImagingTechnique order by name";
+  $results = $db->queryAll($sql, null, MDB2_FETCHMODE_ASSOC);
+  
   $selectedImage = !empty($selectedImage) ? $selectedImage : 'Unspecified';
 
-  $result = runQuery("select name from ImagingTechnique order by name;");
-  if ($result) {
+  if ($results) {
     $image = '<tr><td><b>Imaging Technique: </b></td><td>';
     $image .= '<select name="ImagingTechnique" title = "Select imaging technique from the drop-down list.">';
-    while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
+    foreach ($results as $row) {
       $selected = $row['name'] == $selectedImage ? 'selected="selected"' : '';
       $image .= '<option value="' . $row['name'] . '" ' . $selected . '>' . $row['name'] . ' </option>';
     }
@@ -858,7 +861,7 @@ function getImageTechniqueSelectTag($selectedImage = null) {
     $image .= '<img src="/style/webImages/plusIcon.png" alt="Add Imaging Technique" title="Click to Add Imaging Technique" /> (Add)</a>';
     $image .= '</td></tr>';
   }
-  freeResult($result);
+
   return $image;
 }
 
