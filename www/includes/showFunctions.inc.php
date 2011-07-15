@@ -1072,7 +1072,7 @@ function showArrayItem($fieldRow, $dataArray) {
 function getContinentSelect($value) {
   $db = connect();
 
-  $sql = "select description from ContinentOcean order by description desc";
+  $sql = "select description from ContinentOcean order by pgorder asc";
   $results = $db->queryAll($sql, null, MDB2_FETCHMODE_ASSOC);
 
   $html = '<select name="continent" id="contient">';
