@@ -144,10 +144,12 @@ create table CollectionObjects (
 --
 
 create table ContinentOcean (
-    description varchar(255), 
-    `name` char(2) primary key not null
+  description varchar(255),
+  `name` char(2),
+  `pgorder` tinyint(4) not null default '99',
+  primary key (`name`),
+  key `pgorder` (`pgorder`)
 ) engine=InnoDB;
-
 
 -- --------------------------------------------------------
 
