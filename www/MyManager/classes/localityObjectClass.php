@@ -81,20 +81,21 @@ class localityObject extends mbObjectClass {
 				<table><tr><td class="greenBottomBorder">';
 		$this->echoCheckBox($i, $array['id']);
 
-		echo '<span  title="Location Id"> Locality ['.$array[$this->sortByFields[0]['field']];
-		//TODO get the layout correct
-
-		echo ']</span>&nbsp;'.$array[$this->sortByFields[1]['field']].' / ';
-		echo $array[$this->sortByFields[2]['field']].'</td>';
+		echo '<span title="Location Id"> Locality ['.$array[$this->sortByFields[0]['field']].']</span></td>';
 		echo '<td class="browseRight greenBottomBorder">';
-		echo printOptions($this->myObjOptions, $array[$this->sortByFields[0]['field']],'Location'
-		,$array[$this->sortByFields[3]['field']]);
-		echo '</td></tr><tr><td>';
-		echo $this->sortByFields[3]['label'].': '.$array[$this->sortByFields[3]['field']]
-		.'</td><td class="browseRight">'.$this->sortByFields[11]['label'].': '
-		.$array[$this->sortByFields[11]['field']].$showCameraHtml
-		.'</td></tr><tr><td>'.$this->sortByFields[4]['label'].'/' .$this->sortByFields[5]['label']. ': ';
-		echo truncateValue($array[$this->sortByFields[4]['field']]). '/';
+		echo printOptions($this->myObjOptions, $array[$this->sortByFields[0]['field']],'Location',$array[$this->sortByFields[3]['field']]);
+		echo '</td></tr>';
+    echo '<tr><td>';
+    echo $this->sortByFields[1]['label'].'/'.$this->sortByFields[2]['label'].': '
+         .ucwords(strtolower($array[$this->sortByFields[1]['field']])).'/'.ucwords(strtolower($array[$this->sortByFields[2]['field']])).
+         '</td><td class="browseRight">'.$this->sortByFields[11]['label'].': '.
+         $array[$this->sortByFields[11]['field']].$showCameraHtml.'</td></tr>';
+    echo '<tr><td>';
+    echo $this->sortByFields[3]['label'].': '.ucwords(strtolower($array[$this->sortByFields[3]['field']]))
+		.'</td><td></td></tr>';
+    
+    echo '<tr><td>'.$this->sortByFields[4]['label'].'/' .$this->sortByFields[5]['label']. ': ';
+    echo truncateValue($array[$this->sortByFields[4]['field']]). '/';
 		echo truncateValue($array[$this->sortByFields[5]['field']]);
 		echo '</td><td class="browseRight">&nbsp;</td></tr>
 			<tr><tr><td>Elevation (m) : ';
@@ -135,7 +136,8 @@ class localityObject extends mbObjectClass {
 	}
 
 	function setupSortByFields() {
-		$this->sortByFields = array ( 	array(	'field' => 'id',
+		$this->sortByFields = array (
+    array(	'field' => 'id',
 												'label' => 'Location Id',
 												'width' => 40,
 												'toSort' => true,
