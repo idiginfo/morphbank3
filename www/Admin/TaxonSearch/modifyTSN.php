@@ -198,6 +198,7 @@ if(!$updateLinkRes || !$updateRefRes) {
 if ($updateChildrenNames || $updateParent) {
   // Get all children tsn and base object ids
   $results = getTaxonChildren($tsn);
+  $results[] = array('tsn' => $tsn, 'boid' => '');
   
   foreach ($results as $result) {
     // update base object for taxon if there is a boid
