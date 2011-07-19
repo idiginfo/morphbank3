@@ -502,9 +502,8 @@ function HaveChildren($tsn) {
 	$db = connect();
 	$sql = "SELECT count(*) from Tree WHERE parent_tsn = ?";;
 	$count = $db->getOne($sql, null, array($tsn));
-	if (isMdb2Error($count, "Check TSN children", 2)) {
-		return false;
-	}
+	isMdb2Error($count, "Check TSN children");
+
 	return $count == 0 ? false : true;
 }
 
@@ -550,9 +549,6 @@ function updateChildrenName ($tsn, $newName, $oldName) {
 		$childTsn    = $row['tsn'];
 		$oldChildName = $row['scientificname'];
 		$newChildName = str_replace($oldName, $newName, $oldChildName);
-		//echo "$oldName, $newName, $oldChildName<br />";
-		//echo $newChildName;
-		//exit;
 		setScientificName($childTsn, $newChildName, $newName);
 		updateChildrenName($childTsn, $newChildName, $oldChildName);
 	}
@@ -840,23 +836,21 @@ function CheckTsn($tsn) {
 	$db = connect();
 	$query = "select count(*) as count from Specimen where tsnId = $tsn";
 	$count = $db->getOne($query);
-	if ($count > 0) {
-		return false;
-	}
+	if ($count > 0) return true;
 
 	$query = "select count(*) as count from View where viewTSN = $tsn";
 	$count = $db->getOne($query);
-	if ($count > 0) return false;
+	if ($count > 0) return true;
 
 	$query = "select count(*) as count from DeterminationAnnotation where tsnId = $tsn";
 	$count = $db->getOne($query);
-	if ($count > 0) return false;
+	if ($count > 0) return true;
 
 	$query = "select count(*) as count from Annotation a left join TaxonConcept tc on tc.id = a.objectId where tc.tsn = $tsn";
 	$count = $db->getOne($query);
-	if ($count > 0) return false;
+	if ($count > 0) return true;
 
-	return true;
+	return false;
 } //end of function CheckTSN
 
 function printVar($var){
@@ -1122,4 +1116,47 @@ function getKingdomId($kingdom_name) {
   $id = $db->getOne($sql, null, $params);
 	isMdb2Error($id, "Error selecting kingdom id");
 	return $id;
+}
+
+/**
+ * Update assocated BaseObjects dateLastModified for given id and tsn
+ * @param
+ *   $id Id of the BaseObject
+ * @return
+ */
+function updateDateLastModified($id) {
+  if (empty($id)) return;
+  
+  $db = connect();
+  $sql = "update BaseObject set dateLastModified = ? where id = ?";
+  $stmt = $db->prepare($sql);
+  isMdb2Error($stmt, "Error preparing query to update BaseObject dateLastModified for object $id.");
+  $affRows = $stmt->execute(array($db->mdbNow(), $id));
+  isMdb2Error($affRows, "Error executing query to update BaseObject dateLastModified for object $id.");
+  $stmt->free(); 
+  
+  return;
+}
+
+/**
+ * Recursive function to return taxon children tsn and boid
+ * 
+ * @param $tsn
+ * @return $results Array containing tsn and boid
+ */
+function getTaxonChildren($tsn, $rows = array()) {
+	$db = connect();
+	$sql = "select t.tsn, b.id as boid from Tree t 
+          left join TaxonConcept tc on tc.tsn = t.tsn 
+          left join BaseObject b on b.id = tc.id 
+          where t.parent_tsn = ?";
+	$rows = $db->getAll($sql, null, array($tsn), null, MDB2_FETCHMODE_ASSOC);
+	isMdb2Error($rows, "Database error retrieving taxon children", 2);
+  if ($rows) {
+    foreach ($rows as $key => $row) {
+			$rows = array_merge(getTaxonChildren($row[$key]['tsn'], $rows), $rows);
+		}
+	}
+  
+	return $rows;
 }
