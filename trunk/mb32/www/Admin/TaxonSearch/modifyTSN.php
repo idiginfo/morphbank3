@@ -119,30 +119,11 @@ $baseObjUpdater->addField('name', $scientificName, $rowBObj['name']);
 $baseObjUpdater->addField('dateLastModified', $db->mdbNow(), $rowBObj['datelastmodified']);
 
 // Run basic checks based on data submittted
-// TODO update specimen table if the tsn was used for some specimens (for now run the script separatly)
-$checkTsn     = CheckTsn($tsn);
-$haveChildren = HaveChildren($tsn);
-$nameChange   = $scientificName != $rowTree['scientificname'] ? true : false;
-$rankChange   = $rank_id != $rowTree['rank_id'] ? true : false;
-
-if ($nameChange || $rankChange) {
-	if (!$checkTsn) {
-		header("location: $indexUrl&code=6"); // TODO TSN is used in other parts of the sytem. Disallow if false.
-		exit;
-	}
-	$updateChildren = false;
-	if ($haveChildren && $rankChange) {
-		header("location: $indexUrl&code=7"); // TODO has children, cannot change rank
-		exit;
-	}
-	if ($haveChildren && !CheckChildren($tsn, $userId, $groupId)) {
-		header("location: $indexUrl&code=8"); // TODO Do not have permission to change children
-		exit;
-	}
-	if ($nameChange) {
-		$updateChildren = true;
-	}
-}
+$haveChildren = HaveChildren($tsn); // returns true/false if children exist
+$nameChange = $scientificName != $rowTree['scientificname'];
+$rankChange = $rank_id != $rowTree['rank_id'];
+$updateParent = $parent_tsn != $rowTree['parent_tsn'];
+$updateChildrenNames = $haveChildren && $rankChange;
 
 // If script makes it here, it's ok to update following fields
 $treeUpdater->addField('rank_id', $rank_id, $rowTree['rank_id']);
@@ -186,16 +167,7 @@ if (is_string($numRowsBO)) { // Error returned
 }
 
 // Update children names if true: scientific name changed
-if ($updateChildren) {
-	if (!updateChildrenName($tsn, $scientificName, $rowTree['scientificname'])) {
-		header("location: $indexUrl&code=13");
-		exit;
-	}
-}
-
-// Update keywords
-updateKeywordsTable($rowBObj['id'], 'update');
-TaxaKeywords($tsn, $rowBObj['id']);
+if ($updateChildrenNames) updateChildrenName($tsn, $scientificName, $rowTree['scientificname']);
 
 /* Insert vernacular */
 $insertVernacular = insertVernacular($tsn, $_POST);
@@ -219,5 +191,48 @@ if(!$updateLinkRes || !$updateRefRes) {
 	exit;
 }
 
+/**
+ * If a taxon name is changed, or the parent is changed, update dateLastModified 
+ * for associated specimens, views, images for taxon and all children down the tree
+ */
+if ($updateChildrenNames || $updateParent) {
+  // Get all children tsn and base object ids
+  $results = getTaxonChildren($tsn);
+  
+  foreach ($results as $result) {
+    // update base object for taxon if there is a boid
+    if (!empty($result['boid'])) updateDateLastModified($result['boid']);
+    
+    // Select all specimen and image ids using this tsn
+    $sql = "select id, standardImageId from Specimen where tsnId = $result[tsn]";
+    $rows = $db->queryAll($sql, null, MDB2_FETCHMODE_ASSOC);
+    isMdb2Error($id, "Error selecting Specimen information for tsnId $result[tsn]");
+    if ($rows) {
+      foreach ($rows as $row) {
+        updateDateLastModified($row['id']);
+        updateDateLastModified($row['standardImageId']);
+      }
+    }
+    
+    // Select all view and image ids using this tsn
+    $sql = "select id, standardImageId from View where viewTsn = $result[tsn]";
+    $rows = $db->queryAll($sql, null, MDB2_FETCHMODE_ASSOC);
+    isMdb2Error($id, "Error selecting View information for viewTSN $result[tsn]");
+    if ($rows) {
+      foreach ($rows as $row) {
+        updateDateLastModified($row['id']);
+        updateDateLastModified($row['standardImageId']);
+      }
+    }
+  }
+}
+
+// Update keywords
+updateKeywordsTable($rowBObj['id'], 'update');
+TaxaKeywords($tsn, $rowBObj['id']);
+
+if ($rankChange) {
+  $location = "$indexUrl&code=6";
+}
 header("location: $indexUrl&code=1");
 exit;

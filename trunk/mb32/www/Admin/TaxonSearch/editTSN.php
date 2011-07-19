@@ -82,11 +82,12 @@ function checkEditMsg($id, $code) {
 	} elseif ($code == 5) {//
 		echo '<div class="searchError">Error selecting BaseObject information</div><br /><br />'."\n";
 	} elseif ($code == 6) {//
-		echo '<div class="searchError">Error Taxon is used by other Morphbank entries. Please contact the Administrator to discuss changes</div><br /><br />'."\n";
+		echo "<h3>You have successfully updated the <a href=\"/?id=$id&tsn=true\">Taxa with id $id</a></h3><br />\n";
+    echo '<div class="searchError">Children of this taxon exist. Please update their ranks separately if necessary.</div><br /><br />'."\n";
 	} elseif ($code == 7) {//
-		echo '<div class="searchError">Cannot change rank when Taxon has children. Please contact the Administrator to disccuss changes</div><br /><br />'."\n";
+		echo '<div class="searchError"></div><br /><br />'."\n";
 	} elseif ($code == 8) {//
-		echo '<div class="searchError">You do not have permissions to change children of this Taxon. Please contact the Administrator to discuss changes</div><br /><br />'."\n";
+		echo '<div class="searchError"></div><br /><br />'."\n";
 	} elseif ($code == 9) {//
 		echo '<div class="searchError">Failed to update Tree table</div><br /><br />'."\n";
 	} elseif ($code == 10) {//
@@ -96,7 +97,7 @@ function checkEditMsg($id, $code) {
 	} elseif ($code == 12) {//
 		echo '<div class="searchError">Failed to update Base Object table</div><br /><br />'."\n";
 	} elseif ($code == 13) {//
-		echo '<div class="searchError">Failed to update taxon children</div><br /><br />'."\n";
+		echo '<div class="searchError"></div><br /><br />'."\n";
 	} elseif ($code == 20) {//
 		echo '<div class="searchError">Error inserting or updating vernacular</div><br /><br />'."\n";
 	} elseif ($code == 21) {//

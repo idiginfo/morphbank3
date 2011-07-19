@@ -45,4 +45,3 @@ echoHead(false, $title);
 mainTaxon();
 
 finishHtml();
-?>
