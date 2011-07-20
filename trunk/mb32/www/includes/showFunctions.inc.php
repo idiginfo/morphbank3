@@ -1074,6 +1074,8 @@ function getContinentSelect($value) {
 
   $sql = "select description from ContinentOcean order by pgorder asc";
   $results = $db->queryAll($sql, null, MDB2_FETCHMODE_ASSOC);
+  
+  $value = empty($value) ? 'UNSPECIFIED' : '';
 
   $html = '<select name="continent" id="contient">';
   foreach ($results as $result) {
