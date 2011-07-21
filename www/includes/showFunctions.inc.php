@@ -1075,7 +1075,8 @@ function getContinentSelect($value) {
   $sql = "select description from ContinentOcean order by pgorder asc";
   $results = $db->queryAll($sql, null, MDB2_FETCHMODE_ASSOC);
   
-  $value = empty($value) ? 'UNSPECIFIED' : '';
+  // using preg match because at this time, data is cap in one database, not cap in another
+  $value = empty($value) ? 'Unspecified' : $value;
 
   $html = '<select name="continent" id="contient">';
   foreach ($results as $result) {
