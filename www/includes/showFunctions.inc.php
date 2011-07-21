@@ -1081,7 +1081,7 @@ function getContinentSelect($value) {
   $html = '<select name="continent" id="contient">';
   foreach ($results as $result) {
     $selected = $value == $result['description'] ? ' selected="selected"' : '';
-    if (!preg_match("/ocean/i", $result['description'])) {
+    if (!preg_match("/\bocean\b/i", $result['description'])) {
       $html .= '<option value="' . $result['description'] . '"' . $selected . '>' . $result['description'] . '</option>';
     }
   }
