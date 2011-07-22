@@ -223,7 +223,7 @@ function getTaxonBranchArray($tsn) {
 }
 
 function getTaxonBranchFromParent($tsn){
-    if (empty($tsn)) return null;
+  if (empty($tsn)) return null;
     
 	$db = connect();
 	$taxonBranch = array();
@@ -240,8 +240,8 @@ function getTaxonBranchFromParent($tsn){
     	$taxonBranch[]=array('tsn'=>$tsn, 'rank_id'=>$rankId, 'name'=>$scientificName, 'rank'=>$rank);
     	$tsn = $parentTsn;
 	}
-    $rows = count($taxonBranch);
-    return array_reverse($taxonBranch);
+  $rows = count($taxonBranch);
+  return array_reverse($taxonBranch);
 }
 
 
@@ -549,6 +549,10 @@ function updateChildrenName ($tsn, $newName, $oldName) {
 		$childTsn    = $row['tsn'];
 		$oldChildName = $row['scientificname'];
 		$newChildName = str_replace($oldName, $newName, $oldChildName);
+    
+    //$sciNames = getTaxonomicNamesFromBranch($parent_tsn, " ", false);
+    //$taxonomicNames = $sciNames . ' ' . $scientificName;
+    
 		setScientificName($childTsn, $newChildName, $newName);
 		updateChildrenName($childTsn, $newChildName, $oldChildName);
 	}
@@ -1084,7 +1088,7 @@ function getRankByColumn ($col) {
  * @param
  */
 /**
- * Return a Taxa row based upon scientific name
+ * Return a Tree row based upon scientific name
  *
  * @param $scientific_name
  *   String representation of a scientific name
@@ -1093,12 +1097,12 @@ function getRankByColumn ($col) {
  * @param $parent_tsn
  *   Parent tsn of the scientific name
  * @return
- *   Taxa row as array
+ *   Tree row as array
  */
 function getRowByScientificName($scientific_name, $rank_id, $parent_tsn = 0) {
 	$db = connect();
-	$params = array($scientific_name, $rank_id, $parent_tsn);
-  $sql = "select * from Taxa where scientificName = ? and rank_id = ? and parent_tsn = ?";
+	$params = array($scientific_name, $parent_tsn, $rank_id);
+  $sql = "select * from Tree where scientificName = ? and parent_tsn = ? and rank_id = ?";
   $row = $db->getRow($sql, null, $params, null, MDB2_FETCHMODE_OBJECT);
 	isMdb2Error($row, "Error selecting scientificName information");
 	return $row;
