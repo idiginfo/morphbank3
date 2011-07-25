@@ -612,7 +612,7 @@ function insertExternalRefs($bid, $taxon) {
   }
   
   $type_id = 4;
-  $description = trim($taxon['externaleefdescription']);
+  $description = trim($taxon['externalrefdescription']);
   $external_id = trim($taxon['externalrefuniqueid']);
   
   if ((!empty($external_id) && empty($description)) || (empty($external_id) && !empty($description))) {
