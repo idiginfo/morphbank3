@@ -546,6 +546,7 @@ function insertExternalLinks($bid, $taxon) {
   if (is_null(checkExternalLinks($taxon))) return;
   
   if (!checkExternalLinks($taxon)) {
+    $db->rollback();
     $error = "Error: Missing required values (type, label, url) for External Links: " . $values;
     write_log($error, true);
   }
