@@ -302,9 +302,7 @@ function getNextTsn() {
   $error = "Error: Selecting next tsn.$lb";
   handleError($tsn, $error, true);
   
-  if (empty($tsn)) write_log ("Error: Next tsn value returned empty.", true);
-  
-  return $tsn;
+  return empty($tsn) ? $row['minid'] : $tsn;
 }
 
 /**
