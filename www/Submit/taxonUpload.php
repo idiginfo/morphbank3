@@ -616,6 +616,7 @@ function insertExternalRefs($bid, $taxon) {
   $external_id = trim($taxon['externalrefuniqueid']);
   
   if ((!empty($external_id) && empty($description)) || (empty($external_id) && !empty($description))) {
+    $db->rollback();
     $error = "Error: Missing required values for External References: " . $values;
     write_log($error, true);
   }
