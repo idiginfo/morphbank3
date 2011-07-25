@@ -330,9 +330,7 @@ function getNextBaseObjectId() {
   $error = "Error: Selecting next tsn.$lb";
   handleError($bid, $error, true);
   
-  if (empty($bid)) write_log ("Error: Next BaseObject id value returned empty.", true);
-  
-  return $bid;
+  return empty($bid) ? $row['minid'] : $bid;
 }
 
 /**
