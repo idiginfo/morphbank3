@@ -168,6 +168,7 @@ foreach ($taxon_data as $taxon) {
         $authorName = FindAuthorName($taxon_author_id);
         $comment = empty($taxon['comment']) ? NULL: $taxon['comment'];
         $nameSource = $taxon['namesource'];
+        $last = true;
       } else {
         // If rank ids do not match, prepare to insert new parent scientific name
         $kingdom_id = getKingdomId($taxon[1]);
@@ -177,6 +178,7 @@ foreach ($taxon_data as $taxon) {
         $authorName = NULL;
         $comment = NULL;
         $nameSource = NULL;
+        $last = false;
       }
       
       // Begin transaction
@@ -256,11 +258,11 @@ foreach ($taxon_data as $taxon) {
       );
       insertTaxa($taxaParams);
       
-      // Insert external links
-      insertExternalLinks($bid, $taxon);
+      // Insert external links if last name
+      if ($last) insertExternalLinks($bid, $taxon);
       
-      // Insert external references
-      insertExternalRefs($bid, $taxon);
+      // Insert external references if last
+      if ($last) insertExternalRefs($bid, $taxon);
 
       // Commit all queries
       $db->commit();
