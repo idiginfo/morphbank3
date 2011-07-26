@@ -605,22 +605,23 @@ function insertExternalLinks($bid, $taxon) {
  */
 function insertExternalRefs($bid, $taxon) {
   global $db, $lb, $taxaParams, $row_value, $scientificName, $tsn, $parent_tsn;
-   
-  $values = "Row: $row_value, $scientificName, bid: $bid, tsn: $tsn, parent_tsn: $parent_tsn.";
-    
-  if (empty($bid)) {
-    $db->rollback();
-    $error = "Error: Missing BaseObject Id needed for External References: " . $values;
-    write_log($error, true);
-  }
   
   $type_id = 4;
   $description = trim($taxon['externalrefdescription']);
   $external_id = trim($taxon['externalrefuniqueid']);
+  $values = "Row: $row_value, $scientificName, bid: $bid, tsn: $tsn, parent_tsn: $parent_tsn.";
+  
+  if (empty($external_id) && empty($description)) return;
   
   if ((!empty($external_id) && empty($description)) || (empty($external_id) && !empty($description))) {
     $db->rollback();
     $error = "Error: Missing required values for External References: " . $values;
+    write_log($error, true);
+  }
+  
+  if (empty($bid)) {
+    $db->rollback();
+    $error = "Error: Missing BaseObject Id needed for External References: " . $values;
     write_log($error, true);
   }
   
