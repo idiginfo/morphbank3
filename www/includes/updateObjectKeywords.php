@@ -201,7 +201,7 @@ function addKeywords($field, $value){
 function updateKeywords($query){
 	global $updateStmt, $SQL_update, $keywordXml, $keywordText, $dom;
 	global $keywordsTempStmt, $numCleared, $taxaUpdateStmt;
-	global $keywordsTempClearSql, $keywordsBaseObjectUpdateSql, $keywordsUpdateSql;
+	global $keywordsTempClearSql, $keywordsBaseObjectUpdateSql, $keywordsTaxaUpdateSql, $keywordsUpdateSql;
 	global $keywordsMissingSql, $keywordsInsertSql;
 	$massUpdate = true;
 	$db = connect();
@@ -237,12 +237,20 @@ function updateKeywords($query){
 	}
 	$ids -> free();
 	echo "Time after recreating keywords: ".date("H:i:s")."\n";
+  
 	// update BaseObject from KeywordsTemp
 	$result = $db->exec($keywordsBaseObjectUpdateSql);
 	isMdb2Error($result,$keywordsBaseObjectUpdateSql);
 
 	echo "BaseObjects update finished: $updateCount objects updated!\n";
 	echo "Time after  updating BaseObject: ".date("H:i:s")."\n";
+  
+  // update Taxa from KeywordsTemp
+	$result = $db->exec($keywordsTaxaUpdateSql);
+	isMdb2Error($result,$keywordsTaxaUpdateSql);
+
+	echo "Taxa update finished: $result taxa updated!\n";
+	echo "Time after updating Taxa: ".date("H:i:s")."\n";
 
 	// update Keywords from KeywordsTemp
 	$result = $db->exec($keywordsUpdateSql);
