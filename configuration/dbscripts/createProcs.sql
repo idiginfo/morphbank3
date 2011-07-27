@@ -252,7 +252,7 @@ begin
     set b.geolocated = true;
 	update Keywords set geolocated = false;
 	update Keywords k join Geolocated g on k.id=g.id 
-    set k.geolocated = true where id in (select id from Geolocated);
+    set k.geolocated = true where k.id in (select id from Geolocated);
     select row_count();
 end ;;
 
