@@ -49,7 +49,7 @@ $specimenAttrs = ", S.sex, S.form, S.developmentalStage"
 $publicationAttrs = ", P.doi, P.publicationType, P.author, P.publicationTitle, P.month"
 .", P.publisher, P.school, P.series, P.note, P.organization, P.institution, P.title, P.volume"
 .", P.year, P.isbn, P.issn";
-$taxonconceptAttrs = ", TC.nameSpace, TC.status";
+$taxonconceptAttrs = ", TC.nameSpace, TC.status, T.tsn, T.boId, T.taxon_author_name, T.nameSource, T.rank_name, T.taxonomicNames";
 $taxonnameAttrs = ", title, comment, xmlData, annotationLabel";
 $viewAttrs = ", V.viewName, V.imagingTechnique, V.imagingPreparationTechnique, V.specimenPart"
 .", V.viewAngle, V.developmentalStage, V.sex, V.form";
@@ -95,7 +95,8 @@ $specimenJoin = $baseObjectJoin
 ." left join Specimen S ON S.id = B.id"
 ." left join Locality L ON S.localityId = L.id";
 $taxonconceptJoin = $baseObjectJoin
-." left join TaxonConcept TC ON TC.id = B.id";
+." left join TaxonConcept TC ON TC.id = B.id"
+." left join Taxa T ON T.tsn = TC.tsn";
 $viewJoin = $baseObjectJoin
 ." left join View V ON V.id = B.id";
 $userJoin = " BaseObject B"
@@ -190,7 +191,7 @@ function getObjectKeywordQuery($objectTypeId){
 // Prepare queries and update
 function prepareKeywordQueries(){
 	global $updateStmt, $keywordsTempStmt, $numCleared, $taxaUpdateStmt;
-	global $keywordsTempClearSql, $keywordsBaseObjectUpdateSql, $keywordsUpdateSql;
+	global $keywordsTempClearSql, $keywordsBaseObjectUpdateSql, $keywordsTaxaUpdateSql, $keywordsUpdateSql;
 	global $keywordsMissingSql, $keywordsInsertSql, $keywordsTempParams;
 	global $collectionObjectKeywordsSql, $collectionObjectKeywordsStmt;
 	global $externalKeywordsSql, $externalKeywordsStmt;
@@ -215,6 +216,9 @@ function prepareKeywordQueries(){
 	$keywordsBaseObjectUpdateSql = "update BaseObject, KeywordsTemp set BaseObject.keywords = KeywordsTemp.keywords,"
 	." BaseObject.xmlkeywords = KeywordsTemp.xmlkeywords, BaseObject.imageAltText = KeywordsTemp.imageAltText"
 	." where BaseObject.id=KeywordsTemp.id";
+  
+  $keywordsTaxaUpdateSql = "update Taxa, TaxonConcept, KeywordsTemp set Taxa.keywords = KeywordsTemp.keywords "
+  ." where Taxa.tsn = TaxonConcept.tsn and TaxonConcept.id = KeywordsTemp.id";
 
 	$keywordsUpdateSql = "update Keywords, KeywordsTemp set Keywords.keywords = KeywordsTemp.keywords,"
 	." Keywords.xmlkeywords = KeywordsTemp.xmlkeywords "
