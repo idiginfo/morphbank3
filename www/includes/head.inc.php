@@ -135,7 +135,7 @@ function initHtml ($title = "", $javaScript="", $includeJavaScript=array()) {
 	}
   
   if ($config->webTrafficTracker) {
-    echo '<script type="text/javascript" src="/js/'.$config->webTrafficTrackerFile.'"></script>' . "\n";
+    include_once "/js/{$config->webTrafficTrackerFile}";
   }
 	echo'</head>';
 }
