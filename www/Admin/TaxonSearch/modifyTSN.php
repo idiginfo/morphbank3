@@ -123,7 +123,7 @@ $haveChildren = HaveChildren($tsn); // returns true/false if children exist
 $nameChange = $scientificName != $rowTree['scientificname'];
 $rankChange = $rank_id != $rowTree['rank_id'];
 $updateParent = $parent_tsn != $rowTree['parent_tsn'];
-$updateChildrenNames = $haveChildren && $rankChange;
+$updateChildrenNames = $haveChildren || $rankChange;
 
 // If script makes it here, it's ok to update following fields
 $treeUpdater->addField('rank_id', $rank_id, $rowTree['rank_id']);
