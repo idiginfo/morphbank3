@@ -107,7 +107,7 @@ function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $fileS
 			}
 		}
 		// create tilepic
-		if (!checkFileDate($tpcImgPath, $originalImgPath)){
+		if ($config->processTPC && !checkFileDate($tpcImgPath, $originalImgPath)){
 			//$message .= "No file for path '$tpcImgPath'\n";
 			$converted = convertTpc($id, $jpegImgPath);
 			if ($converted){
@@ -117,7 +117,7 @@ function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $fileS
 		}
 		// create openzoom (iip)
 		if (!checkFileDate($iipImgPath, $originalImgPath)){
-			//$message .= "No file for path '$tpcImgPath'\n";
+			//$message .= "No file for path '$iipImgPath'\n";
 			$converted = convertIip($jpegImgPath, $iipImgPath);
 			if ($converted){
 				$message .= "iip";
@@ -258,11 +258,11 @@ function convertOriginal($source, $target, $size){
  * @return string path for new raw file
  */
 function convertDng($source){
-	global $DCDRAW_COMMAND, $message;
+	global $config, $message;
 	$rawFile = "/tmp/orig.raw";
-	$dcdraw = $DCDRAW_COMMAND . " -c $source > $rawFile";
-	$message .=  date("H:i:s")." Executing: $dcdraw\n";
-	$reply = shell_exec($dcdraw);
+	$dcraw = $config->dcraw . " -c $source > $rawFile";
+	$message .=  date("H:i:s")." Executing: $dcraw\n";
+	$reply = shell_exec($dcraw);
 	if (strlen($reply)>0){
 		$message .=  "conversion failed with message: '$reply'<br/>\n)";
 	}
@@ -277,8 +277,9 @@ function convertTpc($id, $imgSrc = null){
 function convertIip($source, $target){
 	global $config;
 
-	$convert = $config->vips." im_vips2tiff $source $target:75,deflate,tile:256x256,pyramid";
-	
+	$convert = $config->vips." im_vips2tiff $source $target:"
+	.$config->iipFactor.",deflate,tile:256x256,pyramid";
+
 	$message .= date("H:i:s")." Executing: $convert\n";
 	$reply = shell_exec($convert);
 	if (strlen($reply)>0){
