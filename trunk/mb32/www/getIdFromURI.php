@@ -21,7 +21,7 @@
  *   Stephen Winner - initial API and implementation
  */
 
-$extId = $_REQUEST['extId'];
+$extId = $_REQUEST['uri'];
 
 include_once 'getIdFromExtId.php';
 echo getIdFromExtId($extId);
