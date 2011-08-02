@@ -39,10 +39,10 @@ if (!$iipOK) {
 	if (!empty($sessionId)) $frameUrl .= "&sessionId=$sessionId";
 	header("Status: 302 Temporary redirect");
 	header("Location: $frameUrl");
-
 }
 
 function ViewIipFrame($id) {
+	global $config;
 	// session Id from server for use in accessing private images
 	$sessionId = $_REQUEST['sessionId'];
 	$width = $_REQUEST['width'];
@@ -51,7 +51,6 @@ function ViewIipFrame($id) {
 	$image = new Image($id, 'iip', null, $sessionId);
 	// The beginning of HTML
 	if (!$image->getAuthorized()===true){
-		global $DEFAULT_IMAGES, $config;
 		echo '<img src="'.$config->hostServerBaseUrl.'/style/webImages/'.$config->imgPrivate.'"/> ';
 		return true;
 	}
