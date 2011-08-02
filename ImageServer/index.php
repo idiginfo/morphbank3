@@ -1,27 +1,29 @@
 <?php
 /**
-* Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the GNU Public License v2.0
-* which accompanies this distribution, and is available at
-* http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-* 
-* Contributors:
-*   Fredrik Ronquist - conceptual modeling and interaction design
-*   Austin Mast - conceptual modeling and interaction design
-*   Greg Riccardi - initial API and implementation
-*   Wilfredo Blanco - initial API and implementation
-*   Robert Bruhn - initial API and implementation
-*   Christopher Cprek - initial API and implementation
-*   David Gaitros - initial API and implementation
-*   Neelima Jammigumpula - initial API and implementation
-*   Karolina Maneva-Jakimoska - initial API and implementation
-*   Deborah Paul - initial API and implementation implementation
-*   Katja Seltmann - initial API and implementation
-*   Stephen Winner - initial API and implementation
-*/
+ * Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the GNU Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * Contributors:
+ *   Fredrik Ronquist - conceptual modeling and interaction design
+ *   Austin Mast - conceptual modeling and interaction design
+ *   Greg Riccardi - initial API and implementation
+ *   Wilfredo Blanco - initial API and implementation
+ *   Robert Bruhn - initial API and implementation
+ *   Christopher Cprek - initial API and implementation
+ *   David Gaitros - initial API and implementation
+ *   Neelima Jammigumpula - initial API and implementation
+ *   Karolina Maneva-Jakimoska - initial API and implementation
+ *   Deborah Paul - initial API and implementation implementation
+ *   Katja Seltmann - initial API and implementation
+ *   Stephen Winner - initial API and implementation
+ */
 
 define('PHP_ENTRY',0);// valid Web app entry point
+
+include_once('checkAuthorization.php');
 
 $requestServer = $_SERVER['REMOTE_ADDR'];
 $responseServer = $_SERVER['SERVER_NAME'];
@@ -32,6 +34,16 @@ if($requestServer == $responseServer) { // request is from ME!
 
 // Get object id from parameters, if available
 $id = $_REQUEST['id'];
+if (!intval($id)){// id is not an integer, must be a URI
+	// get id from web server
+	$uri = $id;
+	$id = getIdFromURI($uri);
+	if (empty($id)){
+		header("HTTP/1.1 404 Not Found: No image with id '$extId'");
+		return;
+	}
+}
+
 $imgType = $_REQUEST['imgType'];
 $imgSize = $_REQUEST['imgSize'];
 
