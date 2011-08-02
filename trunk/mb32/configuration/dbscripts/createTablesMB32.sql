@@ -1127,8 +1127,8 @@ alter table Collection
     add foreign key (groupId) references Groups(id);
 
 alter table CollectionObjects
-    add foreign key (collectionId) references BaseObject(id), 
-    add foreign key (objectId) references BaseObject(id);
+    add foreign key (collectionId) references BaseObject(id) on delete cascade, 
+    add foreign key (objectId) references BaseObject(id) on delete cascade;
 
 alter table DeterminationAnnotation
     add foreign key (annotationId) references Annotation(id), 
@@ -1138,20 +1138,20 @@ alter table DeterminationAnnotation
     add foreign key (kingdomId) references Kingdoms(kingdom_id);
 
 alter table ExternalLinkObject
-    add foreign key (mbId) references BaseObject(id), 
+    add foreign key (mbId) references BaseObject(id) on delete cascade, 
     add foreign key (extLinkTypeId) references ExternalLinkType(linkTypeId);
 
 alter table Groups
     add foreign key (id) references BaseObject(id),
     add foreign key (tsn) references Tree(tsn),
-    add foreign key (groupManagerId) references User(id);
+    add foreign key (groupManagerId) references User(id) on delete set null;
 
 alter table Image
     add foreign key (id) references BaseObject(id), 
     add foreign key (userId) references User(id), 
     add foreign key (groupId) references Groups(id), 
-    add foreign key (specimenId) references Specimen(id), 
-    add foreign key (viewId) references View(id);
+    add foreign key (specimenId) references Specimen(id) on delete set null, 
+    add foreign key (viewId) references View(id) on delete set null;
 
 alter table Locality
     add foreign key (id) references BaseObject(id);
@@ -1182,8 +1182,8 @@ alter table Specimen
     add foreign key (id) references BaseObject(id), 
     add foreign key (basisOfRecordId) references BasisOfRecord(name), 
     add foreign key (tsnId) references Tree(tsn), 
-    add foreign key (localityId) references Locality(id),
-    add foreign key (standardImageId) references Image(id);
+    add foreign key (localityId) references Locality(id) on delete set null,
+    add foreign key (standardImageId) references Image(id) on delete set null;
 
 alter table Taxa
     add foreign key (tsn) references Tree(tsn),
@@ -1227,4 +1227,4 @@ alter table Vernacular
 alter table `View`
     add foreign key (id) references BaseObject(id), 
     add foreign key (viewTSN) references Tree(tsn), 
-    add foreign key (standardImageId) references Image(id);
+    add foreign key (standardImageId) references Image(id) on delete set null;
