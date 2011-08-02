@@ -32,8 +32,14 @@ $id = $_REQUEST['id'];
 $iipOK = viewIipFrame($id);
 if (!$iipOK) {
 	// could not show iip frame, use bischen instead
+	$sessionId = $_REQUEST['sessionId'];
+	$width = $_REQUEST['width'];
+	$height = $_REQUEST['height'];
+	$frameUrl = "/bischen/viewDiv.php?id=$id&width=$width&height=$height";
+	if (!empty($sessionId)) $frameUrl .= "&sessionId=$sessionId";
 	header("Status: 302 Temporary redirect");
-	header("Location: /bischen/viewFrame.php?id=$id");
+	header("Location: $frameUrl");
+
 }
 
 function ViewIipFrame($id) {
@@ -45,7 +51,7 @@ function ViewIipFrame($id) {
 	$image = new Image($id, 'iip', null, $sessionId);
 	// The beginning of HTML
 	if (!$image->getAuthorized()===true){
-		global $DEFAULT_IMAGES;
+		global $DEFAULT_IMAGES, $config;
 		echo '<img src="'.$config->hostServerBaseUrl.'/style/webImages/'.$config->imgPrivate.'"/> ';
 		return true;
 	}
@@ -61,15 +67,16 @@ function iipTag ($image, $width, $height){
 	$sessionId = $image->getSessionId();
 	$imageFilePath = $image->getImageFilePath();
 	$iipDir = $config->iipDir;
+	$iipFcgi = $config->iipFcgi;
 
 	$tag ="<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n"
 	."<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
 	."<head>\n"
 	."<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js\"></script>\n"
 	."<script type=\"text/javascript\">\n"
-	."      var server = \"$iipDir/iipsrv.fcgi\"; \n"
+	."      var server = \"$iipFcgi\"; \n"
 	."      var image = \"$imageFilePath\"; \n"
-	."      var credit = \"Trying tif file\"; \n"
+	."      var credit = \"Showing image $imageId\"; \n"
 	."      var flashvars = {server: server,image: image,navigation: true,credit: credit} \n"
 	."      var params = {scale: \"noscale\",bgcolor: \"#000000\",allowfullscreen: \"true\",allowscriptaccess: \"always\"} \n"
 	."      swfobject.embedSWF(\"$iipDir/IIPZoom.swf\", \"container\", \"100%\", \"100%\", \"9.0.0\",\"$iipDir/expressInstall.swf\", flashvars, params); \n"
