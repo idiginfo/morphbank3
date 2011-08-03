@@ -39,7 +39,7 @@ if (!intval($id)){// id is not an integer, must be a URI
 	$uri = $id;
 	$id = getIdFromURI($uri);
 	if (empty($id)){
-		header("HTTP/1.1 404 Not Found: No image with id '$extId'");
+		header("HTTP/1.1 404 Not Found: No image with id '$uri'");
 		return;
 	}
 }
