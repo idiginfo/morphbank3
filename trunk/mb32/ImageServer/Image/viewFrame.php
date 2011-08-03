@@ -67,6 +67,7 @@ function iipTag ($image, $width, $height){
 	$imageFilePath = $image->getImageFilePath();
 	$iipDir = $config->iipDir;
 	$iipFcgi = $config->iipFcgi;
+	$iipSwf = $config->iipSwf;
 
 	$tag ="<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n"
 	."<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
@@ -78,7 +79,7 @@ function iipTag ($image, $width, $height){
 	."      var credit = \"Showing image $imageId\"; \n"
 	."      var flashvars = {server: server,image: image,navigation: true,credit: credit} \n"
 	."      var params = {scale: \"noscale\",bgcolor: \"#000000\",allowfullscreen: \"true\",allowscriptaccess: \"always\"} \n"
-	."      swfobject.embedSWF(\"$iipDir/IIPZoom.swf\", \"container\", \"100%\", \"100%\", \"9.0.0\",\"$iipDir/expressInstall.swf\", flashvars, params); \n"
+	."      swfobject.embedSWF(\"$iipSwf\", \"container\", \"100%\", \"100%\", \"9.0.0\",\"$iipDir/expressInstall.swf\", flashvars, params); \n"
 	."</script>\n"
 	."<style type=\"text/css\">\n"
 	."      html, body { background-color: #000; height: 100%; overflow: hidden; margin: 0; padding: 0; }\n"
