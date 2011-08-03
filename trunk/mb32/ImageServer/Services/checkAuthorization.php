@@ -20,15 +20,12 @@
  *   Katja Seltmann - initial API and implementation
  *   Stephen Winner - initial API and implementation
  */
+include_once ("HTTP/Request.php");
 
 function checkAuthorization($id, $sessionId = null, $function = 'view'){
-
 	global $config;
 	// if the request comes from application, say yes.
 	if (approveRequestor()) return true;
-
-	include_once ("HTTP/Request.php");
-
 	$request = new HTTP_Request($config->appServerBaseUrl."checkImageAuthorization.php?$id");
 	$request->setMethod(HTTP_REQUEST_METHOD_POST);
 
@@ -62,7 +59,9 @@ function approveRequestor(){
 }
 
 function getIdFromURI($extId){
-	$request = new HTTP_Request($config->appServerBaseUrl."getIdFromURI.php?$id");
+	global $config;
+	$requestUri = $config->appServerBaseUrl."getIdFromURI.php?";
+	$request = new HTTP_Request($requestUri);
 	$request->setMethod(HTTP_REQUEST_METHOD_POST);
 
 	// add parameters
