@@ -60,12 +60,12 @@ function approveRequestor(){
 
 function getIdFromURI($extId){
 	global $config;
-	$requestUri = $config->appServerBaseUrl."getIdFromURI.php?";
+	$requestUri = $config->appServerBaseUrl."getIdFromURI.php";
 	$request = new HTTP_Request($requestUri);
 	$request->setMethod(HTTP_REQUEST_METHOD_POST);
 
 	// add parameters
-	$request->addPostData('extId', $extId);
+	$request->addPostData('uri', $extId);
 	if (PEAR::isError($request->sendRequest())) {
 		return false;
 	}
