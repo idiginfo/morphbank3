@@ -3,13 +3,17 @@
 // lookup external id and return local id
 
 function getIdFromExtId($extId){
+	global $config;
 	// check for morphbank id
 	$comps = parse_url($extId);
-	if ($comps['host']=='www.morphbank.net'){
-		// morphbank url
+	$host = $_SERVER['SERVER_NAME'];
+	if ($comps['host'] == $host){
+		// own server url
 		$query = $comps['query'];
 		$path = $comps['path'];
-		// sample (a) http://www.morphbank.net/12345 ?id=12345
+		// remove initial '/'
+		$path = substr($path,1);
+		// sample (a) http://www.morphbank.net/12345
 		$intPath = intval($path);
 		if ($intPath){
 			return $intPath;
@@ -20,8 +24,9 @@ function getIdFromExtId($extId){
 		if(intval($intId)){
 			return $intId;
 		}
-
 	}
+	//TODO check for id of some other server lookup hostserver+id
+
 	// check for external id
 	$db = connect();
 	$getIdSelect = "select mbId from ExternalLinkObject where externalId=?";
