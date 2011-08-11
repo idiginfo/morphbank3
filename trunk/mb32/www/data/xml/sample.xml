@@ -1,125 +1,139 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slideshow>
-
 	<slide>
-		<image url='/includes/swf/images/50531.jpg' width='500'  background='ffffff' />
+		<image url='../../includes/swf/images/Euglossini196725_800.jpg' width='500'   background='181a0f'/> 
+		<draw_text>
+			<text x='-5' y='-10' width='500' rotation='0' align='center' size='71' color='ffffff' alpha='90'>Morphbank</text>
+                        <text x='20' y='240' width='360' rotation='-90' align='left' size='50' color='ffffff' alpha='90'>images</text>
+			<text x='100' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Katja Seltmann</text>
+		</draw_text>	
+		<link>
+			<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=196725" target="_blank" />
+		</link>
+	</slide>
+	
+	<slide>
+		<image url='../../includes/swf/images/541608.jpg' width='500'  background='f6fcfc' />
+		<motion duration='3' start_xOffset='15' end_xOffset='15' start_yOffset='-85' end_yOffset='5' start_zoom='70' end_zoom='90' />
 			<draw_text>
-				<text x='-5' y='-10' width='500' rotation='0' align='center' size='71' color='ffffff' alpha='90'>Morphbank</text>
-				<text x='20' y='240' width='360' rotation='-90' align='left' size='50' color='ffffff' alpha='90'>images</text>
-				<text x='120' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>FSU Herbarium-Austin Mast</text>
+				<text x='120' y='360' width='500' rotation='0' align='center' size='20' color='000000' alpha='90'>FSU Godfrey Herbarium-Austin Mast</text>
 			</draw_text>
 			<link>
-				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/myCollection/?id=216481" target="_blank" />
+				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=541608" target="_blank" />
 			</link>
 	</slide>
 
 	<slide>
-		<image url='/includes/swf/images/69041.jpeg'  width='500' />
+		<image url='../../includes/swf/images/497113.jpeg'  width='500' background='000000'/>
 			<draw_text>
 				<text x='30' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Systematic Entomology Laboratory-Michael Gates</text>
 			</draw_text>	
 			<link>
-				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/myCollection/?id=216481" target="_blank" />
+				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=497113" target="_blank" />
 			</link>
 	</slide>
 
 	<slide>
-		<image url='/includes/swf/images/57731.jpg' width='500' />
-		<motion duration='3' start_xOffset='15' end_xOffset='15' start_yOffset='-75' end_yOffset='40' start_zoom='135' end_zoom='135' />
-			<draw_text>
-					<text x='100' y='360' width='500' rotation='0' align='center' size='20' color='000000' alpha='90'>Katja Seltmann</text>
-			</draw_text>	
-			<link>
-				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/myCollection/?id=216481" target="_blank" />
-			</link>
+		<image url='../../includes/swf/images/102481.jpeg' width='500'  background='ffffff'/>
+		<draw_text>
+			<text x='25' y='320' width='500' rotation='0' align='left' size='20' color='000000' alpha='90'>Hymenoptera</text>
+			<text x='25' y='340' width='500' rotation='0' align='left' size='20' color='000000' alpha='90'>Tree of Life</text>
+			<text x='25' y='360' width='500' rotation='0' align='left' size='20' color='000000' alpha='90'>Susanne Schulmeister</text>
+		</draw_text>	
+		<link>
+			<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=102481" target="_blank" />
+		</link>
 	</slide>
 
 	<slide>
-		<image url='/includes/swf/images/218931.jpeg' width='500' />
-			<draw_text>
+		<image url='../../includes/swf/images/461093_crop.jpeg' width='400'   background='000000'/>
+		<motion duration='3' start_xOffset='12' end_xOffset='12' start_yOffset='0' end_yOffset='0' start_zoom='100' end_zoom='100' />
+		<draw_text>
 				<text x='70' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Albert Preito Marquez</text>
 			</draw_text>	
 			<link>
-				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/myCollection/?id=216481" target="_blank" />
+				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=461093" target="_blank" />
 			</link>
 	</slide>
 
 	<slide>
-		<image url='/includes/swf/images/67031.jpeg' width='500' />
-		<motion duration='3' start_xOffset='-70' end_xOffset='50' start_yOffset='-60' end_yOffset='60' start_zoom='135' end_zoom='135' />
+		<image url='../../includes/swf/images/AgraulisVanillaeSspNigrior589879_800.jpg' width='500'   background='d3d3d5' />
+		<motion duration='3' start_xOffset='-200' end_xOffset='0' start_yOffset='0' end_yOffset='0' start_zoom='100' end_zoom='100' />
+		<draw_text>
+			<text x='65' y='360' width='500' rotation='0' align='center' size='20' color='000000' alpha='90'>Tall Timbers Research Station-Kevin Robertson</text>
+		</draw_text>
+		<link>
+			<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=589879" target="_blank" />
+		</link>
+	</slide>
+	
+	<slide>
+		<image url='../../includes/swf/images/ThalassiosiraCedarkeyensis227492_800.jpg' width='500'   background='000000'/>
+		<motion duration='3' start_xOffset='-60' end_xOffset='0' start_yOffset='-50' end_yOffset='0' start_zoom='80' end_zoom='100' />
 			<draw_text>
-				<text x='120' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Bishop Museum-John Randall </text>
+				<text x='70' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Thalassiosira cedarkeyensis - James Nienow</text>
 			</draw_text>	
 			<link>
-				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/myCollection/?id=216481" target="_blank" />
+				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=227492" target="_blank" />
 			</link>
 	</slide>
 
 	<slide>
-		<image url='/includes/swf/images/53309.jpeg' width='500' />
+		<image url='../../includes/swf/images/471047fullsize.jpeg' width='500' />
+		<motion duration='3' start_xOffset='0' end_xOffset='0' start_yOffset='-80' end_yOffset='0' start_zoom='120' end_zoom='140' />
 			<draw_text>
-				<text x='65' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Hymenoptera Tree of Life-Susanne Schulmeister</text>
-			</draw_text>	
-			<link>
-				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/myCollection/?id=216481" target="_blank" />
-			</link>
-	</slide>
-
-	<slide>
-		<image url='/includes/swf/images/216121.jpg' width='500' />
-		<motion duration='3' start_xOffset='-200' end_xOffset='0' start_yOffset='0' end_yOffset='0' start_zoom='150' end_zoom='150' />
-			<draw_text>
-				<text x='180' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Kim and Forest Starr</text>
+				<text x='100' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Cypriniform Tree of Life-Paula Mabee</text>
 			</draw_text>
 			<link>
-				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/myCollection/?id=216481" target="_blank" />
+				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=471047" target="_blank" />
 			</link>
 	</slide>
 
 	<slide>
-		<image url='/includes/swf/images/1234.jpg' width='500' />
-		<motion duration='3' start_xOffset='0' end_xOffset='0' start_yOffset='-150' end_yOffset='100' start_zoom='160' end_zoom='160' />
-			<draw_text>
-				<text x='100' y='360' width='500' rotation='0' align='center' size='20' color='000000' alpha='90'>Cypriniform Tree of Life-Paula Mabee</text>
-			</draw_text>
-			<link>
-				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/myCollection/?id=216481" target="_blank" />
-			</link>
-	</slide>
-
-	<slide>
-		<image url='/includes/swf/images/99861.jpg' width='500' />
+		<image url='../../includes/swf/images/227051.jpg' width='500' />
 		<motion duration='3' start_xOffset='0' end_xOffset='0' start_yOffset='0' end_yOffset='0' start_zoom='110' end_zoom='110' />
 			<draw_text>
 				<text x='50' y='340' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Santa Barbara Museum of Natural History-</text>
 				<text x='160' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Paul Valentich-Scott</text>
 			</draw_text>
 			<link>
-				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/myCollection/?id=216481" target="_blank" />
+				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=227051" target="_blank" />
 			</link>
 	</slide>
 
 	<slide>
-		<image url='/includes/swf/images/96948.jpeg' width='500' />
-		<motion duration='3' start_xOffset='-95' end_xOffset='50' start_yOffset='-25' end_yOffset='-90' start_zoom='225' end_zoom='225' />
+		<image url='../../includes/swf/images/104324.jpg' width='500' background='696a62'/>
+		<motion duration='3' start_xOffset='-125' end_xOffset='30' start_yOffset='30' end_yOffset='00' start_zoom='100' end_zoom='110' />
 			<draw_text>
-				<text x='75' y='360' width='500' rotation='0' align='center' size='20' color='000000' alpha='90'>North Carolina State Univeristy-Andrew Deans</text>
+				<text x='75' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>North Carolina State University-Andrew Deans</text>
 			</draw_text>
 			<link>
-				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/myCollection/?id=216481" target="_blank" />
+				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=104324" target="_blank" />
 			</link>
 	</slide>
 
 	<slide>
-		<image url='/includes/swf/images/220602.jpg' width='500' />
-		<motion duration='3' start_xOffset='-75' end_xOffset='40' start_yOffset='-75' end_yOffset='60' start_zoom='230' end_zoom='230' />
-		<navigation next='1' />
+		<image url='../../includes/swf/images/MagnoliaXsoulangiana464091_800.jpg' width='500' />
+		<motion duration='3' start_xOffset='-75' end_xOffset='30' start_yOffset='-75' end_yOffset='60' start_zoom='230' end_zoom='230' />
 			<draw_text>
-					<text x='120' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Steven Baskauf</text>
+					<text x='120' y='360' width='500' rotation='0' align='center' size='20' color='000000' alpha='90'>Bioimages - Steven Baskauf</text>
 			</draw_text>	
 			<link>
-				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/myCollection/?id=216481" target="_blank" />
+				<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=464091" target="_blank" />
 			</link>
 	</slide>
+		
+	<slide>
+		<image url='../../includes/swf/images/EchinarachniusJuliensis579186.jpg' width='500' />
+		 <motion duration='3' start_xOffset='0' end_xOffset='0' start_yOffset='-150' end_yOffset='0' start_zoom='100' end_zoom='100' />
+		 	<navigation next='1' />
+		<draw_text>
+			<text x='20' y='360' width='500' rotation='0' align='center' size='20' color='ffffff' alpha='90'>Darwin, 1858 Harvard University MCZ - Paul Morris</text>
+		</draw_text>
+		<link>
+			<area x='-5' y='-10' width='500' rotation='0' align='center' size='71' url="/?id=579186" target="_blank" />
+		</link>
+	</slide>
+	</slideshow>
 
-</slideshow>
+
