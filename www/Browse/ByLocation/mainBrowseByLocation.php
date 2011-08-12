@@ -223,7 +223,7 @@ function outputArrayLocalities($array, $total, $browseByLocationHref)
 	for ($i = 0; $i < $sizeOfArray; $i++) {
 		$colorIndex = $i % 2;
 		$showCameraHtml = "";
-		if (!$_GET['pop'] && $array[$i][$sortByFields[11]['field']])
+		if (!$_GET['pop'] && $array[$i][$sortByFields[14]['field']])
 		// no pop and imagesCount > 0
 		$showCameraHtml = '<a href="' . $browseByImageHref . '?localityId=' . $array[$i][$sortByFields[0]['field']] . '">
           <img border="0" src="/style/webImages/camera-min16x12.gif" title="List of images" alt="link"/></a>';
@@ -236,24 +236,29 @@ function outputArrayLocalities($array, $total, $browseByLocationHref)
         <table>
           <tr>
             <td class="greenBottomBorder">
-              <span  title="Location Id"> Locality [' . $array[$i][$sortByFields[0]['field']] . ']</span> 
-               &nbsp;' . $array[$i][$sortByFields[1]['field']] . ' / ' . $array[$i][$sortByFields[2]['field']] . '
+              <span  title="Location Id"> Locality [' . $array[$i][$sortByFields[0]['field']] . ']</span>
             </td>
             <td class="browseRight greenBottomBorder">' . printOptions($myObjOptions, $array[$i][$sortByFields[0]['field']], 'Location', $array[$i][$sortByFields[3]['field']]) . '</td>
           </tr>
           <tr>
+            <td>' . $sortByFields[6]['label'] . ': ' . wordwrap($array[$i][$sortByFields[6]['field']], 70, '<br />') . '</td>
+            <td class="browseRight" valign="top">' . $sortByFields[14]['label'] . ': ' . $array[$i][$sortByFields[14]['field']] . $showCameraHtml . '</td>
+          <tr>
+          <tr>
+            <td>' . $sortByFields[1]['label'] . '/'. $sortByFields[2]['label'] . ': ' . $array[$i][$sortByFields[1]['field']] . '/' . $array[$i][$sortByFields[2]['field']] . '</td>
+            <td class="browseRight">&nbsp;</td>
+          <tr>
             <td>' . $sortByFields[3]['label'] . ': ' . $array[$i][$sortByFields[3]['field']] . '</td>
-            <td class="browseRight">' . $sortByFields[11]['label'] . ': ' . $array[$i][$sortByFields[11]['field']] . $showCameraHtml . '</td>
+            <td class="browseRight">&nbsp;</td>
           </tr>
           <tr>
             <td>' . $sortByFields[4]['label'] . '/' . $sortByFields[5]['label'] . ': ' . $array[$i][$sortByFields[4]['field']] . ' / ' . $array[$i][$sortByFields[5]['field']] . '</td>
             <td class="browseRight">&nbsp;</td>
           </tr>
           <tr>
-            <td>Elevation (m) : ' . (($array[$i][$sortByFields[7]['field']] == $array[$i][$sortByFields[8]['field']]) ? $array[$i][$sortByFields[7]['field']] : $array[$i][$sortByFields[7]['field']] . ' - ' . $array[$i][$sortByFields[8]['field']]) . '</td>
+            <td>Elevation (m) : ' . (($array[$i][$sortByFields[10]['field']] == $array[$i][$sortByFields[11]['field']]) ? $array[$i][$sortByFields[10]['field']] : $array[$i][$sortByFields[10]['field']] . ' - ' . $array[$i][$sortByFields[11]['field']]) . '</td>
             <td class="browseRight">&nbsp;</td>
           </tr>
-          
         </table>
       </div>';
 	}
