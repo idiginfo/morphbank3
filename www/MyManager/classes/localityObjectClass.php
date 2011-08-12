@@ -86,23 +86,27 @@ class localityObject extends mbObjectClass {
 		echo printOptions($this->myObjOptions, $array[$this->sortByFields[0]['field']],'Location',$array[$this->sortByFields[3]['field']]);
 		echo '</td></tr>';
     echo '<tr><td>';
-    echo $this->sortByFields[1]['label'].'/'.$this->sortByFields[2]['label'].': '
-         .ucwords(strtolower($array[$this->sortByFields[1]['field']])).'/'.ucwords(strtolower($array[$this->sortByFields[2]['field']])).
-         '</td><td class="browseRight">'.$this->sortByFields[11]['label'].': '.
-         $array[$this->sortByFields[11]['field']].$showCameraHtml.'</td></tr>';
+    echo $this->sortByFields[6]['label'].': '.$array[$this->sortByFields[6]['field']];
+    echo '</td><td class="browseRight">';
+    echo $this->sortByFields[14]['label'].': ';
+    echo $array[$this->sortByFields[14]['field']].$showCameraHtml;
+    echo '</td></tr>';
+    echo '<tr><td>';    
+    echo $this->sortByFields[1]['label'].'/'.$this->sortByFields[2]['label'].': ';
+    echo ucwords(strtolower($array[$this->sortByFields[1]['field']])).'/'.ucwords(strtolower($array[$this->sortByFields[2]['field']]));
+    echo '</td></tr>';
     echo '<tr><td>';
     echo $this->sortByFields[3]['label'].': '.ucwords(strtolower($array[$this->sortByFields[3]['field']]))
 		.'</td><td></td></tr>';
-    
     echo '<tr><td>'.$this->sortByFields[4]['label'].'/' .$this->sortByFields[5]['label']. ': ';
     echo truncateValue($array[$this->sortByFields[4]['field']]). '/';
 		echo truncateValue($array[$this->sortByFields[5]['field']]);
 		echo '</td><td class="browseRight">&nbsp;</td></tr>
 			<tr><tr><td>Elevation (m) : ';
-		if ($array[$this->sortByFields[7]['field']] == $array[$this->sortByFields[8]['field']]) {
-			echo $array[$this->sortByFields[7]['field']];
+		if ($array[$this->sortByFields[10]['field']] == $array[$this->sortByFields[11]['field']]) {
+			echo $array[$this->sortByFields[10]['field']];
 		} else {
-			echo $array[$this->sortByFields[7]['field']].' - '.$array[$this->sortByFields[8]['field']];
+			echo $array[$this->sortByFields[10]['field']].' - '.$array[$this->sortByFields[11]['field']];
 		}
 		echo '</td><td class="browseRight">&nbsp;</td></tr></table></div>';
 	}
