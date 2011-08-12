@@ -86,7 +86,7 @@ class localityObject extends mbObjectClass {
 		echo printOptions($this->myObjOptions, $array[$this->sortByFields[0]['field']],'Location',$array[$this->sortByFields[3]['field']]);
 		echo '</td></tr>';
     echo '<tr><td>';
-    echo $this->sortByFields[6]['label'].': '.$array[$this->sortByFields[6]['field']];
+    echo $this->sortByFields[6]['label'].': '.wordwrap($array[$this->sortByFields[6]['field']], 100, '<br />');
     echo '</td><td class="browseRight">';
     echo $this->sortByFields[14]['label'].': ';
     echo $array[$this->sortByFields[14]['field']].$showCameraHtml;
