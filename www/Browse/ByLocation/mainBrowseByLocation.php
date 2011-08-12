@@ -267,4 +267,5 @@ function outputArrayLocalities($array, $total, $browseByLocationHref)
 	printLinks($total, $numParPage, $offset, $browseByCollection);
 	echo ' &nbsp; (' . $total . ' localities)</div><br />';
 }
+
 ?>
