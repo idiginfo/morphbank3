@@ -26,7 +26,7 @@
   {
       
       include("mbMenu_data.php");
-      global $link;
+      global $link, $config;
       
       
       //returns the number of rows in the Image table which equals to the number of images in application  
@@ -94,8 +94,13 @@
      </div>
     <div id="right">
         <h3>News and Updates</h3>
-        <img src="/style/webImages/blueHR-trans.png" class="blueHR"  width="200" alt="" />' . showNews($link) . '
-            (<a href="' . $config->domain . 'About/News">see all past news</a>)
+        <img src="/style/webImages/blueHR-trans.png" class="blueHR"  width="200" alt="" />';
+    if ($config->disableSite == 1) {
+      echo '<p style="color:red">Morphbank is currently disabled for updates and submissions.</p>';
+    } else {
+      showNews($link);
+    }
+    echo '(<a href="' . $config->domain . 'About/News">see all past news</a>)
       </div>
       </div>';
   }
