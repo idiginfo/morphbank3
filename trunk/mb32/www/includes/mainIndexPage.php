@@ -97,9 +97,8 @@
         <img src="/style/webImages/blueHR-trans.png" class="blueHR"  width="200" alt="" />';
     if ($config->disableSite == 1) {
       echo '<p style="color:red">Morphbank is currently disabled for updates and submissions.</p>';
-    } else {
-      showNews($link);
     }
+    echo showNews($link);
     echo '(<a href="' . $config->domain . 'About/News">see all past news</a>)
       </div>
       </div>';
