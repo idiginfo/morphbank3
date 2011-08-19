@@ -70,13 +70,13 @@ function mainTaxon() {
 		$found      = true;
 	} elseif (!empty($search_name)) {
 		$search_result = getSimilarNames($search_name);
-		$numRows = $search_result->numRows();
+		$numRows = count($search_result);
 		if ($numRows > 0) {
 			if ($numRows > 1) {
 				echo "<span style='color:#17256B'><b> There is more than one result matching your search criteria.";
 				echo "</b></span><br/><br/>";
 				$old_kingdom;
-				while($result = $search_result->fetchRow(MDB2_FETCHMODE_ASSOC)) {
+        foreach ($search_result as $result) {
 					$kingdom = $result['kingdom_id'];
 					if ($old_kingdom != $kingdom) {
 						$kingdom_name = $result['kingdom_name'];
@@ -265,20 +265,21 @@ function SingleTreeRecord($tsn)
  * @param $search_name
  */
 function getSimilarNames($search_name) {
+  $db = connect();
 	$array = explode(" ", trim($search_name));
-	$query = "select t.*, tr.usage, tr.unaccept_reason, k.kingdom_name as kingdom_name 
+  $var = "%";
+	foreach ($array as $term){
+		$var .= "$term%";
+	}
+  $sql = "select t.*, tr.usage, tr.unaccept_reason, k.kingdom_name as kingdom_name 
 				from Taxa t 
 				left join Kingdoms k on k.kingdom_id = t.kingdom_id
 				left join Tree tr on tr.tsn = t.tsn  
-				where t.scientificName LIKE '%";
-	foreach ($array as $term){
-		$query .= $term . "%";
-	}
-	$query .= "' order by kingdom_id, scientificName";
-	$db = connect();
-	$result = $db->query($query);
-	isMdb2Error($result, $query);
-	return $result;
+				where t.scientificName LIKE ? order by kingdom_id, scientificName";
+  $rows = $db->getAll($sql, null, array($var), null, MDB2_FETCHMODE_ASSOC);
+  isMdb2Error($rows, $sql);
+  
+	return $rows;
 }
 //end of function ParseName
 
