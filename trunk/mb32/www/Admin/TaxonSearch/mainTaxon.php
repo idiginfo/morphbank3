@@ -95,9 +95,9 @@ function mainTaxon() {
 				}
 				echo '<br/><br/>';
 			} else {
-				$result     = $search_result->fetchRow(MDB2_FETCHMODE_ASSOC);
-				$tsn        = $result['tsn'];
-				$found      = true;
+        $result = $search_result[0];
+				$tsn = $result['tsn'];
+				$found = true;
 			}
 		}
 	} elseif (!empty($tsn)) {
