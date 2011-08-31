@@ -184,7 +184,7 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 	// get the target location for the new file
 	$origPath = getImageFilePath($id, $origType);
 	// copy the new file to the location of the original
-	$copy = "cp $fileAccessPath $origPath; chmod 644 $origPath";
+	$copy = "cp '$fileAccessPath' $origPath; chmod 644 $origPath";
 	$resp = shell_exec($copy);
 	$message .= "Copied $fileAccessPath to $origPath\n";
 	if (!empty($tmpPath)) unlink($tmpPath); // get rid of temporary file
