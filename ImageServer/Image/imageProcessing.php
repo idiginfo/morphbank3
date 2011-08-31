@@ -133,7 +133,7 @@ function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $fileS
 				$numFixed++;
 			}
 		}
-		if ($numFixed>0) $message = "Number fixed $numFixed ".$message;
+		if ($numFixed>0) $message .= "Number fixed $numFixed\n";
 		list($width, $height, $type) = @getimagesize($jpegImgPath);
 	}
 	//$message .= "Fixed $numFixed files for id: $id file types: $message \n";
