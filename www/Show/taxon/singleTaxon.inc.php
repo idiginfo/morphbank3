@@ -67,7 +67,7 @@ if (checkForExtLinks($boid)) {
 		.'<tr><td><table width="100%" border="0" cellspacing="0" cellpadding="2">'
 		.'<tr><td>';
 	showExternalLinks($boid);
-	echo'</td></tr></table></td>/tr></table>';
+	echo'</td></tr></table></td></tr></table>';
 }
 echo '</div>'; // popContainer
 finishHtml();
