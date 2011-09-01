@@ -1,7 +1,42 @@
 <table>
 <tr>
 <td>
-Presentations created by Deborah Paul for the <a href="http://www.nrm.se/en/frontpage.16_en.html"target="blank">
+Workshop by Deborah Paul for the <a href="http://www.scamit.org/" target="blank">
+Southern California Association of Marine Invertebrate Taxonomists (SCAMIT)</a>, 8 August 2011 in Costa Mesa, California. This 
+workshop hosted by <a href="http://www.sccwrp.org/" target="blank"> the Southern California Coastal Water Research Project (SCCWRP)</a>.
+<br /><br />
+<b>Title:</b> SCAMIT - Morphbank Workshop: Custom Workbook Submission
+<br /><br />
+<b>Author:</b> Deborah Paul, Florida State University
+<br /><br />
+<b>Abstract:</b>
+<br />
+Bulk Upload to Morphbank using a customized Excel workbook.
+
+<br /><br />
+SCAMIT members attending this workshop spent the morning learning how to submit and edit records
+uploaded to Morphbank for the SCAMIT group. Topics included how to find objects and images once
+they are in Morphbank, how to make a Morphbank Collection as well as updates about new fields and features
+of Morphbank version 3.
+<br /><br />
+In the afternoon, focus shifted to how to populate an Excel workbook specifically tailored to meet
+the needs of the SCAMIT group for bulk upload. Efforts were made to hightlight the relationships between fields in this workbook with the fields
+seen earlier in the morning on the Morphbank website. At the end of the workshop, one of the participant's workbooks was uploaded
+to the website to show the entire process.
+<br /><br />
+</td>
+<td>
+<img src="archive/SCAMIT08Aug2011.jpg" />
+<br />download presentation: <a href="archive/SCAMIT-MorphbankWorkshop.pptx">pptx Aug 2011</a>
+</td>
+</tr>
+</table>
+<br /><div id=footerRibbon></div><br />
+
+<table>
+<tr>
+<td>
+Presentations by Deborah Paul for the <a href="http://www.nrm.se/en/frontpage.16_en.html"target="blank">
 Naturhistoriska Riksmuseet Biodiversity Informatics Course</a>, 18 September 2009 in Stockholm, Sweden.
 <br /><br />
 <b>Title:</b> Morphbank Current Topics: Using Images and Metadata
@@ -40,7 +75,7 @@ Each student was expected to complete a project using some of the software they 
 <table>
 <tr>
 <td>
-Presentations created by Deborah Paul for the <a href="http://www.scamit.org/index.htm"target="blank">November 2008 SCAMIT meeting</a> in San Diego, California.
+Presentations by Deborah Paul for the <a href="http://www.scamit.org/index.htm"target="blank">November 2008 SCAMIT meeting</a> in San Diego, California.
 <br /><br />
 <b>Title:</b> SCAMIT and Morphbank
 <br /><br />
