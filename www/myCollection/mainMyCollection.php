@@ -264,6 +264,7 @@ function mainMyCollection($collectionId, $loggedIn)
 
 function showTile($i, $row, $imgSize, $imgType, $iconFlag){
 	global $config;
+	$collectionId = $row['collectionId'];
 	$styleArray = getStyleArray($row, $imgSize, $imgType, $iconFlag);
 	$objectId = $row['objectId'];
 	$thumbId = $styleArray['thumbId'];
