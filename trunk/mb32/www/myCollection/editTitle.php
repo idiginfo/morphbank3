@@ -32,7 +32,7 @@ initHtml( $title, NULL, NULL);
 // Add the standard head section to all the HTML output.
 echoHead( false, $title);
 
-$title = getObjectTitle($_GET['objectId'], $_GET['collectionId']);
+$title = getObjectTitle(array('id'=>$_GET['objectId']), $_GET['collectionId']);
 $url = $config->domain . 'myCollection/index.php?collectionId='.$_GET['collectionId'].'&amp;objectId='.$_GET['objectId'].'&amp;imgSize='.$_GET['imgSize'].'&amp;title=';
 
 echo '
