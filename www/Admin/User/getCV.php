@@ -37,6 +37,19 @@ $file = $config->cvFolder . $_GET['cv'];
 $finfo = finfo_open(FILEINFO_MIME_TYPE);
 $mimetype = finfo_file($finfo, $file);
 finfo_close($finfo);
-header('Content-Type: '.$mimetype );
-echo readfile($file);
+
+header("Pragma: public");
+header("Expires: 0");
+header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+header("Cache-Control: public");
+header("Content-Description: File Transfer");
+header("Content-Type: " . $mimetype);
+header("Content-Length: " .(string)(filesize($file)) );
+header('Content-Disposition: attachment; filename="'.basename($file).'"');
+header("Content-Transfer-Encoding: binary\n");
+
+readfile($file); // outputs the content of the file
+
+exit();
+
 
