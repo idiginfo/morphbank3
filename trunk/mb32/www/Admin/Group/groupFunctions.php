@@ -111,6 +111,90 @@ function buildGroupTable($rows, $search = false) {
 }
 
 /**
+ * Display search form for users when adding group
+ */
+function searchGroupAdd() {
+  $type = $_GET['type'];
+  $term = $_GET['term'];
+  
+  $emailChecked = $type == 'email' || empty($type) ? 'checked="checked"' : '';
+  $uinChecked = $type == 'uin' ? 'checked="checked"' : '';
+  $idChecked = $type == 'id' ? 'checked="checked"' : '';
+  $fnameChecked = $type == 'fname' ? 'checked="checked"' : '';
+  $lnameChecked = $type == 'lname' ? 'checked="checked"' : '';
+  echo '<h1>Search Users</h1>';
+  echo '<br /><br />';
+  echo '<form id="frmUserSearch" method="get" action="addGroup.php">' . "\n";
+  echo '<input type="hidden" name="search" value="true">' . "\n";
+  echo '<b>Search Term</b> <input type="text" name="term" value="' . $term . '" /><br />' . "\n";
+  echo '<b>Email</b><input type="radio" name="type" value="email" ' . $emailChecked . ' />&nbsp;&nbsp;' . "\n";
+  echo '<b>Username</b><input type="radio" name="type" value="uin" ' . $uinChecked . ' />&nbsp;&nbsp;' . "\n";
+  echo '<b>User Id</b><input type="radio" name="type" value="id" ' . $idChecked . ' />&nbsp;&nbsp;' . "\n";
+  echo '<b>First Name</b><input type="radio" name="type" value="fname" ' . $fnameChecked . ' />' . "\n";
+  echo '<b>Last Name</b><input type="radio" name="type" value="lname" ' . $lnameChecked . ' />' . "\n";
+  echo '<br /><br />';
+  echo '<input type="submit" class="button smallButton" value="Search" style="float:left; margin-right:20px;" />&nbsp;&nbsp;' . "\n";
+  echo '</form>' . "\n";
+  echo '<hr style="clear:both; margin-top:20px;" />';
+
+  if (!empty($term)) {
+    switch ($type) {
+      case 'uin':
+        $col = 'uin like';
+        $param = array('%' . $term . '%');
+        break;
+      case 'fname':
+        $col = 'first_Name like';
+        $param = array($term . '%');
+        break;
+      case 'lname':
+        $col = 'last_Name like';
+        $param = array($term . '%');
+        break;
+      case 'id':
+        $col = 'id =';
+        $param = array($term);
+        break;
+      default:
+        $col = 'email like';
+        $param = array('%' . $term . '%');
+        break;
+    }
+
+    $db = connect();
+    $sql = "select distinct * from User where $col ? and last_Name <> 'Reviewer' order by last_Name, first_Name";
+    $rows = $db->getAll($sql, null, $param, null, MDB2_FETCHMODE_ASSOC);
+    isMdb2Error($results, "Search User to add group");
+
+    if (!empty($rows)) {
+      echo '<br />';
+      echo '<form id="frmAddGroup" name="fmrAddGroup" method="post" action="commitGroup.php">' . "\n";
+      echo '<table width="100%" cellpadding="5">';
+      echo '<tr><td width="25%" valign="top"><b>Choose Coordinator</b></td><td>';
+      foreach ($rows as $row) {
+        echo '<input type="radio" name="coordinator" value="' . $row['id'] . '" style="vertical-align:text-bottom; margin:0px; padding:0px;" />&nbsp;&nbsp;' . $row['name'] . '<br /><br />';
+      }
+      echo '</td></tr>';
+      echo '<tr><td width="25%"><b>Group Name</b></td><td><input type="text" id="grpName" name="groupname" /></td></tr>';
+      echo '</table>' . "\n";
+    } else {
+      getGroupAddMsg($id, 4);
+    }
+    echo "<br></br>";
+    echo '<div class="frmError" style="text-align:right"></div>';
+    echo '<table align="right" border="0">
+            <tr>
+              <td><input type="submit" class="button smallButton" value="Add" /></td>
+                <td><a href="' . getReturnUrl() . '" class="button smallButton" title="Click to return to Group page">
+                    <div>Return</div></a>
+                </td>
+            </tr>
+          </table>
+         </form>';
+  }
+}
+
+/**
  * Display group search form and process searches
  */
 function searchGroup() {
@@ -133,11 +217,7 @@ function searchGroup() {
   echo '<br /><br />';
   echo '<input type="submit" class="button smallButton" value="Search" style="float:left; margin-right:20px;" />&nbsp;&nbsp;' . "\n";
   echo '</form>' . "\n";
-  echo '<form id="frmAddGroup" method="post" action="commitGroup.php">' . "\n";
-  echo '<input type="text" id="grpName" name="groupname" value="Enter New Group Name" style="float:right;" />' . "\n";
-  echo '<br /><br />';
-  echo '<input type="submit" class="button mediumButton" value="Add Group" title="Click to add new group" style="float:right; margin-right:20px;" />&nbsp;&nbsp;' . "\n";
-  echo '</form>';
+  echo '<input type="button" id="addGroupButton" class="button mediumButton" value="Add Group" title="Click to add new group" style="float:right; margin-right:20px;" />&nbsp;&nbsp;' . "\n";
   echo '<hr style="clear:both; margin-top:20px;" />';
 
   if (!empty($term)) {
@@ -521,6 +601,10 @@ function getGroupAddMsg($id, $code) {
     return;
   if ($code == 1) {
     echo "<h3>You have successfully added the <a href=\"/?id=$id\">Group with id $id</a></h3><br /><br />\n";
+  } elseif ($code == 2) {
+    echo '<div class="searchError">You do not have permission to add Groups</div><br /><br />';
+  } elseif ($code == 4) {
+    echo '<div class="searchError">No search results found</div><br /><br />';
   }
   return;
 }

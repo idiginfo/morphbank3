@@ -262,7 +262,6 @@ $(document).ready(function(){
 	}
 	
 	/* Add new group */
-	$('#grpName').focus(function(){ $('#grpName').val(''); });
 	$('#frmAddGroup').validate({
 		onkeyup: false,
 	    errorPlacement: function(error, element) {
@@ -278,6 +277,9 @@ $(document).ready(function(){
 			groupname: {
 				required: true,
 				remote: "/ajax/checkFormValues.php?action=check_group&id="+$('#id').val()
+			},
+      coordinator: {
+				required: true
 			}
 		},
 		messages: {
@@ -658,6 +660,10 @@ $(document).ready(function(){
 	    	$('#extlinks').show();
 	    }
 	}).trigger('change');
+  
+  $('#addGroupButton').click(function(){
+    window.location = 'addGroup.php';
+  });
 });
 
 // returning true means element not required
