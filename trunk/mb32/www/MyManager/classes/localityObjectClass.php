@@ -72,7 +72,7 @@ class localityObject extends mbObjectClass {
 		$array = $this->cleanArrayOfSpecialCharacters($array);
 		$colorIndex = $i%2;
 		$showCameraHtml = "";
-		if (!$_GET['pop'] && $array[$this->sortByFields[11]['field']]){ // no pop and imagesCount > 0
+		if (!$_GET['pop'] && $array[$this->sortByFields[14]['field']]){ // no pop and imagesCount > 0
 			$showCameraHtml = '<a href="'.$this->domainName.'Browse/ByImage/?localityId='.$array[$this->sortByFields[0]['field']].'">
 				<img border="0" src="'.$this->imgDirectory.'camera-min16x12.gif" title="List of images" alt="link"/></a>';
 		}
