@@ -439,7 +439,7 @@ function show_login_ajax() {
 		tnode.style.zIndex = 51;
 		tnode.id = "ajaxLogin";
 		//tnode.style.overflow='hidden'; // Try to avoid making scroll bars            
-        tnode.style.visibility='hidden'; 
+    tnode.style.visibility='hidden'; 
 	tbody.appendChild(tnode);
 	
 	var loginBox = document.getElementById('ajaxLogin');
@@ -449,10 +449,9 @@ function show_login_ajax() {
 	Spry.Utils.updateContent('ajaxLogin', loginBoxUrl, 
 							 
 		function () { // callback/finish function			
-			Spry.Effect.DoBlind('ajaxLogin', {duration: 400, from: "0%", to: "100%", toggle: true});		
-			try {
-				document.loginForm.username.focus();
-			} catch(e) {}
+			Spry.Effect.DoBlind('ajaxLogin', {duration: 400, from: "0%", to: "100%", toggle: true});
+      // Need short delay to give form time to load before focus
+      setTimeout("try{document.getElementById('username').focus();}catch(error){}",100); 
 		} 
 	);			
 }
@@ -472,36 +471,6 @@ function hide_login_ajax() {
 						}});
 	
 }
-
-
-/*
-function show_login_ajax() {
-	grayOut(true);
-	//alert("Success!");
-	
-	var loginBox = document.getElementById('ajaxLogin');
-	
-	var loginBoxUrl = '/ajax/loginBox.php';
-	
-	Spry.Utils.updateContent('ajaxLogin', loginBoxUrl, 
-							 
-		function () { // callback/finish function			
-			loginBlind.start();		
-			try {
-				document.loginForm.username.focus();
-			} catch(e) {}
-		} 
-	);			
-}
-
-function hide_login_ajax() {
-	loginBlind.start();
-	
-}
-*/
-
-
-
 
 function grayOut(vis, options) {
   // Pass true to gray out screen, false to ungray
