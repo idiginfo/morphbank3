@@ -46,11 +46,11 @@
 </ul>
 
 <p>Last update of this documentation was made 
-  <!-- #BeginDate format:Am1 -->April 21, 2011<!-- #EndDate -->
+  <!-- #BeginDate format:Am1 -->September 8, 2011<!-- #EndDate -->
 reflecting the latest software release of Morphbank v 3.</p>
 
 <div class="specialtext3"><strong>Contributors to the Morphbank User Manual</strong>:
-Wilfredo Blanco, Robert Bruhn, Christopher Cprek, Andy Deans, Chantelle Dorsey, Cynthia Gaitros, David Gaitros, Neelima Jammigumpula, Karolina Maneva-Jakimoska, Austin Mast, Debbie Paul,
+Wilfredo Blanco, Robert Bruhn, Christopher Cprek, Andy Deans, Chantelle Dorsey, Cynthia Gaitros, David Gaitros, Neelima Jammigumpula, Guillaume Jimenez, Karolina Maneva-Jakimoska, Austin Mast, Debbie Paul,
 Greg Riccardi, Fredrik Ronquist, Katja Seltmann, Steve Winner
 </div>
 <h2>Contents</h2>
