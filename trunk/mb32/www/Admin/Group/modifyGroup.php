@@ -28,7 +28,6 @@ include_once('updater.class.php');
 $userId         = $objInfo->getUserId();
 $groupId        = $objInfo->getUserGroupId();
 $id             = $_POST['id'];
-$groupName      = $_POST['groupname'];
 $status         = $_POST['groupstatus'];
 $returnUrl      = "/Admin/Group/editGroup.php?id=$id";
 
@@ -45,7 +44,6 @@ if (isMdb2Error($row, "Error selecting group $id information.", 5)) {
 }
 
 $updater = new Updater($db, $id, $userId , $id, 'Groups');
-$updater->addField("groupName", $groupName, $row['groupname']);
 $updater->addField("tsn", 0, $row['tsn']);
 $updater->addField("status", $status, $row['status']);
 $numRows = $updater->executeUpdate();

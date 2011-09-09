@@ -27,7 +27,7 @@
 <table width="500px">
 	<tr>
     	<td><b>Group Name</b></td>
-    	<td><input type="text" size="40" name="groupname" disabled value ="<?php echo $row['groupname'] ?>" /></td>
+    	<td><?php echo $row['groupname'] ?></td>
     </tr>
    	<tr title="Users assigned to this group">
    		<td valign="middle"><b>Group Users</b></td>
