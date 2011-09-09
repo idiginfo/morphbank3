@@ -26,8 +26,8 @@
 <input type="hidden" name="id" id="id" value="<?php echo $id; ?>">
 <table width="500px">
 	<tr>
-    	<td><b>Group Name <span class="req">*</span></b></td>
-    	<td><input type="text" size="40" name="groupname" value ="<?php echo $row['groupname'] ?>" /></td>
+    	<td><b>Group Name</b></td>
+    	<td><input type="text" size="40" name="groupname" disabled value ="<?php echo $row['groupname'] ?>" /></td>
     </tr>
    	<tr title="Users assigned to this group">
    		<td valign="middle"><b>Group Users</b></td>
