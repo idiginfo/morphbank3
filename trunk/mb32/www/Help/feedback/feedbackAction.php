@@ -30,7 +30,7 @@ if (isset($_POST['spamId'])) {
 		$spamArray = mysqli_fetch_array($result);	
 		
 		if (strtolower($spamArray['code']) == strtolower($_POST['spamCode'])) {
-			if (mail('mbadmin@scs.fsu.edu', 'AUTOMATED MORPHBANK FEEDBACK EMAIL::  '.$_POST['subject'] , $_POST['message'], 'From: '.$_POST['from'].''))
+			if (mail($config->email, 'AUTOMATED MORPHBANK FEEDBACK EMAIL::  '.$_POST['subject'] , $_POST['message'], 'From: '.$_POST['from'].''))
 				header('Location: index.php?id=1');
 				
 			else
