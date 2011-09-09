@@ -57,7 +57,7 @@ echo '<div class="popContainer" style="width:500px">';
 
 //check for post action if yes create and send an e-mail
 if (isset($_POST['letter'])) {
-	$recipient = "mbadmin@scs.fsu.edu";
+	$recipient = $config->email;
 	$subject = $_POST['subject'];
 	$message = $_POST['letter'];
 	$headers = "From: " . $_POST['user'];

@@ -78,7 +78,7 @@ echo '<div class="popContainer" style="width:500px">';
 
 //check for post action if yes create and send an e-mail
 if (isset($_POST['old_information']) && isset($_POST['new_information'])) {
-	$recipient = "mbadmin@scs.fsu.edu";
+	$recipient = $config->email;
 	$subject = $_POST['subject'];
 	$message = "Request to change: " . $_POST['old_information'] . "\n" . "Reasons given: " . $_POST['new_information'];
 	$headers = "From: " . $_POST['user'];
