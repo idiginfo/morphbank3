@@ -63,8 +63,7 @@ if($objInfo->getUserGroupRole() == 'reviewer'){
   There is no record of your access to morphbank either visible by the group
   members or from morphbank. If you have any questions please feel free to
   contact us, or have the editor contact us. 
-  mbadmin@scs.fsu.edu
-  859-644-6366
+  '.$config->email.'
 
   Thank-you and welcome to Morphbank</pre></font><br /></div>';
 

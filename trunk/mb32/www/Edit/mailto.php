@@ -48,7 +48,7 @@ if ($message) {
 	//echo $usermail['email'] . '<br /> email: ' .$email['email'];
 
 	//$to = $email['email'];
-	$to = 'mbadmin@scs.fsu.edu';
+	$to = $config->email;
 	$from = $usermail['email'];
 
 	$headers = 'From: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion();
