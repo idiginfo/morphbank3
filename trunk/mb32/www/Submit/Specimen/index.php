@@ -178,7 +178,7 @@ function displaySpecimenForm(){
 	    </tr>
 	    <tr>
 	  		<td><b>Notes: </b></td>
-	  		<td align="left"><input type="text" name="Notes" value="<?php echo $_REQUEST['Notes'] ?>" size="50" /></td>
+        <td align="left"><input type="text" name="Notes" value="<?php echo htmlentities($_REQUEST['Notes']) ?>" size="50" /></td>
 	    </tr>
 	    <tr>
 			<td><b>Date To Publish (YYYY-MM-DD): </b></td>
