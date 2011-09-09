@@ -321,8 +321,7 @@ function displaySpecimenForm($row){
 		<tr>
 			<td><b>Notes:</b></td>
 			<td align="left">
-				<input type="text" name="Notes" size="50"
-				value="<?php echo $row['notes']; ?>" />
+        <input type="text" name="Notes" size="50" value="<?php echo htmlentities($row['notes']); ?>" />
 			</td>
 		</tr>
 		 <tr>
