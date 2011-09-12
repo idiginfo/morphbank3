@@ -46,7 +46,7 @@
 </ul>
 
 <p>Last update of this documentation was made 
-  <!-- #BeginDate format:Am1 -->September 8, 2011<!-- #EndDate -->
+  <!-- #BeginDate format:Am1 -->September 12, 2011<!-- #EndDate -->
 reflecting the latest software release of Morphbank v 3.</p>
 
 <div class="specialtext3"><strong>Contributors to the Morphbank User Manual</strong>:
@@ -58,7 +58,7 @@ Greg Riccardi, Fredrik Ronquist, Katja Seltmann, Steve Winner
 <br />
 <h3>General Topics</h3><br />
 <a href="<?echo $config->domain;?>About/Manual/imagePhilosophy.php" title="Morphbank's Viewpoint regarding Public / Private Images">Image-Sharing Philosophy</a><br />
-<a href="<?echo $config->domain;?>About/Manual/manualHints.php">User Manual Hints</a><br />
+<a href="<?php echo $config->domain;?>About/Manual/manualHints.php">User Manual Hints</a><br />
 <!--<a href="<?echo $config->domain;?>About/Manual/manualIntro.php">INTRODUCING MORPHBANK</a><br />-->
 <!--<a href="<?echo $config->domain;?>About/Manual/advantages.php">Advantages of Becoming a Morphbank Member</a><br />-->
 <a href="<?echo $config->domain;?>About/Manual/systemRequire.php">System Requirements</a><br />
