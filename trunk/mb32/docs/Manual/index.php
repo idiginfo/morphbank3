@@ -20,7 +20,7 @@
  *   Katja Seltmann - initial API and implementation
  *   Stephen Winner - initial API and implementation
  */
-//include_once('/panfs/panasas1/users/dpaul/www/includes/head.inc.php');
+
 include_once('head.inc.php');
 $title = 'About - Manual';
 initHtml($title, NULL, NULL);
