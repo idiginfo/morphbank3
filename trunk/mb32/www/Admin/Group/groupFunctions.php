@@ -122,7 +122,7 @@ function searchGroupAdd() {
   $idChecked = $type == 'id' ? 'checked="checked"' : '';
   $fnameChecked = $type == 'fname' ? 'checked="checked"' : '';
   $lnameChecked = $type == 'lname' ? 'checked="checked"' : '';
-  echo '<h1>Search Users</h1>';
+  echo '<h3>Search users to select Group Coordinator</h3>';
   echo '<br /><br />';
   echo '<form id="frmUserSearch" method="get" action="addGroup.php">' . "\n";
   echo '<input type="hidden" name="search" value="true">' . "\n";
@@ -170,12 +170,12 @@ function searchGroupAdd() {
       echo '<br />';
       echo '<form id="frmAddGroup" name="fmrAddGroup" method="post" action="commitGroup.php">' . "\n";
       echo '<table width="100%" cellpadding="5">';
-      echo '<tr><td width="25%" valign="top"><b>Choose Coordinator</b></td><td>';
+      echo '<tr><td width="25%" valign="top"><b>Select Coordinator</b></td><td>';
       foreach ($rows as $row) {
         echo '<input type="radio" name="coordinator" value="' . $row['id'] . '" style="vertical-align:text-bottom; margin:0px; padding:0px;" />&nbsp;&nbsp;' . $row['name'] . '<br /><br />';
       }
       echo '</td></tr>';
-      echo '<tr><td width="25%"><b>Group Name</b></td><td><input type="text" id="grpName" name="groupname" /></td></tr>';
+      echo '<tr><td width="25%"><b>Enter Group Name</b></td><td><input type="text" id="grpName" name="groupname" /></td></tr>';
       echo '</table>' . "\n";
     } else {
       getGroupAddMsg($id, 4);

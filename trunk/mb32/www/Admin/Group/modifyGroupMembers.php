@@ -24,6 +24,8 @@
 include_once('showFunctions.inc.php');
 include_once('updater.class.php');
 
+$db = connect();
+
 $userId = $objInfo->getUserId();
 $groupId = $objInfo->getUserGroupId();
 $id = $_POST['id'];
@@ -57,12 +59,14 @@ $defaultRole = ($id == $config->adminGroup) ? 'administrator' : 'guest';
  * the disabled checkbox is not passed via POST
  */
 $userArray = $_POST['user'];
-foreach ($userArray as $key => $value) {
-  if (is_null($userArray[$key]['user']) || $userArray[$key]['user'] == "") {
-    unset($userArray[$key]);
-  } else {
-    $role = empty($userArray[$key]['usergrouprole']) ? $defaultRole : $userArray[$key]['usergrouprole'];
-    $checkedUsers[$userArray[$key]['user']] = $role;
+if (!empty($userArray)) {
+  foreach ($userArray as $key => $value) {
+    if (is_null($userArray[$key]['user']) || $userArray[$key]['user'] == "") {
+      unset($userArray[$key]);
+    } else {
+      $role = empty($userArray[$key]['usergrouprole']) ? $defaultRole : $userArray[$key]['usergrouprole'];
+      $checkedUsers[$userArray[$key]['user']] = $role;
+    }
   }
 }
 
@@ -70,10 +74,11 @@ foreach ($userArray as $key => $value) {
  * Select all current users of group in existing rowids except group coordinator
  * Result is returned with user id as array key
  */
-$db = connect();
-$sql = "select * from UserGroup where user in ($rowIdList) and groups = ?";
-$rows = $db->getAll($sql, null, array($id), null, MDB2_FETCHMODE_ASSOC, true);
-isMdb2Error($rows, "Select information for UserGroup $id");
+if (!empty($rowIdList)) {
+  $sql = "select * from UserGroup where user in ($rowIdList) and groups = ?";
+  $rows = $db->getAll($sql, null, array($id), null, MDB2_FETCHMODE_ASSOC, true);
+  isMdb2Error($rows, "Select information for UserGroup $id");
+}
 
 /**
  * Loop through row ids present on form page and check for update/delete
@@ -81,58 +86,60 @@ isMdb2Error($rows, "Select information for UserGroup $id");
  * If $rowId in checkedUsers and database rows, update user information if different
  * If $rowId not in checkUsers and in database rows, delete user
  */
-foreach ($rowIds as $rowId) {
-  /* update existing members */
-  if (isset($checkedUsers[$rowId]) && isset($rows[$rowId])) {
-    if ($id == $config->adminGroup) {
-      $role = $checkedUsers[$rowId] == 'coordinator' ? 'administrator' : $checkedUsers[$rowId];
-    } else {
-      $role = $checkedUsers[$rowId];
-    }
-    $sql = "update UserGroup set userGroupRole = ? where user = ? and groups = ?";
-    $stmt = $db->prepare($sql);
-    isMdb2Error($stmt, "Error preparing query to update group member");
-    $affRows = $stmt->execute(array($role, $rowId, $id));
-    isMdb2Error($affRows, "Error executing query to update group member");
-    $stmt->free();
-
-    /* set group manaager id to whoever is coordinator */
-    $gmId = ($checkedUsers[$rowId] == 'coordinator') ? $rowId : $gmId;
-
-    /* update history */
-    $modification = "'userRole: " . $rows[$rowId]['usergrouprole'] . "',' userRole: " . $checkedUsers[$rowId] . "'";
-  }  else if (!isset($checkedUsers[$rowId]) && isset($rows[$rowId])) {
-    /* delete existing members */
-    $sql = "delete from UserGroup where user = ? and groups = ? limit 1";
-    $stmt = $db->prepare($sql);
-    isMdb2Error($stmt, "Error preparing query to delete group member");
-    $affRows = $stmt->execute(array($rowId, $id));
-    isMdb2Error($affRows, "Error executing query to delete group member");
-    $stmt->free();
-
-    if ($rows[$rowId]['usergrouprole'] == 'reviewer') {
-      $sql = "delete from User where id = ? limit 1";
+if (!empty($rows)) {
+  foreach ($rowIds as $rowId) {
+    /* update existing members */
+    if (isset($checkedUsers[$rowId]) && isset($rows[$rowId])) {
+      if ($id == $config->adminGroup) {
+        $role = $checkedUsers[$rowId] == 'coordinator' ? 'administrator' : $checkedUsers[$rowId];
+      } else {
+        $role = $checkedUsers[$rowId];
+      }
+      $sql = "update UserGroup set userGroupRole = ? where user = ? and groups = ?";
       $stmt = $db->prepare($sql);
-      isMdb2Error($stmt, "Error preparing query to delete User");
-      $affRows = $stmt->execute(array($rowId));
-      isMdb2Error($affRows, "Error executing query to delete User");
+      isMdb2Error($stmt, "Error preparing query to update group member");
+      $affRows = $stmt->execute(array($role, $rowId, $id));
+      isMdb2Error($affRows, "Error executing query to update group member");
       $stmt->free();
 
-      $sql = "delete from BaseObject where id = ? limit 1";
-      $stmt = $db->prepare($sql);
-      isMdb2Error($stmt, "Error preparing query to delete user from base object");
-      $affRows = $stmt->execute(array($rowId));
-      isMdb2Error($affRows, "Error executing query to delete user from base object");
-      $stmt->free();
-    }
+      /* set group manaager id to whoever is coordinator */
+      $gmId = ($checkedUsers[$rowId] == 'coordinator') ? $rowId : $gmId;
 
-    /* update history */
-    $modification = "'user: " . $rows[$rowId] . "',' removed from group: " . $id . "'";
+      /* update history */
+      $modification = "'userRole: " . $rows[$rowId]['usergrouprole'] . "',' userRole: " . $checkedUsers[$rowId] . "'";
+    }  else if (!isset($checkedUsers[$rowId]) && isset($rows[$rowId])) {
+      /* delete existing members */
+      $sql = "delete from UserGroup where user = ? and groups = ? limit 1";
+      $stmt = $db->prepare($sql);
+      isMdb2Error($stmt, "Error preparing query to delete group member");
+      $affRows = $stmt->execute(array($rowId, $id));
+      isMdb2Error($affRows, "Error executing query to delete group member");
+      $stmt->free();
+
+      if ($rows[$rowId]['usergrouprole'] == 'reviewer') {
+        $sql = "delete from User where id = ? limit 1";
+        $stmt = $db->prepare($sql);
+        isMdb2Error($stmt, "Error preparing query to delete User");
+        $affRows = $stmt->execute(array($rowId));
+        isMdb2Error($affRows, "Error executing query to delete User");
+        $stmt->free();
+
+        $sql = "delete from BaseObject where id = ? limit 1";
+        $stmt = $db->prepare($sql);
+        isMdb2Error($stmt, "Error preparing query to delete user from base object");
+        $affRows = $stmt->execute(array($rowId));
+        isMdb2Error($affRows, "Error executing query to delete user from base object");
+        $stmt->free();
+      }
+
+      /* update history */
+      $modification = "'user: " . $rows[$rowId] . "',' removed from group: " . $id . "'";
+    }
+    $sql = "insert into History (id, userId, groupId, dateModified, modifiedFrom, modifiedTo, tableName) values (";
+    $sql .= $rowId . "," . $userId . "," . $groupId . ",NOW()," . $modification . "," . $db->quote('UserGroup') . ")";
+    $result = $db->exec($sql);
+    isMdb2Error($result, "Error inserting History for UserGroup");
   }
-  $sql = "insert into History (id, userId, groupId, dateModified, modifiedFrom, modifiedTo, tableName) values (";
-  $sql .= $rowId . "," . $userId . "," . $groupId . ",NOW()," . $modification . "," . $db->quote('UserGroup') . ")";
-  $result = $db->exec($sql);
-  isMdb2Error($result, "Error inserting History for UserGroup");
 }
 
 /**
