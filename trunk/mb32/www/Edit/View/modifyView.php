@@ -61,8 +61,17 @@ if (is_string($numRowsBO)) { // Error returned
 	exit;
 }
 
-$viewName = implode('/', array($_POST['SpecimenPart'], $_POST['ViewAngle'], $_POST['ImagingTechnique'], $_POST['ImagingPreparationTechnique'], 
-								$_POST['DevelopmentalStage'], $_POST['Sex'], $_POST['Form']));
+$nameArray = array(
+              $_POST['SpecimenPart'], 
+              $_POST['ViewAngle'], 
+              $_POST['ImagingTechnique'], 
+              $_POST['ImagingPreparationTechnique'], 
+							$_POST['DevelopmentalStage'], 
+              $_POST['Sex'], 
+              $_POST['Form']
+            );
+$nameArray = array_filter($nameArray);
+$viewName = implode('/', $nameArray);
 
 // View updater
 $viewUpdater = new Updater($db, $id, $userId, $groupId, 'View');

@@ -712,16 +712,13 @@ function getContributorSelectTag($selectedUser = null, $groupId = null) {
  */
 function getBasisRecordSelectTag($selectedRecord = null) {
 
-
-  $selectedRecord = !empty($selectedRecord) ? $selectedRecord : 'UNSPECIFIED';
-
   $result = runQuery("select name,description from BasisOfRecord order by description;");
   if ($result) {
     $records = '<tr><td><b> Basis of Record: <span class="req">*</span></b></td>';
     $records .= '<td><select name="BasisOfRecord" title="Select from drop-down list. To add a new entry, contact the MorphBank admin group.">';
-    $records .= '<option value="">--- Select from the following ---</option>';
+    $records .= '<option value="">-- Select --</option>';
     while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-      $selected = $row['name'] == $selectedRecord ? 'selected="selected"' : '';
+      $selected = strtolower($row['name']) == strtolower($selectedRecord) ? 'selected="selected"' : '';
       $records .= '<option value="' . $row['name'] . '" ' . $selected . '>' . $row['description'] . ' </option>';
     }
     $records .= '</select>';
@@ -738,15 +735,13 @@ function getBasisRecordSelectTag($selectedRecord = null) {
  */
 function getSexSelectTag($selectedSex = null) {
 
-
-  $selectedSex = !empty($selectedSex) ? $selectedSex : 'Unspecified';
-
   $result = runQuery("select name from Sex order by name;");
   if ($result) {
     $sex = '<tr><td><b>Sex: </b></td><td>';
     $sex .= '<select name="Sex" title = "Select from drop-down list. To add a new entry, contact the MorphBank admin group.">';
+    $sex .= '<option value="">-- Select --</option>';
     while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-      $selected = $row['name'] == $selectedSex ? 'selected="selected"' : '';
+      $selected = strtolower($row['name']) == strtolower($selectedSex) ? 'selected="selected"' : '';
       $sex .= '<option value="' . $row['name'] . '" ' . $selected . '>' . $row['name'] . ' </option>';
     }
     $sex .= '</select>';
@@ -765,15 +760,13 @@ function getSexSelectTag($selectedSex = null) {
  */
 function getFormSelectTag($selectedForm = null) {
 
-
-  $selectedForm = !empty($selectedForm) ? $selectedForm : 'Not specified';
-
   $result = runQuery("select name from Form order by name;");
   if ($result) {
     $form = '<tr><td><b>Form: </b></td><td>';
     $form .= '<select name="Form" title = "Select from drop-down list. To add a new entry, contact the MorphBank admin group.">';
+    $form .= '<option value="">-- Select --</option>';
     while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-      $selected = $row['name'] == $selectedForm ? 'selected="selected"' : '';
+      $selected = strtolower($row['name']) == strtolower($selectedForm) ? 'selected="selected"' : '';
       $form .= '<option value="' . $row['name'] . '" ' . $selected . '>' . $row['name'] . ' </option>';
     }
     $form .= '</select>';
@@ -792,15 +785,13 @@ function getFormSelectTag($selectedForm = null) {
  */
 function getDevelopmentalStageSelectTag($selectedDevStage = null) {
 
-
-  $selectedDevStage = !empty($selectedDevStage) ? $selectedDevStage : 'Unspecified';
-
   $result = runQuery("select name from DevelopmentalStage order by name;");
   if ($result) {
     $stage = '<tr><td><b>Developmental Stage: </b></td><td>';
     $stage .= '<select name="DevelopmentalStage" title="Select from drop-down list. To add a new entry, contact the Morphbank admin group.">';
+    $stage .= '<option value="">-- Select --</option>';
     while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-      $selected = $row['name'] == $selectedDevStage ? 'selected="selected"' : '';
+      $selected = strtolower($row['name']) == strtolower($selectedDevStage) ? 'selected="selected"' : '';
       $stage .= '<option value="' . $row['name'] . '" ' . $selected . '>' . $row['name'] . ' </option>';
     }
     $stage .= '</select>';
@@ -819,14 +810,13 @@ function getDevelopmentalStageSelectTag($selectedDevStage = null) {
  */
 function getTypeStatusSelectTag($selectedType = null) {
 
-
   $result = runQuery("select name from TypeStatus order by name;");
   if ($result) {
     $types = '<tr><td><b>Type Status: <span class="req">*</span></b></td><td>';
     $types .= '<select name="TypeStatus" title="Select from drop-down list. To add a new entry, contact the MorphBank admin group.">';
-    $types .= '<option value ="">--- Select TypeStatus ---</option>';
+    $types .= '<option value ="">-- Select --</option>';
     while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-      $selected = $row['name'] == $selectedType ? 'selected="selected"' : '';
+      $selected = strtolower($row['name']) == strtolower($selectedType) ? 'selected="selected"' : '';
       $types .= '<option value="' . $row['name'] . '" ' . $selected . '>' . $row['name'] . ' </option>';
     }
     $types .= '</select>';
@@ -847,14 +837,13 @@ function getImageTechniqueSelectTag($selectedImage = null) {
 
   $sql = "select name from ImagingTechnique order by name";
   $results = $db->queryAll($sql, null, MDB2_FETCHMODE_ASSOC);
-  
-  $selectedImage = !empty($selectedImage) ? $selectedImage : 'Unspecified';
 
   if ($results) {
     $image = '<tr><td><b>Imaging Technique: </b></td><td>';
     $image .= '<select name="ImagingTechnique" title = "Select imaging technique from the drop-down list.">';
+    $image .= '<option value="">-- Select --</option>';
     foreach ($results as $row) {
-      $selected = $row['name'] == $selectedImage ? 'selected="selected"' : '';
+      $selected = strtolower($row['name']) == strtolower($selectedImage) ? 'selected="selected"' : '';
       $image .= '<option value="' . $row['name'] . '" ' . $selected . '>' . $row['name'] . ' </option>';
     }
     $image .= '</select>&nbsp;&nbsp; <a href="javascript: pop(\'ImagingTechnique\', \'/Submit/View/ImagingTechnique/\');">';
@@ -872,15 +861,13 @@ function getImageTechniqueSelectTag($selectedImage = null) {
  */
 function getImagePrepSelectTag($selectedPrep = null) {
 
-
-  $selectedPrep = !empty($selectedPrep) ? $selectedPrep : 'Unspecified';
-
   $result = runQuery("select name from ImagingPreparationTechnique order by name;");
   if ($result) {
     $prep = '<tr><td><b>Imaging Preparation Technique: </b></td><td>';
     $prep .= '<select name="ImagingPreparationTechnique" title = "Select preparation technique from the drop-down list.">';
+    $prep .= '<option value="">-- Select --</option>';
     while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-      $selected = $row['name'] == $selectedPrep ? 'selected="selected"' : '';
+      $selected = strtolower($row['name']) == strtolower($selectedPrep) ? 'selected="selected"' : '';
       $prep .= '<option value="' . $row['name'] . '" ' . $selected . '>' . $row['name'] . ' </option>';
     }
     $prep .= '</select>';
@@ -899,15 +886,13 @@ function getImagePrepSelectTag($selectedPrep = null) {
  */
 function getSpecimenPartSelectTag($selectedPart = null) {
 
-
-  $selectedPart = !empty($selectedPart) ? $selectedPart : 'Unspecified';
-
   $result = runQuery("select name from SpecimenPart order by name;");
   if ($result) {
     $part = '<tr><td><b>Specimen Part: </b></td><td>';
     $part .= '<select name="SpecimenPart" title="Select specimen part imaged in this view from the drop-down list.">';
+    $part .= '<option value="">-- Select --</option>';
     while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-      $selected = $row['name'] == $selectedPart ? 'selected="selected"' : '';
+      $selected = strtolower($row['name']) == strtolower($selectedPart) ? 'selected="selected"' : '';
       $part .= '<option value="' . $row['name'] . '" ' . $selected . '>' . $row['name'] . ' </option>';
     }
     $part .= '</select>';
@@ -925,15 +910,13 @@ function getSpecimenPartSelectTag($selectedPart = null) {
  */
 function getViewAngleSelectTag($selectedAngle = null) {
 
-
-  $selectedAngle = !empty($selectedAngle) ? $selectedAngle : 'Unspecified';
-
   $result = runQuery("select name from ViewAngle order by name;");
   if ($result) {
     $angle = '<tr><td><b>View Angle: </b></td><td>';
     $angle .= '<select name="ViewAngle" title = "Select view angle from the drop-down list.">';
+    $angle .= '<option value="">-- Select --</option>';
     while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-      $selected = $row['name'] == $selectedAngle ? 'selected="selected"' : '';
+      $selected = strtolower($row['name']) == strtolower($selectedAngle) ? 'selected="selected"' : '';
       $angle .= '<option value="' . $row['name'] . '" ' . $selected . '>' . $row['name'] . ' </option>';
     }
     $angle .= '</select>';
@@ -1075,12 +1058,10 @@ function getContinentSelect($value) {
   $sql = "select description from ContinentOcean order by pgorder asc";
   $results = $db->queryAll($sql, null, MDB2_FETCHMODE_ASSOC);
   
-  // using preg match because at this time, data is cap in one database, not cap in another
-  $value = empty($value) ? 'Unspecified' : $value;
-
   $html = '<select name="continent" id="contient">';
+  $html .= '<option value="">-- Select --</option>';
   foreach ($results as $result) {
-    $selected = $value == $result['description'] ? ' selected="selected"' : '';
+    $selected = strtolower($value) == strtolower($result['description']) ? ' selected="selected"' : '';
     if (!preg_match("/\bocean\b/i", $result['description'])) {
       $html .= '<option value="' . $result['description'] . '"' . $selected . '>' . $result['description'] . '</option>';
     }

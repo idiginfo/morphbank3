@@ -42,17 +42,15 @@ if($_POST['EW'] == '2') {$longitude = !empty($longitude) ? '-' . $longitude : $l
 
 $db = connect();
 
-if (empty($_POST['Country'])) {
-  $country  = 'UNSPECIFIED';
-} else {
+$country = strtoupper(trim($_POST['country']));
+if (!empty($country)) {
   $sql = "select description from Country where description = ?";
-  $country = $db->getOne($sql, null, array($_POST['Country']));
-  if (isMdb2Error($country, "Selecting country", 5)) {
+  $country_check = $db->getOne($sql, null, array($_POST['Country']));
+  if (isMdb2Error($country_check, "Selecting country", 5)) {
     header("location: $indexUrl&code=2");
     exit;
   }
-  if (empty($country)) {
-    $country = strtoupper($_POST['Country']);
+  if (empty($country_check)) {
     $db->beginTransaction();
     $sql = "insert into Country set description = ?";
     $stmt = $db->prepare($sql);
