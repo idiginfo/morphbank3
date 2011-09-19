@@ -35,7 +35,7 @@ include_once('groupFunctions.php');
 $includeJavaScript = array('jquery.1-4-2.min.js', 'jquery-ui-1.8.min.js', 'jquery.validate.min.js', 'formMethods.js');
 
 // The beginnig of HTML
-$title = 'Add Gropu';
+$title = 'Add Group';
 initHtml($title, null, $includeJavaScript);
 
 // Add the standard head section to all the HTML output.
