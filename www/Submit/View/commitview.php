@@ -48,8 +48,17 @@ if(isMdb2Error($result, 'Create Object procedure', false)) {
 $id = $result->fetchOne();
 clear_multi_query($result);
 
-$viewName = implode('/', array($_POST['SpecimenPart'], $_POST['ViewAngle'], $_POST['ImagingTechnique'], $_POST['ImagingPreparationTechnique'], 
-								$_POST['DevelopmentalStage'], $_POST['Sex'], $_POST['Form']));
+$nameArray = array(
+              $_POST['SpecimenPart'], 
+              $_POST['ViewAngle'], 
+              $_POST['ImagingTechnique'], 
+              $_POST['ImagingPreparationTechnique'], 
+							$_POST['DevelopmentalStage'], 
+              $_POST['Sex'], 
+              $_POST['Form']
+            );
+$nameArray = array_filter($nameArray);
+$viewName = implode('/', $nameArray);
 
 $viewUpdater = new Updater($db, $id, $userId, $groupId, 'View');
 $viewUpdater->addField("viewName", $viewName, null);
