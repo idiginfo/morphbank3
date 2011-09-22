@@ -57,8 +57,8 @@ $nameArray = array(
               $_POST['Sex'], 
               $_POST['Form']
             );
-$nameArray = array_filter($nameArray);
 $viewName = implode('/', $nameArray);
+
 
 $viewUpdater = new Updater($db, $id, $userId, $groupId, 'View');
 $viewUpdater->addField("viewName", $viewName, null);
