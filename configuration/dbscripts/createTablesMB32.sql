@@ -1228,3 +1228,66 @@ alter table `View`
     add foreign key (id) references BaseObject(id), 
     add foreign key (viewTSN) references Tree(tsn), 
     add foreign key (standardImageId) references Image(id) on delete set null;
+    
+CREATE or replace VIEW IptSpecimen AS 
+select 
+concat('http://www.morphbank.net/', s.id) AS occurrenceID,
+'Collection' AS type,
+l.informationWithheld AS informationWithheld,
+s.institutionCode AS institutionCode,
+s.collectionCode AS collectionCode,
+s.basisOfRecordId AS basisOfRecord,
+b.dateLastModified AS modified,
+'en' AS language,
+s.catalogNumber AS catalogNumber,
+s.sex AS sex,
+s.notes AS occurrenceRemarks,
+s.collectionNumber AS recordNumber,
+s.collectorName AS recordedBy,
+s.individualCount AS individualCount,
+s.developmentalStage AS lifeStage,
+s.preparationType AS preparations,
+s.previousCatalogNumber AS otherCatalogNumbers,
+s.dateCollected AS eventDate,
+uVED.value AS verbatimEventDate, 
+uFN.value as fieldNotes,
+l.continent AS continent,
+l.country AS country,
+l.locality AS locality,
+l.county AS county,
+l.ocean AS waterbody,
+l.state AS stateProvince,
+l.maximumElevation AS maximumElevationInMeters,
+l.minimumElevation AS minimumelevationInMeters,
+l.minimumDepth AS minimumDepthInMeters,
+l.maximumDepth AS maximumDepthInMeters,
+l.latitude AS verbatimLatitude,
+l.longitude AS verbatimLongitude,
+l.coordinatePrecision AS coordinatePrecision,
+concat('http://www.morphbank.net/', l.id) AS locationId,
+l.paleoGroup AS `group`,
+l.paleoFormation AS formation,
+l.paleoMember AS member,
+l.paleoBed AS bed,
+if((s.typeStatus like '%Not%'), NULL, s.typeStatus) AS typeStatus,
+s.name AS identifiedBy,
+s.dateIdentified AS dateIdentified,
+s.comment AS identificationRemarks,
+t.scientificName AS scientificname,
+t.kingdom_name AS kingdom,
+t.rank_name AS taxonRank,
+t.taxon_author_name AS scientificNameAuthorship,
+t.status AS nomenclaturalStatus,
+b.groupId AS groupId,
+s.id AS specimenId,
+b.userId AS userId,
+t.tsn AS tsn
+from 
+Specimen s left join Locality l on s.localityId = l.id
+left join BaseObject b on s.id = b.id
+left join Taxa t on s.tsnId = t.tsn
+left join BasisOfRecord bor on s.basisOfRecordId = bor.name
+left join UserProperty uVED on (s.id = uVED.objectId and uVED.name = 'verbatimEventDate')
+left join UserProperty uFN on (s.id = uFN.objectId and uFN.name = 'FieldNotes')
+where b.dateToPublish <= now() and s.basisOfRecordId = 'S' 
+
