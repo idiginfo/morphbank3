@@ -1236,7 +1236,7 @@ concat('http://www.morphbank.net/', s.id) AS occurrenceID,
 l.informationWithheld AS informationWithheld,
 s.institutionCode AS institutionCode,
 s.collectionCode AS collectionCode,
-s.basisOfRecordId AS basisOfRecord,
+"Specimen" AS basisOfRecord,
 b.dateLastModified AS modified,
 'en' AS language,
 s.catalogNumber AS catalogNumber,
@@ -1291,3 +1291,47 @@ left join UserProperty uVED on (s.id = uVED.objectId and uVED.name = 'verbatimEv
 left join UserProperty uFN on (s.id = uFN.objectId and uFN.name = 'FieldNotes')
 where b.dateToPublish <= now() and s.basisOfRecordId = 'S' 
 
+CREATE or replace VIEW IptImage AS select 
+concat('http://www.morphbank.net/',s.id) AS foreignKey,
+concat('http://www.morphbank.net/',i.id) AS identifier,
+i.imageType AS type,
+tr.scientificName AS title,
+b.dateLastModified AS modified,
+'en' AS metadataLanguage,
+concat('http://www.morphbank.net/',i.userId) AS providerManagedID,
+i.dateToPublish AS available,
+i.creativeCommons AS rights,
+i.copyrightText AS Owner,
+u.userLogo AS attributionLogoURL,
+i.photographer AS creator,
+concat('http://www.morphbank.net/',i.userId) AS provider,
+'morphbank.net' AS metadataProvider,
+'morphbank.net' AS metadataCreator,
+b.description AS description,
+v.specimenPart AS tag,
+tr.nameSource AS nameAccordingTo,
+v.specimenPart AS subjectPart,
+v.viewAngle AS subjectOrientation,
+v.imagingTechnique AS captureDevice,
+v.imagingPreparationTechnique AS resourceCreationTechnique,
+concat('http://www.morphbank.net/?id=',i.id,'&amp;imgType=jpeg') AS bestQualityAccessURI,
+i.imageType AS bestQualityformat,
+concat(i.imageHeight,' x ',i.imageWidth) AS bestQualityExtent,
+concat('http://www.morphbank.net/',i.id) AS bestQualityFurtherInformationURL,
+concat('http://www.morphbank.net/?id=',i.id,'&amp;imgType=jpg') AS mediumQualityAccessURI,
+'jpg/jpeg' AS mediumQualityFormat,
+concat('http://www.morphbank.net/?id=',i.id,'&amp;imgType=thumb') AS thumbNailAccessURI,
+'jpg/jpeg' AS thumbNailFormat,
+concat('http://www.morphbank.net/',i.groupId) AS providerID,
+concat('http://www.morphbank.net/',i.specimenId) AS associatedSpecimenReference,
+b.groupId AS groupId,
+s.id AS specimenId,
+b.userId AS userId
+from Image i 
+left join BaseObject b on(i.id = b.id) 
+left join View v on(i.viewId = v.id) 
+left join Specimen s on(i.specimenId = s.id) 
+left join User u on(i.userId = u.id) 
+left join Locality l on(s.localityId = l.id) 
+left join Tree tr on(s.tsnId = tr.tsn) 
+where b.dateToPublish <= now() and s.basisOfRecordId = 'S';
