@@ -1289,7 +1289,7 @@ left join Taxa t on s.tsnId = t.tsn
 left join BasisOfRecord bor on s.basisOfRecordId = bor.name
 left join UserProperty uVED on (s.id = uVED.objectId and uVED.name = 'verbatimEventDate')
 left join UserProperty uFN on (s.id = uFN.objectId and uFN.name = 'FieldNotes')
-where b.dateToPublish <= now() and s.basisOfRecordId = 'S' 
+where b.dateToPublish <= now() and s.basisOfRecordId = 'S'; 
 
 CREATE or replace VIEW IptImage AS select 
 concat('http://www.morphbank.net/',s.id) AS foreignKey,
