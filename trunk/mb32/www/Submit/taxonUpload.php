@@ -44,10 +44,13 @@ switch ($ext) {
 }
 
 $objReader = PHPExcel_IOFactory::createReader($inputFileType);
-$objReader->setReadDataOnly(true);
+if ($inputFileType != 'CSV') $objReader->setReadDataOnly(true);
 $objPHPExcel = $objReader->load($file);
 $rowIterator = $objPHPExcel->getActiveSheet()->getRowIterator();
-
+echo '<pre>';
+print_r($rowIterator);
+echo '</pre>';
+exit;
 /**
  * Required fields
  * 
