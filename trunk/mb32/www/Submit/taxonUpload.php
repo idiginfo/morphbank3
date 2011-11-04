@@ -1,7 +1,7 @@
 <?php
 
-ini_set('max_execution_time', 900); // 15 minutes
-ini_set('memory_limit','2048M');
+ini_set('max_execution_time', 1800); // 15 minutes
+ini_set('memory_limit','3072M');
 
 /**
  * $file can be xls, xlsx, csv, ods
