@@ -15,6 +15,9 @@ if (substr(php_sapi_name(), 0, 3) == 'cli') {
 
 if (!file_exists($file)) die("$file does not exist.$lb");
 
+ini_set('max_execution_time', 900); // 15 minutes
+ini_set('memory_limit','2048M');
+
 require_once('Classes/PHPExcel.php');
 include_once('updater.class.php');
 include_once('tsnFunctions.php');
