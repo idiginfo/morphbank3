@@ -374,6 +374,7 @@ function insertTree($treeParams) {
   handleError($affRows, $error, true);
 
   $stmt->free();
+  $affRows->free();
   
   write_log("Inserted Tree: " . $values);
   
@@ -419,6 +420,7 @@ function insertBaseObject($boParams) {
   handleError($affRows, $error, true);
 
   $stmt->free();
+  $affRows->free();
   
   write_log("Inserted BaseObject: " . $values);
   
@@ -463,6 +465,7 @@ function insertTaxonConcept($tcParams) {
   handleError($affRows, $error, true);
 
   $stmt->free();
+  $affRows->free();
   
   write_log("Inserted TaxonConcept: " . $values);
   
@@ -507,6 +510,7 @@ function insertTaxa($taxaParams) {
   handleError($affRows, $error, true);
   
   $stmt->free();
+  $affRows->free();
   
   write_log("Inserted Taxa: " . $values);
   
@@ -578,6 +582,7 @@ function insertExternalLinks($bid, $taxon) {
   handleError($affRows, $error, true);
 
   $stmt->free();
+  $affRows->free();
   
   write_log("Inserted External Link: " . $values);
   
@@ -640,6 +645,7 @@ function insertExternalRefs($bid, $taxon) {
   handleError($affRows, $error, true);
 
   $stmt->free();
+  $affRows->free();
   
   write_log("Inserted External References: " . $values);
   
