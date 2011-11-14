@@ -124,10 +124,6 @@ if (file_exists($filename)) {
 $taxonCache = array();
 $row_value = 1;
 foreach ($taxon_data as $taxon) {
-  echo '<pre>';
-  print_r($taxon);
-  echo '</pre>';
-  exit;
   // Increment row value so we can easily find Row in Excel sheet
   $row_value++;
   
