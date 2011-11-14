@@ -103,7 +103,9 @@ foreach ($rowIterator as $row) {
 	$rank = getRankByColumn(key($tree_data[$rowIndex]));
 	$taxon_data[$rowIndex] = $tree_data[$rowIndex] + array_slice($array_data[$rowIndex], 27, 17, true);
   $taxon_data[$rowIndex]['rankid'] = $rank;
-  $taxon_data[$rowIndex]['datetopublish'] = gmdate('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($taxon_data[$rowIndex]['datetopublish']));
+  if ($inputFileType != 'CSV') {
+    $taxon_data[$rowIndex]['datetopublish'] = gmdate('Y-m-d', PHPExcel_Shared_Date::ExcelToPHP($taxon_data[$rowIndex]['datetopublish']));
+  }
 }
 
 // Delete and recreate existing log file to start fresh
@@ -122,6 +124,10 @@ if (file_exists($filename)) {
 $taxonCache = array();
 $row_value = 1;
 foreach ($taxon_data as $taxon) {
+  echo '<pre>';
+  print_r($taxon);
+  echo '</pre>';
+  exit;
   // Increment row value so we can easily find Row in Excel sheet
   $row_value++;
   
