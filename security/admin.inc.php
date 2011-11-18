@@ -40,7 +40,7 @@ function Adminlogin() {
 			$config->dbPort
 		);
 		if (mysqli_connect_error()){
-			printf("Can not connect to MySQL server. Errorcode: %s\n",mysqli_connect_error());
+			print("Can not connect to MySQL server. The Administration is working on the issue. Thank you.");
 			exit;
 		}
 	}
