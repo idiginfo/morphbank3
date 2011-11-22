@@ -162,8 +162,8 @@ function getTpcProperties($tpcFilePath){
 function resizeImage($imageFilePath, $imageSize) {
 	global $config;
 	$resizedImagePath = $config->imgTmpDir.mktime().'.jpeg';
-	$imgSizeArray = explode("x", $imgSize);
-	$cmd = $config->imagemagik.'convert'.$imageFilePath.' -colorspace RGB -resize '.$imgSizeArray[0].'x'.$imgSizeArray[1]
+	$imgSizeArray = explode("x", $imageSize);
+	$cmd = $config->imagemagik.'convert '.$imageFilePath.' -colorspace RGB -resize '.$imgSizeArray[0].'x'.$imgSizeArray[1]
 	.' '.$resizedImagePath;
 	$string = shell_exec($cmd);
 	if(file_exists($resizedImagePath)) {
