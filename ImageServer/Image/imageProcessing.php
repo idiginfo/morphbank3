@@ -196,12 +196,14 @@ function getFileFromFileSystem($fileAccessPath, $fileSourceDir){
 	$message .= "searching $fileSourceDir for image\n";
 	// try to find file in ftp site
 	$escFileName = str_replace(" ", "\ ", $fileAccessPath);
+	$escFileName = str_replace("(", "\(", $escFileName);
+	$escFileName = str_replace(")", "\)", $escFileName);
 	$escFileName = str_replace("[", "\[", $escFileName);
 	$escFileName = str_replace("]", "\]", $escFileName);
 	$escFileName = str_replace("'", "\'", $escFileName);
 	$escFileName = str_replace("*", "\*", $escFileName);
 	$escFileName = str_replace("]?", "\?", $escFileName);
-	$find = "find $fileSourceDir -name $escFileName";
+	$find = "find $fileSourceDir -iname $escFileName";
 
 	$res = shell_exec ($find);
 	if (strlen($res)==0) {
