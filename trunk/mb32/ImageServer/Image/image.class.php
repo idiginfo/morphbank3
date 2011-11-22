@@ -64,7 +64,7 @@ class Image {
 
 		if ($this->fileExists) {
 			if (!empty($imgSize)) {
-				$this->resizedImagePath = resizeImage($this->imageFilePath, $this->imgSize);
+				$this->resizedImagePath = resizeImage($this->imageFilePath, $imgSize);
 				$this->fileSize = @filesize($this->resizedImagePath);
 			} else {
 				$this->fileSize = @filesize($this->imageFilePath);
