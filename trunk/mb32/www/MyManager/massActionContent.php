@@ -80,6 +80,8 @@ function specimenActionOptions() {
 	<select name="massOperation" size="1" style="display:block; width:275px;">
 		<option value="" selected="selected"  >Select Mass Operation...</option>
 		<option value="" >--------------------</option>
+    <option value="changeDate">Change Date to Publish</option>
+		<option value="publishNow" >Publish Now</option>
 		<option value="copyToNewCollection" >Create New Collection</option>
 		<option value="createOTU" >Create New OTU</option>
 		<!--option value="addExtLinks">Add External Links</option>
@@ -131,9 +133,11 @@ function localityActionOptions() {
 		<option value="" selected="selected"  >Select Mass Operation...</option>
 		<option value="" >--------------------</option>
 		<option value="copyToNewCollection" >Create New Collection</option>
-		<!--option value="createPhyloChar" >Create New Character</option-->		
-		<!--option value="addExtLinks">Add External Links</option>
-		<option value="emailIds">Email Ids</option-->
+		<!--
+    <option value="createPhyloChar" >Create New Character</option>		
+		<option value="addExtLinks">Add External Links</option>
+		<option value="emailIds">Email Ids</option>
+    -->
 		<option value="">&nbsp;</option>
 		<option value="">--------------------</option>
 		<option value="">Copy to existing collection....</option>';
@@ -221,10 +225,12 @@ function defaultActionOptions() {
 	<select name="massOperation" size="1" style="display:block; width:275px;">
 		<option value="" selected="selected"  >Select Mass Operation...</option>
 		<option value="" >--------------------</option>
-		<option value="copyToNewCollection" >Create New Collection</option>
-		<!--option value="createPhyloChar" >Create New Character</option-->
-		<!--option value="addExtLinks">Add External Links</option>
-		<option value="emailIds">Email Ids</option-->
+		<option value="copyToNewCollection" >Create New test Collection</option>
+		<!--
+    <option value="createPhyloChar" >Create New Character</option>
+		<option value="addExtLinks">Add External Links</option>
+		<option value="emailIds">Email Ids</option>
+    -->
 		<option value="">&nbsp;</option>
 		<option value="">--------------------</option>
 		<option value="">Copy to existing collection....</option>';
