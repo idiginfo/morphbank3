@@ -36,7 +36,7 @@ if(!checkAuthorization(null, $userId, $groupId, 'add')){
 
 $db = connect();
 
-$country = strtoupper(trim($_POST['country']));
+$country = strtoupper(trim($_POST['Country']));
 // Check country
 if (!empty($country)) {
   $sql = "select description from Country where description = ?";

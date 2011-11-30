@@ -42,7 +42,7 @@ if($_POST['EW'] == '2') {$longitude = !empty($longitude) ? '-' . $longitude : $l
 
 $db = connect();
 
-$country = strtoupper(trim($_POST['country']));
+$country = strtoupper(trim($_POST['Country']));
 if (!empty($country)) {
   $sql = "select description from Country where description = ?";
   $country_check = $db->getOne($sql, null, array($_POST['Country']));
