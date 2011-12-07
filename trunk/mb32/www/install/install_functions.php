@@ -156,7 +156,7 @@ function dbConnect() {
 	);
 	
 	$db = MDB2::connect($dsn);
-	if (PEAR::isError($db)) return $db;
+	if (PEAR::isError($db)) die("Could not connect to database");
 	$db->loadModule('Function');
 	$db->loadModule('Extended');
 	$db->loadModule('Date');
