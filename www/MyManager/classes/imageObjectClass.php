@@ -148,7 +148,7 @@ class imageObject extends mbObjectClass {
 			echo '&nbsp;&nbsp';
 			echo publishNowTag($array['imageId'],$array['now'],$i,$this->userId,$this->groupId);
 		} else {
-			echo'<td>Date to Publish: '.$array['dateToPublish'].'</td>';
+			echo'<td>Date to Publish: <span id="dateTest_'.$i.'" style="font-weight:normal">'.$array['dateToPublish'].'</span></td>';
 		}
 		echo '<td class="browseRight">';
 		$count = $this->getAnnotationCount($array['imageId']);
