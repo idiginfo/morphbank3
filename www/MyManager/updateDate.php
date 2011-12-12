@@ -88,8 +88,12 @@ function updateDate($id, $date) {
 }
 
 function ownObject($id, $userId, $groupId) {
-	global $link;
+	global $link, $config;
 
+  // If admin group, return true
+  if ($groupId == $config->adminGroup)
+    return TRUE;
+  
 	$sql = 'SELECT userId, groupId FROM BaseObject WHERE id='.$id;
 	$result = mysqli_query($link, $sql) or die("Could not run the query\n");
 
