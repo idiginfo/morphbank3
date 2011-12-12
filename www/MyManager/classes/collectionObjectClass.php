@@ -125,11 +125,11 @@ class collectionObjectMM extends mbObjectClass {
 				</tr><tr>';
 		if ($dateToPublish > $array['now'] &&  $array['userId'] == $this->userId) {
 			echo'<td>';
-			echo getDateToPublishTag ($id, $i, $dateToPublish, $userId, $this->groupId, $this->now);
+			echo getDateToPublishTag ($id, $i, $dateToPublish, $userId, $this->groupId, $array['now']);
 			$this->numString .= $i."-";
 			echo '</td>';
 		} else {
-			echo '<td>Date to Publish: '.$array['dateToPublish'].'</td>';
+			echo '<td>Date to Publish: <span id="dateTest_'.$i.'" style="font-weight:normal">'.$array['dateToPublish'].'</span></td>';
 		}
 		echo '<td class="browseRight">No. Images: ';
 		if ($objectTypeId == "Collection") {
