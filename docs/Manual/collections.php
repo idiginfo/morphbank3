@@ -37,7 +37,7 @@
 <p>This section of the manual explains what a user can do with a collection. For instructions on
  how to create a collection in Morphbank go to
  <br />
-<a href="<?echo $config->domain;?>About/Manual/browseImages.php#createCollection"><h3>Add Images to a Collection</h3></a></p>
+<a href="<?php echo $config->domain; ?>About/Manual/browseImages.php#createCollection"><h3>Add Images to a Collection</h3></a></p>
 
 <p>
 A collection is a group of any objects in the Morphbank database assembled by members for the purpose of viewing 
@@ -121,7 +121,7 @@ collection and thus create their own personal copy.</li>
 </p>
 <p><h3>Managing collections:</h3> The <strong>Collection Manager</strong> has been replaced
 with the 
-<a href="<?echo $config->domain;?>About/Manual/myManagerCollections.php" target="_blank">Collections tab</a>
+<a href="<?php echo $config->domain; ?>About/Manual/myManagerCollections.php" target="_blank">Collections tab</a>
 in the new <strong>My Manager</strong> interface of Morphbank.
 The Collections tab offers the user a list of all public collections and any they've created (public or private).
 The user can view other collections there and in addition, modify any of their own collections.
@@ -262,8 +262,8 @@ that image.</li>
 <br />
 	<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/characterCollection.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a>
+<td><a href="<?php echo $config->domain; ?>About/Manual/characterCollection.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a>
 </td>
 </table>
 

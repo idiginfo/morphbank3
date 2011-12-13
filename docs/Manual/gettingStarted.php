@@ -37,7 +37,7 @@
 			<tr>-->
 			<td width="100%">
 <p>		
-Opening page at the Morphbank website at <a href="<?echo $config->domain;?>" target="_blank">http://www.morphbank.net</a>. All users of Morphbank see essentially the same web-interface. Enter a search term or click <strong>Browse</strong> in the header and choose from the drop-down menu (see below) to browse Morphbank via the My Manager interface. Those with Morphbank accounts login to enable features not available to the public such as: submit, edit, account &amp; group settings, collection and annotation modules. The general public sees only those Morphbank objects that are published. 
+Opening page at the Morphbank website at <a href="<?php echo $config->domain; ?>" target="_blank">http://www.morphbank.net</a>. All users of Morphbank see essentially the same web-interface. Enter a search term or click <strong>Browse</strong> in the header and choose from the drop-down menu (see below) to browse Morphbank via the My Manager interface. Those with Morphbank accounts login to enable features not available to the public such as: submit, edit, account &amp; group settings, collection and annotation modules. The general public sees only those Morphbank objects that are published. 
 </p>
 <img src="ManualImages/intro_morphbank2.png" hspace="20" />
 <p>Under each term in the <em>header menu</em>, drop-down sub-menus appear (see screen shot next).
@@ -58,8 +58,8 @@ Opening page at the Morphbank website at <a href="<?echo $config->domain;?>" tar
 <br />		
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/login.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/login.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 	</div>
 		

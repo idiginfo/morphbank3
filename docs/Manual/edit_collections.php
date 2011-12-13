@@ -42,12 +42,12 @@ Edit Collection is now accessed through the Collections tab of the new My Manage
 <ol>
 <li>Select from the Header Menu <b>Tools > My Manager</b> and then click on the Collections tab.
 </li>
-<li>Or, Header Menu > <a href="<?echo $config->domain;?>About/Manual/browseC.php"><strong>Browse > Collections.</strong></a>
+<li>Or, Header Menu > <a href="<?php echo $config->domain; ?>About/Manual/browseC.php"><strong>Browse > Collections.</strong></a>
 The old Collection Manager has been replaced with the My Manager Collections tab.
 </li>
 <li>Find your collections with <strong>Keyword search</strong> and/or <strong>Limit Search by</strong> Contributor.
 </li>
-<li>Click the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> icon to open the Collection.
+<li>Click the <img src="<?php echo $config->domain; ?>style/webImages/infoIcon-trans.png" /> icon to open the Collection.
 </li>
 <li>You may wish to: Change the order of the objects and save the order, change the titles of some of the objects in the collection,
 or perhaps delete objects from the collection.
@@ -59,14 +59,14 @@ change.
 </div>
 
 <br />To get complete instructions for editing Collections go to the 
-<a href="<?echo $config->domain;?>About/Manual/browseImages.php#createCollection">Browse - Add Images to a Collection</a>
- or <a href="<?echo $config->domain;?>About/Manual/collections.php">Collections</a> areas of this manual. 
+<a href="<?php echo $config->domain; ?>About/Manual/browseImages.php#createCollection">Browse - Add Images to a Collection</a>
+ or <a href="<?php echo $config->domain; ?>About/Manual/collections.php">Collections</a> areas of this manual. 
 			<br />
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/edit_taxon_name.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/edit_taxon_name.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 				</div>
 		

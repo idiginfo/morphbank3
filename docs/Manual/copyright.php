@@ -29,7 +29,7 @@
 	?>
 
 
-	<div class="main">	<div class="mainGenericContainer" style="width: 820px;">
+	<div class="main">	<div class="mainGenericContainer" style="width: 820px; ?>
 		<!--change the header below -->
 		<h1></h1>
 		<br /><br />
@@ -51,10 +51,10 @@ considered "work in-progress" and are not released to the public. These
 images may not be used without specific written authorization from the
 copyright holder. Contributors to morphbank agree to these terms.
 <br /><br />
-<a href="javascript:window.close();">Close Window</a>
+<a href="javascript:window.close(); ?>Close Window</a>
 <br />
 <br />
-<a href="<?echo $config->domain;?>About/Manual/index.php">Back to Manual Table of Contents</a>
+<a href="<?php echo $config->domain; ?>About/Manual/index.php">Back to Manual Table of Contents</a>
 			</td>
 			</tr>
 			</tbody></table>

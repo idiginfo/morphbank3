@@ -65,7 +65,7 @@ other sort criteria that was selected.
 <br />
 <br />
 The Sort feature of morphbank is explained in detail in
- <a href="<?echo $config->domain;?>About/Manual/browseSort.php">Browse - Sort Search Results</a>
+ <a href="<?php echo $config->domain; ?>About/Manual/browseSort.php">Browse - Sort Search Results</a>
 <br />
 <br />
 Sort criteria options for Browse - Publications include:
@@ -91,8 +91,8 @@ icon to access and edit them.
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/browseSort.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/browseSort.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 		<?php
