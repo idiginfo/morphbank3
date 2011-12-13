@@ -49,7 +49,7 @@ identification (defaults to the name of the logged-in user) and resources
 used in making this determination annotation.</li>
 </ol>
 An annotation title, comments and date to publish are the remaining required
-fields in this option. (Details for this annotation type are located in the <a href="<?echo $config->domain;?>About/Manual/annotationAdd.php">Add
+fields in this option. (Details for this annotation type are located in the <a href="<?php echo $config->domain; ?>About/Manual/annotationAdd.php">Add
 Annotations</a> documentation).
 </li>
 <div class="specialtext2">Note: Even though the image was selected for annotation, it is really
@@ -65,7 +65,7 @@ collection.</div>
 image or collection of images. The required fields in this option include an
 annotation title, general comments and date to publish (The publish date
 defaults to 6 months from the date the collection was established). (Details
-for this annotation type are located in the <a href="<?echo $config->domain;?>About/Manual/annotationAdd.php">Add Annotations</a> 
+for this annotation type are located in the <a href="<?php echo $config->domain; ?>About/Manual/annotationAdd.php">Add Annotations</a> 
 documentation).</li>
 <li><h3>Legacy</h3>: General and legacy annotations differ only in the source of the
 annotation. Data in a legacy annotation was previously generated and
@@ -74,7 +74,7 @@ annotation, a legacy annotation is used to add general comments about an
 image or collection of images. The required fields in this option include an
 annotation title, general comments and date to publish (The publish date
 defaults to 6 months from the date the collection was established). (Details
-for this annotation type are located in the <a href="<?echo $config->domain;?>About/Manual/annotationAdd.php">Add Annotations</a> 
+for this annotation type are located in the <a href="<?php echo $config->domain; ?>About/Manual/annotationAdd.php">Add Annotations</a> 
 documentation).</li>
 <li><h3>XML</h3>: This option allows the user to upload an XML document into the
 Morphbank database and use it as a general annotation. All other fields
@@ -82,19 +82,19 @@ match the general and legacy annotations. The required fields include an
 annotation title, general comments and date to publish (The publish date
 defaults to 6 months from the date the collection was established). The
 XML document is limited in size to 64K. (Details for this annotation type are
-located in the <a href="<?echo $config->domain;?>About/Manual/annotationAdd.php">Add Annotations</a> documentation).</li>
+located in the <a href="<?php echo $config->domain; ?>About/Manual/annotationAdd.php">Add Annotations</a> documentation).</li>
 <li><h3>Taxon Name</h3>: This option gives the Morphbank user the ability to leave comments about
 any published Taxon Name in Morphbank. The comments will be visible to anyone looking at these names. This type
 of annotation is <em>published immediately</em> upon clicking "Submit." Details for this annotation type can be found by jumping to
-<a href="<?echo $config->domain;?>About/Manual/annotate_taxon_name.php">Annotate Taxon Names</a>.
+<a href="<?php echo $config->domain; ?>About/Manual/annotate_taxon_name.php">Annotate Taxon Names</a>.
 </li>
 </ul>
 			<br />
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/annotationAdd.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/annotationAdd.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

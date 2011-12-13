@@ -48,40 +48,40 @@ The Browse option does not require login, however, logged-in users have varied
 tools accessible within Browse based on user privileges (e.g. Collections, Edit,
 Annotate). The browse options include:
 <ul>
-<li><strong><a href="<?echo $config->domain;?>About/Manual/browseImages.php">Images</a></strong> (View a sortable list of all images in
+<li><strong><a href="<?php echo $config->domain; ?>About/Manual/browseImages.php">Images</a></strong> (View a sortable list of all images in
 the morphbank database. The list of images can be restricted by use of
 keyword or id searches. If the user is logged-in, other options such as
 edit, annotate, and collections might be available).
 </li>
-<li><strong><a href="<?echo $config->domain;?>About/Manual/browseTaxonH.php">Taxon hierarchy</a></strong> (View all kingdoms from
+<li><strong><a href="<?php echo $config->domain; ?>About/Manual/browseTaxonH.php">Taxon hierarchy</a></strong> (View all kingdoms from
 the top level of the taxonomic hierarchy or users can traverse the taxon
 hierarchy using only major categories).
 </li>
-<li><strong><a href="<?echo $config->domain;?>About/Manual/browseTaxonN.php">Alphabetical taxon name</a></strong> (All taxon names
+<li><strong><a href="<?php echo $config->domain; ?>About/Manual/browseTaxonN.php">Alphabetical taxon name</a></strong> (All taxon names
 beginning with letter A are displayed. Use the alphabet bar at the top of the screen to choose taxon names starting with a different
 letter).
 </li>
-<li><strong><a href="<?echo $config->domain;?>About/Manual/browseV.php">View</a></strong> (Search for views based
+<li><strong><a href="<?php echo $config->domain; ?>About/Manual/browseV.php">View</a></strong> (Search for views based
 on a keyword or a sortable list of all the registered views within the
 database).
 </li>
-<li><strong><a href="<?echo $config->domain;?>About/Manual/browseS.php">Specimen</a></strong> (Search for
+<li><strong><a href="<?php echo $config->domain; ?>About/Manual/browseS.php">Specimen</a></strong> (Search for
 specimens based on a keyword or a sortable list of all the specimens
 currently located on the Morphbank database).
 </li>
-<li><strong><a href="<?echo $config->domain;?>About/Manual/browseL.php">Locality</a></strong> (Search for localities
+<li><strong><a href="<?php echo $config->domain; ?>About/Manual/browseL.php">Locality</a></strong> (Search for localities
 based on a keyword or a sortable list of all the available localities within
 the database).
 </li>
-<li><strong><a href="<?echo $config->domain;?>About/Manual/browseC.php">Collections</a></strong> (Search for
+<li><strong><a href="<?php echo $config->domain; ?>About/Manual/browseC.php">Collections</a></strong> (Search for
 existing collections based on a keyword or a sortable list of all the
 available collections within the database).
 </li>
-<li><strong><a href="<?echo $config->domain;?>About/Manual/browseP.php">Publication</a></strong> (Search for
+<li><strong><a href="<?php echo $config->domain; ?>About/Manual/browseP.php">Publication</a></strong> (Search for
 existing publications based on a keyword or a sortable list of all the
 available publications within the database).
 </li>
-<!--<li><strong><a href="<?echo $config->domain;?>About/Manual/browseM.php" target="_blank">Mirrors</a></strong> (Search current morphbank mirrors).
+<!--<li><strong><a href="<?php echo $config->domain; ?>About/Manual/browseM.php" target="_blank">Mirrors</a></strong> (Search current morphbank mirrors).
 </li>-->
 </ul>
 </p>
@@ -89,8 +89,8 @@ available publications within the database).
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/browseImages.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/browseImages.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 	</div>
 		
