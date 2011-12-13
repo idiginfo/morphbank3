@@ -38,7 +38,7 @@ echoHead( false, $title);
 <p>Use this <a href="http://services.morphbank.net/mb3/validateXls.jsp">web service</a> to proof the Morphbank Excel Workbooks. A user may upload
 the original workbook or the custom workbook for validation.</p>
 
-<img src="ManualImages/validate.jpg" align="center" alt="screen shot of validate Excel form"/>
+<img align="center" src="ManualImages/validate.jpg" alt="screen shot of validate Excel form"/>
 
 <p>Browse your files to find the Excel workbook you filled out, click to upload
     and a report is returned. If no errors are found, the workbook is ready to
