@@ -45,7 +45,7 @@ of all specimens registered in the morphbank database.
 <h3>Browse - Specimens by Keywords</h3>
 <br />
 <br />
-As outlined in <a href="<?echo $config->domain;?>About/Manual/browseImages.php" target="_blank">Browse - Images</a>,
+As outlined in <a href="<?php echo $config->domain; ?>About/Manual/browseImages.php" target="_blank">Browse - Images</a>,
 use <strong>Keywords</strong> search to display a list of views based on sex, form, basis of
 record, type status, collector name, institution code, collection code, catalog
 number, and/or taxonomic names. To display a list of specimens based on a
@@ -60,7 +60,7 @@ example, to browse for all specimens pertaining to <strong>Alectis</strong> (tax
 <h3>Sort the Results</h3>
 <br />
 <br />
-As explained in <a href="<?echo $config->domain;?>About/Manual/browseSort.php" target="_blank">Browse - Sort Search Results</a>, 
+As explained in <a href="<?php echo $config->domain; ?>About/Manual/browseSort.php" target="_blank">Browse - Sort Search Results</a>, 
 to sort the list of specimens, select the Sort By criteria from the drop down
 list(s). The more criteria selected, (up to 3 levels) the more refined the browse
 will be (Figure 32). The resulting page will display the specimen list with the
@@ -103,7 +103,7 @@ open the <strong>Browse - Images</strong> page displaying the images for a given
 Clicking the information icon <img src="../../style/webImages/infoIcon.png" /> for any specimen on
 a <strong>Browse - Specimens</strong> page will display information unique to this specimen (Specimen
 Record - Single Show). Morphbank Single Show is an efficient way to display large amounts of information. For complete
-documentation on single show refer to <a href="<?echo $config->domain;?>About/Manual/show.php">Morphbank Show</a> 
+documentation on single show refer to <a href="<?php echo $config->domain; ?>About/Manual/show.php">Morphbank Show</a> 
 in the Information Linking section of this manual.
 <br />
 <img src="ManualImages/browse_specimen_to_browse_images.png" />
@@ -112,8 +112,8 @@ in the Information Linking section of this manual.
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/browseL.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/browseL.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 		<?php

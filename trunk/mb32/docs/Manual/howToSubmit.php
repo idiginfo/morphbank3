@@ -28,7 +28,7 @@
 	echoHead( false, $title);
 	?>
 
-	<div class="main">	<div class="mainGenericContainer" style="width: 820px;">
+	<div class="main">	<div class="mainGenericContainer" style="width: 820px; ?>
 		<!--change the header below -->
 		<h1>Introduction</h1>
 		<br /><br />
@@ -115,10 +115,10 @@ enter the collection county as opposed to the exact area within that
 county where the specimen was collected.
 <br />
 <br />
-<a href="javascript:window.close();">Close Window</a>
+<a href="javascript:window.close(); ?>Close Window</a>
 <br />
 <br />
-<a href="<?echo $config->domain;?>About/Manual/index.php">Back to Manual Table of Contents</a>
+<a href="<?php echo $config->domain; ?>About/Manual/index.php">Back to Manual Table of Contents</a>
 			</td>
 			</tr>
 			</tbody></table>
