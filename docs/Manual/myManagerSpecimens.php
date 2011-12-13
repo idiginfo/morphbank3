@@ -51,12 +51,12 @@
 	<p>Morpbhank users catch on quickly due to the modular nature of the tools and icons. Note the various features in the above screen shot are explained next.</p>
 	
     <ul>
-	<li><a href="<?echo $config->domain;?>About/Manual/manualHints.php" ><img src="ManualImages/feedback.png" alt="feeback" align="middle"></a>: please use this link to our automated feedback system. We appreciate your comments so that 
+	<li><a href="<?php echo $config->domain; ?>About/Manual/manualHints.php" ><img src="ManualImages/feedback.png" alt="feeback" align="middle"></a>: please use this link to our automated feedback system. We appreciate your comments so that 
 	we can continue to improve and enhance Morphbank. Clicking on <strong><font color="red">(Help)</font></strong> opens this Manual.</li>
 		
-	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Keywords: </strong> </a>To use this powerful search feature, hold the mouse over the Keywords box to see a list of fields the Keywords queries. Enter a term or terms. Note that searches are <em>boolean <strong>and</strong></em>. Partial words can also be entered as all terms entered are <strong>wild-carded.</strong> </li>
+	<li><a href="<?php echo $config->domain; ?>About/Manual/myManagerFeatures.php" ><strong>Keywords: </strong> </a>To use this powerful search feature, hold the mouse over the Keywords box to see a list of fields the Keywords queries. Enter a term or terms. Note that searches are <em>boolean <strong>and</strong></em>. Partial words can also be entered as all terms entered are <strong>wild-carded.</strong> </li>
 	
-	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Limit Search by:</strong></a>allows a user to easily limit their view to only the objects personally contributed/submitted AND/OR those from a particular group. Use the <strong>Header Menu > Tools > Select Group > Choose group from sub-menu</strong> feature to change groups OR use the <strong>Group</strong> link in the <strong>Header</strong> on the left side of the Main Screen.</li>
+	<li><a href="<?php echo $config->domain; ?>About/Manual/myManagerFeatures.php" ><strong>Limit Search by:</strong></a>allows a user to easily limit their view to only the objects personally contributed/submitted AND/OR those from a particular group. Use the <strong>Header Menu > Tools > Select Group > Choose group from sub-menu</strong> feature to change groups OR use the <strong>Group</strong> link in the <strong>Header</strong> on the left side of the Main Screen.</li>
 	
 	<li><strong>Check box:</strong> Note the <img src="ManualImages/check_box.png" alt="check box"> to the left of each Specimen Id and Title. 
     <p>Use this feature to <strong>Select</strong> one or more Specimens which will be highlighted. <em><strong>Ruizantheda</strong></em> and 
@@ -65,7 +65,7 @@
 	 <strong>Select Mass Operation</strong> feature explained next.</p>
      </li>
 	
-	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Select Mass Operation</strong></a>: After checking one or more Specimens with the <strong>check
+	<li><a href="<?php echo $config->domain; ?>About/Manual/myManagerFeatures.php" ><strong>Select Mass Operation</strong></a>: After checking one or more Specimens with the <strong>check
 	box</strong> feature, options in the drop-down of <strong>Select Mass Operation</strong> can be applied to all
 	the Specimens checked. Examples shown above include: gathering all the checked Specimens 
 	into a new or existing collecion, creating an OTU collection or adding to an existing OTU colletion.
@@ -77,15 +77,15 @@
 	<li><strong>Submit</strong>: Click this button to carry out the <strong>Mass Operation</strong> selected.</li>
 	
 	<li><strong>Icons</strong>: The <strong>icons</strong> and their functions are explained fully in Morphbank 
-	<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php">Guide to Graphic Buttons</a>. An abbreviated 
-	explanation can be found on the <a href="<?echo $config->domain;?>About/Manual/myManagerAll.php">All</a> page
+	<a href="<?php echo $config->domain; ?>About/Manual/graphicGuide.php">Guide to Graphic Buttons</a>. An abbreviated 
+	explanation can be found on the <a href="<?php echo $config->domain; ?>About/Manual/myManagerAll.php">All</a> page
 	for My Manager.
-	<p>Briefly, the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" /> icon
+	<p>Briefly, the <img src="<?php echo $config->domain; ?>style/webImages/infoIcon-trans.png" /> icon
 	shows metadata for the image.
 	<br />
-	The <img src="<?echo $config->domain;?>style/webImages/edit-trans.png" /> icon
+	The <img src="<?php echo $config->domain; ?>style/webImages/edit-trans.png" /> icon
 	 gives users access to <strong>change/update/edit</strong> data for any Specimens they've contributed/submitted.
-	 <br /> The <img src="<?echo $config->domain;?>style/webImages/camera-min16x12.gif" alt="camera icon" /> <strong>camera icon</strong> is
+	 <br /> The <img src="<?php echo $config->domain; ?>style/webImages/camera-min16x12.gif" alt="camera icon" /> <strong>camera icon</strong> is
 	 the user's link to see existing images of a particular specimen in Morphbank.
 	 </p>
 	 </li>
@@ -116,9 +116,9 @@
 	<li>Other objects from other tabs in My Manager can be added to a Morphbank user's existing Collection in the same manner.
 	</li>
 	<li>Any regular or character state <strong>Collections</strong> created can be seen in the 
-	<a href="<?echo $config->domain;?>About/Manual/myManagerCollections.php">Collections</a> tab.
+	<a href="<?php echo $config->domain; ?>About/Manual/myManagerCollections.php">Collections</a> tab.
 	</li>
-	<li>Any <strong>OTU</strong> collections created can be seen in the <a href="<?echo $config->domain;?>About/Manual/myManagerTaxa.php" >Taxa tab</a>
+	<li>Any <strong>OTU</strong> collections created can be seen in the <a href="<?php echo $config->domain; ?>About/Manual/myManagerTaxa.php" >Taxa tab</a>
 	</li>
 	</ul>
 	<br />
@@ -127,28 +127,28 @@
 	</li>
  	
 		
-    <li><a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php" ><strong>Zooming Viewer</strong></a>: Morphbank utilizes this 
+    <li><a href="<?php echo $config->domain; ?>About/Manual/zoomingViewer.php" ><strong>Zooming Viewer</strong></a>: Morphbank utilizes this 
     open source viewer in order to be able to add more functionality to increase the value of the photograph for the user. 
     Click on any thumbnail or click on the resulting image in the <strong>Image Record Show</strong> to 
 	open the image in the Zooming Viewer.
     </li>
     </ul>
 
-<a href="<?echo $config->domain;?>About/Manual/uploadSubmitSpecimen.php" ><h3>Add a Specimen to Morphbank</h3></a>
+<a href="<?php echo $config->domain; ?>About/Manual/uploadSubmitSpecimen.php" ><h3>Add a Specimen to Morphbank</h3></a>
 <br /><br />
-<a href="<?echo $config->domain;?>About/Manual/edit.php" ><h3>Edit a Specimen in Morphbank</h3></a>
+<a href="<?php echo $config->domain; ?>About/Manual/edit.php" ><h3>Edit a Specimen in Morphbank</h3></a>
 <br /><br />					
-		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Known Version Issues </h3></a>
+		<a href="<?php echo $config->domain; ?>About/Manual/myManager.php" ><h3>Known Version Issues </h3></a>
 		<br />
 		<br />
-		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
+		<a href="<?php echo $config->domain; ?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
 		<br />
 			<br />
 		
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/myManagerViews.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/myManagerViews.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</tr>
 				</div>

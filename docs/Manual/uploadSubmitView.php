@@ -36,7 +36,7 @@
 			<tr>-->
 <!--
 <div class="specialtext2">
-<a href="<?echo $config->domain;?>About/Manual/Movies/submitview.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a View</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/submitview.avi" target='_blank'>video</a>
+<a href="<?php echo $config->domain; ?>About/Manual/Movies/submitview.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a View</strong>: <a href="<?php echo $config->domain; ?>About/Manual/Movies/submitview.avi" target='_blank'>video</a>
 </div>
 -->
 
@@ -55,7 +55,7 @@ to which this view is applicable. A view and specimen must exist before an image
 
 <div class="specialtext3">N.B. The person logged-in will be the name of the person that displays
 in the "Contributor" field above. If a Submitter is entering data on behalf of a Contributor, select the 
-Contributor's name from the drop-down. Go to <a href="<?echo $config->domain;?>About/Manual/userPrivileges.php">Users and their Privileges</a> for more about Morphbank Group Roles &amp; Contributor / Submitter status.
+Contributor's name from the drop-down. Go to <a href="<?php echo $config->domain; ?>About/Manual/userPrivileges.php">Users and their Privileges</a> for more about Morphbank Group Roles &amp; Contributor / Submitter status.
 </div>
 <ul>
 <li><strong>Imaging Technique</strong>, <strong>Imaging Preparation Technique</strong>,
@@ -112,7 +112,7 @@ scs <font color="blue">dot</font> fsu <font color="blue">dot</font> edu</strong>
 </li>
 <br />
 <li><strong>Add External Links</strong> to this record. For complete
-instructions on providing external links refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External Links</font> to open this feature. See next: 
+instructions on providing external links refer to <a href="<?php echo $config->domain; ?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External Links</font> to open this feature. See next: 
 </li>
 <br/>
 <img src="ManualImages/add_externalLinksRef.png" alt="external link options" hspace="20" vspace="10"/>
@@ -126,7 +126,7 @@ instructions on providing external links refer to <a href="<?echo $config->domai
    <br />
 </ul> 
 <li><strong>Add External References</strong> to this record. For complete
-instructions on providing external references refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External References</font> to open this feature. See next:<br/>
+instructions on providing external references refer to <a href="<?php echo $config->domain; ?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External References</font> to open this feature. See next:<br/>
 <img src="ManualImages/add_externalRefs.png" alt="external identifiers" hspace="20" vspace="10"/>
 <ul>
     <li>Enter the <strong>Description</strong> for the External Reference. This will appear to the Morphbank user as a label in front of the unique id.
@@ -163,8 +163,8 @@ form.
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/uploadSubmitImage.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/uploadSubmitImage.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		
