@@ -62,23 +62,24 @@ echoHead(false, $title);
             </li>
         </ol>
         <p>Because the addition of new names to the ITIS system does take some time, the Morphbank team
-            established a method to <a href="<? echo $config->domain; ?>About/Manual/addTaxonName.php" target="_blank">add names</a> to Morphbank.
+            established a method to <a href="<?php echo $config->domain; ?>About/Manual/addTaxonName.php" target="_blank">add names</a> to Morphbank.
             This allows scientists use the taxonomic name of their choice to identify a specimen in Morphbank.
             Names added to Morphbank have 9-digit Morphbank <em>taxonomic serial numbers</em> (mtsn) beginning with 999 to
             differentiate them from ITIS tsns.
         </p>
-        <p>Currently, no taxonomic name updates are sent to ITIS and the ITIS taxon names in Morphbank are from the
+        <div class="specialtext3">
+            Currently, no taxonomic name updates are sent to ITIS and the ITIS taxon names in Morphbank are from the
             initial installation. There are plans to completely revise the workflow regarding taxonomy.
             Morphbank envisions a system for users to explicitly provide a link to a taxon name in an existing
             taxonomy (ITIS, uBio, USDA Plants, IPNI ...) to <em>identify</em> a given specimen. The taxon name
             and its relevant data may display with the specimen data and image uploaded to Morphbank. In essence,
-            Morphbank intends to use existing taxonomic name servers instead of uploading taxon names and
+            Morphbank intends to pull names from existing taxonomic name servers instead of uploading taxon names and
             taxonomic hierarchies.
-        </p>
+        </div>
         <div id=footerRibbon></div>
         <table align="right">
-            <td><a href="<? echo $config->domain; ?>About/Manual/addTaxonName.php" class="button smallButton"><div>Next</DIV></a></td>
-            <td><a href="<? echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+            <td><a href="<?php echo $config->domain; ?>About/Manual/addTaxonName.php" class="button smallButton"><div>Next</div></a></td>
+            <td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
         </table>
 </div>
 

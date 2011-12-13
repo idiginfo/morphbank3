@@ -36,7 +36,7 @@
 <p>
 For Taxon Names found in Morphbank, you may wish to comment, add/correct publication data or note an error. For names that you cannot directly edit you may <strong>Annotate Taxon Names</strong>.
  <div class="specialtext2">
-<a href="<?echo $config->domain;?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Annotate </strong>a taxon name: <a href="<?echo $config->domain;?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'>video</a>
+<a href="<?php echo $config->domain; ?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Annotate </strong>a taxon name: <a href="<?php echo $config->domain; ?>About/Manual/Movies/AddTaxonNamenew.avi" target='_blank'>video</a>
 </div>
 
 <div class="specialtext2">
@@ -49,7 +49,7 @@ Access this feature of Morphbank directly from:
 or <em>header menu </em><strong>> Tools > Submit > Taxon Name > Taxon Name Search > find desired name > click <img src="ManualImages/annotate_taxon_name_button.jpg" /> button </strong><br />
 In addition, the <strong>Add Taxon Name Annotation</strong> screen may also be accessed from any other 
 <img src="../../style/webImages/annotate-trans.png" /> icon. See 
-<a href="<?echo $config->domain;?>About/Manual/annotationAdd.php#pathToAnnotation">Paths to Annotation</a>
+<a href="<?php echo $config->domain; ?>About/Manual/annotationAdd.php#pathToAnnotation">Paths to Annotation</a>
 </div>
 Example of an <strong>Add Taxon Name Annotation</strong> screen.
 <p>
@@ -88,8 +88,8 @@ after clicking "Submit."
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/myManagerPublications.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/myManagerPublications.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 				</div>
 		

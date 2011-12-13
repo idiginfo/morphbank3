@@ -66,7 +66,7 @@ be found in the Edit Annotation area of this manual. This example is from clicki
 </li>
 <li><strong>Annotation type</strong>: There are currently five types of annotations possible:
 <strong>Determination</strong>, <strong>General</strong>, <strong>Legacy</strong>, 
-<strong>.XML </strong> and <strong>Taxon Name</strong> (see <a href="<?echo $config->domain;?>About/Manual/annotationTypes.php">Types of Annotations</a> later in this chapter.)</li>
+<strong>.XML </strong> and <strong>Taxon Name</strong> (see <a href="<?php echo $config->domain; ?>About/Manual/annotationTypes.php">Types of Annotations</a> later in this chapter.)</li>
 <li><strong>Object id</strong>: This represents the identifying
 number of the object (image, specimen, etc.) being annotated. Clicking on the id will take the
 user to the <strong>Single Show</strong> screen that displays the record which contains the image and
@@ -98,8 +98,8 @@ changes, click on the update button.</li>
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/annotationTypes.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/annotationTypes.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

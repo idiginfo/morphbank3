@@ -34,17 +34,17 @@
 <div id=footerRibbon></div>
 	
 <p>This is an example of an annotation record page displayed from the <strong>
-<a href="<?echo $config->domain;?>About/Manual/myManager.php" target="_blank" >My Manager</a> > 
-<a href="<?echo $config->domain;?>About/Manual/myManagerAnnotations.php" target="blank" >Annotation Tab</a>
+<a href="<?php echo $config->domain; ?>About/Manual/myManager.php" target="_blank" >My Manager</a> > 
+<a href="<?php echo $config->domain; ?>About/Manual/myManagerAnnotations.php" target="blank" >Annotation Tab</a>
 > <img src="../../style/webImages/infoIcon.png" alt="information icon" /> Info Icon</strong>. Morphbank <strong>Single Show</strong> is an
 efficient way to display large amounts of information. For complete documentation on single
-show refer to <a href="<?echo $config->domain;?>About/Manual/show.php" target="_blank" >Morphbank Show</a> in the Information Linking section of this manual.</p>
+show refer to <a href="<?php echo $config->domain; ?>About/Manual/show.php" target="_blank" >Morphbank Show</a> in the Information Linking section of this manual.</p>
 <!--<img src="ManualImages/annotation_show_from_id.png" />-->
 <br />
 Sample <strong>Annotation Show</strong> from click on <strong>
 <img src="../../style/webImages/infoIcon.png" alt="information icon" /> Info Icon</strong> in the 
-<a href="<?echo $config->domain;?>About/Manual/myManager.php" target="_blank" >My Manager</a> > 
-<a href="<?echo $config->domain;?>About/Manual/myManagerAnnotations.php" target="_blank" >Annotation Tab.</a>
+<a href="<?php echo $config->domain; ?>About/Manual/myManager.php" target="_blank" >My Manager</a> > 
+<a href="<?php echo $config->domain; ?>About/Manual/myManagerAnnotations.php" target="_blank" >Annotation Tab.</a>
 <br />
 <br />
 <img src="ManualImages/annotation_show.png" />
@@ -109,7 +109,7 @@ option brings up the commercial image viewer
 product called the FSI Viewer from Neptune Labs.
 This viewer gives the user many more
 viewing options. Complete instructions for this viewer
-can be found at <a href="<?echo $config->domain;?>About/Manual/FSI.php">FSI Viewer</a> located in this
+can be found at <a href="<?php echo $config->domain; ?>About/Manual/FSI.php">FSI Viewer</a> located in this
 manual,</li>
 INSERT Image>View Image
 <li>Use this option to add an annotation or sort the
@@ -133,8 +133,8 @@ viewer product called the FSI Viewer from Neptune Labs.</li>
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/annotate_taxon_name.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/annotate_taxon_name.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		
