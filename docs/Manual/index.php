@@ -139,7 +139,8 @@ echoHead(false, $title);
     <!-- TODO <a href="<?php echo $config->domain; ?>About/Manual/xmlUpload.php>XML Upload</a><br />-->
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $config->domain; ?>About/HowToContribute/">XML Upload</a> - Contributors convert their data into Morphbank XML Schema format.<br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $config->domain; ?>About/HowToContribute/">Specify plugin</a> - (in alpha-testing): Users with data in Specify database utilize a plug-in to upload directly to Morphbank.<br />
-    <a href="<?php echo $config->domain ?>About/Manual/UploadService.php">Help with Mapping, Bulk Upload and Web Services</a> - Details for help and costs for bulk upload to Morphbank.
+    <a href="<?php echo $config->domain ?>About/Manual/UploadService.php">Help with Mapping, Bulk Upload and Web Services</a> - Details for help and costs for bulk upload to Morphbank.<br />
+    <a href="<?php echo $config->domain ?>About/Manual/validateExcel.php">Validate Excel Workbooks via Web Services</a> - Users can proof their Morphbank workbooks here, before sending to Morphbank for upload.<br />
     <!-- TODO <a href="<?php echo $config->domain; ?>About/Manual/specify.php">Specify (in alpha-testing)</a><br />-->
     <br />
     <br />

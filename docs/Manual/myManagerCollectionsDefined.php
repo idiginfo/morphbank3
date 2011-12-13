@@ -39,7 +39,7 @@ and/or manipulating (e.g. rearranging the order, editing, and/or annotating, etc
 storing the collected objects for future use.
 </p>
 <div class="specialtext2">For instructions on
- how to create a collection in Morphbank go to: <a href="<?echo $config->domain;?>About/Manual/myManagerCollectionsCreate.php"><h3> How to Make a Collection</h3></a></p>
+ how to create a collection in Morphbank go to: <a href="<?php echo $config->domain; ?>About/Manual/myManagerCollectionsCreate.php"><h3> How to Make a Collection</h3></a></p>
 </div>
 
 <div class="specialtext3">Currently, there are 3 types of Morphbank Collections: 
@@ -133,12 +133,12 @@ collection and thus create their own personal copy.</li>
 <h3>Managing collections:</h3> 
 <ul>
 <li>Image Collections &amp; Character Collections are found in the
- <a href="<?echo $config->domain;?>About/Manual/myManagerCollections.php" >Collections tab</a>
+ <a href="<?php echo $config->domain; ?>About/Manual/myManagerCollections.php" >Collections tab</a>
 of the <strong>My Manager</strong> interface of Morphbank.
 </li>
 <li>The Collections tab offers the user a list of all public collections and any they've created (public or private). The user can view other collections there and in addition, modify any of their own unpublished collections. There is no limit on the number of collections a user may have. 
 </li>
-<li>Any <strong>OTU Collection</strong> created is found in the <a href="<?echo $config->domain;?>About/Manual/myManagerTaxa.php"><strong>My Manager Taxa tab</strong></a>.
+<li>Any <strong>OTU Collection</strong> created is found in the <a href="<?php echo $config->domain; ?>About/Manual/myManagerTaxa.php"><strong>My Manager Taxa tab</strong></a>.
 </li>
 <li>New collections are created or copied through any of the <strong>My Manager</strong> tabs.
 </li>
@@ -154,8 +154,8 @@ personal collections and is directly accessed from the Header Menu > Browse (dro
 <br />		
 	<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/myManagerCollectionsCreate.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a>
+<td><a href="<?php echo $config->domain; ?>About/Manual/myManagerCollectionsCreate.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a>
 </td>
 </table>
 

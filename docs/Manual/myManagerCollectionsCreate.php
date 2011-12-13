@@ -89,23 +89,23 @@ the <img src="ManualImages/check_box.png"> with each image. The actions are list
 
 <p>From the <strong>My Manager > Collections tab</strong> each collection is represented by an image chosen by the collection's creator.
  The user creates the collection, uses the check box to pick the representative image, and clicks from Tools -- <strong>Set Collection Thumbnail</strong>.</p>
-	<a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php"><h3>Zooming Viewer</h3></a>: Morphbank utilizes
+	<a href="<?php echo $config->domain; ?>About/Manual/zoomingViewer.php"><h3>Zooming Viewer</h3></a>: Morphbank utilizes
 		 an open source viewer so that new funtionality may be added to increase the value
 	of the photograph for the user. Clicking on any image thumbnail in a collection will
 	open the image in the Zooming Viewer. 
 	    <br />
 		<br />
-		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
+		<a href="<?php echo $config->domain; ?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
 		<br />
 		<br />
-		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
+		<a href="<?php echo $config->domain; ?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
 		<br />
 			<br />
 
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/myManagerCollectionsSample.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/myManagerCollectionsSample.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</tr>
 				</div>

@@ -49,8 +49,8 @@ Note this Login includes the link for would-be Morphbank contributors to <strong
 		<br />		
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/loginUsername.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/loginUsername.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

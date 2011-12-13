@@ -38,7 +38,7 @@
 In Morphbank, a User (aka Contributor) automatically has their own Morphbank Group. This User / Contributor is the Coordinator of their own group. As Group Coordinator, the user may add / remove other Morphbank account holders to / from their own group. Members of Morphbank groups have various roles (coordinator, lead scientist, scientist, guest). The Coordinator may also change the roles of the current group members.
 </p>
 <div class="specialtext2">
-Groups are usually formed by a set of individuals for the purpose of collaboration. Membership in a group is also part of the security model Morphbank uses to determine what objects can be seen (or not) by a given individual. To find out more about Morphbank Groups and Group Roles go to the <a href="<?echo $config->domain;?>About/Manual/userPrivileges.php">Users and Their Privileges</a> page.
+Groups are usually formed by a set of individuals for the purpose of collaboration. Membership in a group is also part of the security model Morphbank uses to determine what objects can be seen (or not) by a given individual. To find out more about Morphbank Groups and Group Roles go to the <a href="<?php echo $config->domain; ?>About/Manual/userPrivileges.php">Users and Their Privileges</a> page.
 </div>
 
 <h3>Open Group Settings</h3>
@@ -74,7 +74,7 @@ No editing or upload privileges are granted to a Reviewer.
 <li>All current members and their roles are listed.
   <ul>
     <li>Uncheck a box for a user and click Update to remove them from the group.</li>
-    <li>Change the  <a href="<?echo $config->domain;?>About/Manual/userPrivileges.php">User Role</a> (coordinator, leadscientist, scientist, guest) for a group member using the drop-down menu, click Update.</li>
+    <li>Change the  <a href="<?php echo $config->domain; ?>About/Manual/userPrivileges.php">User Role</a> (coordinator, leadscientist, scientist, guest) for a group member using the drop-down menu, click Update.</li>
     	<ul>
         <li><strong>Only 1 Coordinator</strong> for each group.</li>
         </ul>
@@ -101,8 +101,8 @@ No editing or upload privileges are granted to a Reviewer.
 
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/myManager.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/myManager.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

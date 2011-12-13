@@ -35,7 +35,7 @@
 		<td width="100%">		
 			<br />
 			
-	The My Manager interface seen next is Morphbank's tool to help the scientist with a Morphbank account manage their objects in Morphbank. From <a href="<?echo $config->domain;?>" target="blank">www.morphbank.net</a> simply click on <strong>Browse</strong> in the Header and then any of the options listed in the drop-down. If a Morphbank account holder logs in at <a href="<?echo $config->domain;?>" target="blank" >www.morphbank.net</a> with User Name and Password, the system opens at the <strong>My Manager Images</strong> tab with features, functions and icons reserved for account holders activated. New options are now available under <strong>Browse</strong>, <strong>Tools</strong> and <strong>Help</strong> in the header. 
+	The My Manager interface seen next is Morphbank's tool to help the scientist with a Morphbank account manage their objects in Morphbank. From <a href="<?php echo $config->domain; ?>" target="blank">www.morphbank.net</a> simply click on <strong>Browse</strong> in the Header and then any of the options listed in the drop-down. If a Morphbank account holder logs in at <a href="<?php echo $config->domain; ?>" target="blank" >www.morphbank.net</a> with User Name and Password, the system opens at the <strong>My Manager Images</strong> tab with features, functions and icons reserved for account holders activated. New options are now available under <strong>Browse</strong>, <strong>Tools</strong> and <strong>Help</strong> in the header. 
 
 <div class="specialtext2">
 Everyone uses this My Manager interface -- the public and those with Morphbank accounts. The general public uses My Manager tabs to browse all the objects in Morphbank that are <em>visible to the public</em>. In Morphbank terms, the public sees only images that are <strong><em>published</em></strong>.
@@ -48,7 +48,7 @@ Everyone uses this My Manager interface -- the public and those with Morphbank a
 The logged-in user can limit search results to show any objects in Morphbank or some subset of objects they've personally contributed to the database. Images that are not published can only be seen by those who are 1) logged into Morphbank, and 2) in the Group with which the image is associated. Logged in users can submit objects, edit data, annotate objects, create character states &amp; collections and see the annotations and collections of others belonging to the same Morphbank Group(s).
 </p>
 
-<div class="specialtext3">Go to <a href="<?echo $config->domain;?>About/Manual/screenTips.php">Screen Use Tips</a> for a general introduction to all the icons and special features found on Morphbank pages.
+<div class="specialtext3">Go to <a href="<?php echo $config->domain; ?>About/Manual/screenTips.php">Screen Use Tips</a> for a general introduction to all the icons and special features found on Morphbank pages.
 </div>
 	<h2>Basic Anatomy of a My Manager Page</h2>
 	<br />
@@ -89,15 +89,15 @@ to zoom, rotate and adjust color to enhance detailed features of the images.
 	
 			<div class="specialtext2">
 			<ul>
-			<li>Change the date to publish for many of your objects at one time using the <a href="<?echo $config->domain;?>/About/Manual/myManagerFeatures.php" >
+			<li>Change the date to publish for many of your objects at one time using the <a href="<?php echo $config->domain; ?>/About/Manual/myManagerFeatures.php" >
             <strong>"Select Mass Operation"</strong></a></li>
-			<li><a href="<?echo $config->domain;?>/About/Manual/myManagerFeatures.php" ><strong>Easily limit your search</strong></a> by your group, all of the groups to which you
+			<li><a href="<?php echo $config->domain; ?>/About/Manual/myManagerFeatures.php" ><strong>Easily limit your search</strong></a> by your group, all of the groups to which you
              belong, and those objects you've contributed</li>
 			<li>The <strong>module tabs</strong> at the top of the <strong>My Manager</strong> interface allow easy movement between
 			 lists of kinds of records (ie. Taxon Names, Publications, Specimens, Images etc.,).
 			<li><strong>Create OTUs</strong> or operational taxonomic units.  These express a concept of a possible new classification, or grouping of 
 			taxa. These new concepts can then be shared with other users.</li>
-			<li><strong>Create <a href="<?echo $config->domain;?>About/Manual/characterCollections.php" target="_blank">Character Collections</a></strong>. 
+			<li><strong>Create <a href="<?php echo $config->domain; ?>About/Manual/characterCollections.php" target="_blank">Character Collections</a></strong>. 
 			 Using the sorting capabilities you can create collections to define a character and character states.  These defined and illustrated characters
              can then be shared with other users.</li>
 			<li>Now a user can <em>create collections that include any Morphbank object</em>.  So you can create a collection of publications, annotations, 
@@ -113,7 +113,7 @@ to zoom, rotate and adjust color to enhance detailed features of the images.
 		<div class="specialtext2">
 		 My Manager is presently under the last stages of development.  Most of these issues are resolved and
 		  additions made to the software.  It is very usable now so please try it out and send us 
-		  <a href="<?echo $config->domain;?>/Help/feedback/" target="_blank">feedback</a> if you have suggestions!
+		  <a href="<?php echo $config->domain; ?>/Help/feedback/" target="_blank">feedback</a> if you have suggestions!
 		 <ul>
 		 <li>The manual is being updated regularly.</li>
 		 <li>Keyword search in My Manager may not return the expected results.</li>
@@ -123,7 +123,7 @@ to zoom, rotate and adjust color to enhance detailed features of the images.
 		 (or what your Browser has for Refresh) to fix.</li>
 		 <li>When you say 'Publish Now' it does it but the 'Publish Now' text does not go away until the next refresh.</li>
          <li>If Editing an External Link or GUID for any Morphbank Object (Image, Specimen, View, Locality), an error may result as we modify the software to allow users to 
-         provide <a href="<?echo $config->domain;?>/About/Manual/terms.php" ><strong>unique external identifiers (GUID)s</strong></a> via the same interface.</li>
+         provide <a href="<?php echo $config->domain; ?>/About/Manual/terms.php" ><strong>unique external identifiers (GUID)s</strong></a> via the same interface.</li>
 		 </ul>
 		 </div>
 		
@@ -133,8 +133,8 @@ to zoom, rotate and adjust color to enhance detailed features of the images.
 	
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/myManagerFeatures.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</tr>
 				</div>
