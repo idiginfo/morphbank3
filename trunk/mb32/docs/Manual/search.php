@@ -68,7 +68,7 @@ field to be searched. From the resulting pop-up, choose the desired Morphbank ob
 </p>
 <p>Use this option when searching is desired on a specific group of images.
 See a detailed explanation of this search type at 
-<a href="<?echo $config->domain;?>About/Manual/browseImages.php#specialkeyword">Browse - Images: Specialized Keyword Search</a>
+<a href="<?php echo $config->domain; ?>About/Manual/browseImages.php#specialkeyword">Browse - Images: Specialized Keyword Search</a>
 </p>
 <img src="ManualImages/simple_search_keyword_id.jpg" />
 <ul>
@@ -90,8 +90,8 @@ continent/ocean or country.
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/submit.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/submit.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 		<?php

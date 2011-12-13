@@ -89,7 +89,7 @@ can select all 30 images, go to Select Mass Operation, choose Publish Now. The d
 <li><strong>Any Group</strong>: shows all objects contributed by Any Group the user belongs to in Morphbank.</li>
 </ul>
 </div>
-<p><strong>Note Well. </strong>Every Morphbank Object (Image, Specimen, View, Locality, Annotation, Collection, Taxon, Publication) uploaded to Morphbank has a Contributor and Submitter (they can be the same person). Every person with a Morphbank account has their own group to which they can <a href="<?echo $config->domain;?>About/Manual/modifyGroup.php">add more members</a>. Any additional Groups needed are currently added by mbadmin. For more about Morphbank Groups, read <a href="<?echo $config->domain;?>About/Manual/userPrivileges.php">Users and Their Privileges</a> and how to <a href="<?echo $config->domain;?>About/Manual/selectGroup.php">Select a Group</a>.</p>
+<p><strong>Note Well. </strong>Every Morphbank Object (Image, Specimen, View, Locality, Annotation, Collection, Taxon, Publication) uploaded to Morphbank has a Contributor and Submitter (they can be the same person). Every person with a Morphbank account has their own group to which they can <a href="<?php echo $config->domain; ?>About/Manual/modifyGroup.php">add more members</a>. Any additional Groups needed are currently added by mbadmin. For more about Morphbank Groups, read <a href="<?php echo $config->domain; ?>About/Manual/userPrivileges.php">Users and Their Privileges</a> and how to <a href="<?php echo $config->domain; ?>About/Manual/selectGroup.php">Select a Group</a>.</p>
 
 <h3>Select Mass Operation</h3>
 <p>The user can select more than one object using the box to the left of the Object title (see the green highlighted entries above). Having selected
@@ -132,17 +132,17 @@ Sort criteria for images:
 <p>Use the <img src="ManualImages/reset.gif" alt="reset button" /> to clear the Keyword Search and Sort By boxes of all criteria.</p>
  	
 	    <br />
-		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Known Issues in this Beta Version</h3></a>
+		<a href="<?php echo $config->domain; ?>About/Manual/myManager.php" ><h3>Known Issues in this Beta Version</h3></a>
 		<br />
 		<br />
-		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>New Features</h3></a>
+		<a href="<?php echo $config->domain; ?>About/Manual/myManager.php" ><h3>New Features</h3></a>
 		<br />
 		<br />
 			
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/myManagerAll.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/myManagerAll.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</tr>
 				</div>

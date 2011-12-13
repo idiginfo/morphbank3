@@ -47,9 +47,9 @@ tables. Easily finding and <strong><em>showing</em></strong> information in Morp
 </p>
 
 <h3><a name="showURL">What does the Morphbank Show and URL look like?</a></h3>
-<!--<a href="<?echo $config->domain;?>Show/index.php?id=224074" target="_blank">http://morphbank.net/Show/index.php?id=224074</a>
+<!--<a href="<?php echo $config->domain; ?>Show/index.php?id=224074" target="_blank">http://morphbank.net/Show/index.php?id=224074</a>
 -->
-<a href="<?echo $config->domain;?>Show/?id=224074" target="_blank">http://morphbank.net/Show/?id=224074</a>
+<a href="<?php echo $config->domain; ?>Show/?id=224074" target="_blank">http://morphbank.net/Show/?id=224074</a>
 is an example of the URL. Click it to see what a Show referenced image object looks like in Morphbank version 2.8. 
 Note this example is an <strong>Image Record Show</strong>.
 The other objects (Specimen, Image, View, Locality, Collection, Annotation, Publication) in Morphbank have the same display and referencing feature. To find these objects, go to the <strong>Header Menu > Browse ></strong> and choose from the Morphbank objects in the <strong>drop-down menu</strong>.
@@ -85,7 +85,7 @@ baseObject table:
 
 <br />
 <h3><a name="objectIds">Where are object ids found within Morphbank?</a></h3>
-When browsing / searching via <a href="<?echo $config->domain;?>About/Manual/myManager.php" target="_blank">My Manager</a> tabs, the id is displayed with each object. 
+When browsing / searching via <a href="<?php echo $config->domain; ?>About/Manual/myManager.php" target="_blank">My Manager</a> tabs, the id is displayed with each object. 
 <br />
 <br />
 <img src="ManualImages/specimen_object_id.png" /> 
@@ -119,7 +119,7 @@ Publication, Taxa, OTUs, Characters and News have the Show capability.
 	</li>
 	<li>Also, selecting the Object id where it is listed in blue type or on another Show screen will open the Show.
 	</li>
-	<li>In the <a href="<?echo $config->domain;?>About/Manual/myManagerAnnotations.php" target="blank">My Manager > Annotations tab</a>, 
+	<li>In the <a href="<?php echo $config->domain; ?>About/Manual/myManagerAnnotations.php" target="blank">My Manager > Annotations tab</a>, 
 	clicking on the blue type (next to a published Annotation id), the Single Show Annotation Record is displayed.
 	</li>
 	</ul>
@@ -145,7 +145,7 @@ To submit a Logo for your objects go to: <strong>Header Menu > Tools > Account S
  <font color="blue">at</font> scs <font color="blue">dot</font> fsu <font color="blue">dot</font>  edu</strong>
  </li>
 <li>Left click on image to bring up the open source Zooming Viewer. For
-complete information on this process refer to the <a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php">Zooming Viewer</a>
+complete information on this process refer to the <a href="<?php echo $config->domain; ?>About/Manual/zoomingViewer.php">Zooming Viewer</a>
  section of this manual. Or click on the Zooming Viewer link seen just below the image.
 </li>
 <li>Click once on any of the areas in blue type will lead the user to
@@ -158,7 +158,7 @@ display additional information. See next:
 </li><br />
 <br />
 <li>Click on the Zooming Viewer link seen just below the image. This will bring up the open source Zooming Viewer. For
-complete information on this process refer to the <a href="<?echo $config->domain;?>About/Manual/FSI.php">FSI Viewer</a> section of this
+complete information on this process refer to the <a href="<?php echo $config->domain; ?>About/Manual/FSI.php">FSI Viewer</a> section of this
 manual.
 </li>
 <li>Click on these image links to download the images in the version of choice.</li>
@@ -195,8 +195,8 @@ the blue highlighted type will hyperlink to the appropriate external link.
 <br />		
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/zoomingViewer.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</div>
 			<?php

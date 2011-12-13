@@ -36,7 +36,7 @@
 			<tr>-->
 <p>
 In Morphbank, a user may belong to one or more Groups. Groups are usually formed by a set of individuals for the purpose of collaboration.
-Membership in a group is also part of the security model Morphbank uses to determine what objects can be seen (or not) by a given individual. To find out more about Morphbank Groups and Group Roles go to the <a href="<?echo $config->domain;?>About/Manual/userPrivileges.php">Users and Their Privileges</a> page.
+Membership in a group is also part of the security model Morphbank uses to determine what objects can be seen (or not) by a given individual. To find out more about Morphbank Groups and Group Roles go to the <a href="<?php echo $config->domain; ?>About/Manual/userPrivileges.php">Users and Their Privileges</a> page.
 <div class="specialtext3"> Before uploading any objects to Morphbank, it is important to <em><strong>choose the Group</strong></em> with which you would like the object to be associated. In other words, if you the Morphbank Contributor belong to more than one group, select the appropriate group after login, <strong>before upload</strong>. If the object is to remain private, you will need to be in this group to see/edit/annotate the object. 
 </div>
 </p>
@@ -72,12 +72,12 @@ group choose again from one of the above two menus.
 </p>
 </ol>
 <p>Everyone, logged in or not, uses this My Manager interface. Once <strong>logged in</strong>, and <em>after group selection</em>,
-the user has new menu options under <strong>Tools</strong> such as Submit, Group &amp; Account Settings. Once logged in, contributors can now Edit their objects found in each of the <strong>My Manager tabs</strong>. Some options not seen above in the Tools menu like <strong>Manage Mirror</strong> are based upon login permissions and are not available to all Morphbank members. Each <a href="<?echo $config->domain;?>About/Manual/myManager.php" target="_blank">
+the user has new menu options under <strong>Tools</strong> such as Submit, Group &amp; Account Settings. Once logged in, contributors can now Edit their objects found in each of the <strong>My Manager tabs</strong>. Some options not seen above in the Tools menu like <strong>Manage Mirror</strong> are based upon login permissions and are not available to all Morphbank members. Each <a href="<?php echo $config->domain; ?>About/Manual/myManager.php" target="_blank">
 My Manager</a> Tab allows users access to their own objects as well as other's objects if they are published. 
 </p>
 <div class="specialtext3">
-Note: Here users may jump to sections in the manual covering <a href="<?echo $config->domain;?>About/Manual/uploadSubmit.php">
-<strong>Submit</strong></a> and <a href="<?echo $config->domain;?>About/Manual/edit.php"><strong> Edit</strong></a>.
+Note: Here users may jump to sections in the manual covering <a href="<?php echo $config->domain; ?>About/Manual/uploadSubmit.php">
+<strong>Submit</strong></a> and <a href="<?php echo $config->domain; ?>About/Manual/edit.php"><strong> Edit</strong></a>.
 </div>
 <p>To <strong>Submit</strong> objects to Morphbank: Login, <strong>Select a Group</strong>, go to Header Menu > Tools > Submit > select the <br>
 type of object to be uploaded and then enter the required data. Group selection is important. If you need to keep the images private for a 
@@ -89,8 +89,8 @@ images. If you are a member of multiple groups, select the group whose members n
 
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/modifyGroup.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/modifyGroup.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

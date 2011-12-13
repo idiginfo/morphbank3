@@ -36,7 +36,7 @@
 			<tr>-->
 
 <!--<div class="specialtext2">
-<a href="<?echo $config->domain;?>About/Manual/Movies/submitlocality.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a Locality</strong>: <a href="<?echo $config->domain;?>About/Manual/Movies/submitlocality.avi" target='_blank'>video</a>
+<a href="<?php echo $config->domain; ?>About/Manual/Movies/submitlocality.avi" target='_blank'><img src="ManualImages/movieicon.jpg" /></a>  How to <strong>Submit a Locality</strong>: <a href="<?php echo $config->domain; ?>About/Manual/Movies/submitlocality.avi" target='_blank'>video</a>
 </div>
 -->
 
@@ -130,7 +130,7 @@ Contributor's name from the drop-down.
 
 <li><strong>Add External Links</strong> to this record. <br />
 For complete
-instructions on providing external links refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External Links</font> to open this feature. See next: <br/>
+instructions on providing external links refer to <a href="<?php echo $config->domain; ?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External Links</font> to open this feature. See next: <br/>
 </li>
 <img src="ManualImages/add_externalLinksRef.png" alt="external link options" hspace="20" vspace="10"/>
 	<ul>
@@ -143,7 +143,7 @@ instructions on providing external links refer to <a href="<?echo $config->domai
    </ul>
    <br /> 
 <li><strong>Add External References</strong> to this record. For complete
-instructions on providing external references refer to <a href="<?echo $config->domain;?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External References</font> to open this feature. See next:<br/>
+instructions on providing external references refer to <a href="<?php echo $config->domain; ?>About/Manual/externalLink.php">External Linking</a> in the Information Linking section of this manual. Click on <font color="blue">Add External References</font> to open this feature. See next:<br/>
 <img src="ManualImages/add_externalRefs.png" alt="external identifiers" hspace="20" vspace="10"/>
 <ul>
     <li>Enter the <strong>Description</strong> for the External Reference. This will appear to the Morphbank user as a label in front of the unique id.
@@ -177,8 +177,8 @@ appropriate field on the <strong>Add Specimen</strong> submit form.
 			<br />
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/uploadSubmitSpecimen.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/uploadSubmitSpecimen.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 		</div>
 		

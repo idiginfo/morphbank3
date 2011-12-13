@@ -35,35 +35,46 @@ echoHead( false, $title);
     <tr>-->
     <td width="100%">
 
-<p>Use this <a href="http://services.morphbank.net/mb3/validateXls.jsp">web service</a> to proof the Morphbank Excel Workbooks. A user may upload
-the original workbook or the custom workbook for validation.</p>
+        <div class="specialtext3">
+Use this <a href="http://services.morphbank.net/mb3/validateXls.jsp">web service</a> to proof the Morphbank Excel Workbooks (Original or Custom). A user may:
+<ul><li>upload
+the original workbook or the custom workbook for validation</li>
+    <li>Browse your files to find the Excel workbook you filled out</li>
+    <li>click to upload</li>
+    <li>a report is returned</li>
+    <li>If no errors are found, the workbook is ready to send to Morphbank for upload.</li>
+</ul>
+        </div>
 
-<div>
-<img align="center" src="ManualImages/validate.jpg" alt="screen shot of validate Excel form"/>
-</div>
-<p>Browse your files to find the Excel workbook you filled out, click to upload
-    and a report is returned. If no errors are found, the workbook is ready to
-    send to Morphbank for upload.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img align="center" src="ManualImages/validate.jpg" alt="screen shot of validate Excel form"/>
+</p>
 
-<p>The web services here checks validity of the following workbook fields.</p>
+<p>The web services code checks validity of the following Original Workbook fields (mb3a or mb3p).</p>
 <ul>
-	<li>Contributor Name: does this person have a valid Morphbank account?
-	</li>
-	<li>Contributor User Name: is the user name correct for the above person?
-	</li>
-	<li>Submitter Name: does this person have a valid Morphbank account?
-	</li>
-	<li>Date To Publish: needs to be a valid date in yyyy-mm-dd format.
-	</li>
-        <li>Creative Commons Copyright.
-	</li>
-        <li>
-	</li>
-        <li>
-	</li>
-        <li>
-	</li>
-	</ul>
+    <li>version number of the workbook</li>
+    <li>empty credential cells (Morphbank Account-holder name, user name, submitter name, date to publish, creative commons field)
+    <li>checks Locality column on Specimen sheet (compared to Locality sheet)</li>
+    <li>checks Specimen column on Image sheet (compared to Specimen sheet)</li>
+    <li>checks View column on Image sheet (compared to View sheet)</li>
+    <li>validates date collected fields are yyyy-mm-dd format</li>
+    <li>proofs image file names to insure no spaces and that extensions (.jpg, etc) are provided</li>
+    <li>insures latitude and longitude are decimal values</li>
+    <li>on View sheet, if (any cell in a row is not empty) then ViewTSN cannot be empty</li>
+</ul>
+
+<p>For the custom workbook, the following issues are checked:</p>
+<ul>
+    <li>version number</li>
+    <li>empty cells for both Morphbank user name and id (one of them must be filled)</li>
+    <li>empty cell for date to publish</li>
+    <li>user names have matching ids</li>
+    <li>user id belongs to the group specified</li>
+    <li>duplicate entries in Image External Id; they must be unique</li>
+    <li>format of date determined (if exists) as text</li>
+    <li>scientific names are not in the database</li>
+    <li>tsn or Morphbank mtsn matches the scientific name string</li>
+    <li>tsn with extra spaces</li>
+</ul>
 
 <p>If you need assistance after validation to understand any error messages,
     please send an email to mbadmin@scs.fsu.edu</p>
