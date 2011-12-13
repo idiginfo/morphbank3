@@ -29,7 +29,7 @@
 	?>
 
 
-	<div class="main">	<div class="mainGenericContainer" style="width: 820px;">
+	<div class="main">	<div class="mainGenericContainer" style="width: 820px; ?>
 		<!--change the header below -->
 		<h1>Sample Page Header</h1>
 		<br /><br />

@@ -48,7 +48,7 @@ Unpublished Objects contributed/submitted by members of other groups will not be
 
 
 
-<p>Use the modular features (<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" >icons</a> and tools) of
+<p>Use the modular features (<a href="<?php echo $config->domain; ?>About/Manual/graphicGuide.php" >icons</a> and tools) of
 My Manager to browse, search, sort, collect, edit, and annotate any objects found here. The icons and modular tools (like Edit and Submit) work the same or analogously throughout Morphbank. Once introduced to a My Manager page, the user will be able to jump to the other My Manager pages understanding the features they'll
 find there. </p>
 <p>After <em>login</em>, the path to the <strong>All tab</strong> is <strong>Header Menu > Browse > All.</strong></p>	
@@ -67,17 +67,17 @@ find there. </p>
 		Tag Descriptions
 	<ol>
 	
-	<li><a href="<?echo $config->domain;?>About/Manual/manualHints.php" ><img src="ManualImages/feedback.png" alt="Feedback" align="middle"></a>: please use this link to our automated feedback system. We appreciate your comments so that 
+	<li><a href="<?php echo $config->domain; ?>About/Manual/manualHints.php" ><img src="ManualImages/feedback.png" alt="Feedback" align="middle"></a>: please use this link to our automated feedback system. We appreciate your comments so that 
 	we can continue to improve and enhance Morphbank. The link labeled <strong><font color="red">(Help)</font></strong> opens a page in the online User Manual.</li>
 	
-	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Keywords</strong></a>: This is an important search feature in Morphbank. <em>A mouse-over will indicate the fields the Keywords Search function
+	<li><a href="<?php echo $config->domain; ?>About/Manual/myManagerFeatures.php" ><strong>Keywords</strong></a>: This is an important search feature in Morphbank. <em>A mouse-over will indicate the fields the Keywords Search function
 	utilizes</em>.</li>
 	
-	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Sort by</strong></a>: Use choices in the drop down for sorting search results.</li>
+	<li><a href="<?php echo $config->domain; ?>About/Manual/myManagerFeatures.php" ><strong>Sort by</strong></a>: Use choices in the drop down for sorting search results.</li>
 	
-	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Limit Search by</strong></a>: Users wishing to see only those objects they have contributed simply click the appropriate box to limit the search results. Results may also be restricted to any particular group the user selects. This capability makes collecting, annotating and editing select items easy and fast.</li>
+	<li><a href="<?php echo $config->domain; ?>About/Manual/myManagerFeatures.php" ><strong>Limit Search by</strong></a>: Users wishing to see only those objects they have contributed simply click the appropriate box to limit the search results. Results may also be restricted to any particular group the user selects. This capability makes collecting, annotating and editing select items easy and fast.</li>
 	
-	<li><a href="<?echo $config->domain;?>About/Manual/myManagerFeatures.php" ><strong>Select Mass Operation</strong></a>: Drop-down choices vary depending on the My Manager Tab. The user can select more
+	<li><a href="<?php echo $config->domain; ?>About/Manual/myManagerFeatures.php" ><strong>Select Mass Operation</strong></a>: Drop-down choices vary depending on the My Manager Tab. The user can select more
 	than one object using the box to the left of the Object title (see the green highlighted entry above). Having selected
 	several (or many) objects, choose the action to be performed on those objects from the <strong>Select Mass Operation
 	</strong> drop-down. With this method, a user might change the date-to-publish on many objects at once. Or perhaps, a user
@@ -87,19 +87,19 @@ find there. </p>
 	 view the collection itself.</li>
 	
 	<li><strong>Icons</strong>: Click to jump to the 
-	<a href="<?echo $config->domain;?>About/Manual/graphicGuide.php" >guide to Morphbank graphics</a> for a thorough
+	<a href="<?php echo $config->domain; ?>About/Manual/graphicGuide.php" >guide to Morphbank graphics</a> for a thorough
 	overview.
 		<ul>
 	
 	<img src="ManualImages/icon_sample1.png" alt="icons" vspace="10" />
 	
-	<li>Use the <img src="<?echo $config->domain;?>style/webImages/copy-trans.png" /> icon to <strong>copy a collection</strong>.</li>
-	<li>In Morphbank, the <img src="<?echo $config->domain;?>style/webImages/infoIcon-trans.png" />
-	 <strong>information</strong> icon opens a feature called <strong><a href="<?echo $config->domain;?>About/Manual/show.php" >Single Show</a></strong> that varies with
+	<li>Use the <img src="<?php echo $config->domain; ?>style/webImages/copy-trans.png" /> icon to <strong>copy a collection</strong>.</li>
+	<li>In Morphbank, the <img src="<?php echo $config->domain; ?>style/webImages/infoIcon-trans.png" />
+	 <strong>information</strong> icon opens a feature called <strong><a href="<?php echo $config->domain; ?>About/Manual/show.php" >Single Show</a></strong> that varies with
 	 the object. In general, one sees data about the object.</li>
-	<li>Use the <img src="<?echo $config->domain;?>style/webImages/calendar.gif" /> <strong>calendar</strong>
+	<li>Use the <img src="<?php echo $config->domain; ?>style/webImages/calendar.gif" /> <strong>calendar</strong>
 	icon to easily change the date to make an image visible to all who use Morphbank or extend the time the object remains private.</li>
-	<li>With <img src="<?echo $config->domain;?>style/webImages/delete-trans.png" />, the user may <strong>delete
+	<li>With <img src="<?php echo $config->domain; ?>style/webImages/delete-trans.png" />, the user may <strong>delete
 	</strong> an object in Morphbank. Note the delete icon will only appear for objects you have permission to delete.</li>
 		</ul>
 	<br />
@@ -113,20 +113,20 @@ find there. </p>
 		<ul>
 	<img src="ManualImages/icon_sample2.png" alt="icons" vspace="10"  />
 		
-		<li>Anywhere the <img src="<?echo $config->domain;?>style/webImages/edit-trans.png" /> <strong>Edit</strong> icon appears, a user
+		<li>Anywhere the <img src="<?php echo $config->domain; ?>style/webImages/edit-trans.png" /> <strong>Edit</strong> icon appears, a user
 		can access the metadata for an object to add-to, update or correct information associated with that object. Note
 		this is applies to objects the user has contributed/submitted. If data needs to be added/changed on other
 		objects not owned by the user, they can contact 
 		<b>mbadmin <font color="blue">at</font> scs <font color="blue">dot</font> fsu 
 		<font color="blue">dot</font> edu</b></li>	
 		<li>Users may <strong>Annotate</strong> any object in Morphbank where the 
-		<img src="<?echo $config->domain;?>style/webImages/annotate-trans.png" /> icon appears. These annotations
+		<img src="<?php echo $config->domain; ?>style/webImages/annotate-trans.png" /> icon appears. These annotations
 		are permanently associated with a given Morphbank Object. Note some annotations, like <strong>Determination
 		Annotations,</strong> allow users to select a date-to-publish the comment/s. Other annotations, like <strong>Taxon
 		Name Annotations</strong> are made public immediately. If <strong>Annotations</strong> are present, the
 		link will indicate how many there are and the user can view them by clicking on the link.</li>
 		<li>Use the <img src="../../style/webImages/magnifyShadow-trans.png" alt="zooming viewer icon"> magnifying glass
-		to open an image in Morphbank with the <a href="<?echo $config->domain;?>About/Manual/zoomingViewer.php">Zooming Viewer</a> to zoom in
+		to open an image in Morphbank with the <a href="<?php echo $config->domain; ?>About/Manual/zoomingViewer.php">Zooming Viewer</a> to zoom in
 		on an image to help reveal more image features. Morphbank utilizes this open source viewer in order to be able to add
         more functionality to increase the value of the photograph for the user. Click on any thumbnail or click on the resulting image in the <strong>Image Record Show</strong> to 
 	open the image in the Zooming Viewer.</li>
@@ -163,7 +163,7 @@ find there. </p>
 	</li>
 	</ul>
     </div>
-	<p><strong>Image Collections</strong>, <strong>Mixed Collections</strong> &amp; <strong>Character Collections</strong> can be seen in the <a href="<?echo $config->domain;?>About/Manual/myManagerCollections.php" ><strong>Collections</strong></a> tab. <strong>OTU Collections</strong> are found in the My Manager<a href="<?echo $config->domain;?>About/Manual/myManagerTaxa.php"> - <strong>Taxa </strong></a>tab.
+	<p><strong>Image Collections</strong>, <strong>Mixed Collections</strong> &amp; <strong>Character Collections</strong> can be seen in the <a href="<?php echo $config->domain; ?>About/Manual/myManagerCollections.php" ><strong>Collections</strong></a> tab. <strong>OTU Collections</strong> are found in the My Manager<a href="<?php echo $config->domain; ?>About/Manual/myManagerTaxa.php"> - <strong>Taxa </strong></a>tab.
     </p>
     
 	
@@ -171,17 +171,17 @@ find there. </p>
     </li>
 	</ol>
     
-		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
+		<a href="<?php echo $config->domain; ?>About/Manual/myManager.php" ><h3>Known Version Issues</h3></a>
 		<br />
 		<br />
-		<a href="<?echo $config->domain;?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
+		<a href="<?php echo $config->domain; ?>About/Manual/myManager.php" ><h3>Introduction to My Manager</h3></a>
 		<br />
 			<br />
 
 			<div id=footerRibbon></div>
 			<table align="right">
-<td><a href="<?echo $config->domain;?>About/Manual/myManagerImages.php" class="button smallButton"><div>Next</DIV></a></td>
-<td><a href="<?echo $config->domain;?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/myManagerImages.php" class="button smallButton"><div>Next</div></a></td>
+<td><a href="<?php echo $config->domain; ?>About/Manual/index.php"class="button smallButton"><div>Contents</div></a></td>
 </table>
 			</tr>
 				</div>
