@@ -44,7 +44,7 @@ echoHead(false, $title);
     </ul>
 
     <p>Last update of this documentation was made
-        <!-- #BeginDate format:Am1 -->September 12, 2011<!-- #EndDate -->
+        <!-- #BeginDate format:Am1 -->December 18, 2011<!-- #EndDate -->
         reflecting the latest software release of Morphbank v 3.</p>
 
     <div class="specialtext3"><strong>Contributors to the Morphbank User Manual</strong>:
