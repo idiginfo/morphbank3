@@ -34,8 +34,8 @@ echoHead( false, $title);
     <!--<table class="manualContainer" cellspacing="0" width="100%">
     <tr>-->
     <td width="100%">
-
-       <div class="specialtext2"><h1>http://services.morphbank.net/mb3/validateXls.jsp</h1></div>
+        <br />
+&nbsp;&nbsp&nbsp;<h2>http://services.morphbank.net/mb3/validateXls.jsp</h2>
 
        <div class="specialtext3">
 Use this <a href="http://services.morphbank.net/mb3/validateXls.jsp">web service</a>
