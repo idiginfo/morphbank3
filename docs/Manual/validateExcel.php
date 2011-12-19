@@ -35,21 +35,28 @@ echoHead( false, $title);
     <tr>-->
     <td width="100%">
 
-        <div class="specialtext3">
-Use this <a href="http://services.morphbank.net/mb3/validateXls.jsp">web service</a> to proof the Morphbank Excel Workbooks (Original or Custom). A user may:
-<ul><li>upload
-the original workbook or the custom workbook for validation</li>
-    <li>Browse your files to find the Excel workbook you filled out</li>
-    <li>click to upload</li>
+       <div class="specialtext2"><h1>http://services.morphbank.net/mb3/validateXls.jsp</h1></div>
+
+       <div class="specialtext3">
+Use this <a href="http://services.morphbank.net/mb3/validateXls.jsp">web service</a>
+to proof the Morphbank Excel Workbooks (Original or Custom). A user may upload
+the original workbook or the custom workbook for validation.
+<ol><li>upload
+        the <strong>original workbook</strong> (mb3a.xls or mb3p.xls) or the <strong>custom workbook</strong> for validation</li>
+    <li>browse your files to find the Excel workbook you filled out</li>
+    <li>click <strong>Submit Query</strong> to upload</li>
     <li>a report is returned</li>
     <li>If no errors are found, the workbook is ready to send to Morphbank for upload.</li>
-</ul>
+    <li>Else, fix issues found. Get Morphbank assistance if needed. Try the validator again.</li>
+</ol>
         </div>
 
+ 
+        
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img align="center" src="ManualImages/validate.jpg" alt="screen shot of validate Excel form"/>
 </p>
 
-<p>The web services code checks validity of the following Original Workbook fields (mb3a or mb3p).</p>
+<p>The <a href="http://services.morphbank.net/mb3/validateXls.jsp">web services</a> code checks validity of the following Original Workbook fields (mb3a or mb3p).</p>
 <ul>
     <li>version number of the workbook</li>
     <li>empty credential cells (Morphbank Account-holder name, user name, submitter name, date to publish, creative commons field)
