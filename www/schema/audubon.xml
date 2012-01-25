@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="http://rs.gbif.org/style/human.xsl"?>
+<!--<?xml-stylesheet type="text/xsl" href="human.xsl"?>-->
+<?xml-stylesheet type="text/xsl" href="human.xsl"?>
 <extension xmlns="http://rs.gbif.org/extension/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://rs.gbif.org/extension/ http://rs.gbif.org/schema/extension.xsd"
@@ -14,7 +15,9 @@
 		to add examples of dc:description and dc:relation to the list of terms below...
 		I hope these examples might be useful?
 		(DE 2011-10-13)
-	-->
+    -->
+    
+    <!-- Document edited by Guillaume Jimenez 01/24/12 -->
 
     <property name="identifier" namespace="http://purl.org/dc/terms/"
         dc:description="An arbitrary code that is unique for the resource, with the resource being either a provider, collection, or media item."
@@ -36,56 +39,69 @@
         qualName="http://purl.org/dc/terms/title" required="true"
         examples="Rattlesnake eating deer mouse; scientific name"/>
     <property name="modified" namespace="http://purl.org/dc/terms/"
+        dc:description="Date that the media resource was altered. The date and time must comply with the World Wide Web Consortium (W3C) datetime practice, which requires that date and time representation correspond to ISO 8601:1998, but with year fields always comprising 4 digits. This makes datetime records compliant with 8601:2004. AC datetime values may also follow 8601:2004 for ranges by separating two IS0 8601 datetime fields by a solidus ('forward slash', '/'). See also the wikipedia IS0 8601 entry for further explanation and examples."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:modified"
         qualName="http://purl.org/dc/terms/modified" required="false" type="date"
         examples="1981-05-01"/>
     <property name="metadataLanguage" namespace="http://purl.org/dc/terms/"
+        dc:description="Language of description and other metadata (but not necessarily of the image itself) represented in ISO639-1 or -3."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#metadataLanguage"
         qualName="http://purl.org/dc/terms/metadataLanguage" required="true" examples="en"/>
     <property name="providerManagedID" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) that is unique and meaningful primarily for the data provider."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#providerManagedID"
         qualName="http://rs.tdwg.org/ac/terms/providerManagedID" required="false"
         examples="Morphbank: http://www.morphbank.net/id_of_contributor?"/>
     <property name="available" namespace="http://purl.org/dc/terms/"
+        dc:description="The date (often a range) that the resource became or will become available. The date and time must comply with the World Wide Web Consortium (W3C) datetime practice, which requires that date and time representation correspond to ISO 8601:1998, but with year fields always comprising 4 digits. This makes datetime records compliant with 8601:2004. AC datetime values may also follow 8601:2004 for ranges by separating two IS0 8601 datetime fields by a solidus ('forward slash', '/'). See also the wikipedia IS0 8601 entry for further explanation and examples."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:available"
         qualName="http://purl.org/dc/terms/available" required="false" type="date"
         examples="2012-05-01"/>
 
     <!--Attribution Vocabulary-->
     <property name="rights" namespace="http://purl.org/dc/terms/"
+        dc:description="Information about rights held in and over the resource. A full-text, readable copyright statement, as required by the national legislation of the copyright holder. On collections, this applies to all contained objects, unless the object itself has a different statement. Examples: “Copyright XY 2008, all rights reserved”, “© 2008 XY Museum” , 'Public Domain.', 'Copyright unknown' Do not place just the name of the copyright holder(s) here! That belongs in a list in the xmpRights:Owner field, which should be supplied if dcterms:rights is not 'Public Domain', appropriate only if the resource is known to be not under copyright."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:rights"
         qualName="http://purl.org/dc/terms/rights" required="true"
         examples="Morphbank: Maps to creativeCommons"/>
     <property name="Owner" namespace="http://ns.adobe.com/xap/1.0/rights/"
+        dc:description="A list of the names of the owners of the copyright. 'Unknown' is an acceptable value, but 'Public Domain' is not. Some providers use dcterms:publisher for this purpose, but it seems doubtful that the publisher is by necessity the copyright owner. 'Public Domain' is not an appropriate value because it denotes something that is not under copyright. In this case, omit or leave empty xmpRights:Owner, leave empty or absent, and put 'Public Domain' in the Copyright Statement (dcterms:rights). Except for 'Public Domain' resources, it is strongly urged that this field be supplied."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#xmpRights:Owner"
         qualName="http://ns.adobe.com/xap/1.0/rights/Owner" required="false"
         examples="Maps copyright text"/>
     <property name="WebStatement" namespace="http://ns.adobe.com/xap/1.0/rights/"
+        dc:description="A URL defining or further elaborating on the license statement (e. g., a web page explaining the precise terms of use)."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#xmpRights:WebStatement"
         qualName="http://ns.adobe.com/xap/1.0/rights/WebStatement" required="false"
         examples="CC with url"/>
     <property name="licenseLogoURL" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="A URL providing access to a logo that symbolizes the License."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#licenseLogoURL"
         qualName="http://rs.tdwg.org/ac/terms/licenseLogoURLt" required="false" examples="CC logo"/>
     <property name="attributionLogoURL" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The URL of icon or logo image to appear in source attribution."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#attributionLogoURL"
         qualName="http://rs.tdwg.org/ac/terms/attributionLogoURL" required="false"
         examples="Morphbank: User.userLogo"/>
 
     <!--Agents Vocabulary-->
     <property name="creator" namespace="http://purl.org/dc/terms/"
+        dc:description="The person or organization responsible for creating the media resource"
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:creator"
         qualName="http://purl.org/dc/terms/creator" required="false"
         examples="Morphbank: Image.photographer"/>
     <property name="provider" namespace="http://purl.org/dc/terms/"
+        dc:description="Person or organization responsible for presenting the media resource. If no separate Metadata Provider is attributed, this attributes also the metadata."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#provider"
         qualName="http://purl.org/dc/terms/provider" required="false"
         examples="Morphbank: Image.userId (Contributor id or his name?)"/>
     <property name="metadataProvider" namespace="http://purl.org/dc/terms/"
+        dc:description="Person or organization originally responsible for providing the resource metadata record."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#metadataProvider"
         qualName="http://purl.org/dc/terms/metadataProvider" required="false"
         examples="Morphbank: morphbank.net"/>
     <property name="metadataCreator" namespace="http://purl.org/dc/terms/"
+        dc:description="Person or organization originally creating the resource metadata record."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#metadataCreator"
         qualName="http://purl.org/dc/terms/metadataCreator" required="false"
         examples="Morphbank: morphbank.net"/>
@@ -93,24 +109,29 @@
     <!--Content Coverage Vocabulary-->
 
     <property name="description" namespace="http://purl.org/dc/terms/"
+        dc:description="Description of collection or individual resource, containing the Who, What, When, Where and Why as free-form text. This normative document is silent on the nature of formatting in the text. It is the role of implementers of an AC concrete representation (e.g. an XML Schema, an RDF representation, etc.) to decide and document how formatting advice will be represented in Descriptions serialized according to such representations."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:description"
         qualName="http://purl.org/dc/terms/description" required="false"
         examples="Morphbank: BaseObject.description"/>
 
     <!--Geography Vocabulary-->
     <property name="LocationShown" namespace="http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/"
+        dc:description="The location that is shown or the place of the media content, irrespective of the location from which the resource has been created."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#Iptc4xmpExt:LocationShown"
         qualName="http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/LocationShown" required="false"
         examples="Morphbank: locality"/>
     <property name="CountryCode" namespace="http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/"
+        dc:description="The geographic location of the specific entity(ies) documented by the media item, expressed through a constrained vocabulary of countries using 2-letter ISO country code."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#Iptc4xmpExt:CountryCode"
         qualName="http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/CountryCode" required="false"
         examples="US"/>
     <property name="CountryName" namespace="http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/"
+        dc:description="This field can be free text, but where possible, the use of http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/CountryCode is preferred."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#Iptc4xmpExt:CountryName"
         qualName="http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/CountryName" required="false"
         examples="United-States"/>
     <property name="ProvinceState" namespace="http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/"
+        dc:description="Optionally, the geographic unit immediately below the country level (individual states in federal countries, provinces, or other administrative units) in which the subject of the media resource (e. g., species, habitats, or events) were located (if such information is available in separate fields)."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#Iptc4xmpExt:ProvinceState"
         qualName="http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/ProvinceState" required="false"
         examples="Florida"/>
@@ -119,140 +140,170 @@
 
     <!--Subject of Resource Vocabulary-->
     <property name="tag" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="General keywords or tags."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#tag"
         qualName="http://rs.tdwg.org/ac/terms/tag" required="false"
         examples="Morphbank: View.specimenPart"/>
 
     <!--Taxonomic Coverage Vocabulary-->
     <property name="scientificName" namespace="http://rs.tdwg.org/dwc/terms/"
+        dc:description="Taxon names of organisms represented in the media resource (with date and authorship information if available) of the lowest level taxonomic rank that can be applied."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:scientificName"
         qualName="http://rs.tdwg.org/dwc/terms/scientificName" required="false"
         examples="Morphbank: Specimen.scientificName"/>
     <property name="nameAccordingTo" namespace="http://rs.tdwg.org/dwc/terms/"
+        dc:description="The taxonomic authority used to apply the name to the taxon, e. g., a book or web service from which the name comes from."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:nameAccordingTo"
         qualName="http://rs.tdwg.org/dwc/terms/nameAccordingTo" required="false"
         examples="Morphbank: Tree.nameSource"/>
     <property name="taxonID" namespace="http://rs.tdwg.org/dwc/terms/"
+        dc:description="Equivalent to Scientific Name, but using GUIDs such as http URIs or LSIDs to refer to the taxon names or concepts."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:taxonID"
         qualName="http://rs.tdwg.org/dwc/terms/taxonID" required="false"
         examples="Morphbank: Tree.tsn"/>
     <property name="identifiedBy" namespace="http://rs.tdwg.org/dwc/terms/"
+        dc:description="The name(s) of the person(s) who applied the Scientific Name to the sample."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:identifiedBy"
         qualName="http://rs.tdwg.org/dwc/terms/identifiedBy" required="false"
         examples="Morphbank: Specimen.name"/>
     <property name="dateIdentified" namespace="http://rs.tdwg.org/dwc/terms/"
+        dc:description="The date on which the person(s) given under Identfied By applied a Scientific Name to the resource."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:dateIdentified"
         qualName="http://rs.tdwg.org/dwc/terms/dateIdentified" required="false"
         examples="Morphbank: Specimen.dateIdentified"/>
     <property name="subjectPart" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The portion of the organism, environment, etc. shown or particularly well illustrated."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#subjectPart"
         qualName="http://rs.tdwg.org/ac/terms/subjectPart" required="false"
         examples="Morphbank: View.specimenPart"/>
     <property name="sex" namespace="http://rs.tdwg.org/dwc/terms/"
+        dc:description="A description of the life-cycle stage of any organisms featured within the media, when relevant to the subject of the media."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:sex"
         qualName="http://rs.tdwg.org/dwc/terms/sex" required="false"
         examples="Morphbank: View.sex; Morphbank: Specimen.sex"/>
     <property name="subjectOrientation" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="Specific orientiation (= direction, view angle) of the subject represented in the media resource with respect to the acquisition device."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#subjectOrientation"
         qualName="http://rs.tdwg.org/ac/terms/subjectOrientation" required="false"
         examples="Morphbank: View.viewAngle"/>
 
     <!--Resource Creation Vocabulary-->
     <property name="captureDevice" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="Free form text describing the device or devices used to create the resource."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#captureDevice"
         qualName="http://rs.tdwg.org/ac/terms/captureDevice" required="false"
         examples="View.imagingTechnique"/>
     <property name="resourceCreationTechnique" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="Information about technical aspects of the creation and digitization process of the resource. This includes modification steps ('retouching') after the initial resource capture."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#resourceCreationTechnique"
         qualName="http://rs.tdwg.org/ac/terms/resourceCreationTechnique" required="false"
         examples="View.imagingPreparationTechnique"/>
 
     <!--Service access point : flatten the access point -->
     <property name="thumbnailAccessURI" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="URI of the resource itself. If this resource can be acquired by an http request, its http URL should be given. If not, but it has some URI in another URI scheme, that may be given here."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#accessURL"
         qualName="http://rs.tdwg.org/ac/terms/thumbnailAccessURI" required="false"
         examples="Morphbank: http://www.morphbank.net/?id=XX&amp;imgType=thumb"/>
-    <property name="thumbnailFormat" namespace="http://purl.org/dc/terms/terms/"
+    <property name="thumbnailFormat" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The technical format of the resource (file format or physical medium)."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:format"
-        qualName="http://purl.org/dc/terms/thumbnailFormat" required="false" examples="jpeg;bmp"/>
-    <property name="thumbnailExtent" namespace="http://purl.org/dc/terms/terms/"
+        qualName="http://rs.tdwg.org/ac/terms/thumbnailFormat" required="false" examples="jpeg;bmp"/>
+    <property name="thumbnailExtent" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The size, dimensions, or duration of the variant of the media resource."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:extent"
-        qualName="http://purl.org/dc/terms/thumbnailExtent" required="false" examples="50 x 40"/>
+        qualName="http://rs.tdwg.org/ac/terms/thumbnailExtent" required="false" examples="50 x 40"/>
     <property name="thumbnailFurtherInformationURL" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The URL of a Web site that provides additional information about (this version of) the media resource"
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#furtherInformationURL"
-        qualName="http://rs.tdwg.org/ac/terms/thumbnailFurtherInformationURL" required="false"
-        dc:description="URL of the metadata"/>
+        qualName="http://rs.tdwg.org/ac/terms/thumbnailFurtherInformationURL" required="false"/>
 
     <property name="lowerQualityAccessURI" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="URI of the resource itself. If this resource can be acquired by an http request, its http URL should be given. If not, but it has some URI in another URI scheme, that may be given here."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#accessURL"
         qualName="http://rs.tdwg.org/ac/terms/lowerQualityAccessURI" required="false"/>
-    <property name="lowerQualityFormat" namespace="http://purl.org/dc/terms/terms/"
+    <property name="lowerQualityFormat" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The technical format of the resource (file format or physical medium)."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:format"
-        qualName="http://purl.org/dc/terms/lowerQualityFormat" required="false" examples="jpeg;bmp"/>
-    <property name="lowerQualityExtent" namespace="http://purl.org/dc/terms/terms/"
+        qualName="http://rs.tdwg.org/ac/terms/lowerQualityFormat" required="false" examples="jpeg;bmp"/>
+    <property name="lowerQualityExtent" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The size, dimensions, or duration of the variant of the media resource."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:extent"
-        qualName="http://purl.org/dc/terms/lowerQualityExtent" required="false" examples="300 x 200"/>
+        qualName="http://rs.tdwg.org/ac/terms/lowerQualityExtent" required="false" examples="300 x 200"/>
     <property name="lowerQualityFurtherInformationURL" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The URL of a Web site that provides additional information about (this version of) the media resource"
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#furtherInformationURL"
-        qualName="http://rs.tdwg.org/ac/terms/lowerQualityFurtherInformationURL" required="false"
-        dc:description="URL of the metadata"/>
+        qualName="http://rs.tdwg.org/ac/terms/lowerQualityFurtherInformationURL" required="false"/>
 
     <property name="mediumQualityAccessURI" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="URI of the resource itself. If this resource can be acquired by an http request, its http URL should be given. If not, but it has some URI in another URI scheme, that may be given here."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#accessURL"
         qualName="http://rs.tdwg.org/ac/terms/mediumQualityAccessURI" required="false"
         examples="Morphbank: http://www.morphbank.net/?id=XX&amp;imgType=jpg"/>
-    <property name="mediumQualityFormat" namespace="http://purl.org/dc/terms/terms/"
+    <property name="mediumQualityFormat" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The technical format of the resource (file format or physical medium)."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:format"
-        qualName="http://purl.org/dc/terms/mediumQualityFormat" required="false" examples="jpeg;bmp"/>
-    <property name="mediumQualityExtent" namespace="http://purl.org/dc/terms/terms/"
+        qualName="http://rs.tdwg.org/ac/terms/mediumQualityFormat" required="false" examples="jpeg;bmp"/>
+    <property name="mediumQualityExtent" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The size, dimensions, or duration of the variant of the media resource."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:extent"
-        qualName="http://purl.org/dc/terms/mediumQualityExtent" required="false" examples="400 x 300"/>
+        qualName="http://rs.tdwg.org/ac/terms/mediumQualityExtent" required="false" examples="400 x 300"/>
     <property name="mediumQualityFurtherInformationURL" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The URL of a Web site that provides additional information about (this version of) the media resource"
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#furtherInformationURL"
-        qualName="http://rs.tdwg.org/ac/terms/mediumQualityFurtherInformationURL" required="false"
-        dc:description="URL of the metadata"/>
+        qualName="http://rs.tdwg.org/ac/terms/mediumQualityFurtherInformationURL" required="false"/>
 
     <property name="goodQualityAccessURI" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="URI of the resource itself. If this resource can be acquired by an http request, its http URL should be given. If not, but it has some URI in another URI scheme, that may be given here."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#accessURL"
         qualName="http://rs.tdwg.org/ac/terms/goodQualityAccessURI" required="false"/>
-    <property name="goodQualityFormat" namespace="http://purl.org/dc/terms/terms/"
+    <property name="goodQualityFormat" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The technical format of the resource (file format or physical medium)."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:format"
-        qualName="http://purl.org/dc/terms/goodQualityFormat" required="false" examples="jpeg;bmp"/>
-    <property name="goodQualityExtent" namespace="http://purl.org/dc/terms/terms/"
+        qualName="http://rs.tdwg.org/ac/terms/goodQualityFormat" required="false" examples="jpeg;bmp"/>
+    <property name="goodQualityExtent" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The size, dimensions, or duration of the variant of the media resource."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:extent"
-        qualName="http://purl.org/dc/terms/goodQualityExtent" required="false" examples="1024 x 768"/>
+        qualName="http://rs.tdwg.org/ac/terms/goodQualityExtent" required="false" examples="1024 x 768"/>
     <property name="goodQualityFurtherInformationURL" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The URL of a Web site that provides additional information about (this version of) the media resource"
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#furtherInformationURL"
-        qualName="http://rs.tdwg.org/ac/terms/goodQualityFurtherInformationURL" required="false"
-        dc:description="URL of the metadata"/>
+        qualName="http://rs.tdwg.org/ac/terms/goodQualityFurtherInformationURL" required="false"/>
 
     <property name="bestQualityAccessURI" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="URI of the resource itself. If this resource can be acquired by an http request, its http URL should be given. If not, but it has some URI in another URI scheme, that may be given here."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#accessURL"
         qualName="http://rs.tdwg.org/ac/terms/bestQualityAccessURI" required="false"
         examples="Morphbank: http://www.morphbank.net/?id=XX&amp;imgType=jpeg"/>
-    <property name="bestQualityFormat" namespace="http://purl.org/dc/terms/terms/"
+    <property name="bestQualityFormat" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The technical format of the resource (file format or physical medium)."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:format"
-        qualName="http://purl.org/dc/terms/bestQualityFormat" required="false"
+        qualName="http://rs.tdwg.org/ac/terms/bestQualityFormat" required="false"
         examples="Morphbank: Image.imageType; jpeg;bmp"/>
-    <property name="bestQualityExtent" namespace="http://purl.org/dc/terms/terms/"
+    <property name="bestQualityExtent" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The size, dimensions, or duration of the variant of the media resource."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:extent"
-        qualName="http://purl.org/dc/terms/bestQualityExtent" required="false"
+        qualName="http://rs.tdwg.org/ac/terms/bestQualityExtent" required="false"
         examples="Morphbank: Image.imageWidth, Image.imageHeight; 2000 x 1500"/>
     <property name="bestQualityFurtherInformationURL" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="The URL of a Web site that provides additional information about (this version of) the media resource"
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#furtherInformationURL"
         qualName="http://rs.tdwg.org/ac/terms/bestQualityFurtherInformationURL" required="false"
-        examples="Morphbank: http://morphbank.net/Image.id" dc:description="URL of the metadata"/>
+        examples="Morphbank: http://morphbank.net/Image.id" />
 
     <!--Related Resources Vocabulary-->
     <!--image can be in more than one collection?-->
     <property name="IDofContainingCollection" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="If the resource is contained in a Collection, this field identifies that Collection uniquely. Its form is not specified by this normative document, but is left to implementers of specific implementations."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#IDofContainingCollection"
         qualName="http://rs.tdwg.org/ac/terms/IDofContainingCollection" required="false"
         examples="URL for collection id, if present"/>
     <property name="providerID" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="A globally unique ID of the provider of the current AC metadata record."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#providerID"
         qualName="http://rs.tdwg.org/ac/terms/providerID" required="false" examples="URL for group"/>
     <property name="associatedSpecimenReference" namespace="http://rs.tdwg.org/ac/terms/"
+        dc:description="A reference to a specimen associated with this resource."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#associatedSpecimenReference"
         qualName="http://rs.tdwg.org/ac/terms/associatedSpecimenReference" required="false"
         examples="http://www.morphbank.net/Image.specimenId"/>
