@@ -19,15 +19,14 @@
           <html>
                <head>
                     <title><xsl:value-of select="@dc:title"/> - <xsl:value-of select="$defType"/></title>
-                    <link rel="stylesheet" type="text/css" href="http://rs.gbif.org/style/human.css"/>
+                    <link rel="stylesheet" type="text/css" href="../style/human.css"/>
                </head>
                <body>
                     <div class="container">
                          <div id="header" class="box">
                               <h2 id="logo">
-                                   <img src="https://idigbio.org/wiki/images/thumb/a/a8/IDigBio_Logo_RGB.png/100px-IDigBio_Logo_RGB.png" width="100" height="31"/>
+                                   <img id="logo_img" alt="iDigBio logo" src="https://idigbio.org/wiki/images/thumb/a/a8/IDigBio_Logo_RGB.png/100px-IDigBio_Logo_RGB.png" width="100" height="31"/>
                                    Darwin Core <xsl:value-of select="$defType"/>
-                                   <span style="font-size:60%;color:#888;"> (<a href="/">index</a>)</span>
                               </h2>
                               <h1><xsl:value-of select="@dc:title"/></h1>
                          </div>
