@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<?xml-stylesheet type="text/xsl" href="human.xsl"?>-->
-<?xml-stylesheet type="text/xsl" href="../style/human.xsl"?>
+<?xml-stylesheet type="text/xsl" href="human.xsl"?>
+<!--<?xml-stylesheet type="text/xsl" href="../style/human.xsl"?>-->
 <extension xmlns="http://rs.gbif.org/extension/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://rs.gbif.org/extension/ http://rs.gbif.org/schema/extension.xsd"
@@ -25,7 +25,7 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:identifier"
         qualName="http://purl.org/dc/terms/identifier" required="true"
         group="Management Vocabulary"
-        examples="Morphbank: http://www.morphbank.net/123456"/>
+        examples="Morphbank value: http://www.morphbank.net/123456"/>
     <property name="type" namespace="http://purl.org/dc/terms/"
         dc:description="Any dcmi type term from http://dublincore.org/documents/dcmi-type-vocabulary/ may be used. Recommended terms are Collection, StillImage, Sound, MovingImage, InteractiveResource, Text. Also recommended are PanAndZoomImage , 3DStillImage, and 3DMovingImage."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:type"
@@ -43,7 +43,8 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:title"
         qualName="http://purl.org/dc/terms/title" required="true"
         group="Management Vocabulary"
-        examples="Rattlesnake eating deer mouse; scientific name"/>
+        examples="&quot;Rattlesnake eating deer mouse&quot;;
+        scientific name"/>
     <property name="modified" namespace="http://purl.org/dc/terms/"
         dc:description="Date that the media resource was altered. The date and time must comply with the World Wide Web Consortium (W3C) datetime practice, which requires that date and time representation correspond to ISO 8601:1998, but with year fields always comprising 4 digits. This makes datetime records compliant with 8601:2004. AC datetime values may also follow 8601:2004 for ranges by separating two IS0 8601 datetime fields by a solidus ('forward slash', '/'). See also the wikipedia IS0 8601 entry for further explanation and examples."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:modified"
@@ -61,7 +62,8 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#providerManagedID"
         qualName="http://rs.tdwg.org/ac/terms/providerManagedID" required="false"
         group="Management Vocabulary"
-        examples="Morphbank: &quot;http://www.morphbank.net/&quot; + id_of_contributor; http://www.morphbank.net/23"/>
+        examples="How Morphbank builds the value: &quot;http://www.morphbank.net/&quot; + id_of_contributor;
+        Morphbank value: &quot;http://www.morphbank.net/23&quot;"/>
     <property name="available" namespace="http://purl.org/dc/terms/"
         dc:description="The date (often a range) that the resource became or will become available. The date and time must comply with the World Wide Web Consortium (W3C) datetime practice, which requires that date and time representation correspond to ISO 8601:1998, but with year fields always comprising 4 digits. This makes datetime records compliant with 8601:2004. AC datetime values may also follow 8601:2004 for ranges by separating two IS0 8601 datetime fields by a solidus ('forward slash', '/'). See also the wikipedia IS0 8601 entry for further explanation and examples."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:available"
@@ -75,13 +77,14 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:rights"
         qualName="http://purl.org/dc/terms/rights" required="true"
         group="Attribution Vocabulary"
-        examples="Morphbank: Image.creativeCommons; &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc-sa/3.0/us/&quot;&gt;&lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot; src=&quot;http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png&quot; /&gt;        &lt;/a&gt;"/>
+        examples="In Morphbank database: Image.creativeCommons; 
+        Morphbank field value: &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc-sa/3.0/us/&quot;&gt;&lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot; src=&quot;http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png&quot; /&gt;        &lt;/a&gt;"/>
     <property name="Owner" namespace="http://ns.adobe.com/xap/1.0/rights/"
         dc:description="A list of the names of the owners of the copyright. 'Unknown' is an acceptable value, but 'Public Domain' is not. Some providers use dcterms:publisher for this purpose, but it seems doubtful that the publisher is by necessity the copyright owner. 'Public Domain' is not an appropriate value because it denotes something that is not under copyright. In this case, omit or leave empty xmpRights:Owner, leave empty or absent, and put 'Public Domain' in the Copyright Statement (dcterms:rights). Except for 'Public Domain' resources, it is strongly urged that this field be supplied."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#xmpRights:Owner"
         qualName="http://ns.adobe.com/xap/1.0/rights/Owner" required="false"
         group="Attribution Vocabulary"
-        examples="Morphbank: Image.copyrightText"/>
+        examples="In Morphbank database: Image.copyrightText"/>
     <property name="WebStatement" namespace="http://ns.adobe.com/xap/1.0/rights/"
         dc:description="A URL defining or further elaborating on the license statement (e. g., a web page explaining the precise terms of use)."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#xmpRights:WebStatement"
@@ -91,7 +94,7 @@
     <property name="licenseLogoURL" namespace="http://rs.tdwg.org/ac/terms/"
         dc:description="A URL providing access to a logo that symbolizes the License."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#licenseLogoURL"
-        qualName="http://rs.tdwg.org/ac/terms/licenseLogoURLt" required="false" 
+        qualName="http://rs.tdwg.org/ac/terms/licenseLogoURL" required="false" 
         group="Attribution Vocabulary"
         examples="Morphbank: Creative Commons logo"/>
     <property name="attributionLogoURL" namespace="http://rs.tdwg.org/ac/terms/"
@@ -99,7 +102,8 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#attributionLogoURL"
         qualName="http://rs.tdwg.org/ac/terms/attributionLogoURL" required="false"
         group="Attribution Vocabulary"
-        examples="Morphbank: User.userLogo"/>
+        examples="In Morphbank database: User.userLogo;
+        Morphbank field value: &quot;http://www.morphbank.net/images/userLogos/11a.jpg&quot;"/>
 
     <!--Agents Vocabulary-->
     <property name="creator" namespace="http://purl.org/dc/terms/"
@@ -107,25 +111,28 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:creator"
         qualName="http://purl.org/dc/terms/creator" required="false"
         group="Agents Vocabulary"
-        examples="Morphbank: Image.photographer"/>
+        examples="Morphbank: Image.photographer;
+        Morphbank field value: &quot;Steven J. Baskauf&quot;"/>
     <property name="provider" namespace="http://purl.org/dc/terms/"
         dc:description="Person or organization responsible for presenting the media resource. If no separate Metadata Provider is attributed, this attributes also the metadata."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#provider"
         qualName="http://purl.org/dc/terms/provider" required="false"
         group="Agents Vocabulary"
-        examples="Morphbank: Image.userId (Contributor id or his name?)"/>
+        examples="In Morphbank database: Image.userId;
+        How Morphbank builds the value: http://www.morphbank.net/ + userId;
+        Morphbank field value: &quot;http://www.morphbank.net/23&quot;"/>
     <property name="metadataProvider" namespace="http://purl.org/dc/terms/"
         dc:description="Person or organization originally responsible for providing the resource metadata record."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#metadataProvider"
         qualName="http://purl.org/dc/terms/metadataProvider" required="false"
         group="Agents Vocabulary"
-        examples="Morphbank: morphbank.net"/>
+        examples="Morphbank: &quot;morphbank.net&quot;"/>
     <property name="metadataCreator" namespace="http://purl.org/dc/terms/"
         dc:description="Person or organization originally creating the resource metadata record."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#metadataCreator"
         qualName="http://purl.org/dc/terms/metadataCreator" required="false"
         group="Agents Vocabulary"
-        examples="Morphbank: morphbank.net"/>
+        examples="Morphbank: &quot;morphbank.net&quot;"/>
 
     <!--Content Coverage Vocabulary-->
 
@@ -134,7 +141,8 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:description"
         qualName="http://purl.org/dc/terms/description" required="false"
         group="Content Coverage Vocabulary"
-        examples="Morphbank: BaseObject.description"/>
+        examples="In Morphbank database: BaseObject.description;
+        Morphbank field value: &quot;New specimen from upload&quot;"/>
 
     <!--Geography Vocabulary-->
     <property name="LocationShown" namespace="http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/"
@@ -142,7 +150,8 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#Iptc4xmpExt:LocationShown"
         qualName="http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/LocationShown" required="false"
         group="Geography Vocabulary"
-        examples="Morphbank: locality"/>
+        examples="In Morphbank database: Locality.locality;
+        Morphbank field value: &quot;FL; Jackson Co.; Apalachee Game Management Area; 5 miles north of the Three River's State Park entrance.&quot;"/>
     <property name="CountryCode" namespace="http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/"
         dc:description="The geographic location of the specific entity(ies) documented by the media item, expressed through a constrained vocabulary of countries using 2-letter ISO country code."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#Iptc4xmpExt:CountryCode"
@@ -170,7 +179,8 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#tag"
         qualName="http://rs.tdwg.org/ac/terms/tag" required="false"
         group="Subject of Resource Vocabulary"
-        examples="Morphbank: View.specimenPart"/>
+        examples="In Morphbank database: View.specimenPart;
+        Morphbank field value: &quot;Antenna&quot;"/>
 
     <!--Taxonomic Coverage Vocabulary-->
     <property name="scientificName" namespace="http://rs.tdwg.org/dwc/terms/"
@@ -178,49 +188,58 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:scientificName"
         qualName="http://rs.tdwg.org/dwc/terms/scientificName" required="false"
         group="Taxonomic Coverage Vocabulary"
-        examples="Morphbank: Specimen.scientificName"/>
+        examples="In Morphbank database: Taxa.scientificName;
+        Morphbank field value: &quot;Nitrobacter flavus&quot;"/>
     <property name="nameAccordingTo" namespace="http://rs.tdwg.org/dwc/terms/"
         dc:description="The taxonomic authority used to apply the name to the taxon, e. g., a book or web service from which the name comes from."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:nameAccordingTo"
         qualName="http://rs.tdwg.org/dwc/terms/nameAccordingTo" required="false"
         group="Taxonomic Coverage Vocabulary"
-        examples="Morphbank: Tree.nameSource"/>
+        examples="In Morphbank database: Tree.nameSource;
+        Morphbank field value: &quot;ITIS&quot;"/>
     <property name="taxonID" namespace="http://rs.tdwg.org/dwc/terms/"
         dc:description="Equivalent to Scientific Name, but using GUIDs such as http URIs or LSIDs to refer to the taxon names or concepts."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:taxonID"
         qualName="http://rs.tdwg.org/dwc/terms/taxonID" required="false"
         group="Taxonomic Coverage Vocabulary"
-        examples="Morphbank: Tree.tsn"/>
+        examples="In Morphbank database: Tree.tsn"/>
     <property name="identifiedBy" namespace="http://rs.tdwg.org/dwc/terms/"
         dc:description="The name(s) of the person(s) who applied the Scientific Name to the sample."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:identifiedBy"
         qualName="http://rs.tdwg.org/dwc/terms/identifiedBy" required="false"
         group="Taxonomic Coverage Vocabulary"
-        examples="Morphbank: Specimen.name"/>
+        examples="In Morphbank database: Specimen.name;
+        Morphbank field value: &quot;M. Prous&quot;"/>
+    <!--should we inforce dateIdentified type to be a date?-->
     <property name="dateIdentified" namespace="http://rs.tdwg.org/dwc/terms/"
         dc:description="The date on which the person(s) given under Identfied By applied a Scientific Name to the resource."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:dateIdentified"
-        qualName="http://rs.tdwg.org/dwc/terms/dateIdentified" required="false"
+        qualName="http://rs.tdwg.org/dwc/terms/dateIdentified" required="false" 
         group="Taxonomic Coverage Vocabulary"
-        examples="Morphbank: Specimen.dateIdentified"/>
+        examples="Morphbank: Specimen.dateIdentified;
+        Morphbank field value: &quot;2010-01-15&quot;"/>
     <property name="subjectPart" namespace="http://rs.tdwg.org/ac/terms/"
         dc:description="The portion of the organism, environment, etc. shown or particularly well illustrated."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#subjectPart"
         qualName="http://rs.tdwg.org/ac/terms/subjectPart" required="false"
         group="Taxonomic Coverage Vocabulary"
-        examples="Morphbank: View.specimenPart"/>
+        examples="In Morphbank database: View.specimenPart;
+        Morphbank field value: &quot;Left fore wing&quot;"/>
     <property name="sex" namespace="http://rs.tdwg.org/dwc/terms/"
         dc:description="A description of the life-cycle stage of any organisms featured within the media, when relevant to the subject of the media."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:sex"
         qualName="http://rs.tdwg.org/dwc/terms/sex" required="false"
         group="Taxonomic Coverage Vocabulary"
-        examples="Morphbank: View.sex; Morphbank: Specimen.sex"/>
+        examples="In Morphbank database: View.sex; 
+        In Morphbank database: Specimen.sex;
+        Morphbank field value: &quot;Female&quot;"/>
     <property name="subjectOrientation" namespace="http://rs.tdwg.org/ac/terms/"
         dc:description="Specific orientiation (= direction, view angle) of the subject represented in the media resource with respect to the acquisition device."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#subjectOrientation"
         qualName="http://rs.tdwg.org/ac/terms/subjectOrientation" required="false"
         group="Taxonomic Coverage Vocabulary"
-        examples="Morphbank: View.viewAngle"/>
+        examples="In Morphbank database: View.viewAngle
+        Morphbank field value: &quot;Anteroventral&quot;"/>
 
     <!--Resource Creation Vocabulary-->
     <property name="captureDevice" namespace="http://rs.tdwg.org/ac/terms/"
@@ -228,13 +247,15 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#captureDevice"
         qualName="http://rs.tdwg.org/ac/terms/captureDevice" required="false"
         group="Resource Creation Vocabulary"
-        examples="View.imagingTechnique"/>
+        examples="View.imagingTechnique;
+        Morphbank field value: &quot;Reflected light, macrophotography&quot;"/>
     <property name="resourceCreationTechnique" namespace="http://rs.tdwg.org/ac/terms/"
         dc:description="Information about technical aspects of the creation and digitization process of the resource. This includes modification steps ('retouching') after the initial resource capture."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#resourceCreationTechnique"
         qualName="http://rs.tdwg.org/ac/terms/resourceCreationTechnique" required="false"
         group="Resource Creation Vocabulary"
-        examples="View.imagingPreparationTechnique"/>
+        examples="In Morphbank database: View.imagingPreparationTechnique;
+        Morphbank field value: &quot;Cleared in KOH, platinum-coated&quot;"/>
 
     <!--Service access point : flatten the access point -->
     <property name="thumbnailAccessURI" namespace="http://rs.tdwg.org/ac/terms/"
@@ -354,7 +375,8 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#furtherInformationURL"
         qualName="http://rs.tdwg.org/ac/terms/bestQualityFurtherInformationURL" required="false"
         group="Service access point"
-        examples="Morphbank: http://morphbank.net/Image.id" />
+        examples="How Morphbank builds the value: http://morphbank.net/ + Image.id;
+        Morphbank: &quot;http://morphbank.net/786165&quot;" />
 
     <!--Related Resources Vocabulary-->
     <property name="IDofContainingCollection" namespace="http://rs.tdwg.org/ac/terms/"
@@ -374,6 +396,7 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#associatedSpecimenReference"
         qualName="http://rs.tdwg.org/ac/terms/associatedSpecimenReference" required="false"
         group="Related Resources Vocabulary"
-        examples="http://www.morphbank.net/Image.specimenId"/>
+        examples="How Morphbank builds the value: http://morphbank.net/ + Image.specimenId;
+        Morphbank: &quot;http://www.morphbank.net/785147&quot;"/>
 
 </extension>
