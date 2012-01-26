@@ -111,7 +111,7 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:creator"
         qualName="http://purl.org/dc/terms/creator" required="false"
         group="Agents Vocabulary"
-        examples="Morphbank: Image.photographer;
+        examples="In Morphbank database: Image.photographer;
         Morphbank field value: &quot;Steven J. Baskauf&quot;"/>
     <property name="provider" namespace="http://purl.org/dc/terms/"
         dc:description="Person or organization responsible for presenting the media resource. If no separate Metadata Provider is attributed, this attributes also the metadata."
