@@ -11,6 +11,7 @@ DROP PROCEDURE IF EXISTS PublicationInsert; //
 DROP FUNCTION IF EXISTS GetNewObjectId;//
 
 CREATE FUNCTION GetNewObjectId () returns int
+DETERMINISTIC
 begin
     DECLARE oId, iMinId, iMaxId int;
     SELECT minId, maxId into iMinId, iMaxId from CurrentIds where type='object';
@@ -24,6 +25,7 @@ end//
 DROP FUNCTION IF EXISTS GetNewTsn;//
 
 CREATE FUNCTION GetNewTsn () returns int
+DETERMINISTIC
 begin
     DECLARE oTsn, iMinTsn, iMaxTsn int;
     SELECT minId, maxId into iMinTsn, iMaxTsn from CurrentIds where type='tsn';
