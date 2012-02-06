@@ -8,6 +8,7 @@
      xmlns="http://www.w3.org/1999/xhtml">
      
      
+     
      <xsl:output method="html" encoding="UTF-8" indent="yes"/>
      <xsl:template match="/*">
           <xsl:variable name="defType">
@@ -130,8 +131,11 @@
                     </div>
                     <xsl:if test="@examples != ''">
                          <div class="examples">
-                              <em>Examples</em>: 
-                              <xsl:value-of select="@examples"/>
+                              <em>Examples</em>:
+                                   <xsl:call-template name="replace_all_string">
+                                        <xsl:with-param name="text" select="@examples"/>
+                                        <xsl:with-param name="by" select="';'" />
+                                   </xsl:call-template>
                          </div>
                     </xsl:if>
                     <div class="technical">
@@ -218,4 +222,25 @@
           </li>
      </xsl:template>
      
+     <xsl:template name="replace_all_string">
+          <xsl:param name="text" />
+          <xsl:param name="by" />
+          <br/>
+          <xsl:choose>
+               <xsl:when test="contains($text,';')">
+                    <xsl:value-of select="substring-before($text, ';')"/>
+                    <xsl:value-of select="$by"/>
+                    <xsl:call-template name="replace_all_string">
+                         <xsl:with-param name="text" select="substring-after($text, ';')"/>
+                         <xsl:with-param name="by" select="$by"/>
+                    </xsl:call-template>
+               </xsl:when>
+               <xsl:otherwise>
+                    <xsl:value-of select="$text"/>
+               </xsl:otherwise>
+          </xsl:choose>
+     </xsl:template>
+     
+     
+        
 </xsl:stylesheet>
