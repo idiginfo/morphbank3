@@ -643,7 +643,7 @@ function getImageTSN($imageId) {
 
 
 function addJavaScript($xcor, $ycor, $height, $width, $xoffset, $yoffset) {
-	echo '<script type="text/javascript" ssrc="global.js"></script>';
+	echo '<script type="text/javascript" src="global.js"></script>';
 	echo '<script language="javascript" type="text/javascript">
   function layArrow(){
   var curleft = 0;
