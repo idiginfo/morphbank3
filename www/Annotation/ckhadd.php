@@ -64,7 +64,7 @@ echo '<img id="animage" src ="' . $imgUrl . '" alt = "Morphbank Image" border="3
 . $rwidth . ', ' . $rheight . ');" border = "1">';
 echo '<br />';
 
-echo '<br /><h3>Markup Options</h4>';
+echo '<br /><h3>Markup Options</h3>';
 echo '<div class="popInnerContainer ">';
 echo '<table>';
 echo '<form name="form1" id="imageForm" method="post" enctype="multipart/form-data"> ';
