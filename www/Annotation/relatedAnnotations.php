@@ -24,7 +24,7 @@
 include_once('thumbs.inc.php');
 
 include_once('gettables.inc.php');
-include_once('libjs/annotateMenu.php');
+include_once('js/annotateMenu.php');
 
 /**
  * Display the standard MorphBank Header with the Annotation title.
