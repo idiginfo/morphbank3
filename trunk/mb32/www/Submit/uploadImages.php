@@ -50,9 +50,19 @@ initHtml( $title, $javascript, NULL);
 
 // Add the standard head section to all the HTML output.
 echoHead( false, $title);
+$objInfo = resetObjInfo();
+$userId = $objInfo->getUserId();
+$groupId = $objInfo->getUserGroupId();
+$authorized = checkAuthorization(null, $userId, $groupId, 'add');
 
 echo '<div class="mainGenericContainer" style="width:700px">';
 //TODO add the uploader here
+if($authorized == true) {
+  echo "you're allowed.";
+}
+else {
+  echo "you're not allowed";
+}
 echo '</div>';
 
 // Finish with end of HTML
