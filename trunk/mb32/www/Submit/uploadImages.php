@@ -46,7 +46,7 @@ $javascript = '
 	
 </script>';
 
-initHtml( $title, $javascriptcript, NULL);
+initHtml( $title, $javascript, NULL);
 
 // Add the standard head section to all the HTML output.
 echoHead( false, $title);
