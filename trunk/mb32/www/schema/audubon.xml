@@ -226,11 +226,12 @@
         examples="In Morphbank database: View.specimenPart;
         Morphbank field value: &quot;Left fore wing&quot;"/>
     <property name="sex" namespace="http://rs.tdwg.org/dwc/terms/"
-        dc:description="A description of the life-cycle stage of any organisms featured within the media, when relevant to the subject of the media."
+        dc:description="A description of the sex of any organisms featured within the media, when relevant to the subject of the media, e. g., male, female, hermaphrodite, dioecious."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#dwc:sex"
         qualName="http://rs.tdwg.org/dwc/terms/sex" required="false"
         group="Taxonomic Coverage Vocabulary"
-        examples="In Morphbank database: View.sex; 
+        examples="male; female; hermaphrodite; dioecious;
+        In Morphbank database: View.sex; 
         In Morphbank database: Specimen.sex;
         Morphbank field value: &quot;Female&quot;"/>
     <property name="subjectOrientation" namespace="http://rs.tdwg.org/ac/terms/"
@@ -238,7 +239,8 @@
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#subjectOrientation"
         qualName="http://rs.tdwg.org/ac/terms/subjectOrientation" required="false"
         group="Taxonomic Coverage Vocabulary"
-        examples="In Morphbank database: View.viewAngle
+        examples="dorsal; ventral; frontal;
+        In Morphbank database: View.viewAngle
         Morphbank field value: &quot;Anteroventral&quot;"/>
 
     <!--Resource Creation Vocabulary-->
