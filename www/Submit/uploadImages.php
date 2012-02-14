@@ -58,7 +58,8 @@ $authorized = checkAuthorization(null, $userId, $groupId, 'add');
 echo '<div class="mainGenericContainer" style="width:700px">';
 //TODO add the uploader here
 if($authorized == true) {
-  echo "you're allowed.";
+  echo "you're allowed.<br/>";
+  echo "you are $objInfo->name";
 }
 else {
   echo "you're not allowed";
