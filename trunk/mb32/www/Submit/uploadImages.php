@@ -59,10 +59,11 @@ echo '<div class="mainGenericContainer" style="width:700px">';
 //TODO add the uploader here
 if($authorized == true) {
   echo "you're allowed.<br/>";
-  echo "you are $objInfo->name";
+  echo "you are $objInfo->name after all...";
 }
 else {
-  echo "you're not allowed";
+  echo "you're not allowed. <br/>"
+  . "who are you anyway?";
 }
 echo '</div>';
 
