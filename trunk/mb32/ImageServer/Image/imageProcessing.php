@@ -207,7 +207,7 @@ function getFileFromFileSystem($fileAccessPath, $fileSourceDir){
 
 	$res = shell_exec ($find);
 	if (strlen($res)==0) {
-		$message .= "No original file found id: $id file name: $fileAccessPath orig: $origPath\n";
+		//$message .= "No original file found id: $id file name: $fileAccessPath orig: $origPath\n";
 		$message .= "find command:  find $fileSourceDir -name '$fileAccessPath'\n";
 		return false;
 	}
