@@ -290,7 +290,7 @@ function getMessage($code) {
 	} elseif ($code == 13) {
 		return '<br /><br /><div class="searchError">Error inserting user into UserGroup</div>'."\n";
 	} elseif ($code == 14) {
-		return "<br /><br /><h3>Thank you. An email has been sent to the administrator.<br />You will be contacted shortly when your account is activated.</h3><br /><br />";
+		return "<br /><br /><h3>Thank you. An email has been sent to the administrator.<br />You will be contacted shortly when your account is activated.<br />Please allow 24 to 48h before submitting the form again.</h3><br /><br />";
 	} elseif ($code == 15) {
 		return "<br /><br /><h3>You have added user successfully</h3><br /><br />";
 	} elseif ($code == 16) {
