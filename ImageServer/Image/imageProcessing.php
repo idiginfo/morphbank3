@@ -39,7 +39,7 @@ include_once ('bischen/makeTpc.php');
  */
 function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $fileSourceDir = null, $width = null, $height = null){
 	global $config, $message;
-
+  $numFixed = 0;
 	//$returnArray = array('message'=> null, 'width'=>null, 'height'=>null);
 
 	$message = "Fixing files  for id: $id fileName: $fileName \n";
