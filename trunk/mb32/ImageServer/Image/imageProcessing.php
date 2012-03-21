@@ -107,7 +107,7 @@ function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $fileS
 			}
 		}
 		// create tilepic
-		if ($config->processTPC && !checkFileDate($tpcImgPath, $originalImgPath)){
+		if ($config->processTpc && !checkFileDate($tpcImgPath, $originalImgPath)){
 			//$message .= "No file for path '$tpcImgPath'\n";
 			$converted = convertTpc($id, $jpegImgPath);
 			if ($converted){
@@ -243,7 +243,7 @@ function fixFile($sourceImgPath, $targetImgPath, $imgType, $size = null){
 
 
 function convertOriginal($source, $target, $size){
-	global $config;
+	global $config, $message;
 	$convert = $config->imagemagik."convert -colorspace RGB -compress LZW $size $source"."[0] $target";
 	$message .= date("H:i:s")." Executing: $convert\n";
 	$reply = shell_exec($convert);
