@@ -28,6 +28,7 @@ $tilepicParser = new TilepicParser();
 
 function makeTilePic($id, $imgSrc = null){
 	global $tilepicParser, $message;
+  $options = array();
 	if (empty($imgSrc)) {
 		$imgSrc = getImageFilePath($id, "jpeg");
 	}
