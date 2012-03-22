@@ -39,6 +39,7 @@ $image = new Image($id, 'tpc', null, $sessionId);
 // The beginning of HTML
 if ($image->getAuthorized()===true){
 	$tpcFile = $image->getImageFilePath();
+  echo "image path:".$tpcFile;
 	echo tilePicTag($image, $width, $height);
 } else {
 	global $DEFAULT_IMAGES;
