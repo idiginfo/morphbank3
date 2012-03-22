@@ -50,10 +50,12 @@ function getImageFilePath($id, $imageType){
  */
 function getFilePath($id){
 	global $DIR_DEPTH, $PAD_LENGTH;
+  echo "image id: ".$id;
 	// First pad image ID to 9 characters
 	$id_pad = str_pad($id, 9, "0", STR_PAD_LEFT);
 	$directory = substr($id_pad,0,3);
 	$directory .= "/" . substr($id_pad,3,3);
+  echo "path: ".$directory;
 	return $directory;
 }
 
