@@ -81,9 +81,9 @@ if ($locationArray['minimumelevation'] == '' || $locationArray['maximumelevation
         </tr>';
 }
 
-if ($locationArray['paleoGroup'] != null || $locationArray['paleoGroup'] != '') {
+if ($locationArray['paleogroup'] != null || $locationArray['paleogroup'] != '') {
   echo '<tr>
-          <th>Paleo group:</th><td> ' . $locationArray['paleoGroup'] . ' </td>
+          <th>Paleo group:</th><td> ' . $locationArray['paleogroup'] . ' </td>
         </tr>';
 } 
 else {
