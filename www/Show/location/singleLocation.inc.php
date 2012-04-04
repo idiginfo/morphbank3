@@ -81,6 +81,12 @@ if ($locationArray['minimumelevation'] == '' || $locationArray['maximumelevation
         </tr>';
 }
 
+if ($locationArray['paleoGroup'] != null || $locationArray['paleoGroup'] != '') {
+  echo '<tr>
+          <th>Paleo group:</th><td> ' . $locationArray['paleoGroup'] . ' </td>
+        </tr>';
+} 
+
 if ($locationArray['minimumdepth'] == '' || $locationArray['maximumdepth'] == '') {
   echo '<tr>
           <th>Depth (m):</th><td> ' . $locationArray['minimumdepth'] . '  ' . $locationArray['maximumdepth'] . '</td>
