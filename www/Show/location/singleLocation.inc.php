@@ -86,6 +86,11 @@ if ($locationArray['paleoGroup'] != null || $locationArray['paleoGroup'] != '') 
           <th>Paleo group:</th><td> ' . $locationArray['paleoGroup'] . ' </td>
         </tr>';
 } 
+else {
+  echo '<tr>
+          <th>Paleo group:</th><td> not found </td>
+        </tr>';
+}
 
 if ($locationArray['minimumdepth'] == '' || $locationArray['maximumdepth'] == '') {
   echo '<tr>
