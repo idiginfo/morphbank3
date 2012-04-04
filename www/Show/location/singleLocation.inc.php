@@ -81,17 +81,6 @@ if ($locationArray['minimumelevation'] == '' || $locationArray['maximumelevation
         </tr>';
 }
 
-if ($locationArray['paleogroup'] != null || $locationArray['paleogroup'] != '') {
-  echo '<tr>
-          <th>Paleo group:</th><td> ' . $locationArray['paleogroup'] . ' </td>
-        </tr>';
-} 
-else {
-  echo '<tr>
-          <th>Paleo group:</th><td> ' . print_r($locationArray) .' </td>
-        </tr>';
-}
-
 if ($locationArray['minimumdepth'] == '' || $locationArray['maximumdepth'] == '') {
   echo '<tr>
           <th>Depth (m):</th><td> ' . $locationArray['minimumdepth'] . '  ' . $locationArray['maximumdepth'] . '</td>
@@ -101,6 +90,31 @@ if ($locationArray['minimumdepth'] == '' || $locationArray['maximumdepth'] == ''
           <th>Depth (m):</th><td> ' . $locationArray['minimumdepth'] . ' &nbsp;-&nbsp; ' . $locationArray['maximumdepth'] . '</td>
         </tr>';
 }
+
+if ($locationArray['paleogroup'] != null || $locationArray['paleogroup'] != '') {
+  echo '<tr>
+          <th>Paleo group:</th><td> ' . $locationArray['paleogroup'] . ' </td>
+        </tr>';
+} 
+
+if ($locationArray['paleoformation'] != null || $locationArray['paleoformation'] != '') {
+  echo '<tr>
+          <th>Paleo formation:</th><td> ' . $locationArray['paleoformation'] . ' </td>
+        </tr>';
+} 
+
+if ($locationArray['paleomember'] != null || $locationArray['paleomember'] != '') {
+  echo '<tr>
+          <th>Paleo bed:</th><td> ' . $locationArray['paleomember'] . ' </td>
+        </tr>';
+} 
+
+if ($locationArray['paleobed'] != null || $locationArray['paleobed'] != '') {
+  echo '<tr>
+          <th>Paleo bed:</th><td> ' . $locationArray['paleobed'] . ' </td>
+        </tr>';
+} 
+
 echo '</table>
     </td>
   </tr>
