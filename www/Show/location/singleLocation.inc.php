@@ -105,7 +105,7 @@ if ($locationArray['paleoformation'] != null || $locationArray['paleoformation']
 
 if ($locationArray['paleomember'] != null || $locationArray['paleomember'] != '') {
   echo '<tr>
-          <th>Paleo bed:</th><td> ' . $locationArray['paleomember'] . ' </td>
+          <th>Paleo member:</th><td> ' . $locationArray['paleomember'] . ' </td>
         </tr>';
 } 
 
