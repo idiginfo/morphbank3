@@ -88,7 +88,7 @@ if ($locationArray['paleoGroup'] != null || $locationArray['paleoGroup'] != '') 
 } 
 else {
   echo '<tr>
-          <th>Paleo group:</th><td> not found </td>
+          <th>Paleo group:</th><td> ' . print_r($locationArray) .' </td>
         </tr>';
 }
 
