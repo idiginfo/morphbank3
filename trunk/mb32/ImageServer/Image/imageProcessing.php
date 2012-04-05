@@ -203,7 +203,7 @@ function getFileFromFileSystem($fileAccessPath, $fileSourceDir){
 	$escFileName = str_replace("'", "\'", $escFileName);
 	$escFileName = str_replace("*", "\*", $escFileName);
 	$escFileName = str_replace("]?", "\?", $escFileName);
-	$find = "find $fileSourceDir -iname $escFileName";
+	$find = "find -L $fileSourceDir -iname $escFileName";
 
 	$res = shell_exec ($find);
 	if (strlen($res)==0) {
