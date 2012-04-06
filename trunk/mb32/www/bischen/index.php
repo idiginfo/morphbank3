@@ -34,8 +34,7 @@ initHtml( $title, NULL, NULL);
 
 // Add the standard head section to all the HTML output.
 echoHead( false, $title);
-echo ViewIipFrame($id);
-//echo imageServerTpcFrame($id, 800,600, $sessionId);
+echo imageServerTpcFrame($id, 800,600, $sessionId);
 echo "<br/>";
 //echo bischenAttributionTag();
 
