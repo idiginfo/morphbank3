@@ -28,7 +28,7 @@ include_once ("image.class.php");
 include_once ("bischen/tileserver/TilepicParser.inc");
 
 $id = $_REQUEST['id'];
-
+echo 'I am here';
 $iipOK = viewIipFrame($id);
 if (!$iipOK) {
 	// could not show iip frame, use bischen instead
