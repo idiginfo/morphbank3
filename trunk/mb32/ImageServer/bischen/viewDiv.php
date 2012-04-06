@@ -48,7 +48,6 @@ if ($image->getAuthorized()===true){
 
 function tilePicTag ($image, $width, $height){
 	global $config;
-  echo $image->getImageFilePath();
 	$imageId = $image->getImageId();
 	$sessionId = $image->getSessionId();
 	$p = $imageId;// parameter "p" of getTile.php holds both image and session ids
