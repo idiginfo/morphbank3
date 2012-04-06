@@ -55,7 +55,6 @@ function ViewIipFrame($id) {
 		return true;
 	}
 	$iipFile = $image->getImageFilePath();
-  echo $iipFile;
 	if (!file_exists($iipFile)) return false;// no iip file
 	echo iipTag($image, $width, $height);
 	return true;
