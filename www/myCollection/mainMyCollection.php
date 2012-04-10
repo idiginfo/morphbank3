@@ -604,7 +604,7 @@ function labelObjects($collectionId, $labelBy, $objectCount) {
 
 	include_once ('tsnFunctions.php');
 	//echo 'test labelObjects ok';
-	if ($labelBy == 'taxon' && !empty($imageIdArray[$i])) {
+	if ($labelBy == 'taxon') {
 		//echo 'test targetCollection ok';
 		$sql = 'SELECT Tree.scientificName, Image.id FROM Image LEFT JOIN Specimen'
 		.' ON Image.specimenId = Specimen.id LEFT JOIN Tree ON Specimen.tsnId = Tree.tsn WHERE ';
