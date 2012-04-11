@@ -545,7 +545,7 @@ function sortCollection($collectionId, $sortBy, $order) {
 
 	if ($sortBy == "locality"){
 		$sql .= "ORDER BY Locality.continent $order, Locality.country "
-		."$order., Locality.locality .$order";
+		."$order, Locality.locality $order";
 	} else {
 		if ($sortBy == "taxon"){
 			$sql .= "ORDER BY Tree.unit_name1 $order, Tree.unit_name2 $order ";
