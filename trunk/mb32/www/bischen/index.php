@@ -23,7 +23,6 @@
 
 include_once('head.inc.php');
 include_once('urlFunctions.php');
-include_once('viewFrame.php');
 $id = $_GET['id'];
 $sessionId = $_GET['sessionId'];
 if (empty($sessionId)) $sessionId = session_id();
