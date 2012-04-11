@@ -53,24 +53,28 @@ initHtml($title, null, $includeJavaScript);
 echoHead(false, $title);
 echo '<div class="mainGenericContainer" style="width:700px">';
 
-// Show search form on all pages for administrators
-if ($groupId == $config->adminGroup) {
-	searchUser();
-}
+if ($groupId != $config->adminGroup && $config->disableUserFunctions) {
+  echo "<h2>User functions currently disabled.</h2>";
+} else {
+  // Show search form on all pages for administrators
+  if ($groupId == $config->adminGroup) {
+      searchUser();
+  }
 
-// Action determines what is displayed
-if ($action == 'edit') {
-	echo getMessage($code);
-	editUser($id);
-} elseif ($action == 'add') {
-	echo getMessage($code);
-	addUser($_REQUEST);
-} elseif ($action == 'new') {
-	echo getMessage($code);
-	newUser($_REQUEST);
-} elseif ($action == 'cv') {
-	echo getMessage($code);
-	viewCV($_REQUEST);
+  // Action determines what is displayed
+  if ($action == 'edit') {
+      echo getMessage($code);
+      editUser($id);
+  } elseif ($action == 'add') {
+      echo getMessage($code);
+      addUser($_REQUEST);
+  } elseif ($action == 'new') {
+      echo getMessage($code);
+      newUser($_REQUEST);
+  } elseif ($action == 'cv') {
+      echo getMessage($code);
+      viewCV($_REQUEST);
+  }
 }
 
 echo '</div>';
