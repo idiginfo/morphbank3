@@ -56,6 +56,9 @@ echo '<div class="mainGenericContainer" style="width:700px">';
 if ($groupId != $config->adminGroup && $config->disableUserFunctions) {
   echo "<h2>User functions currently disabled.</h2>";
 } else {
+  if ($config->disableUserFunctions) {
+    echo "<h2>User functions currently disabled for regular users.</h2>";
+  }
   // Show search form on all pages for administrators
   if ($groupId == $config->adminGroup) {
       searchUser();
