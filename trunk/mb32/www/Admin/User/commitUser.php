@@ -133,17 +133,6 @@ if (isMdb2Error($result, 'Create Object procedure', $errorPriority)) {
 $id = $result->fetchOne();
 clear_multi_query($result);
 
-// If user created, handle file upload if existing
-if (isset($_FILES['userlogo']) && ($_FILES['userlogo']['name'] > "")) {
-  // Allow only letters, numbers, underscores, and period in file name
-  $file_name = trim(preg_replace("/[^a-zA-Z0-9_.]/", "", $_FILES['userlogo']['name']));
-  if (!move_uploaded_file($_FILES['userlogo']['tmp_name'], $config->userLogoPath . $file_name)) {
-    header("location: $indexUrl&code=7&$queryString");
-    exit;
-  }
-  $userLogo = $config->appServerBaseUrl . '/images/userLogos/' . $file_name;
-}
-
 // Insert BaseObject for Groups
 $params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL));
 $result = $db->executeStoredProc('CreateObject', $params);
@@ -153,6 +142,14 @@ if (isMdb2Error($result, 'Create Object procedure', $errorPriority)) {
 }
 $group_id = $result->fetchOne();
 clear_multi_query($result);
+
+// If user created, handle file upload if existing
+if (isset($_FILES['userlogo']) && ($_FILES['userlogo']['name'] > "")) {
+  // Allow only letters, numbers, underscores, and period in file name
+  $file_name = trim(preg_replace("/[^a-zA-Z0-9_.]/", "", $_FILES['userlogo']['name']));
+  @move_uploaded_file($_FILES['userlogo']['tmp_name'], $config->userLogoPath . $file_name);
+  $userLogo = $config->appServerBaseUrl . '/images/userLogos/' . $file_name;
+}
 
 // prepare user update
 $userUpdater = new Updater($db, $id, $userId, $groupId, 'User');
@@ -218,7 +215,7 @@ if (isMdb2Error($affRows, 'Create user group', $errorPriority)) {
  * Different options may be required if a different mailing list is used
  * 
  */
-if ($_POST['subscription'] == 1 && $config->mailList) {
+if ($_POST['subscription'] == 1 && $config->mailList && function_exists('curl_version') == "Enabled") {
   $postData['subscribees'] = $email;  // New user email
   $postData['subscribe_or_invite'] = 0;
   $postData['send_welcome_msg_to_this_batch'] = 1;
