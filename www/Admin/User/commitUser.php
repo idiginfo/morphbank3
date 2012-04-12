@@ -100,20 +100,6 @@ $name = $first_name . " " . $last_name;
 $address = $street1 . " " . $street2 . " " . $city . " " . $state . " " . $country . " " . $zipcode;
 $status = $_POST['accountstatus'] == 1 ? 1 : 0;
 
-if ($action == 'new') {
-  $fileTmp = $_FILES['userresume']['tmp_name'];
-  $fileType = $_FILES['userresume']['type'];
-  $fileName = $_FILES['userresume']['name'];
-  $fileExt = strrchr($fileName, '.');
-  $file = $uin . $fileExt;
-  $filePath = $config->cvFolder . $file;
-
-  if (!move_uploaded_file($fileTmp, $filePath)) {
-    header("location: $indexUrl&code=7&$queryString");
-    exit;
-  }
-}
-
 $db = connect();
 
 if (empty($userId) || empty($groupId)) {
@@ -257,6 +243,13 @@ if ($_POST['subscription'] == 1 && $config->mailList && function_exists('curl_ve
 }
 
 if ($action == 'new') {
+  $fileTmp = $_FILES['userresume']['tmp_name'];
+  $fileType = $_FILES['userresume']['type'];
+  $fileName = $_FILES['userresume']['name'];
+  $fileExt = strrchr($fileName, '.');
+  $file = $uin . $fileExt;
+  $filePath = $config->cvFolder . $file;
+  move_uploaded_file($fileTmp, $filePath);
 
   $text = "A REQUEST FOR NEW USER ACCOUNT ON MORPHBANK FROM:\n\n";
   $text .= "Name: $first_name $last_name \n";
