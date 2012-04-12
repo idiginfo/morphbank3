@@ -130,7 +130,7 @@ $group_id = $result->fetchOne();
 clear_multi_query($result);
 
 // If user created, handle file upload if existing
-if (isset($_FILES['userlogo']) && ($_FILES['userlogo']['name'] > "")) {
+if (isset($_FILES['userlogo']) && !empty($_FILES['userlogo']['name'])) {
   // Allow only letters, numbers, underscores, and period in file name
   $file_name = trim(preg_replace("/[^a-zA-Z0-9_.]/", "", $_FILES['userlogo']['name']));
   @move_uploaded_file($_FILES['userlogo']['tmp_name'], $config->userLogoPath . $file_name);
