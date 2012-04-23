@@ -297,7 +297,9 @@ function getMessage($code) {
 		return '<br /><br /><div class="searchError">A resmue upload is required</div>'."\n";
 	} elseif ($code == 17) {
 		return '<br /><br /><div class="searchError">Please fill in all required fields</div>'."\n";
-	}
+	} elseif ($code == 18) {
+		return '<br /><br /><div class="searchError">Username already exists</div>'."\n";
+	} 
 	return;
 }
 
