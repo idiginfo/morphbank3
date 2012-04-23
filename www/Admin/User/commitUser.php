@@ -39,8 +39,6 @@ unset($post_array['confirm_pin']);
 unset($post_array['email']);
 $queryString = getParamString($post_array);
 
-$errorPriority = 5;
-
 $action = isset($_POST['spamcode']) ? 'new' : 'add';
 $userId = $objInfo->getUserId();
 $groupId = $objInfo->getUserGroupId();
@@ -102,17 +100,29 @@ $status = $_POST['accountstatus'] == 1 ? 1 : 0;
 
 $db = connect();
 
+// Check uin is not already used
+$sql = "select count(*) from User where uin = ?";
+$count = $db->getOne($sql, array('integer'), array($uin));
+if (isMdb2Error($count, "select existing user", 6)) {
+  header("location: $indexUrl&code=3&$queryString");
+  exit;
+}
+if ($count > 0) {
+  header("location: $indexUrl&code=18&$queryString");
+  exit;
+}
+
 if (empty($userId) || empty($groupId)) {
   $groupId = $config->adminGroup;
   $sql = "SELECT min(userId) as userId FROM `BaseObject` WHERE groupId = $groupId";
   $userId = $db->getOne($sql);
-  isMdb2Error($userId, "Get default Admin", $errorPriority);
+  isMdb2Error($userId, "Get default Admin");
 }
 
 // Insert BaseObject for User
 $params = array($db->quote("User"), $userId, $groupId, $userId, "NOW()", $db->quote("User added"), $db->quote(NULL));
 $result = $db->executeStoredProc('CreateObject', $params);
-if (isMdb2Error($result, 'Create Object procedure', $errorPriority)) {
+if (isMdb2Error($result, 'Create Object procedure', 6)) {
   header("location: $indexUrl&code=9&$queryString");
   exit;
 }
@@ -122,7 +132,7 @@ clear_multi_query($result);
 // Insert BaseObject for Groups
 $params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL));
 $result = $db->executeStoredProc('CreateObject', $params);
-if (isMdb2Error($result, 'Create Object procedure', $errorPriority)) {
+if (isMdb2Error($result, 'Create Object procedure', 6)) {
   header("location: $editUrl/$id&code=11");
   exit;
 }
@@ -186,7 +196,7 @@ $data = array($id, $group_id, $userId, $db->mdbNow(), $db->mdbToday(), 'coordina
 $sql = "insert into UserGroup (user, groups, userId, dateCreated, dateToPublish, userGroupRole) values (?,?,?,?,?,?)";
 $stmt = $db->prepare($sql);
 $affRows = $stmt->execute($data);
-if (isMdb2Error($affRows, 'Create user group', $errorPriority)) {
+if (isMdb2Error($affRows, 'Create user group', 6)) {
   header("location: $editUrl/$id&code=13");
   exit;
 }
