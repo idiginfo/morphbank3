@@ -80,7 +80,7 @@ Upload of one workbook of this size will take 1 - 2 hours and assumes the contri
 	estimate and/or a list of errors found that need correction before upload.
 	</li>
 	<li>Upload the data and images from the completed Morphbank Excel Workbook.</li>
-	<li>Return a report to the Contributor and / or point the contributor to http://services.morphbank.net/mb3/</li> 
+	<li>Return a report to the Contributor and / or point the contributor to <?php echo $config->servicesUrl; ?></li> 
 	</ul>
 
 
