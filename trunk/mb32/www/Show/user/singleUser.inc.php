@@ -53,7 +53,7 @@ echo' 		<h2>User record: ['.$userArray['id'].'] '.$userArray['name'].'</h2>
 								<th>Country:</th><td>'.$userArray['country'].'</td>
 							</tr>	
 							<tr>
-							<th align="right" width="160">User Image RSS:</th><td><a href="http://services.morphbank.net/mb2/request?method=search&objecttype=Image&user='.$userArray['id'].'&group=&format=rss"><img src="/style/webImages/feed-icon-96x96.jpg" width = "20"/></a></td>
+							<th align="right" width="160">User Image RSS:</th><td><a href="'.$config->servicesUrl.'request?method=search&objecttype=Image&user='.$userArray['id'].'&group=&format=rss"><img src="/style/webImages/feed-icon-96x96.jpg" width = "20"/></a></td>
 							</tr>
 						</table>
 					</div>
