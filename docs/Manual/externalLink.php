@@ -221,7 +221,7 @@ using an img src tag:<br /><b> &lt;img src="http://www.morphbank.net/?id=133776&
 </p>
 <hr align="left" width="650" height="5" color="#AAB0D0" />
 <h3>Getting Morphbank Ids to Build URLs</h3>
-<p>Via <a href="http://services.morphbank.net/mb3/">Services</a>, users retrieve Morphbank Ids for various objects. Using these ids, Contributors create urls and may also build other websites that utilize web services, pulling images via their ids. See <a href="<?php echo $config->domain; ?>About/Manual/services.php">Morphbank Web Services</a> in this online user manual for more details.</p>
+<p>Via <a href="<?php echo $config->servicesUrl; ?>">Services</a>, users retrieve Morphbank Ids for various objects. Using these ids, Contributors create urls and may also build other websites that utilize web services, pulling images via their ids. See <a href="<?php echo $config->domain; ?>About/Manual/services.php">Morphbank Web Services</a> in this online user manual for more details.</p>
 
 <br />
 <br />
