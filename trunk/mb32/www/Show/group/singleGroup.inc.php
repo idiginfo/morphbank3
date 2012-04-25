@@ -53,7 +53,7 @@ echo'
 							</tr>	
 							<tr><td colspan="2">&nbsp;</td></tr>		
 							<tr>
-								<th align="right" width="160">Group Image RSS:</th><td><a href="http://services.morphbank.net/mb2/request?method=search&objecttype=Image&user=&group='.$groupArray['id'].'&format=rss"><img src="/style/webImages/feed-icon-96x96.jpg" width = "20"/></a></td>
+								<th align="right" width="160">Group Image RSS:</th><td><a href="'. $config->servicesUrl.'request?method=search&objecttype=Image&user=&group='.$groupArray['id'].'&format=rss"><img src="/style/webImages/feed-icon-96x96.jpg" width = "20"/></a></td>
 							</tr>
 						</table>
 					</div>
