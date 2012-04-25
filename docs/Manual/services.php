@@ -39,12 +39,12 @@
 </p>
 </div>
 -->
-<p><a href="http://services.morphbank.net/mb3/">services.morphbank.net/mb3/</a> makes it possible for anyone to query the Morphbank database. In essence, it is analogous to a <strong>Keyword</strong> search query in the My Manager interface of Morphbank. The <em>services</em> page lets users construct the query of their choice, selecting what to look for and in what format the output appears. For example, anytime after submitting data and images to Morphbank, a Morphbank Contributor can use the <a href="http://services.morphbank.net/mb3/">services.morphbank.net/mb3/</a> interface to return Morphbank Ids for building links. Details about how to find and use <em>services</em> are next.
+<p><a href="<?php echo $config->servicesUrl; ?>">services.morphbank.net/mb3/</a> makes it possible for anyone to query the Morphbank database. In essence, it is analogous to a <strong>Keyword</strong> search query in the My Manager interface of Morphbank. The <em>services</em> page lets users construct the query of their choice, selecting what to look for and in what format the output appears. For example, anytime after submitting data and images to Morphbank, a Morphbank Contributor can use the <a href="<?php echo $config->servicesUrl; ?>">services.morphbank.net/mb3/</a> interface to return Morphbank Ids for building links. Details about how to find and use <em>services</em> are next.
 </p>
 
-<p>Services are found at <a href="http://services.morphbank.net/mb3/">services.morphbank.net/mb3/</a>
+<p>Services are found at <a href="<?php echo $config->servicesUrl; ?>">services.morphbank.net/mb3/</a>
 <ul>
-<li>The <a href="http://morphbank.net/schema/API1.html">application programming interface (API)</a> for <a href="http://services.morphbank.net/mb3/">services.morphbank.net/mb3/</a> describes how the query is put together and reveals what search combinations are possible.
+<li>The <a href="http://morphbank.net/schema/API1.html">application programming interface (API)</a> for <a href="<?php echo $config->servicesUrl; ?>">services.morphbank.net/mb3/</a> describes how the query is put together and reveals what search combinations are possible.
 </li>
 <li>The results of a <em>services</em> query may be output in XML using the <a href="http://morphbank.net/schema/mbsvc3.xsd">Morphbank Schema</a>.
 </li>
