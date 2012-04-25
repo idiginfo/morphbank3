@@ -49,7 +49,7 @@ echoHead(false, $title);
             <dd>In <a href="<?php echo $config->domain; ?>About/Manual/uploadSubmitView.php" title="What is a Morphbank View &amp; How to Submit one to Morphbank">Views</a> section, the location of the camera with respect to the specimen for photographing
             </dd>
             <dt><strong>API</strong></dt>
-            <dd>The <a href="http://morphbank.net/schema/API1.html" title="Current API for Morphbank web services">application programming interface (API)</a> for <a href="http://services.morphbank.net/mb3/" title="Morphbank Web Services">services.morphbank.net/mb3/</a> describes how the query is put together and reveals what search combinations are possible. Currently contributors to Morphbank may use <a href="http://services.morphbank.net/mb3/">services.morphbank.net/mb3/</a> to perform searches on the Morphbank database. In the future, it will be possible to Insert (Put) data into Morphbank as well as Update (Push) data into Morphbank via <em>web services</em>. For those wondering just what <em>restful services</em> are, try the humorous introduction at <a href="http://tomayko.com/writings/rest-to-my-wife" title="RESTful services explained">How I Explained REST to My Wife.</a>
+            <dd>The <a href="http://morphbank.net/schema/API1.html" title="Current API for Morphbank web services">application programming interface (API)</a> for <a href="<?php echo $config->servicesUrl; ?>" title="Morphbank Web Services">services.morphbank.net/mb3/</a> describes how the query is put together and reveals what search combinations are possible. Currently contributors to Morphbank may use <a href="<?php echo $config->servicesUrl; ?>">services.morphbank.net/mb3/</a> to perform searches on the Morphbank database. In the future, it will be possible to Insert (Put) data into Morphbank as well as Update (Push) data into Morphbank via <em>web services</em>. For those wondering just what <em>restful services</em> are, try the humorous introduction at <a href="http://tomayko.com/writings/rest-to-my-wife" title="RESTful services explained">How I Explained REST to My Wife.</a>
             </dd>
             <dt><strong>Basis of Record</strong></dt>
             <dd>At the time of collection, the specimen was categorized as an observation, a living organization,
@@ -204,7 +204,7 @@ echoHead(false, $title);
             <dt><strong>Sex</strong></dt>
             <dd>Gender of specimen
             </dd>
-            <dt><strong><a href="http://services.morphbank.net/mb3/" title="Go to the Morphbank Services website">services.morphbank.net</a></strong></dt>
+            <dt><strong><a href="<?php echo $config->servicesUrl; ?>" title="Go to the Morphbank Services website">services.morphbank.net</a></strong></dt>
             <dd>Web services are currently available for Morphbank contributors to query Morphbank and return output in a variety of formats (XML, Thumbnails, RDF) as well as set up RSS feeds. Go to the Morphbank User Manual section <a href="<? echo $config->domain; ?>About/Manual/services.php">Morphbank Web Services</a> for details.</dd>
             <dt><strong>sftp, smtp</strong></dt>
             <dd>Secure File Transfer Protocol (used for transferring files over the internet), Simple Mail Transfer Protocol
