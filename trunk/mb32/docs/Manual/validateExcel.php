@@ -35,10 +35,10 @@ echoHead( false, $title);
     <tr>-->
     <td width="100%">
         <br />
-&nbsp;&nbsp&nbsp;<h2>http://services.morphbank.net/mb3/validateXls.jsp</h2>
+&nbsp;&nbsp&nbsp;<h2><?php echo $config->servicesUrl; ?>validateXls.jsp</h2>
 
        <div class="specialtext3">
-Use this <a href="http://services.morphbank.net/mb3/validateXls.jsp">web service</a>
+Use this <a href="<?php echo $config->servicesUrl; ?>validateXls.jsp">web service</a>
 to proof the Morphbank Excel Workbooks (Original or Custom). A user may upload
 the original workbook or the custom workbook for validation.
 <ol><li>upload
@@ -56,7 +56,7 @@ the original workbook or the custom workbook for validation.
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img align="center" src="ManualImages/validate.jpg" alt="screen shot of validate Excel form"/>
 </p>
 
-<p>The <a href="http://services.morphbank.net/mb3/validateXls.jsp">web services</a> code checks validity of the following Original Workbook fields (mb3a or mb3p).</p>
+<p>The <a href="<?php echo $config->servicesUrl; ?>validateXls.jsp">web services</a> code checks validity of the following Original Workbook fields (mb3a or mb3p).</p>
 <ul>
     <li>version number of the workbook</li>
     <li>empty credential cells (Morphbank Account-holder name, user name, submitter name, date to publish, creative commons field)
