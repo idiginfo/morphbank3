@@ -104,7 +104,7 @@ to zoom, rotate and adjust color to enhance detailed features of the images.
 			specimens etc that can be shared with other users!</li>
             <li>Users can create <strong>rss feeds</strong> from any group record in Morphbank. Click on a contributor's name to open the Contributor's group record and look for the <img src="ManualImages/feed-icon-96x96.jpg" alt="rss feed icon" /> icon.
             </li>
-            <li>Morphbank now features a <a href="http://services.morphbank.net/mb/" target="_blank"><em>services</em></a> page where users can query Morphbank and get feedback in the format of choice (ids, thumbnails, googlemaps, xml, etc.,). This service is great for retrieving ids to create urls for use in web pages and published papers.
+            <li>Morphbank now features a <a href="<?php echo $config->servicesUrl; ?>" target="_blank"><em>services</em></a> page where users can query Morphbank and get feedback in the format of choice (ids, thumbnails, googlemaps, xml, etc.,). This service is great for retrieving ids to create urls for use in web pages and published papers.
             </li>
 			</ul>
 	</div>
