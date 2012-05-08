@@ -97,19 +97,7 @@ while($row = $result->fetchRow()){
 	list($id, $uin,  $fileName, $imageType, $problems, $width, $height, $url) = $row;
 	$imageType = strtolower($imageType);
 	if (!empty($url)) $fileName = $url;
-	list($message, $w, $h) = reorganizeImageFiles($id, $fileName, $imageType, $problems, $FILE_SOURCE_DIR, $width, $height);
-	if($message[0]=='N'){// error in processing
-		echo $message."\n";
-	} else if (empty($width) || $width != $w || $height!=$h){
-		// update width height
-		$params = array($w, $h, $id);
-		$count = $updateSizeStmt->execute($params);
-		isMdb2Error($count,"update HW id $id width $width height $height sql: $updateSizeSql");
-		$message .= ": width height updated ";
-		//echo $message."\n";
-	} else {
-		$message .= ":width/height unchanged ";
-	}
+	$message = reorganizeImageFiles($id, $fileName, $imageType, $problems, $FILE_SOURCE_DIR, $width, $height);
 	echo "$message\n";
 
 	if ($imageCount % 1000 == 0){
@@ -165,13 +153,8 @@ function reorganizeImageFiles($id, $fileName, $imageType=null, $problems = null,
 				unlink($tpcImgPath);
 				$message.=": removed tpc";
 			}
-
-			//if ($numFixed>0) $message .= "Number fixed $numFixed\n";
-			list($width, $height, $type) = @getimagesize($jpegImgPath);
 		}
-		//$message .= "Fixed $numFixed files for id: $id file types: $message \n";
-		$returnArray= array($message, $width, $height);
-		return $returnArray;
 	}
+	return $message;
 }
 ?>
