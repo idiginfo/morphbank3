@@ -65,7 +65,7 @@ function iipTag ($image, $width, $height){
 	$sessionId = $image->getSessionId();
 	$imageFilePath = $image->getImageFilePath();
 	$iipDir = $config->iipDir;
-  $iipFcgi = $_REQUEST('tileUrl');
+  $iipFcgi = $_REQUEST['tileUrl'];
   if ($iipFcgi == null) {
     $iipFcgi = $config->iipFcgi;
   }
