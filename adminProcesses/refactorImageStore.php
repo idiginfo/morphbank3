@@ -155,7 +155,6 @@ function reorganizeImageFiles($id, $fileName, $imageType=null, $problems = null,
 				//$message .= "No file for path '$iipImgPath'\n";
 				$converted = convertIip($jpegImgPath, $iipImgPath);
 				if ($converted){
-					$message .= "iip";
 					$numFixed ++;
 					$message .=": created iip";
 				}
