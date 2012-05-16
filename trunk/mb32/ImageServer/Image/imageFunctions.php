@@ -81,7 +81,7 @@ function checkImageFile($id, $imageType, $imageFile = null){
 		if ($imageTypeCode == IMAGETYPE_PNG) return $wh;
 	} else if($imageType=='bmp') {
 		if ($imageTypeCode == IMAGETYPE_BMP) return $wh;
-	} else if($imageType=='tiff') {
+	} else if($imageType=='tiff' || $imageType=='iip') {
 		if ($imageTypeCode == IMAGETYPE_TIFF_II || $imageTypeCode == IMAGETYPE_TIFF_MM) return $wh;
 	} else if ($imageType == 'dng'){
 		// note that a this does not distinguish dng from any other tiff
