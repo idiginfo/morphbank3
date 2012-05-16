@@ -256,7 +256,8 @@ function getImageViewerPostitTag($id, $imgUrl, $width, $height, $postItContents)
 
 function imageServerTpcFrame($imageId, $width, $height, $sessionId = null){
 	global $config;
-	$imageTpcTag = $config->imgServerUrl."bischen/viewDiv.php?id=$imageId";
+	//$imageTpcTag = $config->imgServerUrl."bischen/viewDiv.php?id=$imageId";
+	$imageTpcTag = $config->imgServerUrl."Image/viewDiv.php?id=$imageId";
 	$imageTpcTag .= "&width=$width&height=$height";
 	if (!empty($sessionId)){
 		$imageTpcTag .= '&sessionId='.$sessionId;
