@@ -148,9 +148,9 @@ class keywordFilter extends filter {
 			.'View.viewAngle LIKE \'%'.$arrayOfWords[$i].'%\' OR '
 			.'Locality.locality LIKE \'%'.$arrayOfWords[$i].'%\' OR '
 			.'Locality.continent LIKE \'%'.$arrayOfWords[$i].'%\' OR '
-      .'Locality.ocean LIKE \'%'.$arrayOfWords[$i].'%\' ) OR '
-			.'Locality.country LIKE \'%'.$arrayOfWords[$i].'%\' ) OR '
-      .'Locality.state LIKE \'%'.$arrayOfWords[$i].'%\' ) OR '
+      .'Locality.ocean LIKE \'%'.$arrayOfWords[$i].'%\'  OR '
+			.'Locality.country LIKE \'%'.$arrayOfWords[$i].'%\'  OR '
+      .'Locality.state LIKE \'%'.$arrayOfWords[$i].'%\'  OR '
       .'Locality.county LIKE \'%'.$arrayOfWords[$i].'%\' )';
 			//.'View.viewName LIKE \'%'.$arrayOfWords[$i].'%\' OR '\
 
