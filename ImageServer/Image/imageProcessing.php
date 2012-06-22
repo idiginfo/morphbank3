@@ -184,7 +184,7 @@ function replaceOriginal ($id, $fileAccessPath, $fileName, $fileSourceDir){
 	// get the target location for the new file
 	$origPath = getImageFilePath($id, $origType);
 	// copy the new file to the location of the original
-	$copy = "cp '$fileAccessPath' $origPath; chmod 644 $origPath";
+	$copy = "cp '$fileAccessPath' $origPath; chmod 666 $origPath";
 	$resp = shell_exec($copy);
 	$message .= "Copied $fileAccessPath to $origPath\n";
 	if (!empty($tmpPath)) unlink($tmpPath); // get rid of temporary file
@@ -249,6 +249,9 @@ function convertOriginal($source, $target, $size){
 	$reply = shell_exec($convert);
 	if (strlen($reply)>0){
 		$message .=  "conversion failed with message: '$reply'<br/>\n)";
+	}
+	else {
+		chmod($target, 0666);
 	}
 	$message .=  date("H:i:s")." Finished\n";
 	return $message;
