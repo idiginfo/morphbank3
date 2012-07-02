@@ -61,6 +61,12 @@ if (!empty($id)) {
 	// request is for an image file
 	include_once('image.class.php');
 	$image = new Image($id, $imgType, $imgSize, $sessionId);
+        //file cannot be found on the server
+        if(!$image->getFileExists()) {
+            header("HTTP/1.1 400 Bad Request: The requested object is not on
+                the server");
+            exit();
+        }
 	if(imageRequesterIsBot() && !$image->allowedBotImages()){
 		header("HTTP/1.1 403 Forbidden");
 		exit();
@@ -85,6 +91,8 @@ if (empty($config->imgServerAltUrl) || serverRequest($requestor)) {
 	return;
 }
 
+
+//TODO issue proper error message: not authorized
 header('Content-Type: image/png');
 readfile($config->webPath.'/style/webImages/'.$config->imgPrivate);
 
@@ -96,7 +104,7 @@ function isModifiedSince($fileTime) {
 
 function serverRequest($serverName){
 	global $config;
-	if ($serverName==$congif->imgServer) return true;
+	if ($serverName==$config->imgServer) return true;
 	return false;
 }
 
