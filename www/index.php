@@ -51,9 +51,26 @@ if (!empty($id) && (!empty($imgType) || !empty($imgSize))  ) {
 	// redirect to imageserver with sessionId
 	if (isLoggedIn()) $sessionId = session_id();
 	$tag = getImageServerUrl($id,$imgType,$sessionId,$imgSize);
-	header("Status: 302 Temporary redirect");
-	header("Location: $tag");
-	die();
+        
+        //TODO make a 'head' call to check for error
+        // if error, dump the proper default image
+        // if not error, redirect as below
+        $response = http_head($tag);
+        if ($response == False) {
+            header("Error in request.");
+        }
+        else if ($response == "HTTP/1.1 401 Unauthorized"
+                || $response == "HTTP/1.1 400 Bad Request: The requested object
+                is not on the server") {
+            header($response);
+            //TODO display image not found ?
+        }
+        else {
+            header("Status: 302 Temporary redirect");
+            header("Location: $tag");
+
+        }
+        die();
 }
 
 if (stripos($_SERVER['REQUEST_METHOD'], 'HEAD') !== FALSE){
