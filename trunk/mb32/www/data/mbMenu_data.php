@@ -205,11 +205,12 @@ $mainMenuOptions = array(
         'help' => '',
         'separatorLine' => FALSE,
         'greyOut' => TRUE),
-    /*array('name' => 'Upload Images',
+    //TODO create file uploadImages.php
+    array('name' => 'Upload Images',
         'belongTo' => $mainMenu[2]['name'],
         'href' => '/Submit/uploadImages.php',
         'help' => '',
-        'separatorLine' => FALSE),*/
+        'separatorLine' => FALSE),
     array('name' => 'Edit',
         'belongTo' => $mainMenu[2]['name'],
         'href' => '#" onmouseover="hideSubMenus(); expandMenuOptions(\'editSelectMenu\', this); stopSubTime(); " onmouseout="startSubTime();',
@@ -364,9 +365,9 @@ $mainMenuOptions = array(
 );
 //  H A HcClCnCcSpTeHi A I S V L C A P TaThTaTs MnClSuEdAcGrMiMmTaAdSgLoLiAnSiAd OmHsDlNqFbMbEnQrUm
 $userTypes = array(//  0 1 2 3 4 5 6 7 8  9 0 1 2 3 4 5 6 7 8 9 0  1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6  7 8 9 0 1 2 3 4 5 6 7 8 9 0
-    'admin' => array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0),
-    'coordinator' => array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0),
-    'user' => array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0),
+    'admin' => array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,/*adding upload*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0),
+    'coordinator' => array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,/*adding upload*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0),
+    'user' => array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,/*adding upload*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0),
     'guest' => array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0),
     'reviewer' => array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0),
     'world' => array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0)
