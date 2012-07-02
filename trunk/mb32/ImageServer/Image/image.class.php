@@ -222,5 +222,8 @@ class Image {
 	function getFileTime(){
 		return @filemtime($this->imageFilePath);
 	}
+        function getFileExists(){
+                return $this->fileExists;
+        }
 }
 ?>
