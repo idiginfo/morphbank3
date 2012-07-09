@@ -25,7 +25,7 @@ include_once('head.inc.php');
 include_once('mainNews.php');
 
 //require_once 'Pager/Pager_Wrapper.php';
-exit;
+//exit;
 // Check authorization
 if (!isAdministrator()) {
 	header("location: /Admin/User/edit");
