@@ -25,10 +25,14 @@ include_once('updater.class.php');
 include_once('objectFunctions.php');
 include_once('updateObjectKeywords.php');
 
-$indexUrl = "/Admin/News/?action=add";
-$userId = $objInfo->getUserId();
-$groupId =$objInfo->getUserGroupId();
-if (!checkAuthorization($id, $userId, $groupId, 'edit')) {
+$id        = trim($_POST['id']);
+$title     = trim($_POST['title']);
+$body      = trim($_POST['body']);
+$imageText = trim($_POST['imageText']);
+$indexUrl  = "/Admin/News/?action=edit&id=$id";
+$userId    = $objInfo->getUserId();
+$groupId   = $objInfo->getUserGroupId();
+if (!checkAuthorization($id, $userId, $groupId, 'add')) {
 	header ("location: index.php");
 	exit;
 }
@@ -38,39 +42,18 @@ if (empty($_POST['title']) || empty($_POST['body'])) {
 	exit;
 }
 
-$title     = trim($_POST['title']);
-$body      = trim($_POST['body']);
-$imageText = trim($_POST['imageText']);
-
-if (!empty($_FILES['imageFile']['name'])) {
-	$image = $_FILES['imageFile']['name'];
-	$tmpFile   = $_FILES['imageFile']['tmp_name'];
-	move_uploaded_file($tmpFile, $config->newsImagePath . $image);
-	exec("chmod 777 ". $config->newsImagePath . $image);
-}
-
 $db = connect();
-// Insert News Object returning id
-$dateToPublish = date('Y-m-d', (mktime(0, 0, 0, date("m") +6, date("d") - 1, date("Y"))));
-$params = array($db->quote("News"), $userId, $groupId, $userId, $db->quote($dateToPublish,'date'), $db->quote("News added"), $db->quote(NULL));
-$result = $db->executeStoredProc('CreateObject', $params);
-if(isMdb2Error($result, 'Create Object procedure', 6)) {
-  header("location: $indexUrl&code=8");
-  exit;
-}
-$id = $result->fetchOne();
-if(isMdb2Error($id, 'Error retrieving new id of BaseObject', 6) || empty($id)) {
-  header("location: $indexUrl&code=9");
-  exit;
-}
 
-clear_multi_query($result);
-
-// prepare update
+// Get news info and prepare update
+$newsObj = getObjectData('News', $id);
+if (is_string($newsObj)) { // Error returned
+	header("location: $indexUrl&code=4");
+	exit;
+}
 $newsUpdater = new Updater($db, $id, $userId , $groupId, 'News');
-$newsUpdater->addField('title', $title, null);
-$newsUpdater->addField('body', $body, null);
-$newsUpdater->addField('imageText', $imageText, null);
+$newsUpdater->addField('title', $title, $newsObj['title']);
+$newsUpdater->addField('body', $body, $newsObj['body']);
+$newsUpdater->addField('imageText', $imageText, $newsObj['imagetext']);
 
 if (!empty($_FILES['imageFile']['name'])) {
   $image = $_FILES['imageFile']['name'];
@@ -80,16 +63,20 @@ if (!empty($_FILES['imageFile']['name'])) {
     exit;
   }
   exec("chmod 755 " . $config->newsImagePath . $image);
-  $newsUpdater->addField('image', $image, null);
+  $newsUpdater->addField('image', $image, $newsObj['image']);
 }
 
 // Update News
 $numRowsNews = $newsUpdater->executeUpdate();
 if (is_string($numRowsNews)) { // Error returned
-	header("location: /Admin/News/?&action=edit&id=$id&code=5");
+	header("location: $indexUrl&code=5");
 	exit;
 }
 
-updateKeywordsTable($id, 'insert');
+// Update keywords
+if ($numRowsNews == 1) {
+	updateKeywordsTable($id, 'update');
+}
 
-header("Location: /Admin/News/?&action=edit&id=$id&code=15");
+header("location: $indexUrl&code=1");
+exit;

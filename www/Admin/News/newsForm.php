@@ -1,45 +1,31 @@
-/**
-* Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the GNU Public License v2.0
-* which accompanies this distribution, and is available at
-* http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-* 
-* Contributors:
-*   Fredrik Ronquist - conceptual modeling and interaction design
-*   Austin Mast - conceptual modeling and interaction design
-*   Greg Riccardi - initial API and implementation
-*   Wilfredo Blanco - initial API and implementation
-*   Robert Bruhn - initial API and implementation
-*   Christopher Cprek - initial API and implementation
-*   David Gaitros - initial API and implementation
-*   Neelima Jammigumpula - initial API and implementation
-*   Karolina Maneva-Jakimoska - initial API and implementation
-*   Deborah Paul - initial API and implementation implementation
-*   Katja Seltmann - initial API and implementation
-*   Stephen Winner - initial API and implementation
-*/
-
-<div class="mainGenericContainer" style="width:700px">
+<div class="mainGenericContainer" >
 <h1><?php echo $frmTitle ?></h1>
-<?php getMsg($_GET['code']); ?>
-<form id="frmNews" action="<?php echo $frmAction ?>" method="post"	enctype="multipart/form-data">
+<form id="frmNews" action="/Admin/News/<?php echo $postFile ?>" method="post"	enctype="multipart/form-data">
+<input type="hidden" name="id" value="<?php echo $id ?>" />
 <table border="0">
 	<tr>
 		<td><b>Title:<span style="color: red">*</span></b></td>
-		<td><input type="text" name="title" value="<?php echo $title ?> size="54" /></td>
+		<td><input type="text" name="title" size="54" value="<?php echo $row['title'] ?>" /></td>
 	</tr>
 	<tr>
-		<td><b>News Script:<span style="color: red">*</span></b></td>
-		<td><textarea rows="8" cols="50" name="body"><?php echo $text ?></textarea></td>
+		<td valign="top"><b>News Text:<span style="color: red">*</span></b></td>
+		<td><textarea rows="15" cols="50" name="body"><?php echo $row['body'] ?></textarea></td>
 	</tr>
+  <?php if (!empty($imageloc) && $action == 'edit'): ?>
+  <tr>
+    <td></td>
+		<td>
+      <img src="<?php echo $imageloc ?>" name="image" width="150" />
+    </td>
+	</tr>
+  <? endif; ?>
 	<tr>
-		<td><b>Image to be uploaded for this news:</b></td>
+		<td><b>Image:</b></td>
 		<td><input type="file" name="imageFile" size="54" /></td>
 	</tr>
 	<tr>
 		<td><b>Image Text:</b></td>
-		<td><input type="text" size="54" name="imageText" value="<?php echo $imgText ?> title="Text to be displayed with the image" /></td>
+		<td><input type="text" size="54" name="imageText" value="<?php echo $row['imagetext'] ?>" title="Text to be displayed with the image" /></td>
 	</tr>
 </table>
 <br />
