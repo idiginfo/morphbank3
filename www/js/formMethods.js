@@ -239,7 +239,7 @@ $(document).ready(function(){
 	/* News add form */
 	$('#frmNews').validate({
 		rules: { title: "required", body: "required" },
-		messages: { title: "Title Required", body: "News script required" },
+		messages: { title: "Title Required", body: "News text required" },
 		submitHandler: function(form) {
 			form.submit();
 		}
