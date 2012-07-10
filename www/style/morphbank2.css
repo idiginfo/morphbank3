@@ -361,3 +361,11 @@ font-size:14px;
 
 .helpDocumentList li { margin-bottom:7px; font-size:12px; }
 
+ul.admin-news-list {
+  margin-top: 20px;
+  list-style: none;
+}
+
+ul.admin-news-list li {
+  margin-bottom: 20px;
+}
