@@ -33,7 +33,7 @@ $code = isset($_GET['code']) ? $_GET['code'] : '';
 
 // Check authorization
 if (!checkAuthorization($id, null, null, $action)) {
-	header("location: /Admin/User/edit");
+  header("location: /Admin/User/edit");
   exit;
 }
 
@@ -50,14 +50,14 @@ echo '<div class="mainGenericContainer" style="width:700px">';
 
 // Action determines what is displayed
 if ($action == 'edit') {
-	echo getMessage($code);
-	editNews();
+  echo getMessage($code);
+  editNews();
 } elseif ($action == 'add') {
-	echo getMessage($code);
-	addNews($_REQUEST);
+  echo getMessage($code);
+  addNews($_REQUEST);
 } else {
-	echo getMessage($code);
-	listNews($id, $action);
+  echo getMessage($code);
+  listNews($id, $action);
 }
 
 echo '</div>';
