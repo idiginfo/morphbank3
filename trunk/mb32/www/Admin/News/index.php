@@ -24,11 +24,17 @@
 include_once('head.inc.php');
 include_once('mainNews.php');
 
-//require_once 'Pager/Pager_Wrapper.php';
-//exit;
+// Required PEAR pager. Page_Wrapper.php located in www/includes
+require_once 'Pager_Wrapper.php';
+
+$id = isset($_GET['id']) ? $_GET['id'] : '';
+$action = isset($_GET['action']) ? $_GET['action'] : 'view';
+$code = isset($_GET['code']) ? $_GET['code'] : '';
+
 // Check authorization
-if (!isAdministrator()) {
+if (!checkAuthorization($id, null, null, $action)) {
 	header("location: /Admin/User/edit");
+  exit;
 }
 
 $includeJavaScript = array('jquery.1-4-2.min.js', 'jquery-ui-1.8.min.js', 'jquery.validate.min.js', 'formMethods.js');
@@ -45,13 +51,13 @@ echo '<div class="mainGenericContainer" style="width:700px">';
 // Action determines what is displayed
 if ($action == 'edit') {
 	echo getMessage($code);
-	editNews($id);
+	editNews();
 } elseif ($action == 'add') {
 	echo getMessage($code);
 	addNews($_REQUEST);
 } else {
 	echo getMessage($code);
-	listNews($_REQUEST);
+	listNews($id, $action);
 }
 
 echo '</div>';
