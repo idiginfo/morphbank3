@@ -56,13 +56,15 @@ $newsUpdater->addField('body', $body, $newsObj['body']);
 $newsUpdater->addField('imageText', $imageText, $newsObj['imagetext']);
 
 if (!empty($_FILES['imageFile']['name'])) {
-  $image = $_FILES['imageFile']['name'];
+  $name = $_FILES['imageFile']['name'];
   $tmpFile = $_FILES['imageFile']['tmp_name'];
-  if (!move_uploaded_file($tmpFile, $config->newsImagePath . $image)) {
+  if (!move_uploaded_file($tmpFile, $config->newsImagePath . $name)) {
     header("location: $indexUrl&code=7");
     exit;
   }
-  exec("chmod 755 " . $config->newsImagePath . $image);
+  exec("chmod 755 " . $config->newsImagePath . $name);
+  
+  $image = $config->appServerBaseUrl . 'images/newsImages/' . $name;
   $newsUpdater->addField('image', $image, $newsObj['image']);
 }
 

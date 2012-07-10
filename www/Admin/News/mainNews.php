@@ -91,7 +91,7 @@ function editNews() {
   $postFile = "modifyNews.php";
   $action = "edit";
   $id = $row['id'];
-  $imageloc = !empty($row['image']) && file_exists($config->newsImagePath . $row['image']) ? '/images/newsImages/' . $row['image'] : '/style/webImages/defaultNews.png';
+  $image = $row['image'];
 	include('newsForm.php');
   
   return;
@@ -127,7 +127,8 @@ function deleteNews($id) {
   }
 	
 	if ($image)
-    @unlink($config->newsImagePath . $image);
+    $delete_image = str_replace($config->appServerBaseUrl . 'images/newsImages/', '', $image);
+    @unlink($config->newsImagePath . $delete_image);
 	
 	$sth = $db->prepare('delete from News where id = ? limit 1', array('integer'));
   if (isMdb2Error($sth, 'Error preparing delete News statement', 6)) {

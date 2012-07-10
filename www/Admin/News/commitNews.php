@@ -38,17 +38,6 @@ if (empty($_POST['title']) || empty($_POST['body'])) {
 	exit;
 }
 
-$title     = trim($_POST['title']);
-$body      = trim($_POST['body']);
-$imageText = trim($_POST['imageText']);
-
-if (!empty($_FILES['imageFile']['name'])) {
-	$image = $_FILES['imageFile']['name'];
-	$tmpFile   = $_FILES['imageFile']['tmp_name'];
-	move_uploaded_file($tmpFile, $config->newsImagePath . $image);
-	exec("chmod 777 ". $config->newsImagePath . $image);
-}
-
 $db = connect();
 // Insert News Object returning id
 $dateToPublish = date('Y-m-d', (mktime(0, 0, 0, date("m") +6, date("d") - 1, date("Y"))));
@@ -66,6 +55,10 @@ if(isMdb2Error($id, 'Error retrieving new id of BaseObject', 6) || empty($id)) {
 
 clear_multi_query($result);
 
+$title     = trim($_POST['title']);
+$body      = trim($_POST['body']);
+$imageText = trim($_POST['imageText']);
+
 // prepare update
 $newsUpdater = new Updater($db, $id, $userId , $groupId, 'News');
 $newsUpdater->addField('title', $title, null);
@@ -73,13 +66,15 @@ $newsUpdater->addField('body', $body, null);
 $newsUpdater->addField('imageText', $imageText, null);
 
 if (!empty($_FILES['imageFile']['name'])) {
-  $image = $_FILES['imageFile']['name'];
+  $name = $_FILES['imageFile']['name'];
   $tmpFile = $_FILES['imageFile']['tmp_name'];
-  if (!move_uploaded_file($tmpFile, $config->newsImagePath . $image)) {
-    header("location: $indexUrl&code=7");
+  if (!move_uploaded_file($tmpFile, $config->newsImagePath . $name)) {
+    header("location: /Admin/News/?&action=edit&id=$id&code=7");
     exit;
   }
-  exec("chmod 755 " . $config->newsImagePath . $image);
+  exec("chmod 755 " . $config->newsImagePath . $name);
+  
+  $image = $config->appServerBaseUrl . 'images/newsImages/' . $name;
   $newsUpdater->addField('image', $image, null);
 }
 
@@ -92,4 +87,4 @@ if (is_string($numRowsNews)) { // Error returned
 
 updateKeywordsTable($id, 'insert');
 
-header("Location: /Admin/News/?&action=edit&id=$id&code=15");
+header("location: /Admin/News/?&action=edit&id=$id&code=15");
