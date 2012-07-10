@@ -43,10 +43,10 @@ function listNews($id = null, $action = null) {
       'code' => $_GET['code']
     ),
   );
-  $query = "SELECT bo.id, DATE_FORMAT(bo.dateCreated, '%m/%d/%Y') as date_created, n.title, u.uin from BaseObject bo  
-            LEFT JOIN News n on n.id = bo.id 
+  $query = "SELECT n.title, bo.id, DATE_FORMAT(bo.dateCreated, '%m/%d/%Y') as date_created, u.uin from News n  
+            LEFT JOIN BaseObject bo on bo.id = n.id 
             LEFT JOIN User u on u.id = bo.userId
-            WHERE bo.objectTypeId = 'News' ORDER BY bo.dateCreated DESC";
+            ORDER BY bo.dateCreated DESC";
   $paged_data = Pager_Wrapper_MDB2($db, $query, $pager_options);
   
   echo "<h1>News</h1>";
