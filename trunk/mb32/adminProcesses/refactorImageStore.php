@@ -141,7 +141,12 @@ function reorganizeImageFiles($id, $fileName, $imageType=null, $problems = null,
 			// create openzoom (iip)
 			if (!checkFileDate($iipImgPath, $originalImgPath)){
 				//$message .= "No file for path '$iipImgPath'\n";
-				$converted = convertIip($jpegImgPath, $iipImgPath);
+				if ($imageType == 'dng'){
+					$sourcePath = $jpegImgPath;
+				}else {
+					$sourcePath = $originalImgPath;
+				}
+				$converted = convertIip($sourcePath, $iipImgPath);
 				if ($converted){
 					$numFixed ++;
 					$message .=": created iip";
