@@ -116,14 +116,19 @@ function fixImageFiles($id, $fileName, $imageType=null, $problems = null, $fileS
 			}
 		}
 		// create openzoom (iip)
-		if (!checkFileDate($iipImgPath, $originalImgPath)){
-			//$message .= "No file for path '$iipImgPath'\n";
-			$converted = convertIip($jpegImgPath, $iipImgPath);
-			if ($converted){
-				$message .= "iip";
-				$numFixed ++;
-			}
-		}
+		if (!checkFileDate($iipImgPath, $originalImgPath)) {
+                    //$message .= "No file for path '$iipImgPath'\n";
+                    if ($imageType == 'dng') {
+                        $sourcePath = $jpegImgPath;
+                    } else {
+                        $sourcePath = $originalImgPath;
+                    }
+                    $converted = convertIip($sourcePath, $iipImgPath);
+                    if ($converted) {
+                        $message .= "iip";
+                        $numFixed++;
+                    }
+                }
 		// create tif, if required by TIF_PROCESS
 		if ($config->processTiff && $imgType != "tif" && !checkFileDate($tifImgPath, $originalImgPath)) { // make tif from original
 			$message .= "Creating tif file for id: $id original type: $imageType \n";
