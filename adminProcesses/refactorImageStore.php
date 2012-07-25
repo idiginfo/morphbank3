@@ -123,7 +123,7 @@ function reorganizeImageFiles($id, $fileName, $imageType=null, $problems = null,
 	$fileImageType = getImageFileType($originalImgPath, $fileName);
 	if (!file_exists($originalImgPath) || empty($fileImageType)){
 		// missing or corrupted original file
-		$message .= "Skipping id $id: missing or corupt original file\n";
+		$message .= "Skipping id $id: missing or corrupt original file\n";
 	} else {
 		if (!empty($fileImageType)) {
 			// get file paths
