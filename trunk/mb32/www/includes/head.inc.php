@@ -164,10 +164,10 @@ function makeHorMenu( $user = "guest", $headerTitle = '', $hasform0 = true) {
 	// located in menu.inc.php  Outputs the login info if you are loged in
 	outputLoginInfo();
 	echo '</div>';
-	$bool = (strpos($_SERVER['PHP_SELF'], "About/Manual")===FALSE) ? FALSE : TRUE;
-	if (!$bool){
+//	$bool = (strpos($_SERVER['PHP_SELF'], "About/Manual")===FALSE) ? FALSE : TRUE;
+//	if (!$bool){
 		makeMenu();
-	}
+//	}
 	if ( $objInfo->getServerLogo() ) {
 		$serverLogo = $objInfo->getServerLogo();
 		$serverLogo = '/images/mirrorLogos/'.$serverLogo;
