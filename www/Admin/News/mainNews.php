@@ -197,7 +197,9 @@ function getMessage($code) {
 		return "<br /><br /><h3>You have added a News item successfully</h3><br /><br />";
 	} elseif ($code == 16) {
 		return "<br /><br /><h3>You have successfully deleted a News item</h3><br /><br />";
-	}
+	} elseif ($code == 17) {
+		return "<br /><br /><h3>You have added a News item successfully</h3><br /><br />";
+	} 
   
 	return;
 }
