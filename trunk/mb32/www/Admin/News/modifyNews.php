@@ -54,25 +54,30 @@ $newsUpdater = new Updater($db, $id, $userId , $groupId, 'News');
 $newsUpdater->addField('title', $title, $newsObj['title']);
 $newsUpdater->addField('body', $body, $newsObj['body']);
 $newsUpdater->addField('imageText', $imageText, $newsObj['imagetext']);
-
-if (!empty($_FILES['imageFile']['name'])) {
-  $name = $_FILES['imageFile']['name'];
-  $tmpFile = $_FILES['imageFile']['tmp_name'];
-  if (!move_uploaded_file($tmpFile, $config->newsImagePath . $name)) {
-    header("location: $indexUrl&code=7");
-    exit;
-  }
-  exec("chmod 755 " . $config->newsImagePath . $name);
-  
-  $image = $config->appServerBaseUrl . 'images/newsImages/' . $name;
-  $newsUpdater->addField('image', $image, $newsObj['image']);
-}
-
 // Update News
 $numRowsNews = $newsUpdater->executeUpdate();
 if (is_string($numRowsNews)) { // Error returned
 	header("location: $indexUrl&code=5");
 	exit;
+}
+
+if (!empty($_FILES['imageFile']['name'])) {
+  $name = $_FILES['imageFile']['name'];
+  $tmpFile = $_FILES['imageFile']['tmp_name'];
+  if (!move_uploaded_file($tmpFile, $config->newsImagePath . $name)) {
+    header("location: $indexUrl&code=17");
+    exit;
+  }
+  exec("chmod 755 " . $config->newsImagePath . $name);
+  
+  $image = $config->appServerBaseUrl . 'images/newsImages/' . $name;
+  $newsUpdater = new Updater($db, $id, $userId , $groupId, 'News');
+  $newsUpdater->addField('image', $image, $newsObj['image']);
+  $numRowsNews = $newsUpdater->executeUpdate();
+  if (is_string($numRowsNews)) { // Error returned
+      header("location: $indexUrl&code=5");
+      exit;
+  }
 }
 
 // Update keywords

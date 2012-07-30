@@ -64,25 +64,30 @@ $newsUpdater = new Updater($db, $id, $userId , $groupId, 'News');
 $newsUpdater->addField('title', $title, null);
 $newsUpdater->addField('body', $body, null);
 $newsUpdater->addField('imageText', $imageText, null);
+$numRowsNews = $newsUpdater->executeUpdate();
+if (is_string($numRowsNews)) { // Error returned
+	header("location: /Admin/News/?&action=edit&id=$id&code=5");
+	exit;
+}
+
 
 if (!empty($_FILES['imageFile']['name'])) {
   $name = $_FILES['imageFile']['name'];
   $tmpFile = $_FILES['imageFile']['tmp_name'];
   if (!move_uploaded_file($tmpFile, $config->newsImagePath . $name)) {
-    header("location: /Admin/News/?&action=edit&id=$id&code=7");
+    header("location: /Admin/News/?&action=edit&id=$id&code=17");
     exit;
   }
   exec("chmod 755 " . $config->newsImagePath . $name);
   
   $image = $config->appServerBaseUrl . 'images/newsImages/' . $name;
+  $newsUpdater = new Updater($db, $id, $userId , $groupId, 'News');
   $newsUpdater->addField('image', $image, null);
-}
-
-// Update News
-$numRowsNews = $newsUpdater->executeUpdate();
-if (is_string($numRowsNews)) { // Error returned
-	header("location: /Admin/News/?&action=edit&id=$id&code=5");
-	exit;
+  $numRowsNews = $newsUpdater->executeUpdate();
+  if (is_string($numRowsNews)) { // Error returned
+    header("location: /Admin/News/?&action=edit&id=$id&code=7");
+    exit;
+  }
 }
 
 updateKeywordsTable($id, 'insert');
