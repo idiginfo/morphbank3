@@ -11,7 +11,7 @@
 		<td valign="top"><b>News Text:<span style="color: red">*</span></b></td>
 		<td><textarea rows="15" cols="50" name="body"><?php echo $row['body'] ?></textarea></td>
 	</tr>
-  <?php if (!empty($image) && $action == 'edit'): ?>
+  <?php if (!empty($row['image']) && $action == 'edit'): ?>
   <tr>
     <td></td>
 		<td>
