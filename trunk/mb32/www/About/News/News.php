@@ -64,7 +64,7 @@ function mainnewsText()
           $newsOutput .= '<img src="../../style/webImages/spacer.jpg" />' . '</td>';
           
           if ($newsArray['image'] != '') {
-              $newsOutput .= '<td><img src="/images/newsImages/' . $newsArray['image'] . '" width="200px" alt="news" />';
+              $newsOutput .= '<td><img src="' . $newsArray['image'] . '" width="200px" alt="news" />';
           }
           $newsOutput .= '</td></div></tr><div id="footerRibbon"></table>';
       }
