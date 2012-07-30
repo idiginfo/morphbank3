@@ -79,9 +79,7 @@ function editNews() {
   global $config;
   $db = connect();
   
-  $sql = "SELECT bo.*, n.* from BaseObject bo  
-            LEFT JOIN News n on n.id = bo.id 
-            WHERE bo.id = ?";
+  $sql = "SELECT id, title, body, image, imagetext from News WHERE id = ?";
 	$row = $db->getRow($sql, null, array($_GET['id']), null, MDB2_FETCHMODE_ASSOC);
   if (isMdb2Error($row, "Error selecting news information.", 6)) {
     echo getMessage(2);
@@ -91,8 +89,7 @@ function editNews() {
   $postFile = "modifyNews.php";
   $action = "edit";
   $id = $row['id'];
-  $image = $row['image'];
-	include('newsForm.php');
+  include('newsForm.php');
   
   return;
 }
