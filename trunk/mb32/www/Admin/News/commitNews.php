@@ -90,6 +90,4 @@ if (!empty($_FILES['imageFile']['name'])) {
   }
 }
 
-updateKeywordsTable($id, 'insert');
-
 header("location: /Admin/News/?&action=edit&id=$id&code=15");
