@@ -69,7 +69,7 @@ function mainMyCollection($collectionId, $loggedIn)
 		$phyloChar = new PhyloCharacter($link, $collectionId);
 
 		if (isset($_POST['imageindex'])) {
-			$ImageArray = getFieldOrder($_POST['imageindex'],"ImageId:[");
+			$ImageArray = getFieldOrder($_POST['imageindex']);
 			$newArray = checkStateOrder($ImageArray, $collectionId);
 
 			$phyloChar->updateCharacter($newArray);
@@ -172,7 +172,7 @@ function mainMyCollection($collectionId, $loggedIn)
 			reOrderCollection($collectionId, $sortedImageArray);
 
 		} elseif ($collectionType == "MbCharacter") {
-			$ImageArray = getFieldOrder($_POST['imageindex'],"ImageId:[");
+			$ImageArray = getFieldOrder($_POST['imageindex']);
 			$newArray = checkStateOrder($ImageArray, $collectionId);
 
 			if ($_POST['toolFlag'] == 'delete') {
@@ -180,8 +180,8 @@ function mainMyCollection($collectionId, $loggedIn)
 			}
 			$phyloChar->updateCharacter($newArray);
 		} else {
-			$ImageArray = getFieldOrder($_POST['imageindex'],"ImageId:[");
-			reOrderCollection($collectionId, $ImageArray);
+      $ImageArray = getFieldOrder($_POST['imageindex']);
+      reOrderCollection($collectionId, $ImageArray);
 		}
 
 		if ($_POST['toolFlag'] == 'createState') {
@@ -1177,28 +1177,20 @@ function updateTitle_phylo($objectId, $phyloChar, $title) {
 	return FALSE;
 }
 
-
-function getFieldOrder($returnString,$field) {
-	$counter = 0;
-	$index = 0 ;
-	$strLength = strlen($returnString);
-	//echo $strLength.'<br />'.$returnString;
-	$stringPosition = strpos($returnString,$field,0);
-	while ($stringPosition && $counter < 100 )
-	{ $counter++;
-	$stringPosition = $stringPosition + 1;
-	$imageArray[$index++] = ExtractId($returnString,$stringPosition);
-	$stringPosition = strpos($returnString,"ImageId:[",$stringPosition);
-	}
-	return $imageArray;
-}
-
-function ExtractId( $inString,$position1) {
-	$index1 = $position1+8;
-	$index2 = strpos($inString,']',$index1);
-	$length =($index2-$index1);
-	$imageId = substr($inString,$index1,$length);
-	return $imageId;
+/**
+ * Get the order of the collection objects
+ * Objects use alt tag of ObjectId:[*] where * is the id number
+ */
+function getFieldOrder($string) {
+  $matches = array();
+  $order_array = array();
+  $pattern = '/\[\d+\]/'; 
+  preg_match_all($pattern, $string, $matches);
+  foreach ($matches[0] as $match) {
+    $order_array[] = preg_replace ( '/[^0-9]/', '', $match);
+  }
+  
+	return $order_array;
 }
 
 function reOrderCollection($collectionId,$imageArray) {
