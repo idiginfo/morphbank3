@@ -40,7 +40,7 @@ if (empty($_POST['title']) || empty($_POST['body'])) {
 
 $db = connect();
 // Insert News Object returning id
-$dateToPublish = date('Y-m-d', (mktime(0, 0, 0, date("m") +6, date("d") - 1, date("Y"))));
+$dateToPublish = date('Y-m-d');
 $params = array($db->quote("News"), $userId, $groupId, $userId, $db->quote($dateToPublish,'date'), $db->quote("News added"), $db->quote(NULL));
 $result = $db->executeStoredProc('CreateObject', $params);
 if(isMdb2Error($result, 'Create Object procedure', 6)) {
