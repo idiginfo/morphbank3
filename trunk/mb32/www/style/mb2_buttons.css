@@ -1,6 +1,6 @@
 /* CSS Document */
 
-a.smallButton { background-image: url(webImages/buttons/buttonBackground65.gif) !important; width: 65px !important;  }
+a.smallButton { background-image: url(webImages/buttons/buttonBackground65.gif)  !important; width: 65px !important;  }
 a.mediumButton { background-image: url(webImages/buttons/buttonBackground100new.gif) !important; width: 100px !important;  }
 a.largeButton { background-image: url(webImages/buttons/buttonBackground120new.gif) !important; width: 120px !important;  }
 a.xlButton { background-image: url(webImages/buttons/buttonBackground140new.gif) !important; width: 140px !important;  }
