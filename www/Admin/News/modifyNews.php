@@ -80,10 +80,5 @@ if (!empty($_FILES['imageFile']['name'])) {
   }
 }
 
-// Update keywords
-if ($numRowsNews == 1) {
-	updateKeywordsTable($id, 'update');
-}
-
 header("location: $indexUrl&code=1");
 exit;
