@@ -99,9 +99,8 @@ function myClosedMass(cal) {
 function publishNowMass() {
 	var date = new Date();
 	
-	var todaysDateString = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
-	//alert(dateString);
-	
+  var todaysDateString = (date.getFullYear() + "-" + ('0' + (date.getMonth() + 1)).slice(-2) + "-" + ('0' + date.getDate()).slice(-2));
+  
 	var idString = jsDomainName+"MyManager/updateDate.php?";
 	var objectString=getCheckedObjects();
 	
