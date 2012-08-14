@@ -142,13 +142,13 @@ function displayLocationForm(){
 		<tr>
 			<td><b>Minimum Elevation (meters):</b></td>
 			<td align="left"><input type="text" name="MinimumElevation"
-				title="Enter the minimum distance in meters above or below (negetive) sea level of this locality."
+				title="Enter the minimum distance in meters above or below (negative) sea level of this locality."
 				size="6" value="<?php echo $_REQUEST['MinimumElevation'] ?>" /></td>
 		</tr>
 		<tr>
 			<td><b>Maximum Elevation (meters):</b></td>
 			<td align="left"><input type="text" name="MaximumElevation"
-				title="Enter the maximum  distance in meters above or below (negetive) sea level of this locality."
+				title="Enter the maximum  distance in meters above or below (negative) sea level of this locality."
 				size="6" value="<?php echo $_REQUEST['MaximumElevation'] ?>" /></td>
 		</tr>
 		<tr>
@@ -160,7 +160,7 @@ function displayLocationForm(){
 		<tr>
 			<td><b>Maximum Depth (meters):</b></td>
 			<td align="left"><input type="text" name="MaximumDepth"
-				title="Enter the maximum distance in meters bellow the surface of the water at which the collection was made. Positive below the surface, negative above."
+				title="Enter the maximum distance in meters below the surface of the water at which the collection was made. Positive below the surface, negative above."
 				size="6" value="<?php echo $_REQUEST['MaximumDepth'] ?>" /></td>
 		</tr>
 		<?php echo getContributorSelectTag($_REQUEST['Contributor']); ?>
