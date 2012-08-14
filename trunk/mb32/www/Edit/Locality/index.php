@@ -188,11 +188,11 @@ function displayLocalityForm($row){
     </tr>
 		<tr>
       <td><b>MinimumElevation: </b></td>
-      <td><input type="text" name="MinimumElevation" value="<?php echo $row['minimumelevation']; ?>" title = "Enter the minimum distance in meters above or below (negetive) sea level of this locality." size="11" /></td>
+      <td><input type="text" name="MinimumElevation" value="<?php echo $row['minimumelevation']; ?>" title = "Enter the minimum distance in meters above or below (negative) sea level of this locality." size="11" /></td>
     </tr>
 		<tr>
       <td><b>MaximumElevation: </b></td>
-      <td><input type="text" name="MaximumElevation" value="<?php echo $row['maximumelevation']; ?>" title = "Enter the maximum distance in meters above or below (negetive) sea level of this locality." size="11" /></td>
+      <td><input type="text" name="MaximumElevation" value="<?php echo $row['maximumelevation']; ?>" title = "Enter the maximum distance in meters above or below (negative) sea level of this locality." size="11" /></td>
     </tr>
 		<tr>
       <td><b>MinimumDepth: </b></td>
