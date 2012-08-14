@@ -17,7 +17,7 @@ $(document).ready(function(){
 	        var $targ = $(e.target);
 	        if (!$targ.is("textarea") && !$targ.is(":button,:submit")) {
 	            var focusNext = false;
-	            $(this).find(":input:visible:not([disabled],[readonly]), a").each(function(){
+	            $(this).find(":input:visible:not([disabled],[readonly]), a").each(function(e){
 	                if (this === e.target) {
 	                    focusNext = true;
 	                }
@@ -169,8 +169,6 @@ $(document).ready(function(){
 		rules: {
 			title: "required",
 			comment: "required",
-			sourceOfId: "required",
-			resourcesused: "required",
 			Taxon: { required: function(element) { 
 				var val = $("#typeDetAnnotation").val();
 				return ($('#ddiv').is(':visible') && (val == 'agree' || val == 'disagree' || val == 'agreewq'));
@@ -179,8 +177,8 @@ $(document).ready(function(){
 				var val = $("#typeDetAnnotation").val();
 				return ($('#ddiv').is(':visible') && val == 'newdet');
 			}},
-		    sourceOfId: {required: "div#parent:visible"},
-		    resourcesused: {required: "div#parent:visible"}
+      sourceOfId: {required: "div#parent:visible"},
+      resourcesused: {required: "div#parent:visible"}
 		},
 		messages: {
 			title: "Title is required",
@@ -188,7 +186,6 @@ $(document).ready(function(){
 			sourceOfId: "Source of identification required",
 			Taxon: "Please select Taxon",
 			Determination: "Please select taxon name",
-			sourceOfId: "Source of id required",
 			resourcesused: "Resources used in determination is required"
 		},
 		submitHandler: function(form) {
@@ -249,7 +246,6 @@ $(document).ready(function(){
 	if ($('#frmMemberGroup').length > 0) {
 		$.validator.addMethod("checkRole", function(value, element) { 
 			var cnt = 0;
-			var bool;
 			$('.duplicate').each(function(){
 				cnt += $(this).val() == 'coordinator' ? 1 : 0;
 			});
@@ -357,7 +353,6 @@ $(document).ready(function(){
 			/* Locality */
 			Latitude: { number: true, min: 0, max: 90 },
 			Longitude: { number: true, min: 0, max: 180 },
-			CoordinatePrecision: { number: true },
 			CoordinatePrecision: { number: true },
 			MinimumElevation: { number: true },
 			MaximumElevation: { number: true },
