@@ -351,7 +351,7 @@ $(document).ready(function(){
 			StandardImage: { number: true, remote: "/ajax/checkFormValues.php?action=check_image" },
 			
 			/* Image */
-			ImageFile: { required: function(element) { return $("#imageThumb").length == 0; } },
+			ImageFile: { required: function(element) { return $("#imageThumb").length == 0; }, accept: "jpg|jpeg|png|gif|tif|tiff|bmp" },
 			Magnification: { number: true },
 			
 			/* Locality */
@@ -421,7 +421,7 @@ $(document).ready(function(){
 			StandardImage: { number: "Please enter decimals only", remote: jQuery.format("Image Id does not exist") },
 			
 			/* Image */
-			ImageFile: "Image required",
+			ImageFile: {required: "Image required", accept: "File type not allowed" },
 			SpecimenId: { required: "Specimen required", remote: jQuery.format("Specimen Id does not exist") },
 			ViewId: { required: "View Id required", remote: jQuery.format("View Id does not exist") },
 			Magnification: { number: "Please enter decimals only" },
