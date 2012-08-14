@@ -77,7 +77,7 @@ if ($locationArray['minimumelevation'] == '' || $locationArray['maximumelevation
         </tr>';
 } else {
   echo '<tr>
-          <th>Elevation (m):</th><td> ' . $locationArray['minimumelevation'] . ' &nbsp;-&nbsp; ' . $locationArray['maximumelevation'] . ' </td>
+          <th>Elevation (m):</th><td> ' . $locationArray['minimumelevation'] . ' to ' . $locationArray['maximumelevation'] . ' </td>
         </tr>';
 }
 
@@ -87,7 +87,7 @@ if ($locationArray['minimumdepth'] == '' || $locationArray['maximumdepth'] == ''
         </tr>';
 } else {
   echo '<tr>
-          <th>Depth (m):</th><td> ' . $locationArray['minimumdepth'] . ' &nbsp;-&nbsp; ' . $locationArray['maximumdepth'] . '</td>
+          <th>Depth (m):</th><td> ' . $locationArray['minimumdepth'] . ' to ' . $locationArray['maximumdepth'] . '</td>
         </tr>';
 }
 
