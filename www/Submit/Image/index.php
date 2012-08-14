@@ -69,11 +69,13 @@ function checkImageMessage($id, $code) {
   } elseif ($code == 6) {
     echo '<div class="searchError">BaseObject id empty</div><br /><br />' . "\n";
   } elseif ($code == 7) {
-    echo '<div class="searchError">Error processing remote image.</div><br /><br />' . "\n";
+    echo '<div class="searchError">Error processing remote image</div><br /><br />' . "\n";
   } elseif ($code == 8) {
     echo '<div class="searchError">Error retrieving access number for Image</div><br /><br />' . "\n";
   } elseif ($code == 9) {
     echo '<div class="searchError">File input cannot be empty</div><br /><br />' . "\n";
+  } elseif ($code == 10) {
+    echo '<div class="searchError">Image file type not allowed</div><br /><br />' . "\n";
   }
   return;
 }

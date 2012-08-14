@@ -74,8 +74,23 @@ if(!$publishDate) {
 	$dateToPublish = date("Y-m-d", strtotime($publishDate));
 }
 
-
 if (!empty($_FILES['ImageFile']['tmp_name'])) {
+  // Accepted image types
+  $image_mimes = array(
+    'image/bmp',
+    'image/gif',
+    'image/jpeg',
+    'image/tiff',
+    'image/png',
+  );
+  
+  $finfo = new finfo(FILEINFO_MIME_TYPE);
+  $mime_type = $finfo->file($_FILES['ImageFile']['tmp_name']);
+  if (!in_array($mime_type, $image_mimes)) {
+    header("location: $indexUrl&code=10");
+    exit;
+  }
+   
   $image_error = FALSE;
   
 	// Insert Image Object returning id
