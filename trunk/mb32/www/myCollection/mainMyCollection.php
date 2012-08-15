@@ -335,16 +335,20 @@ function showTile($i, $row, $imgSize, $imgType, $iconFlag){
 			} else {
 				$annotationUrl =  $config->domain.'Annotation/index.php?id='  ;
 			}
-			// if image (or object) has an annotation, display a different icon, that opens up the first annotation.  User can add additional annotations from there.
-			if ($annotationId){
-				echo '<a href="'.$config->domain.'?id='.$annotationId.'">';
-				echo getAnnotateImageTag("Click to Annotate", 'class="collectionIcon" align="top"');
-				echo '</a>';
-			} else {
-				echo'<a href="'.$annotationUrl.$objectId.'" >';
-				echo getAnnotateImageTag("Click to Annotate", 'class="collectionIcon"');
-				echo '</a>';
-			}
+			// if image (or object) has an annotation, display a different icon, that opens up the first annotation.
+      // User can add additional annotations from there.
+      // Do not show annotate icon for View or Locality
+			if ($objectTypeId != 'View' && $objectTypeId != 'Locality') {
+        if ($annotationId){
+          echo '<a href="'.$config->domain.'?id='.$annotationId.'">';
+          echo getAnnotateImageTag("Click to Annotate", 'class="collectionIcon" align="top"');
+          echo '</a>';
+        } else {
+          echo'<a href="'.$annotationUrl.$objectId.'" >';
+          echo getAnnotateImageTag("Click to Annotate", 'class="collectionIcon"');
+          echo '</a>';
+        }
+      }
 			echo showDetailTag($objectId);
 		}
 		echo '</div>';
