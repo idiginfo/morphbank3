@@ -60,8 +60,9 @@ function mainnewsText()
           $newsOutput .= '<table><tr><td valign="top"><h2>' . $newsArray['title'] . ' </h2><a href="' . $config->domain . 'Show/?id=' . $newsArray['id'] . '"><img src="../../style/webImages/infoIcon.png" /></a> <br />(Posted on: ' . $newsArray['date'] . ')  </i><br /><br />';
           $newsWordsArray = explode(" ", $newsArray['body']);
           for ($i = 0; $i <= 1000; $i++)
-              $newsOutput .= $newsWordsArray[$i] . " </td>";
-        
+            $newsOutput .= $newsWordsArray[$i] . " ";
+            $newsOutput .= '</td>';
+          
           if ($newsArray['image'] != '') {
               $newsOutput .= '<td><img src="' . $newsArray['image'] . '" width="200px" alt="news" />';
           }
