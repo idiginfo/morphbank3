@@ -338,7 +338,7 @@ function showTile($i, $row, $imgSize, $imgType, $iconFlag){
 			// if image (or object) has an annotation, display a different icon, that opens up the first annotation.
       // User can add additional annotations from there.
       // Do not show annotate icon for View or Locality
-			if ($objectTypeId != 'View' && $objectTypeId != 'Locality') {
+			if ($objectTypeId != 'View' && $objectTypeId != 'Locality' && $objectTypeId != 'Specimen') {
         if ($annotationId){
           echo '<a href="'.$config->domain.'?id='.$annotationId.'">';
           echo getAnnotateImageTag("Click to Annotate", 'class="collectionIcon" align="top"');
