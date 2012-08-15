@@ -77,15 +77,15 @@
            <center>
        <table>
          <tr>
-              <td><a href="/?id=464608" title="Anglerfish"><img src="http://morphbank.net/?id=114691&amp;imgType=thumb" height="80"/></a>
+              <td><a href="/?id=464608" title="Anglerfish"><img src="http://morphbank.net/?id=114691&imgType=thumb" height="80"/></a>
           <br />Anglerfish</td>
-              <td><a href="/?id=464705" title="Chromista"><img src="http://morphbank.net/?id=227161&amp;imgType=jpg" height="80" /></a>
+              <td><a href="/?id=464705" title="Chromista"><img src="http://morphbank.net/?id=227161&imgType=jpg" height="80" /></a>
           <br />Chromista</td>
-              <td><a href="/?id=464706" title="Manduca blackburni"><img src="http://morphbank.net/?id=234147&amp;imgType=thumb" height="80" /></a>
+              <td><a href="/?id=464706" title="Manduca blackburni"><img src="http://morphbank.net/?id=234147&imgType=thumb" height="80" /></a>
           <br /><i>M. blackburni</i></td>
-              <td><a href="/?id=237144" title="Aristolochia schultzeana"><img src="http://morphbank.net/?id=401844&amp;imgType=thumb" height="80"/></a>
+              <td><a href="/?id=237144" title="Aristolochia schultzeana"><img src="http://morphbank.net/?id=401844&imgType=thumb" height="80"/></a>
           <br />Aristolochia</td>
-              <td><a href="/?id=77655" title="Cynipidae"><img src="http://morphbank.net/?id=70268&amp;imgType=thumb" height="80"/></a>
+              <td><a href="/?id=77655" title="Cynipidae"><img src="http://morphbank.net/?id=70268&imgType=thumb" height="80"/></a>
           <br />Cynipidae</td>
         </tr>
       </table>
