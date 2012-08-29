@@ -96,6 +96,22 @@ $imgUpdater->addField('userId', $contributor, $imgObj['userid']);
 $imgUpdater->addField('eol', $eol, $imgObj['eol']);
 	
 if (!empty($_FILES['ImageFile']['tmp_name'])) {
+  // Accepted image types
+  $image_mimes = array(
+    'image/bmp',
+    'image/gif',
+    'image/jpeg',
+    'image/tiff',
+    'image/png',
+  );
+  
+  $finfo = new finfo(FILEINFO_MIME_TYPE);
+  $mime_type = $finfo->file($_FILES['ImageFile']['tmp_name']);
+  if (!in_array($mime_type, $image_mimes)) {
+    header("location: $indexUrl&code=33");
+    exit;
+  }
+  
   $image_error = FALSE;
 	$newFileName = $_FILES['ImageFile']['name'];
 	$tmpName = $_FILES['ImageFile']['tmp_name'];
