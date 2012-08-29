@@ -96,6 +96,8 @@ function checkEditImageMsg($id, $code) {
 		echo '<div class="searchError">Error deleting external link/reference</div><br /><br />'."\n";
 	} elseif ($code == 32) {//
 		echo "<h3>You have successfully deleted an external link/reference</h3><br /><br />\n";
+	} elseif ($code == 33) {//
+		echo '<div class="searchError">Image file type not allowed</div><br /><br />' . "\n";
 	}
 	return;
 }
