@@ -6,6 +6,7 @@
  */
 
 include_once('head.inc.php');
+include_once(APPLICATION_PATH . '/webfilez/embed.php');
 
 
 // The beginnig of HTML
@@ -62,7 +63,7 @@ $authorized = checkAuthorization(null, $userId, $groupId, 'add');
 echo '<div class="mainGenericContainer" style="width:900px; height: 100%">';
 if($authorized == true) {
 $webFilezUrl = $config->appServerBaseUrl . 'webfilez/';
-  $folderName  = '$config->filesouce' . "/" . $objInfo->username;
+  $folderName  = $config->fileSource . $objInfo->username;
   embedWebfilezCss($webFilezUrl);
   embedWebfilezHtml($webFilezUrl, $folderName);
 }
