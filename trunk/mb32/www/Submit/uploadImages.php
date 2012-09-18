@@ -23,30 +23,30 @@ $javascript = '
 <script type="text/javascript" src="'.$config->domain.'js/calendar/lang/calendar-en.js"></script>
 <script type="text/javascript" src="'.$config->domain.'js/calendar/calendar-setup.js"></script>
 
-//<script language="javascript" type="text/javascript">
-//	// load the content and filters dynamically from their ajax scripts 
-//	window.onload = function () {
-//		// This way did not work well, due to the page would only display after the ajax was done loading.
-//		// Spry.Utils.updateContent(contentId, contentUrl+"?id='.$tab.'");
-//		
-//		if ("'.$tab.'" != "imageTab") {
-//			document.getElementById("'.$tab.'").className = "TabbedPanelsTabSelected";
-//			document.getElementById("imageTab").className = "TabbedPanelsTab";	
-//			document.resultForm.currentTab.value="'.$tab.'";	
-//			previous = document.getElementById("'.$tab.'"); // this is for the tab
-//			previousPage = "'.$config->domain.'MyManager/content.php?id='.$tab.'";
-//		}
-//		
-//		updateImageFilters("'.$tab.'");
-//		
-//		//var onLoadPage = contentUrl+"?id='.$tab.'";
-//		var onLoadPage = "'.$myManagerFormValues.'";
-//		setTimeout(function(){changePage(onLoadPage)}, 10 );
-//		
-//		setFooter();	
-//	}
-//	
-//</script>';
+<script language="javascript" type="text/javascript">
+	// load the content and filters dynamically from their ajax scripts 
+	window.onload = function () {
+		// This way did not work well, due to the page would only display after the ajax was done loading.
+		// Spry.Utils.updateContent(contentId, contentUrl+"?id='.$tab.'");
+		
+		if ("'.$tab.'" != "imageTab") {
+			document.getElementById("'.$tab.'").className = "TabbedPanelsTabSelected";
+			document.getElementById("imageTab").className = "TabbedPanelsTab";	
+			document.resultForm.currentTab.value="'.$tab.'";	
+			previous = document.getElementById("'.$tab.'"); // this is for the tab
+			previousPage = "'.$config->domain.'MyManager/content.php?id='.$tab.'";
+		}
+		
+		updateImageFilters("'.$tab.'");
+		
+		//var onLoadPage = contentUrl+"?id='.$tab.'";
+		var onLoadPage = "'.$myManagerFormValues.'";
+		setTimeout(function(){changePage(onLoadPage)}, 10 );
+		
+		setFooter();	
+	}
+	
+</script>';
 
 initHtml( $title, $javascript, NULL);
 
