@@ -6,7 +6,7 @@
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * 
+ *
  * Contributors:
  *   Fredrik Ronquist - conceptual modeling and interaction design
  *   Austin Mast - conceptual modeling and interaction design
@@ -206,10 +206,10 @@ if (isMdb2Error($affRows, 'Create user group', 6)) {
  * Add user to mailing list if one exists and they subscribe using CURL
  * Success: preg_match finds "Successfully subscribed" in html
  * Failure: preg_match finds "Error subscribing" in html
- * 
+ *
  * This operation is based on Mailman mailing list program.
  * Different options may be required if a different mailing list is used
- * 
+ *
  */
 if ($_POST['subscription'] == 1 && $config->mailList && function_exists('curl_version') == "Enabled") {
   $postData['subscribees'] = $email;  // New user email
@@ -270,7 +270,7 @@ if ($action == 'new') {
   $headers['From'] = $config->email;
   $headers['To'] = $config->email;
   $headers['Subject'] = $config->appName . " - New User Account";
-  $params['sendmail_path'] = '/usr/sbin/sendmail';
+  $params['sendmail_path'] = $config->sendMail;
 
   // Create the mail object using the Mail::factory method
   require('Mail.php');
