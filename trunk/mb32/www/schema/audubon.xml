@@ -17,7 +17,7 @@
 		(DE 2011-10-13)
     -->
     
-    <!-- Document edited by Guillaume Jimenez 01/24/12 -->
+    <!-- Document edited by Guillaume Jimenez 07/06/12 -->
 
     <!--Management Vocabulary-->
     <property name="identifier" namespace="http://purl.org/dc/terms/"
@@ -51,10 +51,10 @@
         qualName="http://purl.org/dc/terms/modified" required="false" type="date"
         group="Management Vocabulary"
         examples="1981-05-01"/>
-    <property name="metadataLanguage" namespace="http://purl.org/dc/terms/"
+    <property name="metadataLanguage" namespace="http://rs.tdwg.org/ac/terms/"
         dc:description="Language of description and other metadata (but not necessarily of the image itself) represented in ISO639-1 or -3."
         dc:relation="http://species-id.net/wiki/Audubon_Core_Term_List#metadataLanguage"
-        qualName="http://purl.org/dc/terms/metadataLanguage" required="true" 
+        qualName="http://rs.tdwg.org/ac/terms/metadataLanguage" required="true" 
         group="Management Vocabulary"
         examples="en"/>
     <property name="providerManagedID" namespace="http://rs.tdwg.org/ac/terms/"
