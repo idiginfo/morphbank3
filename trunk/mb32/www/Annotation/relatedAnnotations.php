@@ -618,7 +618,7 @@ function makeTestLinks($imageId, $imagew, $imageh)
 
 function annotateJS() {
 	
-	include_once("libjs/annotateMenu.php");
+	include_once("js/annotateMenu.php");
 }
 
 
