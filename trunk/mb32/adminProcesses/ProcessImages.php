@@ -38,7 +38,7 @@ $db = connect();
  * Else, use passed in value as id.
  */
 if (empty($argv[1])) {
-    $sql = "select min(id) as id from BaseObject where dateCreated > date_sub(NOW(), interval 3 day) and objectTypeId = 'Image'";
+    $sql = "select min(id) as id from BaseObject where dateCreated > date_sub(NOW(), interval 4 day) and objectTypeId = 'Image'";
     $id = $db->queryOne($sql);
     if (isMdb2Error($result, "Error in min id SQL query", 5)) {
         die("Error in min id SQL query".$result->getUserInfo()." $sql\n");
@@ -88,7 +88,8 @@ while($row = $result->fetchRow()){
     if (!empty($url)) $fileName = $url;
     list($message, $w, $h) = fixImageFiles($id, $fileName, $imageType, $problems, $FILE_SOURCE_DIR, $width, $height);
     if($message[0]=='N'){// error in processing
-        echo $message."\n";
+	$message.="\nerror in processing";
+        //echo $message."\n";
     } else if (empty($width) || $width != $w || $height!=$h){
         // update width height
         $params = array($w, $h, $id);
@@ -99,7 +100,7 @@ while($row = $result->fetchRow()){
     } else {
         $message .= ":width/height unchanged ";
     }
-echo "$message\n";
+    echo "$message\n";
 
     if ($imageCount % 1000 == 0){
         echo "No. images: $imageCount\tlast id: $id\tlast message: $message\t last width $w height $h layers $l\n";
