@@ -155,7 +155,7 @@ function reorganizeImageFiles($id, $fileName, $imageType=null, $problems = null,
 
 			// remove tilepic
 			if (file_exists($tpcImgPath)){
-				unlink($tpcImgPath);
+				//unlink($tpcImgPath);
 				$message.=": removed tpc";
 			}
 		}

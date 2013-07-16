@@ -83,7 +83,7 @@ echo date("H:i:s\n");
 
 function copyOriginalFile($id, $imageType){
 
-	//$message = 'File $id ';
+	$message = 'File $id ';
 
 	if ($imageType=="jpg") $imageType = "jpeg"; // jpg original stored in jpeg
 	$originalImgPath = getImageFilePath($id, $imageType);
