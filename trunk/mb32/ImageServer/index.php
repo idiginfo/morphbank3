@@ -85,6 +85,11 @@ if (!empty($id)) {
 
 //TODO respond to unauthorized image or no image id
 
+if ( $image->getAuthorized()!=true){
+header('Content-Type: image/png');
+readfile($config->webPath.'/style/webImages/'.$config->imgPrivate);
+return;
+}
 if (empty($config->imgServerAltUrl) || serverRequest($requestor)) {
 	// no one else to ask
 	header("HTTP/1.1 401 Unauthorized");
