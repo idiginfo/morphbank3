@@ -5,7 +5,7 @@
 * are made available under the terms of the GNU Public License v2.0
 * which accompanies this distribution, and is available at
 * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-* 
+*
 * Contributors:
 *   Fredrik Ronquist - conceptual modeling and interaction design
 *   Austin Mast - conceptual modeling and interaction design
@@ -88,7 +88,7 @@ function showPopUrl($url, $opener){
 }
 
 function showCalendarTag($i, $id){
-	
+
 	return 	'<a href="#" onclick="showCalendar(\''.$id.'\', \'dateTest_'.$i.'\', this); return false;">'
 	.'<img id="calId'.$i.'" border="0" src="/style/webImages/calendar.gif"'
 	. 'width="16" height="16" alt = "Edit date" title="Edit Date" /></a>';
@@ -104,7 +104,7 @@ function publishNowTag($id, $date, $i, $userId, $groupId){
 
 function showDetailTag($id, $pop = false, $opener = "", $extraUrlField = "",
 $target = 'target="imageshow"'){
-	
+
 	$tag = '<a href="'.showUrl($id, null, false, $extraUrlField).'" ' .$target .'>'
 	.'<img src="/style/webImages/infoIcon-trans.png"'
 	.' width="16" height="16" class="collectionIcon" alt="Info"'
@@ -130,7 +130,7 @@ function getUpdateTitleTag($id, $i, $userId){
 }
 
 function getCalendarTag($id, $i){
-	
+
 	$tag = '<a href="#" onclick="showCalendar(\''.$id.'\', \'dateTest_'.$i
 	.'\', this); return false;">';
 	$tag .= '<img id="calId'.$i.'" border="0" src="/style/webImages/calendar.gif" width="16" height="16" alt = "Edit date" title="Edit Date" />"';
@@ -152,20 +152,20 @@ function getDateToPublishTag ($id, $i, $dateToPublish, $userId, $groupId, $now){
 }
 
 function getCameraViewTag(){
-	
+
 	$tag = '<img border="0" src="/style/webImages/camera-min16x12.gif" title="Click to view" alt="images" />';
 	return $tag;
 }
 
 function getInfoImageTag(){
-	
+
 	$tag = '<img border="0" src="/style/webImages/infoIcon.png" alt = "Info" '
 	. 'title="Click for more details" />';
 	return $tag;
 }
 
 function getCopyImageTag($title){
-	
+
 	$tag = '<img border="0" src="/style/webImages/copy-trans.png" width="16" height="16"'
 	.' alt = "Copy" title="'. $title . '" /></a>';
 	return $tag;
@@ -180,14 +180,14 @@ function getEditObjectLink($id, $title = 'Edit', $showTitle = false){
 }
 
 function getEditImageTag($title="Edit"){
-	
+
 	$tag = '<img border="0" src="/style/webImages/edit-trans.png" width="16" height="16"'
 	.' alt = "' . "Edit" . '" title="'.$title.'" />';
 	return $tag;
 }
 
 function getAnnotateImageTag($title = 'Click to Annotate', $extraAttrs = '') {
-	
+
 	$tag = '<img src="/style/webImages/annotate-trans.png" width="16" height="16"  '
 	.'align="top" alt="image" title="'.$title.'" '.$extraAttrs.'/>';
 	return $tag;
@@ -203,7 +203,7 @@ function fsiViewerShowTag($id){
 }
 
 function fsiViewerLink($id){
-	
+
 	$tag =  fsiViewerShowTag($id);
 	$tag .=  '<img src="/style/webImages/magnifyShadow-trans.png" height="16" width="16" alt="Image Viewer" />&nbsp;FSI Viewer</a>';
 	return $tag;
@@ -256,8 +256,8 @@ function getImageViewerPostitTag($id, $imgUrl, $width, $height, $postItContents)
 
 function imageServerTpcFrame($imageId, $width, $height, $sessionId = null){
 	global $config;
-	//$imageTpcTag = $config->imgServerUrl."bischen/viewDiv.php?id=$imageId";
-	$imageTpcTag = $config->imgServerUrl."Image/viewDiv.php?id=$imageId";
+  
+	$imageTpcTag = $config->imgServerUrl."Image/viewFrame.php?id=$imageId";
 	$imageTpcTag .= "&width=$width&height=$height";
 	if (!empty($sessionId)){
 		$imageTpcTag .= '&sessionId='.$sessionId;
@@ -319,7 +319,7 @@ function bischenViewerShowTag($id, $sessionId = null){
 }
 
 function bischenViewerLink($id, $sessionId = null, $label='', $title ='View this image'){
-	
+
 	$imageId = getObjectImageId($id);
 	if (empty($imageId)) return "";
 	$tag =  bischenViewerShowTag($imageId, $sessionId);
@@ -370,7 +370,7 @@ function showUserGroup($userId, $userName, $groupId, $groupName){
 
 /**
  * Make a GET parameter string from $_REQUEST values
- * Passing a parameter in case we wish to change the 
+ * Passing a parameter in case we wish to change the
  * opeartion of this function to work with arrays
  * @param $request pass paramter array
  * @return string
