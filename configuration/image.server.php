@@ -51,9 +51,9 @@ defined('APPLICATION_PATH') || define('APPLICATION_PATH', realpath(dirname(__FIL
  */
 require('Config.php');
 $c = new Config();
-$db =& $c->parseConfig(APPLICATION_PATH . '/configuration/db.ini', "IniFile")->toArray();
-$app =& $c->parseConfig(APPLICATION_PATH . '/configuration/config.ini', "IniFile")->toArray();
-$config = (object) array_merge($db['root'], $app['root']);
+$dbConfig =& $c->parseConfig(APPLICATION_PATH . '/configuration/db.ini', "IniFile")->toArray();
+$appConfig =& $c->parseConfig(APPLICATION_PATH . '/configuration/config.ini', "IniFile")->toArray();
+$config = (object) array_merge($dbConfig['root'], $appConfig['root']);
 
 /**
  * Set up error logger if logging turned on
