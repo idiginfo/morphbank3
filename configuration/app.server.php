@@ -5,7 +5,7 @@
 * are made available under the terms of the GNU Public License v2.0
 * which accompanies this distribution, and is available at
 * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-* 
+*
 * Contributors:
 *   Fredrik Ronquist - conceptual modeling and interaction design
 *   Austin Mast - conceptual modeling and interaction design
@@ -55,8 +55,9 @@ if (!file_exists(APPLICATION_PATH . '/configuration/config.ini')) {
  */
 require('Config.php');
 $c = new Config();
-$root =& $c->parseConfig(APPLICATION_PATH . '/configuration/config.ini', "IniFile")->toArray();
-$config = (object) $root['root'];
+$db =& $c->parseConfig(APPLICATION_PATH . '/configuration/db.ini', "IniFile")->toArray();
+$app =& $c->parseConfig(APPLICATION_PATH . '/configuration/config.ini', "IniFile")->toArray();
+$config = (object) array_merge($db['root'], $app['root']);
 
 /**
  * Set up error logger if logging turned on
