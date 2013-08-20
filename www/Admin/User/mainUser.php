@@ -86,7 +86,7 @@ function buildUserTable($array) {
 	if ($array) {
 		$html .= '<tr><th>User Id</th><th>User Name</th><th>Name</th><th>Email</th><th>Status</th><tr>'."\n";
 		foreach ($array as $row) {
-      $status = check_objects($row['id']) == true ? 
+      $status = (check_objects($row['id']) == true && $row['status'] == 0) ? 
               '<a href="/Admin/User/?id='.$row['id'].'&action=delete">Inactive</a>' : 
               'Active';
       $html .= '<tr>'."\n";
