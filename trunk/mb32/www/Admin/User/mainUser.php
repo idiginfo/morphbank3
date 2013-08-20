@@ -84,13 +84,17 @@ function buildUserTable($array) {
 	$html = '<br /><br />'."\n";
 	$html .= '<table width="100%" border="1" cellpadding="5">'."\n";
 	if ($array) {
-		$html .= '<tr><th>User Id</th><th>User Name</th><th>Name</th><th>Email</th><tr>'."\n";
+		$html .= '<tr><th>User Id</th><th>User Name</th><th>Name</th><th>Email</th><th>Status</th><tr>'."\n";
 		foreach ($array as $row) {
-			$html .= '<tr>'."\n";
+      $status = check_objects($row['id']) == true ? 
+              '<a href="/Admin/User/?id='.$row['id'].'&action=delete">Inactive</a>' : 
+              'Active';
+      $html .= '<tr>'."\n";
 			$html .= '<td><a href="edit/'.$row['id'].'">'.$row['id'].'</a></td>';
 			$html .= '<td>'.$row['uin'].'</td>';
 			$html .= '<td>'.$row['name'].'</td>';
 			$html .= '<td>'.$row['email'].'</td>';
+      $html .= '<td>'.$status.'</td>';
 			$html .= '</tr>'."\n";
 		}
 	} else {
@@ -98,6 +102,18 @@ function buildUserTable($array) {
 	}
 	$html .= '</table>';
 	return $html;
+}
+
+/**
+ * Check if user has objects. If so, cannot delete.
+ */
+function check_objects($id) {
+  $db = connect();
+  $sql = "select count(*) as count from BaseObject where userId = ?";
+  $count = $db->getOne($sql, null, array($id));
+  isMdb2Error($count, "Check BaseObjects exist for user");
+  
+  return $count == 0 ? true : false;
 }
 
 /**
@@ -145,6 +161,74 @@ function editUser($id) {
 	}
 	showForm('edit', $row);
 	return;
+}
+
+/**
+ * Used to delete inactive users
+ */
+function deleteUser($id) {
+  $db = connect();
+  
+  $sql = "select id from Groups where groupManagerId = ?";
+  $groupId = $db->getOne($sql, null, array($id));
+  
+  // delete from UserGroup where user = user id;
+  $sql = "delete from UserGroup where user = ?";
+  $stmt = $db->prepare($sql);
+  isMdb2Error($stmt, "Error preparing query to delete UserGroup");
+  $affRows = $stmt->execute(array($id));
+  isMdb2Error($affRows, "Error executing query to delete UserGroup");
+  $stmt->free();
+  
+  // delete from Groups where groupManagerId = user id;
+  $sql = "delete from Groups where groupManagerId = ?";
+  $stmt = $db->prepare($sql);
+  isMdb2Error($stmt, "Error preparing query to delete Groups");
+  $affRows = $stmt->execute(array($id));
+  isMdb2Error($affRows, "Error executing query to delete Groups");
+  $stmt->free();
+  
+  // delete from User where id = user id;;
+  $sql = "delete from User where id = ?";
+  $stmt = $db->prepare($sql);
+  isMdb2Error($stmt, "Error preparing query to delete User");
+  $affRows = $stmt->execute(array($id));
+  isMdb2Error($affRows, "Error executing query to delete User");
+  $stmt->free();
+  
+  // delete from Keywords where id = group id;
+  $sql = "delete from Keywords where id = ?";
+  $stmt = $db->prepare($sql);
+  isMdb2Error($stmt, "Error preparing query to delete Group keywords");
+  $affRows = $stmt->execute(array($groupId));
+  isMdb2Error($affRows, "Error executing query to delete Group keywords");
+  $stmt->free();
+  
+  // delete from Keywords where id = user id;
+  $sql = "delete from Keywords where id = ?";
+  $stmt = $db->prepare($sql);
+  isMdb2Error($stmt, "Error preparing query to delete User keywords");
+  $affRows = $stmt->execute(array($id));
+  isMdb2Error($affRows, "Error executing query to delete User keywords");
+  $stmt->free();
+  
+  // delete from BaseObject where id =  user id;
+  $sql = "delete from BaseObject where id = ?";
+  $stmt = $db->prepare($sql);
+  isMdb2Error($stmt, "Error preparing query to delete BaseObject user");
+  $affRows = $stmt->execute(array($id));
+  isMdb2Error($affRows, "Error executing query to delete BaseObject user");
+  $stmt->free();
+  
+  // delete from BaseObject where id = group id;
+  $sql = "delete from BaseObject where id = ?";
+  $stmt = $db->prepare($sql);
+  isMdb2Error($stmt, "Error preparing query to delete BaseObject group");
+  $affRows = $stmt->execute(array($groupId));
+  isMdb2Error($affRows, "Error executing query to delete BaseObject group");
+  $stmt->free();
+
+  echo '<br /><br /><div class="searchError">Inactive user deleted</div>';
 }
 
 /**
@@ -299,7 +383,9 @@ function getMessage($code) {
 		return '<br /><br /><div class="searchError">Please fill in all required fields</div>'."\n";
 	} elseif ($code == 18) {
 		return '<br /><br /><div class="searchError">Username already exists</div>'."\n";
-	} 
+	} elseif ($code == 19) {
+		return '<br /><br /><div class="searchError">Email already exists</div>'."\n";
+	}
 	return;
 }
 

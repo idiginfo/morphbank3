@@ -77,6 +77,8 @@ if ($groupId != $config->adminGroup && $config->disableUserFunctions) {
   } elseif ($action == 'cv') {
       echo getMessage($code);
       viewCV($_REQUEST);
+  } elseif ($action == "delete") {
+      deleteUser($id);
   }
 }
 

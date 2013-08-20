@@ -112,6 +112,18 @@ if ($count > 0) {
   exit;
 }
 
+// Check email is not already used
+$sql = "select count(*) from User where email = ?";
+$count = $db->getOne($sql, array('integer'), array($email));
+if (isMdb2Error($count, "select existing email", 6)) {
+  header("location: $indexUrl&code=3&$queryString");
+  exit;
+}
+if ($count > 0) {
+  header("location: $indexUrl&code=19&$queryString");
+  exit;
+}
+
 if (empty($userId) || empty($groupId)) {
   $groupId = $config->adminGroup;
   $sql = "SELECT min(userId) as userId FROM `BaseObject` WHERE groupId = $groupId";
