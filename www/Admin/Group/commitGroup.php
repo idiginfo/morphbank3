@@ -37,7 +37,7 @@ if ($groupId != $config->adminGroup) {
 $db = connect();
 $sql = "select count(*) as count from Groups where groupName = ?";
 $count = $db->getOne($sql, null, array($grpName));
-isMdb2Error($name, "Check group name exists");
+isMdb2Error($count, "Check group name exists");
 if ($count > 0) {
 	header("location: $returnUrl?code=3");
 	exit;
