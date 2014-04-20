@@ -66,6 +66,7 @@ create table BaseObject (
     xmlKeywords text, 
     hostServer varchar(500),
     imagesCount int,
+    uuidString varchar(36),
     key userId (userId), 
     key groupId (groupId), 
     key baseSubmittedByfk (submittedBy), 
