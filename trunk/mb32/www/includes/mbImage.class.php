@@ -40,7 +40,7 @@ class mbImage {
 	protected $serverLogo;			// preferred server logo (if exists)
 	protected $originalImgType; // type of image the originaly uploaded image was
 	protected $defaultImage;		// image to show if the image requested doesn't exist or is not allowed to be viewed
-	protected $objInfoRef;			// reference to the sessionHandler object $objInfo
+	protected $objInfoRef;			// reference to the MbSessionHandler object $objInfo
 	public $test;
 
 	// constructor will set up the thumbnail by default

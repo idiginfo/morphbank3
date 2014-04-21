@@ -27,7 +27,7 @@
  @package Morphbank2
  @subpackage security
 
- This script checks user login and sets default session variables using sessionHandler class.
+ This script checks user login and sets default session variables using MbSessionHandler class.
 
  Functions:
  - checkAuthorization - Returs true if the user within the group can perform the function required else returns false.
@@ -207,17 +207,17 @@ function updateGroupInfo($groupname){
 }
 
 /**
- * Get new objInfo sessionHandler from $_SESSION
+ * Get new objInfo MbSessionHandler from $_SESSION
  *
  * @param $sessionId name of session variable
- * @return sessionHandler
+ * @return MbSessionHandler
  */
 function resetObjInfo($sessionVar = 'userInfo'){
 	global $objInfo;
 	if($_SESSION[$sessionVar]){
 		$objInfo = unserialize($_SESSION[$sessionVar]);
 	} else {
-		$objInfo = new sessionHandler();
+		$objInfo = new MbSessionHandler();
 	}
 	return $objInfo;
 }
