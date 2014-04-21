@@ -39,7 +39,7 @@ $limitBy['submitter'] =  isset($_GET['limit_submitter']) ? $_GET['limit_submitte
 $limitBy['current'] =  isset($_GET['limit_current']) ? $_GET['limit_current'] : NULL;
 $limitBy['any'] =  isset($_GET['limit_any']) ? $_GET['limit_any'] : NULL;
 
-$objInfo = new sessionHandler;
+$objInfo = new MbSessionHandler;
 
 if($_SESSION['userInfo']){
 	$objInfo = unserialize($_SESSION['userInfo']);

@@ -43,7 +43,7 @@ if (empty($_REQUEST['sessionId'])) {
 	session_cache_limiter($SESSION_STYLE);
 	session_start();
 	
-	$objInfo = new sessionHandler();
+	$objInfo = new MbSessionHandler();
 	
 	if($_SESSION['userInfo']){
 		$objInfo = unserialize($_SESSION['userInfo']);

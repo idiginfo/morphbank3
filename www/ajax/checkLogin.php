@@ -25,7 +25,7 @@ session_register('userInfo');
 
 include_once ('menu.inc.php');
 
-$objInfo = new sessionHandler();
+$objInfo = new MbSessionHandler();
 
 // call this in separate method, not constructor.
 $objInfo->setDomainName($config->domain);

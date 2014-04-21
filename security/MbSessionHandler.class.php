@@ -22,7 +22,7 @@
 */
 
 /*
- File name: sessionHandler.class .php
+ File name: MbSessionHandler.class .php
  @author Neelima Jammigumpula <jammigum@scs.fsu.edu>
  @package Morphbank2
  @subpackage security
@@ -42,7 +42,7 @@
  */
 require_once('MyManagerSessionHandler.class.php');
 
-class sessionHandler extends MyManagerSessionHandler {
+class MbSessionHandler extends MyManagerSessionHandler {
 
 	public $logged = false;
 

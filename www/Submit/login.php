@@ -32,7 +32,7 @@
 session_register('userInfo');
 
 $link = Adminlogin();
-$mySessionHandler = new sessionHandler($link);      
+$mySessionHandler = new MbSessionHandler($link);
 
 if($mySessionHandler->checkLogin($_POST['username'], $_POST['password'], $link) == 'true') {
 	$_SESSION['userInfo'] = serialize($mySessionHandler);
