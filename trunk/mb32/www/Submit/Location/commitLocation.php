@@ -25,6 +25,7 @@ include_once('updateObjectKeywords.php');
 include_once('extLinksRefs.php');
 include_once('urlFunctions.inc.php');
 include_once('updater.class.php');
+include_once('Classes/UUID.php');
 
 $userId = $objInfo->getUserId();
 $groupId = $objInfo->getUserGroupId();
@@ -64,8 +65,18 @@ $longitude = trim($_POST['Longitude']);
 if($_POST['NS'] == '2') {$latitude = !empty($latitude) ? '-' .$latitude : $latitude; }
 if($_POST['EW'] == '2') {$longitude = !empty($longitude) ? '-' . $longitude : $longitude; }
 
+$uuid = UUID::v4();
 // Insert Object and Locality returning id
-$params = array($db->quote("Locality"), $_POST['Contributor'], $groupId, $userId, "NOW()", $db->quote("Locality added"), $db->quote(NULL));
+$params = array(
+    $db->quote("Locality"),
+    $_POST['Contributor'],
+    $groupId,
+    $userId,
+    "NOW()",
+    $db->quote("Locality added"),
+    $db->quote(NULL),
+    $db->quote($uuid)
+);
 $result = $db->executeStoredProc('CreateObject', $params);
 if(isMdb2Error($result, 'Create Object procedure', false)) {
 	header("location: $indexUrl&code=3");

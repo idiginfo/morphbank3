@@ -29,6 +29,7 @@ include_once('updateObjectKeywords.php');
 include_once('extLinksRefs.php');
 include_once('urlFunctions.inc.php');
 include_once('updater.class.php');
+include_once('Classes/UUID.php');
 
 $userId = $objInfo->getUserId();
 $groupId = $objInfo->getUserGroupId();
@@ -57,8 +58,18 @@ if(!$_POST['DateToPublish']) {
 	$dateToPublish = date("Y-m-d", strtotime($_POST['DateToPublish']));
 }
 
+$uuid = UUID::v4();
 // Insert Object and Specimen returning id
-$params = array($db->quote("Specimen"), $_POST['Contributor'], $groupId, $userId, $db->quote($dateToPublish, 'date'), $db->quote("Specimen added"), $db->quote(NULL));
+$params = array(
+    $db->quote("Specimen"),
+    $_POST['Contributor'],
+    $groupId,
+    $userId,
+    $db->quote($dateToPublish, 'date'),
+    $db->quote("Specimen added"),
+    $db->quote(NULL),
+    $db->quote($uuid)
+);
 $result = $db->executeStoredProc('CreateObject', $params);
 if(isMdb2Error($result, 'Create Object procedure', false)) {
 	header("location: $indexUrl&code=4&id=' . $id");
