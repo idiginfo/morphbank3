@@ -29,7 +29,7 @@
 
 */
 
-session_register('userInfo');
+session_start();
 
 $link = Adminlogin();
 $mySessionHandler = new MbSessionHandler($link);

@@ -21,7 +21,7 @@
 *   Stephen Winner - initial API and implementation
 */
 
-session_register('userInfo');
+session_start();
 
 include_once ('menu.inc.php');
 
