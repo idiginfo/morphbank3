@@ -27,6 +27,7 @@ include_once('updateObjectKeywords.php');
 include_once('extLinksRefs.php');
 include_once('urlFunctions.inc.php');
 include_once('updater.class.php');
+include_once('Classes/UUID.php');
 
 $userId = $objInfo->getUserId();
 $groupId = $objInfo->getUserGroupId();
@@ -38,8 +39,18 @@ if(!checkAuthorization(null, $objInfo->getUserId(), $objInfo->getUserGroupId(), 
 
 $db = connect();
 
+$uuid = UUID::v4();
 // Insert Object and View returning id
-$params = array($db->quote("View"), $_POST['Contributor'], $groupId, $userId, "NOW()", $db->quote("View added"), $db->quote(NULL));
+$params = array(
+    $db->quote("View"),
+    $_POST['Contributor'],
+    $groupId,
+    $userId,
+    "NOW()",
+    $db->quote("View added"),
+    $db->quote(NULL),
+    $db->quote($uuid)
+);
 $result = $db->executeStoredProc('CreateObject', $params);
 if(isMdb2Error($result, 'Create Object procedure', false)) {
 	header("location: $indexUrl&code=2");

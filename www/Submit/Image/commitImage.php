@@ -28,6 +28,7 @@ include_once('processImageRemote.php');
 include_once('updateObjectKeywords.php');
 include_once('extLinksRefs.php');
 include_once('urlFunctions.inc.php');
+include_once('Classes/UUID.php');
 
 $userId = $objInfo->getUserId();
 $groupId = $objInfo->getUserGroupId();
@@ -45,6 +46,7 @@ $contributor     = trim($_REQUEST['Contributor']);
 $copyright       = trim($_REQUEST['Copyright']);
 $photographer    = trim($_REQUEST['photographer']);
 $eol             = isset($_REQUEST['eol']) ? 1 : NULL;
+$uuid            = UUID::v4();
 
 $db = connect();
 
@@ -94,7 +96,16 @@ if (!empty($_FILES['ImageFile']['tmp_name'])) {
   $image_error = FALSE;
   
 	// Insert Image Object returning id
-	$params = array($db->quote("Image"), $contributor, $groupId, $userId, $db->quote($dateToPublish,'date'), $db->quote("Image added"), $db->quote(NULL));
+	$params = array(
+        $db->quote("Image"),
+        $contributor,
+        $groupId,
+        $userId,
+        $db->quote($dateToPublish,'date'),
+        $db->quote("Image added"),
+        $db->quote(NULL),
+        $db->quote($uuid)
+    );
 	$result = $db->executeStoredProc('CreateObject', $params);
 	if(isMdb2Error($result, 'Create Object procedure')) {
 		header("location: $indexUrl&code=4");
