@@ -38,8 +38,15 @@ end//
 
 DROP PROCEDURE IF EXISTS CreateObject;//
 
-CREATE PROCEDURE CreateObject(IN iTableName VARCHAR (50),IN iUserId INT, IN iGroupId INT, 
-    IN iSubBy INT, IN iDateToPublish DATE, IN iDescription VARCHAR(255), IN iName VARCHAR(64)) 
+CREATE PROCEDURE CreateObject(
+  IN iTableName VARCHAR (50),
+  IN iUserId INT,
+  IN iGroupId INT,
+  IN iSubBy INT,
+  IN iDateToPublish DATE,
+  IN iDescription VARCHAR(255),
+  IN iName VARCHAR(64),
+  IN iUUID VARCHAR (36))
 BEGIN
     DECLARE userRec, groupRec, subByRec, oId INT;
     SELECT COUNT(*) INTO userRec FROM User WHERE id = iUserId;
@@ -49,9 +56,9 @@ BEGIN
 
     IF userRec > 0 and groupRec > 0 and subByRec > 0 THEN
         INSERT INTO BaseObject (id, userId, groupId, submittedBy, dateCreated, dateLastModified, dateToPublish,
-            objectTypeId, description, name) 
+            objectTypeId, description, name, uuidString)
             VALUES (oId, iUserId, iGroupId, iSubBy, NOW(), NOW(), iDateToPublish, iTableName, 
-            iDescription, iName);
+            iDescription, iName, iUUID);
         set @sql = concat("insert into ", iTableName, " (id) values (", oId, ")");
         PREPARE stmt FROM @sql;
         EXECUTE stmt;
