@@ -64,6 +64,8 @@ deny from 62.48.76
 deny from 62.48.77
 deny from 62.48.78
 deny from 62.48.79
+deny from 76.164.224.58
+deny from 72.46.156.115
 allow from all
 
 <Limit GET POST PUT HEAD>

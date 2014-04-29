@@ -38,7 +38,7 @@ $function = $_REQUEST['function'];
 if (empty($function)) $function = 'view';
 $r = '';
 
-include_once ('imageFunctions.php');
+include_once ('/includes/imageFunctions.php');
 
 // get the representative image for the object
 $imageId = getObjectImageId($id);
