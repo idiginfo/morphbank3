@@ -65,7 +65,7 @@ deny from 62.48.77
 deny from 62.48.78
 deny from 62.48.79
 deny from 76.164.224.58
-deny from 72.46.156.115
+deny from 72.46.156. #1.2.3. Blocks IP range 72.46.156.0 to 72.46.156.255
 allow from all
 
 <Limit GET POST PUT HEAD>
