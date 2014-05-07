@@ -24,7 +24,7 @@
 // Config script
 include_once('head.inc.php');
 
-include_once('Presentation.php');
+include_once('Presentations.php');
 // The beginnig of HTML
 $title =  'Presentatons and Posters';
 initHtml( $title, NULL, NULL);
