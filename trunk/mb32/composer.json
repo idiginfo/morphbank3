@@ -7,7 +7,7 @@
                 "version": "3.0",
                 "source": {
                     "type": "svn",
-                    "url": "http://sourceforge.net/p/biodivimage/code/HEAD/tree/trunk/mb32/"
+                    "url": "https://svn.code.sf.net/p/biodivimage/code/trunk/mb32"
                 }
             }
         }
