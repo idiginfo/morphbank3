@@ -3,7 +3,7 @@
         {
             "type": "package",
             "package": {
-                "name": "morphbank/morphbank",
+                "name": "morphbank",
                 "version": "3.0",
                 "source": {
                     "type": "svn",
