@@ -9,7 +9,11 @@
             "packagist": false,
             "Morphbank": {
                 "svn": {
-                    "url": "https://svn.code.sf.net/p/biodivimage/code/trunk/mb32"
+                    "url": "https://svn.code.sf.net/p/biodivimage/code/trunk/mb32",
+                    "package-path": "mb32",
+                    "trunk-path": "trunk",
+                    "branches-path": false,
+                    "tags-path": false
                 }
             }
         }
