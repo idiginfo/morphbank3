@@ -4,20 +4,6 @@
     "keywords": ["biological", "image", "repository"],
     "license": "GPLv2",
     "version": "3.0",
-    "repositories": [
-        {
-            "packagist": false,
-            "Morphbank": {
-                "svn": {
-                    "url": "https://svn.code.sf.net/p/biodivimage/code/trunk/mb32",
-                    "package-path": "mb32",
-                    "trunk-path": "trunk",
-                    "branches-path": false,
-                    "tags-path": false
-                }
-            }
-        }
-    ],
     "require": {
         "php": ">=5.3.0"
     }
