@@ -20,7 +20,7 @@
  *   Katja Seltmann - initial API and implementation
  *   Stephen Winner - initial API and implementation
  */
-include_once ("HTTP/Request.php");
+include_once ("HTTP/Request2.php");
 
 function checkAuthorization($id, $sessionId = null, $function = 'view'){
 	global $config;
