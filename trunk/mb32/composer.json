@@ -1,0 +1,20 @@
+{
+    "name": "morphbank/morphbank",
+    "description": "Morphbank Biological Image Repository.",
+    "keywords": ["biological", "image", "repository"],
+    "license": "GPLv2",
+    "version": "3.0",
+    "repositories": [
+        {
+            "packagist": false,
+            "Morphbank": {
+                "svn": {
+                    "url": "https://svn.code.sf.net/p/biodivimage/code/trunk/mb32"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
