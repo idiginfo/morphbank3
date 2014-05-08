@@ -6,8 +6,8 @@
                 "name": "morphbank/morphbank",
                 "version": "3.0",
                 "source": {
-                    "url": "http://sourceforge.net/p/biodivimage/code/HEAD/tree/trunk/mb32/",
-                    "type": "svn"
+                    "type": "svn",
+                    "url": "http://sourceforge.net/p/biodivimage/code/HEAD/tree/trunk/mb32/"
                 }
             }
         }
