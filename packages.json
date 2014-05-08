@@ -1,0 +1,18 @@
+{
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "morphbank/morphbank",
+                "version": "3.0",
+                "source": {
+                    "url": "http://sourceforge.net/p/biodivimage/code/HEAD/tree/trunk/mb32/",
+                    "type": "svn"
+                }
+            }
+        }
+    ],
+    "require": {
+        "morphbank/morphbank": "3.0.*"
+    }
+}
