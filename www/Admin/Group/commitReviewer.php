@@ -41,7 +41,16 @@ if (!checkGroupEditAuthorization()) {
 
 $db = connect();
 // Insert BaseObject for User
-$params = array($db->quote("User"), $userId, $groupId, $userId, "NOW()", $db->quote("Added new reviewer to database"), $db->quote(NULL));
+$params = array(
+    $db->quote("User"),
+    $userId,
+    $groupId,
+    $userId,
+    "NOW()",
+    $db->quote("Added new reviewer to database"),
+    $db->quote(NULL),
+    $uuid
+);
 $result = $db->executeStoredProc('CreateObject', $params);
 isMdb2Error($result, 'Create Object procedure');
 $id = $result->fetchOne();
