@@ -22,6 +22,7 @@
 */
 
 include_once('updater.class.php');
+include_once('Classes/UUID.php');
  
 $userId    = $objInfo->getUserId();
 $groupId   = $objInfo->getUserGroupId();
@@ -32,6 +33,7 @@ $uin       = $_POST['uin'];
 $pin       = $_POST['pin'];
 $name      = trim($firstName) . " " . trim($lastName);
 $returnUrl = "/Admin/Group/addReviewer.php";
+$uuid = UUID::v4();
 
 if (!checkGroupEditAuthorization()) {
 	header("location: $returnUrl?id=$gid");

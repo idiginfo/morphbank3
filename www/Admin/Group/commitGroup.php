@@ -22,11 +22,13 @@
 */
 
 include_once('updater.class.php');
+include_once('Classes/UUID.php');
 
 $userId    = $objInfo->getUserId();
 $groupId   = $objInfo->getUserGroupId();
 $grpName   = $_REQUEST['groupname'];
 $returnUrl = '/Admin/Group/addGroup.php';
+$uuid = UUID::v4();
 
 // Check authorization
 if ($groupId != $config->adminGroup) {
@@ -44,7 +46,7 @@ if ($count > 0) {
 }
 
 // Insert BaseObject for Groups
-$params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL));
+$params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL), $uuid);
 $result = $db->executeStoredProc('CreateObject', $params);
 isMdb2Error($result, 'Create Object procedure');
 $gid = $result->fetchOne();
