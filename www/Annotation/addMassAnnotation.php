@@ -26,6 +26,7 @@ include_once('showFunctions.inc.php');
 include_once('updateObjectKeywords.php');
 include_once('updater.class.php');
 include_once('annotateFunctions.php');
+include_once('Classes/UUID.php');
 
 $userId = $objInfo->getUserId();
 $groupId = $objInfo->getUserGroupId();
@@ -115,7 +116,17 @@ foreach ($objArray as $object) {
   
 	
 	//TODO change this into new strategy for create and update
-	$params = array($db->quote("Annotation"), $userId, $groupId, $userId, $db->quote($dateToPublish,'date'), $db->quote("Annotation added"), $db->quote(NULL));
+    $uuid = UUID::v4();
+	$params = array(
+        $db->quote("Annotation"),
+        $userId,
+        $groupId,
+        $userId,
+        $db->quote($dateToPublish,'date'),
+        $db->quote("Annotation added"),
+        $db->quote(NULL),
+        $uuid
+    );
 	$result = $db->executeStoredProc('CreateObject', $params);
 	if(isMdb2Error($result, 'Create Object procedure')) {
 		header("location: $returnUrl&code=4");
