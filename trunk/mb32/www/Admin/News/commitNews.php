@@ -51,7 +51,7 @@ $params = array(
     $db->quote($dateToPublish,'date'),
     $db->quote("News added"),
     $db->quote(NULL),
-    $uuid
+    $db->quote($uuid)
 );
 $result = $db->executeStoredProc('CreateObject', $params);
 if(isMdb2Error($result, 'Create Object procedure', 6)) {

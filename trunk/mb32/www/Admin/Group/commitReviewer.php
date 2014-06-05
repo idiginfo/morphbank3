@@ -49,7 +49,7 @@ $params = array(
     "NOW()",
     $db->quote("Added new reviewer to database"),
     $db->quote(NULL),
-    $uuid
+    $db->quote($uuid)
 );
 $result = $db->executeStoredProc('CreateObject', $params);
 isMdb2Error($result, 'Create Object procedure');
