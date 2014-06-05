@@ -31,9 +31,11 @@ include_once('updateObjectKeywords.php');
 include_once('extLinksRefs.php');
 include_once('urlFunctions.inc.php');
 include_once('updater.class.php');
+include_once('Classes/UUID.php');
 
 $userId = $objInfo->getUserId();
 $groupId = $objInfo->getUserGroupId();
+$uuid = UUID::v4();
 
 // Check authorization
 $indexUrl = 'addPublication.php?'.getParamString($_REQUEST);
@@ -50,7 +52,16 @@ if(!$publishDate) {
 	$dateToPublish = date("Y-m-d", strtotime($publishDate));
 }
 
-$params = array($db->quote("Publication"), $contributor, $groupId, $userId, $db->quote($dateToPublish), $db->quote("Publication added"), $db->quote(NULL));
+$params = array(
+    $db->quote("Publication"),
+    $contributor,
+    $groupId,
+    $userId,
+    $db->quote($dateToPublish),
+    $db->quote("Publication added"),
+    $db->quote(NULL),
+    $uuid
+);
 $result = $db->executeStoredProc('CreateObject', $params);
 if(isMdb2Error($result, 'Create Object procedure', false)) {
 	header("location: $indexUrl&code=2");
