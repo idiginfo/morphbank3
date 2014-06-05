@@ -26,6 +26,7 @@ include_once('objectFunctions.php');
 include_once('updateObjectKeywords.php');
 include_once('urlFunctions.inc.php');
 include_once('spam.php');
+include_once('Classes/UUID.php');
 
 /**
  * Need to get POST array to unset some values
@@ -132,7 +133,17 @@ if (empty($userId) || empty($groupId)) {
 }
 
 // Insert BaseObject for User
-$params = array($db->quote("User"), $userId, $groupId, $userId, "NOW()", $db->quote("User added"), $db->quote(NULL));
+$uuid = UUID::v4();
+$params = array(
+    $db->quote("User"),
+    $userId,
+    $groupId,
+    $userId,
+    "NOW()",
+    $db->quote("User added"),
+    $db->quote(NULL),
+    $uuid
+);
 $result = $db->executeStoredProc('CreateObject', $params);
 if (isMdb2Error($result, 'Create Object procedure', 6)) {
   header("location: $indexUrl&code=9&$queryString");
@@ -142,7 +153,17 @@ $id = $result->fetchOne();
 clear_multi_query($result);
 
 // Insert BaseObject for Groups
-$params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL));
+$uuid  = UUID::v4();
+$params = array(
+    $db->quote("Groups"),
+    $userId,
+    $groupId,
+    $userId,
+    "NOW()",
+    $db->quote("Group added"),
+    $db->quote(NULL),
+    $uuid
+);
 $result = $db->executeStoredProc('CreateObject', $params);
 if (isMdb2Error($result, 'Create Object procedure', 6)) {
   header("location: $editUrl/$id&code=11");
