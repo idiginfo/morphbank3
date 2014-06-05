@@ -142,7 +142,7 @@ $params = array(
     "NOW()",
     $db->quote("User added"),
     $db->quote(NULL),
-    $uuid
+    $db->quote($uuid)
 );
 $result = $db->executeStoredProc('CreateObject', $params);
 if (isMdb2Error($result, 'Create Object procedure', 6)) {
@@ -162,7 +162,7 @@ $params = array(
     "NOW()",
     $db->quote("Group added"),
     $db->quote(NULL),
-    $uuid
+    $db->quote($uuid)
 );
 $result = $db->executeStoredProc('CreateObject', $params);
 if (isMdb2Error($result, 'Create Object procedure', 6)) {

@@ -361,7 +361,7 @@ function installApp() {
 	
 	// Insert BaseObject for User
     $uuid = UUID::v4();
-    $params = array($db->quote("User"), $userId, $groupId, $userId, "NOW()", $db->quote("User added"), $db->quote(NULL), $uuid);
+    $params = array($db->quote("User"), $userId, $groupId, $userId, "NOW()", $db->quote("User added"), $db->quote(NULL), $db->quote($uuid));
     $stmt = $db->executeStoredProc('CreateObject', $params);
     if (PEAR::isError($stmt)) return 'Create Object procedure for User: ' . $stmt->getUserInfo();
     $id = $stmt->fetchOne();
@@ -369,7 +369,7 @@ function installApp() {
     
     // Insert BaseObject for Groups
     $uuid = UUID::v4();
-    $params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL), $uuid);
+    $params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL), $db->quote($uuid));
     $stmt = $db->executeStoredProc('CreateObject', $params);
     if (PEAR::isError($stmt)) return 'Create Object procedure for Groups: ' . $stmt->getUserInfo();
     $group_id = $stmt->fetchOne();

@@ -46,7 +46,7 @@ if ($count > 0) {
 }
 
 // Insert BaseObject for Groups
-$params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL), $uuid);
+$params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL), $db->quote($uuid));
 $result = $db->executeStoredProc('CreateObject', $params);
 isMdb2Error($result, 'Create Object procedure');
 $gid = $result->fetchOne();

@@ -125,7 +125,7 @@ foreach ($objArray as $object) {
         $db->quote($dateToPublish,'date'),
         $db->quote("Annotation added"),
         $db->quote(NULL),
-        $uuid
+        $db->quote($uuid)
     );
 	$result = $db->executeStoredProc('CreateObject', $params);
 	if(isMdb2Error($result, 'Create Object procedure')) {
