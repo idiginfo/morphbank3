@@ -22,6 +22,7 @@
 */
 
 require_once("MDB2.php");
+include_once('Classes/UUID.php');
 
 /**
  * Default values used to write config.ini file on install
@@ -359,14 +360,16 @@ function installApp() {
 	if (PEAR::isError($userId)) return $userId->getUserInfo();
 	
 	// Insert BaseObject for User
-    $params = array($db->quote("User"), $userId, $groupId, $userId, "NOW()", $db->quote("User added"), $db->quote(NULL));
+    $uuid = UUID::v4();
+    $params = array($db->quote("User"), $userId, $groupId, $userId, "NOW()", $db->quote("User added"), $db->quote(NULL), $uuid);
     $stmt = $db->executeStoredProc('CreateObject', $params);
     if (PEAR::isError($stmt)) return 'Create Object procedure for User: ' . $stmt->getUserInfo();
     $id = $stmt->fetchOne();
     while($stmt->nextResult()) $stmt->store_result();
     
     // Insert BaseObject for Groups
-    $params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL));
+    $uuid = UUID::v4();
+    $params = array($db->quote("Groups"), $userId, $groupId, $userId, "NOW()", $db->quote("Group added"), $db->quote(NULL), $uuid);
     $stmt = $db->executeStoredProc('CreateObject', $params);
     if (PEAR::isError($stmt)) return 'Create Object procedure for Groups: ' . $stmt->getUserInfo();
     $group_id = $stmt->fetchOne();
