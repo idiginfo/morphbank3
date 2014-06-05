@@ -24,10 +24,12 @@
 include_once('updater.class.php');
 include_once('objectFunctions.php');
 include_once('updateObjectKeywords.php');
+include_once('Classes/UUID.php');
 
 $indexUrl = "/Admin/News/?action=add";
 $userId = $objInfo->getUserId();
-$groupId =$objInfo->getUserGroupId();
+$groupId = $objInfo->getUserGroupId();
+$uuid = UUID::v4();
 if (!checkAuthorization($id, $userId, $groupId, 'edit')) {
 	header ("location: index.php");
 	exit;
@@ -41,7 +43,16 @@ if (empty($_POST['title']) || empty($_POST['body'])) {
 $db = connect();
 // Insert News Object returning id
 $dateToPublish = date('Y-m-d');
-$params = array($db->quote("News"), $userId, $groupId, $userId, $db->quote($dateToPublish,'date'), $db->quote("News added"), $db->quote(NULL));
+$params = array(
+    $db->quote("News"),
+    $userId,
+    $groupId,
+    $userId,
+    $db->quote($dateToPublish,'date'),
+    $db->quote("News added"),
+    $db->quote(NULL),
+    $uuid
+);
 $result = $db->executeStoredProc('CreateObject', $params);
 if(isMdb2Error($result, 'Create Object procedure', 6)) {
   header("location: $indexUrl&code=8");
