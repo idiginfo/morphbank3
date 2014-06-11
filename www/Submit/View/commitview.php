@@ -91,13 +91,13 @@ if (is_string($numRows)) { // Error returned
 if ($numRows > 0) {
 	updateKeywordsTable($id);
 }
-	
-/* Update and Add external links and unique references */
-$insertLinkRes = insertLinks($id, $_POST);
-$insertRefRes  = insertReferences($id, $_POST);
-if(!$insertLinkRes || !$insertRefRes) {
-	header("location: $indexUrl&id=$id&code=4");
-	exit;
+
+// Update and Add external links and unique references
+$updateLinkRes = updateLinks($id, $_POST);
+$updateRefRes  = updateReferences($id, $_POST);
+if(!$updateLinkRes || !$updateRefRes) {
+    header("location: $indexUrl&id=$id&code=4");
+    exit;
 }
 
 $objTitle = $_POST['SpecimenPart'] . '/' . $_POST['ViewAngle'] . '/' . $_POST['Sex'];

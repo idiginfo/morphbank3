@@ -107,12 +107,12 @@ if ($numRows == 1) {
 	updateKeywordsTable($id);
 }
 
-// Add external links and references
-$insertLinkRes = insertLinks($id, $_POST);
-$insertRefRes = insertReferences($id, $_POST);
-if(!$insertLinkRes || !$insertRefRes) {
-	header("location: $indexUrl&id=$id&code=4");
-	exit;
+// Update and Add external links and unique references
+$updateLinkRes = updateLinks($id, $_POST);
+$updateRefRes  = updateReferences($id, $_POST);
+if(!$updateLinkRes || !$updateRefRes) {
+    header("location: $indexUrl&id=$id&code=4");
+    exit;
 }
 
 $title = !empty($_POST['title']) ? $_POST['title'] : $_POST['publicationtitle'];

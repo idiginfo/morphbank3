@@ -118,13 +118,14 @@ if ($numRows > 0) {
 	updateKeywordsTable($id);
 }
 
-/* Update and Add external links and unique references */
-$insertLinkRes = insertLinks($id, $_POST);
-$insertRefRes  = insertReferences($id, $_POST);
-if(!$insertLinkRes || !$insertRefRes) {
-	header("location: /Edit/Specimen/?code=9&id=' . $id");
-	exit;
+// Update and Add external links and unique references
+$updateLinkRes = updateLinks($id, $_POST);
+$updateRefRes  = updateReferences($id, $_POST);
+if(!$updateLinkRes || !$updateRefRes) {
+    header("location: /Edit/Specimen/?code=9&id=' . $id");
+    exit;
 }
+
 
 // Added objTitle and pop to url to determine if being added via popup
 $objTitle = getScientificName($_POST['tsnId']);

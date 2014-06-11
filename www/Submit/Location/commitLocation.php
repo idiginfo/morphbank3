@@ -109,14 +109,15 @@ if (is_string($numRows)) {
 if ($numRows > 0) {
 	updateKeywordsTable($id);
 }
-	
-/* Update and Add external links and unique references */
-$insertLinkRes = insertLinks($id, $_POST);
-$insertRefRes  = insertReferences($id, $_POST);
-if(!$insertLinkRes || !$insertRefRes) {
-	header("location: $indexUrl&code=5&id=$id");
-	exit;
+
+// Update and Add external links and unique references
+$updateLinkRes = updateLinks($id, $_POST);
+$updateRefRes  = updateReferences($id, $_POST);
+if(!$updateLinkRes || !$updateRefRes) {
+    header("location: $indexUrl&code=5&id=$id");
+    exit;
 }
+
 $objTitle = $_POST['Locality'];
 header ("location: $indexUrl&code=1&id=$id&objTitle=$objTitle");
 exit;
