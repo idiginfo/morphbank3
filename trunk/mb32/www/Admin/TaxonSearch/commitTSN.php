@@ -162,12 +162,13 @@ if(!$insertVernacular) {
 	exit;
 }
 
-/* Update and Add external links and unique references */
-$insertLinkRes = insertLinks($id, $_POST);
-$insertRefRes  = insertReferences($id, $_POST);
-if(!$insertLinkRes || !$insertRefRes) {
-	header("location: editTSN.php?id=$tsn&code=22");
-	exit;
+// Update and Add external links and unique references
+$updateLinkRes = updateLinks($id, $_POST);
+$updateRefRes  = updateReferences($id, $_POST);
+if(!$updateLinkRes || !$updateRefRes) {
+    header("location: editTSN.php?id=$tsn&code=22");
+    exit;
 }
+
 header("location: $indexUrl&tsn=$main_tsn&id=$tsn&scientificName=$scientificName&code=1");
 exit;

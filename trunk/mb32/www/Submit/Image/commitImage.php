@@ -179,13 +179,14 @@ if (!empty($_FILES['ImageFile']['tmp_name'])) {
 	if ($numRows == 1) {
 		updateKeywordsTable($id, 'insert');
 	}
-	
-	$insertLinkRes = insertLinks($id, $_REQUEST);
-	$insertRefRes  = insertReferences($id, $_REQUEST);
-	if(!$insertLinkRes || !$insertRefRes) {
-		header("location: /Edit/Image/?code=15&id=$id");
-		exit;
-	}
+
+    // Update and Add external links and unique references
+    $updateLinkRes = updateLinks($id, $_REQUEST);
+    $updateRefRes  = updateReferences($id, $_REQUEST);
+    if(!$updateLinkRes || !$updateRefRes) {
+        header("location: /Edit/Image/?code=15&id=$id");
+        exit;
+    }
 
   // Error if image process failed
   if ($image_error) {
