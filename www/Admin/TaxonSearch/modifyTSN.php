@@ -178,14 +178,8 @@ if(!$insertVernacular || !$updateVernacular) {
 }
 
 // Update and Add external links and unique references
-$insertLinkRes = insertLinks($rowBObj['id'], $_POST);
 $updateLinkRes = updateLinks($rowBObj['id'], $_POST);
-$insertRefRes  = insertReferences($rowBObj['id'], $_POST);
 $updateRefRes  = updateReferences($rowBObj['id'], $_POST);
-if(!$insertLinkRes || !$insertRefRes) {
-	header("location: $indexUrl&code=21");
-	exit;
-}
 if(!$updateLinkRes || !$updateRefRes) {
 	header("location: $indexUrl&code=22");
 	exit;
