@@ -533,6 +533,7 @@ $(document).ready(function(){
 	// Toggle tables
 	$('.toggleTable').click(function(e){
 		$(this).toggle().next('table').toggle();
+        $(this).toggle();
 		e.preventDefault();
 	});
 	
