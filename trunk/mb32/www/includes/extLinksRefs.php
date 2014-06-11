@@ -28,8 +28,7 @@
  * @param string $ref default=NULL, url for deleting reference
  */
 function extLinksRefs($id = NULL, $ref = NULL) {
-	
-	
+
 	$db = connect();
 	
 	$extTypeRes = $db->query("SELECT linkTypeId, name FROM ExternalLinkType where linkTypeId != 4");
@@ -62,56 +61,49 @@ function extLinksRefs($id = NULL, $ref = NULL) {
 		isMdb2Error($refsResult, 'select references');
 		$totalRefs = count($refsResult);
 	}
-	
+
+    $rows = '';
+    $display = "none";
 	if ($totalLinks > 0) {
-		$html = '
-			<br /><br />
-			<a href="" class="toggleTable" style="display:none"><img src="/style/webImages/plusIcon.png" alt="" title="And a new link" /> (Add External Links)</a>
-			<table id="extlinks" class="edit" title="'.($totalLinks+2).'" cellpadding="3" cellspacing="0" border="0" width="600" style="display:inline">
-				<tr>
-					<td><h3><b>External Links</b></h3></td>
-					<td>
-						<a href="" class="addRow" name="add" >
-						<img src="/style/webImages/plusAdd.gif" alt="Add Row"  title="Click to Add a Row" /></a>
-						&nbsp;&nbsp;
-						<a href="" class="removeRow" name="remove">
-						<img src="/style/webImages/minusRemove.gif" alt="Remove Row"  title="Click to Remove a Row" /></a>
-					</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td><b>Type of Link <span class="req">*</span></b></td>
-					<td><label title="Type text to appear on website for the url"><b>Label <span class="req">*</span></label></b></td>
-					<td><b>Url <span class="req">*</span></b></td>
-					<td><b>Description </b></td>
-					<td>&nbsp;</td>
-				</tr>';
-				$i=1;
-				foreach ($linksResult as $link) {
-					$html .= '<tr>';
-					$html .= '<td>';
-					$html .= '<input type="hidden" name="linkId[]" value="' . $link['linkid'] . '">';
-					$html .= '<select name="extLinkTypeId[]" id="type_' . $i . '" title="Please Select the ExternalLinkType. Contact mbadmin to add more">';
-					$html .= '<option value ="">--- Select Link Type ---</option>';
-					foreach($extArray as $ext){
-						$html .= ($ext['linktypeid'] == $link['extlinktypeid']) ? '<option selected = "selected" value="' .$ext['linktypeid'].'">' . $ext['name'] . '</option>' : '<option value="' .$ext['linktypeid'].'">' .$ext['name'].' </option>';
-					}
-					$html .= '</select></td>';
-					$html .= '<td><input type="text" name="linkLabel[]" id="label_' . $i . '" value="' . $link['label'] . '" /></td>';
-					$html .= '<td><input type="text" name="linkUrlData[]" id="url_' . $i . '" value="' . $link['urldata'] . '" /></td>';
-					$html .= '<td><input type="text" name="linkDescription[]" id="desc_' . $i . '" value="' . ($link['description'] == 'null' ? '' : $link['description']) . '" /></td>';
-					$html .= '<td><a href="javascript: confirmDelete(\'' . $link['linkid'] . '\', \'' . $ref . '\');" ><img src="/style/webImages/delete-trans.png" alt="delete" title="Delete Collection" width="16" height="16" /></a></td>';
-					$html .= '</tr>';
-				}
-			$html .= '</table><br />';
+        $display = "";
+        $i=1;
+        foreach ($linksResult as $link) {
+            $rows .= '<tr>';
+            $rows .= '<td>';
+            $rows .= '<input type="hidden" name="linkId[' . $link['linkid'] . ']" value="' . $link['linkid'] . '" />';
+            $rows .= '<select name="extLinkTypeId[' . $link['linkid'] . ']" id="type_' . $i . '" title="Please Select the ExternalLinkType. Contact mbadmin to add more">';
+            $rows .= '<option value ="">--- Select Link Type ---</option>';
+            foreach($extArray as $ext){
+                $rows .= ($ext['linktypeid'] == $link['extlinktypeid']) ? '<option selected = "selected" value="' .$ext['linktypeid'].'">' . $ext['name'] . '</option>' : '<option value="' .$ext['linktypeid'].'">' .$ext['name'].' </option>';
+            }
+            $rows .= '</select></td>';
+            $rows .= '<td><input type="text" name="linkLabel[' . $link['linkid'] . ']" id="label_' . $i . '" value="' . $link['label'] . '" /></td>';
+            $rows .= '<td><input type="text" name="linkUrlData[' . $link['linkid'] . ']" id="url_' . $i . '" value="' . $link['urldata'] . '" /></td>';
+            $rows .= '<td><input type="text" name="linkDescription[' . $link['linkid'] . ']" id="desc_' . $i . '" value="' . ($link['description'] == 'null' ? '' : $link['description']) . '" /></td>';
+            $rows .= '<td><a href="javascript: confirmDelete(\'' . $link['linkid'] . '\', \'' . $ref . '\');" ><img src="/style/webImages/delete-trans.png" alt="delete" title="Delete Collection" width="16" height="16" /></a></td>';
+            $rows .= '</tr>';
+            $i++;
+        }
 	} else {
-		$html = '
+        $rows .= '
+			<tr>
+			    <input type="hidden" name="linkId[]" />
+			    <td width="25%">
+					<select name="extLinkTypeId[]" id="type_1" title="Select the link type from the list. Contact Morphbank admin group to add more.">
+						<option value="">--- Select Link Type ---</option>
+						' . $extTypesOptions . '
+					</select>
+				</td>
+				<td width="25%"><input type="text" name="linkLabel[]" id="label_1" /></td>
+				<td width="25%"><input type="text" name="linkUrlData[]" id="url_1" title="Please enter Absolute Url" /></td>
+				<td><input type="text" name="linkDescription[]" id="desc_1" /></td>
+			</tr>';
+    }
+    $html = '
 		<br /><br />
 		<a href="" class="toggleTable"><img src="/style/webImages/plusIcon.png" alt="" title="And a new link" /> (Add External Links)</a>
-		<table id="extlinks" title="3" cellpadding="0" cellspacing="3" border="0" style="display: none;" width="600">
-			<tr> 
+		<table id="extlinks" title="3" cellpadding="0" cellspacing="3" border="0" width="600" style="display:' . $display . '">
+			<tr>
 				<td><h3><b>External Links</b></h3></td>
 				<td>
 					<a href="" class="addRow" name="add">
@@ -128,27 +120,38 @@ function extLinksRefs($id = NULL, $ref = NULL) {
 				<td width="25%"><label title="Type text to appear on website for the url"><b>Label <span class="req">*</span></b></label></td>
 				<td width="25%"><b>Url <span class="req">*</span></b></td>
 				<td width="25%"><b>Description</b></td>
-			</tr>
-			<tr>
-				<td width="25%">
-					<select name="extLinkTypeIdAdd[]" id="type_1" title="Select the link type from the list. Contact Morphbank admin group to add more.">
-						<option value="">--- Select Link Type ---</option>
-						' . $extTypesOptions . '
-					</select>
-				</td>
-				<td width="25%"><input type="text" name="linkLabelAdd[]" id="label_1" /></td>
-				<td width="25%"><input type="text" name="linkUrlDataAdd[]" id="url_1" title="Please enter Absolute Url" /></td>
-				<td width="25%"><input type="text" name="linkDescriptionAdd[]" id="desc_1" /></td>
-			</tr>
-		</table>
-		<br />';
-	}
-	
+			</tr>';
+    $html .= $rows;
+    $html .= '</table><br />';
+
+    $rows = '';
+    $display = "none";
 	if ($totalRefs != 0) {
-		$html .= '
+        $display = "inline";
+        $i=1;
+        foreach ($refsResult as $link) {
+            $rows .= '<tr>';
+            $rows .= '<td>';
+            $rows .= '<input type="hidden" name="reflinkId[' . $link['linkid'] . ']" id="' . $i . '"  value="' . $link['linkid'] . '">';
+            $rows .= '<input type="text" name="refDescription[' . $link['linkid'] . ']" id="rdesc_' . $i . '" value="' . ($link['description'] == 'null' ? '' : $link['description']) . '" /></td>';
+            $rows .= '<td><input type="text" name="refExternalId[' . $link['linkid'] . ']" id="ext_' . $i . '" value="' . $link['externalid'] . '" /></td>';
+            $rows .= '<td><a href="javascript: confirmDelete(\'' . $link['linkid'] . '\', \'' . $ref . '\');" ><img src="/style/webImages/delete-trans.png" alt="delete" title="Delete Collection" width="16" height="16" /></a></td>';
+            $rows .= '</tr>';
+            $i++;
+        }
+	} else {
+        $rows .= '
+			<tr>
+			    <input type="hidden" name="reflinkId[]" />
+				<td><input type="text" name="refDescription[]" id="rdesc_1" /></td>
+				<td><input type="text" name="refExternalId[]" id="ext_1" /> </td>
+			</tr>
+		</table>';
+	}
+    $html .= '
 			<br /><br />
-			<a href="" class="toggleTable" style="display:none"><img src="/style/webImages/plusIcon.png" alt="" title="And a new reference" /> (Add External References)</a>
-			<table id="extrefs" class="edit" title="'.($totalRefs+2).'" cellpadding="3" cellspacing="0" border="0" width="320" style="display:inline">
+			<a href="" class="toggleTable"><img src="/style/webImages/plusIcon.png" alt="" title="And a new reference" /> (Add External References)</a>
+			<table id="extrefs" title="3" cellpadding="3" cellspacing="0" border="0" width="320" style="display:'.$display.'">
 				<tr>
 					<td><h3><b>External References</b></h3></td>
 					<td>
@@ -163,96 +166,12 @@ function extLinksRefs($id = NULL, $ref = NULL) {
 				<tr>
 					<td><label title="Type label for the provided unique identifier to be displayed, Example: External Id"><b>Description <span class="req">*</span></b></label></td>
 					<td><label title="Enter your unique external identifier for this image/(view/specimen/locality/publication/taxonname)"><b>Unique Reference ID <span class="req">*</span></b></label></td>
-					<td>&nbsp;</td>	
+					<td>&nbsp;</td>
 				</tr>';
-				$i=1;
-				foreach ($refsResult as $link) {
-					$html .= '<tr>';
-					$html .= '<td>';
-					$html .= '<input type="hidden" name="reflinkId[]" id="' . $i . '"  value="' . $link['linkid'] . '">';
-					$html .= '<input type="text" name="refDescription[]" id="rdesc_' . $i . '" value="' . ($link['description'] == 'null' ? '' : $link['description']) . '" /></td>';
-					$html .= '<td><input type="text" name="refExternalId[]" id="ext_' . $i . '" value="' . $link['externalid'] . '" /></td>';
-					$html .= '<td><a href="javascript: confirmDelete(\'' . $link['linkid'] . '\', \'' . $ref . '\');" ><img src="/style/webImages/delete-trans.png" alt="delete" title="Delete Collection" width="16" height="16" /></a></td>';
-					$html .= '</tr>';
-					$i++;
-				}
-			$html .= '</table>';
-	} else {
-		$html .= '
-		<br /><br />
-		<a href="" class="toggleTable"><img src="/style/webImages/plusIcon.png" alt="" title="And a new reference" /> (Add External References)</a>
-		<table id="extrefs" title="3" cellpadding="3" cellspacing="0" border="0" style="display: none;" width="320">
-			<tr>
-				<td><h3><b>External References</b></h3></td>
-				<td>
-					<a href="" class="addRow" name="add">
-					<img src="/style/webImages/plusAdd.gif"	alt="Add Row" title="Click to Add a Row" /></a>
-					&nbsp;&nbsp;
-					<a href="" class="removeRow" name="remove">
-					<img src="/style/webImages/minusRemove.gif" alt="Remove Row" title="Click to Remove a Row" /></a>
-				</td>
-			</tr>
-			<tr>
-				<td><label title="Type label for the provided unique identifier to be displayed, Example: External Id"><b>Description <span class="req">*</span></b></label></td>
-				<td><label title="Enter your unique external identifier for this image/(view/specimen/locality/publication/taxonname)"><b>Unique Reference ID <span class="req">*</span></b></label></td>
-			</tr>
-			<tr>
-				<td><input type="text" name="refDescriptionAdd[]" id="rdesc_1" /></td>
-				<td><input type="text" name="refExternalIdAdd[]" id="ext_1" /> </td>
-			</tr>
-		</table>';
-	}
+    $html .= $rows;
+    $html .= '</table>';
+
 	return $html;
-}
-
-/**
- * Insert External Links
- * @param integer $id of object
- * @param array $array post array
- * @return bool
- */
-function insertLinks($id, $array){
-	if (empty($array['extLinkTypeIdAdd'][0])) return true;
-	$count = count($array['extLinkTypeIdAdd']);
-	$db = connect();
-	for ($i=0; $i< $count; $i++) {
-		$typeId = trim($array['extLinkTypeIdAdd'][$i]);
-		$label = trim($array['linkLabelAdd'][$i]);
-		$url = trim($array['linkUrlDataAdd'][$i]);
-		$description = trim($array['linkDescriptionAdd'][$i]);
-		$params = array($id, $typeId, $db->quote($label), $db->quote($url), 
-						$db->quote($description), $db->quote(null));
-		$result = $db->executeStoredProc('ExternalLinkObjectInsert', $params);
-		if(isMdb2Error($result, 'External link insert')) {
-			return false;
-		}
-		clear_multi_query($result);
-	}
-	return true;
-}
-
-/**
- * Insert Unique References
- * @param integer $id Id of object
- * @param array $array post array
- * @return bool
- */
-function insertReferences($id, $array){
-	if(empty($array['refExternalIdAdd'][0])) return true;
-	$count = count($array['refExternalIdAdd']);
-	$db = connect();
-	for ($i=0; $i< $count; $i++) {
-		$extId = trim($array['refExternalIdAdd'][$i]);
-		$description = trim($array['refDescriptionAdd'][$i]);
-		$params = array($id, 4, $db->quote(null, 'integer'), $db->quote(null), 
-						$db->quote($description), $db->quote($extId));
-		$result = $db->executeStoredProc('ExternalLinkObjectInsert', $params);
-		if(isMdb2Error($result, 'External reference insert')) {
-			return false;
-		}
-		clear_multi_query($result);
-	}
-	return true;
 }
 
 /**
@@ -262,25 +181,36 @@ function insertReferences($id, $array){
  * @return bool
  */
 function updateLinks($id, $array){
-	if (empty($array['linkId'][0])) return true;
-	$count = count($array['linkId']);
-	$db = connect();
-	
-	for ($i = 0; $i < $count; $i++) {
-		$linkId = trim($array['linkId'][$i]);
-		$extLinkTypeId = trim($array['extLinkTypeId'][$i]);
-		$label = trim($array['linkLabel'][$i]);
-		$urlData = trim($array['linkUrlData'][$i]);
-		$description = trim($array['linkDescription'][$i]);
 
-		$params = array($linkId, $id, $extLinkTypeId, $db->quote($label), $db->quote($urlData), 
-						$db->quote($description), $db->quote(null));
-		$result = $db->executeStoredProc('ExternalLinkObjectUpdate', $params);
-		if(isMdb2Error($result, 'External link update')) {
-			return false;
-		}
-		clear_multi_query($result);
-	}
+    $db = connect();
+    foreach ($array['linkId'] as $key => $value) {
+
+        $linkId = trim($array['linkId'][$key]);
+        $type = trim($array['extLinkTypeId'][$key]);
+        $label = trim($array['linkLabel'][$key]);
+        $url = trim($array['linkUrlData'][$key]);
+        $description = trim($array['linkDescription'][$key]);
+
+        if (!empty($linkId))
+        {
+            $params = array($linkId, $id, $type, $db->quote($label), $db->quote($url), $db->quote($description), $db->quote(null));
+            $result = $db->executeStoredProc('ExternalLinkObjectUpdate', $params);
+            if(isMdb2Error($result, 'External link update')) {
+                return false;
+            }
+            clear_multi_query($result);
+        }
+        elseif (empty($linkId) && !empty($type))
+        {
+            $params = array($id, $type, $db->quote($label), $db->quote($url), $db->quote($description), $db->quote(null));
+            $result = $db->executeStoredProc('ExternalLinkObjectInsert', $params);
+            if(isMdb2Error($result, 'External link insert')) {
+                return false;
+            }
+            clear_multi_query($result);
+        }
+    }
+
 	return true;
 }
 
@@ -291,22 +221,33 @@ function updateLinks($id, $array){
  * @return bool
  */
 function updateReferences($id, $array){
-	if(empty($array['reflinkId'][0])) return true;
-	$count = count($array['reflinkId']);
-	$db = connect();
-	
-	for ($i=0; $i<$count; $i++) {
-		$linkId = trim($array['reflinkId'][$i]);
-		$description = trim($array['refDescription'][$i]);
-		$externalId = trim($array['refExternalId'][$i]);
 
-		$params = array($linkId, $id, 4, $db->quote(null), $db->quote(null), 
-						$db->quote($description), $db->quote($externalId));
-		$result = $db->executeStoredProc('ExternalLinkObjectUpdate', $params);
-		if(isMdb2Error($result, 'External reference update')) {
-			return false;
-		}
-		clear_multi_query($result);
-	}
+	$db = connect();
+    foreach ($array['reflinkId'] as $key => $value) {
+
+        $linkId = trim($array['reflinkId'][$key]);
+        $description = trim($array['refDescription'][$key]);
+        $externalId = trim($array['refExternalId'][$key]);
+
+        if (!empty($linkId))
+        {
+            $params = array($linkId, $id, 4, $db->quote(null), $db->quote(null), $db->quote($description), $db->quote($externalId));
+            $result = $db->executeStoredProc('ExternalLinkObjectUpdate', $params);
+            if(isMdb2Error($result, 'External reference update')) {
+                return false;
+            }
+            clear_multi_query($result);
+        }
+        elseif (empty($linkId) && !empty($externalId))
+        {
+            $params = array($id, 4, $db->quote(null, 'integer'), $db->quote(null), $db->quote($description), $db->quote($externalId));
+            $result = $db->executeStoredProc('ExternalLinkObjectInsert', $params);
+            if(isMdb2Error($result, 'External reference insert')) {
+                return false;
+            }
+            clear_multi_query($result);
+        }
+    }
+
 	return true;
 }

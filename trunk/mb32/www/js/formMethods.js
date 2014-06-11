@@ -561,6 +561,9 @@ $(document).ready(function(){
 		var newId = $('#'+tblId+' tr').length - 1;
 		var newRow = $('#'+tblId+' tr:last').clone();
 		$(':input', newRow).each(function(){
+            this.name = this.name.replace(/\[(\d+)\]/, function(str,p1){
+                return '[]';
+            });
 			var id = this.id.split('_');
 			$(this).val('').attr('id', id[0]+'_'+newId);
 		});

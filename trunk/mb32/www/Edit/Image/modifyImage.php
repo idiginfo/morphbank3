@@ -151,14 +151,8 @@ if ($numRowsImg == 1 || $numRowsBO == 1) {
 }
 
 // Update and Add external links and unique references
-$insertLinkRes = insertLinks($id, $_POST);
 $updateLinkRes = updateLinks($id, $_POST);
-$insertRefRes  = insertReferences($id, $_POST);
 $updateRefRes  = updateReferences($id, $_POST);
-if(!$insertLinkRes || !$insertRefRes) {
-	header("location: $indexUrl&code=11");
-	exit;
-}
 if(!$updateLinkRes || !$updateRefRes) {
 	header("location: $indexUrl&code=12");
 	exit;
