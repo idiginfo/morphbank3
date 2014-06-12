@@ -26,7 +26,7 @@ function processImageRemote($id, $imageFilePath, $imageFileName){
 	
 	if (empty($id)) return "BaseObject ID passed to processImageRemote() is empty";
 	
-	include_once ("HTTP/Request2.php");
+	require_once ("HTTP/Request2.php");
 	
 	// get the mimetype
 	$imageSizes = @getimagesize($imageFilePath);
@@ -37,20 +37,19 @@ function processImageRemote($id, $imageFilePath, $imageFileName){
 		$imageMimeType = $imageSizes["mime"];
 	}
 
-	$request =& new HTTP_Request($config->imgServerUrl.'Image/imageFileUpload.php');
-	$request->setMethod(HTTP_REQUEST_METHOD_POST);
+	$request = new HTTP_Request2($config->imgServerUrl.'Image/imageFileUpload.php', HTTP_Request2::METHOD_POST);
 
 	// add parameters
-	$request->addPostData('id', $id);
-	$request->addPostData('fileName', $imageFileName);
-	$request->addFile('image', $imageFilePath, $imageMimeType);
-	$request->sendRequest();
-	$code = $request->getResponseCode();
-	$response = $request->getResponseBody();
+	$request->addPostParameter('id', $id);
+	$request->addPostParameter('fileName', $imageFileName);
+	$request->addUpload('image', $imageFilePath, $imageMimeType);
+	$response = $request->send();
+	$code = $response->getStatus();
+	$body = $response->getBody();
     if ($code == 400) {
-		return array($response);
+		return array($body);
 	}
-	$response = $request->getResponseBody();
-	return explode('^',$response) ;
+
+	return explode('^',$body) ;
 }
 
