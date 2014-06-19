@@ -353,11 +353,11 @@ function getFileSizeUrl($id,$imageType) {
 
 function showUserGroup($userId, $userName, $groupId, $groupName){
 	$db = connect();
-	if (empty($userName)){
+	if (empty($userName) && !empty($userId)){
 		$sql = "select name from User where id = $userId";
 		$userName = $db->getOne($sql);
 	}
-	if (empty($groupName)){
+	if (empty($groupName) && !empty($groupId)){
 		$sql = "select groupName from Groups where id = $groupId";
 		$groupName = $db->getOne($sql);
 	}
