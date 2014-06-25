@@ -121,13 +121,18 @@ function checkImageFiles($id, $fileName, $imageType = null, $problems = null, $f
 		$imageType = "jpeg"; // jpg original stored in jpeg
 	
 	$originalImgPath = getImageFilePath ( $id, $imageType );
-
+	
 	$fileImageType = getImageFileType ( $originalImgPath, $fileName );
-		
-	if (! file_exists ( $originalImgPath ) || empty ( $fileImageType )) {
+	
+	if (! file_exists ( $originalImgPath )) {
 		// missing or corrupted original file
 		$message .= "original file missing $imageType path $originalImgPath";
-	} 
+	}
+	
+	if (empty ( $fileImageType )) {
+		$message .= "original file corrupted $imageType path $originalImgPath";
+	}
+	
 	return $message;
 }
 ?>
