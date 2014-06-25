@@ -44,7 +44,7 @@ if (!intval($id)){// id is not an integer, must be a URI
 	}
 }
 
-$imgType = $_REQUEST['imgType'];
+$imgType = strtolower($_REQUEST['imgType']);
 $imgSize = $_REQUEST['imgSize'];
 
 // session Id from server for use in accessing private images
@@ -63,8 +63,7 @@ if (!empty($id)) {
 	$image = new Image($id, $imgType, $imgSize, $sessionId);
         //file cannot be found on the server
         if(!$image->getFileExists()) {
-            header("HTTP/1.1 400 Bad Request: The requested object is not on
-                the server");
+            header("HTTP/1.1 404 Not Found: The requested object is not on the server");
             exit();
         }
 	if(imageRequesterIsBot() && !$image->allowedBotImages()){
