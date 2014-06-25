@@ -113,7 +113,7 @@ function checkImageFiles($id, $fileName, $imageType = null, $problems = null, $f
 	
 	// $returnArray = array('message'=> null, 'width'=>null, 'height'=>null);
 	
-	$message = "Checking files  for id: $id ";
+	$message = "Checking files for id: $id ";
 	// $imageType = fetchOriginal ($originalImgPath, $fileName, $uin, $imageType, $fileSourceDir);
 	
 	$imageType = strtolower ( $imageType );
@@ -121,16 +121,18 @@ function checkImageFiles($id, $fileName, $imageType = null, $problems = null, $f
 		$imageType = "jpeg"; // jpg original stored in jpeg
 	
 	$originalImgPath = getImageFilePath ( $id, $imageType );
+	$iipImgExists = file_exists(getImageFilePath ( $id, 'iip' ));
+	$tpcImgExists = file_exists(getImageFilePath ( $id, 'tpc' ));
 	
 	$fileImageType = getImageFileType ( $originalImgPath, $fileName );
 	
-	if (! file_exists ( $originalImgPath )) {
-		// missing or corrupted original file
-		$message .= "original file missing $imageType path $originalImgPath";
-	}
-	
-	if (empty ( $fileImageType )) {
-		$message .= "original file corrupted $imageType path $originalImgPath";
+	if ( $iipImgExists && $tpcImgExists) {
+		//duplicate zoomable file
+		$message .= "type $imageType duplicate zoomable file\n";
+	} else if ($tpcImgExists){
+		$message .= "type $imageType tpc exists\n";
+	} else if ($iipImgExists){
+		$message .= "type $imageType iip exists\n";
 	}
 	
 	return $message;
