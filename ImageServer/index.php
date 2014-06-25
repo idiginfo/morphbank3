@@ -45,6 +45,8 @@ if (!intval($id)){// id is not an integer, must be a URI
 }
 
 $imgType = strtolower($_REQUEST['imgType']);
+if ($imgType=='tif') $imgType = 'tiff';
+
 $imgSize = $_REQUEST['imgSize'];
 
 // session Id from server for use in accessing private images
