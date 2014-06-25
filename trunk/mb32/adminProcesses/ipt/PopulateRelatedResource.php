@@ -1,10 +1,10 @@
 <?php
-echo "truncate IptResourceRelationship" . $dataSetName . ";
+echo "truncate " . $iptRRTable . ";
 
-insert into IptResourceRelationship" . $dataSetName . "
+insert into " . $iptRRTable . "
 (occurrenceId, relationshipOfResource, relatedResourceId)
 select occurrenceId, 'representedIn',concat ('http://www.morphbank.net/',id)
-from IptOccurrence" . $dataSetName . ";
+from " . $iptOccTable . ";
 
 ";
 

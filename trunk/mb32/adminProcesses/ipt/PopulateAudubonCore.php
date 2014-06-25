@@ -1,10 +1,9 @@
 <?php
 
 
-echo "truncate table IptAudubonCore" . $dataSetName . ";
+echo "truncate table " . $iptACTable . ";
 
- insert into IptAudubonCore" . $dataSetName . "
-(
+ insert into " . $iptACTable . " (
 id, 
 occurrenceID,
 identifier,
@@ -82,18 +81,18 @@ concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg') AS goodQualityAccess
 'image/jpeg' AS goodQualityFormat,
 concat(i.imageHeight,' x ',i.imageWidth) AS goodQualityExtent,
 
-# original image as best quality access point
-concat('http://www.morphbank.net?id=',i.id,'&imgType=',replace(i.imageType,'jpg','jpeg')) AS bestQualityAccessURI,
-concat('image/',replace(i.imageType,'jpg','jpeg')) AS bestQualityFormat,
+# jpeg image as best quality access point
+concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg') AS bestQualityAccessURI,
+'image/jpeg' AS bestQualityFormat,
 concat(i.imageHeight,' x ',i.imageWidth) AS bestQualityExtent,
 concat('http://www.morphbank.net/',i.id) AS bestQualityFurtherInformationURL
 
 from Image i 
-join IptOccurrence" . $dataSetName . " s on (i.specimenid=s.id)
+join " . $iptOccTable . " s on (i.specimenid=s.id)
 join BaseObject b on(i.id = b.id) 
 left join View v on(i.viewId = v.id) 
 join User u on(b.userId = u.id) 
-join ExternalLinkObject eo on (s.id = eo.mbid and eo.description =  'dcterms:identifier')
+join ExternalLinkObject eo on (i.id = eo.mbid and eo.description =  'dcterms:identifier')
 left join CreativeCommons cc on  cc.idCreativeCommons = 32;
 
 ";
