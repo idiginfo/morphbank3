@@ -26,27 +26,34 @@ function checkAuthorization($id, $sessionId = null, $function = 'view'){
 	global $config;
 	// if the request comes from application, say yes.
 	if (approveRequestor()) return true;
-	$request = new HTTP_Request($config->appServerBaseUrl."checkImageAuthorization.php?$id");
-	$request->setMethod(HTTP_REQUEST_METHOD_POST);
+    $request = new HTTP_Request2($config->appServerBaseUrl."checkImageAuthorization.php?$id", HTTP_Request2::METHOD_POST);
 
 	// add parameters
-	$request->addPostData('id', $id);
+	$request->addPostParameter('id', $id);
 	if (empty($sessionId)){// if not passed, in check HTTP parameter
 		$sessionId = $_REQUEST['sessionId'];
 	}
 	if (!empty($sessionId)){
-		$request->addPostData('sessionId', $sessionId);
+		$request->addPostParameter('sessionId', $sessionId);
 	}
 	if ($function != 'view'){
-		$request->addPostData('function', $function);
+		$request->addPostParameter('function', $function);
 	}
-	// for sending image file $request->addPostFile('image', 'profile.jpg', 'image/jpeg');
-	if (PEAR::isError($request->sendRequest())) {
-		return false;
-	}
-	$response = $request->getResponseBody();
 
-	return $response;
+    try {
+        $response = $request->send();
+        if (200 == $response->getStatus()) {
+            $body = $response->getBody();
+            return $body;
+        } else {
+            echo 'Unexpected HTTP status: ' . $response->getStatus() . ' ' . $response->getReasonPhrase();
+            return false;
+        }
+    } catch (HTTP_Request2_Exception $e) {
+        echo 'Error: ' . $e->getMessage();
+        return false;
+    }
+
 }
 
 function approveRequestor(){
@@ -61,16 +68,22 @@ function approveRequestor(){
 function getIdFromURI($extId){
 	global $config;
 	$requestUri = $config->appServerBaseUrl."getIdFromURI.php";
-	$request = new HTTP_Request($requestUri);
-	$request->setMethod(HTTP_REQUEST_METHOD_POST);
+    $request = new HTTP_Request2($requestUri, HTTP_Request2::METHOD_POST);
 
 	// add parameters
-	$request->addPostData('uri', $extId);
-	if (PEAR::isError($request->sendRequest())) {
-		return false;
-	}
-	$response = $request->getResponseBody();
-	$id = intval($response);
-	return $id;
+	$request->addPostParameter('uri', $extId);
+
+    try {
+        $response = $request->send();
+        if (200 == $response->getStatus()) {
+            $body = $response->getBody();
+            $id = intval($body);
+            return $id;
+        } else {
+            return false;
+        }
+    } catch (HTTP_Request2_Exception $e) {
+        return false;
+    }
 }
 ?>
