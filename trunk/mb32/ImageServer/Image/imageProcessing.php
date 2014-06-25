@@ -189,6 +189,11 @@ function replaceOriginal($id, $fileAccessPath, $fileName, $fileSourceDir) {
 	
 	if (stripos ( $fileAccessPath, "http:" ) === 0) { // fileName is a URL
 	                                           // URL: copy the file to temporary location
+	                                           
+		// special case of www.specimenimaging.com
+		$fileAccessPath = str_replace("http://www.specimenimaging", 
+				"http://imageview:gaKNop$72@www.specimenimaging", $fileAccessPath);
+		$message .= "getting original from $fileAccessPath\n";
 		$tmpPath = $config->imgTmpDir . mktime ();
 		copy ( $fileAccessPath, $tmpPath );
 		$fileAccessPath = $tmpPath;
@@ -374,7 +379,7 @@ function getImageTypeFromCode($code) {
 	return $type;
 }
 function checkFileDate($filePath, $origFilePath) {
-	if (! file_exists ( $filePath ))
+	if (! file_exists ( $filePath ) || ! file_exists($origFilePath))
 		return false; // missing file
 	if (filemtime ( $filePath ) < filemtime ( $origFilePath ))
 		return false; // old file
