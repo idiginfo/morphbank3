@@ -20,19 +20,21 @@
 *   Katja Seltmann - initial API and implementation
 *   Stephen Winner - initial API and implementation
 */
+include_once ("HTTP/Request2.php");
 
 $ANNOTATION_SERVICE_URL = $config->appServerBaseUrl.'annotationService.php';
 
 function setupPostRequest($method, $sessionId){
-	$request = new HTTP_Request($ANNOTATION_SERVICE_URL);
-	$request->setMethod(HTTP_REQUEST_METHOD_POST);
+    global $ANNOTATION_SERVICE_URL;
 
-	$request->addPostData('method', $method);
+    $request = new HTTP_Request2($ANNOTATION_SERVICE_URL, HTTP_Request2::METHOD_POST);
+
+	$request->addPostParameter('method', $method);
 	if (empty($sessionId)){// if not passed, in check HTTP parameter
 		$sessionId = $_REQUEST['sessionId'];
 	}
 	if (!empty($sessionId)){
-		$request->addPostData('sessionId', $sessionId);
+		$request->addPostParameter('sessionId', $sessionId);
 	}
 	return $request;
 }
@@ -48,29 +50,43 @@ function setupPostRequest($method, $sessionId){
 function createAnnotation($id, $sessionId, $properties){
 	$request = setupPostRequest('create', $sessionId);
 	// add parameters
-	$request->addPostData('id', $id);
+	$request->addPostParameter('id', $id);
 
-	if (PEAR::isError($request->sendRequest())) {
-		echo "post request error ".$request->getUserInfo();
-		return false;
-	}
-	$response = $request->getResponseBody();
-	if ($response == "true") return true;
-	return $response;
+    try {
+        $response = $request->send();
+        if (200 == $response->getStatus()) {
+            $body = $response->getBody();
+            if ($body == "true") return true;
+            return $body;
+        } else {
+            echo 'Unexpected HTTP status: ' . $response->getStatus() . ' ' . $response->getReasonPhrase();
+            return false;
+        }
+    } catch (HTTP_Request2_Exception $e) {
+        echo 'Error: ' . $e->getMessage();
+        return false;
+    }
 }
 
 
 function deleteAnnotation($annotationId, $sessionId){
 	$request = setupPostRequest('delete', $sessionId);
-	$request->addPostData('annotationId', $annotationId);
+	$request->addPostParameter('annotationId', $annotationId);
 
-	if (PEAR::isError($request->sendRequest())) {
-		echo "post request error ".$request->getUserInfo();
-		return false;
-	}
-	$response = $request->getResponseBody();
-	if ($response == "true") return true;
-	return $response;
+    try {
+        $response = $request->send();
+        if (200 == $response->getStatus()) {
+            $body = $response->getBody();
+            if ($body == "true") return true;
+            return $body;
+        } else {
+            echo 'Unexpected HTTP status: ' . $response->getStatus() . ' ' . $response->getReasonPhrase();
+            return false;
+        }
+    } catch (HTTP_Request2_Exception $e) {
+        echo 'Error: ' . $e->getMessage();
+        return false;
+    }
 
 }
 
@@ -87,14 +103,21 @@ function fetchAnnotations($id, $sessionId){
 	$request = setupPostRequest('fetch', $sessionId);
 	$request->addPostData('id', $id);
 
-	if (PEAR::isError($request->sendRequest())) {
-		echo "post request error ".$request->getUserInfo();
-		return false;
-	}
-	$response = $request->getResponseBody();
-	if ($response == "true") return true;
-	 $response;
-	//TODO turn $response into label array
+    try {
+        $response = $request->send();
+        if (200 == $response->getStatus()) {
+            $body = $response->getBody();
+            if ($body == "true") return true;
+            return $body;
+        } else {
+            echo 'Unexpected HTTP status: ' . $response->getStatus() . ' ' . $response->getReasonPhrase();
+            return false;
+        }
+    } catch (HTTP_Request2_Exception $e) {
+        echo 'Error: ' . $e->getMessage();
+        return false;
+    }
+    //TODO turn $response into label array
 
 }
 ?>

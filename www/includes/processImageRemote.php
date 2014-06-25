@@ -43,13 +43,18 @@ function processImageRemote($id, $imageFilePath, $imageFileName){
 	$request->addPostParameter('id', $id);
 	$request->addPostParameter('fileName', $imageFileName);
 	$request->addUpload('image', $imageFilePath, $imageMimeType);
-	$response = $request->send();
-	$code = $response->getStatus();
-	$body = $response->getBody();
-    if ($code == 400) {
-		return array($body);
-	}
 
-	return explode('^',$body) ;
+    try {
+        $response = $request->send();
+        if (200 == $response->getStatus()) {
+            $body = $response->getBody();
+            return explode('^',$body) ;
+        } else {
+            $body = $response->getBody();
+            return array($body);
+        }
+    } catch (HTTP_Request2_Exception $e) {
+        return false;
+    }
 }
 
