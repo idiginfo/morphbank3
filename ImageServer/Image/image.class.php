@@ -56,6 +56,7 @@ class Image {
 		$this->imageExt = $this->imagePath['imgExt'];
 		$this->imageFilePath = $this->imagePath['imgSrc'];
 		$this->imageType = $this->imagePath['imgType'];
+		if ($this->imageType == 'tif') $this->imageType = 'tiff';
 		// get the file from the remote server, if necessary
 		$this->fileExists = $this->getImageFile();
 
