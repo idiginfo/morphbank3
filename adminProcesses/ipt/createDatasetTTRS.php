@@ -1,10 +1,10 @@
 <?php
 
-// constants that are used for this dataset 
+// constants that are used for this dataset
 // Use these constants, along with the population of the ids table, below,
 // to tailor the script for the specific dataset
-
-$dataSetName = "MbMisc";
+$dataSetName = "TTRS";
+$groupId = "581426";
 
 // constants with values representing the databases
 $iptDb = "IPT_DB";
@@ -25,30 +25,16 @@ include ("CreateIptTables.php");
 // populate id table
 // this section should be changed to fit the needs of the dataset.
 
-$iptGroupsTable = $iptTablePrefix . "Groups";
-
 echo "
 #populate specimen ids
 
-# list of groups
-create table " . $iptGroupsTable . " 
-select o.groupid as groupid, count(*) as quantity
-from Specimen s 
-join BaseObject o on
- o.id=s.id 
-where basisofrecordid = 's' and institutionCode is not null and institutionCode !=' '
-and institutionCode !='private'
-group by groupid
-having count(*)>20 and count(*)<2000 order by count(*);
-		
-truncate Table " . $iptIdTable ."; 
+truncate Table " . $iptIdTable . "; 
 
 #ids of specimens
-insert into " . $iptIdTable ."
-select s.id from Specimen s join BaseObject o on o.id=s.id 
-where basisofrecordid = 's' and institutionCode is not null and institutionCode !=' '
-and institutionCode !='private'
-and groupid in (select groupid from " . $iptGroupsTable . ");
+insert into " . $iptIdTable . "
+select s.id from Specimen s join BaseObject b on b.id=s.id 
+where basisofrecordid = 's' 
+and b.groupId=" . $groupId . ";
  
 drop table " . $iptGroupsTable . ";
 		

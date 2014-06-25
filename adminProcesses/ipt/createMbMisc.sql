@@ -1,18 +1,14 @@
-<?php
-
-
-
-echo "
-drop table " . $iptIdTable . ";
+Use MB32;
+drop table IPT_DB.MbMiscId;
 		
-create table " . $iptIdTable . " (
+create table IPT_DB.MbMiscId (
 	id int primary key
 );
 	
-drop table " . $iptOccTable . " ;
+drop table IPT_DB.MbMiscOcc ;
 
 
-CREATE TABLE " . $iptOccTable . "  (
+CREATE TABLE IPT_DB.MbMiscOcc  (
 id int primary key, # morphbank id
 occurrenceID varchar(100), # included in IPT
 
@@ -196,10 +192,10 @@ nomenclaturalStatus varchar(100) # included in IPT
 );
 
 
-drop table " . $iptACTable . ";
+drop table IPT_DB.MbMiscAC;
 
 
-CREATE TABLE " . $iptACTable . " (
+CREATE TABLE IPT_DB.MbMiscAC (
 id int primary key, # morphbank id
 occurrenceID varchar(100), # included in IPT
 
@@ -320,10 +316,10 @@ bestQualityServiceExpectation varchar(100),
 bestQualityVariantDescription varchar(100)
 );
 
-drop table " . $iptRRTable . ";
+drop table IPT_DB.MbMiscRR;
 
 
-Create Table " . $iptRRTable . " (
+Create Table IPT_DB.MbMiscRR (
 occurrenceID varchar(100),
 #resourceRelationshipID varchar(100),
 #resourceID varchar(100),
@@ -334,6 +330,260 @@ relationshipOfResource varchar(100)
 #relationshipRemarks varchar(100)
 );
 
-";
 
-?>
+#populate specimen ids
+
+# list of groups
+create table IPT_DB.MbMiscGroups 
+select o.groupid as groupid, count(*) as quantity
+from Specimen s 
+join BaseObject o on
+ o.id=s.id 
+where basisofrecordid = 's' and institutionCode is not null and institutionCode !=' '
+and institutionCode !='private'
+group by groupid
+having count(*)>20 and count(*)<2000 order by count(*);
+		
+truncate Table IPT_DB.MbMiscId; 
+
+#ids of specimens
+insert into IPT_DB.MbMiscId
+select s.id from Specimen s join BaseObject o on o.id=s.id 
+where basisofrecordid = 's' and institutionCode is not null and institutionCode !=' '
+and institutionCode !='private'
+and groupid in (select groupid from IPT_DB.MbMiscGroups);
+ 
+drop table IPT_DB.MbMiscGroups;
+		
+truncate Table IPT_DB.MbMiscOcc; 
+
+insert into IPT_DB.MbMiscOcc 
+( 
+id,
+occurrenceID,
+type,
+modified,
+language,
+`references`,
+institutionCode,
+collectionCode,
+basisOfRecord,
+informationWithheld,
+catalogNumber,
+occurrenceRemarks,
+recordNumber,
+recordedBy,
+individualCount,
+sex,
+lifeStage,
+preparations,
+otherCatalogNumbers,
+eventDate,
+#verbatimEventDate,
+#fieldNotes,
+#locationId,
+continent,
+waterbody,
+country,
+countryCode,
+stateProvince,
+county,
+locality,
+minimumelevationInMeters,
+maximumElevationInMeters,
+minimumDepthInMeters,
+maximumDepthInMeters,
+decimalLatitude,
+decimalLongitude,
+coordinatePrecision,
+`group`,
+formation,
+member,
+bed,
+identifiedBy,
+dateIdentified,
+identificationRemarks,
+typeStatus,
+scientificname,
+higherClassification,
+taxonRank,
+scientificNameAuthorship,
+nomenclaturalStatus
+)
+ 
+select
+s.id,
+eo.externalId AS occurrenceID,
+'PreservedSpecimen' as type,
+b.dateLastModified AS modified,
+'en' AS language,
+concat('http://www.morphbank.net/',s.id) as `references`,
+s.institutionCode,
+s.collectionCode,
+'PreservedSpecimen' AS basisOfRecord,
+l.informationWithheld,
+s.catalogNumber,
+s.notes AS occurrenceRemarks,
+s.collectionNumber AS recordNumber,
+s.collectorName AS recordedBy,
+s.individualCount,
+s.sex,
+s.developmentalStage AS lifeStage,
+s.preparationType AS preparations,
+s.previousCatalogNumber AS otherCatalogNumbers,
+s.dateCollected AS eventDate,
+#uVED.value AS verbatimEventDate,
+#uFN.value AS fieldNotes,
+#locationId,
+l.continent,
+l.ocean as waterbody,
+l.country,
+c.name as countryCode,
+l.state as stateProvince,
+l.county,
+l.locality,
+l.minimumelevation as minimumelevationInMeters,
+l.maximumElevation as maximumElevationInMeters,
+l.minimumDepth as minimumDepthInMeters,
+l.maximumDepth as maximumDepthInMeters,
+l.latitude as decimalLatitude,
+l.longitude as decimalLongitude,
+l.coordinatePrecision,
+l.paleoGroup as `group`,
+l.paleoFormation as formation,
+l.paleoMember as member,
+l.paleoBed as bed,
+s.name as identifiedBy,
+s.dateIdentified,
+s.comment as identificationRemarks,
+s.typeStatus,
+
+t.scientificname,
+s.taxonomicNames AS higherClassification,
+u.rank_name as taxonRank,
+t.taxon_author_name as scientificNameAuthorship,
+t.status as nomenclaturalStatus
+
+
+from IPT_DB.MbMiscId i join 
+Specimen s on i.id=s.id join Locality l on s.localityid=l.id
+join BaseObject b on s.id=b.id 
+join Taxa t on s.tsnId=t.tsn
+join TaxonUnitTypes u on (t.rank_id=u.rank_Id and t.kingdom_id=u.kingdom_id)
+left join ExternalLinkObject eo 
+		on (eo.mbid=s.id and eo.description = 'dcterms:identifier')
+left join Country c on l.country=c.description
+where b.dateToPublish <= now() and s.basisOfRecordId = 'S'
+;
+
+update IPT_DB.MbMiscOcc o join Specimen s on s.id=o.id
+		join TaxonBranches t on s.tsnid = t.tsn
+		set o.kingdom = t.kingdom,
+		o.phylum = t.phylum,
+		o.class = t.class,
+		o.order = t.order,
+		o.family = t.family,
+		o.genus = t.genus,
+		o.subgenus = t.subgenus;		
+		
+truncate table IPT_DB.MbMiscAC;
+
+ insert into IPT_DB.MbMiscAC (
+id, 
+occurrenceID,
+identifier,
+type,
+title,
+modified,
+metadataLanguage,
+providerManagedID,
+available,
+rights,
+owner,
+webStatement,
+licenseLogoURL,
+creditLine,
+attributionLogoURL,
+creator,
+provider,
+metadataProvider,
+metadataCreator,
+description,
+tag,
+subjectPart,
+subjectOrientation,
+captureDevice,
+resourceCreationTechnique,
+thumbNailAccessURI,
+thumbNailFormat,
+mediumQualityAccessURI,
+mediumQualityFormat,
+goodQualityAccessURI,
+goodQualityFormat,
+goodQualityExtent,
+bestQualityAccessURI,
+bestQualityFormat,
+bestQualityExtent,
+bestQualityFurtherInformationURL)
+
+select
+i.id,
+s.occurrenceID,
+eo.externalId AS identifier, 
+'StillImage' AS type,
+concat ('image of ',s.scientificname) AS title,
+b.dateLastModified AS modified,
+'en' AS metadataLanguage,
+concat('http://www.morphbank.net/',i.id) AS providerManagedID,
+i.dateToPublish AS available,
+cc.rights,
+i.copyrightText AS Owner,
+i.creativeCommons as webStatement,
+cc.licenseLogoURL,
+i.copyrightText AS creditLine,
+u.userLogo AS attributionLogoURL,
+i.photographer AS creator,
+concat('http://www.morphbank.net/',b.userId) AS provider,
+'morphbank.net' AS metadataProvider,
+'morphbank.net' AS metadataCreator,
+b.description AS description,
+v.specimenPart AS tag, # tag with more info from view
+v.specimenPart AS subjectPart,
+v.viewAngle AS subjectOrientation,
+v.imagingTechnique AS captureDevice,
+v.imagingPreparationTechnique AS resourceCreationTechnique,
+
+#thumbnail access point
+concat('http://www.morphbank.net?id=',i.id,'&imgType=thumb') AS thumbNailAccessURI,
+'image/jpeg' AS thumbNailFormat,
+
+# 400 pixel wide as medium quality
+concat('http://www.morphbank.net?id=',i.id,'&imgType=jpg') AS mediumQualityAccessURI,
+'image/jpeg' AS mediumQualityFormat,
+
+#jpeg image as good quality access point
+concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg') AS goodQualityAccessURI,
+'image/jpeg' AS goodQualityFormat,
+concat(i.imageHeight,' x ',i.imageWidth) AS goodQualityExtent,
+
+# jpeg image as best quality access point
+concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg') AS bestQualityAccessURI,
+'image/jpeg' AS bestQualityFormat,
+concat(i.imageHeight,' x ',i.imageWidth) AS bestQualityExtent,
+concat('http://www.morphbank.net/',i.id) AS bestQualityFurtherInformationURL
+
+from Image i 
+join IPT_DB.MbMiscOcc s on (i.specimenid=s.id)
+join BaseObject b on(i.id = b.id) 
+left join View v on(i.viewId = v.id) 
+join User u on(b.userId = u.id) 
+join ExternalLinkObject eo on (i.id = eo.mbid and eo.description =  'dcterms:identifier')
+left join CreativeCommons cc on  cc.idCreativeCommons = 32;
+
+truncate IPT_DB.MbMiscRR;
+
+insert into IPT_DB.MbMiscRR
+(occurrenceId, relationshipOfResource, relatedResourceId)
+select occurrenceId, 'representedIn',concat ('http://www.morphbank.net/',id)
+from IPT_DB.MbMiscOcc;
+

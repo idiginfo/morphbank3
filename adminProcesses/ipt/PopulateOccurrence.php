@@ -1,8 +1,7 @@
 <?php
+echo "truncate Table " . $iptOccTable . "; 
 
-echo "truncate Table IptOccurrence" . $dataSetName . "; 
-
-insert into IptOccurrence" . $dataSetName . " 
+insert into " . $iptOccTable . " 
 ( 
 id,
 occurrenceID,
@@ -110,7 +109,7 @@ t.taxon_author_name as scientificNameAuthorship,
 t.status as nomenclaturalStatus
 
 
-from IptIds".$dataSetName." i join 
+from " . $iptIdTable . " i join 
 Specimen s on i.id=s.id join Locality l on s.localityid=l.id
 join BaseObject b on s.id=b.id 
 join Taxa t on s.tsnId=t.tsn
@@ -121,7 +120,7 @@ left join Country c on l.country=c.description
 where b.dateToPublish <= now() and s.basisOfRecordId = 'S'
 ;
 
-update IptOccurrence" . $dataSetName . " o join Specimen s on s.id=o.id
+update " . $iptOccTable . " o join Specimen s on s.id=o.id
 		join TaxonBranches t on s.tsnid = t.tsn
 		set o.kingdom = t.kingdom,
 		o.phylum = t.phylum,
