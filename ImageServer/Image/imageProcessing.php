@@ -209,7 +209,7 @@ function replaceOriginal($id, $fileAccessPath, $fileName, $fileSourceDir) {
 	// get imageType from the file
 	$imageType = getImageFileType ( $fileAccessPath, $fileName );
 	if (empty ( $imageType )) {
-		$message .= "corrupted or missing original\n";
+		$message .= "corrupted or missing original for id $id\n";
 		return false;
 	}
 	
