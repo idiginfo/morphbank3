@@ -27,7 +27,7 @@ include_once ('bischen/makeTpc.php');
 
 /**
  * Fix problems with image files including fetching original and moving to correct location
- * 
+ *
  * @param
  *        	$id
  * @param
@@ -65,16 +65,21 @@ function fixImageFiles($id, $fileName, $imageType = null, $problems = null, $fil
 		// get new original file and put it in place
 		// Note that if original is jpg or jpeg, this will move the file to jpeg path
 		$fileImageType = replaceOriginal ( $id, $fileName, $fileName, $fileSourceDir );
-		if ($fileImageType != $imageType) {
-			$message .= "changed imageType from $imageType to $fileImageType\n";
-			$imageType = $fileImageType;
-			$originalImgPath = getImageFilePath ( $id, $imageType );
-		}
-		if (getImageFileType ( $originalImgPath )) {
-			$message .= "original replaced\n";
-			$numFixed ++;
+		if (empty ( $fileImageType )) {
+			// no new original, quit processing
+			$message .= "no new original found for $id original path $fileName\n";
 		} else {
-			$message .= "corrupted original $originalImgPath\n";
+			if ($fileImageType != $imageType) {
+				$message .= "changed imageType from $imageType to $fileImageType\n";
+				$imageType = $fileImageType;
+				$originalImgPath = getImageFilePath ( $id, $imageType );
+			}
+			if (getImageFileType ( $originalImgPath )) {
+				$message .= "original replaced\n";
+				$numFixed ++;
+			} else {
+				$message .= "corrupted original $originalImgPath\n";
+			}
 		}
 	}
 	if (! empty ( $fileImageType )) {
@@ -188,11 +193,10 @@ function replaceOriginal($id, $fileAccessPath, $fileName, $fileSourceDir) {
 	// find the new file to be used as original
 	
 	if (stripos ( $fileAccessPath, "http:" ) === 0) { // fileName is a URL
-	                                           // URL: copy the file to temporary location
-	                                           
+	                                                  // URL: copy the file to temporary location
+	                                                  
 		// special case of www.specimenimaging.com
-		$fileAccessPath = str_replace("http://www.specimenimaging", 
-				"http://imageview:gaKNop$72@www.specimenimaging", $fileAccessPath);
+		$fileAccessPath = str_replace ( "http://www.specimenimaging", "http://imageview:gaKNop$72@www.specimenimaging", $fileAccessPath );
 		$message .= "getting original from $fileAccessPath\n";
 		$tmpPath = $config->imgTmpDir . mktime ();
 		copy ( $fileAccessPath, $tmpPath );
@@ -292,7 +296,7 @@ function convertOriginal($source, $target, $size) {
 
 /**
  * Convert DNG to raw for input into imageMagick convert
- * 
+ *
  * @param
  *        	$source
  * @return string path for new raw file
@@ -379,7 +383,7 @@ function getImageTypeFromCode($code) {
 	return $type;
 }
 function checkFileDate($filePath, $origFilePath) {
-	if (! file_exists ( $filePath ) || ! file_exists($origFilePath))
+	if (! file_exists ( $filePath ) || ! file_exists ( $origFilePath ))
 		return false; // missing file
 	if (filemtime ( $filePath ) < filemtime ( $origFilePath ))
 		return false; // old file
