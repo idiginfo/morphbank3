@@ -94,6 +94,10 @@ $imageCount = 0;
 while ( $row = $result->fetchRow () ) {
 	$imageCount ++;
 	// get fields b.id, u.uin, i.originalFileName, i.imageType, m.problems
+    list($id, $uin,  $fileName, $imageType, $problems, $width, $height, $url) = $row;
+    $imageType = strtolower($imageType);
+    if (!empty($url)) $fileName = $url;
+
 	list ( $message, $w, $h, $newImageType ) = fixImageFiles ( $id, $fileName, $imageType, $problems, $FILE_SOURCE_DIR, $width, $height );
 	$imageType = strtolower ( $imageType );
 	if (! empty ( $url ))
