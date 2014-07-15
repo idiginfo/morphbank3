@@ -199,7 +199,13 @@ function replaceOriginal($id, $fileAccessPath, $fileName, $fileSourceDir) {
 		$fileAccessPath = str_replace ( "http://www.specimenimaging", "http://imageview:gaKNop$72@www.specimenimaging", $fileAccessPath );
 		$message .= "getting original from $fileAccessPath\n";
 		$tmpPath = $config->imgTmpDir . mktime ();
-		copy ( $fileAccessPath, $tmpPath );
+		$success = @copy ( $fileAccessPath, $tmpPath );
+		if (! $success) {
+			$errors = error_get_last ();
+			$message .= "failed to copy original for $id from $fileAccessPath\n";
+			$message .= "Error is :$errors\n";
+			return false;
+		}
 		$fileAccessPath = $tmpPath;
 	} else if (! @file_exists ( $fileAccessPath ) && ! empty ( $fileSourceDir )) {
 		// try to find file in file system
