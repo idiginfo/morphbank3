@@ -84,7 +84,7 @@ isMdb2Error ( $updateSizeStmt, $updateSizeSql );
 // set up imageType update statement
 $updateTypeSql = "update Image set imageType=? where id=?";
 $param_types = array (
-		'string',
+		'text',
 		'integer' 
 );
 $updateTypeStmt = $db->prepare ( $updateTypeSql, $param_types );
