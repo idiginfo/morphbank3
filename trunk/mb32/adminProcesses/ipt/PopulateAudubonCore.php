@@ -10,14 +10,14 @@ identifier,
 type,
 title,
 modified,
-metadataLanguage,
+metadataLanguageLiteral,
 providerManagedID,
 available,
 rights,
 owner,
 webStatement,
 licenseLogoURL,
-creditLine,
+credit,
 attributionLogoURL,
 creator,
 provider,
@@ -29,17 +29,12 @@ subjectPart,
 subjectOrientation,
 captureDevice,
 resourceCreationTechnique,
-thumbNailAccessURI,
-thumbNailFormat,
-mediumQualityAccessURI,
-mediumQualityFormat,
-goodQualityAccessURI,
-goodQualityFormat,
-goodQualityExtent,
-bestQualityAccessURI,
-bestQualityFormat,
-bestQualityExtent,
-bestQualityFurtherInformationURL)
+
+accessURI,
+format,
+variantLiteral,
+extent,
+furtherInformationURL)
 
 select
 i.id,
@@ -48,14 +43,14 @@ eo.externalId AS identifier,
 'StillImage' AS type,
 concat ('image of ',s.scientificname) AS title,
 b.dateLastModified AS modified,
-'en' AS metadataLanguage,
+'en' AS metadataLanguageLiteral,
 concat('http://www.morphbank.net/',i.id) AS providerManagedID,
 i.dateToPublish AS available,
 cc.rights,
 i.copyrightText AS Owner,
 i.creativeCommons as webStatement,
 cc.licenseLogoURL,
-i.copyrightText AS creditLine,
+i.copyrightText AS credit,
 u.userLogo AS attributionLogoURL,
 i.photographer AS creator,
 concat('http://www.morphbank.net/',b.userId) AS provider,
@@ -68,24 +63,13 @@ v.viewAngle AS subjectOrientation,
 v.imagingTechnique AS captureDevice,
 v.imagingPreparationTechnique AS resourceCreationTechnique,
 
-#thumbnail access point
-concat('http://www.morphbank.net?id=',i.id,'&imgType=thumb') AS thumbNailAccessURI,
-'image/jpeg' AS thumbNailFormat,
 
-# 400 pixel wide as medium quality
-concat('http://www.morphbank.net?id=',i.id,'&imgType=jpg') AS mediumQualityAccessURI,
-'image/jpeg' AS mediumQualityFormat,
-
-#jpeg image as good quality access point
-concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg') AS goodQualityAccessURI,
-'image/jpeg' AS goodQualityFormat,
-concat(i.imageHeight,' x ',i.imageWidth) AS goodQualityExtent,
-
-# jpeg image as best quality access point
-concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg') AS bestQualityAccessURI,
-'image/jpeg' AS bestQualityFormat,
-concat(i.imageHeight,' x ',i.imageWidth) AS bestQualityExtent,
-concat('http://www.morphbank.net/',i.id) AS bestQualityFurtherInformationURL
+# original image as best quality access point
+concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg')) AS accessURI,
+'image/jpeg' AS format,
+'best quality' as variantLiteral,
+concat(i.imageHeight,' x ',i.imageWidth) AS extent,
+concat('http://www.morphbank.net/',i.id) AS furtherInformationURL
 
 from Image i 
 join " . $iptOccTable . " s on (i.specimenid=s.id)
