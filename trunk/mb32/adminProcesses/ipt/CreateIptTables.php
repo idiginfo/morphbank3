@@ -228,7 +228,7 @@ available varchar(100), # included in IPT
 rights varchar(100), # included in IPT
 Owner varchar(100), # included in IPT
 UsageTerms varchar(100),
-WebStatement varchar(100), # included in IPT
+WebStatement varchar(300), # included in IPT
 licenseLogoURL varchar(100), # included in IPT
 Credit varchar(100), # included in IPT
 attributionLogoURL varchar(100), # included in IPT
@@ -305,7 +305,8 @@ accessURI varchar(100),
 format varchar(100),
 variantLiteral varchar(100),
 #variant
-extent varchar(100),
+PixelXDimension varchar(100),
+PixelYDimension varchar(100),
 furtherInformationURL varchar(100),
 licensingException varchar(100),
 serviceExpectation varchar(100),
