@@ -33,7 +33,8 @@ resourceCreationTechnique,
 accessURI,
 format,
 variantLiteral,
-extent,
+PixelXDimension,
+PixelYDimension,
 furtherInformationURL)
 
 select
@@ -65,10 +66,11 @@ v.imagingPreparationTechnique AS resourceCreationTechnique,
 
 
 # original image as best quality access point
-concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg')) AS accessURI,
+concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg') AS accessURI,
 'image/jpeg' AS format,
 'best quality' as variantLiteral,
-concat(i.imageHeight,' x ',i.imageWidth) AS extent,
+i.imageWidth as PixelXDimension,
+i.imageHeight as PixelYDimension,
 concat('http://www.morphbank.net/',i.id) AS furtherInformationURL
 
 from Image i 
