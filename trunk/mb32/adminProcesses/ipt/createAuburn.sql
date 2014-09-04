@@ -202,39 +202,53 @@ occurrenceID varchar(100), # included in IPT
 # Management Vocabulary
 identifier varchar(100), # included in IPT
 type varchar(100), # included in IPT
+# subtypeLiteral varchar(100)
 subtype varchar(100),
 title varchar(1000),
 modified datetime, # included in IPT
-metadataDate date,
-metadataLanguage varchar(100), # included in IPT
+MetadataDate date,
+metadataLanguageLiteral varchar(100), # included in IPT
+#metadataLanguage varchar(100),
 providerManagedID varchar(100), # included in IPT
-rating varchar(100),
+Rating varchar(100),
+#commenterLiteral
+#commenter
 comments varchar(100),
+#reviewerLiteral
 reviewer varchar(100),
 reviewerComments varchar(100),
 available varchar(100), # included in IPT
+#hasServiceAccessPoint varchar(10),
 
 # Attribution Vocabulary
 rights varchar(100), # included in IPT
-owner varchar(100), # included in IPT
-usageTerms varchar(100),
-webStatement varchar(1000), # included in IPT
+Owner varchar(100), # included in IPT
+UsageTerms varchar(100),
+WebStatement varchar(100), # included in IPT
 licenseLogoURL varchar(100), # included in IPT
-creditLine varchar(100), # included in IPT
+Credit varchar(100), # included in IPT
 attributionLogoURL varchar(100), # included in IPT
 attributionLinkURL varchar(100),
+#fundingAttribution
 source varchar(100),
 
 # Agents Vocabulary
 creator varchar(100), # included in IPT
+#providerLiteral
 provider varchar(100), # included in IPT
-metadataProvider varchar(100), # included in IPT
+#metadataCreatorLiteral,
 metadataCreator varchar(100), # included in IPT
+#metadataProviderLiteral
+metadataProvider varchar(100), # included in IPT
 
 #Content Coverage Vocabulary
 description varchar(512), # included in IPT
 caption varchar(512),
 language varchar(100),
+#physicalSetting
+#CVterm
+#subjectCategoryVocabulary
+#tag		
 
 #Geography Vocabulary
 LocationShown varchar(100),
@@ -262,8 +276,8 @@ scientificName varchar(100),
 identificationQualifier varchar(100),
 vernacularName varchar(100),
 nameAccordingTo varchar(100),
-taxonID varchar(100),
-scientificNameSynonym varchar(100),
+scientificNameID varchar(100),
+otherScientificName varchar(100),
 identifiedBy varchar(100),
 dateIdentified date,
 taxonCount int,
@@ -271,6 +285,7 @@ subjectPart varchar(100), # included in IPT
 sex varchar(100),
 lifeStage varchar(100),
 subjectOrientation varchar(100), # included in IPT
+#preparations
 
 #Resource Creation Vocabulary
 LocationCreated varchar(512),
@@ -278,42 +293,19 @@ digitizationDate date,
 captureDevice varchar(100), # included in IPT
 resourceCreationTechnique varchar(100), # included in IPT
 
+#Related Resources Vocabulary
+
 #Service access points
-thumbnailAccessURI varchar(100), # included in IPT
-thumbnailFormat varchar(100), # included in IPT
-thumbnailExtent varchar(100),
-thumbnailFurtherInformationURL varchar(100),
-thumbnailLicensingException varchar(100),
-thumbnailServiceExpectation varchar(100),
-thumbnailVariantDescription varchar(100),
-lowerQualityAccessURI varchar(100),
-lowerQualityFormat varchar(100),
-lowerQualityExtent varchar(100),
-lowerQualityFurtherInformationURL varchar(100),
-lowerQualityLicensingException varchar(100),
-lowerQualityServiceExpectation varchar(100),
-lowerQualityVariantDescription varchar(100),
-mediumQualityAccessURI varchar(100),
-mediumQualityFormat varchar(100),
-mediumQualityExtent varchar(100),
-mediumQualityFurtherInformationURL varchar(100),
-mediumQualityLicensingException varchar(100),
-mediumQualityServiceExpectation varchar(100),
-mediumQualityVariantDescription varchar(100),
-goodQualityAccessURI varchar(100),
-goodQualityFormat varchar(100),
-goodQualityExtent varchar(100),
-goodQualityFurtherInformationURL varchar(100),
-goodQualityLicensingException varchar(100),
-goodQualityServiceExpectation varchar(100),
-goodQualityVariantDescription varchar(100),
-bestQualityAccessURI varchar(100),
-bestQualityFormat varchar(100),
-bestQualityExtent varchar(100),
-bestQualityFurtherInformationURL varchar(100),
-bestQualityLicensingException varchar(100),
-bestQualityServiceExpectation varchar(100),
-bestQualityVariantDescription varchar(100)
+
+accessURI varchar(100),
+format varchar(100),
+variantLiteral varchar(100),
+#variant
+extent varchar(100),
+furtherInformationURL varchar(100),
+licensingException varchar(100),
+serviceExpectation varchar(100),
+variantDescription varchar(100)
 );
 
 drop table IPT_DB.AuburnRR;
@@ -483,14 +475,14 @@ identifier,
 type,
 title,
 modified,
-metadataLanguage,
+metadataLanguageLiteral,
 providerManagedID,
 available,
 rights,
 owner,
 webStatement,
 licenseLogoURL,
-creditLine,
+credit,
 attributionLogoURL,
 creator,
 provider,
@@ -502,17 +494,12 @@ subjectPart,
 subjectOrientation,
 captureDevice,
 resourceCreationTechnique,
-thumbNailAccessURI,
-thumbNailFormat,
-mediumQualityAccessURI,
-mediumQualityFormat,
-goodQualityAccessURI,
-goodQualityFormat,
-goodQualityExtent,
-bestQualityAccessURI,
-bestQualityFormat,
-bestQualityExtent,
-bestQualityFurtherInformationURL)
+
+accessURI,
+format,
+variantLiteral,
+extent,
+furtherInformationURL)
 
 select
 i.id,
@@ -521,14 +508,14 @@ eo.externalId AS identifier,
 'StillImage' AS type,
 concat ('image of ',s.scientificname) AS title,
 b.dateLastModified AS modified,
-'en' AS metadataLanguage,
+'en' AS metadataLanguageLiteral,
 concat('http://www.morphbank.net/',i.id) AS providerManagedID,
 i.dateToPublish AS available,
 cc.rights,
 i.copyrightText AS Owner,
 i.creativeCommons as webStatement,
 cc.licenseLogoURL,
-i.copyrightText AS creditLine,
+i.copyrightText AS credit,
 u.userLogo AS attributionLogoURL,
 i.photographer AS creator,
 concat('http://www.morphbank.net/',b.userId) AS provider,
@@ -541,24 +528,13 @@ v.viewAngle AS subjectOrientation,
 v.imagingTechnique AS captureDevice,
 v.imagingPreparationTechnique AS resourceCreationTechnique,
 
-#thumbnail access point
-concat('http://www.morphbank.net?id=',i.id,'&imgType=thumb') AS thumbNailAccessURI,
-'image/jpeg' AS thumbNailFormat,
 
-# 400 pixel wide as medium quality
-concat('http://www.morphbank.net?id=',i.id,'&imgType=jpg') AS mediumQualityAccessURI,
-'image/jpeg' AS mediumQualityFormat,
-
-#jpeg image as good quality access point
-concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg') AS goodQualityAccessURI,
-'image/jpeg' AS goodQualityFormat,
-concat(i.imageHeight,' x ',i.imageWidth) AS goodQualityExtent,
-
-# jpeg image as best quality access point
-concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg') AS bestQualityAccessURI,
-'image/jpeg' AS bestQualityFormat,
-concat(i.imageHeight,' x ',i.imageWidth) AS bestQualityExtent,
-concat('http://www.morphbank.net/',i.id) AS bestQualityFurtherInformationURL
+# original image as best quality access point
+concat('http://www.morphbank.net?id=',i.id,'&imgType=jpeg')) AS accessURI,
+'image/jpeg' AS format,
+'best quality' as variantLiteral,
+concat(i.imageHeight,' x ',i.imageWidth) AS extent,
+concat('http://www.morphbank.net/',i.id) AS furtherInformationURL
 
 from Image i 
 join IPT_DB.AuburnOcc s on (i.specimenid=s.id)
