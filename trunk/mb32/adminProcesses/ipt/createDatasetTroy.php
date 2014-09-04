@@ -37,7 +37,7 @@ truncate Table " . $iptIdTable .";
 insert into " . $iptIdTable ."
 select s.id from Specimen s join BaseObject b on b.id=s.id 
 where basisofrecordid = 's' 
-and b.groupId=" . $groupId . " limit 10;
+and b.groupId=" . $groupId . ";
  
 		
 ";
