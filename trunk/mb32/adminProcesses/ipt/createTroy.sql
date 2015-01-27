@@ -332,7 +332,7 @@ truncate Table IPT_DB.TroyId;
 insert into IPT_DB.TroyId
 select s.id from Specimen s join BaseObject b on b.id=s.id 
 where basisofrecordid = 's' 
-and b.groupId=634593 limit 10;
+and b.groupId=634593 ;
  
 		
 truncate Table IPT_DB.TroyOcc; 

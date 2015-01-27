@@ -4,8 +4,8 @@
 // Use these constants, along with the population of the ids table, below,
 // to tailor the script for the specific dataset
 
-$dataSetName = "Auburn";
-$groupId = "692592";
+$dataSetName = "FSU";
+$groupId = "475742";
 
 // constants with values representing the databases
 $iptDb = "IPT_DB";
