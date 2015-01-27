@@ -334,7 +334,7 @@ select s.id from Specimen s join BaseObject b on b.id=s.id
 where basisofrecordid = 's' 
 and b.groupId=581426;
  
-drop table ;
+#drop table ;
 		
 truncate Table IPT_DB.TTRSOcc; 
 
