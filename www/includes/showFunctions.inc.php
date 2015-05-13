@@ -275,7 +275,7 @@ function showExternalLinks($id = NULL) {
       $url = $row['urlData'];
     }
     echo '<tr><td>';
-    if (empty($row['externalId'])) {
+    if (empty($row['externalId'])) { //TODO  should test for linkTypeName instead GR 05/12/2015
       echo '<a href="' . $url . '" title="' . $row['description'] . '">' . $row['Label'] . '</a>';
     } else {
       if ($row['mbId'] == $specimenId)
