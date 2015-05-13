@@ -3,16 +3,16 @@
 
 
 echo "
-drop table " . $iptIdTable . ";
+drop table if exists $iptIdTable;
 		
-create table " . $iptIdTable . " (
+create table  $iptIdTable (
 	id int primary key
 );
 	
-drop table " . $iptOccTable . " ;
+drop table if exists $iptOccTable;
 
 
-CREATE TABLE " . $iptOccTable . "  (
+CREATE TABLE $iptOccTable (
 id int primary key, # morphbank id
 occurrenceID varchar(100), # included in IPT
 
@@ -196,10 +196,10 @@ nomenclaturalStatus varchar(100) # included in IPT
 );
 
 
-drop table " . $iptACTable . ";
+drop table if exists $iptACTable;
 
 
-CREATE TABLE " . $iptACTable . " (
+CREATE TABLE $iptACTable (
 id int primary key, # morphbank id
 occurrenceID varchar(100), # included in IPT
 
@@ -313,10 +313,10 @@ serviceExpectation varchar(100),
 variantDescription varchar(100)
 );
 
-drop table " . $iptRRTable . ";
+drop table if exists $iptRRTable;
 
 
-Create Table " . $iptRRTable . " (
+Create Table $iptRRTable (
 occurrenceID varchar(100),
 #resourceRelationshipID varchar(100),
 #resourceID varchar(100),

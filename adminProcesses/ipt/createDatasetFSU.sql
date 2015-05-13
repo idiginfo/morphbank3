@@ -1,11 +1,11 @@
 Use MB32;
-drop table IPT_DB.FSUId;
+drop table if exists IPT_DB.FSUId;
 		
 create table IPT_DB.FSUId (
 	id int primary key
 );
 	
-drop table IPT_DB.FSUOcc ;
+drop table if exists IPT_DB.FSUOcc;
 
 
 CREATE TABLE IPT_DB.FSUOcc  (
@@ -192,7 +192,7 @@ nomenclaturalStatus varchar(100) # included in IPT
 );
 
 
-drop table IPT_DB.FSUAC;
+drop table if exists IPT_DB.FSUAC;
 
 
 CREATE TABLE IPT_DB.FSUAC (
@@ -309,7 +309,7 @@ serviceExpectation varchar(100),
 variantDescription varchar(100)
 );
 
-drop table IPT_DB.FSURR;
+drop table if exists IPT_DB.FSURR;
 
 
 Create Table IPT_DB.FSURR (
