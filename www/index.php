@@ -51,11 +51,16 @@ if (!empty($id) && (!empty($imgType) || !empty($imgSize))  ) {
 	// redirect to imageserver with sessionId
 	if (isLoggedIn()) $sessionId = session_id();
 	$tag = getImageServerUrl($id,$imgType,$sessionId,$imgSize);
-        
+       
         //TODO make a 'head' call to check for error
         // if error, dump the proper default image
         // if not error, redirect as below
-        $response = http_head($tag);
+        //$response = http_head($tag);
+
+        require_once 'HTTP/Request2.php';
+        $request  = new HTTP_Request2($tag);
+        $response = $request->send();
+
         if ($response == False) {
             header("Error in request.");
         }

@@ -88,7 +88,7 @@ function fixImageFiles($id, $fileName, $imageType = null, $problems = null, $fil
 		$jpegImgPath = getImageFilePath ( $id, "jpeg" );
 		$thumbImgPath = getImageFilePath ( $id, "thumb" );
 		$tifImgPath = getImageFilePath ( $id, "tif" );
-		$tpcImgPath = getImageFilePath ( $id, "tpc" );
+		#$tpcImgPath = getImageFilePath ( $id, "tpc" );
 		$iipImgPath = getImageFilePath ( $id, "iip" );
 		
 		// create full resolution jpeg
@@ -125,16 +125,16 @@ function fixImageFiles($id, $fileName, $imageType = null, $problems = null, $fil
 			}
 		}
 		// create tilepic
-		if ($config->processTpc && ! checkFileDate ( $tpcImgPath, $originalImgPath )) {
-			// $message .= "No file for path '$tpcImgPath'\n";
-			$converted = convertTpc ( $id, $jpegImgPath );
-			if ($converted) {
-				$message .= "tpc";
-				$numFixed ++;
-			}
-		}
+		#if ($config->processTpc && ! checkFileDate ( $tpcImgPath, $originalImgPath )) {
+			#// $message .= "No file for path '$tpcImgPath'\n";
+			#$converted = convertTpc ( $id, $jpegImgPath );
+			#if ($converted) {
+				#$message .= "tpc";
+				#$numFixed ++;
+			#}
+		#}
 		// create openzoom (iip)
-		if (! checkFileDate ( $iipImgPath, $originalImgPath )) {
+		if ( $originalImgType != 'tiff' && ! checkFileDate ( $iipImgPath, $originalImgPath )) {
 			// $message .= "No file for path '$iipImgPath'\n";
 			if ($imageType == 'dng') {
 				$sourcePath = $jpegImgPath;

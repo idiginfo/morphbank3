@@ -126,7 +126,8 @@ class MbSessionHandler extends MyManagerSessionHandler {
 
 	function checkLogin($uin, $pin, $link){
 		$sql = "SELECT id, name, privilegeTSN, primaryTSN, secondaryTSN, preferredGroup FROM User "
-		." WHERE uin='$uin' AND pin = PASSWORD('$pin') AND status = 1";
+		." WHERE uin='$uin' AND (pin = PASSWORD('$pin') or pin = OLD_PASSWORD('$pin')) AND status = 1";
+		#." WHERE uin='$uin' AND (pin = PASSWORD('$pin') or pin = OLD_PASSWORD('$pin') AND status = 1";
 		$row = mysqli_fetch_array(mysqli_query($link , $sql));
 		if ($row) {
 			$this->setLogged('true');
