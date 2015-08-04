@@ -22,7 +22,10 @@
 *   Stephen Winner - initial API and implementation
 */
 
+#include_once('head.inc.php');
+
 echo '<html><body>';
+echo '<h1>Morphbank</h1>';
 echo phpinfo();
 
 /*
