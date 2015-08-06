@@ -1,0 +1,6 @@
+Sample httpd configuration files from the morphbank.net servers.
+
+www.conf is for the main Web site server in the www directory
+images.conf is for the images server in the ImageServer directory
+services.conf is for the tomcat/java Web services
+
