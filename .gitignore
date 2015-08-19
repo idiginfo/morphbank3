@@ -9,6 +9,10 @@ config.ini
 db.ini
 htaccess
 
+# ignore large files
+createsample.gz
+mb32sample.sql
+
 *.pydevproject
 .metadata
 .gradle
