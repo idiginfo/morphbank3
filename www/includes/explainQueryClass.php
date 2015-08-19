@@ -82,7 +82,7 @@ class Explain_Queries
     $queries = array_keys($this->queries);
     foreach ($queries AS $sql) {
 
-      // for all SELECTs…
+      // for all SELECTsï¿½
       $sql = trim($sql);
       if (stristr($sql,"SELECT") !== false){
         // note the start time

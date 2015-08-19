@@ -1,1 +1,76 @@
-/**********************	People content ***********************//* Original css taken from Paul van der Mark -- Thanks Paul*/.peopleCategoryContainter {	width: 100%;	}a.categoryLinks:link, a.categoryLinks:visited, a.categoryLinks:active {	font-weight: bold;	font-style: italic;	font-size:14px;	color:#17256b;}a.categoryLinks:hover {	text-decoration: underline;	font-weight:bold;	font-size:14px;	color:#F00;}.peopleItem {	width: 95%;	float: left;	background: #eeeeff;	border: 1px solid;	/*margin: 12px;*/	padding: 6px;}.peopleInfo { /* level 2 top: img + naam etc..: left-top corner*/	margin: 0px;/*	padding: 10px; NOBORDER	background: url(images/lefttop.png) top left no-repeat;*/}.peopleDescription { /* level 2 bottom: description.. */	clear: both;/*	padding: 10px; NOBORDER	background: url(images/rightbottom.png) bottom right no-repeat;	font-size: 0.9em;*/}div.peopleData {	/* because the picture is float:left, the left margin is counted from the border of the 	   peopleInfo, so 100 + actual padding */	margin: 0px 0px 0px 110px; padding: 0px;}.peopleCategory { 	margin: 5px 5px 5px 10px; padding: 0px;		}h2.peopleData {	margin: 0px; padding: 0px;		float: right;}.peopleLabel {	font-weight: bold;	width: 100px;	margin: 0px 10px 0px 0px; }.peopleDataItem {}.peopleImage { /* corner: left top */	float: left;	width: 100px;	height: 117px;}.privemail { margin: 0px; padding: 0px;  vertical-align: middle;}
+/**********************
+	People content
+ ***********************/
+/* Original css taken from Paul van der Mark -- Thanks Paul*/
+
+.peopleCategoryContainter {
+	width: 100%;	
+}
+
+a.categoryLinks:link, a.categoryLinks:visited, a.categoryLinks:active {
+	font-weight: bold;
+	font-style: italic;
+	font-size:14px;
+	color:#17256b;
+}
+
+a.categoryLinks:hover {
+	text-decoration: underline;
+	font-weight:bold;
+	font-size:14px;
+	color:#F00;
+}
+
+.peopleItem {
+	width: 95%;
+	float: left;
+	background: #eeeeff;
+	border: 1px solid;
+	/*margin: 12px;*/
+	padding: 6px;
+}
+
+.peopleInfo { /* level 2 top: img + naam etc..: left-top corner*/
+	margin: 0px;
+/*	padding: 10px; NOBORDER
+	background: url(images/lefttop.png) top left no-repeat;*/
+}
+
+.peopleDescription { /* level 2 bottom: description.. */
+	clear: both;
+/*	padding: 10px; NOBORDER
+	background: url(images/rightbottom.png) bottom right no-repeat;
+	font-size: 0.9em;*/
+}
+
+div.peopleData {
+	/* because the picture is float:left, the left margin is counted from the border of the 
+	   peopleInfo, so 100 + actual padding */
+	margin: 0px 0px 0px 110px; padding: 0px;
+}
+
+.peopleCategory { 
+	margin: 5px 5px 5px 10px; padding: 0px;		
+}
+
+h2.peopleData {
+	margin: 0px; padding: 0px;	
+	float: right;
+}
+
+.peopleLabel {
+	font-weight: bold;
+	width: 100px;
+	margin: 0px 10px 0px 0px; 
+}
+
+.peopleDataItem {
+}
+
+.peopleImage { /* corner: left top */
+	float: left;
+	width: 100px;
+	height: 117px;
+}
+
+.privemail { margin: 0px; padding: 0px;  vertical-align: middle;}
