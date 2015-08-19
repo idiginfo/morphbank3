@@ -5,6 +5,9 @@
 .cvsignore
 .classpath
 .project
+config.ini
+db.ini
+htaccess
 
 *.pydevproject
 .metadata
