@@ -1,2 +1,0 @@
-# Remove auto prepend file used in www
-php_value auto_prepend_file none
