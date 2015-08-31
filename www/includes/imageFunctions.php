@@ -276,7 +276,7 @@ function getSizeFromUrl($imageUrl) {
 function getRemoteImageSize($id, $imageType){
 	$imageUrl = getImageSizeUrl($id, $imageType);
 	$handle = fopen($imageUrl,'r');
-	if (!handle) return false;
+	if (!$handle) return false;
 	$contents = '';
 	while (!feof($handle)) {
 		$contents .= fread($handle, 100);
