@@ -320,7 +320,7 @@ if ($action == 'new')
 	$text = "A REQUEST FOR NEW USER ACCOUNT ON MORPHBANK FROM:\n\n";
 	$text .= "Name: $first_name $last_name \n";
 	$text .= "Email: $email\n";
-	$text .= "Resume\CV: " . $config->appServerBaseUrl . "Admin/User/getCV.php?cv=" . $file . "\n";
+	$text .= "Resume/CV: " . $config->appServerBaseUrl . "Admin/User/getCV.php?cv=" . $file . "\n";
 	$text .= "Mail List Subscribe: " . (isset($_POST['subscription']) ? 'Yes' : 'No') . "\n\n";
 	$subject = $config->appName . " - Add To Mail List Failure";
 	$headers['From'] = $config->email;
