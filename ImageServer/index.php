@@ -20,7 +20,7 @@
  *   Katja Seltmann - initial API and implementation
  *   Stephen Winner - initial API and implementation
  */
-die("test");
+
 define('PHP_ENTRY',0);// valid Web app entry point
 
 include_once('checkAuthorization.php');
@@ -43,7 +43,7 @@ if (!intval($id)){// id is not an integer, must be a URI
 		return;
 	}
 }
-
+die("here");
 $imgType = strtolower($_REQUEST['imgType']);
 if ($imgType=='tif') $imgType = 'tiff';
 
