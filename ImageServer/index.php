@@ -58,11 +58,11 @@ if (empty($id) || empty($imgType)){
 	header("HTTP/1.1 400 Bad Request");
 	return;
 }
-
+die("before");
 if (!empty($id)) {
 	// request is for an image file
 	include_once('image.class.php');
-    die("after include");
+
     $image = new Image($id, $imgType, $imgSize, $sessionId);
         //file cannot be found on the server
         if(!$image->getFileExists()) {
