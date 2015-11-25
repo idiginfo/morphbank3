@@ -55,7 +55,6 @@ $requestor = $_SERVER['REMOTE_ADDR'];
 
 // for testing purposes
 if (empty($id) || empty($imgType)){
-    die("bad");
 	header("HTTP/1.1 400 Bad Request");
 	return;
 }
@@ -63,8 +62,7 @@ if (empty($id) || empty($imgType)){
 if (!empty($id)) {
 	// request is for an image file
 	include_once('image.class.php');
-
-    $image = new Image($id, $imgType, $imgSize, $sessionId);
+	$image = new Image($id, $imgType, $imgSize, $sessionId);
         //file cannot be found on the server
         if(!$image->getFileExists()) {
             header("HTTP/1.1 404 Not Found: The requested object is not on the server");
