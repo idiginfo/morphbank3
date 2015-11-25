@@ -43,7 +43,7 @@ if (!intval($id)){// id is not an integer, must be a URI
 		return;
 	}
 }
-die("here");
+
 $imgType = strtolower($_REQUEST['imgType']);
 if ($imgType=='tif') $imgType = 'tiff';
 
@@ -58,6 +58,7 @@ if (empty($id) || empty($imgType)){
 	header("HTTP/1.1 400 Bad Request");
 	return;
 }
+die("here");
 
 if (!empty($id)) {
 	// request is for an image file
