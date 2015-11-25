@@ -55,10 +55,11 @@ $requestor = $_SERVER['REMOTE_ADDR'];
 
 // for testing purposes
 if (empty($id) || empty($imgType)){
+    die("bad");
 	header("HTTP/1.1 400 Bad Request");
 	return;
 }
-die("before");
+
 if (!empty($id)) {
 	// request is for an image file
 	include_once('image.class.php');
