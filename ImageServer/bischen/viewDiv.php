@@ -43,7 +43,7 @@ if ($image->getAuthorized()===true){
 } else {
 	global $DEFAULT_IMAGES;
 	//echo "viewDiv ". htmlentities($image->getAuthorized());
-	echo '<img src="'.$config->hostServerBaseUrl.'/style/webImages/'.$config->imgPrivate.'"/> ';
+	echo '<img src="'.$config->appServerBaseUrl.'/style/webImages/'.$config->imgPrivate.'"/> ';
 }
 
 function tilePicTag ($image, $width, $height){
@@ -58,7 +58,7 @@ function tilePicTag ($image, $width, $height){
 
 	$properties = getTpcProperties($image->getImageFilePath());
 	if (!$properties) {
-		echo '<img src="'.$config->hostServerBaseUrl.'/style/webImages/'.$config->imgNotFound.'"/>';
+		echo '<img src="'.$config->appServerBaseUrl.'/style/webImages/'.$config->imgNotFound.'"/>';
 		return;
 	}
 	// property header looks like:
