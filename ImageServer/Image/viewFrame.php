@@ -50,7 +50,7 @@ function ViewIipFrame($id) {
 	$image = new Image($id, 'iip', null, $sessionId);
 	// The beginning of HTML
 	if (!$image->getAuthorized()===true){
-		echo '<img src="'.$config->hostServerBaseUrl.'/style/webImages/'.$config->imgPrivate.'"/> ';
+		echo '<img src="'.$config->appServerBaseUrl.'/style/webImages/'.$config->imgPrivate.'"/> ';
 		return true;
 	}
 	$iipFile = $image->getImageFilePath();
