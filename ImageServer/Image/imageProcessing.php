@@ -372,4 +372,3 @@ function checkFileDate($filePath, $origFilePath) {
         return false; // old file
     return true;
 }
-
