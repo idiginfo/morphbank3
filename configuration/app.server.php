@@ -70,6 +70,7 @@ $logger = &Log::singleton("file", $config->errorLogFile);
  * Any php settings added to config.ini will need to be added here
  */
 ini_set('display_errors', $config->display_errors);
+ini_set('error_reporting', $config->error_reporting);
 ini_set('date.timezone', $config->timezone);
 
 /**
