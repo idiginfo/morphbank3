@@ -165,5 +165,3 @@ function setTypeExtDir($imgPath, $id, $imgType = 'thumbs', $originalImgType = ""
     $imgPath['originalImgDir'] = $originalImageDir;
     return $imgPath;
 }
-
-?>
