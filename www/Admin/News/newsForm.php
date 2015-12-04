@@ -18,7 +18,7 @@
       <img src="<?php echo $image ?>" name="image" width="150" />
     </td>
 	</tr>
-  <? endif; ?>
+  <?php endif; ?>
 	<tr>
 		<td><b>Image:</b></td>
 		<td><input type="file" name="imageFile" size="54" /></td>

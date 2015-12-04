@@ -38,7 +38,7 @@ echoHead(false, $title);
         <dl>
             <dt><strong>ABCD</strong></dt>
             <dd>Stands for <a href="http://www.bgbm.org/TDWG/CODATA/Schema/" title="ABCD Schema">Access to Biological
-                    Collection Data</a>. A naming schema. Morphbank schema most closely matches Darwin Core. Follow this link to an <a href="http://rs.tdwg.org/dwc/terms/history/dwctoabcd/index.htm" title="ABCD - Darwin Core Map">ABCD - Darwin Core Map.</a> Here is a schema for <a href="<? echo $config->domain; ?>About/Manual/dwcabcdmb.php">Morphbank - Darwin Core - ABCD</a></dd>
+                    Collection Data</a>. A naming schema. Morphbank schema most closely matches Darwin Core. Follow this link to an <a href="http://rs.tdwg.org/dwc/terms/history/dwctoabcd/index.htm" title="ABCD - Darwin Core Map">ABCD - Darwin Core Map.</a> Here is a schema for <a href="<?php echo $config->domain; ?>About/Manual/dwcabcdmb.php">Morphbank - Darwin Core - ABCD</a></dd>
             <dt><strong>Administrator</strong></dt>
             <dd>There are very few individuals given administrator privileges. An administrator has complete access to all
                 data and in addition can add/modify and/delete news, base or master tables. Only someone with administrative privileges can
@@ -73,7 +73,7 @@ echoHead(false, $title);
             <dd>Person having the authority to release the images for publication into Morphbank.
             </dd>
             <dt><strong>Coordinator</strong></dt>
-            <dd>Associated with <a href="<?php echo $config->domain; ?>About/Manual/userPrivileges.php" title="More about Morphbank Roles, Groups, Coordinators, ...">roles</a> within a <a href="<? echo $config->domain; ?>About/Manual/selectGroup.php" title="How to Select a Group">Morphbank Group</a>, a Coordinator has the same privileges as Lead Scientist
+            <dd>Associated with <a href="<?php echo $config->domain; ?>About/Manual/userPrivileges.php" title="More about Morphbank Roles, Groups, Coordinators, ...">roles</a> within a <a href="<?php echo $config->domain; ?>About/Manual/selectGroup.php" title="How to Select a Group">Morphbank Group</a>, a Coordinator has the same privileges as Lead Scientist
                 and each group may only have one Coordinator. In order to be assigned as a Group Coordinator, you
                 must have lead scientist privileges for that group or have been assigned by the Morphbank administration.
                 A Coordinator can add / remove group members, change a user's role in the group, as well as request spin-off
@@ -105,7 +105,7 @@ echoHead(false, $title);
             <dt><strong>Download</strong></dt>
             <dd>The user receives data from a remote computer.
             </dd>
-            <dt><strong><a href="<? echo $config->domain; ?>About/Manual/externalLink.php" title="How to guide for URLs to &amp; from Morphbank Objects">External Links</a></strong></dt>
+            <dt><strong><a href="<?php echo $config->domain; ?>About/Manual/externalLink.php" title="How to guide for URLs to &amp; from Morphbank Objects">External Links</a></strong></dt>
             <dd>References the ability of the Morphbank database to store durable URL website links associated
                 Morphbank objects.
             </dd>
@@ -205,7 +205,7 @@ echoHead(false, $title);
             <dd>Gender of specimen
             </dd>
             <dt><strong><a href="<?php echo $config->servicesUrl; ?>" title="Go to the Morphbank Services website">services.morphbank.net</a></strong></dt>
-            <dd>Web services are currently available for Morphbank contributors to query Morphbank and return output in a variety of formats (XML, Thumbnails, RDF) as well as set up RSS feeds. Go to the Morphbank User Manual section <a href="<? echo $config->domain; ?>About/Manual/services.php">Morphbank Web Services</a> for details.</dd>
+            <dd>Web services are currently available for Morphbank contributors to query Morphbank and return output in a variety of formats (XML, Thumbnails, RDF) as well as set up RSS feeds. Go to the Morphbank User Manual section <a href="<?php echo $config->domain; ?>About/Manual/services.php">Morphbank Web Services</a> for details.</dd>
             <dt><strong>sftp, smtp</strong></dt>
             <dd>Secure File Transfer Protocol (used for transferring files over the internet), Simple Mail Transfer Protocol
                 (used for transferring email from one server to another)

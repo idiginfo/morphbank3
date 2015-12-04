@@ -95,21 +95,21 @@ if(isset($_POST['id'])){
 			readonly="true"
 			title="Select Literature Reference Id/Name, add one if it does not exist in morphbank">
 		&nbsp;<a
-			href="javascript:openPopup('<?echo $config->domain;?>Browse/ByPublication/?pop=YES')"><img
+			href="javascript:openPopup('<?php echo $config->domain;?>Browse/ByPublication/?pop=YES')"><img
 			src="/style/webImages/selectIcon.png" /></a></td>
 	</tr>
 	<tr>
 		<td><b>Publication Comment: </b></td>
 		<td><textarea name="pubComment" rows="4" cols="42"
 			title="Enter additional information about the character described in the publication"></textarea></td>
-		<input type="hidden" name="id" value="<? echo $_POST['id']?>">
+		<input type="hidden" name="id" value="<?php echo $_POST['id']?>">
 	</tr>
 	<tr>
 		<td><b>Date To Publish: </b></td>
 		<td><input type="text" name="dateToPublish"
-			value="<?echo $collection->getDateToPublish();?> "
+			value="<?php echo $collection->getDateToPublish();?> "
 			title="Enter date in yyyy-mm-dd format of when the character should become public"></td>
-		<input type="hidden" name="id" value="<? echo $_POST['id']?>">
+		<input type="hidden" name="id" value="<?php echo $_POST['id']?>">
 	</tr>
 
 
@@ -122,7 +122,7 @@ if(isset($_POST['id'])){
 			title="Click to add PhyloCharacter information to the database">
 		<div>Submit</div>
 		</a> <a
-			href="<? echo $config->domain;?>Phylogenetics/Character/cancelCharacter.php?id=<? echo $id;?>"
+			href="<?php echo $config->domain;?>Phylogenetics/Character/cancelCharacter.php?id=<?php echo $id;?>"
 			class="button smallButton" title="Click to cancel the action">
 		<div>Cancel</div>
 		</a></td>
@@ -130,7 +130,7 @@ if(isset($_POST['id'])){
 </table>
 <span style="color: #17256B"><b>* - Note: Continuous and ordered
 characters are not supported in this version</b></span></form>
-<?
+<?php
 echo '</div>';
 
 function echoJavaScript(){

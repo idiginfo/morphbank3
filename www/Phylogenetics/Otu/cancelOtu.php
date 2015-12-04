@@ -45,5 +45,5 @@ if(isset($_GET['id'])){
 //$url .= "&flag=".$flag;
 ?>
 <script language="javascript">
-window.location = "<? echo $url;?>";
+window.location = "<?php echo $url;?>";
 </script>

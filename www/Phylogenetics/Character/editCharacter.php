@@ -95,38 +95,38 @@ echo '<span style="color:#17256B"><b>Character information updated successfuly.<
 	<tr>
 		<td width="20%px"><b>Title: </b></td>
 		<td><input type="text" name="title" size="52" maxlength="50"
-			value="<? echo $character->getName();?>"
+			value="<?php echo $character->getName();?>"
 			title="Edit the full title of the character" /> <input type="hidden"
-			name="title_old" value="<? echo $character->getName();?>" /></td>
+			name="title_old" value="<?php echo $character->getName();?>" /></td>
 	</tr>
 	<tr>
 		<td width="20%px"><b>Description: </b></td>
 		<td><textarea name="description" rows="4" cols="39"
-			title="Edit complete description for the character"><?echo $character->getDescription();?></textarea>
+			title="Edit complete description for the character"><?php echo $character->getDescription();?></textarea>
 		<input type="hidden" name="description_old"
-			value="<?echo $character->getDescription(); ?>" /></td>
+			value="<?php echo $character->getDescription(); ?>" /></td>
 		<td>
 		<table frame="border" title="Select the character type">
 			<caption><b>Character Type: </b></caption>
 			<tr>
 				<td><input type="radio" name="ordered" value="1"
-				<?if ($character->getOrdered()==1){?> checked="checked" <?}?>
+				<?php if ($character->getOrdered()==1){?> checked="checked" <?php } ?>
 					onclick="return false;" /><i>Ordered*</i></td>
 				<td><input type="radio" name="ordered" value="0"
-				<?if($character->getOrdered()==0) {?> checked="checked" <?}?>
+				<?php if($character->getOrdered()==0) {?> checked="checked" <?php } ?>
 					onclick="return true;">Unordered</td>
 				<input type="hidden" name="ordered_old"
-					value="<?echo $character->getOrdered()?>" />
+					value="<?php echo $character->getOrdered()?>" />
 			</tr>
 			<tr>
 				<td><input type="radio" name="discrete" value="1"
-					onclick="return true" <? if($character->getDiscrete()==1){?>
-					checked="checked" <?}?> />Discrete</td>
+					onclick="return true" <?php if($character->getDiscrete()==1){ ?>
+					checked="checked" <?php } ?> />Discrete</td>
 				<td><input type="radio" name="discrete" value="0"
-					onclick="return false;" <? if($character->getDiscrete()==0){?>
-					checked="checked" <?}?> /><i>Continuous*<i></td>
+					onclick="return false;" <?php if($character->getDiscrete()==0){?>
+					checked="checked" <?php } ?> /><i>Continuous*<i></td>
 				<input type="hidden" name="discrete_old"
-					value="<?echo $character->getDiscrete()?>" />
+					value="<?php echo $character->getDiscrete()?>" />
 			</tr>
 		</table>
 		</td>
@@ -134,43 +134,43 @@ echo '<span style="color:#17256B"><b>Character information updated successfuly.<
 	<tr>
 		<td width="20%px"><b>Short title/Label: </b></td>
 		<td><input type="text" name="label" size="6" maxlength="6"
-			value="<?echo $character->getLabel();?>"
+			value="<?php echo $character->getLabel();?>"
 			title="Edit short title for the character as you want to be displayed in the matrix" /></td>
 		<input type="hidden" name="label_old"
-			value="<?echo $character->getLabel();?>" />
+			value="<?php echo $character->getLabel();?>" />
 	</tr>
 	<tr>
 		<td width="20%px"><b>Publication Id/Title: </b></td>
 		<td><input type="text" name="publicationId" size="6" maxlength="16"
-			value="<? echo $character->getPublicationId();?>"
+			value="<?php echo $character->getPublicationId();?>"
 			title="Select Publication Id/ Name, add one if it does not exist in morphbank" /><b>
 		/ </b><input type="text" name="publication" size="40" maxlength="128"
-			value="<? $publication = $character->getPublication(); if ($publication!=null) echo $publication['title']; else echo "";?>"
+			value="<?php $publication = $character->getPublication(); if ($publication!=null) echo $publication['title']; else echo "";?>"
 			readonly="true"
 			title="Edit Literature Reference Id/Name, add one if it does not exist in morphbank">&nbsp;<a
-			href="javascript:openPopup('<?echo $config->domain;?>Browse/ByPublication/?pop=YES')"><img
+			href="javascript:openPopup('<?php echo $config->domain;?>Browse/ByPublication/?pop=YES')"><img
 			src="/style/webImages/selectIcon.png" /></a></td>
 		<input type="hidden" name="publicationId_old"
-			value="<?echo $character->getPublicationId();?>" />
+			value="<?php echo $character->getPublicationId();?>" />
 		<input type="hidden" name="publication_old"
-			value="<?echo $character->getPublication()?>" />
+			value="<?php echo $character->getPublication()?>" />
 	</tr>
 	<tr>
 		<td width="20%px"><b>Publication Comment: </b></td>
 		<td><textarea name="pubComment" rows="4" cols="42"
-			title="Edit additional information about the character described in the publication"><?echo $character->getPubComment();?></textarea>
+			title="Edit additional information about the character described in the publication"><?php echo $character->getPubComment();?></textarea>
 		<input type="hidden" name="pubComment_old"
-			value="<? echo $character->getPubComment(); ?>"></td>
+			value="<?php echo $character->getPubComment(); ?>"></td>
 	</tr>
 	<tr>
 		<td width="20%px"><b>Date To Publish: </b></td>
 		<td><input type="text" name="dateToPublish"
-			value="<?echo $character->getDateToPublish();?>"
+			value="<?php echo $character->getDateToPublish();?>"
 			title="Edit date in yyyy-mm-dd format of when the character should become public">
 		<input type="hidden" name="dateToPublish_old"
-			value="<?echo $character->getDateToPublish();?>" /></td>
-		<input type="hidden" name="id" value="<? echo $character->getId();?>">
-		<input type="hidden" name="url" value="<? echo $url;?>">
+			value="<?php echo $character->getDateToPublish();?>" /></td>
+		<input type="hidden" name="id" value="<?php echo $character->getId();?>">
+		<input type="hidden" name="url" value="<?php echo $url;?>">
 	</tr>
 </table>
 <br />
@@ -178,7 +178,7 @@ echo '<span style="color:#17256B"><b>Character information updated successfuly.<
 <table>
 	<tr>
 		<td width="20%px"><b>Character States: </b></td>
-		<? displayStateInformation();?>
+		<?php displayStateInformation();?>
 	</tr>
 </table>
 <br />
@@ -188,7 +188,7 @@ echo '<span style="color:#17256B"><b>Character information updated successfuly.<
 			class="button smallButton "
 			title="Click to submit changes of the Character information to the database">
 		<div>Submit</div>
-		</a> <a href="<? echo $url; ?>" class="button smallButton"
+		</a> <a href="<?php echo $url; ?>" class="button smallButton"
 			title="Click to return to the previuos page">
 		<div>Return</div>
 		</a></td>
@@ -196,7 +196,7 @@ echo '<span style="color:#17256B"><b>Character information updated successfuly.<
 </table>
 <span style="color: #17256B"><b>* - Note: Continuous and ordered
 characters are not supported in this version</b></span></form>
-		<?
+		<?php
 		echo '</div>';
 
 		function displayStateInformation(){

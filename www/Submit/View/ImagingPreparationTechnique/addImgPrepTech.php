@@ -68,4 +68,4 @@ function addImgPrepTech(){
 </script>
 
 
-<? }?>
+<?php } ?>

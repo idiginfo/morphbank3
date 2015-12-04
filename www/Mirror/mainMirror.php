@@ -39,24 +39,24 @@ function mainMirror() {
 ?>
 <form name ="mirror" method="post" action="mirror.php" enctype="multipart/form-data">
        
-<input type = "hidden" name = "mirrorTsns" value = "<? echo $mirrorInfo['tsns']; ?>" />
+<input type = "hidden" name = "mirrorTsns" value = "<?php echo $mirrorInfo['tsns']; ?>" />
        
 <h1> Manage Mirror Content </h1><br /><br />
 <table>
 <tr>
   <td><b> Mirror Name: </b></td>
-  <td> <? echo $groupName['groupName']; ?> </td>
+  <td> <?php echo $groupName['groupName']; ?> </td>
 </tr>
 <tr>
   <td><b> Mirror URL: </b></td>
-  <td> <? echo $mirrorInfo['url']; ?> </td>
+  <td> <?php echo $mirrorInfo['url']; ?> </td>
 </tr>
 <tr>
   <td><b> Locality : </b></td>
-  <td> <? echo $mirrorInfo['locality']; ?> </td>
+  <td> <?php echo $mirrorInfo['locality']; ?> </td>
 </tr>
 
-<? if ($objInfo->getUserId() == $mirrorInfo['admin']) { ?>
+<?php if ($objInfo->getUserId() == $mirrorInfo['admin']) { ?>
 
 <tr>
   <td>&nbsp;</td>
@@ -66,10 +66,10 @@ function mainMirror() {
 <td><b>Taxon Name: </b></td>	
 <td><input type="text" name="DeterminationId" size="11" maxlength="20"  value = 0 onchange = "intOnly(this);" onkeyup= "intOnly(this);"onkeypress= "intOnly(this);" />
 <h3>/</h3><input type="text" name="Determination" size="20" maxlength="30" value = "Life / Full Mirror" readonly="readonly" />
-&nbsp;&nbsp; <a href= "javascript: pop('TSN', '<? echo $config->domain.'Admin/TaxonSearch/index.php?&amp;tsn=' .$objInfo->getGroupTSN(). '&amp;pop=yes&amp;searchonly=0'?>')"> <img src = "/style/webImages/selectIcon.png" alt = "Select Taxon "  title="Click to select Taxon Serial Number" /></a>
+&nbsp;&nbsp; <a href= "javascript: pop('TSN', '<?php echo $config->domain.'Admin/TaxonSearch/index.php?&amp;tsn=' .$objInfo->getGroupTSN(). '&amp;pop=yes&amp;searchonly=0'?>')"> <img src = "/style/webImages/selectIcon.png" alt = "Select Taxon "  title="Click to select Taxon Serial Number" /></a>
 </td>
 </tr>
-<? } ?>
+<?php } ?>
 <tr>
 <td><b>Current content : </b></td><td>&nbsp; </td>
 </tr>
@@ -80,7 +80,7 @@ function mainMirror() {
 <td><b>[Taxon Id] Taxon Name </b></td><td><b>Date</b></td><td></td>
 </tr>
 
-<? 
+<?php
   foreach($tsns as $val){    
     list($tsnId, $date) = explode("|", $val);
     echo '<tr><td>['.$tsnId.'] &nbsp;&nbsp;' .GetTaxonomyName($link, $tsnId). '</td><td>' .$date.  '</td> </tr>';
@@ -91,7 +91,7 @@ function mainMirror() {
 <td>&nbsp;  </td>
 <td align = "right">
 <a href = "javascript: document.mirror.submit()" class="button smallButton"><div>Submit</div> </a>
-<a href = "javascript: top.location = '<? echo (ereg("Mirror", $_SERVER['HTTP_REFERER'])) ? $config->domain. 'MyManager' : $_SERVER['HTTP_REFERER']; ?>';" class="button smallButton"><div>Return</div> </a>
+<a href = "javascript: top.location = '<?php echo (ereg("Mirror", $_SERVER['HTTP_REFERER'])) ? $config->domain. 'MyManager' : $_SERVER['HTTP_REFERER']; ?>';" class="button smallButton"><div>Return</div> </a>
 </tr>
 </table>
 </form>
@@ -103,6 +103,6 @@ function mainMirror() {
   }
 </script>
 
-<?
+<?php
   include_once('js/pop-update.js');
 }?>

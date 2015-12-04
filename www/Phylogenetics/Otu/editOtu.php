@@ -83,21 +83,21 @@ echo '<div class="mainGenericContainer" style="width:700px">
               <form name="editOtu" method="post" action="commitEditOtu.php">
 	         <table border="0">
                    <tr>
-                     <td><b>Title: </b></td><td><input type="text" name="title" size="50" maxlength="50" value = "<?echo $otu->getName();?>" title="Edit title for this OTU"/></td>
+                     <td><b>Title: </b></td><td><input type="text" name="title" size="50" maxlength="50" value = "<?php echo $otu->getName();?>" title="Edit title for this OTU"/></td>
                    </tr>
                    <tr>
-                     <td><b>Description: </b></td><td><textarea name="description" rows="4" cols="45"  title="Edit description for the OTU" ><?echo $otu->getDescription();?></textarea></td>
+                     <td><b>Description: </b></td><td><textarea name="description" rows="4" cols="45"  title="Edit description for the OTU" ><?php echo $otu->getDescription();?></textarea></td>
                    </tr>
                    <tr>
                      <td><b>Short Title/Label: </b></td>
-                     <td><input type="text" name="label" size="6" maxlength="6" value = "<?echo $otu->getLabel();?>" title="Edit short title for the OTU as you want to be displayed in the matrix"/></td>
+                     <td><input type="text" name="label" size="6" maxlength="6" value = "<?php echo $otu->getLabel();?>" title="Edit short title for the OTU as you want to be displayed in the matrix"/></td>
                    </tr>
                    <tr>
-		    <td><b>Date To Publish: </b></td><td><input type="text" name="dateToPublish" value="<?echo $otu->getDateToPublish();?>" title="Edit date in yyyy-mm-dd format of when the OTU should become public">
-                       <input type="hidden" name="id" value="<?echo $id;?>" />
-                       <input type="hidden" name="userId" value="<?echo $userId;?>" />
-                       <input type="hidden" name="groupId" value="<?echo $groupId;?>" />
-                       <input type="hidden" name="url" value="<?echo $url;?>" />
+		    <td><b>Date To Publish: </b></td><td><input type="text" name="dateToPublish" value="<?php echo $otu->getDateToPublish();?>" title="Edit date in yyyy-mm-dd format of when the OTU should become public">
+                       <input type="hidden" name="id" value="<?php echo $id;?>" />
+                       <input type="hidden" name="userId" value="<?php echo $userId;?>" />
+                       <input type="hidden" name="groupId" value="<?php echo $groupId;?>" />
+                       <input type="hidden" name="url" value="<?php echo $url;?>" />
                      </td>
                    </tr>
                 </table>
@@ -105,19 +105,19 @@ echo '<div class="mainGenericContainer" style="width:700px">
                 <table >
                    <tr><td valign="top"><b>Included Taxa, OTU's and Specimens: </b></td>
                        <td>
-                       <? ListOtus($link, $id); ?>
+                       <?php ListOtus($link, $id); ?>
                        </td>
                    </tr>
                 </table>
                 <table align="right">
                   <tr>
                     <td><a href="javascript:checkAll();" class="button smallButton "title="Click to add OTU information to the database"><div>Submit</div></a>
-                      <a href="<? echo $url;?>" class="button smallButton" title="Click to return to the previous page"><div>Return</div></a>
+                      <a href="<?php echo $url;?>" class="button smallButton" title="Click to return to the previous page"><div>Return</div></a>
                     </td>
                   </tr>
                 </table>
               </form>
-<?
+<?php
 echo '</div>';
 
 

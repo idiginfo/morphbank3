@@ -69,4 +69,4 @@ function addAngle(){
 
 </script>
 
-<? }?>
+<?php } ?>

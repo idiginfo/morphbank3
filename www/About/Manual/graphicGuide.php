@@ -49,7 +49,7 @@ echoHead(false, $title);
             </tr>
             <tr>
                 <td align="center"><img src="../../style/webImages/magnifyShadow-trans.png" alt="FSIviewer icon"></td>
-                <td>This icon appears next to images in Morphbank. It is a link to the <a href="<? echo $config->domain; ?>About/Manual/zoomingViewer.php" target="_blank"><strong>Bischen image viewer</strong></a> which offers users the ability to zoom in / out and move around any image in Morphbank. Via the zooming viewer, functionality to allow labels to be associated with images is under development.</td>
+                <td>This icon appears next to images in Morphbank. It is a link to the <a href="<?php echo $config->domain; ?>About/Manual/zoomingViewer.php" target="_blank"><strong>Bischen image viewer</strong></a> which offers users the ability to zoom in / out and move around any image in Morphbank. Via the zooming viewer, functionality to allow labels to be associated with images is under development.</td>
             </tr>
             <tr>
                 <td align="center"><img src="../../style/webImages/infoIcon.png" alt="information icon" /></td>
@@ -60,7 +60,7 @@ echoHead(false, $title);
                 <td>A powerful Morphbank feature. Some tasks on many objects can be done at one time. Use the <em>check box</em>
                     to choose items to be changed. From the <strong><em>Select Mass Operation</em></strong> choose the task. An example would be
                     to change the date-to-publish to "now" on many images at one time. For more on this, jump to
-                    <a href="<? echo $config->domain; ?>About/Manual/myManagerNewFeatures.php" target="_blank">My Manager Features</a>.
+                    <a href="<?php echo $config->domain; ?>About/Manual/myManagerNewFeatures.php" target="_blank">My Manager Features</a>.
                 </td>
             </tr>
             <tr>

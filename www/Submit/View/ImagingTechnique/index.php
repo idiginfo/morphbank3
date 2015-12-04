@@ -58,4 +58,3 @@ echo '</div></div>';
 
 // Finish with end of HTML
 finishHtml();
-?>

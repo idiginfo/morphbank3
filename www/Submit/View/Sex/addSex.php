@@ -69,4 +69,4 @@ function addSex(){
           }
 
 </script>
-<?}?>
+<?php } ?>

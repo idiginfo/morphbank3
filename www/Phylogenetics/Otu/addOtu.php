@@ -90,10 +90,10 @@ echo '<div class="mainGenericContainer" style="width:700px">
                      <td><input type="text" name="label" size="6" maxlength="6" title="Enter short title for the OTU as you want to be displayed in the matrix"/></td>
                    </tr>
                    <tr>
-		    <td><b>Date To Publish: <span class="red">*</span> </b></td><td><input type="text" name="dateToPublish" value="<?echo $collection->getDateToPublish();?>" title="Enter date in yyyy-mm-dd format of when the OTU should become public">
-                       <input type="hidden" name="id" value="<?echo $id;?>" />
-                       <input type="hidden" name="userId" value="<?echo $userId;?>" />
-                       <input type="hidden" name="groupId" value="<?echo $groupId;?>" />
+		    <td><b>Date To Publish: <span class="red">*</span> </b></td><td><input type="text" name="dateToPublish" value="<?php echo $collection->getDateToPublish();?>" title="Enter date in yyyy-mm-dd format of when the OTU should become public">
+                       <input type="hidden" name="id" value="<?php echo $id;?>" />
+                       <input type="hidden" name="userId" value="<?php echo $userId;?>" />
+                       <input type="hidden" name="groupId" value="<?php echo $groupId;?>" />
                      </td>
                    </tr>
                 </table>
@@ -101,19 +101,19 @@ echo '<div class="mainGenericContainer" style="width:700px">
                 <table >
                    <tr><td valign="top"><b>Included Taxa, OTUs and Specimens: </b></td>
                        <td>
-                       <? ListOtus($link, $id); ?>
+                       <?php ListOtus($link, $id); ?>
                        </td>
                    </tr>
                 </table>
                 <table align="right">
                   <tr>
                     <td><a href="javascript:checkAll();" class="button smallButton "title="Click to add OTU information to the database"><div>Submit</div></a>
-                        <a href="<? echo $config->domain;?>Phylogenetics/Otu/cancelOtu.php?id=<? echo $id;?>" class="button smallButton" title="Click to cancel the action"><div>Cancel</div></a>
+                        <a href="<?php echo $config->domain;?>Phylogenetics/Otu/cancelOtu.php?id=<?php echo $id;?>" class="button smallButton" title="Click to cancel the action"><div>Cancel</div></a>
                     </td>
                   </tr>
                 </table>
               </form>
-<?
+<?php
 echo '</div>';
 
 

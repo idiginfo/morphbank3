@@ -62,19 +62,19 @@ function Navigation($rowNum, $numRows){
 <tr>
 <td width="100">&nbsp;</td>
 <td><a href="index.php?row=0" ><img src="/style/webImages/goFirst2.png" alt = "First Record" title = "First Record" border="0"></a></td>
-<? if ($rowNum > 0) { ?>
-<td><a href="index.php?row=<?= $rowNum-1 ?>" ><img src="/style/webImages/backward-gnome.png" border="0"></a></td> <? } ?>
-<td>&nbsp;</td><td> <?echo $rowNum+1; ?>&nbsp;&nbsp;of&nbsp;&nbsp;  <? echo $numRows; ?> </td>
+<?php if ($rowNum > 0) { ?>
+<td><a href="index.php?row=<?= $rowNum-1 ?>" ><img src="/style/webImages/backward-gnome.png" border="0"></a></td> <?php } ?>
+<td>&nbsp;</td><td> <?php echo $rowNum+1; ?>&nbsp;&nbsp;of&nbsp;&nbsp;  <?php echo $numRows; ?> </td>
 <td> &nbsp;</td>
-<? if ($rowNum < $numRows-1) { ?>
-<td><a href="index.php?row=<?= $rowNum+1 ?>" ><img src="/style/webImages/forward-gnome.png" border="0"></a></td> <? } ?>
+<?php if ($rowNum < $numRows-1) { ?>
+<td><a href="index.php?row=<?= $rowNum+1 ?>" ><img src="/style/webImages/forward-gnome.png" border="0"></a></td> <?php } ?>
 <td><a href="index.php?last=1" ><img src="/style/webImages/goLast2.png" border="0"></a></td>
-<td align = "right"><input type = "text" name = "rowNum" size = "3" value = "<? echo $rowNum+1; ?>" onchange = "document.forms[0].rownum.value = document.forms[0].rowNum.value; " /></td>
+<td align = "right"><input type = "text" name = "rowNum" size = "3" value = "<?php echo $rowNum+1; ?>" onchange = "document.forms[0].rownum.value = document.forms[0].rowNum.value; " /></td>
 <td><a href = "javascript: onclick = GoToRecord('index.php?row=')" class="button smallButton"><div>Go</div> </a></td>
 </tr>
 </table>
 <hr />
-<?
+<?php
 }
 */
 
