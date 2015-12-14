@@ -300,7 +300,7 @@ function convertTpc($id, $imgSrc = null) {
 function convertIip($source, $target) {
     global $config, $message;
 
-    $convert = $config->vips . " im_vips2tiff $source $target:" . $config->iipFactor . ",tile:256x256,pyramid";
+    $convert = $config->vips . " tiffsave $source $target --tile --pyramid --compression " . $config->iipCompression . " --tile-width 256 --tile-height 256";
 
     $message .= date("H:i:s") . " Executing: $convert\n";
     $reply = shell_exec($convert);
