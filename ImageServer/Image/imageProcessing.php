@@ -102,7 +102,7 @@ function fixImageFiles($id, $fileName, $imageType = null, $problems = null, $fil
         }
 
         // create full resolution jpeg
-        if ($imageType != 'jpeg' && !checkFileDate($jpegImgPath, $originalImgPath)) {
+        if (!checkFileDate($jpegImgPath, $originalImgPath)) {
             // Creating full resolution jpeg file for id: $id
             $fixedFile = convertOriginal($originalImgPath, $jpegImgPath, "");
             if (!$fixedFile) {
@@ -260,7 +260,7 @@ function getFileFromFileSystem($fileAccessPath, $fileSourceDir) {
 
 function convertOriginal($source, $target, $size) {
     global $config, $message;
-    $convert = $config->imagemagik . "convert -colorspace RGB -compress LZW $size $source" . "[0] $target";
+    $convert = $config->imagemagik . "convert -colorspace sRGB -compress LZW $size $source" . "[0] $target";
     $message .= date("H:i:s") . " Executing: $convert\n";
     $reply = shell_exec($convert);
     if (strlen($reply) > 0) {
