@@ -132,7 +132,7 @@ function fixImageFiles($id, $fileName, $imageType = null, $problems = null, $fil
         #}
         #}
         // create openzoom (iip)
-        if ( $originalImgType != 'tiff' && ! checkFileDate ( $iipImgPath, $originalImgPath )) {
+        if (  $originalImgType != 'tiff' && ! checkFileDate ( $iipImgPath, $originalImgPath )) {
             // $message .= "No file for path '$iipImgPath'\n";
             if ($imageType == 'dng') {
                 $sourcePath = $jpegImgPath;
@@ -284,7 +284,7 @@ function fixFile($sourceImgPath, $targetImgPath, $imgType, $size = null) {
 }
 function convertOriginal($source, $target, $size) {
     global $config, $message;
-    $convert = $config->imagemagik . "convert -colorspace RGB -compress LZW $size $source" . "[0] $target";
+    $convert = $config->imagemagik . "convert -colorspace sRGB -compress LZW $size $source" . "[0] $target";
     $message .= date ( "H:i:s" ) . " Executing: $convert\n";
     $reply = shell_exec ( $convert );
     if (strlen ( $reply ) > 0) {
