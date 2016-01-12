@@ -88,7 +88,7 @@ echo date("H:i:s\n");
 
 function restoreOriginalFile($id, $imageType) {
 
-    $message = 'File $id ';
+    $message = "File $id ";
 
     if ($imageType == "jpg") $imageType = "jpeg"; // jpg original stored in jpeg
     $originalImgPath = getImageFilePath($id, $imageType);
@@ -122,6 +122,7 @@ function copyFile($oldPath, $newPath) {
     }
     $copy = "cp -p $oldPath $newPath";
     $res = shell_exec($copy);
+    chmod($newPath,0755);
     echo "$copy\n";
     $message = "file $oldPath copied to $newPath";
     return $message;
