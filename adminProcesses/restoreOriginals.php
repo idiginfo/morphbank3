@@ -116,7 +116,7 @@ function restoreOriginalFile($id, $imageType) {
  */
 function copyFile($oldPath, $newPath) {
     if (file_exists($newPath) && filemtime($oldPath) >= filemtime($newPath)) {
-        $message = "no copy required";
+        $message = "no copy required $oldPath $newPath ";
         return null;
         //return $message;
     }
