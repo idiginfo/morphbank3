@@ -96,7 +96,7 @@
         <h3>News and Updates</h3>
         <img src="/style/webImages/blueHR-trans.png" class="blueHR"  width="200" alt="" />';
     if ($config->disableSite == 1) {
-      echo '<p style="font-weight:bold;color:red">Morphbank is currently disabled for updates and submissions.</p>';
+      echo '<p style="font-weight:bold;color:red">Morphbank is currently disabled for updates and submissions. The image server file system is down for maintenance and no images will be displayed.</p>';
     }
     echo showNews($link);
     echo '(<a href="' . $config->domain . 'About/News">see all past news</a>)
