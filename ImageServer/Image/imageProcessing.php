@@ -388,7 +388,16 @@ function getImageTypeFromCode($code) {
 function checkFileDate($filePath, $origFilePath) {
     if (! file_exists ( $filePath ) || ! file_exists ( $origFilePath ))
         return false; // missing file
-    if (filemtime ( $filePath ) < filemtime ( $origFilePath ))
+
+    $filetime = filemtime($filePath);
+    $origFiletime = filemtime($origFilePath);
+
+    if (filemtime ( $filePath ) < filemtime ( $origFilePath )) {
+        echo "file out of date $filePath time: $filetime orig file $origFilePath time: $origFiletime \n";
+        touch($filePath);
+
         return false; // old file
+    }
     return true;
 }
+
