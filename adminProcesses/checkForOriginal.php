@@ -63,7 +63,8 @@ $OUTPUT_DIR = null;
  * Optional file source if passed via argv[2]
  */
 $FILE_SOURCE_DIR = ! empty ( $argv [2] ) ? $argv [2] . "/" : $config->fileSource;
-echo "Looking for files in directory $FILE_SOURCE_DIR\n";
+$config->imgRootPath = $FILE_SOURCE_DIR;
+echo "Looking for files in directory $config->imgRootPath \n";
 
 /*
  * query for records
