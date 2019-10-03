@@ -124,9 +124,58 @@ class MbSessionHandler extends MyManagerSessionHandler {
 		$this->isMirror = $mirror;
 	}
 
+	/**
+	 * Equal to OLD_PASSWORD() from MySql before 5.7
+	 * Added to help with legacy passwords after DB upgrade.
+	 */
+	function mySqlOldPassword($input, $hex = true) {
+		$nr    = 1345345333;
+		$add   = 7;
+		$nr2   = 0x12345671;
+		$tmp   = null;
+		$inlen = strlen($input);
+		for ($i = 0; $i < $inlen; $i++) {
+			$byte = substr($input, $i, 1);
+			if ($byte == ' ' || $byte == "\t") {
+				continue;
+			}
+			$tmp = ord($byte);
+			$nr ^= ((($nr & 63) + $add) * $tmp) + (($nr << 8) & 0xFFFFFFFF);
+			$nr2 += (($nr2 << 8) & 0xFFFFFFFF) ^ $nr;
+			$add += $tmp;
+		}
+		$out_a  = $nr & ((1 << 31) - 1);
+		$out_b  = $nr2 & ((1 << 31) - 1);
+		$output = sprintf("%08x%08x", $out_a, $out_b);
+		if ($hex) {
+			return $output;
+		}
+
+		return $this->hexHashToBin($output);
+	}
+
+	/**
+	 * @see mySqlOldPassword above
+	 * @param $hex
+	 * @return string
+	 */
+	function hexHashToBin($hex) {
+		$bin = "";
+		$len = strlen($hex);
+		for ($i = 0; $i < $len; $i += 2) {
+			$byte_hex  = substr($hex, $i, 2);
+			$byte_dec  = hexdec($byte_hex);
+			$byte_char = chr($byte_dec);
+			$bin .= $byte_char;
+		}
+
+		return $bin;
+	}
+
 	function checkLogin($uin, $pin, $link){
+		$pinOld = $this->mySqlOldPassword($pin);
 		$sql = "SELECT id, name, privilegeTSN, primaryTSN, secondaryTSN, preferredGroup FROM User "
-		." WHERE uin='$uin' AND (pin = PASSWORD('$pin') or pin = OLD_PASSWORD('$pin')) AND status = 1";
+		." WHERE uin='$uin' AND (pin = PASSWORD('$pin') or pin = '$pinOld' AND status = 1";
 		#." WHERE uin='$uin' AND (pin = PASSWORD('$pin') or pin = OLD_PASSWORD('$pin') AND status = 1";
 		$row = mysqli_fetch_array(mysqli_query($link , $sql));
 		if ($row) {
