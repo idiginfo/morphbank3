@@ -1,83 +1,88 @@
 <?php
 /**
-* Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
-* All rights reserved. This program and the accompanying materials
-* are made available under the terms of the GNU Public License v2.0
-* which accompanies this distribution, and is available at
-* http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-* 
-* Contributors:
-*   Fredrik Ronquist - conceptual modeling and interaction design
-*   Austin Mast - conceptual modeling and interaction design
-*   Greg Riccardi - initial API and implementation
-*   Wilfredo Blanco - initial API and implementation
-*   Robert Bruhn - initial API and implementation
-*   Christopher Cprek - initial API and implementation
-*   David Gaitros - initial API and implementation
-*   Neelima Jammigumpula - initial API and implementation
-*   Karolina Maneva-Jakimoska - initial API and implementation
-*   Deborah Paul - initial API and implementation implementation
-*   Katja Seltmann - initial API and implementation
-*   Stephen Winner - initial API and implementation
-*/
+ * Copyright (c) 2011 Greg Riccardi, Fredrik Ronquist.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the GNU Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * Contributors:
+ *   Fredrik Ronquist - conceptual modeling and interaction design
+ *   Austin Mast - conceptual modeling and interaction design
+ *   Greg Riccardi - initial API and implementation
+ *   Wilfredo Blanco - initial API and implementation
+ *   Robert Bruhn - initial API and implementation
+ *   Christopher Cprek - initial API and implementation
+ *   David Gaitros - initial API and implementation
+ *   Neelima Jammigumpula - initial API and implementation
+ *   Karolina Maneva-Jakimoska - initial API and implementation
+ *   Deborah Paul - initial API and implementation implementation
+ *   Katja Seltmann - initial API and implementation
+ *   Stephen Winner - initial API and implementation
+ */
 
-function mainFeedback() {
+function mainFeedback()
+{
 
-global $link,  $objInfo, $codeArray;
+    global $link, $objInfo, $codeArray, $config;
 
-echoEmailValidation();
+    $email = '';
 
-$email = '';
+    if ($objInfo->getUserId() != null) {
+        //echo 'test';
+        $sql = 'SELECT email FROM User WHERE id = '.$objInfo->getUserId().' ';
+        $result = mysqli_query($link, $sql) or die(mysqli_error($link));
 
-if ($objInfo->getUserId() != NULL) {
-	//echo 'test';
-	$sql = 'SELECT email FROM User WHERE id = '.$objInfo->getUserId().' ';
-	$result = mysqli_query($link, $sql) or die(mysqli_error($link));		
-	
-	if ($result) {
-		$row = mysqli_fetch_array($result);
-		$email = $row['email'];		
-	}
-}
+        if ($result) {
+            $row = mysqli_fetch_array($result);
+            $email = $row['email'];
+        }
+    }
 
-$codeArray = getSpamCode();
-
-
-echo '
+    echo '
 		<div class="mainGenericContainer" style="width:650px;">
 			<h1>Feedback Form</h1><br />
 			
 			<form name="emailForm" action="feedbackAction.php" method="post" onSubmit="return ValidateForm()">
 				<table class="blueBorder" width="100%">';
-				if ($_GET['id'] == 1) {
-					echo '	
+    if ($_GET['id'] == 1) {
+        echo '	
 					<tr>
 						<td>&nbsp;</td>
 						<td align="left"><div class="searchError">Message sent successfully</div></br /></td>
 					</tr>';
-				} elseif ($_GET['id'] == 2) {
-					echo '	
+    } elseif ($_GET['id'] == 2) {
+        echo '	
 					<tr>
 						<td>&nbsp;</td>
 						<td align="left"><div class="searchError">Message not sent.  Contact MorphBank Administrators.</div></br /></td>
 					</tr>';
-				
-				} elseif ($_GET['id'] == 3) {
-					echo '	
+    } elseif ($_GET['id'] == 3) {
+        echo '	
 					<tr>
 						<td>&nbsp;</td>
-						<td align="left"><div class="searchError">Message not sent.  Please re-type the security code at the bottom.</div></br /></td>
+						<td align="left"><div class="searchError">Message not sent.  Captcha validation failed.</div></br /></td>
 					</tr>';
-				
-				} elseif ($_GET['id'] >= 4) {
-					echo '	
+    } elseif($_GET['id'] == 4) {
+		echo '	
+					<tr>
+						<td>&nbsp;</td>
+						<td align="left"><div class="searchError">Message not sent. All fields required.</div></br /></td>
+					</tr>';
+    } elseif($_GET['id'] == 5) {
+		echo '	
+					<tr>
+						<td>&nbsp;</td>
+						<td align="left"><div class="searchError">Message not sent. Email is invalid.</div></br /></td>
+					</tr>';
+	} elseif ($_GET['id'] >= 6) {
+        echo '	
 					<tr>
 						<td>&nbsp;</td>
 						<td align="left"><div class="searchError">Message not sent.  Contact MorphBank Administrators.</div></br /></td>
 					</tr>';
-				
-				}
-				echo '	
+    }
+    echo '	
 					<tr>
 						<th align="right">To: </th>
 						<td>Morphbank Administrators</td>
@@ -100,127 +105,29 @@ echo '
 				</table>
 				<table border="0" width="100%">	
 					<tr>
-						<td>
-							<br /><h3>Please type the letters in this picture into the box below. </h3><br /><em>(To prevent spam. Not case sensitive.)</em><br /><br />
-						</td>
-					</tr>
+                        <td>
+                            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                            <div class="g-recaptcha" data-sitekey="'.$config->siteKey.'"></div>
+                        </td>
+                    </tr>
 					<tr>
-						<td>
-							<img src="/style/webImages/codes/'.$codeArray['graphic'].'" alt="graphic" />
-						</td>
+						<td align="right"><input type="submit" class="button smallButton"><div>Submit</div></td>
 					</tr>
-					<tr>
-						<td>
-							<input type="text" name="spamCode" value="" />
-						</td>
-					</tr>
-					<tr>
-						<td align="right"><a href="javascript: document.forms[0].submit();" class="button smallButton"><div>Submit</div></a></td>
-					</tr>
-				</table>
-				
-				<input type="hidden" name="spamId" value="'.$codeArray['id'].'" />
-						
+				</table>						
 			</form>		
 		
 		
 		</div>  ';
-
-	if ($objInfo->getUserId() != NULL) 
-		echoFocus("subject");
-	else
-		echoFocus("from");
-
-
-}
-function echoEmailValidation() {
-
-echo '
-	<script type="text/javascript" language = "Javascript">
-	/**
-	 * DHTML email validation script. Courtesy of SmartWebby.com (http://www.smartwebby.com/dhtml/)
-	 */
-	 
-	 function ValidateForm(){
-		var formId = document.emailForm;
-		var emailID = formId.from;
-				
-		if ((emailID.value==null)||(emailID.value=="")){
-			alert("Please Enter your Email ID");
-			emailID.focus();
-			return false;
-		}
-		if (echeck(emailID.value)==false){
-			emailID.value="";
-			emailID.focus();
-			return false;
-		}
-		if ((formId.subject.value==null) || (formId.subject.value=="")) {
-			alert("Please Fill in subject line.");
-			formId.subject.focus();
-			return false;		
-		}
-		if ((formId.message.value==null) || (formId.message.value=="")) {
-			alert("Please Fill in message text.");
-			formId.message.focus();
-			return false;		
-		}
-		
-		return true
-	 }
-	
-	function echeck(str) {
-	
-			var at="@"
-			var dot="."
-			var lat=str.indexOf(at)
-			var lstr=str.length
-			var ldot=str.indexOf(dot)
-			if (str.indexOf(at)==-1){
-			   alert("Invalid E-mail ID")
-			   return false
-			}
-	
-			if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
-			   alert("Invalid E-mail ID")
-			   return false
-			}
-	
-			if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
-				alert("Invalid E-mail ID")
-				return false
-			}
-	
-			 if (str.indexOf(at,(lat+1))!=-1){
-				alert("Invalid E-mail ID")
-				return false
-			 }
-	
-			 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
-				alert("Invalid E-mail ID")
-				return false
-			 }
-	
-			 if (str.indexOf(dot,(lat+2))==-1){
-				alert("Invalid E-mail ID")
-				return false
-			 }
-			
-			 if (str.indexOf(" ")!=-1){
-				alert("Invalid E-mail ID")
-				return false
-			 }
-	
-			 return true					
-		}
-	
-	
-	</script>';
-
+    if ($objInfo->getUserId() != null) {
+        echoFocus("subject");
+    } else {
+        echoFocus("from");
+    }
 }
 
-function echoFocus($field) {
-	echo '
+function echoFocus($field)
+{
+    echo '
 	<script type="text/javascript" language = "Javascript">
 		document.emailForm.'.$field.'.focus();
 	</script>';
