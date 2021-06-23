@@ -26,7 +26,12 @@ function checkAuthorization($id, $sessionId = null, $function = 'view'){
 	global $config;
 	// if the request comes from application, say yes.
 	if (approveRequestor()) return true;
+    $url = $config->appServerBaseUrl."checkImageAuthorization.php?$id";
+//error_log("check auth url '$url'");
     $request = new HTTP_Request2($config->appServerBaseUrl."checkImageAuthorization.php?$id", HTTP_Request2::METHOD_POST);
+
+	// use config to ignore https cert error
+	$request->setConfig('ssl_verify_peer',false);
 
 	// add parameters
 	$request->addPostParameter('id', $id);
@@ -42,6 +47,7 @@ function checkAuthorization($id, $sessionId = null, $function = 'view'){
 
     try {
         $response = $request->send();
+//error_log("response status ".$response->getStatus());
         if (200 == $response->getStatus()) {
             $body = $response->getBody();
             return $body;
@@ -50,6 +56,7 @@ function checkAuthorization($id, $sessionId = null, $function = 'view'){
             return false;
         }
     } catch (HTTP_Request2_Exception $e) {
+        error_log( 'Error: ' . $e->getMessage());
         echo 'Error: ' . $e->getMessage();
         return false;
     }

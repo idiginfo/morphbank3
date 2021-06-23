@@ -55,7 +55,7 @@ function initHtml ($title = "", $javaScript="", $includeJavaScript=array()) {
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 			<meta name="description" content="'.$metaContent.' DBI-0446224" />
 			<meta name="keywords" content="'.$metaKeywords.'" />
-			<title>'.$title.' - '.$config->appName.'</title>
+                        <title>'.$title.' - '.$config->appName.'</title>
 			<!-- Mimic Internet Explorer 7 -->
 			<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 			<!-- compliance patch for microsoft browsers -->

@@ -28,7 +28,7 @@ function mainAboutContributors() {
 	global $link, $config;
 
 	$db = connect();
-	$sql = "SELECT distinct u.id, u.name, u.affiliation FROM User u WHERE u.id IN (
+	$sql = "SELECT distinct u.id, u.name, u.last_name, u.affiliation FROM User u WHERE u.id IN (
 			SELECT b.userId FROM BaseObject b WHERE b.objectTypeId IN ('Specimen', 'View', 'Image', 'Location', 'Collection'))
 			ORDER BY u.last_name";
 	$results = $db->queryAll($sql, null, MDB2_FETCHMODE_ASSOC);

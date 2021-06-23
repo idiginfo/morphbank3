@@ -75,11 +75,13 @@ if (!empty($id)) {
     }
     //TODO test for authorization
     if (serverRequest($requestor) || $image->getAuthorized() === true) {
+    //if (true){
         if (!isModifiedSince($image->getFileTime())) {
             header("HTTP/1.1 304 Not Modified");
             exit();
         }
 
+//error_log("showing image $id $imgType");
         $imageShowed = $image->showImage();
         if ($imageShowed) return;
     }
@@ -87,6 +89,7 @@ if (!empty($id)) {
 
 //TODO respond to unauthorized image or no image id
 
+//error_log("not showing image $id $imgType with permission '". $image->getAuthorized()."'");
 if ($image->getAuthorized() != true) {
     header('Content-Type: image/png');
     readfile($config->webPath . '/style/webImages/' . $config->imgPrivate);

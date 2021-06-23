@@ -44,7 +44,6 @@ include_once ('includes/imageFunctions.php');
 $imageId = getObjectImageId($id);
 
 $public = isPublic($imageId);
-
 if ($public && $function=='view') {
 	$authorized = true;
 	$r .= "empty session authorized: $authorized<br/>";
@@ -52,7 +51,7 @@ if ($public && $function=='view') {
 	// not a post request from THE image server
 	//TODO add function isImageServer to check for any authorized server
 	$authorized = false;
-	$r .= "unauthorized requesting server: $remoteIp ";
+	$r .= "unauthorized requesting server: $remoteIp this ip:  $imageServerIp req method ".$_SERVER['REQUEST_METHOD'];
 
 } else {// legitimage request for non-public object
 	$objInfo = resetObjInfo();

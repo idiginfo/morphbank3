@@ -43,9 +43,9 @@ $config->errorRedirect = 0;
 $db = connect();
 
 // Alternative image directory trees
-$tree2 = "/data/imageserver2/";
-$tree3 = "/data/imageserver3/";
-$tree4 = "/data/imageserver4/";
+$tree2 = "/mnt/nas/images_from_nas/www-morphbank";
+$tree3 = "/mnt/nas/idigwos/idigwos/morphbank/www-morphbank";
+$tree4 = "/data/imageserver4";
 $tree5 = "/data/www-morphbank";
 $tree5 = "/data/wosimages";
 $tree6 = "/data/oldimageserver";
@@ -62,7 +62,7 @@ $trees = [
  * argv[1] is id to start process from. If empty, get min id from BaseObject where dateCreated > than 1 day ago. Else, use passed in value as id.
  */
 if (empty($argv[1])) {
-    echo "Select limit parameter required";
+    echo "Select limit parameter required\n";
     exit();
 }
 $SELECT_LIMIT = $argv[1];
@@ -111,11 +111,11 @@ while ($row = $result->fetchRow()) {
     // jpg original stored in jpeg
 
     $origOK = checkImageFile($id, $imageType);
-
+	$message = null;
     if ($origOK) {
-        $message .= "Original for $id ok\n"; // no action required
+        $message .= "Original for $id ok "; // no action required
     } else {
-        $message .= findAndReplaceOriginal($id, $imageType, $originalImgPath);
+        $message .= findAndReplaceOriginal($id, $imageType);
         if ($message) {// null returned if file not found
             $fixed ++;
         } else {
@@ -134,18 +134,21 @@ echo "\n\nNumber of image files fixed: $numFixed \n";
 
 // Look through image directories for original file
 // If found, copy to $originalImgPath
-function findAndReplaceOriginal($id, $imageType, $originalImgPath)
+function findAndReplaceOriginal($id, $imageType)
 {
     global $trees;
+   $originalImgPath = getImageFilePath($id, $imageType);
     $dirPath = getFilePath($id); // path without prefix or filename (e.g. "000/032")
     $imgFileName = getImageFileName($id, $imageType);
     $filePathNoRoot = $imageType . "/" . $dirPath . "/" . $imgFileName;
     foreach ($trees as $dir) {
         $fullPath = $dir . "/" . $filePathNoRoot;
+        echo "checking $fullPath for $originalImgPath \n";
         $fileOK = checkImageFile($id, $imageType, $fullPath);
+	echo " check is $fileOK ..\n";
         if ($fileOK) {
-            copydt($fullPath, $originalImagePath);
-            return "Original for $id found at $fullPath";
+            $copyOK = copydt($fullPath, $originalImgPath);
+            return "Original for $id found at $fullPath copy returned '$copyOK'";
         }
     }
     return null;
@@ -153,10 +156,11 @@ function findAndReplaceOriginal($id, $imageType, $originalImgPath)
 
 function copydt($pathSource, $pathDest)
 {   // copy(), same modification-time
-    copy($pathSource, $pathDest) or return FALSE;
+    $copyOK = copy($pathSource, $pathDest) ;
     $dt = filemtime($pathSource);
     if ($dt === FALSE)
         return FALSE;
-    return touch($pathDest, $dt);
+    touch($pathDest, $dt);
+    return $copyOK;
 }
 ?>

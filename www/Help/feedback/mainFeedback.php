@@ -43,7 +43,7 @@ function mainFeedback()
 		<div class="mainGenericContainer" style="width:650px;">
 			<h1>Feedback Form</h1><br />
 			
-			<form name="emailForm" action="feedbackAction.php" method="post" onSubmit="return ValidateForm()">
+			<form name="emailForm" action="feedbackAction.php" method="post">
 				<table class="blueBorder" width="100%">';
     if ($_GET['id'] == 1) {
         echo '	
@@ -63,7 +63,7 @@ function mainFeedback()
 						<td>&nbsp;</td>
 						<td align="left"><div class="searchError">Message not sent.  Captcha validation failed.</div></br /></td>
 					</tr>';
-    } elseif($_GET['id'] == 4) {
+        } elseif($_GET['id'] == 4) {
 		echo '	
 					<tr>
 						<td>&nbsp;</td>
@@ -111,7 +111,7 @@ function mainFeedback()
                         </td>
                     </tr>
 					<tr>
-						<td align="right"><input type="submit" class="button smallButton"><div>Submit</div></td>
+						<td align="right"><input type="submit" value="Submit" class="button smallButton"></td>
 					</tr>
 				</table>						
 			</form>		
@@ -134,3 +134,4 @@ function echoFocus($field)
 }
 
 ?>
+

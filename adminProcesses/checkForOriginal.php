@@ -97,7 +97,8 @@ while ( $row = $result->fetchRow () ) {
 	$imageCount ++;
 	// get fields b.id, u.uin, i.originalFileName, i.imageType, m.problems
 	list ( $id, $uin, $fileName, $imageType, $problems, $width, $height, $url ) = $row;
-	$imageType = strtolower ( $imageType );
+	$imageType ='jpeg';
+	//$imageType = strtolower ( $imageType );
 	if (! empty ( $url ))
 		$fileName = $url;
 	$message = checkImageFiles ( $id, $fileName, $imageType, $problems, $FILE_SOURCE_DIR, $width, $height );
@@ -128,7 +129,9 @@ function checkImageFiles($id, $fileName, $imageType = null, $problems = null, $f
 	if (! file_exists ( $originalImgPath )) {
 		// missing or corrupted original file
 		$message .= "original file missing $imageType path $originalImgPath ";
-	}elseif (empty ( $fileImageType )) {
+	} else
+	
+	if (empty ( $fileImageType )) {
 		$message .= "original file corrupted $imageType path $originalImgPath ";
 	}
 	

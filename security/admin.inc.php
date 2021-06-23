@@ -152,7 +152,7 @@ function dbAdminlogin(){
  * @param $priority Zend logging error leve
  */
 function isMdb2Error($dbObject, $label=null, $priority = 4){
-	if (!PEAR::isError($dbObject)) return false;
+        if (!PEAR::isError($dbObject)) return false;
 	if (false === $priority) $priority == 0;
 	if (true === $priority) $priority == 1;
 	errorLog($label, $dbObject->getDebugInfo(), $priority);

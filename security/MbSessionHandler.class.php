@@ -124,7 +124,7 @@ class MbSessionHandler extends MyManagerSessionHandler {
 		$this->isMirror = $mirror;
 	}
 
-	/**
+        /**
 	 * Equal to OLD_PASSWORD() from MySql before 5.7
 	 * Added to help with legacy passwords after DB upgrade.
 	 */
@@ -173,9 +173,9 @@ class MbSessionHandler extends MyManagerSessionHandler {
 	}
 
 	function checkLogin($uin, $pin, $link){
-		$pinOld = $this->mySqlOldPassword($pin);
+                $pinOld = $this->mySqlOldPassword($pin);
 		$sql = "SELECT id, name, privilegeTSN, primaryTSN, secondaryTSN, preferredGroup FROM User "
-		." WHERE uin='$uin' AND (pin = PASSWORD('$pin') or pin = '$pinOld' AND status = 1";
+		." WHERE uin='$uin' AND (pin = PASSWORD('$pin') or pin = '$pinOld') AND status = 1";
 		#." WHERE uin='$uin' AND (pin = PASSWORD('$pin') or pin = OLD_PASSWORD('$pin') AND status = 1";
 		$row = mysqli_fetch_array(mysqli_query($link , $sql));
 		if ($row) {

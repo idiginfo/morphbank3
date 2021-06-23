@@ -188,6 +188,8 @@ class Image {
 		} else if ($this->authorized == 'blank'){
 			$authorizedMessage = checkAuthorization($this->imageId);
 			// if message starts with "true"
+//error_log("image ".$this->imageId ."authorized message $authorizedMessage");
+//error_log("image authorized message $authorizedMessage");
 			if (strncasecmp("true",$authorizedMessage,4)==0){
 				$this->authorized = true;
 			} else {
