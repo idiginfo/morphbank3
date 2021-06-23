@@ -148,8 +148,8 @@ function outputLoginInfo() {
 		}
 	} else {
 		//echo 'User: Guest&nbsp;&nbsp;<a href="'.$config->domain.'Submit/index.php">[click to login]</a>';
-		echo 'User: Guest&nbsp;&nbsp;<a href="#" onclick="show_login_ajax(); return false;">[click to login]</a>';
-		echo '&nbsp;&nbsp;<a href="/Submit">[register]</a>';
+		//echo 'User: Guest&nbsp;&nbsp;<a href="#" onclick="show_login_ajax(); return false;">[click to login]</a>';
+		//echo '&nbsp;&nbsp;<a href="/Submit">[register]</a>';
 
 	}
 
