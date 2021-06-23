@@ -19,7 +19,7 @@
 *   Katja Seltmann - initial API and implementation
 *   Stephen Winner - initial API and implementation
 -->
-<p>Morphbank is in the process of being retired. All account functions have been disabled.</p>
+<p>Morphbank is not currently supporting edits to the database or image set.</p>
 <!--
 <form name="login" id="frmLogin" action="login.php" method="post">
 <table border="0" cellpadding="5">
