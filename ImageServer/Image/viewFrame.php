@@ -74,7 +74,7 @@ function iipTag ($image, $width, $height){
   }
 	$iipSwf = $config->iipSwf;
 
-  $tag = "<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js\"></script>\n"
+  $tag = "<script type=\"text/javascript\" src=\"https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js\"></script>\n"
 	."<script type=\"text/javascript\">\n"
 	."      var server = \"$iipFcgi\"; \n"
 	."      var image = \"$imageFilePath\"; \n"
@@ -105,7 +105,7 @@ function iipTag ($image, $width, $height){
 	$tag ="<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n"
 	."<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
 	."<head>\n"
-	."<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js\"></script>\n"
+	."<script type=\"text/javascript\" src=\"https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js\"></script>\n"
 	."<script type=\"text/javascript\">\n"
 	."      var server = \"$iipFcgi\"; \n"
 	."      var image = \"$imageFilePath\"; \n"
