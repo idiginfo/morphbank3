@@ -1,6 +1,6 @@
 # Set to correct file path for your server
-#php_value auto_prepend_file "/root_path/configuration/app.server.php"
-php_value auto_prepend_file "/data/mb32/configuration/app.server.php"
+#php_value auto_prepend_file "/path_to/configuration/image.server.php"
+php_value auto_prepend_file "/data/mb32/configuration/image.server.php"
 
 # BEGIN Compress text files
 <IfModule mod_deflate.c>
