@@ -370,5 +370,5 @@ ul.admin-news-list li {
   margin-bottom: 20px;
 }
 
-.fadelinks, .faderandom { position:relative; height:332px; width:500px; }
-.fadelinks > *, .faderandom > * { position:absolute; left:0; top:0; display:block; }
+.fadelinks { position:relative; height:300px; width:400px; margin: 0 auto; }
+.fadelinks > * { position:absolute; left:0; top:0; display:block; }
