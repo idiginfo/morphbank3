@@ -44,32 +44,16 @@
        <h3>Featured from <a href="' . $config->domain . 'MyManager/"> ' . $num_images['total'] . ' images</a></h3>
           <br /><br />';
       
-      //swf slideshow found in includes/swf; xml found in data/xml
+      //swf slideShowImages found in includes/swf; xml found in data/xml
       echo '        
-<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" 
-  WIDTH="550" 
-  HEIGHT="400" 
-  id="slideshow" 
-  ALIGN="">
-<PARAM NAME=movie VALUE="' . $config->domain . 'includes/swf/slideshow.swf?xml_source=' . $config->domain . 'data/xml/sample.xml&license=KUBZ7-F2G3B6FWELRTO9DN6IKN49JK">
-<PARAM NAME=quality VALUE=high>
-<PARAM NAME=bgcolor VALUE=#000000>
-<PARAM NAME="wmode" VALUE="transparent">
-
-<EMBED src="' . $config->domain . 'includes/swf/slideshow.swf?xml_source=' . $config->domain . 'data/xml/sample.xml&license=KUBZ7-F2G3B6FWELRTO9DN6IKN49JK" 
-  quality=high 
-  bgcolor=#000000  
-  WIDTH="550" 
-  HEIGHT="400" 
-  wmode="transparent"
-  NAME="slideshow" 
-  ALIGN="" 
-  TYPE="application/x-shockwave-flash" 
-  PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">
-</EMBED>
-</OBJECT>
-';
+        <div class="fadelinks">
+            <a href="https://www.morphbank.net/?id=112786"><img src="images/slideShowImages/Anglerfish.jpg"/></a>
+            <a href="https://www.morphbank.net/?id=227161"><img src="images/slideShowImages/Chromista.jpg"/></a>
+            <a href="https://www.morphbank.net/?id=234147"><img src="images/slideShowImages/Mblackburni.jpg"/></a>
+            <a href="https://www.morphbank.net/?id=401844"><img src="images/slideShowImages/Aristolochia.jpg"/></a>
+            <a href="https://www.morphbank.net/?id=70268"><img src="images/slideShowImages/Cynipidae.jpg"/></a>
+        </div>
+        ';
       echo '
           <br />
           <br />
@@ -77,7 +61,7 @@
            <center>
        <table>
          <tr>
-              <td><a href="/?id=464608" title="Anglerfish"><img src="http://morphbank.net/?id=114691&imgType=thumb" height="80"/></a>
+              <td><a href="/?id=464608" title="Anglerfish"><img src="http://morphbank.net/?id=112786&imgType=thumb" height="80"/></a>
           <br />Anglerfish</td>
               <td><a href="/?id=464705" title="Chromista"><img src="http://morphbank.net/?id=227161&imgType=jpg" height="80" /></a>
           <br />Chromista</td>

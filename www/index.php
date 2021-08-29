@@ -101,7 +101,8 @@ if (stripos($_SERVER['REQUEST_METHOD'], 'HEAD') !== FALSE){
 	
 	$title = $config->welcomeMsg;
 	// The beginnig of HTML
-	initHtml( $title, NULL, NULL);
+	$includeJavaScript = array('jquery.1-4-2.min.js', 'slideshow.js');
+	initHtml( $title, NULL, $includeJavaScript);
 
 	// Add the standard head section to all the HTML output.
 	echoHead( false, $title, false);

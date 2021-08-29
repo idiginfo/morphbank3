@@ -369,3 +369,6 @@ ul.admin-news-list {
 ul.admin-news-list li {
   margin-bottom: 20px;
 }
+
+.fadelinks, .faderandom { position:relative; height:332px; width:500px; }
+.fadelinks > *, .faderandom > * { position:absolute; left:0; top:0; display:block; }
